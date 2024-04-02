@@ -16,6 +16,11 @@ jobs:
     - name: Run Python script
       run: python ./script/update_json.py
       
+    - name: Set up Git
+      run: |
+        git config --global user.email "bmorcelli@gmail.com"
+        git config --global user.name "bmorcelli"
+        
     - name: Compare JSON files
       id: compare
       run: |
