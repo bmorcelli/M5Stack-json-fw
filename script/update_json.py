@@ -9,11 +9,23 @@ def download_bin_file(url, filename):
         f.write(response.content)
 
 # Função para filtrar e salvar os dados em um novo arquivo JSON
-def filter_and_save(data, category, output_filename):
+def filter_and_save_old(data, category, output_filename):
     filtered_data = [item for item in data if item.get('category') == category and any(version.get('published') for version in item.get('versions'))]
     filtered_data = [{k: v for k, v in item.items() if k in ['fid', 'name', 'category', 'author', 'versions']} for item in filtered_data]
     for item in filtered_data:
         item['versions'] = [{k: v for k, v in version.items() if k in ['version', 'published_at', 'file']} for version in item['versions']]
+    with open(output_filename, 'w') as f:
+        json.dump(filtered_data, f, indent=2)
+
+# Função para filtrar e salvar os dados em um novo arquivo JSON
+def filter_and_save(data, category, output_filename):
+    filtered_data = [item for item in data if item.get('category') == category and any(version.get('published') for version in item.get('versions'))]
+    filtered_data = [{k: v for k, v in item.items() if k in ['fid', 'name', 'category', 'author']} for item in filtered_data]
+    for item in filtered_data:
+        versions = item['versions']
+        if versions:
+            latest_version = max(versions, key=lambda x: x['published_at'])
+            item.update({k: latest_version[k] for k in ['version', 'published_at', 'file']})
     with open(output_filename, 'w') as f:
         json.dump(filtered_data, f, indent=2)
 
