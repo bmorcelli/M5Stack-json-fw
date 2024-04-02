@@ -1,9 +1,8 @@
 name: Check JSON Files
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+  - cron: "*/15 * * * *"
 
 jobs:
   compare-json:
