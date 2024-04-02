@@ -31,6 +31,7 @@ def filter_and_save(data, category, output_filename):
                     'name': item['name'],
                     'category': item['category'],
                     'author': item['author'],
+                    'cover': item['cover'],
                     'version': latest_version['version'],
                     'published_at': latest_version['published_at'],
                     'file': latest_version['file']
