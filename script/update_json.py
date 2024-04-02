@@ -20,14 +20,23 @@ def filter_and_save_old(data, category, output_filename):
 # Função para filtrar e salvar os dados em um novo arquivo JSON
 def filter_and_save(data, category, output_filename):
     filtered_data = [item for item in data if item.get('category') == category and any(version.get('published') for version in item.get('versions', []))]
-    filtered_data = [{k: v for k, v in item.items() if k in ['fid', 'name', 'category', 'author']} for item in filtered_data]
+    final_data = []
     for item in filtered_data:
         versions = item.get('versions', [])
         if versions:
             latest_version = max(versions, key=lambda x: x['published_at'])
-            item.update({k: latest_version[k] for k in ['version', 'published_at', 'file']})
+            filtered_item = {
+                'fid': item['fid'],
+                'name': item['name'],
+                'category': item['category'],
+                'author': item['author'],
+                'version': latest_version['version'],
+                'published_at': latest_version['published_at'],
+                'file': latest_version['file']
+            }
+            final_data.append(filtered_item)
     with open(output_filename, 'w') as f:
-        json.dump(filtered_data, f, indent=2)
+        json.dump(final_data, f, indent=2)
 
 # Request à API e salvando os dados em all_device_firmware.json
 response = requests.get('https://m5burner-api.m5stack.com/api/firmware')
