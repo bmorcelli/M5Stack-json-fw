@@ -1,0 +1,31 @@
+name: Check JSON Files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  compare-json:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Run Python script
+      run: python ./script/json.py
+      
+    - name: Compare JSON files
+      id: compare
+      run: |
+        if ! cmp -s ./cardputer.json ./script/cardputer.json || ! cmp -s ./stickc.json ./script/stickc.json; then
+          echo "Files are different. Updating..."
+          rm -f ./cardputer.json ./stickc.json
+          cp ./script/cardputer.json ./script/stickc.json ./
+          git add .
+          git commit -m "Update JSON files"
+          git push
+        else
+          echo "Files are the same. Workflow terminated."
+        fi
