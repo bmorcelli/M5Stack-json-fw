@@ -20,9 +20,9 @@ def filter_and_save(data, category, output_filename):
 # Request à API e salvando os dados em all_device_firmware.json
 response = requests.get('https://m5burner-api.m5stack.com/api/firmware')
 data = response.json()
-with open('all_device_firmware.json', 'w') as f:
+with open('./script/all_device_firmware.json', 'w') as f:
     json.dump(data, f, indent=2)
 
 # Filtrando e salvando os dados em cardputer.json e stickc.json
-filter_and_save(data, 'cardputer', 'cardputer.json')
-filter_and_save(data, 'stickc', 'stickc.json')
+filter_and_save(data, 'cardputer', './script/cardputer.json')
+filter_and_save(data, 'stickc', './script/stickc.json')
