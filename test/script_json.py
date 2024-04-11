@@ -43,7 +43,7 @@ for item in data:
         with requests.get(file_url, stream=True) as r:
             version['file_size'] = int(r.headers.get('Content-Length', 0))
             first_bytes = r.raw.read(33600)
-            with open("temp.bin", "wb") as temp_file:
+            with open("./test/temp.bin", "wb") as temp_file:
                 temp_file.write(first_bytes)
 
         # Leitura e cálculos
