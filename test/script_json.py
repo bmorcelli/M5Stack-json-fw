@@ -1,6 +1,8 @@
 import os
 import requests
 import json
+import time
+import random
 
 # Passo 1: Renomear arquivo existente
 if os.path.exists("all_device_firmware.json"):
@@ -35,7 +37,9 @@ for new_item in data:
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
     for version in item['versions']:
+        print(f"{item['name']} - {version['version']} - {version['file']}")
         file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
+        time.sleep(random.uniform(0.9, 1.1))  # Pausa aleatória entre 900ms a 1100ms
         with requests.get(file_url, stream=True) as r:
             version['file_size'] = int(r.headers.get('Content-Length', 0))
             first_bytes = r.raw.read(33600)
@@ -63,12 +67,16 @@ os.remove("temp.bin")  # Passo 5: Exclusão do arquivo temporário
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name):
     filtered_data = [item for item in data if item['category'] == category_name]
+    for item in filtered_data:
+        for version in item.get("versions", []):
+            version_fields = ["version", "published_at", "file", "app_size", "spiffs_size",  "spiffs_offset", "spiffs"]
+            item["versions"] = [{field: version[field] for field in version_fields if field in version} for version in item["versions"]]
     with open(f"{category_name}.json", 'w') as file:
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
-create_filtered_file("cardputer")
-create_filtered_file("stickc")
+# create_filtered_file("cardputer")
+# create_filtered_file("stickc")
 
 with open("all_device_firmware.json", 'w') as final_file:
     json.dump(data, final_file)
