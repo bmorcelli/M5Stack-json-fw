@@ -36,10 +36,13 @@ for new_item in data:
 
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
+    # Filtrando versões que não terminam com '.bin'
+    item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin')]
+    
     for version in item['versions']:
         print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
         file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
-        time.sleep(random.uniform(0.9, 1.1))  # Pausa aleatória entre 900ms a 1100ms
+        time.sleep(random.uniform(0.1, 0.2))  # Pausa aleatória entre 0.1s a 0.2s
         with requests.get(file_url, stream=True) as r:
             version['file_size'] = int(r.headers.get('Content-Length', 0))
             first_bytes = r.raw.read(33600)
