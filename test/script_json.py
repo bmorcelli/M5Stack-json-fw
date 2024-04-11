@@ -5,21 +5,21 @@ import time
 import random
 
 # Passo 1: Renomear arquivo existente
-if os.path.exists("all_device_firmware.json"):
-    os.rename("all_device_firmware.json", "all_device_firmware.old.json")
+if os.path.exists("./test/all_device_firmware.json"):
+    os.rename("./test/all_device_firmware.json", "./test/all_device_firmware.old.json")
 
 # Passo 2: Download dos dados da API
 url = "https://m5burner-api.m5stack.com/api/firmware"
 response = requests.get(url)
 data = response.json()
 
-with open("all_device_firmware.json", 'w') as new_file:
+with open("./test/all_device_firmware.json", 'w') as new_file:
     json.dump(data, new_file)
 
 # Carregando dados antigos, se disponíveis
 old_data = []
-if os.path.exists("all_device_firmware.old.json"):
-    with open("all_device_firmware.old.json", 'r') as old_file:
+if os.path.exists("./test/all_device_firmware.old.json"):
+    with open("./test/all_device_firmware.old.json", 'r') as old_file:
         old_data = json.load(old_file)
 
 # Passo 3: Comparação e atualização de dados
@@ -47,7 +47,7 @@ for item in data:
                 temp_file.write(first_bytes)
 
         # Leitura e cálculos
-        with open("temp.bin", "rb") as temp_file:
+        with open("./test/temp.bin", "rb") as temp_file:
             temp_file.seek(0x804A)
             app_size_bytes = temp_file.read(3)
             version['app_size'] = sum(app_size_bytes)
@@ -62,7 +62,7 @@ for item in data:
 
             version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
 
-os.remove("temp.bin")  # Passo 5: Exclusão do arquivo temporário
+os.remove("./test/temp.bin")  # Passo 5: Exclusão do arquivo temporário
 
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name):
@@ -71,12 +71,12 @@ def create_filtered_file(category_name):
         for version in item.get("versions", []):
             version_fields = ["version", "published_at", "file", "app_size", "spiffs_size",  "spiffs_offset", "spiffs"]
             item["versions"] = [{field: version[field] for field in version_fields if field in version} for version in item["versions"]]
-    with open(f"{category_name}.json", 'w') as file:
+    with open(f"./test/{category_name}.json", 'w') as file:
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
-# create_filtered_file("cardputer")
-# create_filtered_file("stickc")
+create_filtered_file("cardputer")
+create_filtered_file("stickc")
 
-with open("all_device_firmware.json", 'w') as final_file:
+with open("./test/all_device_firmware.json", 'w') as final_file:
     json.dump(data, final_file)
