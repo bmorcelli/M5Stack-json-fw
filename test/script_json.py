@@ -40,30 +40,33 @@ for item in data:
     item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin')]
     
     for version in item['versions']:
-        print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
-        file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
-        time.sleep(random.uniform(0.1, 0.2))  # Pausa aleatória entre 0.1s a 0.2s
-        with requests.get(file_url, stream=True) as r:
-            version['file_size'] = int(r.headers.get('Content-Length', 0))
-            first_bytes = r.raw.read(33600)
-            with open("./test/temp.bin", "wb") as temp_file:
-                temp_file.write(first_bytes)
+        if "spiffs" in version:
+            print(f"{item['name']} - {version['version']} - Ok ", flush=True)
+        else:
+            print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
+            file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
+            time.sleep(random.uniform(0.05, 0.15))  # Pausa aleatória entre 0.1s a 0.2s
+            with requests.get(file_url, stream=True) as r:
+                version['file_size'] = int(r.headers.get('Content-Length', 0))
+                first_bytes = r.raw.read(33600)
+                with open("./test/temp.bin", "wb") as temp_file:
+                    temp_file.write(first_bytes)
 
-        # Leitura e cálculos
-        with open("./test/temp.bin", "rb") as temp_file:
-            temp_file.seek(0x804A)
-            app_size_bytes = temp_file.read(3)
-            version['app_size'] = sum(app_size_bytes)
+            # Leitura e cálculos
+            with open("./test/temp.bin", "rb") as temp_file:
+                temp_file.seek(0x804A)
+                app_size_bytes = temp_file.read(3)
+                version['app_size'] = sum(app_size_bytes)
 
-            temp_file.seek(0x806A)
-            spiffs_size_bytes = temp_file.read(3)
-            version['spiffs_size'] = sum(spiffs_size_bytes)
+                temp_file.seek(0x806A)
+                spiffs_size_bytes = temp_file.read(3)
+                version['spiffs_size'] = sum(spiffs_size_bytes)
 
-            temp_file.seek(0x806D)
-            spiffs_offset_bytes = temp_file.read(3)
-            version['spiffs_offset'] = sum(spiffs_offset_bytes)
+                temp_file.seek(0x806D)
+                spiffs_offset_bytes = temp_file.read(3)
+                version['spiffs_offset'] = sum(spiffs_offset_bytes)
 
-            version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
+                version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
 
 os.remove("./test/temp.bin")  # Passo 5: Exclusão do arquivo temporário
 
