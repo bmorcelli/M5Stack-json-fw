@@ -12,6 +12,7 @@ if os.path.exists("./test/all_device_firmware.json"):
 url = "https://m5burner-api.m5stack.com/api/firmware"
 response = requests.get(url)
 data = response.json()
+files_added = 0
 
 with open("./test/all_device_firmware.json", 'w') as new_file:
     json.dump(data, new_file)
@@ -44,6 +45,7 @@ for item in data:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)
         else:
             print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
+            files_added+=1
             file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
             time.sleep(random.uniform(0.05, 0.15))  # Pausa aleatória entre 0.1s a 0.2s
             with requests.get(file_url, stream=True) as r:
@@ -68,7 +70,8 @@ for item in data:
 
                 version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
 
-os.remove("./test/temp.bin")  # Passo 5: Exclusão do arquivo temporário
+if os.path.exists("./test/temp.bin"):
+    os.remove("./test/temp.bin")  # Passo 5: Exclusão do arquivo temporário
 
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name):
@@ -86,3 +89,5 @@ create_filtered_file("stickc")
 
 with open("./test/all_device_firmware.json", 'w') as final_file:
     json.dump(data, final_file)
+
+print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
