@@ -37,7 +37,7 @@ for new_item in data:
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
     for version in item['versions']:
-        print(f"{item['name']} - {version['version']} - {version['file']}")
+        print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
         file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
         time.sleep(random.uniform(0.9, 1.1))  # Pausa aleatória entre 900ms a 1100ms
         with requests.get(file_url, stream=True) as r:
