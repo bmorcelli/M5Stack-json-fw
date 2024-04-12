@@ -61,12 +61,10 @@ for item in data:
                         temp_file.seek(0x8000 + i*0x20)
                         app_size_bytes = temp_file.read(16)
                         if (app_size_bytes[3] == 0x00 or app_size_bytes[3]== 0x00) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
-                            app_size_bytes[0x0C] = 0
-                            version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | app_size_bytes[0x0C]
+                            version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
 
-                        if app_size_bytes[3] == 0x83:
-                            app_size_bytes[0x0C] = 0
-                            version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | app_size_bytes[0x0C]
+                        if app_size_bytes[3] == 0x82:
+                            version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                             version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
                             
                             version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
