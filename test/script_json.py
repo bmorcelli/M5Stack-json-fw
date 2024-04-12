@@ -56,19 +56,21 @@ for item in data:
 
             # Leitura e cálculos
             with open("./test/temp.bin", "rb") as temp_file:
-                temp_file.seek(0x804A)
-                app_size_bytes = temp_file.read(3)
-                version['app_size'] = sum(app_size_bytes)
+                for i in range(15):
+                    temp_file.seek(0x8000 + i*0x20)
+                    app_size_bytes = temp_file.read(16)
+                    if (app_size_bytes[3] == 0x00 or app_size_bytes[3]== 0x00) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
+                        version['app_size'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
 
-                temp_file.seek(0x806A)
-                spiffs_size_bytes = temp_file.read(3)
-                version['spiffs_size'] = sum(spiffs_size_bytes)
+                    temp_file.seek(0x806A)
+                    spiffs_size_bytes = temp_file.read(16)
+                    version['spiffs_size'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
 
-                temp_file.seek(0x806D)
-                spiffs_offset_bytes = temp_file.read(3)
-                version['spiffs_offset'] = sum(spiffs_offset_bytes)
+                    temp_file.seek(0x806D)
+                    spiffs_offset_bytes = temp_file.read(16)
+                    version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
 
-                version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
+                    version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
 
 if os.path.exists("./test/temp.bin"):
     os.remove("./test/temp.bin")  # Passo 5: Exclusão do arquivo temporário
@@ -87,7 +89,8 @@ def create_filtered_file(category_name):
 create_filtered_file("cardputer")
 create_filtered_file("stickc")
 
+print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
+
 with open("./test/all_device_firmware.json", 'w') as final_file:
     json.dump(data, final_file)
 
-print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
