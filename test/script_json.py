@@ -57,12 +57,15 @@ for item in data:
             # Leitura e cálculos
             with open("./test/temp.bin", "rb") as temp_file:
                 for i in range(10):
-                    if temp_file.seek(0x8000 + i*0x20):
+                    if temp_file.size() >= (0x8000 + i*0x20 + 0xF):
+                        temp_file.seek(0x8000 + i*0x20)
                         app_size_bytes = temp_file.read(16)
                         if (app_size_bytes[3] == 0x00 or app_size_bytes[3]== 0x00) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
+                            app_size_bytes[0x0C] = 0
                             version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | app_size_bytes[0x0C]
 
                         if app_size_bytes[3] == 0x83:
+                            app_size_bytes[0x0C] = 0
                             version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | app_size_bytes[0x0C]
                             version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
                             
