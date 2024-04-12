@@ -56,21 +56,17 @@ for item in data:
 
             # Leitura e cálculos
             with open("./test/temp.bin", "rb") as temp_file:
-                for i in range(15):
-                    temp_file.seek(0x8000 + i*0x20)
-                    app_size_bytes = temp_file.read(16)
-                    if (app_size_bytes[3] == 0x00 or app_size_bytes[3]== 0x00) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
-                        version['app_size'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
+                for i in range(10):
+                    if temp_file.seek(0x8000 + i*0x20):
+                        app_size_bytes = temp_file.read(16)
+                        if (app_size_bytes[3] == 0x00 or app_size_bytes[3]== 0x00) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
+                            version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | app_size_bytes[0x0C]
 
-                    temp_file.seek(0x806A)
-                    spiffs_size_bytes = temp_file.read(16)
-                    version['spiffs_size'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
-
-                    temp_file.seek(0x806D)
-                    spiffs_offset_bytes = temp_file.read(16)
-                    version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
-
-                    version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
+                        if app_size_bytes[3] == 0x83:
+                            version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | app_size_bytes[0x0C]
+                            version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
+                            
+                            version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
 
 if os.path.exists("./test/temp.bin"):
     os.remove("./test/temp.bin")  # Passo 5: Exclusão do arquivo temporário
