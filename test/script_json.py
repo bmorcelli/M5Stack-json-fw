@@ -30,7 +30,7 @@ for new_item in data:
             for new_version in new_item['versions']:
                 for old_version in old_item['versions']:
                     if new_version['version'] == old_version['version']:
-                        fields_to_copy = ['app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
+                        fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
                         for field in fields_to_copy:
                             if field in old_version:
                                 new_version[field] = old_version[field]
