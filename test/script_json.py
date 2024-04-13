@@ -31,7 +31,7 @@ if os.path.exists(all_device_firmware_old):
 # Passo 3: Comparação e atualização de dados
 for new_item in data:
     for old_item in old_data:
-        if new_item['fid'] == old_item['fid']:
+        if new_item['_id'] == old_item['_id']:
             for new_version in new_item['versions']:
                 new_version.pop('change_log', None)
                 new_version.pop('published', None)
