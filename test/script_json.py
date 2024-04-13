@@ -84,6 +84,7 @@ if os.path.exists(temp_bin):
 def create_filtered_file(category_name):
     filtered_data = [item for item in data if item['category'] == category_name]
     for item in filtered_data:
+        item['versions'] = sorted(item.get('versions', []), key=lambda v: v['published_at'], reverse=True)
         item.pop('description', None)
         item.pop('fid', None)
         item.pop('cover', None)
