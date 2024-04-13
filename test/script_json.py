@@ -6,7 +6,7 @@ import random
 
 # Passo 1: Renomear arquivo existente
 if os.path.exists("./test/all_device_firmware.json"):
-    os.rename("all_device_firmware.json", "all_device_firmware.old.json")
+    os.rename("./test/all_device_firmware.json", "./test/all_device_firmware.old.json")
 
 # Passo 2: Download dos dados da API
 url = "https://m5burner-api.m5stack.com/api/firmware"
@@ -41,7 +41,7 @@ for item in data:
     item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin')]
     
     for version in item['versions']:
-        if "spiffs" in version:
+        if 'spiffs' in version:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)
         else:
             print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
