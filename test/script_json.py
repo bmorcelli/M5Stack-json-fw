@@ -57,7 +57,7 @@ for item in data:
             # Leitura e cálculos
             version['spiffs'] = False
             if os.path.getsize("./test/temp.bin") > (33120): # 0x8160 and  i = 9
-                with open("temp.bin", "rb") as temp_file:
+                with open("./test/temp.bin", "rb") as temp_file:
                     for i in range(8):
                         temp_file.seek(0x8000 + i*0x20)
                         app_size_bytes = temp_file.read(16)
