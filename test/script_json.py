@@ -76,7 +76,7 @@ if os.path.exists("./test/temp.bin"):
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name):
     filtered_data = [item for item in data if item['category'] == category_name]
-    with open(f"{category_name}.json", 'w') as file:
+    with open(f"./test/{category_name}.json", 'w') as file:
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
