@@ -4,9 +4,14 @@ import json
 import time
 import random
 
+all_device_firmware = "./test/all_device_firmware.json"
+all_device_firmware_old = "./test/all_device_firmware.old.json"
+temp_bin = "./test/temp.bin"
+temp_folder = "./test/"
+
 # Passo 1: Renomear arquivo existente
-if os.path.exists("./test/all_device_firmware.json"):
-    os.rename("./test/all_device_firmware.json", "./test/all_device_firmware.old.json")
+if os.path.exists(all_device_firmware):
+    os.rename(all_device_firmware, all_device_firmware_old)
 
 # Passo 2: Download dos dados da API
 url = "https://m5burner-api.m5stack.com/api/firmware"
@@ -14,13 +19,13 @@ response = requests.get(url)
 data = response.json()
 files_added = 0
 
-with open("./test/all_device_firmware.json", 'w') as new_file:
+with open(all_device_firmware, 'w') as new_file:
     json.dump(data, new_file)
 
 # Carregando dados antigos, se disponíveis
 old_data = []
-if os.path.exists("./test/all_device_firmware.old.json"):
-    with open("./test/all_device_firmware.old.json", 'r') as old_file:
+if os.path.exists(all_device_firmware_old):
+    with open(all_device_firmware_old, 'r') as old_file:
         old_data = json.load(old_file)
 
 # Passo 3: Comparação e atualização de dados
@@ -28,6 +33,8 @@ for new_item in data:
     for old_item in old_data:
         if new_item['fid'] == old_item['fid']:
             for new_version in new_item['versions']:
+                new_version.pop('change_log', None)
+                new_version.pop('published', None)
                 for old_version in old_item['versions']:
                     if new_version['version'] == old_version['version']:
                         fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
@@ -51,13 +58,13 @@ for item in data:
             with requests.get(file_url, stream=True) as r:
                 version['file_size'] = int(r.headers.get('Content-Length', 0))
                 first_bytes = r.raw.read(33600)
-                with open("./test/temp.bin", "wb") as temp_file:
+                with open(temp_bin, "wb") as temp_file:
                     temp_file.write(first_bytes)
 
             # Leitura e cálculos
             version['spiffs'] = False
-            if os.path.getsize("./test/temp.bin") > (33120): # 0x8160 and  i = 9
-                with open("./test/temp.bin", "rb") as temp_file:
+            if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
+                with open(temp_bin, "rb") as temp_file:
                     for i in range(8):
                         temp_file.seek(0x8000 + i*0x20)
                         app_size_bytes = temp_file.read(16)
@@ -70,13 +77,21 @@ for item in data:
                         elif version['spiffs'] != True:
                             version['spiffs'] != False
 
-if os.path.exists("./test/temp.bin"):
-    os.remove("./test/temp.bin")  # Passo 5: Exclusão do arquivo temporário
+if os.path.exists(temp_bin):
+    os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário
 
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name):
     filtered_data = [item for item in data if item['category'] == category_name]
-    with open(f"./test/{category_name}.json", 'w') as file:
+    for item in filtered_data:
+        item.pop('description', None)
+        item.pop('fid', None)
+        item.pop('cover', None)
+        item.pop('tags', None)
+        item.pop('github', None)
+        item.pop('download', None)
+
+    with open(f"{temp_folder}{category_name}.json", 'w') as file:
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
@@ -85,5 +100,5 @@ create_filtered_file("stickc")
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
 
-with open("./test/all_device_firmware.json", 'w') as final_file:
+with open(all_device_firmware, 'w') as final_file:
     json.dump(data, final_file)
