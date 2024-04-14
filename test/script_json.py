@@ -25,6 +25,14 @@ with open(all_device_firmware, 'w') as new_file:
 # Excluir todos UIFlow da jogada
 data = [item for item in data if 'UIFlow' not in item['name']]
 
+
+# Corrigir espaços no início dos nomes e ordenar pelo campo 'name'
+for item in data:
+    item['name'] = item['name'].strip()
+    
+# Ordena por "name"
+data = sorted(data, key=lambda x: x['name'])
+
 # Carregando dados antigos, se disponíveis
 old_data = []
 if os.path.exists(all_device_firmware_old):
