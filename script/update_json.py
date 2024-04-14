@@ -31,6 +31,9 @@ for item in data:
             item['versions'] = [last_version]
 
 
+# Filtrar para excluir elementos sem versões
+data = [item for item in data if item['versions']]
+
 # Corrigir espaços no início dos nomes e ordenar pelo campo 'name'
 for item in data:
     item['name'] = item['name'].strip()
