@@ -22,6 +22,9 @@ files_added = 0
 with open(all_device_firmware, 'w') as new_file:
     json.dump(data, new_file)
 
+# Excluir todos UIFlow da jogada
+data = [item for item in data if 'UIFlow' not in item['name']]
+
 # Carregando dados antigos, se disponíveis
 old_data = []
 if os.path.exists(all_device_firmware_old):
@@ -68,13 +71,14 @@ for item in data:
                         temp_file.seek(0x8000 + i*0x20)
                         app_size_bytes = temp_file.read(16)
                         if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
-                            version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
+                            if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - 0x10000):
+                                version['app_size'] = int(r.headers.get('Content-Length', 0)) - 0x10000
+                            else:
+                                version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                         elif app_size_bytes[3] == 0x82:
                             version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                             version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
                             version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
-                    if (version['app_size'] + 0x10000) > version['file_size']:
-                        version['app_size'] = version['file_size'] - 0x10000
 
 
 if os.path.exists(temp_bin):
