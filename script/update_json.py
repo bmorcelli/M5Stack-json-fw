@@ -1,52 +1,126 @@
-import json
 import os
 import requests
+import json
+import time
+import random
 
-# Função para baixar o arquivo binário
-def download_bin_file(url, filename):
-    response = requests.get(url)
-    with open(filename, 'wb') as f:
-        f.write(response.content)
+all_device_firmware = "./script/all_device_firmware.json"
+all_device_firmware_old = "./script/all_device_firmware.old.json"
+temp_bin = "./script/temp.bin"
+temp_folder = "./script/"
 
-# Função para filtrar e salvar os dados em um novo arquivo JSON
-def filter_and_save_old(data, category, output_filename):
-    filtered_data = [item for item in data if item.get('category') == category and any(version.get('published') for version in item.get('versions'))]
-    filtered_data = [{k: v for k, v in item.items() if k in ['fid', 'name', 'category', 'author', 'versions']} for item in filtered_data]
-    for item in filtered_data:
-        item['versions'] = [{k: v for k, v in version.items() if k in ['version', 'published_at', 'file']} for version in item['versions']]
-    with open(output_filename, 'w') as f:
-        json.dump(filtered_data, f, indent=2)
+# Passo 1: Renomear arquivo existente
+if os.path.exists(all_device_firmware):
+    os.rename(all_device_firmware, all_device_firmware_old)
 
-# Função para filtrar e salvar os dados em um novo arquivo JSON
-def filter_and_save(data, category, output_filename):
-    filtered_data = [item for item in data if item.get('category') == category and any(version.get('published') for version in item.get('versions', []))]
-    final_data = []
-    for item in filtered_data:
-        versions = item.get('versions', [])
-        if versions:
-            latest_version = max(versions, key=lambda x: x.get('published_at', ''))
-            if 'published_at' in latest_version:
-                filtered_item = {
-                    'fid': item['fid'],
-                    'name': item['name'],
-                    'category': item['category'],
-                    'author': item['author'],
-                    'cover': item['cover'],
-                    'version': latest_version['version'],
-                    'published_at': latest_version['published_at'],
-                    'file': latest_version['file']
-                }
-                final_data.append(filtered_item)
-    with open(output_filename, 'w') as f:
-        json.dump(final_data, f, indent=2)
-
-
-# Request à API e salvando os dados em all_device_firmware.json
-response = requests.get('https://m5burner-api.m5stack.com/api/firmware')
+# Passo 2: Download dos dados da API
+url = "https://m5burner-api.m5stack.com/api/firmware"
+response = requests.get(url)
 data = response.json()
-with open('./script/all_device_firmware.json', 'w') as f:
-    json.dump(data, f, indent=2)
+files_added = 0
 
-# Filtrando e salvando os dados em cardputer.json e stickc.json
-filter_and_save(data, 'cardputer', './script/cardputer.json')
-filter_and_save(data, 'stickc', './script/stickc.json')
+with open(all_device_firmware, 'w') as new_file:
+    json.dump(data, new_file)
+
+# Manter apenas a última versão para os com "UIFlow" no nome
+for item in data:
+    if 'UIFlow' in item['name']:
+        # Ordenar as versões pela data de publicação e pegar a última
+        if item['versions']:
+            last_version = sorted(item['versions'], key=lambda v: v['published_at'], reverse=True)[0]
+            item['versions'] = [last_version]
+
+
+# Corrigir espaços no início dos nomes e ordenar pelo campo 'name'
+for item in data:
+    item['name'] = item['name'].strip()
+    
+# Ordena por "name"
+data = sorted(data, key=lambda x: x['name'])
+
+# Carregando dados antigos, se disponíveis
+old_data = []
+if os.path.exists(all_device_firmware_old):
+    with open(all_device_firmware_old, 'r') as old_file:
+        old_data = json.load(old_file)
+    # Passo 3: Comparação e atualização de dados
+    for new_item in data:
+        for old_item in old_data:
+            if new_item['_id'] == old_item['_id']:
+                for new_version in new_item['versions']:
+                    new_version.pop('change_log', None)
+                    new_version.pop('published', None)
+                    for old_version in old_item['versions']:
+                        if new_version['version'] == old_version['version']:
+                            fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
+                            for field in fields_to_copy:
+                                if field in old_version:
+                                    new_version[field] = old_version[field]
+
+# Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
+for item in data:
+    # Filtrando versões que não terminam com '.bin'
+    item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin')]
+    
+    for version in item['versions']:
+        if 'spiffs' in version:
+            print(f"{item['name']} - {version['version']} - Ok ", flush=True)
+        else:
+            print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
+            files_added+=1
+            file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
+            time.sleep(random.uniform(0.1, 0.3))  # Pausa aleatória entre 0.1s a 0.2s
+            with requests.get(file_url, stream=True) as r:
+                version['file_size'] = int(r.headers.get('Content-Length', 0))
+                first_bytes = r.raw.read(33600)
+                with open(temp_bin, "wb") as temp_file:
+                    temp_file.write(first_bytes)
+
+            # Leitura e cálculos
+            version['spiffs'] = False
+            if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
+                with open(temp_bin, "rb") as temp_file:
+                    for i in range(8):
+                        temp_file.seek(0x8000 + i*0x20)
+                        app_size_bytes = temp_file.read(16)
+                        if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
+                            if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - 0x10000):
+                                version['app_size'] = int(r.headers.get('Content-Length', 0)) - 0x10000
+                            else:
+                                version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
+                        elif app_size_bytes[3] == 0x82:
+                            version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
+                            version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
+                            version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
+
+
+if os.path.exists(temp_bin):
+    os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário
+
+# Função para filtrar e criar arquivos específicos
+def create_filtered_file(category_name):
+    filtered_data = [item for item in data if item['category'] == category_name]
+    for item in filtered_data:
+        item['versions'] = sorted(
+            item.get('versions', []),
+            key=lambda v: v.get('published_at', '0000-00-00'),
+            reverse=True
+        )
+        item.pop('description', None)
+        item.pop('fid', None)
+        item.pop('cover', None)
+        item.pop('tags', None)
+        item.pop('github', None)
+        item.pop('download', None)
+
+    with open(f"{temp_folder}{category_name}.json", 'w') as file:
+        json.dump(filtered_data, file)
+
+# Criação dos arquivos filtrados
+create_filtered_file("cardputer")
+create_filtered_file("stickc")
+
+print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
+
+with open(all_device_firmware, 'w') as final_file:
+    json.dump(data, final_file)
