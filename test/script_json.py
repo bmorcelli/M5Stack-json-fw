@@ -27,20 +27,19 @@ old_data = []
 if os.path.exists(all_device_firmware_old):
     with open(all_device_firmware_old, 'r') as old_file:
         old_data = json.load(old_file)
-
-# Passo 3: Comparação e atualização de dados
-for new_item in data:
-    for old_item in old_data:
-        if new_item['_id'] == old_item['_id']:
-            for new_version in new_item['versions']:
-                new_version.pop('change_log', None)
-                new_version.pop('published', None)
-                for old_version in old_item['versions']:
-                    if new_version['version'] == old_version['version']:
-                        fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
-                        for field in fields_to_copy:
-                            if field in old_version:
-                                new_version[field] = old_version[field]
+    # Passo 3: Comparação e atualização de dados
+    for new_item in data:
+        for old_item in old_data:
+            if new_item['_id'] == old_item['_id']:
+                for new_version in new_item['versions']:
+                    new_version.pop('change_log', None)
+                    new_version.pop('published', None)
+                    for old_version in old_item['versions']:
+                        if new_version['version'] == old_version['version']:
+                            fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
+                            for field in fields_to_copy:
+                                if field in old_version:
+                                    new_version[field] = old_version[field]
 
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
@@ -68,14 +67,15 @@ for item in data:
                     for i in range(8):
                         temp_file.seek(0x8000 + i*0x20)
                         app_size_bytes = temp_file.read(16)
-                        if (app_size_bytes[3] == 0x00 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
+                        if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
                             version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                         elif app_size_bytes[3] == 0x82:
                             version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                             version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
                             version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
-                        elif version['spiffs'] != True:
-                            version['spiffs'] != False
+                    if (version['app_size'] + 0x10000) > version['file_size']:
+                        version['app_size'] = version['file_size'] - 0x10000
+
 
 if os.path.exists(temp_bin):
     os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário
