@@ -32,7 +32,7 @@ for item in data:
 
 
 # Filtrar para excluir elementos sem versões
-data = [item for item in data if item['versions']]
+data = [item for item in data if 'versions' in item and item['versions']]
 
 # Corrigir espaços no início dos nomes e ordenar pelo campo 'name'
 for item in data:
