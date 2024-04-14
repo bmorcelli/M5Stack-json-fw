@@ -22,8 +22,13 @@ files_added = 0
 with open(all_device_firmware, 'w') as new_file:
     json.dump(data, new_file)
 
-# Excluir todos UIFlow da jogada
-data = [item for item in data if 'UIFlow' not in item['name']]
+# Manter apenas a última versão para os com "UIFlow" no nome
+for item in data:
+    if 'UIFlow' in item['name']:
+        # Ordenar as versões pela data de publicação e pegar a última
+        if item['versions']:
+            last_version = sorted(item['versions'], key=lambda v: v['published_at'], reverse=True)[0]
+            item['versions'] = [last_version]
 
 
 # Corrigir espaços no início dos nomes e ordenar pelo campo 'name'
