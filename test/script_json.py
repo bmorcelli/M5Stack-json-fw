@@ -30,6 +30,12 @@ for item in data:
             last_version = sorted(item['versions'], key=lambda v: v['published_at'], reverse=True)[0]
             item['versions'] = [last_version]
 
+# Filtrando versões que não terminam com '.bin'
+for item in data:
+    item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin')]
+
+# Filtrar para excluir elementos sem versões ou sem arquivos binarios
+data = [item for item in data if 'versions' in item and len(item['versions']) > 0]
 
 # Corrigir espaços no início dos nomes e ordenar pelo campo 'name'
 for item in data:
@@ -59,9 +65,6 @@ if os.path.exists(all_device_firmware_old):
 
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
-    # Filtrando versões que não terminam com '.bin'
-    item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin')]
-    
     for version in item['versions']:
         if 'spiffs' in version:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)
@@ -97,6 +100,9 @@ for item in data:
 if os.path.exists(temp_bin):
     os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário
 
+with open(all_device_firmware, 'w') as final_file:
+    json.dump(data, final_file)
+
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name):
     filtered_data = [item for item in data if item['category'] == category_name]
@@ -112,7 +118,11 @@ def create_filtered_file(category_name):
         item.pop('tags', None)
         item.pop('github', None)
         item.pop('download', None)
-
+        item.pop('_id', None)
+        
+    for item in filtered_data:
+        item.pop('category', None)
+        
     with open(f"{temp_folder}{category_name}.json", 'w') as file:
         json.dump(filtered_data, file)
 
@@ -122,5 +132,4 @@ create_filtered_file("stickc")
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
 
-with open(all_device_firmware, 'w') as final_file:
-    json.dump(data, final_file)
+
