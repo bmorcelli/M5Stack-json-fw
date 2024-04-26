@@ -100,6 +100,9 @@ for item in data:
 if os.path.exists(temp_bin):
     os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário
 
+with open(all_device_firmware, 'w') as final_file:
+    json.dump(data, final_file)
+
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name):
     filtered_data = [item for item in data if item['category'] == category_name]
@@ -115,6 +118,7 @@ def create_filtered_file(category_name):
         item.pop('tags', None)
         item.pop('github', None)
         item.pop('download', None)
+        item.pop('_id', None)
         
 
     with open(f"{temp_folder}{category_name}.json", 'w') as file:
@@ -126,5 +130,4 @@ create_filtered_file("stickc")
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
 
-with open(all_device_firmware, 'w') as final_file:
-    json.dump(data, final_file)
+
