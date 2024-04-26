@@ -119,6 +119,8 @@ def create_filtered_file(category_name):
         item.pop('github', None)
         item.pop('download', None)
         item.pop('_id', None)
+    filtered_data = [item for item in data]
+    for item in filtered_data:
         item.pop('category', None)
         
 
