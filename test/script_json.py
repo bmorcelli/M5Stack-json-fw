@@ -119,9 +119,7 @@ def create_filtered_file(category_name):
         item.pop('github', None)
         item.pop('download', None)
         item.pop('_id', None)
-        
-    for item in filtered_data:
-        item.pop('category', None)
+
         
     with open(f"{temp_folder}{category_name}.json", 'w') as file:
         json.dump(filtered_data, file)
@@ -129,6 +127,22 @@ def create_filtered_file(category_name):
 # Criação dos arquivos filtrados
 create_filtered_file("cardputer")
 create_filtered_file("stickc")
+
+def replace_text_in_file(category_name):
+    # Abrir o arquivo para leitura
+    with open(f"{temp_folder}{category_name}.json", 'r') as file:
+        content = file.read()
+    
+    # Substituir o texto especificado
+    content = content.replace(f'"category": "{category_name}", ', '')
+    
+    # Abrir o arquivo para escrita e salvar o conteúdo modificado
+    with open(f"{temp_folder}{category_name}.json", 'w') as file:
+        file.write(content)
+
+# Exemplo de uso da função
+replace_text_in_file("cardputer")
+replace_text_in_file("stickc")
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
 
