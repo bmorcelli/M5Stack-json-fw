@@ -115,6 +115,8 @@ def create_filtered_file(category_name):
         item.pop('tags', None)
         item.pop('github', None)
         item.pop('download', None)
+        item.pop('_id', None)
+        item.pop('category', None)
 
     with open(f"{temp_folder}{category_name}.json", 'w') as file:
         json.dump(filtered_data, file)
