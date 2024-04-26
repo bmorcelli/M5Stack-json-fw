@@ -58,10 +58,11 @@ if os.path.exists(all_device_firmware_old):
                     new_version.pop('published', None)
                     for old_version in old_item['versions']:
                         if new_version['version'] == old_version['version']:
-                            fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
-                            for field in fields_to_copy:
-                                if field in old_version:
-                                    new_version[field] = old_version[field]
+                            if new_version['file'] == old_version['file']:
+                                fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
+                                for field in fields_to_copy:
+                                    if field in old_version:
+                                        new_version[field] = old_version[field]
 
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
