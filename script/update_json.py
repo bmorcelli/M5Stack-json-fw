@@ -114,7 +114,6 @@ def create_filtered_file(category_name):
         item.pop('cover', None)
         item.pop('tags', None)
         item.pop('github', None)
-        item.pop('_id', None)
         item.pop('download', None)
         
 
