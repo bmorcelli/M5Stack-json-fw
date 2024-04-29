@@ -59,7 +59,7 @@ if os.path.exists(all_device_firmware_old):
                     for old_version in old_item['versions']:
                         if new_version['version'] == old_version['version']:
                             if new_version['file'] == old_version['file']:
-                                fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs']
+                                fields_to_copy = ['file_size', 'app_size', 'spiffs_size', 'spiffs_offset', 'spiffs', 'nb']
                                 for field in fields_to_copy:
                                     if field in old_version:
                                         new_version[field] = old_version[field]
