@@ -101,7 +101,7 @@ for item in data:
                                 version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
                     else:
                         version['app_size'] = int(r.headers.get('Content-Length', 0))
-                        version['nb'] = true # nb stands for No-Bootloader, to be downloaded whole
+                        version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
 
 
 if os.path.exists(temp_bin):
