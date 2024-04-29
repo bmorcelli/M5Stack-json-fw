@@ -84,18 +84,25 @@ for item in data:
             version['spiffs'] = False
             if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
                 with open(temp_bin, "rb") as temp_file:
-                    for i in range(8):
-                        temp_file.seek(0x8000 + i*0x20)
-                        app_size_bytes = temp_file.read(16)
-                        if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
-                            if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - 0x10000):
-                                version['app_size'] = int(r.headers.get('Content-Length', 0)) - 0x10000
-                            else:
-                                version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
-                        elif app_size_bytes[3] == 0x82:
-                            version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
-                            version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
-                            version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
+                    temp_file.seek(0x8000)
+                    app_size_bytes = temp_file.read(16)
+                    if (app_size_bytes[0] == 0xAA && app_size_bytes[1] == 0x50 && app_size_bytes[2] == 0x01):
+                        for i in range(8):
+                            temp_file.seek(0x8000 + i*0x20)
+                            app_size_bytes = temp_file.read(16)
+                            if (app_size_bytes[0] == 0xAA && app_size_bytes[1] == 0x50 && app_size_bytes[2] == 0x01):
+                                if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
+                                    if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - 0x10000):
+                                        version['app_size'] = int(r.headers.get('Content-Length', 0)) - 0x10000
+                                    else:
+                                        version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
+                                elif app_size_bytes[3] == 0x82:
+                                    version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
+                                    version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
+                                    version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
+                    else:
+                        version['app_size'] = int(r.headers.get('Content-Length', 0))
+                        version['nb'] = true # nb stands for No-Bootloader, to be downloaded whole
 
 
 if os.path.exists(temp_bin):
