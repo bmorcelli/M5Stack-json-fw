@@ -4,6 +4,11 @@ import json
 import time
 import random
 
+# all_device_firmware = "./test/all_device_firmware.json"
+# all_device_firmware_old = "./test/all_device_firmware.old.json"
+# temp_bin = "./test/temp.bin"
+# temp_folder = "./test/"
+
 all_device_firmware = "./script/all_device_firmware.json"
 all_device_firmware_old = "./script/all_device_firmware.old.json"
 temp_bin = "./script/temp.bin"
@@ -32,7 +37,7 @@ for item in data:
 
 # Filtrando versões que não terminam com '.bin'
 for item in data:
-    item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin')]
+    item['versions'] = [version for version in item['versions'] if version['file'].endswith('.bin') or version['file'].endswith('file')]
 
 # Filtrar para excluir elementos sem versões ou sem arquivos binarios
 data = [item for item in data if 'versions' in item and len(item['versions']) > 0]
@@ -155,5 +160,3 @@ replace_text_in_file("stickc")
 
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
-
-
