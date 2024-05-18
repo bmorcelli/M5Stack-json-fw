@@ -28,6 +28,8 @@ jobs:
           echo "Files are different. Updating..."
           rm -f ./cardputer.json ./stickc.json
           cp ./script/cardputer.json ./script/stickc.json ./
+          rm -f ./test/cardputer.json
+          cp ./script/cardputer.json ./test/
           git add .
           git commit -m "Update JSON files"
           git push
