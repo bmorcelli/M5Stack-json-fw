@@ -4,15 +4,15 @@ import json
 import time
 import random
 
-all_device_firmware = "./test/all_device_firmware.json"
-all_device_firmware_old = "./test/all_device_firmware.old.json"
-temp_bin = "./test/temp.bin"
-temp_folder = "./test/"
+# all_device_firmware = "./test/all_device_firmware.json"
+# all_device_firmware_old = "./test/all_device_firmware.old.json"
+# temp_bin = "./test/temp.bin"
+# temp_folder = "./test/"
 
-# all_device_firmware = "./script/all_device_firmware.json"
-# all_device_firmware_old = "./script/all_device_firmware.old.json"
-# temp_bin = "./script/temp.bin"
-# temp_folder = "./script/"
+all_device_firmware = "./script/all_device_firmware.json"
+all_device_firmware_old = "./script/all_device_firmware.old.json"
+temp_bin = "./script/temp.bin"
+temp_folder = "./script/"
 
 # Passo 1: Renomear arquivo existente
 if os.path.exists(all_device_firmware):
@@ -140,6 +140,7 @@ def create_filtered_file(category_name):
 # Criação dos arquivos filtrados
 create_filtered_file("cardputer")
 create_filtered_file("stickc")
+create_filtered_file("core2 & tough")
 
 # Exclui os elementos 'category'
 def replace_text_in_file(category_name):
@@ -157,6 +158,7 @@ def replace_text_in_file(category_name):
 # Exemplo de uso da função
 replace_text_in_file("cardputer")
 replace_text_in_file("stickc")
+replace_text_in_file("core2 & tough")
 
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
