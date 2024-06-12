@@ -25,10 +25,11 @@ jobs:
       id: compare
       run: |
         mv ./script/"core2 & tough.json" ./script/core2.json
-        if ! cmp -s ./cardputer.json ./script/cardputer.json || ! cmp -s ./stickc.json ./script/stickc.json || cmp -s ./core2.json ./script/core2.json; then
+        if ! cmp -s ./cardputer.json ./script/cardputer.json || ! cmp -s ./stickc.json ./script/stickc.json || cmp -s ./core2.json ./script/"core2 & tough.json"; then
           echo "Files are different. Updating..."
           rm -f ./cardputer.json ./stickc.json ./core2.json
-          cp ./script/cardputer.json ./script/stickc.json ./script/core2.json ./
+          cp ./script/cardputer.json ./script/stickc.json ./
+          cp ./script/"core2 & tough.json" ./core2.json
           rm -f ./test/cardputer.json
           cp ./script/cardputer.json ./test/
           git add .
