@@ -24,7 +24,6 @@ jobs:
     - name: Compare JSON files
       id: compare
       run: |
-        mv ./script/"core2 & tough.json" ./script/core2.json
         if ! cmp -s ./cardputer.json ./script/cardputer.json || ! cmp -s ./stickc.json ./script/stickc.json || cmp -s ./core2.json ./script/"core2 & tough.json"; then
           echo "Files are different. Updating..."
           rm -f ./cardputer.json ./stickc.json ./core2.json
