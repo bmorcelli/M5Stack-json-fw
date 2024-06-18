@@ -4,15 +4,15 @@ import json
 import time
 import random
 
-# all_device_firmware = "./test/all_device_firmware.json"
-# all_device_firmware_old = "./test/all_device_firmware.old.json"
-# temp_bin = "./test/temp.bin"
-# temp_folder = "./test/"
+all_device_firmware = "./test/all_device_firmware.json"
+all_device_firmware_old = "./test/all_device_firmware.old.json"
+temp_bin = "./test/temp.bin"
+temp_folder = "./test/"
 
-all_device_firmware = "./script/all_device_firmware.json"
-all_device_firmware_old = "./script/all_device_firmware.old.json"
-temp_bin = "./script/temp.bin"
-temp_folder = "./script/"
+# all_device_firmware = "./script/all_device_firmware.json"
+# all_device_firmware_old = "./script/all_device_firmware.old.json"
+# temp_bin = "./script/temp.bin"
+# temp_folder = "./script/"
 
 # Passo 1: Renomear arquivo existente
 if os.path.exists(all_device_firmware):
@@ -80,13 +80,14 @@ for item in data:
             file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
             time.sleep(random.uniform(0.1, 0.3))  # Pausa aleatória entre 0.1s a 0.2s
             with requests.get(file_url, stream=True) as r:
-                version['file_size'] = int(r.headers.get('Content-Length', 0))
+                version['Fs'] = int(r.headers.get('Content-Length', 0)) # File Size
                 first_bytes = r.raw.read(33600)
                 with open(temp_bin, "wb") as temp_file:
                     temp_file.write(first_bytes)
 
             # Leitura e cálculos
-            version['spiffs'] = False
+            version['s'] = False # Spiffs
+            version['f'] = False # FAT Vfs
             if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
                 with open(temp_bin, "rb") as temp_file:
                     temp_file.seek(0x8000)
@@ -97,15 +98,19 @@ for item in data:
                             app_size_bytes = temp_file.read(16)
                             if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
                                 if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - 0x10000):
-                                    version['app_size'] = int(r.headers.get('Content-Length', 0)) - 0x10000
+                                    version['as'] = int(r.headers.get('Content-Length', 0)) - 0x10000
                                 else:
-                                    version['app_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
+                                    version['as'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                             elif app_size_bytes[3] == 0x82:
-                                version['spiffs_size'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
-                                version['spiffs_offset'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]
-                                version['spiffs'] = version['file_size'] >= version['spiffs_offset'] + version['spiffs_size']
+                                version['ss'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
+                                version['so'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
+                                version['s'] = version['Fs'] >= version['so'] + version['ss']                                    # Spiffs exists or not
+                            elif app_size_bytes[3] == 0x81:
+                                version['fs'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # FAT_size
+                                version['fo'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # FAT_offset
+                                version['f'] = version['Fs'] >= version['fo'] + version['fs']                                    # FAT exists or not
                     else:
-                        version['app_size'] = int(r.headers.get('Content-Length', 0))
+                        version['as'] = int(r.headers.get('Content-Length', 0))
                         version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
 
 
@@ -138,7 +143,7 @@ def create_filtered_file(category_name):
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
-create_filtered_file("cardputer")
+# create_filtered_file("cardputer")
 create_filtered_file("stickc")
 create_filtered_file("core2 & tough")
 
@@ -156,7 +161,7 @@ def replace_text_in_file(category_name):
         file.write(content)
 
 # Exemplo de uso da função
-replace_text_in_file("cardputer")
+# replace_text_in_file("cardputer")
 replace_text_in_file("stickc")
 replace_text_in_file("core2 & tough")
 
