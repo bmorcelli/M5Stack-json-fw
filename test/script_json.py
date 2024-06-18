@@ -72,7 +72,7 @@ if os.path.exists(all_device_firmware_old):
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
     for version in item['versions']:
-        if 'spiffs' in version:
+        if 's' in version:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)
         else:
             print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
@@ -135,6 +135,8 @@ def create_filtered_file(category_name):
         item.pop('tags', None)
         item.pop('github', None)
         item.pop('download', None)
+        item.pop('published', None)
+        item.pop('change_log', None)
         item.pop('_id', None)
 
        
