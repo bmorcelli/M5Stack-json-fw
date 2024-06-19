@@ -141,6 +141,7 @@ def create_filtered_file(category_name):
 create_filtered_file("cardputer")
 create_filtered_file("stickc")
 create_filtered_file("core2 & tough")
+create_filtered_file("core")
 
 # Exclui os elementos 'category'
 def replace_text_in_file(category_name):
@@ -159,6 +160,7 @@ def replace_text_in_file(category_name):
 replace_text_in_file("cardputer")
 replace_text_in_file("stickc")
 replace_text_in_file("core2 & tough")
+create_filtered_file("core")
 
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
