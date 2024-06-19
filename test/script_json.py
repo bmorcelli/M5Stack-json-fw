@@ -93,6 +93,7 @@ for item in data:
                     temp_file.seek(0x8000)
                     app_size_bytes = temp_file.read(16)
                     if (app_size_bytes[0] == 0xAA and app_size_bytes[1] == 0x50 and app_size_bytes[2] == 0x01):
+                        j=0
                         for i in range(8):
                             temp_file.seek(0x8000 + i*0x20)
                             app_size_bytes = temp_file.read(16)
@@ -105,10 +106,16 @@ for item in data:
                                 version['ss'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
                                 version['so'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
                                 version['s'] = version['Fs'] >= version['so'] + version['ss']                                    # Spiffs exists or not
-                            elif app_size_bytes[3] == 0x81:
-                                version['fs'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # FAT_size
-                                version['fo'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # FAT_offset
-                                version['f'] = version['Fs'] >= version['fo'] + version['fs']                                    # FAT exists or not
+                            elif app_size_bytes[3] == 0x81 and j==0:
+                                version['fs'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
+                                version['fo'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
+                                version['f'] = version['Fs'] >= version['fo'] + version['fs']                                  # Spiffs exists or not
+                                j=1
+                            elif app_size_bytes[3] == 0x81 and j==1:
+                                version['fs2'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # FAT_size
+                                version['fo2'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # FAT_offset
+                                version['f2'] = version['Fs'] >= version['fo2'] + version['fs2']                                  # FAT exists or not
+                                j=2
                     else:
                         version['as'] = int(r.headers.get('Content-Length', 0))
                         version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
