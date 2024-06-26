@@ -64,7 +64,7 @@ if os.path.exists(all_device_firmware_old):
                     for old_version in old_item['versions']:
                         if new_version['version'] == old_version['version']:
                             if new_version['file'] == old_version['file']:
-                                fields_to_copy = ['Fs', 'as', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f']
+                                fields_to_copy = ['Fs', 'as', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f', 'fs2', 'fo2', 'f2']
                                 for field in fields_to_copy:
                                     if field in old_version:
                                         new_version[field] = old_version[field]
@@ -86,8 +86,9 @@ for item in data:
                     temp_file.write(first_bytes)
 
             # Leitura e cálculos
-            version['s'] = False # Spiffs
-            version['f'] = False # FAT Vfs
+            version['s'] = 0 # Spiffs
+            version['f'] = 0 # FAT Vfs
+            version['f2'] = 0 # FAT Vfs
             if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
                 with open(temp_bin, "rb") as temp_file:
                     temp_file.seek(0x8000)
@@ -103,19 +104,28 @@ for item in data:
                                 else:
                                     version['as'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                             elif app_size_bytes[3] == 0x82:
-                                version['ss'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
-                                version['so'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
-                                version['s'] = version['Fs'] >= version['so'] + version['ss']                                    # Spiffs exists or not
+                                ss =  app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                     # Spiffs_size
+                                so = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]      # Spiffs_offset
+                                if version['Fs'] >= so + ss:                                                            # Spiffs exists or not
+                                    version['s'] = 1
+                                    version['ss'] = ss
+                                    version['so'] = so
                             elif app_size_bytes[3] == 0x81 and j==0:
-                                version['fs'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
-                                version['fo'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
-                                version['f'] = version['Fs'] >= version['fo'] + version['fs']                                  # Spiffs exists or not
+                                fs = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
+                                fo = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
                                 j=1
+                                if version['Fs'] >= fo + fs:                                                          # Spiffs exists or not
+                                    version['f'] = 1
+                                    version['fs'] = fs
+                                    version['fo'] = fo
                             elif app_size_bytes[3] == 0x81 and j==1:
-                                version['fs2'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # FAT_size
-                                version['fo2'] = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # FAT_offset
-                                version['f2'] = version['Fs'] >= version['fo2'] + version['fs2']                                  # FAT exists or not
+                                fs = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
+                                fo = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
                                 j=2
+                                if version['Fs'] >= fo + fs:                                                          # Spiffs exists or not
+                                    version['f2'] = 1
+                                    version['fs2'] = fs
+                                    version['fo2'] = fo
                     else:
                         version['as'] = int(r.headers.get('Content-Length', 0))
                         version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
@@ -145,6 +155,7 @@ def create_filtered_file(category_name):
         item.pop('published', None)
         item.pop('change_log', None)
         item.pop('_id', None)
+        item.pop('network', None)
 
        
 
@@ -155,6 +166,7 @@ def create_filtered_file(category_name):
 # create_filtered_file("cardputer")
 create_filtered_file("stickc")
 create_filtered_file("core2 & tough")
+create_filtered_file("core")
 
 # Exclui os elementos 'category'
 def replace_text_in_file(category_name):
@@ -173,6 +185,7 @@ def replace_text_in_file(category_name):
 # replace_text_in_file("cardputer")
 replace_text_in_file("stickc")
 replace_text_in_file("core2 & tough")
+replace_text_in_file("core")
 
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
