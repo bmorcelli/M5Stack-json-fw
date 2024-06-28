@@ -13,8 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       
-    - name: Run Python script
+    - name: Run Python script <=2.0.1
       run: python ./script/update_json.py
+
+    - name: Run Python script >= 2.1
+      run: python ./v2/update_json.py      
       
     - name: Set up Git
       run: |
@@ -24,13 +27,18 @@ jobs:
     - name: Compare JSON files
       id: compare
       run: |
-        if ! cmp -s ./cardputer.json ./script/cardputer.json || ! cmp -s ./stickc.json ./script/stickc.json || ! cmp -s ./core2.json './script/core2 & tough.json' || ! cmp -s ./core.json ./script/core.json; then
+        if ! cmp -s ./v2/cardputer.json ./v2/tmp/cardputer.json || ! cmp -s ./v2/stickc.json ./v2/tmp/stickc.json || ! cmp -s ./v2/core2.json './v2/tmp/core2 & tough.json' || ! cmp -s ./v2/core.json ./v2/tmp/core.json; then
           echo "Files are different. Updating..."
           rm -f ./cardputer.json ./stickc.json ./core2.json ./core.json
           cp ./script/cardputer.json ./script/stickc.json ./script/core.json ./
           cp './script/core2 & tough.json' ./core2.json
           rm -f ./test/cardputer.json
           cp ./script/cardputer.json ./test/
+
+          rm -f ./v2/cardputer.json ./v2/stickc.json ./v2/core2.json ./v2/core.json
+          cp ./v2/tmp/cardputer.json ./v2/tmp/stickc.json ./v2/tmp/core.json ./v2/
+          cp './v2/tmp/core2 & tough.json' ./v2/core2.json
+          
           git add .
           git commit -m "Update JSON files"
           git push
