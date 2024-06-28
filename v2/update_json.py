@@ -163,7 +163,7 @@ def create_filtered_file(category_name):
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
-# create_filtered_file("cardputer")
+create_filtered_file("cardputer")
 create_filtered_file("stickc")
 create_filtered_file("core2 & tough")
 create_filtered_file("core")
@@ -182,7 +182,7 @@ def replace_text_in_file(category_name):
         file.write(content)
 
 # Exemplo de uso da função
-# replace_text_in_file("cardputer")
+replace_text_in_file("cardputer")
 replace_text_in_file("stickc")
 replace_text_in_file("core2 & tough")
 replace_text_in_file("core")
