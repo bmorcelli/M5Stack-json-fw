@@ -138,7 +138,34 @@ with open(all_device_firmware, 'w') as final_file:
     json.dump(data, final_file)
 
 # Função para filtrar e criar arquivos específicos
-def create_filtered_file(category_name):
+def create_filtered_file(category_name, min_download=0):
+    filtered_data = [
+        item for item in data 
+        if item['category'] == category_name and item.get('download', 0) >= min_download
+    ]
+    
+    for item in filtered_data:
+        item['versions'] = sorted(
+            item.get('versions', []),
+            key=lambda v: v.get('published_at', '0000-00-00'),
+            reverse=True
+        )
+        
+        # Lista de campos a serem removidos
+        fields_to_remove = [
+            'description', 'fid', 'cover', 'tags', 'github', 
+            'download', 'published', 'change_log', '_id', 'network'
+        ]
+        for field in fields_to_remove:
+            item.pop(field, None)
+
+    with open(f"{temp_folder}{category_name}.json", 'w') as file:
+        json.dump(filtered_data, file)
+
+# Exemplo de chamada da função:
+# create_filtered_file("categoria_exemplo")  # Usará min_download=0
+# create_filtered_file("categoria_exemplo", 200)  # Usará min_download=200
+def create_filtered_file2(category_name):
     filtered_data = [item for item in data if item['category'] == category_name]
     for item in filtered_data:
         item['versions'] = sorted(
@@ -163,8 +190,8 @@ def create_filtered_file(category_name):
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
-create_filtered_file("cardputer")
-create_filtered_file("stickc")
+create_filtered_file("cardputer",150)
+create_filtered_file("stickc",200)
 create_filtered_file("core2 & tough")
 create_filtered_file("core")
 create_filtered_file("cores3")
