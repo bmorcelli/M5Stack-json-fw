@@ -190,8 +190,8 @@ def create_filtered_file2(category_name):
         json.dump(filtered_data, file)
 
 # Criação dos arquivos filtrados
-create_filtered_file("cardputer",150)
-create_filtered_file("stickc",200)
+create_filtered_file("cardputer",300)
+create_filtered_file("stickc",400)
 create_filtered_file("core2 & tough")
 create_filtered_file("core")
 create_filtered_file("cores3")
