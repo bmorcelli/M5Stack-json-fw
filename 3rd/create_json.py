@@ -90,7 +90,7 @@ for filename in os.listdir(input_folder):
         os.remove(temp_bin)
 
     with open(output_path, 'w') as final_file:
-        json.dump(data, final_file, indent=2)
+        json.dump(data, final_file)
 
     files_added_total += files_added
     print(f"\n{filename} finalizado. Arquivos .bin adicionados: {files_added}\n")
