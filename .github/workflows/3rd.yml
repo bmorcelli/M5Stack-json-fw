@@ -2,8 +2,8 @@ name: Create 3rd jsons
 
 on:
   workflow_dispatch:
-  # schedule:
-  #- cron: "*/15 * * * *"
+  schedule:
+    - cron: "* */6 * * *"
 
 jobs:
   compare-json:
@@ -14,7 +14,9 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Run Python script
-      run: python ./3rd/create_json.py
+      run: | 
+        python ./3rd/marauder.py
+        python ./3rd/create_json.py
       
     - name: Set up Git
       run: |
