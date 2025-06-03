@@ -3,7 +3,7 @@ name: Create phantom files
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* */6 * * *"
+    - cron: "* */12 * * *"
 
 jobs:
   compare-json:
@@ -74,6 +74,10 @@ jobs:
     - name: Remove .bin files from repository
       if: steps.check_bin.outputs.has_bin == 'true'
       run: rm *.bin
+
+    - name: Update final JSON files
+      run: | 
+        python ./3rd/create_json.py      
 
     - name: Set up Git
       run: |
