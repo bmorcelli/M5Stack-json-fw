@@ -39,23 +39,6 @@ def download_and_extract_bin(asset_url, zip_name):
                 f.write(bin_data)
             return bin_name
 
-def delete_existing_assets(repo, release_id):
-    assets_url = f"https://api.github.com/repos/{repo}/releases/{release_id}/assets"
-    r = requests.get(assets_url)
-    r.raise_for_status()
-    for asset in r.json():
-        requests.delete(asset["url"])
-
-def upload_asset(repo, release_id, filepath):
-    upload_url = f"https://uploads.github.com/repos/{repo}/releases/{release_id}/assets"
-    filename = os.path.basename(filepath)
-    with open(filepath, "rb") as f:
-        params = {"name": filename}
-        headers = HEADERS.copy()
-        headers["Content-Type"] = "application/octet-stream"
-        r = requests.post(f"{upload_url}?name={filename}", headers=headers, data=f.read())
-        r.raise_for_status()
-        return f"https://github.com/{repo}/releases/download/{TARGET_TAG}/{filename}"
 
 def atualizar_lista_json(binaries, version, published_date):
     if os.path.exists(LISTA_JSON_PATH):
@@ -112,24 +95,6 @@ def main():
     resp = requests.get(f"https://api.github.com/repos/{TARGET_REPO}/releases")
     resp.raise_for_status()
     target_releases = resp.json()
-    ghost_release = next((r for r in target_releases if r["tag_name"] == TARGET_TAG), None)
-    if not ghost_release:
-        raise Exception("Release 'GhostESP' não encontrada no repositório destino.")
-
-    release_id = ghost_release["id"]
-    delete_existing_assets(TARGET_REPO, release_id)
-
-    # Fazer upload dos .bin
-    for bin_path in binaries:
-        url = upload_asset(TARGET_REPO, release_id, bin_path)
-        binaries[bin_path] = url
-    
-    for bin_path in binaries:
-        try:
-            os.remove(bin_path)
-            print(f"Removido: {bin_path}")
-        except Exception as e:
-            print(f"Erro ao remover {bin_path}: {e}")
 
     # Atualizar lista.json
     atualizar_lista_json(binaries, version, published_at)
