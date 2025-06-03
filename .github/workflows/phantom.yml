@@ -1,0 +1,31 @@
+name: Create phantom files
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "* */6 * * *"
+
+jobs:
+  compare-json:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Run Python script
+      run: | 
+        python ./3rd/marauder.py
+        python ./3rd/create_json.py
+      
+    - name: Set up Git
+      run: |
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git config user.name "github-actions[bot]"
+        
+    - name: Commit
+      id: compare
+      run: |
+          git add .
+          git commit -m "Update JSON files"
+          git push
