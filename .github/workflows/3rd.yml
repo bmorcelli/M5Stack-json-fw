@@ -1,4 +1,4 @@
-name: Create 3rd jsons
+name: 3rd Party JSON Files
 
 on:
   workflow_dispatch:
@@ -12,20 +12,83 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Update Brench
+      run: | 
+        git fetch
+        git pull origin main
       
     - name: Run Python script
+      id: process
+      env:
+        GITHUB_TOKEN: ${{ secrets.GHOST_UPLOAD_TOKEN }}
       run: | 
         python ./3rd/marauder.py
-        python ./3rd/create_json.py
-      
-    - name: Set up Git
+        python ./3rd/GhostESP.py
+        python3 process_jsons.py
+
+    - name: Check for .bin files
+      id: check_bin
+      run: |
+        count=$(ls *.bin 2>/dev/null | wc -l)
+        echo "Found $count .bin files"
+        if [ "$count" -gt 0 ]; then
+          echo "has_bin=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "has_bin=false" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Get release by tag
+      if: steps.check_bin.outputs.has_bin == 'true'
+      id: get_release
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const release = await github.rest.repos.getReleaseByTag({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            tag: "GhostESP"
+          });
+          return release.data.id;
+
+    - name: Delete old assets
+      if: steps.check_bin.outputs.has_bin == 'true'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const release_id = ${{ steps.get_release.outputs.result }};
+          const assets = await github.rest.repos.listReleaseAssets({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            release_id: release_id
+          });
+          for (const asset of assets.data) {
+            await github.rest.repos.deleteReleaseAsset({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              asset_id: asset.id
+            });
+          }
+
+    - name: Upload new asset
+      if: steps.check_bin.outputs.has_bin == 'true'
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: GhostESP
+        files: "*.bin"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Remove .bin files from repository
+      if: steps.check_bin.outputs.has_bin == 'true'
+      run: rm *.bin 
+
+    - name: Set up Git and commit changes
+      if: steps.process.outputs.changed == 'true'
       run: |
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git config user.name "github-actions[bot]"
+        git add .
+        git commit -m "Update 3rd party JSON files"
+        git push
         
-    - name: Commit
-      id: compare
-      run: |
-          git add .
-          git commit -m "Update JSON files"
-          git push
