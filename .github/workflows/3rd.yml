@@ -3,7 +3,7 @@ name: 3rd Party JSON Files
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* */6 * * *"
+    - cron: "0 1 * * *" # Runs at 1 AM UTC every day
 
 jobs:
   compare-json:
@@ -23,6 +23,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GHOST_UPLOAD_TOKEN }}
       run: | 
+        python ./3rd/bruce.py
         python ./3rd/marauder.py
         python ./3rd/GhostESP.py
         python ./3rd/create_json.py
