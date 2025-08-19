@@ -11,12 +11,14 @@ TARGET_REPO = "bmorcelli/M5Stack-json-fw"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 FILES_TO_PROCESS = [
     "AwokMini.zip", "Crowtech_LCD.zip", "CYD2USB.zip", "CYD2USB2.4Inch.zip",
-    "CYD2USB2.4Inch_C.zip", "CYDDualUSB.zip", "CYDMicroUSB.zip"
+    "CYD2USB2.4Inch_C.zip", "CYDDualUSB.zip", "CYDMicroUSB.zip", "MarauderV6_AwokDual.zip", "LilyGo-TEmbedC1101.zip", "LilyGo-T-Deck.zip"
 ]
 
 LISTA_MARAUDER = "./3rd/marauder.json"
 LISTA_CYD = "./3rd/CYD.json"
 LISTA_PHANTOM = "./3rd/phantom.json"
+LISTA_TEMBED = "./3rd/t-embed-cc1101.json"
+LISTA_TDECK = "./3rd/t-deck.json"
 
 HEADERS = {
     "Authorization": f"token {GITHUB_TOKEN}",
@@ -85,17 +87,25 @@ def main():
     all_binaries = []
     binaries_cyd = []
     binary_phantom = None
+    binary_tembed = None
+    binary_tdeck = None
 
     for asset in source_release["assets"]:
         if asset["name"] in FILES_TO_PROCESS:
             print(f"Processando {asset['name']}...")
             bin_path = download_and_extract_bin(asset["browser_download_url"], asset["name"])
-            all_binaries.append(bin_path)
+            if asset["name"] == "LilyGo-TEmbedC1101.zip":
+                binary_tembed = bin_path
+            else if asset["name"] == "LilyGo-T-Deck.zip":
+                binary_tdeck = bin_path
+            else:
+                all_binaries.append(bin_path)
 
-            if asset["name"].startswith("CYD"):
-                binaries_cyd.append(bin_path)
-                if asset["name"] == "CYD2USB2.4Inch.zip":
-                    binary_phantom = bin_path
+                if asset["name"].startswith("CYD"):
+                    binaries_cyd.append(bin_path)
+                    if asset["name"] == "CYD2USB2.4Inch.zip":
+                        binary_phantom = bin_path
+
 
     # Atualizar JSONs
     atualizar_lista_json(LISTA_MARAUDER, all_binaries, version, published_at)
@@ -103,6 +113,10 @@ def main():
         atualizar_lista_json(LISTA_CYD, binaries_cyd, version, published_at)
     if binary_phantom:
         atualizar_lista_json(LISTA_PHANTOM, [binary_phantom], version, published_at)
+    if binary_tembed:
+        atualizar_lista_json(LISTA_TEMBED, [binary_tembed], version, published_at)
+    if binary_tdeck:
+        atualizar_lista_json(LISTA_TDECK, [binary_tdeck], version, published_at)
 
 if __name__ == "__main__":
     main()
