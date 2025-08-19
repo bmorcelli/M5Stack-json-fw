@@ -96,7 +96,7 @@ def main():
             bin_path = download_and_extract_bin(asset["browser_download_url"], asset["name"])
             if asset["name"] == "LilyGo-TEmbedC1101.zip":
                 binary_tembed = bin_path
-            else if asset["name"] == "LilyGo-T-Deck.zip":
+            elif asset["name"] == "LilyGo-T-Deck.zip":
                 binary_tdeck = bin_path
             else:
                 all_binaries.append(bin_path)
