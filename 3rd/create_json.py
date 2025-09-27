@@ -65,8 +65,9 @@ def process_jsons():
 
         merged_data = sorted(merged_data, key=lambda x: x["name"])
 
+        category_name, _ = os.path.splitext(filename)
         for item in merged_data:
-            item["category"] = filename
+            item["category"] = category_name
         files_added = 0
 
         for item in merged_data:
