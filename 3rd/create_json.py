@@ -11,6 +11,7 @@ def process_jsons():
 
     os.makedirs(output_folder, exist_ok=True)
     files_added_total = 0
+    aggregated_devices = []
 
     for filename in os.listdir(input_folder):
         if not filename.endswith(".json"):
@@ -63,6 +64,9 @@ def process_jsons():
             merged_data.append(new_item)
 
         merged_data = sorted(merged_data, key=lambda x: x["name"])
+
+        for item in merged_data:
+            item["category"] = filename
         files_added = 0
 
         for item in merged_data:
@@ -111,8 +115,19 @@ def process_jsons():
         with open(output_path, 'w') as final_file:
             json.dump(merged_data, final_file)
 
+        aggregated_devices.extend(merged_data)
+
         files_added_total += files_added
         print(f"\n{filename} finalizado. Arquivos .bin adicionados: {files_added}\n")
+
+    all_devices_path = os.path.join(output_folder, "all_devices_firmware.json")
+    aggregated_devices = sorted(
+        aggregated_devices,
+        key=lambda x: (x.get("category", ""), x.get("name", ""))
+    )
+
+    with open(all_devices_path, 'w') as all_devices_file:
+        json.dump(aggregated_devices, all_devices_file)
 
     print(f"\n\nTotal de arquivos .bin adicionados em todos os JSONs: {files_added_total}\n")
     return files_added_total > 0
