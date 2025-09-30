@@ -70,7 +70,7 @@ def process_jsons():
         if data_new_modified:
             try:
                 with open(json_path, 'w') as f:
-                    json.dump(data_new, f)
+                    json.dump(data_new, f, indent=4)
             except Exception as e:
                 print(f"Erro ao atualizar {filename} com novos FIDs: {e}")
 
