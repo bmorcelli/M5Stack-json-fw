@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Starred Firmware List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #1f2933;
+            background-color: #f7fafc;
+        }
+
+        h1 {
+            margin-bottom: 16px;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+            align-items: flex-end;
+        }
+
+        .controls label {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .controls input[type="text"],
+        .controls select {
+            padding: 6px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            min-width: 180px;
+        }
+
+        .controls .inline {
+            flex-direction: row;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .controls button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 4px;
+            background-color: #2b6cb0;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .controls button:disabled {
+            background-color: #90cdf4;
+            cursor: not-allowed;
+        }
+
+        .controls button:hover:not(:disabled) {
+            background-color: #2c5282;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        thead {
+            background-color: #e2e8f0;
+        }
+
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        tbody tr:hover {
+            background-color: #ebf4ff;
+        }
+
+        .status {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            min-height: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Starred Firmware List</h1>
+    <div class="controls">
+        <label>
+            Category
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+            </select>
+        </label>
+        <label>
+            Name
+            <input type="text" id="nameFilter" placeholder="Filter by name">
+        </label>
+        <label class="inline">
+            <input type="checkbox" id="starFilter">
+            <span style="margin-left: 6px;">Starred only</span>
+        </label>
+        <button id="submitButton" disabled>Submit</button>
+    </div>
+    <table id="firmwareTable">
+        <thead>
+            <tr>
+                <th>Star</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>FID</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="status" id="status"></div>
+
+    <script>
+        const categoryFilter = document.getElementById('categoryFilter');
+        const nameFilter = document.getElementById('nameFilter');
+        const starFilter = document.getElementById('starFilter');
+        const submitButton = document.getElementById('submitButton');
+        const statusMessage = document.getElementById('status');
+        const tableBody = document.querySelector('#firmwareTable tbody');
+
+        const tableData = [];
+        let isDirty = false;
+
+        function setDirty(value) {
+            isDirty = value;
+            submitButton.disabled = !isDirty;
+        }
+
+        function renderTable() {
+            const selectedCategory = categoryFilter.value;
+            const nameQuery = nameFilter.value.trim().toLowerCase();
+            const onlyStarred = starFilter.checked;
+
+            tableBody.innerHTML = '';
+
+            const filteredData = tableData.filter(item => {
+                if (selectedCategory && item.category !== selectedCategory) {
+                    return false;
+                }
+                if (onlyStarred && item.star !== 1) {
+                    return false;
+                }
+                if (nameQuery && !item.name.toLowerCase().includes(nameQuery)) {
+                    return false;
+                }
+                return true;
+            });
+
+            filteredData.forEach(item => {
+                const row = document.createElement('tr');
+
+                const starCell = document.createElement('td');
+                const starCheckbox = document.createElement('input');
+                starCheckbox.type = 'checkbox';
+                starCheckbox.checked = item.star === 1;
+                starCheckbox.addEventListener('change', () => {
+                    item.star = starCheckbox.checked ? 1 : 0;
+                    setDirty(true);
+                    renderTable();
+                });
+                starCell.appendChild(starCheckbox);
+                row.appendChild(starCell);
+
+                const categoryCell = document.createElement('td');
+                categoryCell.textContent = item.category;
+                row.appendChild(categoryCell);
+
+                const nameCell = document.createElement('td');
+                nameCell.textContent = item.name;
+                row.appendChild(nameCell);
+
+                const authorCell = document.createElement('td');
+                authorCell.textContent = item.author;
+                row.appendChild(authorCell);
+
+                const fidCell = document.createElement('td');
+                fidCell.textContent = item.fid;
+                row.appendChild(fidCell);
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        function populateCategories() {
+            const categories = Array.from(new Set(tableData.map(item => item.category))).sort((a, b) => a.localeCompare(b));
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
+            });
+        }
+
+        function mergeDataSets(primary, secondary) {
+            const merged = new Map();
+
+            primary.forEach(item => {
+                if (item && item.fid) {
+                    merged.set(item.fid, { ...item });
+                }
+            });
+
+            secondary.forEach(item => {
+                if (!item || !item.fid) {
+                    return;
+                }
+                if (merged.has(item.fid)) {
+                    merged.set(item.fid, { ...merged.get(item.fid), ...item });
+                } else {
+                    merged.set(item.fid, { ...item });
+                }
+            });
+
+            return merged;
+        }
+
+        async function loadData() {
+            try {
+                const [v2Response, thirdResponse, starredResponse] = await Promise.all([
+                    fetch('v2/all_device_firmware.json'),
+                    fetch('3rd/r/all_devices_firmware.json'),
+                    fetch('starred_list.json')
+                ]);
+
+                const [v2Data, thirdData] = await Promise.all([
+                    v2Response.json(),
+                    thirdResponse.json()
+                ]);
+
+                let starredData = [];
+                if (starredResponse.ok) {
+                    try {
+                        starredData = await starredResponse.json();
+                    } catch (error) {
+                        console.warn('Não foi possível interpretar starred_list.json', error);
+                    }
+                }
+
+                const merged = mergeDataSets(v2Data, thirdData);
+                const starMap = new Map();
+                starredData.forEach(item => {
+                    if (item && item.fid) {
+                        starMap.set(item.fid, item);
+                    }
+                });
+
+                merged.forEach((item, fid) => {
+                    const starInfo = starMap.get(fid);
+                    tableData.push({
+                        fid,
+                        category: item.category || 'Uncategorized',
+                        name: item.name || starInfo?.name || '',
+                        author: item.author || starInfo?.author || '',
+                        star: starInfo?.star === 1 ? 1 : 0
+                    });
+                });
+
+                tableData.sort((a, b) => {
+                    const categoryCompare = a.category.localeCompare(b.category);
+                    if (categoryCompare !== 0) {
+                        return categoryCompare;
+                    }
+                    return a.name.localeCompare(b.name);
+                });
+
+                populateCategories();
+                renderTable();
+            } catch (error) {
+                statusMessage.textContent = 'Failed to load data: ' + error.message;
+                console.error(error);
+            }
+        }
+
+        categoryFilter.addEventListener('change', renderTable);
+        nameFilter.addEventListener('input', () => {
+            renderTable();
+        });
+        starFilter.addEventListener('change', renderTable);
+
+        submitButton.addEventListener('click', async () => {
+            const payload = tableData.map(item => ({
+                fid: item.fid,
+                name: item.name,
+                author: item.author,
+                star: item.star === 1 ? 1 : 0
+            }));
+
+            submitButton.disabled = true;
+            statusMessage.textContent = 'Saving...';
+
+            try {
+                const response = await fetch('starred_list.json', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload, null, 2)
+                });
+
+                if (!response.ok) {
+                    throw new Error(response.status + ' ' + response.statusText);
+                }
+
+                statusMessage.textContent = 'Starred list saved successfully.';
+                setDirty(false);
+            } catch (error) {
+                console.error('Failed to save starred list', error);
+                statusMessage.textContent = 'Failed to save starred list: ' + error.message;
+                setDirty(true);
+            }
+        });
+
+        loadData();
+    </script>
+</body>
+</html>
