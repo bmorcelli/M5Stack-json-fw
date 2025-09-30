@@ -299,19 +299,22 @@
         starFilter.addEventListener('change', renderTable);
 
         submitButton.addEventListener('click', async () => {
-            const payload = tableData.map(item => ({
-                fid: item.fid,
-                name: item.name,
-                author: item.author,
-                star: item.star === 1 ? 1 : 0
-            }));
+            const payload = tableData
+                .filter(item => item.star === 1)
+                .map(item => ({
+                    fid: item.fid,
+                    name: item.name,
+                    author: item.author,
+                    star: 1
+                }));
+
 
             submitButton.disabled = true;
             statusMessage.textContent = 'Saving...';
 
             try {
                 const response = await fetch('starred_list.json', {
-                    method: 'PUT',
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
@@ -322,7 +325,17 @@
                     throw new Error(response.status + ' ' + response.statusText);
                 }
 
-                statusMessage.textContent = 'Starred list saved successfully.';
+                let savedCount = payload.length;
+                try {
+                    const result = await response.json();
+                    if (typeof result?.saved === 'number') {
+                        savedCount = result.saved;
+                    }
+                } catch (_) {
+                    // ignore JSON parsing errors and fall back to payload length
+                }
+
+                statusMessage.textContent = `Starred list saved successfully (${savedCount} itens).`;
                 setDirty(false);
             } catch (error) {
                 console.error('Failed to save starred list', error);
