@@ -3,6 +3,21 @@ import requests
 import json
 import time
 import random
+import string
+
+
+def _generate_fid(existing_fids):
+    prefix = "CFW"
+    total_length = 32
+    random_length = max(total_length - len(prefix), 0)
+    alphabet = string.ascii_uppercase + string.digits
+
+    while True:
+        fid = prefix + ''.join(random.choices(alphabet, k=random_length))
+        if fid not in existing_fids:
+            existing_fids.add(fid)
+            return fid
+
 
 def process_jsons():
     input_folder = "./3rd/"
@@ -12,6 +27,7 @@ def process_jsons():
     os.makedirs(output_folder, exist_ok=True)
     files_added_total = 0
     aggregated_devices = []
+    existing_fids = set()
 
     for filename in os.listdir(input_folder):
         if not filename.endswith(".json"):
@@ -29,11 +45,34 @@ def process_jsons():
             print(f"Erro ao carregar {filename}: {e}")
             continue
 
+        for item in data_new:
+            fid = item.get("fid")
+            if fid:
+                existing_fids.add(fid)
+
+        data_new_modified = False
+        for item in data_new:
+            if not item.get("fid"):
+                item["fid"] = _generate_fid(existing_fids)
+                data_new_modified = True
+
         try:
             with open(output_path, 'r') as f:
                 data_old = json.load(f)
         except:
             data_old = []
+
+        for item in data_old:
+            fid = item.get("fid")
+            if fid:
+                existing_fids.add(fid)
+
+        if data_new_modified:
+            try:
+                with open(json_path, 'w') as f:
+                    json.dump(data_new, f)
+            except Exception as e:
+                print(f"Erro ao atualizar {filename} com novos FIDs: {e}")
 
         old_map = {item["name"].strip(): item for item in data_old}
         new_map = {item["name"].strip(): item for item in data_new}
