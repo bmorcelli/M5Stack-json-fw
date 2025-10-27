@@ -167,7 +167,7 @@ def process_jsons():
     )
 
     with open(all_devices_path, 'w') as all_devices_file:
-        json.dump(aggregated_devices, all_devices_file)
+        json.dump(aggregated_devices, all_devices_file, indent=2)
 
     print(f"\n\nTotal de arquivos .bin adicionados em todos os JSONs: {files_added_total}\n")
     return files_added_total > 0
