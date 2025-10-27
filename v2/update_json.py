@@ -25,7 +25,7 @@ data = response.json()
 files_added = 0
 
 with open(all_device_firmware, 'w') as new_file:
-    json.dump(data, new_file, indent=4)
+    json.dump(data, new_file, indent=2)
 
 # Manter apenas a última versão para os com "UIFlow" no nome
 for item in data:
@@ -135,7 +135,7 @@ if os.path.exists(temp_bin):
     os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário
 
 with open(all_device_firmware, 'w') as final_file:
-    json.dump(data, final_file, indent=4)
+    json.dump(data, final_file, indent=2)
 
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name, min_download=0):
