@@ -9,31 +9,39 @@ on:
 jobs:
   compare-json:
     runs-on: ubuntu-latest
-    
+    env:
+      FILES_ADDED: "false"
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
     - name: Run Python script >= 2.1
-      run: python ./v2/update_json.py      
-      
+      run: python ./v2/update_json.py
+
+    - name: No new firmware files detected
+      if: env.FILES_ADDED != 'true'
+      run: echo "No new firmware files detected. Skipping remaining steps."
+
     - name: Set up Git
+      if: env.FILES_ADDED == 'true'
       run: |
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git config user.name "github-actions[bot]"
-        
+
     - name: Compare JSON files
       id: compare
+      if: env.FILES_ADDED == 'true'
       run: |
         if ! cmp -s ./v2/all_device_firmware.json ./v2/all_device_firmware.old.json; then
           echo "Files are different. Updating..."
 
-          rm -f ./v2/cardputer.json ./v2/stickc.json ./v2/core2.json ./v2/core.json ./v2/cores3.json .v2/third_party.json
+          rm -f ./v2/cardputer.json ./v2/stickc.json ./v2/core2.json ./v2/core.json ./v2/cores3.json ./v2/third_party.json
           cp ./v2/tmp/cardputer.json ./v2/tmp/stickc.json ./v2/tmp/core.json ./v2/tmp/cores3.json ./v2/
           cp './v2/tmp/core2 & tough.json' ./v2/core2.json
           cp './v2/tmp/third party.json' ./v2/third_party.json
           rm -f ./v2/tmp/*.json
-          
+
           git add .
           git commit -m "Update JSON files"
           git push
