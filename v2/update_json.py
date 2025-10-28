@@ -76,7 +76,7 @@ for item in data:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)
         else:
             print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
-            files_added+=1
+            files_added += 1
             file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
             time.sleep(random.uniform(0.1, 0.3))  # Pausa aleatória entre 0.1s a 0.2s
             with requests.get(file_url, stream=True) as r:
@@ -136,6 +136,12 @@ if os.path.exists(temp_bin):
 
 with open(all_device_firmware, 'w') as final_file:
     json.dump(data, final_file, indent=2)
+
+github_env_path = os.environ.get("GITHUB_ENV")
+if github_env_path:
+    with open(github_env_path, "a", encoding="utf-8") as env_file:
+        env_value = "true" if files_added > 0 else "false"
+        env_file.write(f"FILES_ADDED={env_value}\n")
 
 # Função para filtrar e criar arquivos específicos
 def create_filtered_file(category_name, min_download=0):
