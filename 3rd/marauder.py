@@ -66,6 +66,9 @@ def atualizar_somente_marauder():
     nova_entry = {
         "name": f"Marauder {tag}",
         "author": "JustCallMeKoko",
+        "description": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32. Use Launcher to install",
+        "cover": "3183675bd52534e015bcc8ae2ae603a0.png",
+        "fid": "CFWP2BWSUATAASEAEN3IAMKMVSL4WFS3",
         "versions": versions
     }
 
