@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: "0 1 * * *" # Runs at 1 AM UTC every day
+    - cron: "10 * * * *" # Runs at every hour at minute 10
 
 jobs:
   compare-json:

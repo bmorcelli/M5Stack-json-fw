@@ -35,7 +35,7 @@ def download_and_extract_bin(asset_url, zip_name):
     r = requests.get(asset_url)
     r.raise_for_status()
     with zipfile.ZipFile(io.BytesIO(r.content)) as z:
-        with z.open("Ghost_ESP_IDF.bin") as bin_file:
+        with z.open("firmware.bin") as bin_file:
             bin_data = bin_file.read()
             bin_name = zip_name.replace(".zip", ".bin")
             with open(bin_name, "wb") as f:
