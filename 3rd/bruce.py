@@ -8,7 +8,7 @@ JSON_DIR = "./3rd/r/"
 
 # 1. Obter commit atual da branch WebPage
 def get_latest_commit():
-    url = "https://api.github.com/repos/pr3y/Bruce/releases/tags/betaRelease"
+    url = "https://api.github.com/repos/BruceDevices/firmware/releases/tags/betaRelease"
     r = requests.get(url)
     r.raise_for_status()
     return r.json()["name"]  # Título da release
