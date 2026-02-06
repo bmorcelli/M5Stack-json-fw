@@ -14,9 +14,9 @@ all_device_firmware_old = "./v2/all_device_firmware.old.json"
 temp_bin = "./v2/temp.bin"
 temp_folder = "./v2/tmp/"
 
-# Passo 1: Renomear arquivo existente
+# Passo 1: Renomear arquivo existente (substituindo o .old se já existir)
 if os.path.exists(all_device_firmware):
-    os.rename(all_device_firmware, all_device_firmware_old)
+    os.replace(all_device_firmware, all_device_firmware_old)
 
 # Passo 2: Download dos dados da API
 url = "https://m5burner-api.m5stack.com/api/firmware"
@@ -87,11 +87,16 @@ for item in data:
             print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
             files_added += 1
             file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
-            time.sleep(random.uniform(0.1, 0.3))  # Pausa aleatória entre 0.1s a 0.2s
+            # time.sleep(random.uniform(0.1, 0.3))  # Pausa aleatória entre 0.1s a 0.2s
             with requests.get(file_url, stream=True) as r:
                 version['Fs'] = int(r.headers.get('Content-Length', 0)) # File Size
                 first_bytes = r.raw.read(33600)
-                if item.get('category') == 'stickc' and first_bytes and first_bytes[1000] == 0xE9:
+                if (
+                    item.get('category') == 'stickc'
+                    and first_bytes
+                    and len(first_bytes) > 1000
+                    and first_bytes[1000] == 0xE9
+                ):
                     item['esp'] = ""
                 else:
                     item['esp'] = "s3"
