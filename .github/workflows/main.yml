@@ -35,13 +35,6 @@ jobs:
       run: |
         if ! cmp -s ./v2/all_device_firmware.json ./v2/all_device_firmware.old.json; then
           echo "Files are different. Updating..."
-
-          rm -f ./v2/cardputer.json ./v2/stickc.json ./v2/core2.json ./v2/core.json ./v2/cores3.json ./v2/third_party.json
-          cp ./v2/tmp/cardputer.json ./v2/tmp/stickc.json ./v2/tmp/core.json ./v2/tmp/cores3.json ./v2/
-          cp './v2/tmp/core2 & tough.json' ./v2/core2.json
-          cp './v2/tmp/third party.json' ./v2/third_party.json
-          rm -f ./v2/tmp/*.json
-
           git add .
           git commit -m "Update JSON files"
           git push
