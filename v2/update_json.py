@@ -64,7 +64,7 @@ if os.path.exists(all_device_firmware_old):
                     for old_version in old_item['versions']:
                         if new_version['version'] == old_version['version']:
                             if new_version['file'] == old_version['file']:
-                                fields_to_copy = ['Fs', 'as', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f', 'fs2', 'fo2', 'f2']
+                                fields_to_copy = ['Fs', 'as', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f', 'fs2', 'fo2', 'f2', 'esp']
                                 for field in fields_to_copy:
                                     if field in old_version:
                                         new_version[field] = old_version[field]
@@ -72,9 +72,18 @@ if os.path.exists(all_device_firmware_old):
 # Passo 4: Atualizações adicionais com base em downloads parciais e leitura de bytes
 for item in data:
     for version in item['versions']:
+        process = False
         if 's' in version:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)
         else:
+            process = True
+        
+        if item.get('category') == 'stickc' and 'esp' not in item:
+            print(f"{item['name']} - {version['version']} - Will check for S3 version ", flush=True)
+            process = True
+            
+
+        if process == True:
             print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
             files_added += 1
             file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
@@ -82,6 +91,10 @@ for item in data:
             with requests.get(file_url, stream=True) as r:
                 version['Fs'] = int(r.headers.get('Content-Length', 0)) # File Size
                 first_bytes = r.raw.read(33600)
+                if item.get('category') == 'stickc' and first_bytes and first_bytes[0] == 0xE9:
+                    item['esp'] = "s3"
+                else:
+                    item['esp'] = ""
                 with open(temp_bin, "wb") as temp_file:
                     temp_file.write(first_bytes)
 
@@ -142,87 +155,6 @@ if github_env_path:
     with open(github_env_path, "a", encoding="utf-8") as env_file:
         env_value = "true" if files_added > 0 else "false"
         env_file.write(f"FILES_ADDED={env_value}\n")
-
-# Função para filtrar e criar arquivos específicos
-def create_filtered_file(category_name, min_download=0):
-    filtered_data = [
-        item for item in data 
-        if item['category'] == category_name and item.get('download', 0) >= min_download
-    ]
-    
-    for item in filtered_data:
-        item['versions'] = sorted(
-            item.get('versions', []),
-            key=lambda v: v.get('published_at', '0000-00-00'),
-            reverse=True
-        )
-        
-        # Lista de campos a serem removidos
-        fields_to_remove = [
-            'description', 'fid', 'cover', 'tags', 'github', 
-            'download', 'published', 'change_log', '_id', 'network'
-        ]
-        for field in fields_to_remove:
-            item.pop(field, None)
-
-    with open(f"{temp_folder}{category_name}.json", 'w') as file:
-        json.dump(filtered_data, file)
-
-# Exemplo de chamada da função:
-# create_filtered_file("categoria_exemplo")  # Usará min_download=0
-# create_filtered_file("categoria_exemplo", 200)  # Usará min_download=200
-def create_filtered_file2(category_name):
-    filtered_data = [item for item in data if item['category'] == category_name]
-    for item in filtered_data:
-        item['versions'] = sorted(
-            item.get('versions', []),
-            key=lambda v: v.get('published_at', '0000-00-00'),
-            reverse=True
-        )
-        item.pop('description', None)
-        item.pop('fid', None)
-        item.pop('cover', None)
-        item.pop('tags', None)
-        item.pop('github', None)
-        item.pop('download', None)
-        item.pop('published', None)
-        item.pop('change_log', None)
-        item.pop('_id', None)
-        item.pop('network', None)
-
-       
-
-    with open(f"{temp_folder}{category_name}.json", 'w') as file:
-        json.dump(filtered_data, file)
-
-# Criação dos arquivos filtrados
-create_filtered_file("cardputer",300)
-create_filtered_file("stickc",550)
-create_filtered_file("core2 & tough")
-create_filtered_file("core")
-create_filtered_file("cores3")
-create_filtered_file("third party")
-
-# Exclui os elementos 'category'
-def replace_text_in_file(category_name):
-    # Abrir o arquivo para leitura
-    with open(f"{temp_folder}{category_name}.json", 'r') as file:
-        content = file.read()
-    
-    # Substituir o texto especificado
-    content = content.replace(f'"category": "{category_name}", ', '')
-    
-    # Abrir o arquivo para escrita e salvar o conteúdo modificado
-    with open(f"{temp_folder}{category_name}.json", 'w') as file:
-        file.write(content)
-
-# Exemplo de uso da função
-replace_text_in_file("cardputer")
-replace_text_in_file("stickc")
-replace_text_in_file("core2 & tough")
-replace_text_in_file("core")
-replace_text_in_file("cores3")
-replace_text_in_file("third party")
 
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
