@@ -91,10 +91,10 @@ for item in data:
             with requests.get(file_url, stream=True) as r:
                 version['Fs'] = int(r.headers.get('Content-Length', 0)) # File Size
                 first_bytes = r.raw.read(33600)
-                if item.get('category') == 'stickc' and first_bytes and first_bytes[0] == 0xE9:
-                    item['esp'] = "s3"
-                else:
+                if item.get('category') == 'stickc' and first_bytes and first_bytes[1000] == 0xE9:
                     item['esp'] = ""
+                else:
+                    item['esp'] = "s3"
                 with open(temp_bin, "wb") as temp_file:
                     temp_file.write(first_bytes)
 
