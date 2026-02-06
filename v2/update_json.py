@@ -58,13 +58,15 @@ if os.path.exists(all_device_firmware_old):
     for new_item in data:
         for old_item in old_data:
             if new_item['_id'] == old_item['_id']:
+                if 'esp' in old_item:
+                    new_item['esp'] = old_item['esp']
                 for new_version in new_item['versions']:
                     new_version.pop('change_log', None)
                     new_version.pop('published', None)
                     for old_version in old_item['versions']:
                         if new_version['version'] == old_version['version']:
                             if new_version['file'] == old_version['file']:
-                                fields_to_copy = ['Fs', 'as', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f', 'fs2', 'fo2', 'f2', 'esp']
+                                fields_to_copy = ['Fs', 'as', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f', 'fs2', 'fo2', 'f2']
                                 for field in fields_to_copy:
                                     if field in old_version:
                                         new_version[field] = old_version[field]
