@@ -108,8 +108,11 @@ for item in data:
                         if first_byte[0] == 0xE9:
                             item['esp'] = "32"
                         else:
-                            item['esp'] = "s3"
-                            print(" is a StickS3 firmware", flush=True)
+                            temp_file.seek(0)
+                            first_byte = temp_file.read(16)
+                            if first_byte[0] == 0xE9:
+                                item['esp'] = "s3"
+                                print(" is a StickS3 firmware", flush=True)
                     
                     temp_file.seek(0x8000)
                     app_size_bytes = temp_file.read(16)
