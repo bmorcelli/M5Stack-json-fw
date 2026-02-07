@@ -102,6 +102,7 @@ for item in data:
                     item['esp'] = ""
                 else:
                     item['esp'] = "s3"
+                    print(" is a StickS3 firmware", flush=True)
                 with open(temp_bin, "wb") as temp_file:
                     temp_file.write(first_bytes)
 
