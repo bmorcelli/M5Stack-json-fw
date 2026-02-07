@@ -93,16 +93,6 @@ for item in data:
             with requests.get(file_url, stream=True) as r:
                 version['Fs'] = int(r.headers.get('Content-Length', 0)) # File Size
                 first_bytes = r.raw.read(33600)
-                if (
-                    item.get('category') == 'stickc'
-                    and first_bytes
-                    and len(first_bytes) > 1000
-                    and first_bytes[1000] == 0xE9
-                ):
-                    item['esp'] = ""
-                else:
-                    item['esp'] = "s3"
-                    print(" is a StickS3 firmware", flush=True)
                 with open(temp_bin, "wb") as temp_file:
                     temp_file.write(first_bytes)
 
@@ -112,6 +102,15 @@ for item in data:
             version['f2'] = 0 # FAT Vfs
             if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
                 with open(temp_bin, "rb") as temp_file:
+                    if item.get('category') == 'stickc':
+                        temp_file.seek(0x1000)
+                        first_byte = temp_file.read(16)
+                        if first_byte[0] == 0xE9:
+                            item['esp'] = "32"
+                        else:
+                            item['esp'] = "s3"
+                            print(" is a StickS3 firmware", flush=True)
+                    
                     temp_file.seek(0x8000)
                     app_size_bytes = temp_file.read(16)
                     if (app_size_bytes[0] == 0xAA and app_size_bytes[1] == 0x50 and app_size_bytes[2] == 0x01):
@@ -120,8 +119,12 @@ for item in data:
                             temp_file.seek(0x8000 + i*0x20)
                             app_size_bytes = temp_file.read(16)
                             if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
-                                if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - 0x10000):
-                                    version['as'] = int(r.headers.get('Content-Length', 0)) - 0x10000
+                                ao = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]          # app offset, usually 0x10000
+                                #if ao > 0x10000:
+                                print(f"App starts at 0x{ao:X}")
+                                version['ao'] = ao
+                                if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - ao):
+                                    version['as'] = int(r.headers.get('Content-Length', 0)) - ao
                                 else:
                                     version['as'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
                             elif app_size_bytes[3] == 0x82:
