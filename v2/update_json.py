@@ -102,21 +102,20 @@ for item in data:
             version['f2'] = 0 # FAT Vfs
             if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
                 with open(temp_bin, "rb") as temp_file:
-                    if item.get('category') == 'stickc':
-                        temp_file.seek(0x1000)
-                        first_byte = temp_file.read(16)
-                        if first_byte[0] == 0xE9:
-                            item['esp'] = "32"
-                        else:
-                            temp_file.seek(0)
-                            first_byte = temp_file.read(16)
-                            if first_byte[0] == 0xE9:
-                                item['esp'] = "s3"
-                                print(" is a StickS3 firmware", flush=True)
-                    
                     temp_file.seek(0x8000)
                     app_size_bytes = temp_file.read(16)
                     if (app_size_bytes[0] == 0xAA and app_size_bytes[1] == 0x50 and app_size_bytes[2] == 0x01):
+                        if item.get('category') == 'stickc':
+                            temp_file.seek(0x1000)
+                            first_byte = temp_file.read(16)
+                            if first_byte[0] == 0xE9:
+                                item['esp'] = "32"
+                            else:
+                                temp_file.seek(0)
+                                first_byte = temp_file.read(16)
+                                if first_byte[0] == 0xE9:
+                                    item['esp'] = "s3"
+                                    print(" is a StickS3 firmware", flush=True)
                         j=0
                         for i in range(8):
                             temp_file.seek(0x8000 + i*0x20)
@@ -156,8 +155,14 @@ for item in data:
                     else:
                         version['as'] = int(r.headers.get('Content-Length', 0))
                         version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
-
-
+                        if item.get('category') == 'stickc':
+                            name = item.get('name', '')
+                            if 's3' in name.lower():
+                                item['esp'] = 's3'
+                                print(" is a StickS3 firmware", flush=True)
+                            else:
+                                item['esp'] = '32'
+                                
 if os.path.exists(temp_bin):
     os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário
 
