@@ -105,22 +105,31 @@ for item in data:
             version['f2'] = 0 # FAT Vfs
             if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
                 with open(temp_bin, "rb") as temp_file:
+                    esp_bytes = temp_file.read()
+                    if b"esp32p4" in esp_bytes:
+                        item['esp'] = "p4"
+                    elif b"esp32s2" in esp_bytes:
+                        item['esp'] = "s2"
+                    elif b"esp32s3" in esp_bytes:
+                        item['esp'] = "s3"
+                    elif b"esp32c3" in esp_bytes:
+                        item['esp'] = "c3"
+                    elif b"esp32c5" in esp_bytes:
+                        item['esp'] = "c5"
+                    elif b"esp32c61" in esp_bytes:
+                        item['esp'] = "c61"
+                    elif b"esp32c6" in esp_bytes:
+                        item['esp'] = "c6"
+                    elif b"esp32h2" in esp_bytes:
+                        item['esp'] = "h2"
+                    elif b"esp32e22" in esp_bytes:
+                        item['esp'] = "e22"
+                    else:
+                        item['esp'] = "32"
+
                     temp_file.seek(0x8000)
                     app_size_bytes = temp_file.read(16)
                     if (app_size_bytes[0] == 0xAA and app_size_bytes[1] == 0x50 and app_size_bytes[2] == 0x01):
-                        if item.get('category') == 'stickc':
-                            temp_file.seek(0x1000)
-                            first_byte = temp_file.read(16)
-                            if first_byte[0] == 0xE9:
-                                item['esp'] = "32"
-                            else:
-                                temp_file.seek(0)
-                                first_byte = temp_file.read(16)
-                                if first_byte[0] == 0xE9:
-                                    item['esp'] = "s3"
-                                    print(" is a StickS3 firmware", flush=True)
-                                else:
-                                    item['esp'] = "32"
                         j=0
                         app_offset_set = False
                         for i in range(8):
@@ -162,13 +171,6 @@ for item in data:
                     else:
                         version['as'] = int(r.headers.get('Content-Length', 0))
                         version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
-                        if item.get('category') == 'stickc':
-                            name = item.get('name', '')
-                            if "s3" in name.lower():
-                                item['esp'] = "s3"
-                                print(" is a StickS3 firmware", flush=True)
-                            else:
-                                item['esp'] = "32"
             else:
                 version['invalid'] = True
                 print(f"{item['name']} - {version['version']} - Invalid ", flush=True)
@@ -189,3 +191,6 @@ if github_env_path:
 
 
 print(f"\n\n\nNúmero de arquivos adicionados {files_added}\n\n\n", flush=True)
+
+
+
