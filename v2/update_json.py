@@ -3,16 +3,28 @@ import requests
 import json
 import time
 import random
+import argparse
 
-# all_device_firmware = "./test/all_device_firmware.json"
-# all_device_firmware_old = "./test/all_device_firmware.old.json"
-# temp_bin = "./test/temp.bin"
-# temp_folder = "./test/"
 
 all_device_firmware = "./v2/all_device_firmware.json"
 all_device_firmware_old = "./v2/all_device_firmware.old.json"
 temp_bin = "./v2/temp.bin"
 temp_folder = "./v2/tmp/"
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--force-download-all",
+    action="store_true",
+    default=False,
+    help="Force full download by removing cached JSON files first.",
+)
+args = parser.parse_args()
+
+if args.force_download_all:
+    if os.path.exists(all_device_firmware):
+        os.remove(all_device_firmware)
+    if os.path.exists(all_device_firmware_old):
+        os.remove(all_device_firmware_old)
 
 # Passo 1: Renomear arquivo existente (substituindo o .old se já existir)
 if os.path.exists(all_device_firmware):
@@ -26,14 +38,6 @@ files_added = 0
 
 with open(all_device_firmware, 'w') as new_file:
     json.dump(data, new_file, indent=2)
-
-# Manter apenas a última versão para os com "UIFlow" no nome
-for item in data:
-    if 'UIFlow' in item['name']:
-        # Ordenar as versões pela data de publicação e pegar a última
-        if item['versions']:
-            last_version = sorted(item['versions'], key=lambda v: v['published_at'], reverse=True)[0]
-            item['versions'] = [last_version]
 
 # Filtrando versões que não terminam com '.bin'
 for item in data:
@@ -66,7 +70,7 @@ if os.path.exists(all_device_firmware_old):
                     for old_version in old_item['versions']:
                         if new_version['version'] == old_version['version']:
                             if new_version['file'] == old_version['file']:
-                                fields_to_copy = ['Fs', 'as', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f', 'fs2', 'fo2', 'f2']
+                                fields_to_copy = ['Fs', 'as', 'ao', 'ss', 'so', 's', 'nb', 'fs', 'fo', 'f', 'fs2', 'fo2', 'f2', 'invalid']
                                 for field in fields_to_copy:
                                     if field in old_version:
                                         new_version[field] = old_version[field]
@@ -81,11 +85,10 @@ for item in data:
             process = True
         
         if item.get('category') == 'stickc' and 'esp' not in item:
-            print(f"{item['name']} - {version['version']} - Will check for S3 version ", flush=True)
-            process = True
-            
+            # print(f"{item['name']} - {version['version']} - Will check for S3 version ", flush=True)
+            process = True            
 
-        if process == True:
+        if process == True and not 'invalid' in version:
             print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
             files_added += 1
             file_url = f"https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/{version['file']}"
@@ -116,15 +119,19 @@ for item in data:
                                 if first_byte[0] == 0xE9:
                                     item['esp'] = "s3"
                                     print(" is a StickS3 firmware", flush=True)
+                                else:
+                                    item['esp'] = "32"
                         j=0
+                        app_offset_set = False
                         for i in range(8):
                             temp_file.seek(0x8000 + i*0x20)
                             app_size_bytes = temp_file.read(16)
-                            if (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[6] == 0x01:  # confirmar valores e posiçoes, mas essa é a ideia
+                            if not app_offset_set and (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[2] == 0x00: 
                                 ao = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]          # app offset, usually 0x10000
-                                #if ao > 0x10000:
-                                print(f"App starts at 0x{ao:X}")
+                                if ao > 0x10000:
+                                    print(f"App starts at 0x{ao:X}")
                                 version['ao'] = ao
+                                app_offset_set = True
                                 if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - ao):
                                     version['as'] = int(r.headers.get('Content-Length', 0)) - ao
                                 else:
@@ -157,11 +164,16 @@ for item in data:
                         version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
                         if item.get('category') == 'stickc':
                             name = item.get('name', '')
-                            if 's3' in name.lower():
-                                item['esp'] = 's3'
+                            if "s3" in name.lower():
+                                item['esp'] = "s3"
                                 print(" is a StickS3 firmware", flush=True)
                             else:
-                                item['esp'] = '32'
+                                item['esp'] = "32"
+            else:
+                version['invalid'] = True
+                print(f"{item['name']} - {version['version']} - Invalid ", flush=True)
+
+
                                 
 if os.path.exists(temp_bin):
     os.remove(temp_bin)  # Passo 5: Exclusão do arquivo temporário

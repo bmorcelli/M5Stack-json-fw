@@ -2,6 +2,12 @@ name: Check JSON Files
 
 on:
   workflow_dispatch:
+    inputs:
+      force_download_all:
+        description: "Force download of all firmware files"
+        type: boolean
+        required: false
+        default: false
   push:
   schedule:
   - cron: "*/15 * * * *"
@@ -11,13 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FILES_ADDED: "false"
+      FORCE_DOWNLOAD_ALL: ${{ github.event.inputs.force_download_all || 'false' }}
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
     - name: Run Python script >= 2.1
-      run: python ./v2/update_json.py
+      run: python ./v2/update_json.py ${{ env.FORCE_DOWNLOAD_ALL == 'true' && '--force-download-all' || '' }}
 
     - name: No new firmware files detected
       if: env.FILES_ADDED != 'true'
