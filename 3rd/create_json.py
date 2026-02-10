@@ -1,7 +1,6 @@
 import os
 import requests
 import json
-import time
 import random
 import string
 
@@ -120,32 +119,88 @@ def process_jsons():
 
                 file_url = version["file"]
                 try:
-                    time.sleep(random.uniform(0.1, 0.3))
                     with requests.get(file_url, stream=True, timeout=10) as r:
                         version['Fs'] = int(r.headers.get('Content-Length', 0))
                         first_bytes = r.raw.read(33600)
                         with open(temp_bin, "wb") as temp_file:
                             temp_file.write(first_bytes)
 
-                    version['s'] = False
-                    if os.path.getsize(temp_bin) > 33120:
+                    # Leitura e cálculos
+                    version['s'] = 0 # Spiffs
+                    version['f'] = 0 # FAT Vfs
+                    version['f2'] = 0 # FAT Vfs
+                    if os.path.getsize(temp_bin) > (33120): # 0x8160 and  i = 9
                         with open(temp_bin, "rb") as temp_file:
+                            esp_bytes = temp_file.read()
+                            if b"esp32p4" in esp_bytes:
+                                item['esp'] = "p4"
+                            elif b"esp32s2" in esp_bytes:
+                                item['esp'] = "s2"
+                            elif b"esp32s3" in esp_bytes:
+                                item['esp'] = "s3"
+                            elif b"esp32c3" in esp_bytes:
+                                item['esp'] = "c3"
+                            elif b"esp32c5" in esp_bytes:
+                                item['esp'] = "c5"
+                            elif b"esp32c61" in esp_bytes:
+                                item['esp'] = "c61"
+                            elif b"esp32c6" in esp_bytes:
+                                item['esp'] = "c6"
+                            elif b"esp32h2" in esp_bytes:
+                                item['esp'] = "h2"
+                            elif b"esp32e22" in esp_bytes:
+                                item['esp'] = "e22"
+                            else:
+                                item['esp'] = "32"
+
                             temp_file.seek(0x8000)
                             app_size_bytes = temp_file.read(16)
-                            if app_size_bytes[:3] == b'\xAA\x50\x01':
+                            if (app_size_bytes[0] == 0xAA and app_size_bytes[1] == 0x50 and app_size_bytes[2] == 0x01):
+                                j=0
+                                app_offset_set = False
                                 for i in range(8):
-                                    temp_file.seek(0x8000 + i * 0x20)
-                                    blk = temp_file.read(16)
-                                    if blk[3] in (0x00, 0x10, 0x20) and blk[6] == 0x01:
-                                        size = blk[0x0A] << 16 | blk[0x0B] << 8
-                                        version['as'] = min(size, version['Fs'] - 0x10000)
-                                    elif blk[3] == 0x82:
-                                        version['ss'] = blk[0x0A] << 16 | blk[0x0B] << 8
-                                        version['so'] = blk[0x06] << 16 | blk[0x07] << 8 | blk[0x08]
-                                        version['s'] = version['Fs'] >= version['so'] + version['ss']
+                                    temp_file.seek(0x8000 + i*0x20)
+                                    app_size_bytes = temp_file.read(16)
+                                    if not app_offset_set and (app_size_bytes[3] == 0x00 or app_size_bytes[3] == 0x20 or app_size_bytes[3]== 0x10) and app_size_bytes[2] == 0x00: 
+                                        ao = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]          # app offset, usually 0x10000
+                                        if ao > 0x10000:
+                                            print(f"App starts at 0x{ao:X}")
+                                        version['ao'] = ao
+                                        app_offset_set = True
+                                        if (app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00) > (int(r.headers.get('Content-Length', 0)) - ao):
+                                            version['as'] = int(r.headers.get('Content-Length', 0)) - ao
+                                        else:
+                                            version['as'] = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00
+                                    elif app_size_bytes[3] == 0x82:
+                                        ss =  app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                     # Spiffs_size
+                                        so = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]      # Spiffs_offset
+                                        if version['Fs'] >= so + ss:                                                            # Spiffs exists or not
+                                            version['s'] = 1
+                                            version['ss'] = ss
+                                            version['so'] = so
+                                    elif app_size_bytes[3] == 0x81 and j==0:
+                                        fs = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
+                                        fo = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
+                                        j=1
+                                        if version['Fs'] >= fo + fs:                                                          # Spiffs exists or not
+                                            version['f'] = 1
+                                            version['fs'] = fs
+                                            version['fo'] = fo
+                                    elif app_size_bytes[3] == 0x81 and j==1:
+                                        fs = app_size_bytes[0x0A] << 16 | app_size_bytes[0x0B] << 8 | 0x00                    # Spiffs_size
+                                        fo = app_size_bytes[0x06] << 16 | app_size_bytes[0x07] << 8 | app_size_bytes[0x08]    # Spiffs_offset
+                                        j=2
+                                        if version['Fs'] >= fo + fs:                                                          # Spiffs exists or not
+                                            version['f2'] = 1
+                                            version['fs2'] = fs
+                                            version['fo2'] = fo
                             else:
-                                version['as'] = version['Fs']
-                                version['nb'] = True
+                                version['as'] = int(r.headers.get('Content-Length', 0))
+                                version['nb'] = True # nb stands for No-Bootloader, to be downloaded whole
+                    else:
+                        version['invalid'] = True
+                        print(f"{item['name']} - {version['version']} - Invalid ", flush=True)
+
                 except Exception as e:
                     print(f"Erro ao processar {file_url}: {e}")
 
@@ -153,7 +208,7 @@ def process_jsons():
             os.remove(temp_bin)
 
         with open(output_path, 'w') as final_file:
-            json.dump(merged_data, final_file)
+            json.dump(merged_data, final_file, indent=4)
 
         aggregated_devices.extend(merged_data)
 
