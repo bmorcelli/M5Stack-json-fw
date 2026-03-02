@@ -42,7 +42,7 @@ jobs:
         python ./3rd/create_json.py
 
         # the next script writes FILES_ADDED checking m5burner updates
-        python ./v2/update_json.py --dry-run ${{ env.FORCE_DOWNLOAD_ALL == 'true' && '--force-download-all' || '' }}
+        python ./v2/update_json.py ${{ env.FORCE_DOWNLOAD_ALL == 'true' && '--force-download-all' || '' }}
        
 
     - name: Check for .bin files
