@@ -99,6 +99,12 @@ def process_jsons():
                             v[k] = val
 
             new_item["versions"] = sorted(versions, key=lambda v: v.get("published_at", "0000-00-00"), reverse=True)
+            # fallback: preserve esp field from previous data if the new item hasn't determined it yet
+            if "esp" not in new_item:
+                old_item = old_map.get(name, {})
+                if "esp" in old_item:
+                    new_item["esp"] = old_item["esp"]
+                    
             merged_data.append(new_item)
 
         merged_data = sorted(merged_data, key=lambda x: x["name"])

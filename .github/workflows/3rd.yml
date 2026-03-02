@@ -4,11 +4,14 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: "10 * * * *" # Runs at every hour at minute 10
+    - cron: "*/15 * * * *" # every 15 minutes
 
 jobs:
   compare-json:
     runs-on: ubuntu-latest
+    env:
+      FILES_ADDED: "false"
+      FORCE_DOWNLOAD_ALL: ${{ github.event.inputs.force_download_all || 'false' }}
     
     steps:
     - name: Checkout repository
@@ -24,11 +27,23 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GHOST_UPLOAD_TOKEN }}
       run: | 
+        # if force download is requested, delete all cached JSON files to ensure they are re-downloaded
+        if [ "${{ env.FORCE_DOWNLOAD_ALL }}" = "true" ]; then
+          find ./3rd/r -mindepth 1 -maxdepth 1 -type f -delete
+        fi
+
+        # Checks for firmware updates and writes new JSON files
         python ./3rd/bruce.py
         python ./3rd/launcher.py
         python ./3rd/marauder.py
         python ./3rd/GhostESP.py
+
+        # this script writes CHANGED and creates the all_device_firmware.json file based on the individual JSON files created by the previous scripts
         python ./3rd/create_json.py
+
+        # the next script writes FILES_ADDED checking m5burner updates
+        python ./v2/update_json.py --dry-run ${{ env.FORCE_DOWNLOAD_ALL == 'true' && '--force-download-all' || '' }}
+       
 
     - name: Check for .bin files
       id: check_bin
@@ -87,11 +102,10 @@ jobs:
       run: rm *.bin 
 
     - name: Set up Git and commit changes
-      if: steps.process.outputs.changed == 'true'
+      if: steps.process.outputs.changed == 'true' || env.FILES_ADDED == 'true'
       run: |
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git config user.name "github-actions[bot]"
         git add .
         git commit -m "Update 3rd party JSON files"
         git push
-        

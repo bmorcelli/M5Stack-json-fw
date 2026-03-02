@@ -47,6 +47,10 @@ data = [item for item in data if 'versions' in item and len(item['versions']) > 
 # Corrigir espaços no início dos nomes e ordenar pelo campo 'name'
 for item in data:
     item['name'] = item['name'].strip()
+    # Transforma todos os "sticks3" em "stickc" para unificar a categoria
+    # já que existem firmwares de sticks3 cadastrados na categoria stickc
+    if item['category'] == 'sticks3':
+        item['category'] = 'stickc'
     
 # Ordena por "name"
 data = sorted(data, key=lambda x: x['name'])
