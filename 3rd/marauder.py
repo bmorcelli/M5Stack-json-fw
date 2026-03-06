@@ -45,7 +45,7 @@ def atualizar_somente_marauder():
     release = response.json()
     tag = release['tag_name']
     published_iso = release['published_at']
-    published_at = datetime.strptime(published_iso, "%Y-%m-%dT%H:%M:%SZ").strftime("%d/%m/%y")
+    published_at = datetime.strptime(published_iso, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d")
     assets = release['assets']
 
     versions = []

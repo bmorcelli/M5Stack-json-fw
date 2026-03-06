@@ -75,7 +75,7 @@ def atualizar_lista_json(path, binaries, version, published_date):
 def main():
     source_release = get_latest_release(SOURCE_REPO)
     version = source_release["tag_name"]
-    published_at = datetime.strptime(source_release["published_at"], "%Y-%m-%dT%H:%M:%SZ").strftime("%d/%m/%y")
+    published_at = datetime.strptime(source_release["published_at"], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d")
 
     # Verificar se a versão já existe no JSON principal
     if os.path.exists(LISTA_MARAUDER):
