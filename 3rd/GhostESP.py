@@ -10,7 +10,7 @@ SOURCE_REPO = "jaylikesbunda/Ghost_ESP"
 TARGET_REPO = "bmorcelli/M5Stack-json-fw"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 FILES_TO_PROCESS = [
-    "AwokMini.zip", "Crowtech_LCD.zip", "CYD2USB.zip", "CYD2USB2.4Inch.zip",
+    "AwokMini.zip", "Crowtech_LCD.zip", "CYD2USB.zip", "CYD2USB2.4Inch.zip", "LilyGo-S3TWatch-2020.zip",
     "CYD2USB2.4Inch_C.zip", "CYDDualUSB.zip", "CYDMicroUSB.zip", "MarauderV6_AwokDual.zip", "LilyGo-TEmbedC1101.zip", "LilyGo-T-Deck.zip"
 ]
 
@@ -19,6 +19,7 @@ LISTA_CYD = "./3rd/CYD.json"
 LISTA_PHANTOM = "./3rd/phantom.json"
 LISTA_TEMBED = "./3rd/t-embed-cc1101.json"
 LISTA_TDECK = "./3rd/t-deck.json"
+LISTA_TWATCH = "./3rd/t-watch-s3.json"
 
 HEADERS = {
     "Authorization": f"token {GITHUB_TOKEN}",
@@ -92,6 +93,7 @@ def main():
     binary_phantom = None
     binary_tembed = None
     binary_tdeck = None
+    binary_twatch = None
 
     for asset in source_release["assets"]:
         if asset["name"] in FILES_TO_PROCESS:
@@ -101,6 +103,8 @@ def main():
                 binary_tembed = bin_path
             elif asset["name"] == "LilyGo-T-Deck.zip":
                 binary_tdeck = bin_path
+            elif asset["name"] == "LilyGo-S3TWatch-2020.zip":
+                binary_twatch = bin_path
             else:
                 all_binaries.append(bin_path)
 
@@ -120,6 +124,8 @@ def main():
         atualizar_lista_json(LISTA_TEMBED, [binary_tembed], version, published_at)
     if binary_tdeck:
         atualizar_lista_json(LISTA_TDECK, [binary_tdeck], version, published_at)
+    if binary_twatch:
+        atualizar_lista_json(LISTA_TWATCH, [binary_twatch], version, published_at)
 
 if __name__ == "__main__":
     main()
