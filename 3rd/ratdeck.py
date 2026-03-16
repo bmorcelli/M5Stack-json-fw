@@ -9,7 +9,7 @@ REPO_NAME = "ratdeck"
 FW_FID = "CFWFIQGOHMB27TVKXUVP3TJAX2BQMDDO"
 API_URL = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
 FILE_NAME = "ratdeck-merged.bin"
-LISTA_JSON = "t-deck.json"
+LISTA_JSON = "./3rd/t-deck.json"
 
 def _parse_next_link(link_header: str):
     if not link_header:
