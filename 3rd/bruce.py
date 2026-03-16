@@ -1,118 +1,195 @@
-import os
-import requests
+import base64
+import hashlib
 import json
-import re
+import os
 from datetime import datetime
 
-# Caminhos locais
-LAST_COMMIT_FILE = "./3rd/bruce.lastCommit"
-JSON_DIR = "./3rd/"  # Pasta com os arquivos fonte JSON
-JSON_DIR_OUT = "./3rd/r/"  # Pasta com os arquivos fonte JSON
+import requests
 
-# 1. Obter commit atual da branch WebPage
-def get_latest_commit():
-    url = "https://api.github.com/repos/BruceDevices/firmware/releases/tags/betaRelease"
-    r = requests.get(url)
-    r.raise_for_status()
-    release = r.json()
-    match = re.search(r'\((.*?)\)', release["name"])
-    date = release.get("published_at")
-    # print(f"Data obtida do release: {date}")
-    if match:
-        commit_hash = match.group(1)
-        url = f"https://api.github.com/repos/BruceDevices/firmware/commits/{commit_hash}"
-        r = requests.get(url)
-        r.raise_for_status()
-        commit_data = r.json()
-        date = commit_data["commit"]["committer"]["date"]
-        # print(f"Data obtida do commit: {date}")
-    return release["name"], date  # Título e data da release
+REPO_OWNER = "BruceDevices"
+REPO_NAME = "firmware"
+COVER_IMAGE = "41d9e573f8b7aca442af27f54d788a94.gif"
+GITHUB_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
+AUTHOR = "pr3y"
+DESCRIPTION = "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT"
 
-# 2. Ler commit salvo anteriormente
-def read_saved_commit():
-    if os.path.exists(LAST_COMMIT_FILE):
-        with open(LAST_COMMIT_FILE, "r") as f:
-            return f.read().strip()
+# Cada entrada representa um dispositivo/variant e o arquivo bin que aparece no release.
+# O script cria/atualiza uma entrada separada para cada item e mantém apenas as últimas 10 versões.
+DEVICE_MAP = [
+    # T-Deck
+    {"name": "T-Deck", "asset_contains": "Bruce-lilygo-t-deck.bin", "json": "t-deck.json"},
+    {"name": "T-Deck Plus", "asset_contains": "Bruce-lilygo-t-deck-pro.bin", "json": "t-deck.json"},
+    
+    # T-Embed
+    {"name": "T-Embed", "asset_contains": "Bruce-lilygo-t-embed.bin", "json": "t-embed-cc1101.json"},
+    {"name": "T-Embed CC1101", "asset_contains": "Bruce-lilygo-t-embed-cc1101.bin", "json": "t-embed-cc1101.json"},
+
+    # T-HMI
+    {"name": "T-HMI", "asset_contains": "Bruce-lilygo-t-hmi.bin", "json": "t-hmi.json"},
+    {"name": "T-LoraPager", "asset_contains": "Bruce-lilygo-t-lora-pager.bin", "json": "t-lora-pager.json"},
+    {"name": "T-Watch S3", "asset_contains": "Bruce-lilygo-t-watch-s3.bin", "json": "t-watch-s3.json"},
+
+    # CYD
+    {"name": "CYD S028R", "asset_contains": "Bruce-LAUNCHER_cyd-2432s028.bin", "json": "CYD.json"},
+    {"name": "CYD 2USB", "asset_contains": "Bruce-LAUNCHER_cyd-2-usb.bin", "json": "CYD.json"},
+    {"name": "CYD S024R", "asset_contains": "Bruce-LAUNCHER_cyd-2432s024r.bin", "json": "CYD.json"},
+    {"name": "CYD W328R", "asset_contains": "Bruce-LAUNCHER_cyd-2432w328r.bin", "json": "CYD.json"},
+    {"name": "CYD W328C", "asset_contains": "Bruce-LAUNCHER_cyd-2432w328c.bin", "json": "CYD.json"},
+
+    # Marauder / Awok
+    {"name": "Awok Mini", "asset_contains": "Bruce-awok-mini.bin", "json": "marauder.json"},
+    {"name": "Awok Touch", "asset_contains": "Bruce-awok-touch.bin", "json": "marauder.json"},
+    {"name": "Marauder Mini", "asset_contains": "Bruce-LAUNCHER_marauder-mini.bin", "json": "marauder.json"},
+    {"name": "Marauder V4", "asset_contains": "Bruce-LAUNCHER_marauder-v4-og.bin", "json": "marauder.json"},
+    {"name": "Marauder V6", "asset_contains": "Bruce-LAUNCHER_marauder-v61.bin", "json": "marauder.json"},
+    {"name": "Marauder V7", "asset_contains": "Bruce-LAUNCHER_marauder-v7.bin", "json": "marauder.json"},
+
+    # Phantom
+    {"name": "Phantom S024R", "asset_contains": "Bruce-LAUNCHER_phantom_s024r.bin", "json": "phantom.json"},
+
+    # Smoochiee
+    {"name": "Smoochiee V2", "asset_contains": "Bruce-smoochiee-board.bin", "json": "smoochiee_v2.json"},
+]
+
+def generate_fid(name: str, existing_fid: str = None) -> str:
+    """Gera um fid estável a partir do nome do dispositivo ou usa o fid existente."""
+    if existing_fid:
+        return existing_fid
+
+    digest = hashlib.sha1(("Bruce" + name).encode("utf-8")).digest()
+    b32 = base64.b32encode(digest).decode("ascii").rstrip("=")
+    return "CFW" + b32[:29]
+
+
+def _load_json_file(path: str):
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def _save_json_file(path: str, data):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)
+
+
+def _parse_next_link(link_header: str):
+    if not link_header:
+        return None
+    parts = [p.strip() for p in link_header.split(",")]
+    for part in parts:
+        if "rel=\"next\"" in part:
+            url = part.split(";")[0].strip()
+            if url.startswith("<") and url.endswith(">"):
+                return url[1:-1]
     return None
 
-# 3. Salvar novo commit
-def write_commit(commit):
-    with open(LAST_COMMIT_FILE, "w") as f:
-        f.write(commit)
 
-# 4. Remover entradas com "author": "prey" dos arquivos JSON em /r
-def clean_json_files():
-    for filename in os.listdir(JSON_DIR_OUT):
-        if not filename.endswith(".json"):
-            continue
+def fetch_all_releases():
+    releases = []
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
+    while url:
+        resp = requests.get(url, params={"per_page": 100})
+        if resp.status_code != 200:
+            raise Exception(f"Erro ao acessar GitHub API: {resp.status_code}")
+        releases.extend(resp.json())
+        url = _parse_next_link(resp.headers.get("Link"))
+    return releases
 
-        filepath = os.path.join(JSON_DIR_OUT, filename)
-        with open(filepath, "r", encoding="utf-8") as f:
-            try:
-                data = json.load(f)
-            except Exception as e:
-                print(f"Erro ao processar {filename}: {e}")
+
+def atualizar_json_por_arquivo(json_filename: str, devices: list, releases: list):
+    json_path = os.path.join(os.path.dirname(__file__), json_filename)
+    lista = _load_json_file(json_path)
+
+    existing_entries = {
+        entry.get("fid"): entry
+        for entry in lista
+        if entry.get("github") == GITHUB_URL or entry.get("author") == AUTHOR
+    }
+
+    # Remove entradas que vamos reescrever (para evitar duplicates)
+    lista = [entry for entry in lista if entry.get("fid") not in existing_entries]
+
+    for device in devices:
+        existing_entry = None
+        # Tente reaproveitar uma entrada existente do mesmo dispositivo (mesmo nome ou mesmo asset)
+        for entry in existing_entries.values():
+            if entry.get("name") == device["name"]:
+                existing_entry = entry
+                break
+            for version in entry.get("versions", []):
+                if device["asset_contains"].lower() in version.get("file", "").lower():
+                    existing_entry = entry
+                    break
+            if existing_entry:
+                break
+
+        fid = generate_fid(device["name"], existing_entry.get("fid") if existing_entry else None)
+        existing_versions = {v["version"] for v in (existing_entry.get("versions") if existing_entry else [])}
+
+        new_versions = []
+        for rel in releases:
+            is_release = not rel.get("prerelease", False) and not rel.get("draft", False)
+            if not is_release:
                 continue
 
-        # Remove elementos com author == "pr3y"
-        if isinstance(data, list):
-            new_data = [item for item in data if item.get("author") != "pr3y"]
-        else:
-            print(f"Formato inesperado em {filename}")
-            continue
+            tag = rel.get("tag_name")
+            published_at = rel.get("published_at", "")[:10]
 
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(new_data, f, indent=4)
+            matching_asset = None
+            for asset in rel.get("assets", []):
+                if device["asset_contains"].lower() in asset.get("name", "").lower():
+                    matching_asset = asset
+                    break
 
-# 5. Atualizar published_at nos arquivos JSON
-def update_published_at(published_date):
-    for filename in os.listdir(JSON_DIR):
-        if not filename.endswith(".json"):
-            continue
-
-        filepath = os.path.join(JSON_DIR, filename)
-        with open(filepath, "r", encoding="utf-8") as f:
-            try:
-                data = json.load(f)
-            except Exception as e:
-                print(f"Erro ao processar {filename}: {e}")
+            if not matching_asset:
                 continue
 
-        # Atualizar published_at nas versões
-        if isinstance(data, list):
-            modified = False
-            for item in data:
-                if "versions" in item and item.get("author") == "pr3y":
-                    for version in item["versions"]:
-                        if "published_at" in version and version["published_at"] != published_date:
-                            version["published_at"] = published_date
-                            modified = True
+            if tag in existing_versions:
+                continue
 
-            if modified:
-                with open(filepath, "w", encoding="utf-8") as f:
-                    json.dump(data, f, indent=4)
-                print(f"Atualizado published_at em {filename}")
-        else:
-            print(f"Formato inesperado em {filename}")
+            new_versions.append(
+                {
+                    "version": tag,
+                    "published_at": published_at,
+                    "file": matching_asset.get("browser_download_url"),
+                }
+            )
 
-# Execução principal
-def main():
-    try:
-        latest_commit, published_iso = get_latest_commit()
-        saved_commit = read_saved_commit()
+        if not new_versions:
+            print(f"Nenhuma versão nova encontrada para '{device['name']}'.")
+            continue
 
-        if latest_commit != saved_commit:
-            print("Commit mudou. Limpando arquivos JSON...")
-            clean_json_files()
-            # Usar a data da release atual quando o commit mudou
-            published_date = datetime.strptime(published_iso, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d") if published_iso else ""
-            print(f"Commit mudou de '{saved_commit}' para '{latest_commit}'. Atualizando published_at nos arquivos JSON...")
-            update_published_at(published_date)
-            write_commit(latest_commit)
-        else:
-            print("Commit não mudou. Nada a fazer.")
-    except Exception as e:
-        print(f"Erro: {e}")
+        combined_versions = []
+        if existing_entry:
+            combined_versions.extend(existing_entry.get("versions", []))
+        combined_versions.extend(new_versions)
+
+        # Manter apenas as últimas 10 versões (mais recentes primeiro)
+        combined_versions.sort(key=lambda v: v.get("published_at", ""), reverse=True)
+        combined_versions = combined_versions[:10]
+
+        new_entry = {
+            "name": "Bruce Fw (" + device["name"] + ")",
+            "author": AUTHOR,
+            "description": DESCRIPTION,
+            "cover": COVER_IMAGE,
+            "github": GITHUB_URL,
+            "fid": fid,
+            "versions": combined_versions,
+        }
+
+        lista.append(new_entry)
+        print(f"Atualizado {device['name']} em {os.path.basename(json_path)} (+{len(new_versions)} versões).")
+
+    _save_json_file(json_path, lista)
+
 
 if __name__ == "__main__":
-    main()
+    releases = fetch_all_releases()  # Buscar releases uma vez por execução
+    devices_by_json = {}
+    for d in DEVICE_MAP:
+        devices_by_json.setdefault(d["json"], []).append(d)
+
+    for json_file, devices in devices_by_json.items():
+        atualizar_json_por_arquivo(json_file, devices, releases)

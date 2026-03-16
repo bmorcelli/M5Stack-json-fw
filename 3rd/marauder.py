@@ -8,7 +8,11 @@ import requests
 
 REPO_OWNER = "justcallmekoko"
 REPO_NAME = "ESP32Marauder"
-API_URL = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
+COVER_IMAGE = "3183675bd52534e015bcc8ae2ae603a0.png"
+GITHUB_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
+AUTHOR = "JustCallMeKoko"
+DESCRIPTION = "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32. Use Launcher to install"
+
 # Mapa de dispositivos -> onde buscar o arquivo bin no release -> JSON de destino.
 # Cada dispositivo terá seu próprio "fid" e uma lista de versões que corresponde às releases do GitHub.
 DEVICE_MAP = [
@@ -54,11 +58,6 @@ DEVICE_MAP = [
     },
 ]
 
-COVER_IMAGE = "3183675bd52534e015bcc8ae2ae603a0.png"
-GITHUB_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
-AUTHOR = "JustCallMeKoko"
-DESCRIPTION = "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32. Use Launcher to install"
-
 
 def generate_fid(name: str) -> str:
     """Gera um fid estável a partir do nome do dispositivo."""
@@ -93,7 +92,7 @@ def _parse_next_link(link_header: str):
 
 def fetch_all_releases():
     releases = []
-    url = API_URL
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
     while url:
         resp = requests.get(url, params={"per_page": 100})
         if resp.status_code != 200:

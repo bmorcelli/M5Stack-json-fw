@@ -8,13 +8,18 @@ import requests
 
 REPO_OWNER = "bmorcelli"
 REPO_NAME = "Launcher"
-API_URL = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
+COVER_IMAGE = "8a0100966905599183f9431ea873058f.gif"
+GITHUB_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
+AUTHOR = "bmorcelli"
+DESCRIPTION = "With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI."
+
 
 # Cada entrada representa um dispositivo/variant e o arquivo bin que aparece no release.
 # O script cria/atualiza uma entrada separada para cada item e mantém apenas as últimas 10 versões.
 DEVICE_MAP = [
     # T-Deck
     {"name": "T-Deck", "asset_contains": "launcher-lilygo-t-deck.bin", "json": "t-deck.json"},
+    {"name": "T-Deck Plus", "asset_contains": "launcher-lilygo-t-deck-plus.bin", "json": "t-deck.json"},
     {"name": "T-Deck Pro", "asset_contains": "launcher-lilygo-t-deck-pro.bin", "json": "t-deck-pro.json"},
     
     # T-Embed
@@ -47,12 +52,6 @@ DEVICE_MAP = [
     # Smoochiee
     {"name": "Smoochiee V2", "asset_contains": "launcher-smoochiee-board.bin", "json": "smoochiee_v2.json"},
 ]
-
-COVER_IMAGE = "8a0100966905599183f9431ea873058f.gif"
-GITHUB_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
-AUTHOR = "bmorcelli"
-DESCRIPTION = "With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI."
-
 
 def generate_fid(name: str, existing_fid: str = None) -> str:
     """Gera um fid estável a partir do nome do dispositivo ou usa o fid existente."""
@@ -90,7 +89,7 @@ def _parse_next_link(link_header: str):
 
 def fetch_all_releases():
     releases = []
-    url = API_URL
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
     while url:
         resp = requests.get(url, params={"per_page": 100})
         if resp.status_code != 200:

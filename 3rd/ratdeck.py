@@ -7,7 +7,6 @@ from datetime import datetime
 REPO_OWNER = "ratspeak"
 REPO_NAME = "ratdeck"
 FW_FID = "CFWFIQGOHMB27TVKXUVP3TJAX2BQMDDO"
-API_URL = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
 FILE_NAME = "ratdeck-merged.bin"
 LISTA_JSON = "./3rd/t-deck.json"
 
@@ -24,7 +23,7 @@ def _parse_next_link(link_header: str):
 
 def fetch_all_releases():
     releases = []
-    url = API_URL
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
     while url:
         resp = requests.get(url, params={"per_page": 100})
         if resp.status_code != 200:
