@@ -62,7 +62,7 @@ DESCRIPTION = "A suite of WiFi/Bluetooth offensive and defensive tools for the E
 
 def generate_fid(name: str) -> str:
     """Gera um fid estável a partir do nome do dispositivo."""
-    digest = hashlib.sha1(name.encode("utf-8")).digest()
+    digest = hashlib.sha1(("Marauder" + name).encode("utf-8")).digest()
     b32 = base64.b32encode(digest).decode("ascii").rstrip("=")
     return "CFW" + b32[:29]
 
@@ -103,7 +103,7 @@ def fetch_all_releases():
     return releases
 
 
-def atualizar_json_por_arquivo(json_filename: str, devices: list):
+def atualizar_json_por_arquivo(json_filename: str, devices: list, releases: list):
     json_path = os.path.join(os.path.dirname(__file__), json_filename)
     lista = _load_json_file(json_path)
 
@@ -116,8 +116,6 @@ def atualizar_json_por_arquivo(json_filename: str, devices: list):
 
     # Remove essas entradas para que possamos reescrever com fids por dispositivo.
     lista = [entry for entry in lista if entry.get("fid") not in existing_entries]
-
-    releases = fetch_all_releases()
 
     for device in devices:
         fid = generate_fid(device["name"])
@@ -183,11 +181,11 @@ def atualizar_json_por_arquivo(json_filename: str, devices: list):
 
 
 if __name__ == "__main__":
-    # Agrupar dispositivos por arquivo JSON para não sobrescrever entradas umas das outras.
+    releases = fetch_all_releases()  # Buscar releases uma vez por execução
     devices_by_json = {}
     for d in DEVICE_MAP:
         devices_by_json.setdefault(d["json"], []).append(d)
 
     for json_file, devices in devices_by_json.items():
-        atualizar_json_por_arquivo(json_file, devices)
+        atualizar_json_por_arquivo(json_file, devices, releases)
 

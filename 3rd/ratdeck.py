@@ -9,9 +9,31 @@ REPO_NAME = "ratdeck"
 FW_FID = "CFWFIQGOHMB27TVKXUVP3TJAX2BQMDDO"
 API_URL = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
 FILE_NAME = "ratdeck-merged.bin"
-LISTA_JSON = "./3rd/t-deck.json"
+LISTA_JSON = "t-deck.json"
 
-def atualizar_somente_ratdeck():
+def _parse_next_link(link_header: str):
+    if not link_header:
+        return None
+    parts = [p.strip() for p in link_header.split(",")]
+    for part in parts:
+        if "rel=\"next\"" in part:
+            url = part.split(";")[0].strip()
+            if url.startswith("<") and url.endswith(">"):
+                return url[1:-1]
+    return None
+
+def fetch_all_releases():
+    releases = []
+    url = API_URL
+    while url:
+        resp = requests.get(url, params={"per_page": 100})
+        if resp.status_code != 200:
+            raise Exception(f"Erro ao acessar GitHub API: {resp.status_code}")
+        releases.extend(resp.json())
+        url = _parse_next_link(resp.headers.get("Link"))
+    return releases
+
+def atualizar_somente_ratdeck(releases: list):
     # Carregar o JSON da lista de firmwares
     with open(LISTA_JSON, 'r') as f:
         data = json.load(f)
@@ -30,13 +52,6 @@ def atualizar_somente_ratdeck():
     # Obter versões existentes
     existing_versions = {v['version'] for v in ratdeck_firmware['versions']}
     
-    # Buscar todas as releases do repositório
-    response = requests.get(API_URL)
-    if response.status_code != 200:
-        print("Falha ao buscar releases do repositório.")
-        return
-    
-    releases = response.json()
     new_versions = []
     
     for release in releases:
@@ -66,6 +81,6 @@ def atualizar_somente_ratdeck():
 
 
 if __name__ == "__main__":
-    # Atualiza a Lista do ratdeck completo
-    atualizar_somente_ratdeck()
+    releases = fetch_all_releases()  # Buscar releases uma vez por execução
+    atualizar_somente_ratdeck(releases)
 
