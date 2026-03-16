@@ -106,7 +106,7 @@ def atualizar_json_por_arquivo(json_filename: str, devices: list, releases: list
     existing_entries = {
         entry.get("fid"): entry
         for entry in lista
-        if entry.get("github") == GITHUB_URL or entry.get("author") == AUTHOR
+        if entry.get("github") == GITHUB_URL and entry.get("author") == AUTHOR
     }
 
     # Remove entradas que vamos reescrever (para evitar duplicates)
