@@ -245,9 +245,10 @@ def atualizar_firmware(fw_config: dict):
             # Manter apenas as últimas 10 versões
             combined_versions.sort(key=lambda v: v["published_at"], reverse=True)
             combined_versions = combined_versions[:10]
+            firmware_display_name = f"{fw_config['name']} ({device['name']})"
 
             new_entry = {
-                "name": device["name"],
+                "name": firmware_display_name,
                 "author": author,
                 "description": description,
                 "cover": cover,
