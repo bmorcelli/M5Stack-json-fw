@@ -6,7 +6,7 @@ import json
 from datetime import datetime
 
 # Configurações
-SOURCE_REPO = "jaylikesbunda/Ghost_ESP"
+SOURCE_REPO = "GhostESP-Revival/GhostESP"
 TARGET_REPO = "bmorcelli/M5Stack-json-fw"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 FILES_TO_PROCESS = [
@@ -55,10 +55,11 @@ def atualizar_lista_json(path, binaries, version, published_date):
 
     nova_entry = {
         "name": f"Ghost {version}",
-        "author": "jaylikesbunda",
+        "author": "GhostESP-Revival",
         "description": "Welcome to Ghost ESP, a robust and feature-rich firmware designed for your ESP32 microcontroller, enabling advanced wireless network exploration and security testing. With Ghost ESP installed, you can leverage the power of your ESP32 device to conduct in-depth WiFi and Bluetooth Low Energy (BLE) analysis, launch strategic wireless attacks, and explore a wide range of wireless environments.",
         "cover": "73a76385ad90e1e7537e066187476e77.png",
         "fid": "CFW65JYEX4CBVRVGK0CR8TIE9A4INIIX",
+        "github": "https://github.com/GhostESP-Revival/GhostESP",
         "versions": [
             {
                 "version": name.replace(".bin", ""),
