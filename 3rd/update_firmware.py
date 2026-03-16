@@ -181,15 +181,22 @@ def atualizar_firmware(fw_config: dict):
         json_path = os.path.join(os.path.dirname(__file__), json_filename)
         lista = _load_json_file(json_path)
 
-        # Encontre entradas existentes do mesmo firmware
+        # Trabalha apenas com os fids declarados no config para este JSON.
+        # Isso evita apagar entradas de outros firmwares ou dispositivos que
+        # não estejam sendo processados aqui.
+        expected_fids = {generate_fid(fid_prefix, device["name"]) for device in json_devices}
+
         existing_entries = {
             entry.get("fid"): entry
             for entry in lista
-            if entry.get("github") == github_url and entry.get("author") == author
+            if entry.get("fid") in expected_fids
+            and entry.get("github") == github_url
+            and entry.get("author") == author
         }
 
-        # Remove essas entradas para reescrever com fids por dispositivo
-        lista = [entry for entry in lista if entry.get("fid") not in existing_entries]
+        # Remove entradas antigas desses dispositivos para reescrevê-las no fim
+        # com a lista combinada de versões.
+        lista = [entry for entry in lista if entry.get("fid") not in expected_fids]
 
         for device in json_devices:
             fid = generate_fid(fid_prefix, device["name"])
@@ -226,14 +233,14 @@ def atualizar_firmware(fw_config: dict):
                     }
                 )
 
-            if not new_versions:
-                print(f"  {device['name']}: Nenhuma versão nova")
-                continue
-
             combined_versions = []
             if fid in existing_entries:
                 combined_versions.extend(existing_entries[fid].get("versions", []))
             combined_versions.extend(new_versions)
+
+            if not combined_versions:
+                print(f"  {device['name']}: Nenhuma versão disponível")
+                continue
 
             # Manter apenas as últimas 10 versões
             combined_versions.sort(key=lambda v: v["published_at"], reverse=True)
@@ -250,7 +257,10 @@ def atualizar_firmware(fw_config: dict):
             }
 
             lista.append(new_entry)
-            print(f"  {device['name']}: +{len(new_versions)} versão(ões) em {json_filename}")
+            if new_versions:
+                print(f"  {device['name']}: +{len(new_versions)} versão(ões) em {json_filename}")
+            else:
+                print(f"  {device['name']}: Nenhuma versão nova")
 
         _save_json_file(json_path, lista)
 
