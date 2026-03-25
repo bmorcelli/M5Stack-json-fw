@@ -105,6 +105,18 @@ FIRMWARE_CONFIGS = [
             {"name": "T-Deck", "asset_contains": "ratdeck-merged.bin", "json": "t-deck.json"},
         ],
     },
+    {
+        "name": "Pyxis",
+        "repo_owner": "torlando-tech",
+        "repo_name": "pyxis",
+        "author": "torlando-tech",
+        "cover": "https://github.com/torlando-tech/pyxis/blob/main/pyxis-icon.svg",
+        "description": "An LXMF and LXST client firmware for T-Deck.",
+        "fid_prefix": "Ratdeck",
+        "devices": [
+            {"name": "T-Deck", "asset_contains": "firmware.bin", "json": "t-deck.json"},
+        ],
+    },
 ]
 
 # ============================================================================
