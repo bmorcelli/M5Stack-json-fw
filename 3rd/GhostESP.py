@@ -28,12 +28,12 @@ HEADERS = {
 
 def get_latest_release(repo):
     url = f"https://api.github.com/repos/{repo}/releases/latest"
-    r = requests.get(url)
+    r = requests.get(url, headers=HEADERS)
     r.raise_for_status()
     return r.json()
 
 def download_and_extract_bin(asset_url, zip_name):
-    r = requests.get(asset_url)
+    r = requests.get(asset_url, headers=HEADERS)
     r.raise_for_status()
     with zipfile.ZipFile(io.BytesIO(r.content)) as z:
         with z.open("firmware.bin") as bin_file:

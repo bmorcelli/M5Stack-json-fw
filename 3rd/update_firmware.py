@@ -123,6 +123,11 @@ FIRMWARE_CONFIGS = [
 # FUNÇÕES UTILITÁRIAS
 # ============================================================================
 
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+HEADERS = {
+    "Authorization": f"token {GITHUB_TOKEN}",
+    "Accept": "application/vnd.github+json"
+}
 
 def generate_fid(fw_prefix: str, device_name: str) -> str:
     """Gera um fid estável a partir do nome do firmware e dispositivo."""
@@ -156,12 +161,23 @@ def _parse_next_link(link_header: str):
     return None
 
 
+def _get_github_headers():
+    """Retorna headers com autenticação GitHub se disponível."""
+    github_token = os.getenv("GITHUB_TOKEN")
+    headers = {}
+    if github_token:
+        headers["Authorization"] = f"token {github_token}"
+        headers["Accept"] = "application/vnd.github+json"
+    return headers
+
+
 def fetch_all_releases(repo_owner: str, repo_name: str):
     """Busca todas as releases de um repositório."""
     releases = []
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases"
+    headers = _get_github_headers()
     while url:
-        resp = requests.get(url, params={"per_page": 100})
+        resp = requests.get(url, params={"per_page": 100}, headers=headers)
         if resp.status_code != 200:
             raise Exception(f"Erro ao acessar GitHub API: {resp.status_code}")
         releases.extend(resp.json())

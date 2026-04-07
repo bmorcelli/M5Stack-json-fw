@@ -13,10 +13,19 @@ REPO_OWNER = "BruceDevices"
 REPO_NAME = "firmware"
 REPO_BETA_TAG = "betaRelease"
 
+# GitHub API authentication
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+HEADERS = {}
+if GITHUB_TOKEN:
+    HEADERS = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json"
+    }
+
 # 1. Obter commit atual da branch WebPage
 def get_latest_commit():
     url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases/tags/{REPO_BETA_TAG}"
-    r = requests.get(url)
+    r = requests.get(url, headers=HEADERS)
     r.raise_for_status()
     release = r.json()
     match = re.search(r'\((.*?)\)', release["name"])
@@ -25,7 +34,7 @@ def get_latest_commit():
     if match:
         commit_hash = match.group(1)
         url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/commits/{commit_hash}"
-        r = requests.get(url)
+        r = requests.get(url, headers=HEADERS)
         r.raise_for_status()
         commit_data = r.json()
         date = commit_data["commit"]["committer"]["date"]
