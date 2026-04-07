@@ -18,9 +18,10 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 HEADERS = {}
 if GITHUB_TOKEN:
     HEADERS = {
-        "Authorization": f"token {GITHUB_TOKEN}",
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json"
     }
+    print("[bruce_beta.py] GitHub token encontrado e configurado", flush=True)
 else:
     print("[bruce_beta.py] AVISO: GitHub token não encontrado, usando limite anônimo", flush=True)
 

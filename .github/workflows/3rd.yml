@@ -30,12 +30,12 @@ jobs:
           echo "OK: GITHUB_TOKEN foi recebido (${#GITHUB_TOKEN} caracteres)"
         fi
       env:
-        GITHUB_TOKEN: ${{ secrets.GHOST_UPLOAD_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Run Python script
       id: process
       env:
-        GITHUB_TOKEN: ${{ secrets.GHOST_UPLOAD_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
         # if force download is requested, delete all cached JSON files to ensure they are re-downloaded
         if [ "${{ env.FORCE_DOWNLOAD_ALL }}" = "true" ]; then

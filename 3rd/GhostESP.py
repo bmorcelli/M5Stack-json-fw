@@ -24,9 +24,10 @@ LISTA_TWATCH = "./3rd/t-watch-s3.json"
 HEADERS = {}
 if GITHUB_TOKEN:
     HEADERS = {
-        "Authorization": f"token {GITHUB_TOKEN}",
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Accept": "application/vnd.github+json"
     }
+    print("[GhostESP.py] GitHub token encontrado e configurado", flush=True)
 else:
     print("[GhostESP.py] AVISO: GitHub token não encontrado, usando limite anônimo", flush=True)
 
