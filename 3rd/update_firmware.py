@@ -168,6 +168,8 @@ def _get_github_headers():
     if github_token:
         headers["Authorization"] = f"token {github_token}"
         headers["Accept"] = "application/vnd.github+json"
+    else:
+        print("[update_firmware.py] AVISO: GitHub token não encontrado, usando limite anônimo", flush=True)
     return headers
 
 

@@ -27,6 +27,8 @@ if GITHUB_TOKEN:
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github+json"
     }
+else:
+    print("[GhostESP.py] AVISO: GitHub token não encontrado, usando limite anônimo", flush=True)
 
 def get_latest_release(repo):
     url = f"https://api.github.com/repos/{repo}/releases/latest"

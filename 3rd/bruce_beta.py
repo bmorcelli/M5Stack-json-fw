@@ -21,6 +21,8 @@ if GITHUB_TOKEN:
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json"
     }
+else:
+    print("[bruce_beta.py] AVISO: GitHub token não encontrado, usando limite anônimo", flush=True)
 
 # 1. Obter commit atual da branch WebPage
 def get_latest_commit():
