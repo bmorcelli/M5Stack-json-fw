@@ -21,10 +21,12 @@ LISTA_TEMBED = "./3rd/t-embed-cc1101.json"
 LISTA_TDECK = "./3rd/t-deck.json"
 LISTA_TWATCH = "./3rd/t-watch-s3.json"
 
-HEADERS = {
-    "Authorization": f"token {GITHUB_TOKEN}",
-    "Accept": "application/vnd.github+json"
-}
+HEADERS = {}
+if GITHUB_TOKEN:
+    HEADERS = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json"
+    }
 
 def get_latest_release(repo):
     url = f"https://api.github.com/repos/{repo}/releases/latest"

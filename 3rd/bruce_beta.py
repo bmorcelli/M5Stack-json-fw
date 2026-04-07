@@ -19,7 +19,7 @@ HEADERS = {}
 if GITHUB_TOKEN:
     HEADERS = {
         "Authorization": f"token {GITHUB_TOKEN}",
-        "Accept": "application/vnd.github+json"
+        "Accept": "application/vnd.github.v3+json"
     }
 
 # 1. Obter commit atual da branch WebPage
