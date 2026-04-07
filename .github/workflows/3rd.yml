@@ -17,21 +17,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    #- name: Update Brench
-    #  run: | 
-    #    git fetch
-    #    git pull origin main
-      
-    - name: Debug - Check GitHub Token
-      run: |
-        if [ -z "$GITHUB_TOKEN" ]; then
-          echo "ERRO: GITHUB_TOKEN não foi configurado!"
-        else
-          echo "OK: GITHUB_TOKEN foi recebido (${#GITHUB_TOKEN} caracteres)"
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
     - name: Run Python script
       id: process
       env:
@@ -43,6 +28,10 @@ jobs:
         fi
 
         # Checks for firmware updates and writes new JSON files
+        # Run on push/workflow_dispatch always, or on schedule only between 00:00 and 00:14
+        if [ "${{ github.event_name }}" != "schedule" ] || [ "$(date +%H%M)" -lt 0015 ]; then
+          python ./3rd/check_repo_updates.py
+        fi
         python ./3rd/bruce_beta.py
         python ./3rd/GhostESP.py
         python ./3rd/update_firmware.py
