@@ -14,12 +14,12 @@ FILES_TO_PROCESS = [
     "CYD2USB2.4Inch_C.zip", "CYDDualUSB.zip", "CYDMicroUSB.zip", "MarauderV6_AwokDual.zip", "LilyGo-TEmbedC1101.zip", "LilyGo-T-Deck.zip"
 ]
 
-LISTA_MARAUDER = "./3rd/marauder.json"
-LISTA_CYD = "./3rd/CYD.json"
-LISTA_PHANTOM = "./3rd/phantom.json"
-LISTA_TEMBED = "./3rd/t-embed-cc1101.json"
-LISTA_TDECK = "./3rd/t-deck.json"
-LISTA_TWATCH = "./3rd/t-watch-s3.json"
+LISTA_MARAUDER = "./3rd/database/marauder.json"
+LISTA_CYD = "./3rd/database/CYD.json"
+LISTA_PHANTOM = "./3rd/database/phantom.json"
+LISTA_TEMBED = "./3rd/database/t-embed-cc1101.json"
+LISTA_TDECK = "./3rd/database/t-deck.json"
+LISTA_TWATCH = "./3rd/database/t-watch-s3.json"
 
 HEADERS = {}
 if GITHUB_TOKEN:

@@ -209,7 +209,7 @@ def atualizar_firmware(fw_config: dict):
         devices_by_json.setdefault(device["json"], []).append(device)
 
     for json_filename, json_devices in devices_by_json.items():
-        json_path = os.path.join(os.path.dirname(__file__), json_filename)
+        json_path = os.path.join(os.path.dirname(__file__), "database", json_filename)
         lista = _load_json_file(json_path)
 
         # Trabalha apenas com os fids declarados no config para este JSON.

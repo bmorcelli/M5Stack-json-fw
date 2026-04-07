@@ -19,7 +19,7 @@ def _generate_fid(existing_fids):
 
 
 def process_jsons():
-    input_folder = "./3rd/"
+    input_folder = "./3rd/database/"
     output_folder = "./3rd/r/"
     temp_bin = os.path.join(input_folder, "temp.bin")
 
