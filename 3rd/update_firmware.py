@@ -111,10 +111,23 @@ FIRMWARE_CONFIGS = [
         "repo_name": "pyxis",
         "author": "torlando-tech",
         "cover": "https://github.com/torlando-tech/pyxis/blob/main/pyxis-icon.svg",
+        "github": "https://github.com/torlando-tech/pyxis/",
         "description": "An LXMF and LXST client firmware for T-Deck.",
         "fid_prefix": "Ratdeck",
         "devices": [
             {"name": "T-Deck", "asset_contains": "firmware.bin", "json": "t-deck.json"},
+        ],
+    },
+    {
+        "name": "HaleHound",
+        "repo_owner": "JesseCHale",
+        "repo_name": "HaleHound-CYD",
+        "author": "JesseCHale",
+        "cover": "https://avatars.githubusercontent.com/u/208289035?v=4",
+        "github": "https://github.com/JesseCHale/HaleHound-CYD",
+        "description": "HaleHound-CYD is a multi-protocol offensive security toolkit built for the ESP32-2432S028 \"Cheap Yellow Display\" (CYD) platform. It ports the full ESP32-DIV HaleHound v2.5.0 firmware to the CYD's 2.8\" touchscreen form factor, adding external CC1101 SubGHz, NRF24L01+PA+LNA 2.4GHz, and GPS radios via the CYD's breakout pins. Every attack module from the original ESP32-DIV is present, plus CYD-exclusive features: full touchscreen navigation, EAPOL/PMKID capture, Karma attacks, wardriving with GPS logging, UART serial monitor for hardware hacking, and OTA firmware updates from SD card. All radios transmit at maximum power. No safety nets.",
+        "devices": [
+            {"name": "CYD", "asset_contains": "CYD-FULL.bin", "json": "CYD.json"},
         ],
     },
 ]
