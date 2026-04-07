@@ -22,6 +22,16 @@ jobs:
     #    git fetch
     #    git pull origin main
       
+    - name: Debug - Check GitHub Token
+      run: |
+        if [ -z "$GITHUB_TOKEN" ]; then
+          echo "ERRO: GITHUB_TOKEN não foi configurado!"
+        else
+          echo "OK: GITHUB_TOKEN foi recebido (${#GITHUB_TOKEN} caracteres)"
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GHOST_UPLOAD_TOKEN }}
+      
     - name: Run Python script
       id: process
       env:
