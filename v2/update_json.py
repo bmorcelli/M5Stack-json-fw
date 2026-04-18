@@ -64,8 +64,15 @@ if os.path.exists(all_device_firmware_old):
     for new_item in data:
         for old_item in old_data:
             if new_item['_id'] == old_item['_id']:
+                # Copy the ESP32-xx model device descriptor
                 if 'esp' in old_item:
                     new_item['esp'] = old_item['esp']
+                # Copy translated fields
+                if 'name_en' in old_item:
+                    new_item['name_en'] = old_item['name_en']
+                    new_item['name_old'] = old_item['name_old']
+                    new_item['description_en'] = old_item['description_en']
+                    new_item['description_old'] = old_item['description_old']
                 for new_version in new_item['versions']:
                     new_version.pop('change_log', None)
                     new_version.pop('published', None)
