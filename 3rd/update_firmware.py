@@ -122,6 +122,7 @@ def atualizar_firmware(fw_config: dict):
     description = fw_config["description"]
     fid_prefix = fw_config["fid_prefix"]
     devices = fw_config["devices"]
+    allow_prerelease = fw_config.get("pre_release", False)
 
     print(f"\n{'=' * 60}")
     print(f"Processando {fw_config['name']}...")
@@ -161,8 +162,15 @@ def atualizar_firmware(fw_config: dict):
 
             new_versions = []
             for rel in releases:
-                is_release = not rel.get("prerelease", False) and not rel.get("draft", False)
-                if not is_release:
+                is_draft = rel.get("draft", False)
+                is_prerelease = rel.get("prerelease", False)
+                
+                # Se é draft, sempre ignora
+                if is_draft:
+                    continue
+                
+                # Se é prerelease, só aceita se o firmware permitir
+                if is_prerelease and not allow_prerelease:
                     continue
 
                 tag = rel.get("tag_name")
