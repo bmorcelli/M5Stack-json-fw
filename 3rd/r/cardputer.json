@@ -16,7 +16,38 @@
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 3916368
+                "as": 3916368,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3916368,
+                        "partition_size": 3916368,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3916368,
+                            "source_offset": 65536,
+                            "copy_size": 3916368,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "legacy_fields",
+                        "confidence": "legacy",
+                        "warnings": [
+                            "Manifest generated from legacy fields; app image_size may equal partition/file size."
+                        ]
+                    }
+                }
             }
         ],
         "fid": "CFW134BRLCTDS8LA4X6SDWQ3XGF15CXL",
