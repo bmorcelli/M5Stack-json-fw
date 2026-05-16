@@ -12,6 +12,10 @@ on:
   schedule:
     - cron: "*/15 * * * *" # every 15 minutes
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   compare-json:
     runs-on: ubuntu-latest
@@ -122,3 +126,9 @@ jobs:
         git add .
         git commit -m "Update 3rd party JSON files"
         git push
+
+    - name: Trigger Translate if M5Burner catalog changed
+      if: env.FILES_ADDED == 'true'
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: gh workflow run translate.yml --ref "$GITHUB_REF_NAME"

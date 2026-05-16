@@ -83,7 +83,7 @@ class FirmwareManifestTests(unittest.TestCase):
     def test_parse_esp_image_size(self):
         image = esp_image(b"12345678")
         size = parse_esp_image_size(lambda offset, length: image[offset:offset + length], 0)
-        self.assertEqual(size, 32)
+        self.assertEqual(size, 48)
 
     def test_parse_partition_table(self):
         table = (
@@ -125,7 +125,7 @@ class FirmwareManifestTests(unittest.TestCase):
         self.assertTrue(version["nb"])
         self.assertEqual(version["install"]["format"], "app")
         self.assertEqual(version["install"]["app"]["source_offset"], 0)
-        self.assertEqual(version["install"]["analysis"]["method"], "range")
+        self.assertEqual(version["install"]["analysis"]["method"], "file_size")
 
     def test_analyze_remote_merged_partition_table(self):
         image = esp_image(b"abcdefgh")
@@ -143,10 +143,55 @@ class FirmwareManifestTests(unittest.TestCase):
         analyze_remote_firmware(version, item, session=session)
 
         self.assertEqual(version["ao"], 0x10000)
-        self.assertEqual(version["as"], 0x200000)
+        self.assertEqual(version["as"], 48)
         self.assertEqual(version["f"], 1)
         self.assertEqual(version["install"]["analysis"]["method"], "partition_table")
-        self.assertEqual(version["install"]["app"]["image_size"], 32)
+        self.assertEqual(version["install"]["app"]["image_size"], 48)
+        self.assertEqual(version["install"]["app"]["partition_size"], 0x200000)
+
+    def test_analyze_remote_full_flash_dump_measures_app_image(self):
+        image = esp_image(b"abcdefgh")
+        content = bytearray(4 << 20)
+        content[0x8000:0x8000 + 64] = (
+            partition_entry(0x00, 0x10, 0x10000, 0x3F0000, "ota_0")
+            + b"\xFF" * 32
+        )
+        content[0x10000:0x10000 + len(image)] = image
+        session = FakeSession(bytes(content))
+        version = {"version": "1", "file": "https://example.test/flash_dump.bin"}
+        item = {"category": "cardputer"}
+
+        analyze_remote_firmware(version, item, session=session)
+
+        self.assertEqual(session.get_calls, ["bytes=0-36863", None])
+        self.assertEqual(version["ao"], 0x10000)
+        self.assertEqual(version["as"], 48)
+        self.assertEqual(version["install"]["app"]["image_size"], 48)
+        self.assertEqual(version["install"]["app"]["partition_size"], 0x3F0000)
+
+    def test_analyze_remote_measures_when_payload_exists_after_declared_app_size(self):
+        image = esp_image(b"abcdefgh")
+        content = bytearray(0x1C0000)
+        content[0x8000:0x8000 + 96] = (
+            partition_entry(0x00, 0x10, 0x10000, 0x200000, "ota_0")
+            + partition_entry(0x01, 0x81, 0x180000, 0x40000, "sys")
+            + b"\xFF" * 32
+        )
+        content[0x10000:0x10000 + len(image)] = image
+        content[0x180000:0x1C0000] = b"D" * 0x40000
+        session = FakeSession(bytes(content))
+        version = {
+            "version": "1",
+            "file": "https://example.test/merged_with_data.bin",
+            "as": 0x120000,
+        }
+        item = {"category": "cardputer"}
+
+        analyze_remote_firmware(version, item, session=session)
+
+        self.assertEqual(session.get_calls, ["bytes=0-36863", None])
+        self.assertEqual(version["as"], 48)
+        self.assertEqual(version["install"]["app"]["image_size"], 48)
         self.assertEqual(version["install"]["app"]["partition_size"], 0x200000)
 
     def test_analyze_remote_404_marks_invalid(self):

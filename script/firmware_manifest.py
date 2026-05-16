@@ -39,7 +39,10 @@ PARTITION_SUBTYPE_SPIFFS = 0x82
 PARTITION_SUBTYPE_FAT = 0x81
 
 ESP_IMAGE_MAGIC = 0xE9
+ESP_IMAGE_MAX_SEGMENTS = 16
+ESP_IMAGE_HASH_LEN = 32
 PARTITION_MAGIC = b"\xAA\x50"
+FULL_FLASH_DUMP_SIZES = {4 << 20, 8 << 20, 16 << 20, 32 << 20}
 
 
 class FirmwareAnalysisError(Exception):
@@ -164,26 +167,39 @@ def align_up(value: int, alignment: int) -> int:
     return (value + alignment - 1) // alignment * alignment
 
 
-def parse_esp_image_size(read_at, source_offset: int) -> int:
+def parse_esp_image_size(read_at, source_offset: int, file_size: int = 0) -> int:
     header = read_at(source_offset, 8)
     if len(header) < 8 or header[0] != ESP_IMAGE_MAGIC:
         raise FirmwareAnalysisError(f"ESP image not found at 0x{source_offset:X}")
 
     segment_count = header[1]
+    if segment_count == 0 or segment_count > ESP_IMAGE_MAX_SEGMENTS:
+        raise FirmwareAnalysisError(f"Invalid ESP segment count: {segment_count}")
+
     hash_appended = bool(header[7] & 0x01)
     cursor = source_offset + 8
+    if file_size and cursor > file_size:
+        raise FirmwareAnalysisError("Truncated ESP image header")
 
     for _ in range(segment_count):
         segment_header = read_at(cursor, 8)
         if len(segment_header) < 8:
             raise FirmwareAnalysisError("Truncated ESP segment header")
         _, data_len = struct.unpack("<II", segment_header)
-        cursor += 8 + data_len
+        cursor += 8
+        if file_size and (data_len > file_size or cursor > file_size - data_len):
+            raise FirmwareAnalysisError("ESP segment exceeds file size")
+        cursor += data_len
 
-    checksum_offset = align_up(cursor + 1, 16) - 1
-    image_end = checksum_offset + 1
+    image_end = align_up(cursor, 16) + 1
     if hash_appended:
-        image_end += 32
+        image_end += ESP_IMAGE_HASH_LEN
+    image_end = align_up(image_end, 16)
+
+    if image_end <= source_offset:
+        raise FirmwareAnalysisError("Invalid ESP image size")
+    if file_size and image_end > file_size:
+        raise FirmwareAnalysisError("ESP image exceeds file size")
     return image_end - source_offset
 
 
@@ -378,7 +394,7 @@ def build_install_from_partition_table(
     partition_size = int(app_part["size"])
 
     if not image_size:
-        image_size = parse_esp_image_size(read_at, source_offset)
+        image_size = parse_esp_image_size(read_at, source_offset, content_length)
     if image_size > partition_size:
         warnings.append("ESP image is larger than declared app partition.")
         partition_size = image_size
@@ -470,17 +486,18 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
             app_part = next(p for p in partitions if p["type_id"] == PARTITION_TYPE_APP)
             source_offset = int(app_part["offset"])
             partition_size = int(app_part["size"])
+            declared_app_size = int(version.get("as") or partition_size)
 
-            # Step 2 (conditional): only download the full file if the file extends beyond
-            # the declared partition boundary — meaning the real image size must be measured.
-            _FULL_FLASH_SIZES = {1 << 20, 1 << 21, 1 << 22, 1 << 23, 1 << 24}  # 1-16 MB
-            _is_full_flash = reader.content_length in _FULL_FLASH_SIZES
-            if reader.content_length and reader.content_length > source_offset + partition_size and not _is_full_flash:
+            _is_full_flash = reader.content_length in FULL_FLASH_DUMP_SIZES
+            _has_payload_after_app = bool(
+                reader.content_length and reader.content_length > source_offset + declared_app_size
+            )
+            if _has_payload_after_app and not _is_full_flash:
                 full_data = reader.read_full()
                 def read_at(offset: int, size: int) -> bytes:
                     return full_data[offset:offset + size]
                 try:
-                    image_size = parse_esp_image_size(read_at, source_offset)
+                    image_size = parse_esp_image_size(read_at, source_offset, len(full_data))
                 except FirmwareAnalysisError as exc:
                     # Segment walk failed (e.g. full flash dump with fragmented data).
                     # Fall back to partition_size as a safe upper bound.
@@ -494,8 +511,7 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
                 def read_at(offset: int, size: int) -> bytes:  # type: ignore[no-redef]
                     return full_data[offset:offset + size]
                 try:
-                    raw_image_size = parse_esp_image_size(read_at, source_offset)
-                    image_size = align_up(raw_image_size, 0x10000)
+                    image_size = parse_esp_image_size(read_at, source_offset, len(full_data))
                 except FirmwareAnalysisError as exc:
                     warnings.append(f"ESP segment parse failed on full flash, using partition_size: {exc}")
                     image_size = partition_size
@@ -506,6 +522,7 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
                     return header_chunk[offset:offset + size]
 
             apply_legacy_fields_from_partitions(version, partitions, reader.content_length)
+            version["as"] = image_size
             version["install"] = build_install_from_partition_table(
                 version,
                 item,
