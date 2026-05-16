@@ -33,6 +33,7 @@ VERSION_METADATA_FIELDS = {
     "so",
     "nb",
     "invalid",
+    "install",
 }
 ITEM_METADATA_FIELDS = {"esp"}
 
