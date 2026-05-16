@@ -13,6 +13,7 @@ if hasattr(sys.stderr, "reconfigure"):
 
 from script.firmware_manifest import (
     analyze_remote_firmware,
+    analyze_remote_firmware_batch,
     copy_preserved_version_fields,
     ensure_install_manifest,
 )
@@ -27,6 +28,12 @@ parser.add_argument(
     action="store_true",
     default=False,
     help="Force full download by removing cached JSON files first.",
+)
+parser.add_argument(
+    "--max-workers",
+    type=int,
+    default=4,
+    help="Number of parallel workers for firmware analysis (default: 4).",
 )
 args = parser.parse_args()
 
@@ -99,24 +106,34 @@ if os.path.exists(all_device_firmware_old):
                 copy_preserved_version_fields(new_version, old_version)
 
 # Passo 4: analisar novas versoes e adicionar manifesto install.
+tasks = []
 for item in data:
     for version in item["versions"]:
-        process = "s" not in version
-        if not process:
+        needs_analysis = "s" not in version
+        if item.get("category") == "stickc" and "esp" not in item:
+            needs_analysis = True
+        if needs_analysis and "invalid" not in version:
+            print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
+            tasks.append((item, version))
+        else:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)
             ensure_install_manifest(version, item)
 
-        if item.get("category") == "stickc" and "esp" not in item:
-            process = True
+if tasks:
+    print(f"\nAnalisando {len(tasks)} versões com {args.max_workers} workers...", flush=True)
+    result = analyze_remote_firmware_batch(tasks, max_workers=args.max_workers)
+    files_added += result["files_added"]
 
-        if process and "invalid" not in version:
-            print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
-            files_added += 1
-            analyze_remote_firmware(version, item)
-            if version.get("invalid"):
-                print(f"{item['name']} - {version['version']} - Invalid ", flush=True)
-            else:
-                ensure_install_manifest(version, item)
+    for item, version in tasks:
+        if version.get("invalid"):
+            print(f"{item['name']} - {version['version']} - Invalid ", flush=True)
+        else:
+            ensure_install_manifest(version, item)
+
+    if result["errors"]:
+        print(f"\nAVISO: {len(result['errors'])} erros durante análise:", flush=True)
+        for err in result["errors"]:
+            print(f"  {err['item']} - {err['version']}: {err['error']}", flush=True)
 
 previous_final = ""
 if os.path.exists(all_device_firmware_old):

@@ -10,7 +10,7 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-from script.firmware_manifest import analyze_remote_firmware, ensure_install_manifest
+from script.firmware_manifest import analyze_remote_firmware_batch, ensure_install_manifest
 
 
 def _generate_fid(existing_fids):
@@ -26,7 +26,7 @@ def _generate_fid(existing_fids):
             return fid
 
 
-def process_jsons():
+def process_jsons(max_workers: int = 4):
     input_folder = "./3rd/database/"
     output_folder = "./3rd/r/"
 
@@ -125,25 +125,29 @@ def process_jsons():
         for item in merged_data:
             item["category"] = category_name
 
-        files_added = 0
+        tasks = []
         for item in merged_data:
             for version in item.get("versions", []):
                 if "s" in version:
                     print(f"{item['name']} - {version.get('version', '?')} - Ok", flush=True)
                     ensure_install_manifest(version, item)
-                    continue
+                else:
+                    print(f"{item['name']} - {version.get('version', '?')} - {version['file']}", flush=True)
+                    tasks.append((item, version))
 
-                print(f"{item['name']} - {version.get('version', '?')} - {version['file']}", flush=True)
-                files_added += 1
+        result = analyze_remote_firmware_batch(tasks, max_workers=max_workers)
+        files_added = result["files_added"]
 
-                try:
-                    analyze_remote_firmware(version, item)
-                    if version.get("invalid"):
-                        print(f"{item['name']} - {version['version']} - Invalid ", flush=True)
-                    else:
-                        ensure_install_manifest(version, item)
-                except Exception as e:
-                    print(f"Erro ao processar {version['file']}: {e}")
+        for item, version in tasks:
+            if version.get("invalid"):
+                print(f"{item['name']} - {version['version']} - Invalid ", flush=True)
+            else:
+                ensure_install_manifest(version, item)
+
+        if result["errors"]:
+            print(f"\nAVISO: {len(result['errors'])} erros durante análise:", flush=True)
+            for err in result["errors"]:
+                print(f"  {err['item']} - {err['version']}: {err['error']}", flush=True)
 
         previous_output = ""
         if os.path.exists(output_path):
@@ -184,7 +188,17 @@ def process_jsons():
 
 
 if __name__ == "__main__":
-    changed = process_jsons()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--max-workers",
+        type=int,
+        default=4,
+        help="Number of parallel workers for firmware analysis (default: 4).",
+    )
+    args = parser.parse_args()
+
+    changed = process_jsons(max_workers=args.max_workers)
     github_output = os.environ.get("GITHUB_OUTPUT")
     if github_output:
         with open(github_output, "a", encoding="utf-8") as fh:

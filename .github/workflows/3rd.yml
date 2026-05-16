@@ -44,11 +44,15 @@ jobs:
 
 
         # this script writes CHANGED and creates the all_device_firmware.json file based on the individual JSON files created by the previous scripts
-        python ./3rd/create_json.py
+        if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
+          python ./3rd/create_json.py --max-workers=8
+        else
+          python ./3rd/create_json.py
+        fi
 
         # the next script writes FILES_ADDED checking m5burner updates
         if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
-          python ./v2/update_json.py --force-download-all
+          python ./v2/update_json.py --force-download-all --max-workers=8
         else
           python ./v2/update_json.py
         fi

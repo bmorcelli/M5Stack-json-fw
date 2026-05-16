@@ -2,6 +2,8 @@ import json
 import os
 import re
 import struct
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -533,3 +535,51 @@ def load_analysis_cache(path: str) -> Dict[str, Any]:
         return data if isinstance(data, dict) else {}
     except Exception:
         return {}
+
+
+_thread_local = threading.local()
+
+
+def _get_thread_session() -> Any:
+    if not hasattr(_thread_local, "session") or _thread_local.session is None:
+        if requests is None:
+            raise RuntimeError("requests is required for remote firmware analysis")
+        _thread_local.session = requests.Session()
+    return _thread_local.session
+
+
+def analyze_remote_firmware_batch(
+    tasks: List[Tuple[Dict[str, Any], Dict[str, Any]]],
+    max_workers: int = 4,
+) -> Dict[str, Any]:
+    """Analyze a list of (item, version) tuples in parallel using a thread pool.
+
+    Each worker reuses a thread-local requests.Session for connection pooling.
+    Returns a dict with keys: files_added (int), errors (list of dicts).
+    """
+    files_added = 0
+    errors: List[Dict[str, Any]] = []
+    counter_lock = threading.Lock()
+
+    def _worker(item: Dict[str, Any], version: Dict[str, Any]) -> None:
+        nonlocal files_added
+        try:
+            session = _get_thread_session()
+            analyze_remote_firmware(version, item, session=session)
+            if not version.get("invalid"):
+                with counter_lock:
+                    files_added += 1
+        except Exception as exc:
+            errors.append({
+                "item": item.get("name", "?"),
+                "version": version.get("version", "?"),
+                "file": version.get("file", "?"),
+                "error": str(exc),
+            })
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(_worker, item, version): (item, version) for item, version in tasks}
+        for future in as_completed(futures):
+            future.result()  # propagate unexpected exceptions from _worker
+
+    return {"files_added": files_added, "errors": errors}
