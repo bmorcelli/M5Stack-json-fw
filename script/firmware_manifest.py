@@ -473,11 +473,32 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
 
             # Step 2 (conditional): only download the full file if the file extends beyond
             # the declared partition boundary — meaning the real image size must be measured.
-            if reader.content_length and reader.content_length > source_offset + partition_size:
+            _FULL_FLASH_SIZES = {1 << 20, 1 << 21, 1 << 22, 1 << 23, 1 << 24}  # 1-16 MB
+            _is_full_flash = reader.content_length in _FULL_FLASH_SIZES
+            if reader.content_length and reader.content_length > source_offset + partition_size and not _is_full_flash:
                 full_data = reader.read_full()
                 def read_at(offset: int, size: int) -> bytes:
                     return full_data[offset:offset + size]
-                image_size = parse_esp_image_size(read_at, source_offset)
+                try:
+                    image_size = parse_esp_image_size(read_at, source_offset)
+                except FirmwareAnalysisError as exc:
+                    # Segment walk failed (e.g. full flash dump with fragmented data).
+                    # Fall back to partition_size as a safe upper bound.
+                    warnings.append(f"ESP segment parse failed, using partition_size: {exc}")
+                    image_size = partition_size
+            elif _is_full_flash:
+                # Full flash dump: download the whole file, walk ESP image segments to find
+                # the real firmware end (strips 0xFF padding), then align to 0x10000 so the
+                # launcher creates an optimally-sized partition without dead space.
+                full_data = reader.read_full()
+                def read_at(offset: int, size: int) -> bytes:  # type: ignore[no-redef]
+                    return full_data[offset:offset + size]
+                try:
+                    raw_image_size = parse_esp_image_size(read_at, source_offset)
+                    image_size = align_up(raw_image_size, 0x10000)
+                except FirmwareAnalysisError as exc:
+                    warnings.append(f"ESP segment parse failed on full flash, using partition_size: {exc}")
+                    image_size = partition_size
             else:
                 # File fits within partition: image_size = bytes from app start to file end.
                 image_size = max(reader.content_length - source_offset, 0) if reader.content_length else partition_size
@@ -524,7 +545,7 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
         if legacy_manifest:
             version["install"] = legacy_manifest
 
-    if "install" in version:
+    if version.get("install"):
         version["install"]["analysis"]["bytes_downloaded_for_analysis"] = reader.bytes_downloaded
         version["install"]["analysis"]["analyzed_at"] = now_iso()
         if reader.etag:
