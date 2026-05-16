@@ -132,7 +132,6 @@ def process_jsons(max_workers: int = 4):
                     print(f"{item['name']} - {version.get('version', '?')} - Ok", flush=True)
                     ensure_install_manifest(version, item)
                 else:
-                    print(f"{item['name']} - {version.get('version', '?')} - {version['file']}", flush=True)
                     tasks.append((item, version))
 
         result = analyze_remote_firmware_batch(tasks, max_workers=max_workers)

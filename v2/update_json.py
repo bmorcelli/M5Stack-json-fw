@@ -113,7 +113,6 @@ for item in data:
         if item.get("category") == "stickc" and "esp" not in item:
             needs_analysis = True
         if needs_analysis and "invalid" not in version:
-            print(f"{item['name']} - {version['version']} - {version['file']}", flush=True)
             tasks.append((item, version))
         else:
             print(f"{item['name']} - {version['version']} - Ok ", flush=True)

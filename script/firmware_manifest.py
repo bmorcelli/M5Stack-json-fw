@@ -82,43 +82,48 @@ class RangeReader:
         accept_ranges = headers.get("Accept-Ranges") or headers.get("accept-ranges") or ""
         self.accept_ranges = "bytes" in accept_ranges.lower()
 
-    def read(self, offset: int, size: int) -> bytes:
+    def read_header_chunk(self, size: int) -> bytes:
+        """Read the first `size` bytes using a Range request.
+
+        If the server ignores Range and returns 200, streams only up to `size`
+        bytes and closes the connection early to avoid downloading the full file.
+        Returns up to `size` bytes (may be less for small files).
+        """
         if size <= 0:
             return b""
-
-        headers = {"Range": f"bytes={offset}-{offset + size - 1}"}
+        headers = {"Range": f"bytes=0-{size - 1}"}
         response = self.session.get(self.url, headers=headers, stream=True, timeout=self.timeout)
         if response.status_code == 206:
             data = response.content
         elif response.status_code == 200:
             self._read_headers(response.headers)
-            data = self._slice_streaming_response(response, offset, size)
+            chunks: List[bytes] = []
+            collected = 0
+            for chunk in response.iter_content(chunk_size=65536):
+                if not chunk:
+                    continue
+                remaining = size - collected
+                chunks.append(chunk[:remaining])
+                collected += min(len(chunk), remaining)
+                if collected >= size:
+                    response.close()
+                    break
+            data = b"".join(chunks)
         else:
             response.raise_for_status()
             data = b""
-
         self.bytes_downloaded += len(data)
         return data
 
-    def _slice_streaming_response(self, response: Any, offset: int, size: int) -> bytes:
-        if not hasattr(response, "iter_content"):
-            return response.content[offset:offset + size]
-
-        end = offset + size
-        cursor = 0
-        chunks: List[bytes] = []
-        for chunk in response.iter_content(chunk_size=8192):
-            if not chunk:
-                continue
-            next_cursor = cursor + len(chunk)
-            if next_cursor > offset and cursor < end:
-                start_in_chunk = max(offset - cursor, 0)
-                end_in_chunk = min(end - cursor, len(chunk))
-                chunks.append(chunk[start_in_chunk:end_in_chunk])
-            cursor = next_cursor
-            if cursor >= end:
-                break
-        return b"".join(chunks)
+    def read_full(self) -> bytes:
+        """Download the complete file in a single GET request (no Range header)."""
+        response = self.session.get(self.url, stream=False, timeout=self.timeout)
+        response.raise_for_status()
+        if not self.content_length:
+            self._read_headers(response.headers)
+        data = response.content
+        self.bytes_downloaded += len(data)
+        return data
 
 
 def firmware_url(file_value: str) -> str:
@@ -363,6 +368,7 @@ def build_install_from_partition_table(
     read_at,
     content_length: int,
     warnings: List[str],
+    image_size: int = 0,
 ) -> Dict[str, Any]:
     app_parts = [p for p in partitions if p["type_id"] == PARTITION_TYPE_APP]
     if not app_parts:
@@ -371,7 +377,8 @@ def build_install_from_partition_table(
     source_offset = int(app_part["offset"])
     partition_size = int(app_part["size"])
 
-    image_size = parse_esp_image_size(read_at, source_offset)
+    if not image_size:
+        image_size = parse_esp_image_size(read_at, source_offset)
     if image_size > partition_size:
         warnings.append("ESP image is larger than declared app partition.")
         partition_size = image_size
@@ -428,40 +435,55 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
     reader.head()
     warnings: List[str] = []
 
+    # Step 1: download the first 0x9000 bytes for header + partition table analysis.
     try:
-        first_bytes = reader.read(0, 0x8400)
+        header_chunk = reader.read_header_chunk(0x9000)
     except Exception as exc:
         version["invalid"] = True
         version["analysis_error"] = f"Failed to read firmware header: {type(exc).__name__}: {exc}"
         if reader.content_length:
             version["Fs"] = reader.content_length
         return version
+
     if not reader.content_length:
         reader.content_length = int(version.get("Fs") or 0)
     if reader.content_length:
         version["Fs"] = reader.content_length
 
-    if len(first_bytes) <= 0x8160 and first_bytes[:1] != bytes([ESP_IMAGE_MAGIC]):
+    if len(header_chunk) < 4 and header_chunk[:1] != bytes([ESP_IMAGE_MAGIC]):
         version["invalid"] = True
         return version
 
     if "esp" not in item:
-        item["esp"] = detect_esp(first_bytes)
+        item["esp"] = detect_esp(header_chunk)
 
-    try:
-        table_data = first_bytes[0x8000:0x9000] if len(first_bytes) >= 0x9000 else reader.read(0x8000, 0x1000)
-    except Exception as exc:
-        table_data = b""
-        warnings.append(f"Failed to read partition table: {type(exc).__name__}: {exc}")
+    table_data = header_chunk[0x8000:0x9000] if len(header_chunk) >= 0x9000 else b""
     partitions = parse_partition_table(table_data, 0x8000)
-
-    def read_at(offset: int, size: int) -> bytes:
-        if 0 <= offset and offset + size <= len(first_bytes):
-            return first_bytes[offset:offset + size]
-        return reader.read(offset, size)
+    # Discard garbage: if app partition offset >= file size, there's no real table here.
+    if partitions and reader.content_length:
+        app_parts = [p for p in partitions if p["type_id"] == PARTITION_TYPE_APP]
+        if app_parts and int(app_parts[0]["offset"]) >= reader.content_length:
+            partitions = []
 
     try:
         if partitions:
+            app_part = next(p for p in partitions if p["type_id"] == PARTITION_TYPE_APP)
+            source_offset = int(app_part["offset"])
+            partition_size = int(app_part["size"])
+
+            # Step 2 (conditional): only download the full file if the file extends beyond
+            # the declared partition boundary — meaning the real image size must be measured.
+            if reader.content_length and reader.content_length > source_offset + partition_size:
+                full_data = reader.read_full()
+                def read_at(offset: int, size: int) -> bytes:
+                    return full_data[offset:offset + size]
+                image_size = parse_esp_image_size(read_at, source_offset)
+            else:
+                # File fits within partition: image_size = bytes from app start to file end.
+                image_size = max(reader.content_length - source_offset, 0) if reader.content_length else partition_size
+                def read_at(offset: int, size: int) -> bytes:  # type: ignore[no-redef]
+                    return header_chunk[offset:offset + size]
+
             apply_legacy_fields_from_partitions(version, partitions, reader.content_length)
             version["install"] = build_install_from_partition_table(
                 version,
@@ -470,17 +492,18 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
                 read_at,
                 reader.content_length,
                 warnings,
+                image_size=image_size,
             )
         else:
-            source_offset = int(version.get("ao") or 0)
-            if first_bytes[:1] == bytes([ESP_IMAGE_MAGIC]):
+            # No partition table — app-only or merged binary without table at 0x8000.
+            if header_chunk[:1] == bytes([ESP_IMAGE_MAGIC]):
                 source_offset = 0
                 version["nb"] = True
-            elif read_at(0x10000, 1) == bytes([ESP_IMAGE_MAGIC]):
+            else:
                 source_offset = 0x10000
 
+            image_size = max(reader.content_length - source_offset, 0) if reader.content_length else 0
             version["ao"] = source_offset
-            image_size = parse_esp_image_size(read_at, source_offset)
             version["as"] = image_size
             version["s"] = int(version.get("s") or 0)
             version["f"] = int(version.get("f") or 0)
@@ -488,12 +511,12 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
             version["install"] = build_install_from_legacy(
                 version,
                 item,
-                warnings=["No partition table found; manifest generated from detected app and legacy data."],
+                warnings=["No partition table found; manifest generated from file size and detected app offset."],
             )
             if version["install"]:
                 version["install"]["app"]["image_size"] = image_size
                 version["install"]["partitions"][0]["copy_size"] = image_size
-                version["install"]["analysis"]["method"] = "range"
+                version["install"]["analysis"]["method"] = "file_size"
                 version["install"]["analysis"]["confidence"] = "partial"
     except Exception as exc:
         warnings.append(str(exc))
@@ -559,20 +582,31 @@ def analyze_remote_firmware_batch(
     """
     files_added = 0
     errors: List[Dict[str, Any]] = []
+    done = 0
+    total = len(tasks)
     counter_lock = threading.Lock()
 
     def _worker(item: Dict[str, Any], version: Dict[str, Any]) -> None:
-        nonlocal files_added
+        nonlocal files_added, done
+        name = item.get("name", "?")
+        ver = version.get("version", "?")
+        print(f"[>>>] {name} - {ver}", flush=True)
         try:
             session = _get_thread_session()
             analyze_remote_firmware(version, item, session=session)
-            if not version.get("invalid"):
-                with counter_lock:
+            with counter_lock:
+                done += 1
+                if not version.get("invalid"):
                     files_added += 1
+            method = version.get("install", {}).get("analysis", {}).get("method", "?") if "install" in version else "invalid"
+            print(f"[{done}/{total}] {name} - {ver} - {method}", flush=True)
         except Exception as exc:
+            with counter_lock:
+                done += 1
+            print(f"[{done}/{total}] {name} - {ver} - ERRO: {exc}", flush=True)
             errors.append({
-                "item": item.get("name", "?"),
-                "version": version.get("version", "?"),
+                "item": name,
+                "version": ver,
                 "file": version.get("file", "?"),
                 "error": str(exc),
             })
