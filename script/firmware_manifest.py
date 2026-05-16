@@ -426,7 +426,14 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
     reader.head()
     warnings: List[str] = []
 
-    first_bytes = reader.read(0, 0x8400)
+    try:
+        first_bytes = reader.read(0, 0x8400)
+    except Exception as exc:
+        version["invalid"] = True
+        version["analysis_error"] = f"Failed to read firmware header: {type(exc).__name__}: {exc}"
+        if reader.content_length:
+            version["Fs"] = reader.content_length
+        return version
     if not reader.content_length:
         reader.content_length = int(version.get("Fs") or 0)
     if reader.content_length:
@@ -439,7 +446,11 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
     if "esp" not in item:
         item["esp"] = detect_esp(first_bytes)
 
-    table_data = first_bytes[0x8000:0x9000] if len(first_bytes) >= 0x9000 else reader.read(0x8000, 0x1000)
+    try:
+        table_data = first_bytes[0x8000:0x9000] if len(first_bytes) >= 0x9000 else reader.read(0x8000, 0x1000)
+    except Exception as exc:
+        table_data = b""
+        warnings.append(f"Failed to read partition table: {type(exc).__name__}: {exc}")
     partitions = parse_partition_table(table_data, 0x8000)
 
     def read_at(offset: int, size: int) -> bytes:

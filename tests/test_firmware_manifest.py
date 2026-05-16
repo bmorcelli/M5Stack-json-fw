@@ -50,6 +50,14 @@ class FakeSession:
         return FakeResponse(200, self.content, {"Content-Length": str(len(self.content))})
 
 
+class NotFoundSession:
+    def head(self, url, allow_redirects=True, timeout=20):
+        return FakeResponse(404)
+
+    def get(self, url, headers=None, stream=True, timeout=20):
+        return FakeResponse(404)
+
+
 def esp_image(segment_data=b"ABCD", hash_appended=False):
     header = bytearray(8)
     header[0] = 0xE9
@@ -140,6 +148,16 @@ class FirmwareManifestTests(unittest.TestCase):
         self.assertEqual(version["install"]["analysis"]["method"], "partition_table")
         self.assertEqual(version["install"]["app"]["image_size"], 32)
         self.assertEqual(version["install"]["app"]["partition_size"], 0x200000)
+
+    def test_analyze_remote_404_marks_invalid(self):
+        version = {"version": "1", "file": "missing.bin"}
+        item = {"category": "cardputer"}
+
+        analyze_remote_firmware(version, item, session=NotFoundSession())
+
+        self.assertTrue(version["invalid"])
+        self.assertIn("analysis_error", version)
+        self.assertNotIn("install", version)
 
 
 if __name__ == "__main__":
