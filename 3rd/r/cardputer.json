@@ -24,7 +24,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3916368,
-                        "partition_size": 3916368,
+                        "partition_size": 5111808,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -34,20 +34,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3916368,
+                            "size": 5111808,
                             "source_offset": 65536,
                             "copy_size": 3916368,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3145728,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/d2a2a94f-c187-424b-ad3d-0fc00ef92a02?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A29Z&rscd=attachment%3B+filename%3DBruce-m5stack-cardputer.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A51%3A25Z&ske=2026-05-16T15%3A51%3A29Z&sks=b&skv=2018-11-09&sig=toZFnkq14D%2BYR5WFMJhBJlFe3k1RSulBYBGRzjhWh0E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwOCwibmJmIjoxNzc4OTQzNTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._Q5MXkqU4Oj3dh5TjVV6XoGSXHb-dRMKpPIGE7amEKM&response-content-disposition=attachment%3B%20filename%3DBruce-m5stack-cardputer.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:29Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:13Z",
                         "etag": "\"0x8DEB083E873416C\"",
                         "last_modified": "Wed, 13 May 2026 00:09:32 GMT"
                     }

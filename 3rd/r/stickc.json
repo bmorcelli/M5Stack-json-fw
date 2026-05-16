@@ -24,7 +24,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3613648,
-                        "partition_size": 3613648,
+                        "partition_size": 5111808,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -34,20 +34,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3613648,
+                            "size": 5111808,
                             "source_offset": 65536,
                             "copy_size": 3613648,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3145728,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/513dcb41-1817-42fa-a128-249a309b6a78?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A42Z&rscd=attachment%3B+filename%3DBruce-m5stack-cplus2.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A40Z&ske=2026-05-16T15%3A49%3A42Z&sks=b&skv=2018-11-09&sig=xfcOYYmwm93rmm7RmrHYTq5%2FDn%2FdTrRQl6fGml3038Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzOSwibmJmIjoxNzc4OTQzNTM5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.onS3CVwz4HRS8x1wQ-soPWodeuXiGg28BdBQrRd7PI0&response-content-disposition=attachment%3B%20filename%3DBruce-m5stack-cplus2.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:00Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DEB083E86FE9D0\"",
                         "last_modified": "Wed, 13 May 2026 00:09:32 GMT"
                     }
@@ -83,7 +91,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 4115344,
-                        "partition_size": 4115344,
+                        "partition_size": 5111808,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -93,20 +101,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 4115344,
+                            "size": 5111808,
                             "source_offset": 65536,
                             "copy_size": 4115344,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3145728,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/74136342-9343-45fa-b84b-7ff88ce1c49d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A58%3A26Z&rscd=attachment%3B+filename%3DBruce-m5stack-sticks3.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A58%3A06Z&ske=2026-05-16T15%3A58%3A26Z&sks=b&skv=2018-11-09&sig=XjTkNiK3gcOXao3guopMYXtB99L8N4cdTXFliAgkoiU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzOSwibmJmIjoxNzc4OTQzNTM5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.onS3CVwz4HRS8x1wQ-soPWodeuXiGg28BdBQrRd7PI0&response-content-disposition=attachment%3B%20filename%3DBruce-m5stack-sticks3.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:00Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DEB083E876BFEE\"",
                         "last_modified": "Wed, 13 May 2026 00:09:32 GMT"
                     }

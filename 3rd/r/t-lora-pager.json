@@ -24,7 +24,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 4170880,
-                        "partition_size": 4170880,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -34,20 +34,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 4170880,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 4170880,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/2176c2a3-5c6d-44ac-9495-0669a756d81d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A33%3A59Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A33%3A41Z&ske=2026-05-16T15%3A33%3A59Z&sks=b&skv=2018-11-09&sig=Ue2SGIPLqwJPB%2B4qnu0yZaUahZQxnPOyo2kvm8mjxE0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DE61C3E5F2EDAA\"",
                         "last_modified": "Sun, 01 Feb 2026 18:58:33 GMT"
                     }
@@ -70,7 +78,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 4169616,
-                        "partition_size": 4169616,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -80,20 +88,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 4169616,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 4169616,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/511efec9-6fb4-49cc-ad90-4c3095f84e18?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A54%3A08Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A53%3A52Z&ske=2026-05-16T15%3A54%3A08Z&sks=b&skv=2018-11-09&sig=lhLIxTUCzj6DTJSvN2vRYwlOnugd2MQnpCiuXDkCroE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DE4334D6E45702\"",
                         "last_modified": "Wed, 24 Dec 2025 21:38:55 GMT"
                     }
@@ -116,7 +132,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3985904,
-                        "partition_size": 3985904,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -126,20 +142,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3985904,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3985904,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/7edc9610-670b-4255-86ff-eddeb56a7ebc?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A48%3A08Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A47%3A44Z&ske=2026-05-16T15%3A48%3A08Z&sks=b&skv=2018-11-09&sig=lS09bCSHSGZpQfUN82TT4tvH8LsHZd9W3UC5v5sGi3Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DE31AC0C27A089\"",
                         "last_modified": "Tue, 02 Dec 2025 14:06:54 GMT"
                     }
@@ -162,7 +186,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3958272,
-                        "partition_size": 3958272,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -172,20 +196,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3958272,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3958272,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/763e55ad-de76-4302-992f-70827f85adda?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A57%3A40Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A56%3A51Z&ske=2026-05-16T15%3A57%3A40Z&sks=b&skv=2018-11-09&sig=365l%2FCsHxYpJawUkw%2FB%2BEFhRJI6fk94kCpp9iQ6k0As%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DDFFAF4B178D66\"",
                         "last_modified": "Mon, 29 Sep 2025 23:24:10 GMT"
                     }
@@ -208,7 +240,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3955520,
-                        "partition_size": 3955520,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -218,20 +250,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3955520,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3955520,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/571e0bce-0282-4a4a-88aa-4fcb8d5557ed?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A55%3A20Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A55%3A12Z&ske=2026-05-16T15%3A55%3A20Z&sks=b&skv=2018-11-09&sig=lFjow27v3g28a22IrtqUqNX%2BymDF%2BHBLdSIXpW5DHBY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DDEC80E43F7813\"",
                         "last_modified": "Fri, 05 Sep 2025 13:34:08 GMT"
                     }
@@ -265,7 +305,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 4028144,
-                        "partition_size": 4028144,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -275,20 +315,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 4028144,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 4028144,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/0fba6439-0053-47be-8c16-84463478ba1c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A36%3A56Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A36%3A51Z&ske=2026-05-16T15%3A36%3A56Z&sks=b&skv=2018-11-09&sig=G3nzk%2FHcTvu1YToP8tTCemzpyfpETtA68%2BBVizTJDQ4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DEB083E87ADA0D\"",
                         "last_modified": "Wed, 13 May 2026 00:09:32 GMT"
                     }
@@ -308,21 +356,14 @@
                 "published_at": "2026-02-19",
                 "file": "https://raw.githubusercontent.com/Xinyuan-LilyGO/LilyGoLib/a6b9e2601e3f83d8387dae9a78c0ab40b68aa18e/firmware/factory.tlora.pager.sx1262.20251219.bin",
                 "Fs": 16777216,
-                "s": 0,
-                "f": 1,
-                "f2": 0,
-                "ao": 65536,
-                "as": 4194304,
-                "fo": 8454144,
-                "fs": 8257536,
                 "install": {
                     "schema": 1,
-                    "format": "merged",
+                    "format": "app",
                     "target": "t-lora-pager",
                     "app": {
-                        "source_offset": 65536,
-                        "image_size": 4194304,
-                        "partition_size": 4194304,
+                        "source_offset": 0,
+                        "image_size": 16777216,
+                        "partition_size": 16777216,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -332,19 +373,9 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 65536,
-                            "copy_size": 4194304,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "sys",
-                            "role": "fat",
-                            "size": 8257536,
-                            "source_offset": 8454144,
-                            "copy_size": 8257536,
+                            "size": 16777216,
+                            "source_offset": 0,
+                            "copy_size": 16777216,
                             "required": true
                         }
                     ],
@@ -352,10 +383,10 @@
                         "method": "legacy_fields",
                         "confidence": "legacy",
                         "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/Xinyuan-LilyGO/LilyGoLib/a6b9e2601e3f83d8387dae9a78c0ab40b68aa18e/firmware/factory.tlora.pager.sx1262.20251219.bin"
+                            "Truncated ESP segment header"
                         ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "bytes_downloaded_for_analysis": 16814080,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "W/\"7a67359f8dff0b3f33ae34901c5558b6c77ec941191f798ab358269b0600ff1c\""
                     }
                 }
@@ -365,21 +396,14 @@
                 "published_at": "2026-02-19",
                 "file": "https://raw.githubusercontent.com/Xinyuan-LilyGO/LilyGoLib/a6b9e2601e3f83d8387dae9a78c0ab40b68aa18e/firmware/factory.tlora.pager.lr1121.20251219.bin",
                 "Fs": 16777216,
-                "s": 0,
-                "f": 1,
-                "f2": 0,
-                "ao": 65536,
-                "as": 4194304,
-                "fo": 8454144,
-                "fs": 8257536,
                 "install": {
                     "schema": 1,
-                    "format": "merged",
+                    "format": "app",
                     "target": "t-lora-pager",
                     "app": {
-                        "source_offset": 65536,
-                        "image_size": 4194304,
-                        "partition_size": 4194304,
+                        "source_offset": 0,
+                        "image_size": 16777216,
+                        "partition_size": 16777216,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -389,19 +413,9 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 65536,
-                            "copy_size": 4194304,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "sys",
-                            "role": "fat",
-                            "size": 8257536,
-                            "source_offset": 8454144,
-                            "copy_size": 8257536,
+                            "size": 16777216,
+                            "source_offset": 0,
+                            "copy_size": 16777216,
                             "required": true
                         }
                     ],
@@ -409,10 +423,10 @@
                         "method": "legacy_fields",
                         "confidence": "legacy",
                         "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/Xinyuan-LilyGO/LilyGoLib/a6b9e2601e3f83d8387dae9a78c0ab40b68aa18e/firmware/factory.tlora.pager.lr1121.20251219.bin"
+                            "Truncated ESP segment header"
                         ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:23Z",
+                        "bytes_downloaded_for_analysis": 16814080,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "W/\"9ace4157f68b82023a2f49503ce79877d14c8f4258dab8a42e8bee7428564500\""
                     }
                 }
@@ -447,7 +461,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1455184,
-                        "partition_size": 1455184,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -457,20 +471,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1455184,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1455184,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/5441710f-5895-4244-8c7e-b428f3721d96?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A57Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A04Z&ske=2026-05-16T15%3A39%3A57Z&sks=b&skv=2018-11-09&sig=E3C8ztfn2l8xWz2TpopAQYonHTzXPfR4R0OJqfOE3Qk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DEAF7DD6E15EFE\"",
                         "last_modified": "Mon, 11 May 2026 16:53:34 GMT"
                     }
@@ -500,7 +542,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1455184,
-                        "partition_size": 1455184,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -510,20 +552,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1455184,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1455184,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/d27f8482-187d-45c8-9757-675cbc2e0182?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A46Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A28Z&ske=2026-05-16T15%3A39%3A46Z&sks=b&skv=2018-11-09&sig=21WOdCbQKGZEOqAGezJplm6EfzojXvCLCOUIiug%2BMUg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DEAFA6597A6C7F\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
                     }
@@ -546,7 +616,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1440000,
-                        "partition_size": 1440000,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -556,20 +626,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1440000,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1440000,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/a0892823-b3c5-4627-8109-26d563be3c08?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A47%3A16Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A47%3A05Z&ske=2026-05-16T15%3A47%3A16Z&sks=b&skv=2018-11-09&sig=gG4hgtJtGBZ3uyaLpdhSJxkWPNQ7PyeCKp%2F0oE6XJvY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DE948BF1FC0816\"",
                         "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
@@ -592,7 +690,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1435696,
-                        "partition_size": 1435696,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -602,20 +700,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1435696,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1435696,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/04259d6b-1000-4cd6-bb6a-92101a205c32?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A44%3A33Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A44%3A24Z&ske=2026-05-16T15%3A44%3A33Z&sks=b&skv=2018-11-09&sig=i%2FMSxCreqMSgb3oBEgZiEA6J5kYeFDAbBO3vpPncC1A%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DE80EE6432DBEF\"",
                         "last_modified": "Fri, 13 Mar 2026 10:50:50 GMT"
                     }
@@ -638,7 +764,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1439520,
-                        "partition_size": 1439520,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -648,20 +774,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1439520,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1439520,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/7f089cc5-5550-4b85-b3c5-ad859393f985?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A53%3A50Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A53%3A04Z&ske=2026-05-16T15%3A53%3A50Z&sks=b&skv=2018-11-09&sig=Kr4KCyxkubdQ6WwJinS12jN%2B7J0I4KQSYjKaB%2Fcw60g%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:11Z",
                         "etag": "\"0x8DE628D27FA8B5A\"",
                         "last_modified": "Mon, 02 Feb 2026 18:59:13 GMT"
                     }
@@ -684,7 +838,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1439520,
-                        "partition_size": 1439520,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -694,20 +848,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1439520,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1439520,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/ebda10b3-36fc-418c-ac85-1f46b928d129?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A44%3A12Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A26Z&ske=2026-05-16T15%3A44%3A12Z&sks=b&skv=2018-11-09&sig=SrhXZtPmodDx25bVIcUXhTNIs%2BEn5M3uJm8s31dBKgs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE52ADF94FE465\"",
                         "last_modified": "Tue, 13 Jan 2026 14:13:49 GMT"
                     }
@@ -730,7 +912,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1437856,
-                        "partition_size": 1437856,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -740,20 +922,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1437856,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1437856,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/98db66e6-6dfb-4faa-b589-b2df3b9d52f9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A03Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A50%3A44Z&ske=2026-05-16T15%3A51%3A03Z&sks=b&skv=2018-11-09&sig=hDPHCTLXUKampRfNshmorzOihcN7QC%2FjRoOOUfrvlCo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwMywibmJmIjoxNzc4OTQzNTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._oEk_EbUrQDW2B-BEFerdVgR_b1fM1ndnlCK1tVCHhE&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE2AFD02F53EEC\"",
                         "last_modified": "Mon, 24 Nov 2025 01:58:49 GMT"
                     }
@@ -776,7 +986,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1436752,
-                        "partition_size": 1436752,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -786,20 +996,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1436752,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1436752,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/34d9ed11-6c17-4367-a740-9f1c37d59b77?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A28Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A51%3A22Z&ske=2026-05-16T15%3A51%3A28Z&sks=b&skv=2018-11-09&sig=%2B1WzAKN9mbPFeALEwuZ5BHx%2Bu%2B2v5pclA780EGyF37Q%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE1C393845692F\"",
                         "last_modified": "Wed, 05 Nov 2025 07:02:01 GMT"
                     }
@@ -822,7 +1060,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1430016,
-                        "partition_size": 1430016,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -832,20 +1070,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1430016,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1430016,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/02f83253-6d07-435d-b790-195bec3effaf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A03Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-lora-pager.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A50%3A50Z&ske=2026-05-16T15%3A51%3A03Z&sks=b&skv=2018-11-09&sig=d%2FB8LxGdRbNA7YRqwzFCw%2BBxH2cu0KTWcrYNhNjLwzg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-lora-pager.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE0FE873D46623\"",
                         "last_modified": "Mon, 20 Oct 2025 14:53:38 GMT"
                     }
@@ -877,7 +1143,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1474416,
-                        "partition_size": 1474416,
+                        "partition_size": 2424832,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -887,20 +1153,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1474416,
+                            "size": 2424832,
                             "source_offset": 65536,
                             "copy_size": 1474416,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.11.60ec05e/firmware-tlora-c6-2.6.11.60ec05e.bin"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "W/\"0fc7c3c647c1b2c40e865e8fb5c2507e9e3bc02f361d167eec2ca136495c23f2\""
                     }
                 }
@@ -922,7 +1196,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2281872,
-                        "partition_size": 2281872,
+                        "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -932,20 +1206,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2281872,
+                            "size": 6553600,
                             "source_offset": 65536,
                             "copy_size": 2281872,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.11.ee68575/firmware-tlora-pager-2.7.11.ee68575.bin"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "W/\"15dd7e3edcebda6490287a5cf7365e520e11cf8a87c87730b92e4d8b4aa52f34\""
                     }
                 }
@@ -953,7 +1235,7 @@
         ],
         "fid": "CFWU6X8FRVPCDIS69PR2IBQRNURFU18N",
         "category": "t-lora-pager",
-        "esp": "32"
+        "esp": "s3"
     },
     {
         "name": "Meshtastic Fancy UI",
@@ -966,6 +1248,10 @@
                 "Fs": 1474416,
                 "nb": true,
                 "ao": 0,
+                "as": 1474416,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -990,13 +1276,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.11.60ec05e/firmware-tlora-c6-2.6.11.60ec05e-update.bin"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "W/\"c6331967293c88ee9ed53398685171f50bc4c9375576555d01f56b63aaa19e3a\""
                     }
                 }
@@ -1008,6 +1294,10 @@
                 "Fs": 2281872,
                 "nb": true,
                 "ao": 0,
+                "as": 2281872,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1032,13 +1322,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.11.ee68575/firmware-tlora-pager-2.7.11.ee68575-update.bin"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:24Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "W/\"039d59e99797ee6ad3371f2ccdccc6ee70c1b5bd8a7db8cc206685d4a47c2c94\""
                     }
                 }
@@ -1073,7 +1363,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3669472,
-                        "partition_size": 3669472,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1083,20 +1373,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3669472,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3669472,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/a33bfacd-8035-48ab-9be4-3f349cd0e6eb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A53%3A13Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A52%3A25Z&ske=2026-05-16T15%3A53%3A13Z&sks=b&skv=2018-11-09&sig=HMYZx2Ue5v7HQaQKf5KNZ8n3mqbBse3me1jEI2BCqE8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DEAF850A6ED4C6\"",
                         "last_modified": "Mon, 11 May 2026 17:45:07 GMT"
                     }
@@ -1119,7 +1417,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3649584,
-                        "partition_size": 3649584,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1129,20 +1427,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3649584,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3649584,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/5dc3f785-b0c0-4fde-b134-5dc1ba173206?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A50%3A34Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A50%3A32Z&ske=2026-05-16T15%3A50%3A34Z&sks=b&skv=2018-11-09&sig=S20OxxRDy5C4cqew3pYxFrluTeukC6Mv%2BvzC%2B0ybaCE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DEAD964CD0A01D\"",
                         "last_modified": "Sat, 09 May 2026 06:43:37 GMT"
                     }
@@ -1165,7 +1471,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3649120,
-                        "partition_size": 3649120,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1175,20 +1481,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3649120,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3649120,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/d8fd4861-b830-4005-a896-b82f1e331d76?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A57%3A15Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A57%3A01Z&ske=2026-05-16T15%3A57%3A15Z&sks=b&skv=2018-11-09&sig=8i0PiWsToR2o%2Bj%2BT07qBjKntUDJrrAfkSR5YoQPYbxs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DEA6EBD3935236\"",
                         "last_modified": "Thu, 30 Apr 2026 19:08:13 GMT"
                     }
@@ -1211,7 +1525,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3638448,
-                        "partition_size": 3638448,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1221,20 +1535,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3638448,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3638448,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/9be06647-6966-446d-9b52-be1cb4db9a3c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A43%3A33Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A14Z&ske=2026-05-16T15%3A43%3A33Z&sks=b&skv=2018-11-09&sig=c8EK0K07RV73MvARbnKUtGpEkow6gkAcukssfmbFiqw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DEA079F1F3BB27\"",
                         "last_modified": "Wed, 22 Apr 2026 14:17:54 GMT"
                     }
@@ -1257,7 +1579,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3644640,
-                        "partition_size": 3644640,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1267,20 +1589,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3644640,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3644640,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/85b92fe2-2bbd-4739-afd6-0b2d88cd224c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A36Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A51%3A35Z&ske=2026-05-16T15%3A51%3A36Z&sks=b&skv=2018-11-09&sig=8gyZ8ttVs2M6dU2RFRFTjct%2B2S6jfxDBaSM7BFdQjXA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE9F832BCC9ED9\"",
                         "last_modified": "Tue, 21 Apr 2026 08:51:25 GMT"
                     }
@@ -1303,7 +1633,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3643792,
-                        "partition_size": 3643792,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1313,20 +1643,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3643792,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3643792,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/98acb230-c28b-4cf3-a212-e47f3090ae1a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A50%3A57Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A50%3A47Z&ske=2026-05-16T15%3A50%3A57Z&sks=b&skv=2018-11-09&sig=18RviZz1XedfhblPFTYjvzZ7dsmQCpDigNE0OKjt01w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE9F720512653F\"",
                         "last_modified": "Tue, 21 Apr 2026 06:48:39 GMT"
                     }
@@ -1349,7 +1687,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3594080,
-                        "partition_size": 3594080,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1359,20 +1697,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3594080,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3594080,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/2c3d7663-ea01-4ada-b152-cb5e655320a4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A52%3A58Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A52%3A09Z&ske=2026-05-16T15%3A52%3A58Z&sks=b&skv=2018-11-09&sig=tXpUmigkNJ1hjoeFhtlTqUWzP30cf0V4QIXNvmXIn08%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNCwibmJmIjoxNzc4OTQzNTA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73pnQE-Qc9aaVTuQz2licqL_YwtxRqo_CIk0TeXL6d8&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:28Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE9F15A979E7CE\"",
                         "last_modified": "Mon, 20 Apr 2026 19:47:31 GMT"
                     }
@@ -1395,7 +1741,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3775456,
-                        "partition_size": 3775456,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1405,20 +1751,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3775456,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3775456,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/23816ef8-5ce3-48d3-a84d-c283abd944aa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A58%3A18Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A58%3A06Z&ske=2026-05-16T15%3A58%3A18Z&sks=b&skv=2018-11-09&sig=NZnteaQfp6hqYYe4bwCk89p2HpiDVzgXRwJm5DY%2F2b4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNSwibmJmIjoxNzc4OTQzNTA1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J6E730GWUULEJ-6Vk4f8osYSOI7lUU0k0e1gj0Yimws&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:25Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE9EB3E5A0CDB6\"",
                         "last_modified": "Mon, 20 Apr 2026 08:07:42 GMT"
                     }
@@ -1441,7 +1795,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3761456,
-                        "partition_size": 3761456,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1451,20 +1805,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3761456,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3761456,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/aa7613dd-6cfe-4044-a5b7-911208199382?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A44%3A04Z&rscd=attachment%3B+filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A13Z&ske=2026-05-16T15%3A44%3A04Z&sks=b&skv=2018-11-09&sig=6Cva3AD6pBGX%2BRNTdRUQlO00iBU8ywoiuaEWrT7H0Bk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgwNSwibmJmIjoxNzc4OTQzNTA1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J6E730GWUULEJ-6Vk4f8osYSOI7lUU0k0e1gj0Yimws&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tlora-pager-sx1262-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:26Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:12Z",
                         "etag": "\"0x8DE9E16B637C5DE\"",
                         "last_modified": "Sun, 19 Apr 2026 13:22:31 GMT"
                     }

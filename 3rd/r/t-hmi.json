@@ -24,7 +24,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3691472,
-                        "partition_size": 3691472,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -34,20 +34,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3691472,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3691472,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/c040eb9a-5985-4a48-a785-da4546920d0a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A57%3A19Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A57%3A00Z&ske=2026-05-16T15%3A57%3A19Z&sks=b&skv=2018-11-09&sig=ROwJq4rJpW48R75gjaz1Kpli83voNoJP%2BJcZvYIve60%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NiwibmJmIjoxNzc4OTQzNTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J9aD5Oyh6GMyvi-gYyNpS7lGaXZHQ3QvyLSrt6x389I&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:29Z",
                         "etag": "\"0x8DE61C3E5FB48B6\"",
                         "last_modified": "Sun, 01 Feb 2026 18:58:33 GMT"
                     }
@@ -70,7 +78,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3709792,
-                        "partition_size": 3709792,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -80,20 +88,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3709792,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3709792,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/57df9d32-2397-4672-86dd-238e3d4e01be?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A43%3A34Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A42%3A54Z&ske=2026-05-16T15%3A43%3A34Z&sks=b&skv=2018-11-09&sig=wC3jzisXLGO3ywnMeLhrxGuAJ3SbnqcdIECdqOugS8Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NiwibmJmIjoxNzc4OTQzNTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J9aD5Oyh6GMyvi-gYyNpS7lGaXZHQ3QvyLSrt6x389I&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:29Z",
                         "etag": "\"0x8DE4334D6DDA7BF\"",
                         "last_modified": "Wed, 24 Dec 2025 21:38:55 GMT"
                     }
@@ -116,7 +132,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3552192,
-                        "partition_size": 3552192,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -126,20 +142,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3552192,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3552192,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/04f56ff7-c757-40a6-8dd7-cb8a4707c9d9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A37%3A53Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A37%3A41Z&ske=2026-05-16T15%3A37%3A53Z&sks=b&skv=2018-11-09&sig=m%2F9nkhABZOIsGhQd5ZcPPtmCGe%2FcjI4ibXhyb0%2B%2FQBY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NiwibmJmIjoxNzc4OTQzNTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J9aD5Oyh6GMyvi-gYyNpS7lGaXZHQ3QvyLSrt6x389I&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:29Z",
                         "etag": "\"0x8DE31AC0C098C09\"",
                         "last_modified": "Tue, 02 Dec 2025 14:06:53 GMT"
                     }
@@ -162,7 +186,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3535712,
-                        "partition_size": 3535712,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -172,20 +196,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3535712,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3535712,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/ec8cc68d-9f19-47be-854d-70ca1357ee1b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A55%3A09Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A54%3A41Z&ske=2026-05-16T15%3A55%3A09Z&sks=b&skv=2018-11-09&sig=FJv2SrfpjOtQadbU6kcQO9RBAgpk6B%2BBnvUEoPuAb64%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NiwibmJmIjoxNzc4OTQzNTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J9aD5Oyh6GMyvi-gYyNpS7lGaXZHQ3QvyLSrt6x389I&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:29Z",
                         "etag": "\"0x8DDFFAF4B03CD7D\"",
                         "last_modified": "Mon, 29 Sep 2025 23:24:09 GMT"
                     }
@@ -208,7 +240,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3533008,
-                        "partition_size": 3533008,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -218,20 +250,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3533008,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3533008,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/af4062b4-2624-48c7-89f5-3971eb0471a7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A57Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A45Z&ske=2026-05-16T15%3A49%3A57Z&sks=b&skv=2018-11-09&sig=OJ%2Fw1YIiXt6yQpu99G9rZdTRAOAQnuyaKRUiEjPsaMM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NiwibmJmIjoxNzc4OTQzNTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J9aD5Oyh6GMyvi-gYyNpS7lGaXZHQ3QvyLSrt6x389I&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:29Z",
                         "etag": "\"0x8DDEC80E3F94841\"",
                         "last_modified": "Fri, 05 Sep 2025 13:34:08 GMT"
                     }
@@ -265,7 +305,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3566848,
-                        "partition_size": 3566848,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -275,20 +315,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3566848,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3566848,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/1d34cd6d-7d52-4053-adf7-b09261651b91?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A55%3A46Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A55%3A00Z&ske=2026-05-16T15%3A55%3A46Z&sks=b&skv=2018-11-09&sig=yTBSbLrXqAvPQqCDvm6Zibw3HguS8RRixh4QLrRN2YY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NiwibmJmIjoxNzc4OTQzNTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J9aD5Oyh6GMyvi-gYyNpS7lGaXZHQ3QvyLSrt6x389I&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:29Z",
                         "etag": "\"0x8DEB083E863000B\"",
                         "last_modified": "Wed, 13 May 2026 00:09:31 GMT"
                     }
@@ -341,7 +389,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469472,
-                        "partition_size": 1469472,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -351,20 +399,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469472,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469472,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/56a890c9-338d-4609-80b1-a38993107360?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A42%3A42Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A42%3A19Z&ske=2026-05-16T15%3A42%3A42Z&sks=b&skv=2018-11-09&sig=bof0691RXereiW6XFSQI%2FCVqF99w%2FHvzZHD4SDi5Gv0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NiwibmJmIjoxNzc4OTQzNTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.J9aD5Oyh6GMyvi-gYyNpS7lGaXZHQ3QvyLSrt6x389I&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:29Z",
                         "etag": "\"0x8DEAF7DD6F104C8\"",
                         "last_modified": "Mon, 11 May 2026 16:53:34 GMT"
                     }
@@ -394,7 +470,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469472,
-                        "partition_size": 1469472,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -404,20 +480,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469472,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469472,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/74ee135f-ddf4-4900-b4f2-2bb3e9f28c41?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A59%3A03Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A58%3A54Z&ske=2026-05-16T15%3A59%3A03Z&sks=b&skv=2018-11-09&sig=9GJdfVj8jxVnW%2BW5Pk51ySCOxppTVOp2hdN5FJbAg0o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DEAFA65976C71C\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
                     }
@@ -440,7 +544,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1456160,
-                        "partition_size": 1456160,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -450,20 +554,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1456160,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1456160,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/b9bc49d2-e885-45d4-bdb0-a1ebf6edfe06?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A35%3A21Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A34%3A44Z&ske=2026-05-16T15%3A35%3A21Z&sks=b&skv=2018-11-09&sig=6UT%2B5za3iU4nsPnTDmc%2BTgz00zicbIA3Ywv61YMyFzk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DE948BF2041559\"",
                         "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
@@ -486,7 +618,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1452080,
-                        "partition_size": 1452080,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -496,20 +628,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1452080,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1452080,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/432aafe1-e362-469f-a8a8-fbbeccab5250?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A45%3A35Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A45%3A25Z&ske=2026-05-16T15%3A45%3A35Z&sks=b&skv=2018-11-09&sig=YjIoFZqyRv3ban0ciWl2ilfaLgekl%2Bc6fyIZneTh6Aw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DE80EE643302D0\"",
                         "last_modified": "Fri, 13 Mar 2026 10:50:50 GMT"
                     }
@@ -532,7 +692,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1455840,
-                        "partition_size": 1455840,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -542,20 +702,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1455840,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1455840,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/14d418ff-370f-4f39-ba09-61f41bb782bf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A50%3A31Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A37Z&ske=2026-05-16T15%3A50%3A31Z&sks=b&skv=2018-11-09&sig=MwF7wT2wMACl9e%2Bpov7P0QtbMhzCkJmhvaM91%2BNAt9o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DE628D27FB4DC6\"",
                         "last_modified": "Mon, 02 Feb 2026 18:59:13 GMT"
                     }
@@ -578,7 +766,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1455840,
-                        "partition_size": 1455840,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -588,20 +776,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1455840,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1455840,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/bdf3caf3-42b9-4100-b9e0-420686430156?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A47%3A14Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A46%3A58Z&ske=2026-05-16T15%3A47%3A14Z&sks=b&skv=2018-11-09&sig=uC4bGvvuCV8rIunuSYCnY04s2%2BQ%2FyC9tc8l4bxJBtyA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DE52ADF952C754\"",
                         "last_modified": "Tue, 13 Jan 2026 14:13:49 GMT"
                     }
@@ -624,7 +840,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1454080,
-                        "partition_size": 1454080,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -634,20 +850,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1454080,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1454080,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/94adea5c-5a1b-4553-aa57-d2939351a45f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A47%3A14Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A47%3A13Z&ske=2026-05-16T15%3A47%3A14Z&sks=b&skv=2018-11-09&sig=UeP%2BgBDo2iCSfF6kr8Afb4kKP70mfUe6En8Yk9OFQIY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:08Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DE2AFD0300CAA9\"",
                         "last_modified": "Mon, 24 Nov 2025 01:58:49 GMT"
                     }
@@ -670,7 +914,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1453040,
-                        "partition_size": 1453040,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -680,20 +924,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1453040,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1453040,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/06fcd6fd-3bfa-4974-96cb-0c09c2f7620f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A48%3A48Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A48%3A06Z&ske=2026-05-16T15%3A48%3A48Z&sks=b&skv=2018-11-09&sig=vmODWP5Mbc3q0qfREZ2xwkSqdm%2FngEUUrYKJsrux56I%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DE1C393841015C\"",
                         "last_modified": "Wed, 05 Nov 2025 07:02:01 GMT"
                     }
@@ -716,7 +988,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1446032,
-                        "partition_size": 1446032,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -726,20 +998,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1446032,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1446032,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/1530c22a-c70e-451b-9c9b-a077c3c1f47a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A11Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-hmi.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A04Z&ske=2026-05-16T15%3A39%3A11Z&sks=b&skv=2018-11-09&sig=c5AUWTzf7FoQ1lQxftA0WXGtFuCnZ70SEaYBP8%2F4wYk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0NywibmJmIjoxNzc4OTQzNTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jCldEk2PRjTKGlFrO8PGqI2CCqWSWg38ZwScIY5OQaQ&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-hmi.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:07Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:30Z",
                         "etag": "\"0x8DE0FE873DAEE7F\"",
                         "last_modified": "Mon, 20 Oct 2025 14:53:38 GMT"
                     }

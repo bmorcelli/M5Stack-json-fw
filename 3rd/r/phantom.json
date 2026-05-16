@@ -24,7 +24,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2546256,
-                        "partition_size": 2546256,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -34,20 +34,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2546256,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2546256,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/3d2e03b1-1ad4-463d-a554-f37b7ff1ca4e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A44%3A19Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A48Z&ske=2026-05-16T15%3A44%3A19Z&sks=b&skv=2018-11-09&sig=HhVNycKz6jbiBppLGmrspp93rq4ICPmTR4H3pl%2B4hYE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DE61C3E5F64540\"",
                         "last_modified": "Sun, 01 Feb 2026 18:58:33 GMT"
                     }
@@ -70,7 +78,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2528736,
-                        "partition_size": 2528736,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -80,20 +88,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2528736,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2528736,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/02a720a3-6dc6-464a-bcf7-786fb2816933?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A53%3A25Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A53%3A14Z&ske=2026-05-16T15%3A53%3A25Z&sks=b&skv=2018-11-09&sig=CZp8hJRxi7iC%2Fdj3BZ8QEnSnlsS2SgDcQqlroZDVrz8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DE4334D6C007F2\"",
                         "last_modified": "Wed, 24 Dec 2025 21:38:55 GMT"
                     }
@@ -116,7 +132,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2552928,
-                        "partition_size": 2552928,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -126,20 +142,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2552928,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2552928,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/a673b562-d32d-40c8-aeac-ff48046ec537?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A56%3A36Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A56%3A18Z&ske=2026-05-16T15%3A56%3A36Z&sks=b&skv=2018-11-09&sig=sod1vyKQtkYZ%2FVCEnsbYINrwvlRzjiMpHznAS5I%2F9do%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DE31AC0C060D7F\"",
                         "last_modified": "Tue, 02 Dec 2025 14:06:53 GMT"
                     }
@@ -162,7 +186,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2533216,
-                        "partition_size": 2533216,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -172,20 +196,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2533216,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2533216,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/d291b8a0-62ea-46b3-81d2-c3d693351e07?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A34%3A45Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A34%3A04Z&ske=2026-05-16T15%3A34%3A45Z&sks=b&skv=2018-11-09&sig=Ko%2F%2Fl7kCBOYbUDkqeBJXawmtL%2FjJ3U93QPWwjLlUB7o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DDFFAF4AF19279\"",
                         "last_modified": "Mon, 29 Sep 2025 23:24:09 GMT"
                     }
@@ -208,7 +240,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2528160,
-                        "partition_size": 2528160,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -218,20 +250,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2528160,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2528160,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/6fa0b098-2332-4cfb-96d8-c1b8ac55d53b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A42%3A48Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A42%3A41Z&ske=2026-05-16T15%3A42%3A48Z&sks=b&skv=2018-11-09&sig=gQCBr8JCALXLLQ2Zn92XwQxMidp3KHKxn0z1v3TVlfw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DDEC80E3ECD325\"",
                         "last_modified": "Fri, 05 Sep 2025 13:34:08 GMT"
                     }
@@ -254,7 +294,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2522960,
-                        "partition_size": 2522960,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -264,20 +304,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2522960,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2522960,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/28599ca6-f733-41b2-9983-96e14be3c3ad?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A34%3A35Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A34%3A02Z&ske=2026-05-16T15%3A34%3A35Z&sks=b&skv=2018-11-09&sig=2%2BFqKaxEH7XkncJA91izX%2BVicNAUYz9ftsOodHni1m4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DDA8633DE86661\"",
                         "last_modified": "Tue, 10 Jun 2025 21:10:35 GMT"
                     }
@@ -300,7 +348,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2522832,
-                        "partition_size": 2522832,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -310,20 +358,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2522832,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2522832,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/d4e2b48a-23b3-4cd6-95a8-bcb5354a8250?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A41%3A38Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A41%3A30Z&ske=2026-05-16T15%3A41%3A38Z&sks=b&skv=2018-11-09&sig=N5YhTZp0edwJrrMWUGIZYX12PSIyFlRR0B03tFf78Ng%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DDA05AF1A583A5\"",
                         "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
                     }
@@ -346,7 +402,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2518208,
-                        "partition_size": 2518208,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -356,20 +412,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2518208,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2518208,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/49587ce7-f144-4846-824e-7e23d2baaa35?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A55Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A25Z&ske=2026-05-16T15%3A49%3A55Z&sks=b&skv=2018-11-09&sig=yNEnvs%2FrjywBZWVDBkEne19TutYpijpNjJvQxiR7rJY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MCwibmJmIjoxNzc4OTQzNTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._mu6kwoZujGTSpvc0RpEYjNOE5Sf8k2NRTSDSjF8OuE&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:01Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DD9BD798F1E9A9\"",
                         "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
                     }
@@ -403,7 +467,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2320768,
-                        "partition_size": 2320768,
+                        "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -413,20 +477,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2320768,
+                            "size": 2555904,
                             "source_offset": 65536,
                             "copy_size": 2320768,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/b73190ae-f515-4c42-bc40-49ea193168af?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A53%3A31Z&rscd=attachment%3B+filename%3DBruce-LAUNCHER_Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A52%3A54Z&ske=2026-05-16T15%3A53%3A31Z&sks=b&skv=2018-11-09&sig=nlLL2L7nu%2BlremL3IoR6iGTLImnK9FWb%2FKA9o4ihUlk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MSwibmJmIjoxNzc4OTQzNTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DPzNzQjHS0x993HpefSdjaP13kHpZwC-uJgaw7gr2Ps&response-content-disposition=attachment%3B%20filename%3DBruce-LAUNCHER_Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DEB083E823319D\"",
                         "last_modified": "Wed, 13 May 2026 00:09:31 GMT"
                     }
@@ -452,6 +524,10 @@
                 "Fs": 2867744,
                 "nb": true,
                 "ao": 0,
+                "as": 2867744,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -476,13 +552,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/781004748/9f17bd80-bf51-4fbe-acb1-7fcd4d72d06a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A56%3A02Z&rscd=attachment%3B+filename%3DCYD2USB2.4Inch.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A55%3A53Z&ske=2026-05-16T15%3A56%3A02Z&sks=b&skv=2018-11-09&sig=i6giikfbToM1IHeWq4N8PLasIrKYCkCtVkaxTDiA1UA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MSwibmJmIjoxNzc4OTQzNTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DPzNzQjHS0x993HpefSdjaP13kHpZwC-uJgaw7gr2Ps&response-content-disposition=attachment%3B%20filename%3DCYD2USB2.4Inch.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DEB0124547E972\"",
                         "last_modified": "Tue, 12 May 2026 10:36:05 GMT"
                     }
@@ -517,7 +593,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1423552,
-                        "partition_size": 1423552,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -527,20 +603,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1423552,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1423552,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/dd7fd48d-ceac-4001-b0de-b4ec0303e108?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A06Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A02Z&ske=2026-05-16T15%3A39%3A06Z&sks=b&skv=2018-11-09&sig=yNqsKAIoD6u%2B5eXCbntyiCLC7biB%2FUSgiZLMPm%2BsAYQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MSwibmJmIjoxNzc4OTQzNTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DPzNzQjHS0x993HpefSdjaP13kHpZwC-uJgaw7gr2Ps&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DEAF7DD6ECC3CF\"",
                         "last_modified": "Mon, 11 May 2026 16:53:34 GMT"
                     }
@@ -570,7 +654,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1423552,
-                        "partition_size": 1423552,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -580,20 +664,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1423552,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1423552,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/1dc51aa1-0636-4e5e-8ecc-4d43f1173685?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A40%3A48Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A40%3A30Z&ske=2026-05-16T15%3A40%3A48Z&sks=b&skv=2018-11-09&sig=dRNHY7yVPA2mTAbNV9LfTACFfTTq92L8rCJiDze4LDE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MSwibmJmIjoxNzc4OTQzNTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DPzNzQjHS0x993HpefSdjaP13kHpZwC-uJgaw7gr2Ps&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DEAFA659849A37\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
                     }
@@ -616,7 +708,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1411232,
-                        "partition_size": 1411232,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -626,20 +718,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1411232,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1411232,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/07a7e96c-6cac-4d9d-b308-9e57319e79da?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A57%3A40Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A57%3A26Z&ske=2026-05-16T15%3A57%3A40Z&sks=b&skv=2018-11-09&sig=DlQ97FjJVYcNAvEbT6tB7%2FOTPUOr5XMNQ2rhtZWmUTQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MSwibmJmIjoxNzc4OTQzNTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DPzNzQjHS0x993HpefSdjaP13kHpZwC-uJgaw7gr2Ps&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DE948BF2108A80\"",
                         "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
@@ -662,7 +762,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1407152,
-                        "partition_size": 1407152,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -672,20 +772,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1407152,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1407152,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/926a9049-72d7-4da3-ae1f-a388a3c97d45?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A36%3A31Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A35%3A47Z&ske=2026-05-16T15%3A36%3A31Z&sks=b&skv=2018-11-09&sig=YKnEbm%2F8cZP%2Bvlmc8YSmtVrpalBo68%2F5KAmZhHSmToY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MSwibmJmIjoxNzc4OTQzNTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DPzNzQjHS0x993HpefSdjaP13kHpZwC-uJgaw7gr2Ps&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DE80EE643DCC19\"",
                         "last_modified": "Fri, 13 Mar 2026 10:50:50 GMT"
                     }
@@ -708,7 +816,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1408288,
-                        "partition_size": 1408288,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -718,20 +826,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1408288,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1408288,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/0f82862d-a20d-43b9-8f71-f73e34b6e32e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A36%3A54Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A36%3A29Z&ske=2026-05-16T15%3A36%3A54Z&sks=b&skv=2018-11-09&sig=a0cGkm4WmeFqSiCY4pmG%2F6dc3ZZI7rxxhTPQ23K6c%2FE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MSwibmJmIjoxNzc4OTQzNTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DPzNzQjHS0x993HpefSdjaP13kHpZwC-uJgaw7gr2Ps&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE628D2806B2AE\"",
                         "last_modified": "Mon, 02 Feb 2026 18:59:13 GMT"
                     }
@@ -754,7 +870,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1408288,
-                        "partition_size": 1408288,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -764,20 +880,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1408288,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1408288,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/a8184ea7-3b89-4575-b412-026885ec64ce?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A38%3A58Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A38%3A07Z&ske=2026-05-16T15%3A38%3A58Z&sks=b&skv=2018-11-09&sig=XSW6TjgUqAxT2WYJi1u04LvAj5LHpXNKhWJ%2FjIQvYoQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DE52ADF95E0559\"",
                         "last_modified": "Tue, 13 Jan 2026 14:13:49 GMT"
                     }
@@ -800,7 +924,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1406544,
-                        "partition_size": 1406544,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -810,20 +934,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1406544,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1406544,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/1fd3caa9-6cde-4fbf-a266-8025f8acbf9a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A55Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A41Z&ske=2026-05-16T15%3A39%3A55Z&sks=b&skv=2018-11-09&sig=jEzmLnzzyut2l4EoiM7i4Uiq0z86pgcyHqnfVMD53cA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:02Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:27Z",
                         "etag": "\"0x8DE2AFD030E9DC5\"",
                         "last_modified": "Mon, 24 Nov 2025 01:58:49 GMT"
                     }
@@ -846,7 +978,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1405456,
-                        "partition_size": 1405456,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -856,20 +988,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1405456,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1405456,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/84472cb8-daa4-4904-9873-f0c4a7deb91e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A55%3A29Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A54%3A38Z&ske=2026-05-16T15%3A55%3A29Z&sks=b&skv=2018-11-09&sig=i7aN968jsqJiQkoDp2agGHV%2F7FFAdY2bjN3um8Ub5N0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE1C39384DC430\"",
                         "last_modified": "Wed, 05 Nov 2025 07:02:01 GMT"
                     }
@@ -892,7 +1032,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1398448,
-                        "partition_size": 1398448,
+                        "partition_size": 1441792,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -902,20 +1042,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1398448,
+                            "size": 1441792,
                             "source_offset": 65536,
                             "copy_size": 1398448,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/c70b584f-c054-47af-ada8-f7163587ac14?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A46%3A02Z&rscd=attachment%3B+filename%3DLauncher-Phantom_S024R.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A45%3A19Z&ske=2026-05-16T15%3A46%3A02Z&sks=b&skv=2018-11-09&sig=F%2FE2kSGNUNYprQMyGvaG8Fm7nXzmMAqJ1H6dDAtrAD4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3DLauncher-Phantom_S024R.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE0FE873D5EB1A\"",
                         "last_modified": "Mon, 20 Oct 2025 14:53:38 GMT"
                     }
@@ -940,6 +1088,10 @@
                 "Fs": 1509632,
                 "nb": true,
                 "ao": 0,
+                "as": 1509632,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -964,13 +1116,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/971010b2-aae0-477b-86b6-b5623c5b4a77?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A57%3A17Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_12_1_20260505_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A56%3A51Z&ske=2026-05-16T15%3A57%3A17Z&sks=b&skv=2018-11-09&sig=BqAetQrIUimX3oe%2Byt2hUThn%2F8NB8heOhWWkwWWBN2k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_12_1_20260505_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DEAA51DB21BF09\"",
                         "last_modified": "Tue, 05 May 2026 02:56:07 GMT"
                     }
@@ -983,6 +1135,10 @@
                 "Fs": 1518880,
                 "nb": true,
                 "ao": 0,
+                "as": 1518880,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1007,13 +1163,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/d14dc5da-7986-4e38-8528-6a5d23db06eb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A12Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_12_0_20260430_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A48%3A31Z&ske=2026-05-16T15%3A49%3A12Z&sks=b&skv=2018-11-09&sig=B07XduPW1O41Ey9B6sJADFiSowQZGw66TNZEHoVggiM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_12_0_20260430_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DEA6BA5B2E5779\"",
                         "last_modified": "Thu, 30 Apr 2026 13:14:05 GMT"
                     }
@@ -1026,6 +1182,10 @@
                 "Fs": 1521520,
                 "nb": true,
                 "ao": 0,
+                "as": 1521520,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1050,13 +1210,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/ff6ab270-94e1-491e-bda8-ba34e1c4f74a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A45Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_11_1_20260415_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A17Z&ske=2026-05-16T15%3A49%3A45Z&sks=b&skv=2018-11-09&sig=imSWIWd%2BTsedyp2f%2B8jsVMMxYIB8dX6vPTPtizOLPKc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_11_1_20260415_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE9AF58B3E93B9\"",
                         "last_modified": "Wed, 15 Apr 2026 13:47:32 GMT"
                     }
@@ -1069,6 +1229,10 @@
                 "Fs": 1524320,
                 "nb": true,
                 "ao": 0,
+                "as": 1524320,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1093,13 +1257,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/33726d2e-3b2c-4eab-8702-fd743fbe55a7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A38%3A26Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_11_0_20260310_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A38%3A00Z&ske=2026-05-16T15%3A38%3A26Z&sks=b&skv=2018-11-09&sig=NXNiwyPq%2F5upZ6zqKj4RfgpyV7%2Fr81NZThxvrwZh8tE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_11_0_20260310_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE7E43E5E9B4D3\"",
                         "last_modified": "Tue, 10 Mar 2026 01:25:21 GMT"
                     }
@@ -1112,6 +1276,10 @@
                 "Fs": 1528848,
                 "nb": true,
                 "ao": 0,
+                "as": 1528848,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1136,13 +1304,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/e7ab0e30-94a3-4ea4-a922-a6fa71cbf82d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A53Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_10_2_20260206_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A18Z&ske=2026-05-16T15%3A39%3A53Z&sks=b&skv=2018-11-09&sig=cZ1mPNswApPOso9H3bcehMPvrDeEZAwbkm4CzvGrtEE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_10_2_20260206_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE65B2EA9AAC51\"",
                         "last_modified": "Fri, 06 Feb 2026 19:07:04 GMT"
                     }
@@ -1155,6 +1323,10 @@
                 "Fs": 1525952,
                 "nb": true,
                 "ao": 0,
+                "as": 1525952,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1179,13 +1351,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/9d6b6306-8232-4afe-9881-d330976cdb63?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A13Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_10_1_20260127_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A38%3A58Z&ske=2026-05-16T15%3A39%3A13Z&sks=b&skv=2018-11-09&sig=BhBnks8KwjG271B1KsAymZ%2FJDaZ922zGKZ6RW4nRTEo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MiwibmJmIjoxNzc4OTQzNTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dSl890ESdiJazIknGW0JS_avpLKVdR0s0b437owWJqk&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_10_1_20260127_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE5DF649FC74FA\"",
                         "last_modified": "Tue, 27 Jan 2026 22:49:11 GMT"
                     }
@@ -1198,6 +1370,10 @@
                 "Fs": 1525952,
                 "nb": true,
                 "ao": 0,
+                "as": 1525952,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1222,13 +1398,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/63f58acd-1afa-4d4a-9a50-b041bcd113b2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A59%3A00Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_10_0_20260127_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A58%3A50Z&ske=2026-05-16T15%3A59%3A00Z&sks=b&skv=2018-11-09&sig=XFDvswT5Hu%2BpoNijjqCmHkO0SnG5Wd%2BwixvKlvE0TgQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MywibmJmIjoxNzc4OTQzNTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Bixm3wpvDx2eQ5IXUo50owD3DDLN4LlvE7iyD2ULnB8&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_10_0_20260127_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE5DE926451B51\"",
                         "last_modified": "Tue, 27 Jan 2026 21:15:08 GMT"
                     }
@@ -1241,6 +1417,10 @@
                 "Fs": 1521184,
                 "nb": true,
                 "ao": 0,
+                "as": 1521184,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1265,13 +1445,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/cd9f0f33-5b7d-4ef0-8443-2ac9936ef3eb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A43%3A59Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_9_1_20260103_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A34Z&ske=2026-05-16T15%3A43%3A59Z&sks=b&skv=2018-11-09&sig=Rwi7xgFTHW%2Bj5CIjZHvXoq77VFfB0vksnN2fb0I6PlQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MywibmJmIjoxNzc4OTQzNTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Bixm3wpvDx2eQ5IXUo50owD3DDLN4LlvE7iyD2ULnB8&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_9_1_20260103_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE4B0299947968\"",
                         "last_modified": "Sat, 03 Jan 2026 19:59:27 GMT"
                     }
@@ -1284,6 +1464,10 @@
                 "Fs": 1521184,
                 "nb": true,
                 "ao": 0,
+                "as": 1521184,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1308,13 +1492,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/4ce2c381-7ad6-4e72-8f6d-7856958bee7c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A48Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_9_0_20251213_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A51%3A42Z&ske=2026-05-16T15%3A51%3A48Z&sks=b&skv=2018-11-09&sig=cxzTOxO40BidIlT1Gm1hWI0m7swxDkXifGDYFdSOo3s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MywibmJmIjoxNzc4OTQzNTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Bixm3wpvDx2eQ5IXUo50owD3DDLN4LlvE7iyD2ULnB8&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_9_0_20251213_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE3A823BCD0FD6\"",
                         "last_modified": "Sat, 13 Dec 2025 20:00:15 GMT"
                     }
@@ -1327,6 +1511,10 @@
                 "Fs": 1656384,
                 "nb": true,
                 "ao": 0,
+                "as": 1656384,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1351,13 +1539,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/208325027/66219ac9-cdc7-407f-9a36-6a0e5fb0d152?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A58%3A29Z&rscd=attachment%3B+filename%3Desp32_marauder_v1_8_10_20251113_cyd_2432S024_guition.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A57%3A54Z&ske=2026-05-16T15%3A58%3A29Z&sks=b&skv=2018-11-09&sig=g1fVorQtbJq4qSO71TNG2oRuS0oJZygnBhrZoO1VSVQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0Mzg0MywibmJmIjoxNzc4OTQzNTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Bixm3wpvDx2eQ5IXUo50owD3DDLN4LlvE7iyD2ULnB8&response-content-disposition=attachment%3B%20filename%3Desp32_marauder_v1_8_10_20251113_cyd_2432S024_guition.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:59:03Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:28Z",
                         "etag": "\"0x8DE22C1BFC50EF9\"",
                         "last_modified": "Thu, 13 Nov 2025 14:34:27 GMT"
                     }

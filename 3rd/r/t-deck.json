@@ -24,7 +24,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3776144,
-                        "partition_size": 3776144,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -34,20 +34,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3776144,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3776144,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/7cd5d998-7101-45d6-9ec0-ee9d889ffe6b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A40%3A04Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A16Z&ske=2026-05-16T15%3A40%3A04Z&sks=b&skv=2018-11-09&sig=6nkHaTgAvv1m0xdJ1PO7lB08q1ItGJY%2FH6XGEQxgTXo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE61C3E5F75582\"",
                         "last_modified": "Sun, 01 Feb 2026 18:58:33 GMT"
                     }
@@ -70,7 +78,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3793264,
-                        "partition_size": 3793264,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -80,20 +88,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3793264,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3793264,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/1625a2a4-a8b0-46fb-91ee-c77fcc2dbd89?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A32Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A48%3A41Z&ske=2026-05-16T15%3A49%3A32Z&sks=b&skv=2018-11-09&sig=PtC5%2B3vkG0jkoHFVlC4GGpczagSX%2Bdc80zRl%2FHmPBjw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE4334D6CA0EC1\"",
                         "last_modified": "Wed, 24 Dec 2025 21:38:55 GMT"
                     }
@@ -116,7 +132,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3632688,
-                        "partition_size": 3632688,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -126,20 +142,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3632688,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3632688,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/03ccc62e-38cd-44b4-bf4a-851f20881c8f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A35%3A24Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A34%3A55Z&ske=2026-05-16T15%3A35%3A24Z&sks=b&skv=2018-11-09&sig=RpaynRDv7OlJtp%2FBZSogKqgEqy3pVuTHZggp5FJpaZI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE31AC0C1C3BAC\"",
                         "last_modified": "Tue, 02 Dec 2025 14:06:54 GMT"
                     }
@@ -162,7 +186,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3621344,
-                        "partition_size": 3621344,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -172,20 +196,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3621344,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3621344,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/1d307dec-9075-45a0-9867-490a711c81dd?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A35%3A44Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A35%3A21Z&ske=2026-05-16T15%3A35%3A44Z&sks=b&skv=2018-11-09&sig=AdoF1HmWjsbzq7Q5rLhh3E7E1%2Bo%2BAzwIMAhU5hzj6CQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:19Z",
                         "etag": "\"0x8DDFFAF4AFBC03A\"",
                         "last_modified": "Mon, 29 Sep 2025 23:24:09 GMT"
                     }
@@ -208,7 +240,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3618400,
-                        "partition_size": 3618400,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -218,20 +250,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3618400,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3618400,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/c39e007a-d583-4976-880c-1db2230e7e0a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A34%3A25Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A34%3A22Z&ske=2026-05-16T15%3A34%3A25Z&sks=b&skv=2018-11-09&sig=w8L5mjnkftPfTA13hg9ezvMr4LgiUb8v6uPCZvCYaU4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DDEC80E3FD6254\"",
                         "last_modified": "Fri, 05 Sep 2025 13:34:08 GMT"
                     }
@@ -254,7 +294,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3489712,
-                        "partition_size": 3489712,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -264,20 +304,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3489712,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3489712,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/62f66733-0eb8-44c1-a86a-4b9fb3456ad3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A33%3A57Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A33%3A22Z&ske=2026-05-16T15%3A33%3A57Z&sks=b&skv=2018-11-09&sig=wJQR3tHiu5JGswIv8u9LLiTPhH0fifGL0%2FfKyJy6FoQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DDA8633DDF21CC\"",
                         "last_modified": "Tue, 10 Jun 2025 21:10:34 GMT"
                     }
@@ -300,7 +348,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3489040,
-                        "partition_size": 3489040,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -310,20 +358,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3489040,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3489040,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/bdfd485b-5d2e-4420-88a1-67a431abdb08?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A55%3A39Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A55%3A24Z&ske=2026-05-16T15%3A55%3A39Z&sks=b&skv=2018-11-09&sig=Z%2F69J1AiOBMBmeOG%2BIJTd72cKMaP8XiGtkq1%2BwAY7HU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DDA05AF1AA1264\"",
                         "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
                     }
@@ -346,7 +402,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3483456,
-                        "partition_size": 3483456,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -356,20 +412,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3483456,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3483456,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/8e9eaa1d-6ac6-4f1c-817f-587adcc91b07?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A33%3A52Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A33%3A12Z&ske=2026-05-16T15%3A33%3A52Z&sks=b&skv=2018-11-09&sig=FvfilSs0LT%2FuhvY28bilGlGds7BnrZdjm6ZBoLw1N4E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:46Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DD9BD798F788A5\"",
                         "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
                     }
@@ -392,7 +456,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3332064,
-                        "partition_size": 3332064,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -402,20 +466,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3332064,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3332064,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/591f1a84-1afc-4f32-9502-b06da649f65a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A34%3A10Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A33%3A46Z&ske=2026-05-16T15%3A34%3A10Z&sks=b&skv=2018-11-09&sig=p6URCouGOTDY%2FgottXAS1f73SgMnkD%2Bjm1ZQ0E5Wjkk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DD5C3EA5685559\"",
                         "last_modified": "Wed, 05 Mar 2025 23:37:08 GMT"
                     }
@@ -438,7 +510,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3343264,
-                        "partition_size": 3343264,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -448,20 +520,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3343264,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3343264,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/e1767b60-2f45-46b8-96e9-6a41feb51dfe?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A41%3A39Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A41%3A01Z&ske=2026-05-16T15%3A41%3A39Z&sks=b&skv=2018-11-09&sig=UMLr0qfK0mOJqxMHJ7COnW3sorNfdXJTEx8SYhKDQEg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DD598D817122BF\"",
                         "last_modified": "Sun, 02 Mar 2025 13:24:05 GMT"
                     }
@@ -496,7 +576,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3776304,
-                        "partition_size": 3776304,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -506,20 +586,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3776304,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3776304,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/4040afb5-03de-4057-8c31-9f44c43e1a23?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A27Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A48%3A57Z&ske=2026-05-16T15%3A49%3A27Z&sks=b&skv=2018-11-09&sig=TGYNH9J07D5MPqFYaH2tlc0soDi7CnmdfR3aNGH3vOE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE61C3E5F3D6FC\"",
                         "last_modified": "Sun, 01 Feb 2026 18:58:33 GMT"
                     }
@@ -542,7 +630,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3793600,
-                        "partition_size": 3793600,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -552,20 +640,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3793600,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3793600,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/44ebeb0c-1320-49ec-85a7-e51964f9857c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A58%3A14Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A57%3A22Z&ske=2026-05-16T15%3A58%3A14Z&sks=b&skv=2018-11-09&sig=MHQJlQRt78z%2BHNVM%2Bf19s9UjR3%2BVRMgxi7MvRPYuGIk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE4334D6D5E84D\"",
                         "last_modified": "Wed, 24 Dec 2025 21:38:55 GMT"
                     }
@@ -588,7 +684,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3633008,
-                        "partition_size": 3633008,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -598,20 +694,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3633008,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3633008,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/2b6b06b3-b516-4fc3-a16c-aad161f43f85?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A45%3A18Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A44%3A32Z&ske=2026-05-16T15%3A45%3A18Z&sks=b&skv=2018-11-09&sig=Qhs0vy4V63N0te2b5bTWwJCjItUjQnAKc3YCiRmYHkY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE31AC0C3B8759\"",
                         "last_modified": "Tue, 02 Dec 2025 14:06:54 GMT"
                     }
@@ -634,7 +738,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3621472,
-                        "partition_size": 3621472,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -644,20 +748,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3621472,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3621472,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/130e7c42-872f-48af-a1c0-85f81dda8aee?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A36%3A56Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A36%3A18Z&ske=2026-05-16T15%3A36%3A56Z&sks=b&skv=2018-11-09&sig=31dA6AVQc6zidvM7ol8HEd2ML9YoccZ13vn8yAK7%2FMQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DDFFAF4AF6BCD1\"",
                         "last_modified": "Mon, 29 Sep 2025 23:24:09 GMT"
                     }
@@ -680,7 +792,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3618512,
-                        "partition_size": 3618512,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -690,20 +802,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3618512,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3618512,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/f231ff9f-052f-4917-aa47-0ba0fca53886?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A34%3A32Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A33%3A52Z&ske=2026-05-16T15%3A34%3A32Z&sks=b&skv=2018-11-09&sig=3MzBvNCvkVU35uvrDJb2l%2BifkKtjePYbFsY5ejRcUXI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DDEC80E3F2990B\"",
                         "last_modified": "Fri, 05 Sep 2025 13:34:08 GMT"
                     }
@@ -726,7 +846,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3489856,
-                        "partition_size": 3489856,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -736,20 +856,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3489856,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3489856,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/dbcf4b9d-3d68-4df5-b1cc-8afcdd3e2547?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A44%3A03Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A53Z&ske=2026-05-16T15%3A44%3A03Z&sks=b&skv=2018-11-09&sig=04ug4soTmZUpRMzY9%2FIMAByOknBG0Ajt%2BMtoyGZ2Deo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNiwibmJmIjoxNzc4OTQzNTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1E7MLGGJm9ab563fkGDc-SEGWpf_P76pb8KKzH1vbq0&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:47Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DDA8633DE16927\"",
                         "last_modified": "Tue, 10 Jun 2025 21:10:34 GMT"
                     }
@@ -772,7 +900,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3489216,
-                        "partition_size": 3489216,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -782,20 +910,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3489216,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3489216,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/a71ed24c-833d-49d7-8376-38a0d27b64e6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A54%3A40Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A54%3A01Z&ske=2026-05-16T15%3A54%3A40Z&sks=b&skv=2018-11-09&sig=buDXeDJTiQ6pZA4maVcYVWLIDb51xB4lv0cf%2FZ5DYNY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNywibmJmIjoxNzc4OTQzNTI3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.itsuBMaKoPlaFl2fyjh7MyKtDnYSjU3eZnzXR2yAsLA&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DDA05AF1A77D3A\"",
                         "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
                     }
@@ -818,7 +954,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3483552,
-                        "partition_size": 3483552,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -828,20 +964,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3483552,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3483552,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/c4fc8147-be2e-4f2b-8cf2-2fd9cf6af2d4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A23Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A10Z&ske=2026-05-16T15%3A39%3A23Z&sks=b&skv=2018-11-09&sig=HI7Y%2FrDclFrWiyEZh%2BsN8%2BrcWbMHEoPDu%2F9Q7iNX7MQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNywibmJmIjoxNzc4OTQzNTI3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.itsuBMaKoPlaFl2fyjh7MyKtDnYSjU3eZnzXR2yAsLA&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DD9BD798F9A917\"",
                         "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
                     }
@@ -864,7 +1008,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3332448,
-                        "partition_size": 3332448,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -874,20 +1018,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3332448,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3332448,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/e9a31216-116f-4fed-9e72-60acd6e749a3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A50%3A07Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A36Z&ske=2026-05-16T15%3A50%3A07Z&sks=b&skv=2018-11-09&sig=XkqaTNxTGmza%2FJLdCiqjatjeKJm7K6TjVP4bWF7Fpeo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNywibmJmIjoxNzc4OTQzNTI3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.itsuBMaKoPlaFl2fyjh7MyKtDnYSjU3eZnzXR2yAsLA&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DD5C3EA5604812\"",
                         "last_modified": "Wed, 05 Mar 2025 23:37:08 GMT"
                     }
@@ -910,7 +1062,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3343616,
-                        "partition_size": 3343616,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -920,20 +1072,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3343616,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3343616,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/fc29973f-48f4-485f-af7a-bee2bd3da578?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A55%3A40Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A54%3A52Z&ske=2026-05-16T15%3A55%3A40Z&sks=b&skv=2018-11-09&sig=gqNs5kuGVkhxEUlMmkgduu2LX%2BoIsKhbaz%2Fu4xP8m9A%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNywibmJmIjoxNzc4OTQzNTI3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.itsuBMaKoPlaFl2fyjh7MyKtDnYSjU3eZnzXR2yAsLA&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DD598D817122BF\"",
                         "last_modified": "Sun, 02 Mar 2025 13:24:05 GMT"
                     }
@@ -967,7 +1127,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3628128,
-                        "partition_size": 3628128,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -977,20 +1137,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3628128,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3628128,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/8c6bfcd4-b301-4e83-9eed-4f612513cb42?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A42%3A30Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck-pro.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A42%3A30Z&ske=2026-05-16T15%3A42%3A30Z&sks=b&skv=2018-11-09&sig=eZQbqeoo%2Fn9%2FJ8OLhq1D9VuR0WgofMyK2xln48aBxrw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNywibmJmIjoxNzc4OTQzNTI3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.itsuBMaKoPlaFl2fyjh7MyKtDnYSjU3eZnzXR2yAsLA&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck-pro.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DEB083E85CC587\"",
                         "last_modified": "Wed, 13 May 2026 00:09:31 GMT"
                     }
@@ -1013,7 +1181,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3628224,
-                        "partition_size": 3628224,
+                        "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1023,20 +1191,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3628224,
+                            "size": 4653056,
                             "source_offset": 65536,
                             "copy_size": 3628224,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/795166961/1e9a2f8a-7808-48c2-9719-c3d5e47a38df?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A34%3A30Z&rscd=attachment%3B+filename%3DBruce-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A33%3A56Z&ske=2026-05-16T15%3A34%3A30Z&sks=b&skv=2018-11-09&sig=NgEmWu8oTAXewPyoufCdJZzrPrxeHeusdkEsZ0i5PD0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNywibmJmIjoxNzc4OTQzNTI3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.itsuBMaKoPlaFl2fyjh7MyKtDnYSjU3eZnzXR2yAsLA&response-content-disposition=attachment%3B%20filename%3DBruce-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DEB083E84AD850\"",
                         "last_modified": "Wed, 13 May 2026 00:09:31 GMT"
                     }
@@ -1068,7 +1244,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1803472,
-                        "partition_size": 1803472,
+                        "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1078,20 +1254,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1803472,
+                            "size": 6553600,
                             "source_offset": 65536,
                             "copy_size": 1803472,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/Xinyuan-LilyGO/T-Deck/306c6cb83b06eae18dc025869b18e636e1ea7f13/firmware/T-Deck_UnitTest_251113.bin"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "W/\"62eb1d4e46af73cb3aacb2ec7ae4a965bde016ce7353fac1fb839fced5aa5692\""
                     }
                 }
@@ -1116,6 +1300,10 @@
                 "Fs": 2912016,
                 "nb": true,
                 "ao": 0,
+                "as": 2912016,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -1140,13 +1328,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/781004748/b937e6d3-2a7b-4b69-b090-e4cba4063c5f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A50%3A08Z&rscd=attachment%3B+filename%3DLilyGo-T-Deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A42Z&ske=2026-05-16T15%3A50%3A08Z&sks=b&skv=2018-11-09&sig=bPBsji33JejN%2BNZXK8GPRGlbrQbkinZrGZCzXZGl%2FpE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyNywibmJmIjoxNzc4OTQzNTI3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.itsuBMaKoPlaFl2fyjh7MyKtDnYSjU3eZnzXR2yAsLA&response-content-disposition=attachment%3B%20filename%3DLilyGo-T-Deck.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DEB012454A57B3\"",
                         "last_modified": "Tue, 12 May 2026 10:36:05 GMT"
                     }
@@ -1181,7 +1369,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1492240,
-                        "partition_size": 1492240,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1191,20 +1379,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1492240,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1492240,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/02bce627-6ca3-45a3-b78f-e052784f1775?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A45%3A11Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A44%3A52Z&ske=2026-05-16T15%3A45%3A11Z&sks=b&skv=2018-11-09&sig=oUs%2B3kV4cmq%2FZ8bKAg3QAgsHA9jhGWkgEltH%2B3cn07U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DEAF7DD70780AE\"",
                         "last_modified": "Mon, 11 May 2026 16:53:34 GMT"
                     }
@@ -1234,7 +1450,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1492240,
-                        "partition_size": 1492240,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1244,20 +1460,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1492240,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1492240,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/7e860efc-77d8-4f64-9cc5-7e90fabb9acf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A34%3A32Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A33%3A52Z&ske=2026-05-16T15%3A34%3A32Z&sks=b&skv=2018-11-09&sig=LyldOgPgiQFkmpby9%2BRDjbJW8aCiYGhRyip%2B%2BBl%2F4qQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:48Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DEAFA6597E38C6\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
                     }
@@ -1280,7 +1524,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469712,
-                        "partition_size": 1469712,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1290,20 +1534,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469712,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469712,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/15ff04ec-9694-453d-9647-def0d236ee08?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A38%3A55Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A38%3A16Z&ske=2026-05-16T15%3A38%3A55Z&sks=b&skv=2018-11-09&sig=HBLqJBUKzJxT%2FAmUpjPnEdCB4qU3CSPKWVd%2BlCP3kzM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE948BF201F4E5\"",
                         "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
@@ -1326,7 +1598,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1465488,
-                        "partition_size": 1465488,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1336,20 +1608,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1465488,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1465488,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/8f5a6b47-0314-4aba-bc31-c4205e5b5abd?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A46Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A51%3A19Z&ske=2026-05-16T15%3A51%3A46Z&sks=b&skv=2018-11-09&sig=pURRAn0mkewFBNOZuCswWDRvQTKgN8Qo2P59zQwwqbo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE80EE642F844A\"",
                         "last_modified": "Fri, 13 Mar 2026 10:50:50 GMT"
                     }
@@ -1372,7 +1672,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469040,
-                        "partition_size": 1469040,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1382,20 +1682,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469040,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469040,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/854a67f1-fae7-4ddc-acf4-f916e165ab1d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A47%3A47Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A46%3A50Z&ske=2026-05-16T15%3A47%3A47Z&sks=b&skv=2018-11-09&sig=C5ISee2E0FU8mM6aVbQC2aBHMkFJW%2Faw%2BVg3cUh8RHE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE628D27F2F2BF\"",
                         "last_modified": "Mon, 02 Feb 2026 18:59:13 GMT"
                     }
@@ -1418,7 +1746,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469040,
-                        "partition_size": 1469040,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1428,20 +1756,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469040,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469040,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/a5dd9086-102b-4c49-96ba-83d83c985fc8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A45%3A46Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A44%3A50Z&ske=2026-05-16T15%3A45%3A46Z&sks=b&skv=2018-11-09&sig=%2Bt2FroJ08xzF3cMycx0LPCn21ovLpVVe%2Bxadb9Lzoyg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE52ADF947627B\"",
                         "last_modified": "Tue, 13 Jan 2026 14:13:49 GMT"
                     }
@@ -1464,7 +1820,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1467328,
-                        "partition_size": 1467328,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1474,20 +1830,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1467328,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1467328,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/70d02b58-a052-4edb-b89e-7b40dd69c08e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A56%3A01Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A55%3A42Z&ske=2026-05-16T15%3A56%3A01Z&sks=b&skv=2018-11-09&sig=R7sAvq9jeaN0L13egLuXHX0pChj0ox%2BGdkHN47cHoQM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE2AFD0307EE8F\"",
                         "last_modified": "Mon, 24 Nov 2025 01:58:49 GMT"
                     }
@@ -1510,7 +1894,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1466224,
-                        "partition_size": 1466224,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1520,20 +1904,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1466224,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1466224,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/8993cb77-9fae-4cdd-86a7-956fe97217d2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A47Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A37Z&ske=2026-05-16T15%3A49%3A47Z&sks=b&skv=2018-11-09&sig=TIl5hVtdFpHn6Szehc3Go%2FgboU8rryx%2BKFz66JpVuBY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE1C39383941CC\"",
                         "last_modified": "Wed, 05 Nov 2025 07:02:01 GMT"
                     }
@@ -1556,7 +1968,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1460272,
-                        "partition_size": 1460272,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1566,20 +1978,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1460272,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1460272,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/3fa3d3ef-57f7-4491-a63b-848db7434ef6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A58%3A18Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck-plus.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A57%3A49Z&ske=2026-05-16T15%3A58%3A18Z&sks=b&skv=2018-11-09&sig=fqm6yYK9I7L5n3m2lsN9gjpIggmvHTQzMYhTI%2FOWRIU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOCwibmJmIjoxNzc4OTQzNTI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mis02d8VGainWNFpRZh3Ab5YJ7VDDgSQ1fQsyCYnVdI&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck-plus.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DE0FE873C2ED9B\"",
                         "last_modified": "Mon, 20 Oct 2025 14:53:38 GMT"
                     }
@@ -1614,7 +2054,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1492240,
-                        "partition_size": 1492240,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1624,20 +2064,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1492240,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1492240,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/d1cb722a-9306-4936-adf8-326977be10bd?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A41%3A14Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A40%3A16Z&ske=2026-05-16T15%3A41%3A14Z&sks=b&skv=2018-11-09&sig=LGYR8KPz2ZKbyV73%2BUrszi%2BX%2B%2BfEPSMT7QOOoAA1dyA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:20Z",
                         "etag": "\"0x8DEAF7DD6DE7C07\"",
                         "last_modified": "Mon, 11 May 2026 16:53:34 GMT"
                     }
@@ -1667,7 +2135,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1492240,
-                        "partition_size": 1492240,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1677,20 +2145,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1492240,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1492240,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/68c43963-d2ee-4ffe-a54a-131938f3d092?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A52Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A39%3A50Z&ske=2026-05-16T15%3A39%3A52Z&sks=b&skv=2018-11-09&sig=JQlNkFdPLB7b44MfgRY5VC5E8oDGyr8S9R32BjogyVU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DEAFA65972AD09\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
                     }
@@ -1713,7 +2209,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469712,
-                        "partition_size": 1469712,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1723,20 +2219,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469712,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469712,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/1b9aa0cd-7a13-410e-8cb6-d63013191bc0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A43%3A34Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A28Z&ske=2026-05-16T15%3A43%3A34Z&sks=b&skv=2018-11-09&sig=nOiQK7h2ThktbLJRTFkL8amVrm6LP%2FgqECbT0mf9%2Bd8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE948BF1FA3571\"",
                         "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
@@ -1759,7 +2283,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1465488,
-                        "partition_size": 1465488,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1769,20 +2293,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1465488,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1465488,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/78b8b41e-28b7-49b1-b055-aa7789e747a9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A37Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A38%3A55Z&ske=2026-05-16T15%3A39%3A37Z&sks=b&skv=2018-11-09&sig=rqrK2rL2%2BfK4oJrErJykfrFWePxRmRpdDYN5hEoI174%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE80EE64376AAA\"",
                         "last_modified": "Fri, 13 Mar 2026 10:50:50 GMT"
                     }
@@ -1805,7 +2357,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469040,
-                        "partition_size": 1469040,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1815,20 +2367,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469040,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469040,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/03fb876d-04cb-4adf-9ff9-dfb0ed5f1879?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A27Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A14Z&ske=2026-05-16T15%3A49%3A27Z&sks=b&skv=2018-11-09&sig=DuwFGBX5StEQ8roqPgQNRyy9qvnbW3L5dshqHBmjVm8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE628D27F9066A\"",
                         "last_modified": "Mon, 02 Feb 2026 18:59:13 GMT"
                     }
@@ -1851,7 +2431,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1469040,
-                        "partition_size": 1469040,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1861,20 +2441,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1469040,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1469040,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/d6f6d4c3-b583-4ed1-987f-c78058f38eba?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A45%3A02Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A44%3A42Z&ske=2026-05-16T15%3A45%3A02Z&sks=b&skv=2018-11-09&sig=jhWtsCsDmop2V%2Bkq2zpUkDDT67WjEOuLJfUe7QNfAu4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:49Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE52ADF94D0177\"",
                         "last_modified": "Tue, 13 Jan 2026 14:13:49 GMT"
                     }
@@ -1897,7 +2505,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1467328,
-                        "partition_size": 1467328,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1907,20 +2515,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1467328,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1467328,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/595f49cb-356d-496e-ab93-6db35dc6320c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A49%3A10Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A48%3A40Z&ske=2026-05-16T15%3A49%3A10Z&sks=b&skv=2018-11-09&sig=moIELghmcoqb5NB46m3kiYK9q4psL3uwWkR%2FhM9jQwM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE2AFD02FD99EF\"",
                         "last_modified": "Mon, 24 Nov 2025 01:58:49 GMT"
                     }
@@ -1943,7 +2579,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1466224,
-                        "partition_size": 1466224,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1953,20 +2589,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1466224,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1466224,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/6236218a-bdc3-4370-a0ea-154d790807d4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A55%3A02Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A54%3A30Z&ske=2026-05-16T15%3A55%3A02Z&sks=b&skv=2018-11-09&sig=c3lA89EnUJW4Wh4ZHdlbIE%2FbkU1%2FLyOJBc0tWg7dft0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE1C39383DF76B\"",
                         "last_modified": "Wed, 05 Nov 2025 07:02:01 GMT"
                     }
@@ -1989,7 +2653,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1460272,
-                        "partition_size": 1460272,
+                        "partition_size": 2031616,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1999,20 +2663,48 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1460272,
+                            "size": 2031616,
                             "source_offset": 65536,
                             "copy_size": 1460272,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "sys",
+                            "role": "fat",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 2097152,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 2949120,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/755727720/4d9fd52f-58e2-47bb-9e86-8a439ba58546?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A51%3A35Z&rscd=attachment%3B+filename%3DLauncher-lilygo-t-deck.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A51%3A33Z&ske=2026-05-16T15%3A51%3A35Z&sks=b&skv=2018-11-09&sig=7bmGYvkBADOfSAu1wh2MZebpo5i7MLt6O0UxeFuVDh0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgyOSwibmJmIjoxNzc4OTQzNTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wELilVwfCsWtOj9FB9iWMQVE1K1jRA1wOJ6oIUZGTc0&response-content-disposition=attachment%3B%20filename%3DLauncher-lilygo-t-deck.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE0FE873D1AA16\"",
                         "last_modified": "Mon, 20 Oct 2025 14:53:38 GMT"
                     }
@@ -2035,6 +2727,10 @@
                 "Fs": 1450960,
                 "nb": true,
                 "ao": 0,
+                "as": 1450960,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -2059,13 +2755,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/jstockdale/ESP32Marauder-T-Deck/8ffb2be4e3e062556a4ce8a9602e8fc47d1ee9d2/Release%20Bins/esp32_marauder_v1_0_0_20250103_tdeck_pre_alpha_aq12.bin"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "W/\"c1f88ac718cf8f2982ed8c031100949e335e52d0621f75f04cbde3b4d72d958d\""
                     }
                 }
@@ -2118,7 +2814,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1503808,
-                        "partition_size": 1503808,
+                        "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2128,20 +2824,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1503808,
+                            "size": 6553600,
                             "source_offset": 65536,
                             "copy_size": 1503808,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: Requested Range Not Satisfiable for url: https://flasher.meshcore.io/firmware/Ultra-TDeck-SD-v8.2-merged.bin"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:53Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:23Z",
                         "etag": "\"696852bd-17f240\"",
                         "last_modified": "Thu, 15 Jan 2026 02:36:45 GMT"
                     }
@@ -2164,7 +2868,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 1502656,
-                        "partition_size": 1502656,
+                        "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2174,20 +2878,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1502656,
+                            "size": 6553600,
                             "source_offset": 65536,
                             "copy_size": 1502656,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: Requested Range Not Satisfiable for url: https://flasher.meshcore.io/firmware/Ultra-TDeck-v8.2-merged.bin"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:53Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:23Z",
                         "etag": "\"6968534f-17edc0\"",
                         "last_modified": "Thu, 15 Jan 2026 02:39:11 GMT"
                     }
@@ -2220,7 +2932,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3528256,
-                        "partition_size": 3528256,
+                        "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2230,20 +2942,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3528256,
+                            "size": 6553600,
                             "source_offset": 65536,
                             "copy_size": 3528256,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "W/\"5d41819a17a80cb48b1c5062f0d74092f7ebd6f50c5c878ca71c9beac237359b\""
                     }
                 }
@@ -2275,7 +2995,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 2007936,
-                        "partition_size": 2007936,
+                        "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2285,20 +3005,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2007936,
+                            "size": 6553600,
                             "source_offset": 65536,
                             "copy_size": 2007936,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: Range Not Satisfiable for url: https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.4.b89355f/firmware-t-deck-2.6.4.b89355f.bin"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "W/\"07552f326759b9a3f933e7be02f7dc831341d2c05116353491611671c6e2ef51\""
                     }
                 }
@@ -2323,6 +3051,10 @@
                 "Fs": 2291584,
                 "nb": true,
                 "ao": 0,
+                "as": 2291584,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -2347,13 +3079,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1151831633/e9a10386-e413-496e-afb7-4dc1e45e016d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A50%3A07Z&rscd=attachment%3B+filename%3Dfirmware.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A49%3A40Z&ske=2026-05-16T15%3A50%3A07Z&sks=b&skv=2018-11-09&sig=ZOVl8Ys3koPJAtuhN0dOjYFYnceDkZ1mTo%2BrwQmE%2FJY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dfirmware.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE79A89957554A\"",
                         "last_modified": "Wed, 04 Mar 2026 04:43:36 GMT"
                     }
@@ -2366,6 +3098,10 @@
                 "Fs": 2285152,
                 "nb": true,
                 "ao": 0,
+                "as": 2285152,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -2390,13 +3126,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1151831633/5e2771b9-c70a-4f87-9fc3-7a0c89eb3176?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A37%3A21Z&rscd=attachment%3B+filename%3Dfirmware.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A37%3A07Z&ske=2026-05-16T15%3A37%3A21Z&sks=b&skv=2018-11-09&sig=B30ef0ybLgWmB4dGPURvGoSnw3r7ZKjzXMH4fKDr7Q4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dfirmware.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE78DD86230EB4\"",
                         "last_modified": "Tue, 03 Mar 2026 04:29:56 GMT"
                     }
@@ -2409,6 +3145,10 @@
                 "Fs": 2473600,
                 "nb": true,
                 "ao": 0,
+                "as": 2473600,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -2433,13 +3173,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1151831633/924bc339-5e91-492f-80ce-42a279df5d53?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A38%3A26Z&rscd=attachment%3B+filename%3Dfirmware.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A37%3A30Z&ske=2026-05-16T15%3A38%3A26Z&sks=b&skv=2018-11-09&sig=OFQqKgouQbOiw0ds6lrNobxXjr88jA8QZZMwv1SnWC0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dfirmware.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:50Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE74BA935BA433\"",
                         "last_modified": "Wed, 25 Feb 2026 22:09:41 GMT"
                     }
@@ -2452,6 +3192,10 @@
                 "Fs": 2444064,
                 "nb": true,
                 "ao": 0,
+                "as": 2444064,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
                 "install": {
                     "schema": 1,
                     "format": "app",
@@ -2476,13 +3220,13 @@
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
+                        "method": "file_size",
+                        "confidence": "partial",
                         "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1151831633/38721041-bac4-4429-8349-0d4ee3a32a44?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A38%3A20Z&rscd=attachment%3B+filename%3Dfirmware.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A37%3A38Z&ske=2026-05-16T15%3A38%3A20Z&sks=b&skv=2018-11-09&sig=fTvgRyYZEVxSH3di8fB5vQA9kYf2jAgq4mesIbyxMm4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dfirmware.bin&response-content-type=application%2Foctet-stream"
+                            "No partition table found; manifest generated from file size and detected app offset."
                         ],
-                        "bytes_downloaded_for_analysis": 37888,
-                        "analyzed_at": "2026-05-16T14:58:51Z",
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE66024D651210\"",
                         "last_modified": "Sat, 07 Feb 2026 04:35:20 GMT"
                     }
@@ -2517,7 +3261,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3217072,
-                        "partition_size": 3217072,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2527,20 +3271,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3217072,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3217072,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/4ef672b6-f7b5-4d68-a0dc-94011cdf8938?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A58%3A33Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A58%3A17Z&ske=2026-05-16T15%3A58%3A33Z&sks=b&skv=2018-11-09&sig=%2B3vb0s5DSynet94Up38Y1m0jHhPV92Trsodf80TJyng%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:51Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DEAF850A738A6B\"",
                         "last_modified": "Mon, 11 May 2026 17:45:07 GMT"
                     }
@@ -2563,7 +3315,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3196432,
-                        "partition_size": 3196432,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2573,20 +3325,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3196432,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3196432,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/be2c185c-a4b3-4168-ab41-73a9239d81e2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A44%3A11Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A43%3A36Z&ske=2026-05-16T15%3A44%3A11Z&sks=b&skv=2018-11-09&sig=3068JmBlT76MON%2Fj045UEx2puIb6CHeUhLycMpOM80w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:51Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DEAD964CD0792A\"",
                         "last_modified": "Sat, 09 May 2026 06:43:37 GMT"
                     }
@@ -2609,7 +3369,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3196048,
-                        "partition_size": 3196048,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2619,20 +3379,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3196048,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3196048,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/ddcd48aa-8a49-4132-aa15-d74cab3fe0ae?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A47%3A04Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A46%3A36Z&ske=2026-05-16T15%3A47%3A04Z&sks=b&skv=2018-11-09&sig=i%2BefiZmz%2F8QTqRyoP0NhEm9S6J5YA6579PUq8iMrdxk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:51Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DEA6EBD36F50EF\"",
                         "last_modified": "Thu, 30 Apr 2026 19:08:12 GMT"
                     }
@@ -2655,7 +3423,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3184496,
-                        "partition_size": 3184496,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2665,20 +3433,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3184496,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3184496,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/12ce78cf-0a38-408d-a02f-dfb1fe36589c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A42%3A55Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A42%3A15Z&ske=2026-05-16T15%3A42%3A55Z&sks=b&skv=2018-11-09&sig=dZNEPgXNbAP2vq7UtWtqACIUIejdp%2BUnwGykTXUs0Ew%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:51Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DEA079F1EAEB6E\"",
                         "last_modified": "Wed, 22 Apr 2026 14:17:54 GMT"
                     }
@@ -2701,7 +3477,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3190064,
-                        "partition_size": 3190064,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2711,20 +3487,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3190064,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3190064,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/ef02f6f9-287e-4ee4-8b4e-dd3e3f28c74c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A39%3A08Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A38%3A52Z&ske=2026-05-16T15%3A39%3A08Z&sks=b&skv=2018-11-09&sig=g3XDo1tlYSkECvZH4hgAdG95X4qagRaFClfgJptSAHg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMCwibmJmIjoxNzc4OTQzNTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vunctmwHxCjUzXIne1saS_8lN3dVcVCwf1lXnBvyJNk&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:51Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE9F832BCF81CF\"",
                         "last_modified": "Tue, 21 Apr 2026 08:51:25 GMT"
                     }
@@ -2747,7 +3531,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3189488,
-                        "partition_size": 3189488,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2757,20 +3541,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3189488,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3189488,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/810f490f-187d-4ba2-9e81-7ff8d902dbf4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A58%3A14Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A57%3A22Z&ske=2026-05-16T15%3A58%3A14Z&sks=b&skv=2018-11-09&sig=tCkgN%2BA9fBX7Y3FQVUn8BSXMI8SBnu9ojEiF%2Bka%2B1J8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMSwibmJmIjoxNzc4OTQzNTMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X3zjr36qJRQ3P24TbtybGma7NgiiRhOtboBfS-nDGJA&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:51Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE9F72050E4B24\"",
                         "last_modified": "Tue, 21 Apr 2026 06:48:39 GMT"
                     }
@@ -2793,7 +3585,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3139120,
-                        "partition_size": 3139120,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2803,20 +3595,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3139120,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3139120,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/dec83ab5-0e7f-4a5e-9d35-673445a4f747?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A46%3A35Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A45%3A50Z&ske=2026-05-16T15%3A46%3A35Z&sks=b&skv=2018-11-09&sig=AOYHl9hFDQt5JMAmwT0QaEe%2Bn2DAO6DOTYpZVHOqBc8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMSwibmJmIjoxNzc4OTQzNTMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X3zjr36qJRQ3P24TbtybGma7NgiiRhOtboBfS-nDGJA&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:52Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE9F15A9707C80\"",
                         "last_modified": "Mon, 20 Apr 2026 19:47:31 GMT"
                     }
@@ -2839,7 +3639,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3321376,
-                        "partition_size": 3321376,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2849,20 +3649,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3321376,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3321376,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/e7e5c9ff-2db8-4cff-8633-2414e01849d5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A38%3A19Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A38%3A10Z&ske=2026-05-16T15%3A38%3A19Z&sks=b&skv=2018-11-09&sig=TJv5cGt6Hx1eMRQJ112hl1095uFAfyopXsfAMjFxVBc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMSwibmJmIjoxNzc4OTQzNTMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X3zjr36qJRQ3P24TbtybGma7NgiiRhOtboBfS-nDGJA&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:52Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:21Z",
                         "etag": "\"0x8DE9EB3E5BDAB0A\"",
                         "last_modified": "Mon, 20 Apr 2026 08:07:42 GMT"
                     }
@@ -2885,7 +3693,7 @@
                     "app": {
                         "source_offset": 65536,
                         "image_size": 3306768,
-                        "partition_size": 3306768,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2895,20 +3703,28 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3306768,
+                            "size": 4194304,
                             "source_offset": 65536,
                             "copy_size": 3306768,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "legacy_fields",
-                        "confidence": "legacy",
-                        "warnings": [
-                            "416 Client Error: The range specified is invalid for the current size of the resource. for url: https://release-assets.githubusercontent.com/github-production-release-asset/1136847791/41bc4659-a38d-4ec6-95af-a9ae9530fc75?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-16T15%3A54%3A24Z&rscd=attachment%3B+filename%3Dtrail-mate-tdeck-webflash.bin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-16T14%3A54%3A14Z&ske=2026-05-16T15%3A54%3A24Z&sks=b&skv=2018-11-09&sig=GEikAQcYYvdEvowWlMnRNrvM%2FcODQsLQyVzHn6SJVhQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3ODk0MzgzMSwibmJmIjoxNzc4OTQzNTMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X3zjr36qJRQ3P24TbtybGma7NgiiRhOtboBfS-nDGJA&response-content-disposition=attachment%3B%20filename%3Dtrail-mate-tdeck-webflash.bin&response-content-type=application%2Foctet-stream"
-                        ],
-                        "bytes_downloaded_for_analysis": 37912,
-                        "analyzed_at": "2026-05-16T14:58:52Z",
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-16T16:46:22Z",
                         "etag": "\"0x8DE9E16B62D982B\"",
                         "last_modified": "Sun, 19 Apr 2026 13:22:31 GMT"
                     }
