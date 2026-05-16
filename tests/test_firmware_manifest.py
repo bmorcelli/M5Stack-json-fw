@@ -59,10 +59,10 @@ class NotFoundSession:
 
 
 def esp_image(segment_data=b"ABCD", hash_appended=False):
-    header = bytearray(8)
+    header = bytearray(24)
     header[0] = 0xE9
     header[1] = 1
-    header[7] = 1 if hash_appended else 0
+    header[23] = 1 if hash_appended else 0
     image = bytes(header)
     image += struct.pack("<II", 0x3F400020, len(segment_data))
     image += segment_data
@@ -83,7 +83,12 @@ class FirmwareManifestTests(unittest.TestCase):
     def test_parse_esp_image_size(self):
         image = esp_image(b"12345678")
         size = parse_esp_image_size(lambda offset, length: image[offset:offset + length], 0)
-        self.assertEqual(size, 48)
+        self.assertEqual(size, 64)
+
+    def test_parse_esp_image_size_with_hash(self):
+        image = esp_image(b"12345678", hash_appended=True)
+        size = parse_esp_image_size(lambda offset, length: image[offset:offset + length], 0)
+        self.assertEqual(size, 96)
 
     def test_parse_partition_table(self):
         table = (
@@ -143,10 +148,10 @@ class FirmwareManifestTests(unittest.TestCase):
         analyze_remote_firmware(version, item, session=session)
 
         self.assertEqual(version["ao"], 0x10000)
-        self.assertEqual(version["as"], 48)
+        self.assertEqual(version["as"], 64)
         self.assertEqual(version["f"], 1)
         self.assertEqual(version["install"]["analysis"]["method"], "partition_table")
-        self.assertEqual(version["install"]["app"]["image_size"], 48)
+        self.assertEqual(version["install"]["app"]["image_size"], 64)
         self.assertEqual(version["install"]["app"]["partition_size"], 0x200000)
 
     def test_analyze_remote_full_flash_dump_measures_app_image(self):
@@ -165,8 +170,8 @@ class FirmwareManifestTests(unittest.TestCase):
 
         self.assertEqual(session.get_calls, ["bytes=0-36863", None])
         self.assertEqual(version["ao"], 0x10000)
-        self.assertEqual(version["as"], 48)
-        self.assertEqual(version["install"]["app"]["image_size"], 48)
+        self.assertEqual(version["as"], 64)
+        self.assertEqual(version["install"]["app"]["image_size"], 64)
         self.assertEqual(version["install"]["app"]["partition_size"], 0x3F0000)
 
     def test_analyze_remote_measures_when_payload_exists_after_declared_app_size(self):
@@ -190,8 +195,8 @@ class FirmwareManifestTests(unittest.TestCase):
         analyze_remote_firmware(version, item, session=session)
 
         self.assertEqual(session.get_calls, ["bytes=0-36863", None])
-        self.assertEqual(version["as"], 48)
-        self.assertEqual(version["install"]["app"]["image_size"], 48)
+        self.assertEqual(version["as"], 64)
+        self.assertEqual(version["install"]["app"]["image_size"], 64)
         self.assertEqual(version["install"]["app"]["partition_size"], 0x200000)
 
     def test_analyze_remote_404_marks_invalid(self):

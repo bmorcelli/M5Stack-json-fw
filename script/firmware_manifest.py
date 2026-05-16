@@ -39,6 +39,7 @@ PARTITION_SUBTYPE_SPIFFS = 0x82
 PARTITION_SUBTYPE_FAT = 0x81
 
 ESP_IMAGE_MAGIC = 0xE9
+ESP_IMAGE_HEADER_LEN = 24
 ESP_IMAGE_MAX_SEGMENTS = 16
 ESP_IMAGE_HASH_LEN = 32
 PARTITION_MAGIC = b"\xAA\x50"
@@ -168,16 +169,16 @@ def align_up(value: int, alignment: int) -> int:
 
 
 def parse_esp_image_size(read_at, source_offset: int, file_size: int = 0) -> int:
-    header = read_at(source_offset, 8)
-    if len(header) < 8 or header[0] != ESP_IMAGE_MAGIC:
+    header = read_at(source_offset, ESP_IMAGE_HEADER_LEN)
+    if len(header) < ESP_IMAGE_HEADER_LEN or header[0] != ESP_IMAGE_MAGIC:
         raise FirmwareAnalysisError(f"ESP image not found at 0x{source_offset:X}")
 
     segment_count = header[1]
     if segment_count == 0 or segment_count > ESP_IMAGE_MAX_SEGMENTS:
         raise FirmwareAnalysisError(f"Invalid ESP segment count: {segment_count}")
 
-    hash_appended = bool(header[7] & 0x01)
-    cursor = source_offset + 8
+    hash_appended = bool(header[23])
+    cursor = source_offset + ESP_IMAGE_HEADER_LEN
     if file_size and cursor > file_size:
         raise FirmwareAnalysisError("Truncated ESP image header")
 
@@ -504,9 +505,8 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
                     warnings.append(f"ESP segment parse failed, using partition_size: {exc}")
                     image_size = partition_size
             elif _is_full_flash:
-                # Full flash dump: download the whole file, walk ESP image segments to find
-                # the real firmware end (strips 0xFF padding), then align to 0x10000 so the
-                # launcher creates an optimally-sized partition without dead space.
+                # Full flash dump: download the whole file and walk ESP image
+                # segments to find the real firmware end.
                 full_data = reader.read_full()
                 def read_at(offset: int, size: int) -> bytes:  # type: ignore[no-redef]
                     return full_data[offset:offset + size]
