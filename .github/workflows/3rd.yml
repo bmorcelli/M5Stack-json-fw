@@ -2,6 +2,12 @@ name: 3rd Party JSON Files
 
 on:
   workflow_dispatch:
+    inputs:
+      force_download_all:
+        description: "Force reanalysis by clearing generated/cached JSON before running"
+        required: false
+        default: false
+        type: boolean
   push:
   schedule:
     - cron: "*/15 * * * *" # every 15 minutes
@@ -23,7 +29,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
         # if force download is requested, delete all cached JSON files to ensure they are re-downloaded
-        if [ "${{ env.FORCE_DOWNLOAD_ALL }}" = "true" ]; then
+        if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
           find ./3rd/r -mindepth 1 -maxdepth 1 -type f -delete
         fi
 
@@ -41,7 +47,11 @@ jobs:
         python ./3rd/create_json.py
 
         # the next script writes FILES_ADDED checking m5burner updates
-        python ./v2/update_json.py ${{ env.FORCE_DOWNLOAD_ALL == 'true' && '--force-download-all' || '' }}
+        if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
+          python ./v2/update_json.py --force-download-all
+        else
+          python ./v2/update_json.py
+        fi
        
 
     - name: Check for .bin files
