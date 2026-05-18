@@ -122,10 +122,10 @@ def main():
 
     # Atualizar JSONs
     atualizar_lista_json(LISTA_MARAUDER, all_binaries, version, published_at)
-    if binaries_cyd:
-        atualizar_lista_json(LISTA_CYD, binaries_cyd, version, published_at)
-    if binary_phantom:
-        atualizar_lista_json(LISTA_PHANTOM, [binary_phantom], version, published_at)
+    #if binaries_cyd:
+    #    atualizar_lista_json(LISTA_CYD, binaries_cyd, version, published_at)
+    #if binary_phantom:
+    #    atualizar_lista_json(LISTA_PHANTOM, [binary_phantom], version, published_at)
     if binary_tembed:
         atualizar_lista_json(LISTA_TEMBED, [binary_tembed], version, published_at)
     if binary_tdeck:
