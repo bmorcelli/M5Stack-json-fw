@@ -128,7 +128,7 @@ jobs:
         git push
 
     - name: Trigger Translate if M5Burner catalog changed
-      if: env.FILES_ADDED == 'true'
+      if: env.FORCE_DOWNLOAD_ALL == 'true'
       env:
         GH_TOKEN: ${{ github.token }}
       run: gh workflow run translate.yml --ref "$GITHUB_REF_NAME"
