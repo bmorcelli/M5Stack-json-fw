@@ -626,6 +626,50 @@
         "fid": "CFWG7WAU3JMWOWNPWYBAGSJL4O7QD4OG",
         "versions": [
             {
+                "version": "2.7.0",
+                "published_at": "2026-05-24",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.7.0/Launcher-smoochiee-board.bin",
+                "Fs": 1354320,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1288784,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1288784,
+                        "partition_size": 1572864,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1572864,
+                            "source_offset": 65536,
+                            "copy_size": 1288784,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-24T19:02:57Z",
+                        "etag": "\"0x8DEB9C3AB1B94A1\"",
+                        "last_modified": "Sun, 24 May 2026 18:38:37 GMT"
+                    }
+                }
+            },
+            {
                 "version": "2.6.9",
                 "published_at": "2026-05-11",
                 "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.9/Launcher-smoochiee-board.bin",
@@ -1221,80 +1265,6 @@
                         "analyzed_at": "2026-05-16T19:50:58Z",
                         "etag": "\"0x8DE1C3938566D09\"",
                         "last_modified": "Wed, 05 Nov 2025 07:02:01 GMT"
-                    }
-                }
-            },
-            {
-                "version": "2.6.2",
-                "published_at": "2025-10-20",
-                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.2/Launcher-smoochiee-board.bin",
-                "Fs": 1475072,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1409536,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "smoochiee-v2",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1409536,
-                        "partition_size": 2031616,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2031616,
-                            "source_offset": 65536,
-                            "copy_size": 1409536,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "sys",
-                            "role": "fat",
-                            "size": 1048576,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "vfs",
-                            "role": "fat",
-                            "size": 2097152,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 2949120,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:58Z",
-                        "etag": "\"0x8DE0FE873DD35D6\"",
-                        "last_modified": "Mon, 20 Oct 2025 14:53:38 GMT"
                     }
                 }
             }

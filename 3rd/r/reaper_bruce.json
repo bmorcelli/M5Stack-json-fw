@@ -64,5 +64,61 @@
         ],
         "esp": "s3",
         "category": "reaper_bruce"
+    },
+    {
+        "name": "Launcher (Reaper)",
+        "author": "bmorcelli",
+        "description": "With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI.",
+        "cover": "8a0100966905599183f9431ea873058f.gif",
+        "github": "https://github.com/bmorcelli/Launcher",
+        "fid": "CFWULDHFVO55R42V3BW5LGK4LTC3AZOP",
+        "versions": [
+            {
+                "version": "2.7.0",
+                "published_at": "2026-05-24",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.7.0/Launcher-reaper.bin",
+                "Fs": 1382208,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1316672,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "reaper-bruce",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1316672,
+                        "partition_size": 1572864,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1572864,
+                            "source_offset": 65536,
+                            "copy_size": 1316672,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-24T19:02:54Z",
+                        "etag": "\"0x8DEB9C3AB17C85B\"",
+                        "last_modified": "Sun, 24 May 2026 18:38:37 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "reaper_bruce",
+        "esp": "s3"
     }
 ]
