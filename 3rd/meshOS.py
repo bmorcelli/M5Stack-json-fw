@@ -15,9 +15,9 @@ CONFIGURATOR_URL = "https://meshcore.co.uk/configurator/"
 FIRMWARE_CONFIG = {
     "name": "MeshOS",
     "author": "meshcore",
-    "cover": "https://meshcore.co.uk/img/lora.svg",
-    "github": "https://meshcore.co.uk/configurator/",
-    "description": "Easy to use, smartphone-like MeshCore experience",
+    "cover": "",
+    "github": "https://meshcore.co.uk/activate.html",
+    "description": "Easy to use, smartphone-like MeshCore experience. Activate your license on: https://meshcore.co.uk/activate.html",
     "fid_prefix": "MeshOS",
     "devices": [
         {
