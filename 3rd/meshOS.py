@@ -10,6 +10,7 @@ from urllib.request import Request, urlopen
 
 CONFIG_URL = "https://meshcore.co.uk/configurator/config.json"
 BASE_URL = "https://meshcore.co.uk"
+CONFIGURATOR_URL = "https://meshcore.co.uk/configurator/"
 
 FIRMWARE_CONFIG = {
     "name": "MeshOS",
@@ -110,7 +111,7 @@ def _version_key(version: str):
 
 
 def _select_file(files: list):
-    preferred_types = ("flash-wipe", "flash-update", "download")
+    preferred_types = ("flash-update", "flash-wipe", "download")
     for file_type in preferred_types:
         for item in files:
             name = item.get("name", "")
@@ -125,7 +126,7 @@ def _select_file(files: list):
 
 def _build_file_url(config_data: dict, file_name: str) -> str:
     static_path = config_data.get("staticPath", "/firmware").strip("/")
-    return urljoin(BASE_URL + "/", f"{static_path}/{file_name}")
+    return urljoin(CONFIGURATOR_URL, f"{static_path}/{file_name}")
 
 
 def collect_versions(config_data: dict, device_config: dict, published_at: str):
