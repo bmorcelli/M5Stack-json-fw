@@ -10,22 +10,21 @@
             {
                 "version": "v1.0.1",
                 "published_at": "2026-05-17",
-                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-1.0.1.bin",
-                "Fs": 10667312,
-                "nb": true,
-                "ao": 0,
-                "as": 10667312,
+                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-1.0.1-merged.bin",
+                "Fs": 10732848,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 10667312,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "t-display-p4",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 10667312,
-                        "partition_size": 10667312,
+                        "partition_size": 14680064,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -35,44 +34,51 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 10667312,
-                            "source_offset": 0,
+                            "size": 14680064,
+                            "source_offset": 65536,
                             "copy_size": 10667312,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "storage",
+                            "role": "spiffs",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T22:26:35Z",
-                        "etag": "\"69e75c0b-a2c530\"",
-                        "last_modified": "Tue, 21 Apr 2026 11:14:19 GMT"
+                        "analyzed_at": "2026-05-25T22:29:51Z",
+                        "etag": "\"69e75c38-a3c530\"",
+                        "last_modified": "Tue, 21 Apr 2026 11:15:04 GMT"
                     }
                 }
             },
             {
                 "version": "v1.0.0",
                 "published_at": "2026-05-17",
-                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4.bin",
-                "Fs": 10534800,
-                "nb": true,
-                "ao": 0,
-                "as": 10534800,
+                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-merged.bin",
+                "Fs": 10600336,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 10534800,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "t-display-p4",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 10534800,
-                        "partition_size": 10534800,
+                        "partition_size": 14680064,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -82,28 +88,36 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 10534800,
-                            "source_offset": 0,
+                            "size": 14680064,
+                            "source_offset": 65536,
                             "copy_size": 10534800,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "storage",
+                            "role": "spiffs",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T22:26:35Z",
-                        "etag": "\"69e75be7-a0bf90\"",
-                        "last_modified": "Tue, 21 Apr 2026 11:13:43 GMT"
+                        "analyzed_at": "2026-05-25T22:29:51Z",
+                        "etag": "\"69e75bf3-a1bf90\"",
+                        "last_modified": "Tue, 21 Apr 2026 11:13:55 GMT"
                     }
                 }
             }
         ],
-        "category": "t-display-p4",
-        "esp": "p4"
+        "esp": "p4",
+        "category": "t-display-p4"
     },
     {
         "name": "MeshOS (T-Display P4 LCD)",
@@ -116,22 +130,21 @@
             {
                 "version": "v1.0.1",
                 "published_at": "2026-05-17",
-                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-LCD-1.0.1.bin",
-                "Fs": 10683632,
-                "nb": true,
-                "ao": 0,
-                "as": 10683632,
+                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-LCD-1.0.1-merged.bin",
+                "Fs": 10749168,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 10683632,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "t-display-p4",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 10683632,
-                        "partition_size": 10683632,
+                        "partition_size": 14680064,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -141,44 +154,51 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 10683632,
-                            "source_offset": 0,
+                            "size": 14680064,
+                            "source_offset": 65536,
                             "copy_size": 10683632,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "storage",
+                            "role": "spiffs",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T22:26:35Z",
-                        "etag": "\"69e75c0b-a304f0\"",
-                        "last_modified": "Tue, 21 Apr 2026 11:14:19 GMT"
+                        "analyzed_at": "2026-05-25T22:29:51Z",
+                        "etag": "\"69e75bc8-a404f0\"",
+                        "last_modified": "Tue, 21 Apr 2026 11:13:12 GMT"
                     }
                 }
             },
             {
                 "version": "v1.0.0",
                 "published_at": "2026-05-17",
-                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-LCD.bin",
-                "Fs": 10550688,
-                "nb": true,
-                "ao": 0,
-                "as": 10550688,
+                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-LCD-merged.bin",
+                "Fs": 10616224,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 10550688,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "t-display-p4",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 10550688,
-                        "partition_size": 10550688,
+                        "partition_size": 14680064,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -188,27 +208,35 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 10550688,
-                            "source_offset": 0,
+                            "size": 14680064,
+                            "source_offset": 65536,
                             "copy_size": 10550688,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "storage",
+                            "role": "spiffs",
+                            "size": 1048576,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T22:26:35Z",
-                        "etag": "\"69e75ba8-a0fda0\"",
-                        "last_modified": "Tue, 21 Apr 2026 11:12:40 GMT"
+                        "analyzed_at": "2026-05-25T22:29:51Z",
+                        "etag": "\"69e75bb5-a1fda0\"",
+                        "last_modified": "Tue, 21 Apr 2026 11:12:53 GMT"
                     }
                 }
             }
         ],
-        "category": "t-display-p4",
-        "esp": "p4"
+        "esp": "p4",
+        "category": "t-display-p4"
     }
 ]

@@ -111,7 +111,7 @@ def _version_key(version: str):
 
 
 def _select_file(files: list):
-    preferred_types = ("flash-update", "flash-wipe", "download")
+    preferred_types = ("flash-wipe", "flash-update", "download")
     for file_type in preferred_types:
         for item in files:
             name = item.get("name", "")
