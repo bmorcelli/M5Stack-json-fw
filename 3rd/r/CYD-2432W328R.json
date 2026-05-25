@@ -1065,6 +1065,50 @@
         "fid": "CFWXBGCRJCWUWZSJ7NHTARCEFNFRFHMS",
         "versions": [
             {
+                "version": "2.7.2",
+                "published_at": "2026-05-25",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.7.2/Launcher-CYD-2432W328R.bin",
+                "Fs": 1349632,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1284096,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cyd-2432w328r",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1284096,
+                        "partition_size": 1376256,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1376256,
+                            "source_offset": 65536,
+                            "copy_size": 1284096,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-25T19:00:34Z",
+                        "etag": "\"0x8DEBA8FCB805BB3\"",
+                        "last_modified": "Mon, 25 May 2026 18:59:49 GMT"
+                    }
+                }
+            },
+            {
                 "version": "2.7.0",
                 "published_at": "2026-05-24",
                 "file": "https://github.com/bmorcelli/Launcher/releases/download/2.7.0/Launcher-CYD-2432W328R.bin",
@@ -1527,60 +1571,6 @@
                         "analyzed_at": "2026-05-21T15:36:14Z",
                         "etag": "\"0x8DE2AFD02FFE155\"",
                         "last_modified": "Mon, 24 Nov 2025 01:58:49 GMT"
-                    }
-                }
-            },
-            {
-                "version": "2.6.3",
-                "published_at": "2025-11-05",
-                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.3/Launcher-CYD-2432W328R.bin",
-                "Fs": 1471088,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1405552,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "cyd-2432w328r",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1405552,
-                        "partition_size": 1441792,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 1441792,
-                            "source_offset": 65536,
-                            "copy_size": 1405552,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 131072,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-21T15:36:14Z",
-                        "etag": "\"0x8DE1C39382F1407\"",
-                        "last_modified": "Wed, 05 Nov 2025 07:02:01 GMT"
                     }
                 }
             }

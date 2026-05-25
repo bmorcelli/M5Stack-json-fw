@@ -74,6 +74,53 @@
         "fid": "CFW3TMV2H6G2YR2VVPOVKXUKPUQ4BESO",
         "versions": [
             {
+                "version": "v2.4.2",
+                "published_at": "2026-05-25",
+                "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.4.2/CYM-NM28C5.bin",
+                "Fs": 2792144,
+                "nb": true,
+                "ao": 0,
+                "as": 2792144,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "nm-cyd-c5",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2792144,
+                        "partition_size": 2792144,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2792144,
+                            "source_offset": 0,
+                            "copy_size": 2792144,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-25T19:00:31Z",
+                        "etag": "\"0x8DEBA8A47399FD4\"",
+                        "last_modified": "Mon, 25 May 2026 18:20:19 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.6.14",
                 "published_at": "2026-05-18",
                 "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v1.6.14/CYM-NM28C5.bin",
@@ -493,53 +540,6 @@
                         "analyzed_at": "2026-05-16T19:50:54Z",
                         "etag": "\"0x8DEA4E9ACD12DA8\"",
                         "last_modified": "Tue, 28 Apr 2026 05:47:46 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.5.5",
-                "published_at": "2026-04-25",
-                "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v0.5.5/CYM-NM28C5.bin",
-                "Fs": 2109488,
-                "nb": true,
-                "ao": 0,
-                "as": 2109488,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "nm-cyd-c5",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 2109488,
-                        "partition_size": 2109488,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2109488,
-                            "source_offset": 0,
-                            "copy_size": 2109488,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:54Z",
-                        "etag": "\"0x8DEA2D42E3C57E0\"",
-                        "last_modified": "Sat, 25 Apr 2026 14:08:52 GMT"
                     }
                 }
             }
