@@ -8,6 +8,60 @@
         "fid": "CFWN34VYCGIOYTKADFVWJSN35F5UDAVK",
         "versions": [
             {
+                "version": "1.15",
+                "published_at": "2026-05-25",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.15/Bruce-LAUNCHER_CYD-2432S028.bin",
+                "Fs": 2389280,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2323744,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cyd",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2323744,
+                        "partition_size": 2555904,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2555904,
+                            "source_offset": 65536,
+                            "copy_size": 2323744,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-26T00:09:28Z",
+                        "etag": "\"0x8DEBAB87024FC3C\"",
+                        "last_modified": "Mon, 25 May 2026 23:50:45 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.14",
                 "published_at": "2026-02-01",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/1.14/Bruce-LAUNCHER_CYD-2432S028.bin",
@@ -492,60 +546,6 @@
                         "last_modified": "Wed, 05 Mar 2025 23:37:08 GMT"
                     }
                 }
-            },
-            {
-                "version": "1.9",
-                "published_at": "2025-03-02",
-                "file": "https://github.com/BruceDevices/firmware/releases/download/1.9/Bruce-LAUNCHER_CYD-2432S028.bin",
-                "Fs": 2582992,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2517456,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "cyd",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2517456,
-                        "partition_size": 3670016,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3670016,
-                            "source_offset": 65536,
-                            "copy_size": 2517456,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 458752,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:49Z",
-                        "etag": "\"0x8DD598D816EDB6D\"",
-                        "last_modified": "Sun, 02 Mar 2025 13:24:05 GMT"
-                    }
-                }
             }
         ],
         "esp": "32",
@@ -562,19 +562,19 @@
                 "version": "S028",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2432S028.bin",
-                "Fs": 2389600,
+                "Fs": 2389280,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2324064,
+                "as": 2323744,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "cyd",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2324064,
+                        "image_size": 2323744,
                         "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -587,7 +587,7 @@
                             "role": "firmware",
                             "size": 2555904,
                             "source_offset": 65536,
-                            "copy_size": 2324064,
+                            "copy_size": 2323744,
                             "required": true
                         },
                         {
@@ -606,9 +606,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T20:54:38Z",
-                        "etag": "\"0x8DEBA9F6EFD26BA\"",
-                        "last_modified": "Mon, 25 May 2026 20:51:45 GMT"
+                        "analyzed_at": "2026-05-26T00:09:27Z",
+                        "etag": "\"0x8DEBAB8725B57BC\"",
+                        "last_modified": "Mon, 25 May 2026 23:50:48 GMT"
                     }
                 }
             },
@@ -616,19 +616,19 @@
                 "version": "CYD-2USB",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2USB.bin",
-                "Fs": 2389536,
+                "Fs": 2389232,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2324000,
+                "as": 2323696,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "cyd",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2324000,
+                        "image_size": 2323696,
                         "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -641,7 +641,7 @@
                             "role": "firmware",
                             "size": 2555904,
                             "source_offset": 65536,
-                            "copy_size": 2324000,
+                            "copy_size": 2323696,
                             "required": true
                         },
                         {
@@ -660,9 +660,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T20:54:39Z",
-                        "etag": "\"0x8DEBA9F6F1C726A\"",
-                        "last_modified": "Mon, 25 May 2026 20:51:45 GMT"
+                        "analyzed_at": "2026-05-26T00:09:28Z",
+                        "etag": "\"0x8DEBAB872644E50\"",
+                        "last_modified": "Mon, 25 May 2026 23:50:48 GMT"
                     }
                 }
             },
@@ -670,19 +670,19 @@
                 "version": "W328C",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2432W328C.bin",
-                "Fs": 2388896,
+                "Fs": 2388576,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2323360,
+                "as": 2323040,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "cyd",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2323360,
+                        "image_size": 2323040,
                         "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -695,7 +695,7 @@
                             "role": "firmware",
                             "size": 2555904,
                             "source_offset": 65536,
-                            "copy_size": 2323360,
+                            "copy_size": 2323040,
                             "required": true
                         },
                         {
@@ -714,9 +714,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T20:54:39Z",
-                        "etag": "\"0x8DEBA9F6EF01611\"",
-                        "last_modified": "Mon, 25 May 2026 20:51:45 GMT"
+                        "analyzed_at": "2026-05-26T00:09:28Z",
+                        "etag": "\"0x8DEBAB8725C6802\"",
+                        "last_modified": "Mon, 25 May 2026 23:50:48 GMT"
                     }
                 }
             },
@@ -724,19 +724,19 @@
                 "version": "W328R/S024R",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
-                "Fs": 2390144,
+                "Fs": 2389840,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2324608,
+                "as": 2324304,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "cyd",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2324608,
+                        "image_size": 2324304,
                         "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -749,7 +749,7 @@
                             "role": "firmware",
                             "size": 2555904,
                             "source_offset": 65536,
-                            "copy_size": 2324608,
+                            "copy_size": 2324304,
                             "required": true
                         },
                         {
@@ -768,16 +768,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-25T20:54:39Z",
-                        "etag": "\"0x8DEBA9F6EF7130E\"",
-                        "last_modified": "Mon, 25 May 2026 20:51:45 GMT"
+                        "analyzed_at": "2026-05-26T00:09:28Z",
+                        "etag": "\"0x8DEBAB87261448D\"",
+                        "last_modified": "Mon, 25 May 2026 23:50:48 GMT"
                     }
                 }
             }
         ],
         "fid": "CFW704U4QG18DZO94DWWO0H0GJMZC30V",
-        "esp": "32",
-        "category": "CYD"
+        "category": "CYD",
+        "esp": "32"
     },
     {
         "name": "ESP32 MFA Authenticator",
