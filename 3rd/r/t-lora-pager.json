@@ -1893,6 +1893,60 @@
         "fid": "CFWJBA62VDRQOGEXQEPVSOFKTOVT5PVD",
         "versions": [
             {
+                "version": "v0.1.27-alpha",
+                "published_at": "2026-05-30",
+                "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.27-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
+                "Fs": 3862816,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3797280,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3797280,
+                        "partition_size": 4194304,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4194304,
+                            "source_offset": 65536,
+                            "copy_size": 3797280,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-05-30T17:49:25Z",
+                        "etag": "\"0x8DEBE71C14195FF\"",
+                        "last_modified": "Sat, 30 May 2026 17:34:51 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.1.26-alpha",
                 "published_at": "2026-05-19",
                 "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.26-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
@@ -2375,60 +2429,6 @@
                         "analyzed_at": "2026-05-16T19:50:47Z",
                         "etag": "\"0x8DE9EB3E5A0CDB6\"",
                         "last_modified": "Mon, 20 Apr 2026 08:07:42 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.1.17-alpha",
-                "published_at": "2026-04-19",
-                "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.17-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
-                "Fs": 3826992,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3761456,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3761456,
-                        "partition_size": 4194304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 65536,
-                            "copy_size": 3761456,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "ffat",
-                            "role": "fat",
-                            "size": 8257536,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:47Z",
-                        "etag": "\"0x8DE9E16B637C5DE\"",
-                        "last_modified": "Sun, 19 Apr 2026 13:22:31 GMT"
                     }
                 }
             }
