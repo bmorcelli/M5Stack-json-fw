@@ -8769,6 +8769,53 @@
     "fid": "CFW3TMV2H6G2YR2VVPOVKXUKPUQ4BESO",
     "versions": [
       {
+        "version": "v2.7.0",
+        "published_at": "2026-06-04",
+        "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.7.0/CYM-NM28C5.bin",
+        "Fs": 2882240,
+        "nb": true,
+        "ao": 0,
+        "as": 2882240,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "nm-cyd-c5",
+          "app": {
+            "source_offset": 0,
+            "image_size": 2882240,
+            "partition_size": 2882240,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2882240,
+              "source_offset": 0,
+              "copy_size": 2882240,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-04T19:16:18Z",
+            "etag": "\"0x8DEC26AA7C2F3CE\"",
+            "last_modified": "Thu, 04 Jun 2026 18:54:07 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.6.46",
         "published_at": "2026-06-02",
         "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.6.46/CYM-NM28C5.bin",
@@ -9188,53 +9235,6 @@
             "analyzed_at": "2026-05-16T19:50:54Z",
             "etag": "\"0x8DEA66A94DC8585\"",
             "last_modified": "Thu, 30 Apr 2026 03:43:02 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.7.6",
-        "published_at": "2026-04-29",
-        "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v0.7.6/CYM-NM28C5.bin",
-        "Fs": 2371792,
-        "nb": true,
-        "ao": 0,
-        "as": 2371792,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "nm-cyd-c5",
-          "app": {
-            "source_offset": 0,
-            "image_size": 2371792,
-            "partition_size": 2371792,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2371792,
-              "source_offset": 0,
-              "copy_size": 2371792,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:54Z",
-            "etag": "\"0x8DEA5ABBBF0A5A0\"",
-            "last_modified": "Wed, 29 Apr 2026 04:56:54 GMT"
           }
         }
       }
