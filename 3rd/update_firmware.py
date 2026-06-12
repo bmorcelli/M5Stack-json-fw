@@ -12,10 +12,10 @@ import requests
 
 def load_firmware_configs():
     """
-    Carrega as configurações de firmware do arquivo update_firmware.source
+    Carrega as configurações de firmware do arquivo update_firmware.json
     
     Este arquivo contém todas as configurações de firmware em formato JSON.
-    Para editar as configurações, modifique apenas o arquivo update_firmware.source.
+    Para editar as configurações, modifique apenas o arquivo update_firmware.json.
     
     Estrutura das configurações:
     - name: Nome do firmware
@@ -30,7 +30,7 @@ def load_firmware_configs():
       - asset_contains: String que deve estar no nome do asset para identificar o arquivo
       - json: Arquivo JSON do database onde as informações serão salvas
     """
-    source_file = os.path.join(os.path.dirname(__file__), "update_firmware.source")
+    source_file = os.path.join(os.path.dirname(__file__), "update_firmware.json")
     try:
         with open(source_file, "r", encoding="utf-8") as f:
             return json.load(f)
