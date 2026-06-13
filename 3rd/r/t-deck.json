@@ -4750,29 +4750,28 @@
         "name": "meshcomod",
         "author": "ALLFATHER-BV",
         "description": "MeshCore companion-radio firmware with a full LVGL touch UI for the LilyGo T-Deck / T-Deck Plus (ESP32-S3) \u2014 LoRa mesh DMs, channels & room servers, contacts, an immersive map (online tiles + offline SD /maps/osm PNG packs), and 6 on-screen + hardware keyboard languages.",
-        "cover": "https://private-user-images.githubusercontent.com/174701007/553514979-5c4ff275-b306-4969-bb32-dd28298133c3.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODEyNzg2MDEsIm5iZiI6MTc4MTI3ODMwMSwicGF0aCI6Ii8xNzQ3MDEwMDcvNTUzNTE0OTc5LTVjNGZmMjc1LWIzMDYtNDk2OS1iYjMyLWRkMjgyOTgxMzNjMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxMlQxNTMxNDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zZmJhMTBiMzljYzRlODc5YWMzM2M5OTdkY2ZiZmNhN2E5MzEwMjRlMzBmMjZkYmNjOWNkOGViZTNlZTYyOTMwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.rzXLKd390HRNMVCMesbvtWIvlGUqxaleKXGVCKHQvBc",
+        "cover": "https://github.com/user-attachments/assets/5c4ff275-b306-4969-bb32-dd28298133c3",
         "github": "https://github.com/ALLFATHER-BV/meshcomod",
         "checkFileOnRepo": true,
         "versions": [
             {
                 "version": "beta_8",
                 "published_at": "2026-06-12",
-                "file": "https://github.com/ALLFATHER-BV/meshcomod/raw/refs/heads/main/prebuilt/meshcomod-tdeck.bin",
-                "Fs": 2820496,
-                "nb": true,
-                "ao": 0,
-                "as": 2820496,
+                "file": "https://github.com/ALLFATHER-BV/meshcomod/raw/refs/heads/main/prebuilt/meshcomod-tdeck-merged.bin",
+                "Fs": 2886032,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 2820496,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "t-deck",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 2820496,
-                        "partition_size": 2820496,
+                        "partition_size": 4063232,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -4782,21 +4781,29 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2820496,
-                            "source_offset": 0,
+                            "size": 4063232,
+                            "source_offset": 65536,
                             "copy_size": 2820496,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-13T00:03:08Z",
-                        "etag": "W/\"da60a2fdcc324f1f4349585ebde04988c653f96dbeb7b6e0403cd995212472da\""
+                        "analyzed_at": "2026-06-13T20:33:23Z",
+                        "etag": "W/\"0ac9c5d85dc03a6512e4208bd3c2bd002503821c62a90ba4fd40a5565f3bea9a\""
                     }
                 }
             }
