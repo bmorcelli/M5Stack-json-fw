@@ -955,6 +955,60 @@
         "fid": "CFW3XAYOV5FTFDI3MOZD5UGN4BSG3VZ2",
         "versions": [
             {
+                "version": "v3.6.0",
+                "published_at": "2026-06-14",
+                "file": "https://github.com/JesseCHale/HaleHound-CYD/releases/download/v3.6.0/HaleHound-CYD-FULL.bin",
+                "Fs": 2681616,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2616080,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cyd",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2616080,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 2616080,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-14T20:41:59Z",
+                        "etag": "\"0x8DECA544E99681D\"",
+                        "last_modified": "Sun, 14 Jun 2026 20:34:17 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v3.5.5",
                 "published_at": "2026-04-03",
                 "file": "https://github.com/JesseCHale/HaleHound-CYD/releases/download/v3.5.5/HaleHound-CYD-FULL.bin",
@@ -1437,60 +1491,6 @@
                         "analyzed_at": "2026-05-16T19:50:50Z",
                         "etag": "\"0x8DE71D360EDB20C\"",
                         "last_modified": "Sun, 22 Feb 2026 05:29:41 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v2.7.0",
-                "published_at": "2026-02-20",
-                "file": "https://github.com/JesseCHale/HaleHound-CYD/releases/download/v2.7.0/HaleHound-CYD-FULL.bin",
-                "Fs": 2180368,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2114832,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "cyd",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2114832,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 2114832,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 917504,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:50Z",
-                        "etag": "\"0x8DE702F763DB6E8\"",
-                        "last_modified": "Fri, 20 Feb 2026 03:23:48 GMT"
                     }
                 }
             }
