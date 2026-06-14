@@ -26092,30 +26092,30 @@
     "category": "t-deck"
   },
   {
-    "name": "meshcomod",
+    "name": "WADAMESH (T-Deck Plus)",
     "author": "ALLFATHER-BV",
-    "description": "MeshCore companion-radio firmware with a full LVGL touch UI for the LilyGo T-Deck / T-Deck Plus (ESP32-S3) \u2014 LoRa mesh DMs, channels & room servers, contacts, an immersive map (online tiles + offline SD /maps/osm PNG packs), and 6 on-screen + hardware keyboard languages.",
-    "cover": "https://github.com/user-attachments/assets/5c4ff275-b306-4969-bb32-dd28298133c3",
-    "github": "https://github.com/ALLFATHER-BV/meshcomod",
-    "checkFileOnRepo": true,
+    "description": "MeshCore companion radio with a full touch UI for the LilyGo T-Deck \u2014 LoRa mesh DMs, channels & room servers, contacts, offline maps, and multi-language keyboards.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFW7UKIJW436AWBCH5OTRSG3Q7CK5PNN",
     "versions": [
       {
-        "version": "beta_8",
-        "published_at": "2026-06-12",
-        "file": "https://github.com/ALLFATHER-BV/meshcomod/raw/refs/heads/main/prebuilt/meshcomod-tdeck-merged.bin",
-        "Fs": 2886032,
+        "version": "beta_3",
+        "published_at": "2026-06-13",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_3/wadamesh-tdeck-merged.bin",
+        "Fs": 2915392,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2820496,
+        "as": 2849856,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-deck",
           "app": {
             "source_offset": 65536,
-            "image_size": 2820496,
+            "image_size": 2849856,
             "partition_size": 4063232,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -26128,7 +26128,7 @@
               "role": "firmware",
               "size": 4063232,
               "source_offset": 65536,
-              "copy_size": 2820496,
+              "copy_size": 2849856,
               "required": true
             },
             {
@@ -26147,16 +26147,69 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-06-13T20:33:23Z",
-            "etag": "W/\"0ac9c5d85dc03a6512e4208bd3c2bd002503821c62a90ba4fd40a5565f3bea9a\""
+            "analyzed_at": "2026-06-14T12:31:26Z",
+            "etag": "\"0x8DEC991305AC9CE\"",
+            "last_modified": "Sat, 13 Jun 2026 21:17:35 GMT"
+          }
+        }
+      },
+      {
+        "version": "beta_2",
+        "published_at": "2026-06-13",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_2/wadamesh-tdeck-merged.bin",
+        "Fs": 2915008,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2849472,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2849472,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 2849472,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-14T12:31:26Z",
+            "etag": "\"0x8DEC9530D4EB9C7\"",
+            "last_modified": "Sat, 13 Jun 2026 13:52:47 GMT"
           }
         }
       }
     ],
-    "lastCommit": "833bfee78d06b5851cef32eef17000df384f9df9",
-    "fid": "CFWRV2P7FF85J1W58TNVMYZG2L2Y56TX",
-    "esp": "32",
-    "category": "t-deck"
+    "category": "t-deck",
+    "esp": "s3"
   },
   {
     "name": "ChirpR OS",
