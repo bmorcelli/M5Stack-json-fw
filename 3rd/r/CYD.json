@@ -1,5 +1,73 @@
 [
     {
+        "name": "ASCII-Aquarium (CYD)",
+        "author": "POWER-PILL",
+        "description": "A tiny animated ASCII fish tank for the ESP32-2432S028R Cheap Yellow Display.",
+        "cover": "https://github.com/POWER-PILL/ASCII-Aquarium/raw/refs/heads/main/docs/assets/ASCII_Aqurium_Title_GIF.gif",
+        "github": "https://github.com/POWER-PILL/ASCII-Aquarium",
+        "fid": "CFWIKVVCUFWKV6INJCCPRBVTQS36UPS4",
+        "versions": [
+            {
+                "version": "v2.20",
+                "published_at": "2026-06-01",
+                "file": "https://github.com/POWER-PILL/ASCII-Aquarium/releases/download/v2.20/ascii-aquarium-cyd-v2.20.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1091296,
+                "so": 2686976,
+                "ss": 1441792,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cyd",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1091296,
+                        "partition_size": 1310720,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1310720,
+                            "source_offset": 65536,
+                            "copy_size": 1091296,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1441792,
+                            "source_offset": 2686976,
+                            "copy_size": 1441792,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-06-15T01:49:03Z",
+                        "etag": "\"0x8DEBFEB0AA02D4A\"",
+                        "last_modified": "Mon, 01 Jun 2026 14:35:34 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "CYD",
+        "esp": "32"
+    },
+    {
         "name": "Bruce (CYD S028R)",
         "author": "pr3y",
         "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
@@ -955,6 +1023,60 @@
         "fid": "CFW3XAYOV5FTFDI3MOZD5UGN4BSG3VZ2",
         "versions": [
             {
+                "version": "v3.6.1",
+                "published_at": "2026-06-15",
+                "file": "https://github.com/JesseCHale/HaleHound-CYD/releases/download/v3.6.1/HaleHound-CYD-FULL.bin",
+                "Fs": 2682736,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2617200,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cyd",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2617200,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 2617200,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-15T01:49:03Z",
+                        "etag": "\"0x8DECA7F95ABC54D\"",
+                        "last_modified": "Mon, 15 Jun 2026 01:44:05 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v3.6.0",
                 "published_at": "2026-06-14",
                 "file": "https://github.com/JesseCHale/HaleHound-CYD/releases/download/v3.6.0/HaleHound-CYD-FULL.bin",
@@ -1437,60 +1559,6 @@
                         "analyzed_at": "2026-05-16T19:50:50Z",
                         "etag": "\"0x8DE74349675E1A4\"",
                         "last_modified": "Wed, 25 Feb 2026 06:10:34 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v2.8.0",
-                "published_at": "2026-02-22",
-                "file": "https://github.com/JesseCHale/HaleHound-CYD/releases/download/v2.8.0/HaleHound-CYD-FULL.bin",
-                "Fs": 2191712,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2126176,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "cyd",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2126176,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 2126176,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 917504,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:50Z",
-                        "etag": "\"0x8DE71D360EDB20C\"",
-                        "last_modified": "Sun, 22 Feb 2026 05:29:41 GMT"
                     }
                 }
             }
