@@ -1,4 +1,5 @@
 import base64
+import fnmatch
 import hashlib
 import json
 import os
@@ -27,7 +28,7 @@ def load_firmware_configs():
     - fid_prefix: Prefixo usado para gerar IDs únicos (FIDs)
     - devices: Lista de dispositivos suportados
       - name: Nome do dispositivo
-      - asset_contains: String que deve estar no nome do asset para identificar o arquivo
+      - asset_contains: Substring ou padrão com '*' para identificar o arquivo
       - json: Arquivo JSON do database onde as informações serão salvas
     """
     source_file = os.path.join(os.path.dirname(__file__), "update_firmware.json")
@@ -96,6 +97,23 @@ def _get_github_headers():
     else:
         print("[update_firmware.py] AVISO: GitHub token não encontrado, usando limite anônimo", flush=True)
     return headers
+
+
+def _asset_matches(asset_name: str, asset_contains: str) -> bool:
+    """
+    Faz match de asset por substring simples ou por padrão com wildcard '*'.
+
+    Compatibilidade:
+    - sem wildcard: comportamento antigo, usando substring
+    - com wildcard: usa match do nome completo, case-insensitive
+    """
+    normalized_asset_name = asset_name.lower()
+    normalized_pattern = asset_contains.lower()
+
+    if "*" in normalized_pattern:
+        return fnmatch.fnmatchcase(normalized_asset_name, normalized_pattern)
+
+    return normalized_pattern in normalized_asset_name
 
 
 def fetch_all_releases(repo_owner: str, repo_name: str):
@@ -178,7 +196,7 @@ def atualizar_firmware(fw_config: dict):
 
                 matching_asset = None
                 for asset in rel.get("assets", []):
-                    if device["asset_contains"].lower() in asset.get("name", "").lower():
+                    if _asset_matches(asset.get("name", ""), device["asset_contains"]):
                         matching_asset = asset
                         break
 
