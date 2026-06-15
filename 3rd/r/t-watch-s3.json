@@ -568,23 +568,25 @@
         "author": "Lilygo",
         "versions": [
             {
-                "version": "SX1262-433",
-                "published_at": "2025-09-04",
-                "file": "https://raw.githubusercontent.com/Xinyuan-LilyGO/TTGO_TWatch_Library/210951fef06c4bfca2c52432f0c49c18f037aa8a/firmware/watch-s3/twatch-s3_factory_sx1262_250904.bin",
-                "Fs": 2712016,
+                "version": "SX1262",
+                "published_at": "2025-12-19",
+                "file": "https://github.com/Xinyuan-LilyGO/LilyGoLib/raw/48baa652fce2f08796fea9c3253dd7a15be53b68/firmware/factory.twatchs3.sx1262.20251219.bin",
+                "Fs": 16777216,
                 "s": 0,
-                "f": 0,
+                "f": 1,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2646480,
+                "as": 2383344,
+                "fo": 8454144,
+                "fs": 8257536,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-watch-s3",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2646480,
-                        "partition_size": 3145728,
+                        "image_size": 2383344,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -594,9 +596,9 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3145728,
+                            "size": 4194304,
                             "source_offset": 65536,
-                            "copy_size": 2646480,
+                            "copy_size": 2383344,
                             "required": true
                         },
                         {
@@ -604,9 +606,9 @@
                             "subtype": "fat",
                             "label": "ffat",
                             "role": "fat",
-                            "size": 10354688,
-                            "source_offset": null,
-                            "copy_size": 0,
+                            "size": 8257536,
+                            "source_offset": 8454144,
+                            "copy_size": 8257536,
                             "required": true
                         }
                     ],
@@ -614,189 +616,32 @@
                         "method": "partition_table",
                         "confidence": "exact",
                         "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:46Z",
-                        "etag": "W/\"8c2d421ae480a8b5fa6a1d973a079d2644ce27ef57c94b935bd83902bdc86cd6\""
-                    }
-                }
-            },
-            {
-                "version": "CC1101",
-                "published_at": "2025-09-04",
-                "file": "https://raw.githubusercontent.com/Xinyuan-LilyGO/TTGO_TWatch_Library/210951fef06c4bfca2c52432f0c49c18f037aa8a/firmware/watch-s3/twatch-s3_factory_cc1101_250904.bin",
-                "Fs": 2699984,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2634448,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-watch-s3",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2634448,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 2634448,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "ffat",
-                            "role": "fat",
-                            "size": 10354688,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:46Z",
-                        "etag": "W/\"766a576a6b88ea3d88c973c669dc059d3bdc3f36f6bea3de75965da88570fab0\""
-                    }
-                }
-            },
-            {
-                "version": "SX1262-920",
-                "published_at": "2025-09-04",
-                "file": "https://raw.githubusercontent.com/Xinyuan-LilyGO/TTGO_TWatch_Library/210951fef06c4bfca2c52432f0c49c18f037aa8a/firmware/watch-s3/twatch-s3_factory_sx1262_920M_250904.bin",
-                "Fs": 2712016,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2646480,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-watch-s3",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2646480,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 2646480,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "ffat",
-                            "role": "fat",
-                            "size": 10354688,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:46Z",
-                        "etag": "W/\"dd8319820714fc5894b9c42ca8e485f1ee5f78964b976abe93dae98d58c6e244\""
-                    }
-                }
-            },
-            {
-                "version": "SX1262-923",
-                "published_at": "2025-09-04",
-                "file": "https://raw.githubusercontent.com/Xinyuan-LilyGO/TTGO_TWatch_Library/210951fef06c4bfca2c52432f0c49c18f037aa8a/firmware/watch-s3/twatch-s3_factory_sx1262_923M_250904.bin",
-                "Fs": 2712016,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2646480,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-watch-s3",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2646480,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 2646480,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "ffat",
-                            "role": "fat",
-                            "size": 10354688,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:46Z",
-                        "etag": "W/\"4a4e61b39917b65f4ff59ba0a25a2061562f210d9bc5210d87d578a02f3afc5f\""
+                        "bytes_downloaded_for_analysis": 16814080,
+                        "analyzed_at": "2026-06-15T14:16:16Z",
+                        "etag": "W/\"71623d6896be74a2098e4c67c6870ac9eb571070725b855edbbd1a5c4514a64a\""
                     }
                 }
             },
             {
                 "version": "SX1280",
-                "published_at": "2025-09-04",
-                "file": "https://raw.githubusercontent.com/Xinyuan-LilyGO/TTGO_TWatch_Library/210951fef06c4bfca2c52432f0c49c18f037aa8a/firmware/watch-s3/twatch-s3_factory_sx1280_250904.bin",
-                "Fs": 2701888,
+                "published_at": "2025-12-19",
+                "file": "https://github.com/Xinyuan-LilyGO/LilyGoLib/raw/48baa652fce2f08796fea9c3253dd7a15be53b68/firmware/factory.twatchs3.sx1280.20251219.bin",
+                "Fs": 16777216,
                 "s": 0,
-                "f": 0,
+                "f": 1,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2636352,
+                "as": 2374976,
+                "fo": 8454144,
+                "fs": 8257536,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-watch-s3",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2636352,
-                        "partition_size": 3145728,
+                        "image_size": 2374976,
+                        "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -806,9 +651,9 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3145728,
+                            "size": 4194304,
                             "source_offset": 65536,
-                            "copy_size": 2636352,
+                            "copy_size": 2374976,
                             "required": true
                         },
                         {
@@ -816,9 +661,9 @@
                             "subtype": "fat",
                             "label": "ffat",
                             "role": "fat",
-                            "size": 10354688,
-                            "source_offset": null,
-                            "copy_size": 0,
+                            "size": 8257536,
+                            "source_offset": 8454144,
+                            "copy_size": 8257536,
                             "required": true
                         }
                     ],
@@ -826,9 +671,9 @@
                         "method": "partition_table",
                         "confidence": "exact",
                         "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:46Z",
-                        "etag": "W/\"736e46b79a9a4e20217fd0772c34da3e378385ea1b3e628ed8115674df28fbe9\""
+                        "bytes_downloaded_for_analysis": 16814080,
+                        "analyzed_at": "2026-06-15T14:16:16Z",
+                        "etag": "W/\"52d0223e855eaf484f10a66568027d5ed903e02c53bfe0ba5ec9c5edaddadc1d\""
                     }
                 }
             }
