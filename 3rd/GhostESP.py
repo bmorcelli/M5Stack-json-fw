@@ -13,7 +13,7 @@ FILES_TO_PROCESS = [
     "AwokMini.zip", "MarauderV6_AwokDual.zip", "MarauderV4_FlipperHub.zip", "Crowtech_LCD.zip", "CYD2USB.zip", "CYD2USB2.4Inch.zip", "LilyGo-S3TWatch-2020.zip",
     "CYD2USB2.4Inch_C.zip", "CYDDualUSB.zip", "CYDMicroUSB.zip",  "LilyGo-TEmbedC1101.zip", "LilyGo-T-Deck.zip"
 ]
-
+LISTA_MARAUDER = "./3rd/database/marauder.json"
 LISTA_MARAUDER_MINI = "./3rd/database/marauder-mini.json"
 LISTA_MARAUDER_V6X = "./3rd/database/marauder-v6x.json"
 LISTA_MARAUDER_V4 = "./3rd/database/marauder-v4.json"
@@ -132,7 +132,7 @@ def main():
 
 
     # Atualizar JSONs
-    # atualizar_lista_json(LISTA_MARAUDER, all_binaries, version, published_at)
+    atualizar_lista_json(LISTA_MARAUDER, all_binaries, version, published_at)
     #if binaries_cyd:
     #    atualizar_lista_json(LISTA_CYD, binaries_cyd, version, published_at)
     #if binary_phantom:
