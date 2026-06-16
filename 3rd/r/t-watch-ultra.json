@@ -655,6 +655,60 @@
         "fid": "CFWZXK2XGQCHAJ4MLIQ3TCQGONMOVAWJ",
         "versions": [
             {
+                "version": "v0.3.8",
+                "published_at": "2026-06-16",
+                "file": "https://github.com/laserir/MCLite/releases/download/v0.3.8/mclite-watch-v0.3.8.bin",
+                "Fs": 2544672,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2479136,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-watch-ultra",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2479136,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2479136,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-16T10:14:09Z",
+                        "etag": "\"0x8DECB88BE5DE0BE\"",
+                        "last_modified": "Tue, 16 Jun 2026 09:22:10 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.3.7",
                 "published_at": "2026-06-15",
                 "file": "https://github.com/laserir/MCLite/releases/download/v0.3.7/mclite-watch-v0.3.7.bin",
@@ -1139,60 +1193,6 @@
                         "last_modified": "Sun, 07 Jun 2026 15:23:26 GMT"
                     }
                 }
-            },
-            {
-                "version": "v0.2.0",
-                "published_at": "2026-06-01",
-                "file": "https://github.com/laserir/MCLite/releases/download/v0.2.0/mclite-watch-v0.2.0.bin",
-                "Fs": 1134752,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1069216,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-watch-ultra",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1069216,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 1069216,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T14:16:17Z",
-                        "etag": "\"0x8DEBFEC6CA8FAB5\"",
-                        "last_modified": "Mon, 01 Jun 2026 14:45:28 GMT"
-                    }
-                }
             }
         ],
         "esp": "s3",
@@ -1206,6 +1206,53 @@
         "github": "https://github.com/sacriphanius/WDGWatch",
         "fid": "CFWBHIZNZ4KEDS2X23ZBTN7PNZ7APC4K",
         "versions": [
+            {
+                "version": "V2.4",
+                "published_at": "2026-06-16",
+                "file": "https://github.com/sacriphanius/WDGWatch/releases/download/V2.4/WDGWatch_SCR_Edition_V2_4.bin",
+                "Fs": 2274848,
+                "nb": true,
+                "ao": 0,
+                "as": 2274848,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-watch-ultra",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2274848,
+                        "partition_size": 2274848,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2274848,
+                            "source_offset": 0,
+                            "copy_size": 2274848,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-16T10:14:09Z",
+                        "etag": "\"0x8DECB8B268457DD\"",
+                        "last_modified": "Tue, 16 Jun 2026 09:39:24 GMT"
+                    }
+                }
+            },
             {
                 "version": "v2.3",
                 "published_at": "2026-06-15",
