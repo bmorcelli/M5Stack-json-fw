@@ -2543,6 +2543,60 @@
         "fid": "CFWTEXLWXNCOD4SSO3GPXVUEJXE4YBNY",
         "versions": [
             {
+                "version": "v0.3.9",
+                "published_at": "2026-06-21",
+                "file": "https://github.com/laserir/MCLite/releases/download/v0.3.9/mclite-v0.3.9.bin",
+                "Fs": 2460816,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2395280,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2395280,
+                        "partition_size": 4194304,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4194304,
+                            "source_offset": 65536,
+                            "copy_size": 2395280,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8323072,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-21T08:49:24Z",
+                        "etag": "\"0x8DECF6CC7660B09\"",
+                        "last_modified": "Sun, 21 Jun 2026 08:12:04 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.3.8",
                 "published_at": "2026-06-16",
                 "file": "https://github.com/laserir/MCLite/releases/download/v0.3.8/mclite-v0.3.8.bin",
@@ -3025,60 +3079,6 @@
                         "analyzed_at": "2026-06-15T14:16:18Z",
                         "etag": "\"0x8DEC5587CBF71AA\"",
                         "last_modified": "Mon, 08 Jun 2026 12:21:37 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.2.2",
-                "published_at": "2026-06-07",
-                "file": "https://github.com/laserir/MCLite/releases/download/v0.2.2/mclite-v0.2.2.bin",
-                "Fs": 1721824,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1656288,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1656288,
-                        "partition_size": 4194304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 65536,
-                            "copy_size": 1656288,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 8323072,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T14:16:18Z",
-                        "etag": "\"0x8DEC4A8AF462AE7\"",
-                        "last_modified": "Sun, 07 Jun 2026 15:23:10 GMT"
                     }
                 }
             }
