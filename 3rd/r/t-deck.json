@@ -5148,59 +5148,12 @@
                 "version": "repo",
                 "published_at": "2026-06-02",
                 "file": "https://github.com/hermes-gadget/SigurdOS-tdeck/raw/refs/heads/dev/firmware/firmware-merged.bin",
-                "Fs": 1991152,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1925616,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1925616,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 1925616,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T14:16:19Z",
-                        "etag": "W/\"08f22ffcd6ac0f69a90218ffd7a31efd07f32cfbd051fcb9e9d1b7342c6b76fb\""
-                    }
-                }
+                "invalid": true,
+                "analysis_error": "Failed to read firmware header: HTTPError: 404 Client Error: Not Found for url: https://github.com/hermes-gadget/SigurdOS-tdeck/raw/refs/heads/dev/firmware/firmware-merged.bin"
             }
         ],
-        "lastCommit": "de694f6a515f5407cd9022a581c85e8dbbd0c8af",
+        "lastCommit": "9403a23f729eda61744abfd120033ee6e95e88f0",
         "fid": "CFWYXM9S0SDKVXBLLRA6IX8GVNB7RIKJ",
-        "esp": "s3",
         "category": "t-deck"
     },
     {
