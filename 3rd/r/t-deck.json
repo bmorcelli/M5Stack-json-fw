@@ -5165,6 +5165,60 @@
         "fid": "CFWAF7ZP2EZ6PUSTWGJO5CQGF7MZAANN",
         "versions": [
             {
+                "version": "v0.1.30-alpha",
+                "published_at": "2026-06-24",
+                "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.30-alpha/trail-mate-tdeck-webflash.bin",
+                "Fs": 3432560,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3367024,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3367024,
+                        "partition_size": 4194304,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4194304,
+                            "source_offset": 65536,
+                            "copy_size": 3367024,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 8257536,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-24T15:23:15Z",
+                        "etag": "\"0x8DED1FC5662D9F5\"",
+                        "last_modified": "Wed, 24 Jun 2026 14:24:44 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.1.29-alpha",
                 "published_at": "2026-06-11",
                 "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.29-alpha/trail-mate-tdeck-webflash.bin",
@@ -5647,60 +5701,6 @@
                         "analyzed_at": "2026-05-16T19:50:53Z",
                         "etag": "\"0x8DE9F832BCF81CF\"",
                         "last_modified": "Tue, 21 Apr 2026 08:51:25 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.1.20-alpha",
-                "published_at": "2026-04-21",
-                "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.20-alpha/trail-mate-tdeck-webflash.bin",
-                "Fs": 3255024,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3189488,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3189488,
-                        "partition_size": 4194304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 65536,
-                            "copy_size": 3189488,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "ffat",
-                            "role": "fat",
-                            "size": 8257536,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:53Z",
-                        "etag": "\"0x8DE9F72050E4B24\"",
-                        "last_modified": "Tue, 21 Apr 2026 06:48:39 GMT"
                     }
                 }
             }
