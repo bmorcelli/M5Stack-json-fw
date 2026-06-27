@@ -32661,8 +32661,8 @@
         }
       }
     ],
-    "category": "t-deck",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-deck"
   },
   {
     "name": "Factory Firmware",
@@ -43828,6 +43828,523 @@
     "fid": "CFWW2L7Q7BDDLSWLRJX3KAC9COHJCSWQ",
     "esp": "s3",
     "category": "t-lora-pager"
+  },
+  {
+    "name": "Camillia-MT (Pager)",
+    "author": "Michael A. Cojocari",
+    "description": "Meshtastic-compatible mesh radio firmware for ESP32-S3 handheld LoRa devices. Features 8 configurable LoRa channels, DMs, GPS, web configuration UI, YAML config via microSD, themes, and traceroute.",
+    "cover": "https://raw.githubusercontent.com/oumike/camillia-mt/main/docs/screenshots/RiCa_screen_20260609_110224.png",
+    "github": "https://github.com/oumike/camillia-mt",
+    "fid": "CFWS6ZPJ4PT77ROTEHJCTVQGGVB3M6XO",
+    "versions": [
+      {
+        "version": "v2.6.6",
+        "published_at": "2026-06-27",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.6/camillia-mt-tlora-pager-tft-v2.6.6.bin",
+        "Fs": 1713568,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1648032,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1648032,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1648032,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:51:59Z",
+            "etag": "\"0x8DED3E85E739975\"",
+            "last_modified": "Sat, 27 Jun 2026 01:06:50 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.6.5",
+        "published_at": "2026-06-26",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.5/camillia-mt-tlora-pager-tft-v2.6.5.bin",
+        "Fs": 1710608,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1645072,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1645072,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1645072,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:51:59Z",
+            "etag": "\"0x8DED319214B4FF6\"",
+            "last_modified": "Fri, 26 Jun 2026 00:23:21 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.6.1",
+        "published_at": "2026-06-24",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.1/camillia-mt-tlora-pager-tft-v2.6.1.bin",
+        "Fs": 1709968,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1644432,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1644432,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1644432,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:51:59Z",
+            "etag": "\"0x8DED22D3FDE87F8\"",
+            "last_modified": "Wed, 24 Jun 2026 20:14:52 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.6.0",
+        "published_at": "2026-06-24",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.0/camillia-mt-tlora-pager-tft-v2.6.0.bin",
+        "Fs": 1706416,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1640880,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1640880,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1640880,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:51:59Z",
+            "etag": "\"0x8DED16B7A132363\"",
+            "last_modified": "Tue, 23 Jun 2026 21:07:47 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.1",
+        "published_at": "2026-06-22",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.5.1/camillia-mt-tlora-pager-tft-v2.5.1.bin",
+        "Fs": 1692256,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1626720,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1626720,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1626720,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:51:59Z",
+            "etag": "\"0x8DECFF20B9AB89D\"",
+            "last_modified": "Mon, 22 Jun 2026 00:06:01 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.0",
+        "published_at": "2026-06-20",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.5.0/camillia-mt-tlora-pager-tft-v2.5.0.bin",
+        "Fs": 1626928,
+        "nb": true,
+        "ao": 0,
+        "as": 1626928,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1626928,
+            "partition_size": 1626928,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1626928,
+              "source_offset": 0,
+              "copy_size": 1626928,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:51:59Z",
+            "etag": "\"0x8DECE4B7E2EC557\"",
+            "last_modified": "Fri, 19 Jun 2026 21:41:16 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.4.0",
+        "published_at": "2026-06-19",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.4.0/camillia-mt-tlora-pager-tft-v2.4.0.bin",
+        "Fs": 1626160,
+        "nb": true,
+        "ao": 0,
+        "as": 1626160,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1626160,
+            "partition_size": 1626160,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1626160,
+              "source_offset": 0,
+              "copy_size": 1626160,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:52:00Z",
+            "etag": "\"0x8DECD9D996E025D\"",
+            "last_modified": "Fri, 19 Jun 2026 00:56:30 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.3.3",
+        "published_at": "2026-06-18",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.3.3/camillia-mt-tlora-pager-tft-v2.3.3.bin",
+        "Fs": 1622928,
+        "nb": true,
+        "ao": 0,
+        "as": 1622928,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1622928,
+            "partition_size": 1622928,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1622928,
+              "source_offset": 0,
+              "copy_size": 1622928,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:52:00Z",
+            "etag": "\"0x8DECCCE50A79272\"",
+            "last_modified": "Thu, 18 Jun 2026 00:12:42 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.3.1",
+        "published_at": "2026-06-17",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.3.1/camillia-mt-tlora-pager-tft-v2.3.1.bin",
+        "Fs": 1621792,
+        "nb": true,
+        "ao": 0,
+        "as": 1621792,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1621792,
+            "partition_size": 1621792,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1621792,
+              "source_offset": 0,
+              "copy_size": 1621792,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:52:00Z",
+            "etag": "\"0x8DECC0583D3C94B\"",
+            "last_modified": "Wed, 17 Jun 2026 00:15:19 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.3.0",
+        "published_at": "2026-06-16",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.3.0/camillia-mt-tlora-pager-tft-v2.3.0.bin",
+        "Fs": 1616560,
+        "nb": true,
+        "ao": 0,
+        "as": 1616560,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1616560,
+            "partition_size": 1616560,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1616560,
+              "source_offset": 0,
+              "copy_size": 1616560,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:52:00Z",
+            "etag": "\"0x8DECB3E8BDA6BE2\"",
+            "last_modified": "Tue, 16 Jun 2026 00:31:02 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-lora-pager",
+    "esp": "s3"
   },
   {
     "name": "Factory firmware",
