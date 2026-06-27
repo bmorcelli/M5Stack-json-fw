@@ -32148,6 +32148,523 @@
     "category": "t-deck"
   },
   {
+    "name": "Camillia-MT (T-Deck)",
+    "author": "Michael A. Cojocari",
+    "description": "Meshtastic-compatible mesh radio firmware for ESP32-S3 handheld LoRa devices. Features 8 configurable LoRa channels, DMs, GPS, web configuration UI, YAML config via microSD, themes, and traceroute.",
+    "cover": "https://raw.githubusercontent.com/oumike/camillia-mt/main/docs/screenshots/RiCa_screen_20260609_110224.png",
+    "github": "https://github.com/oumike/camillia-mt",
+    "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
+    "versions": [
+      {
+        "version": "v2.6.6",
+        "published_at": "2026-06-27",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.6/camillia-mt-tdeck-v2.6.6.bin",
+        "Fs": 1661696,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1596160,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1596160,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1596160,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:27Z",
+            "etag": "\"0x8DED3E85E73E742\"",
+            "last_modified": "Sat, 27 Jun 2026 01:06:50 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.6.5",
+        "published_at": "2026-06-26",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.5/camillia-mt-tdeck-v2.6.5.bin",
+        "Fs": 1658800,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1593264,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1593264,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1593264,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:27Z",
+            "etag": "\"0x8DED319214A669C\"",
+            "last_modified": "Fri, 26 Jun 2026 00:23:21 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.6.1",
+        "published_at": "2026-06-24",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.1/camillia-mt-tdeck-v2.6.1.bin",
+        "Fs": 1658176,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1592640,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1592640,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1592640,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:27Z",
+            "etag": "\"0x8DED22D3FDDC584\"",
+            "last_modified": "Wed, 24 Jun 2026 20:14:52 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.6.0",
+        "published_at": "2026-06-24",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.0/camillia-mt-tdeck-v2.6.0.bin",
+        "Fs": 1654640,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1589104,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1589104,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1589104,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:27Z",
+            "etag": "\"0x8DED16B7A11EC45\"",
+            "last_modified": "Tue, 23 Jun 2026 21:07:47 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.1",
+        "published_at": "2026-06-22",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.5.1/camillia-mt-tdeck-v2.5.1.bin",
+        "Fs": 1640304,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1574768,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1574768,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1574768,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:28Z",
+            "etag": "\"0x8DECFF20B9C16A8\"",
+            "last_modified": "Mon, 22 Jun 2026 00:06:01 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.0",
+        "published_at": "2026-06-20",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.5.0/camillia-mt-tdeck-v2.5.0.bin",
+        "Fs": 1574944,
+        "nb": true,
+        "ao": 0,
+        "as": 1574944,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1574944,
+            "partition_size": 1574944,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1574944,
+              "source_offset": 0,
+              "copy_size": 1574944,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:27Z",
+            "etag": "\"0x8DECE4B7E2AD230\"",
+            "last_modified": "Fri, 19 Jun 2026 21:41:16 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.4.0",
+        "published_at": "2026-06-19",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.4.0/camillia-mt-tdeck-v2.4.0.bin",
+        "Fs": 1574192,
+        "nb": true,
+        "ao": 0,
+        "as": 1574192,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1574192,
+            "partition_size": 1574192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1574192,
+              "source_offset": 0,
+              "copy_size": 1574192,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:28Z",
+            "etag": "\"0x8DECD9D997180DA\"",
+            "last_modified": "Fri, 19 Jun 2026 00:56:30 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.3.3",
+        "published_at": "2026-06-18",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.3.3/camillia-mt-tdeck-v2.3.3.bin",
+        "Fs": 1571088,
+        "nb": true,
+        "ao": 0,
+        "as": 1571088,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1571088,
+            "partition_size": 1571088,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1571088,
+              "source_offset": 0,
+              "copy_size": 1571088,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:28Z",
+            "etag": "\"0x8DECCCE50A39F3F\"",
+            "last_modified": "Thu, 18 Jun 2026 00:12:42 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.3.1",
+        "published_at": "2026-06-17",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.3.1/camillia-mt-tdeck-v2.3.1.bin",
+        "Fs": 1569904,
+        "nb": true,
+        "ao": 0,
+        "as": 1569904,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1569904,
+            "partition_size": 1569904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1569904,
+              "source_offset": 0,
+              "copy_size": 1569904,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:28Z",
+            "etag": "\"0x8DECC0583CF13A4\"",
+            "last_modified": "Wed, 17 Jun 2026 00:15:19 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.3.0",
+        "published_at": "2026-06-16",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.3.0/camillia-mt-tdeck-v2.3.0.bin",
+        "Fs": 1564560,
+        "nb": true,
+        "ao": 0,
+        "as": 1564560,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1564560,
+            "partition_size": 1564560,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1564560,
+              "source_offset": 0,
+              "copy_size": 1564560,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-06-27T21:37:28Z",
+            "etag": "\"0x8DECB3E8BDD010F\"",
+            "last_modified": "Tue, 16 Jun 2026 00:31:02 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-deck",
+    "esp": "s3"
+  },
+  {
     "name": "Factory Firmware",
     "author": "Lilygo",
     "versions": [
