@@ -23,7 +23,8 @@ FILES_TO_PROCESS = [
     "CYDDualUSB.zip",
     "CYDMicroUSB.zip",
     "LilyGo-TEmbedC1101.zip",
-    "LilyGo-T-Deck.zip"
+    "LilyGo-T-Deck.zip",
+    "NM-CYD-C5.zip"
 ]
 LISTA_MARAUDER = "./3rd/database/marauder.json"
 LISTA_MARAUDER_MINI = "./3rd/database/marauder-mini.json"
@@ -32,6 +33,7 @@ LISTA_MARAUDER_V4 = "./3rd/database/marauder-v4.json"
 LISTA_MARAUDER_V8 = "./3rd/database/marauder-v8.json"
 LISTA_MARAUDER_PANCAKE = "./3rd/database/pancake.json"
 LISTA_CYD = "./3rd/database/CYD.json"
+LISTA_NMCYD = "./3rd/database/NM-CYD-C5.json"
 LISTA_PHANTOM = "./3rd/database/phantom.json"
 LISTA_TEMBED = "./3rd/database/t-embed-cc1101.json"
 LISTA_TDECK = "./3rd/database/t-deck.json"
@@ -121,6 +123,7 @@ def main():
     binary_tembed = None
     binary_tdeck = None
     binary_twatch = None
+    nm_cyd_c5 = None
 
     for asset in source_release["assets"]:
         if asset["name"] in FILES_TO_PROCESS:
@@ -142,6 +145,8 @@ def main():
                 marauder_v8 = bin_path
             elif asset["name"] == "MarauderPancake.zip":
                 marauder_pancake = bin_path
+            elif asset["name"] == "NM-CYD-C5.zip":
+                nm_cyd_c5 = bin_path
             else:
                 all_binaries.append(bin_path)
 
@@ -173,6 +178,8 @@ def main():
         atualizar_lista_json(LISTA_MARAUDER_V8, [marauder_v8], version, published_at)
     if marauder_v6x:
         atualizar_lista_json(LISTA_MARAUDER_PANCAKE, [marauder_pancake], version, published_at)
+    if nm_cyd_c5:
+        atualizar_lista_json(LISTA_NMCYD, [nm_cyd_c5], version, published_at)
 
 if __name__ == "__main__":
     main()
