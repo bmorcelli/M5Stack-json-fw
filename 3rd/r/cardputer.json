@@ -11,19 +11,19 @@
                 "version": "Beta",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-m5stack-cardputer.bin",
-                "Fs": 4029504,
+                "Fs": 4109504,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 3963968,
+                "as": 4043968,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "cardputer",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 3963968,
+                        "image_size": 4043968,
                         "partition_size": 5111808,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -36,7 +36,7 @@
                             "role": "firmware",
                             "size": 5111808,
                             "source_offset": 65536,
-                            "copy_size": 3963968,
+                            "copy_size": 4043968,
                             "required": true
                         },
                         {
@@ -55,15 +55,74 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-29T13:53:42Z",
-                        "etag": "\"0x8DED5CF6ACF861A\"",
-                        "last_modified": "Mon, 29 Jun 2026 11:13:16 GMT"
+                        "analyzed_at": "2026-06-29T18:07:40Z",
+                        "etag": "\"0x8DED607230FDEA5\"",
+                        "last_modified": "Mon, 29 Jun 2026 17:52:07 GMT"
                     }
                 }
             }
         ],
         "fid": "CFW134BRLCTDS8LA4X6SDWQ3XGF15CXL",
-        "esp": "s3",
-        "category": "cardputer"
+        "category": "cardputer",
+        "esp": "s3"
+    },
+    {
+        "name": "GLIDE-Synth (Cardputer and ADV)",
+        "author": "CHARL3X",
+        "description": "GLIDE is a continuous-pitch polyphonic slide synth for the M5Stack Cardputer. Four key rows act like strings, every note glides between pitches, and the sounds are generative: you roll, evolve, and keep your own patches. Built by CHARL3X",
+        "cover": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/raw/refs/heads/master/assets/glide-logo.png",
+        "github": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV",
+        "fid": "CFWPTP3BS5HBKOBVJ54T25TQWKZWBGUC",
+        "versions": [
+            {
+                "version": "v1.2-generative",
+                "published_at": "2026-06-28",
+                "file": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/download/v1.2-generative/GLIDE.bin",
+                "Fs": 821728,
+                "nb": true,
+                "ao": 0,
+                "as": 821728,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 821728,
+                        "partition_size": 821728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 821728,
+                            "source_offset": 0,
+                            "copy_size": 821728,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-29T18:07:40Z",
+                        "etag": "\"0x8DED5FFE736AC49\"",
+                        "last_modified": "Mon, 29 Jun 2026 17:00:20 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "cardputer",
+        "esp": "32"
     }
 ]
