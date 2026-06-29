@@ -560,11 +560,11 @@
             }
         ],
         "fid": "CFWWE1XNRQHE1A8CAGZIFIVZ6C4Z7UPJ",
-        "category": "marauder-v4",
-        "esp": "32"
+        "esp": "32",
+        "category": "marauder-v4"
     },
     {
-        "name": "Ghost v1.9",
+        "name": "Ghost v2.0",
         "author": "GhostESP-Revival",
         "description": "Welcome to Ghost ESP, a robust and feature-rich firmware designed for your ESP32 microcontroller, enabling advanced wireless network exploration and security testing. With Ghost ESP installed, you can leverage the power of your ESP32 device to conduct in-depth WiFi and Bluetooth Low Energy (BLE) analysis, launch strategic wireless attacks, and explore a wide range of wireless environments.",
         "cover": "73a76385ad90e1e7537e066187476e77.png",
@@ -575,11 +575,52 @@
                 "version": "MarauderV4_FlipperHub",
                 "published_at": "2026-06-29",
                 "file": "https://github.com/bmorcelli/M5Stack-json-fw/releases/download/GhostESP/MarauderV4_FlipperHub.bin",
-                "invalid": true,
-                "analysis_error": "Failed to read firmware header: HTTPError: 404 Client Error: Not Found for url: https://github.com/bmorcelli/M5Stack-json-fw/releases/download/GhostESP/MarauderV4_FlipperHub.bin"
+                "Fs": 2872416,
+                "nb": true,
+                "ao": 0,
+                "as": 2872416,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v4",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2872416,
+                        "partition_size": 2872416,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2872416,
+                            "source_offset": 0,
+                            "copy_size": 2872416,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-06-29T18:13:17Z",
+                        "etag": "\"0x8DED5E5DCDAD9AE\"",
+                        "last_modified": "Mon, 29 Jun 2026 13:53:56 GMT"
+                    }
+                }
             }
         ],
-        "category": "marauder-v4"
+        "category": "marauder-v4",
+        "esp": "32"
     },
     {
         "name": "Launcher (Marauder V4)",
