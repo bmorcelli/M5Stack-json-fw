@@ -118,6 +118,20 @@ def _asset_matches(asset_name: str, asset_contains: str) -> bool:
     return normalized_pattern in normalized_asset_name
 
 
+def _should_include_release(release: dict, allow_prerelease: bool, only_prerelease: bool) -> bool:
+    """Determina se uma release do GitHub deve ser incluída no JSON do firmware."""
+    is_draft = release.get("draft", False)
+    is_prerelease = release.get("prerelease", False)
+
+    if is_draft:
+        return False
+
+    if is_prerelease:
+        return allow_prerelease or only_prerelease
+
+    return not only_prerelease
+
+
 def fetch_all_releases(repo_owner: str, repo_name: str):
     """Busca todas as releases de um repositório."""
     releases = []
@@ -183,19 +197,7 @@ def atualizar_firmware(fw_config: dict):
 
             new_versions = []
             for rel in releases:
-                is_draft = rel.get("draft", False)
-                is_prerelease = rel.get("prerelease", False)
-                
-                # Se é draft, sempre ignora
-                if is_draft:
-                    continue
-                
-                # Se é prerelease, só aceita se o firmware permitir
-                if is_prerelease and (not allow_prerelease or not only_prerelease):
-                    continue
-
-                # Se é prerelease e só aceita pré-release
-                if only_prerelease and not is_prerelease:
+                if not _should_include_release(rel, allow_prerelease, only_prerelease):
                     continue
 
                 tag = rel.get("tag_name")
