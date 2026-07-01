@@ -26,6 +26,8 @@ def load_firmware_configs():
     - cover: URL ou hash da imagem de capa
     - description: Descrição do firmware
     - fid_prefix: Prefixo usado para gerar IDs únicos (FIDs)
+    - pre_release: Autoriza pre-releases para serem adicionadas ao arquivo
+    - only_pre_releases: Adiciona SOMENTE pre-releases (caso de beta firmwares)
     - devices: Lista de dispositivos suportados
       - name: Nome do dispositivo
       - asset_contains: Substring ou padrão com '*' para identificar o arquivo
@@ -141,6 +143,7 @@ def atualizar_firmware(fw_config: dict):
     fid_prefix = fw_config["fid_prefix"]
     devices = fw_config["devices"]
     allow_prerelease = fw_config.get("pre_release", False)
+    only_prerelease = fw_config.get("only_pre_releases", False)
 
     print(f"\n{'=' * 60}")
     print(f"Processando {fw_config['name']}...")
@@ -188,7 +191,11 @@ def atualizar_firmware(fw_config: dict):
                     continue
                 
                 # Se é prerelease, só aceita se o firmware permitir
-                if is_prerelease and not allow_prerelease:
+                if is_prerelease and (not allow_prerelease or not only_prerelease):
+                    continue
+
+                # Se é prerelease e só aceita pré-release
+                if only_prerelease and not is_prerelease:
                     continue
 
                 tag = rel.get("tag_name")

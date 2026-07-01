@@ -85,7 +85,7 @@ def atualizar_lista_json(path, binaries, version, published_date):
         "github": "https://github.com/GhostESP-Revival/GhostESP",
         "versions": [
             {
-                "version": name.replace(".bin", ""),
+                "version": f"{version}-{name.replace('.bin', '')}",
                 "published_at": published_date,
                 "file": f"https://github.com/bmorcelli/M5Stack-json-fw/releases/download/GhostESP/{name}"
             } for name in binaries
