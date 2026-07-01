@@ -38016,10 +38016,64 @@
             "last_modified": "Wed, 01 Jul 2026 06:55:44 GMT"
           }
         }
+      },
+      {
+        "version": "beta_24",
+        "published_at": "2026-07-01",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_24/wadamesh-tdeck-merged.bin",
+        "Fs": 3030352,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2964816,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2964816,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 2964816,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-01T13:14:05Z",
+            "etag": "\"0x8DED77039342588\"",
+            "last_modified": "Wed, 01 Jul 2026 12:56:52 GMT"
+          }
+        }
       }
     ],
-    "category": "t-deck",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-deck"
   },
   {
     "name": "XNode (T-Deck Plus)",
