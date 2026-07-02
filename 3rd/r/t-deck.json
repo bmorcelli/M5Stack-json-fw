@@ -5817,6 +5817,86 @@
         "category": "t-deck"
     },
     {
+        "name": "Tactility (T-Deck)",
+        "author": "bytewelder",
+        "description": "Tactility is an operating system that focuses on the ESP32 microcontroller family.\n See https://tactilityproject.org for more information.",
+        "cover": "https://github.com/TactilityProject/Tactility/raw/main/Documentation/pics/tactility-devices.webp",
+        "github": "https://github.com/TactilityProject/Tactility",
+        "fid": "CFWCICKY7LOD25QFHW7KYUOLFH5BX2ZG",
+        "versions": [
+            {
+                "version": "v0.7.0",
+                "published_at": "2026-07-02",
+                "file": "https://github.com/TactilityProject/Tactility/releases/download/v0.7.0/Tactility-lilygo-tdeck.bin",
+                "Fs": 16445440,
+                "s": 0,
+                "f": 1,
+                "f2": 1,
+                "ao": 65536,
+                "as": 2837488,
+                "fo": 4259840,
+                "fs": 307200,
+                "fo2": 4567040,
+                "fs2": 11878400,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2837488,
+                        "partition_size": 4194304,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4194304,
+                            "source_offset": 65536,
+                            "copy_size": 2837488,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "system",
+                            "role": "fat",
+                            "size": 307200,
+                            "source_offset": 4259840,
+                            "copy_size": 307200,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "data",
+                            "role": "fat",
+                            "size": 11878400,
+                            "source_offset": 4567040,
+                            "copy_size": 11878400,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 16482304,
+                        "analyzed_at": "2026-07-02T19:53:11Z",
+                        "etag": "\"0x8DED868BAEFA900\"",
+                        "last_modified": "Thu, 02 Jul 2026 18:35:45 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-deck",
+        "esp": "s3"
+    },
+    {
         "name": "Trail Mate (T-Deck)",
         "author": "vicliu624",
         "description": "Trail Mate is an offline\u2011first handheld system for GPS navigation, multi-protocol communication (Meshtastic / MeshCore / Reticulum), and real\u2011time team situational awareness in no\u2011network environments.",
@@ -6928,6 +7008,60 @@
         "github": "https://github.com/ALLFATHER-BV/wadamesh",
         "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
         "versions": [
+            {
+                "version": "beta_26",
+                "published_at": "2026-07-02",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_26/wadamesh-tdeck-merged.bin",
+                "Fs": 3032960,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2967424,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2967424,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 2967424,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-02T19:53:10Z",
+                        "etag": "\"0x8DED86F0B683BCA\"",
+                        "last_modified": "Thu, 02 Jul 2026 19:20:57 GMT"
+                    }
+                }
+            },
             {
                 "version": "beta_23",
                 "published_at": "2026-07-01",
