@@ -32448,6 +32448,60 @@
         }
       },
       {
+        "version": "v2.8.6",
+        "published_at": "2026-07-03",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.8.6/camillia-mt-tdeck-v2.8.6.bin",
+        "Fs": 1701088,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1635552,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1635552,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1635552,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-04T01:15:58Z",
+            "etag": "\"0x8DED95DBA3B5D50\"",
+            "last_modified": "Fri, 03 Jul 2026 23:49:31 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.8.1",
         "published_at": "2026-07-02",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v2.8.1/camillia-mt-tdeck-v2.8.1.bin",
@@ -32876,60 +32930,6 @@
             "analyzed_at": "2026-06-27T21:37:27Z",
             "etag": "\"0x8DED22D3FDDC584\"",
             "last_modified": "Wed, 24 Jun 2026 20:14:52 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.6.0",
-        "published_at": "2026-06-24",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.0/camillia-mt-tdeck-v2.6.0.bin",
-        "Fs": 1654640,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 1589104,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 1589104,
-            "partition_size": 3145728,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3145728,
-              "source_offset": 65536,
-              "copy_size": 1589104,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 786432,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-06-27T21:37:27Z",
-            "etag": "\"0x8DED16B7A11EC45\"",
-            "last_modified": "Tue, 23 Jun 2026 21:07:47 GMT"
           }
         }
       }
@@ -37133,6 +37133,60 @@
     "fid": "CFWAF7ZP2EZ6PUSTWGJO5CQGF7MZAANN",
     "versions": [
       {
+        "version": "v0.1.35-alpha",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.35-alpha/trail-mate-tdeck-webflash.bin",
+        "Fs": 3440368,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3374832,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3374832,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 3374832,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 8257536,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-04T01:15:58Z",
+            "etag": "\"0x8DED964C9611FE9\"",
+            "last_modified": "Sat, 04 Jul 2026 00:40:03 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.34-alpha",
         "published_at": "2026-06-29",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.34-alpha/trail-mate-tdeck-webflash.bin",
@@ -37615,60 +37669,6 @@
             "analyzed_at": "2026-05-19T09:25:23Z",
             "etag": "\"0x8DEB580AC3C8054\"",
             "last_modified": "Tue, 19 May 2026 08:28:58 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.25-alpha",
-        "published_at": "2026-05-11",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.25-alpha/trail-mate-tdeck-webflash.bin",
-        "Fs": 3282608,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3217072,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3217072,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3217072,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:53Z",
-            "etag": "\"0x8DEAF850A738A6B\"",
-            "last_modified": "Mon, 11 May 2026 17:45:07 GMT"
           }
         }
       }
@@ -44701,6 +44701,60 @@
         }
       },
       {
+        "version": "v2.8.6",
+        "published_at": "2026-07-03",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.8.6/camillia-mt-tlora-pager-tft-v2.8.6.bin",
+        "Fs": 1752224,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1686688,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1686688,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1686688,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 786432,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-04T01:15:58Z",
+            "etag": "\"0x8DED95DBA72F77B\"",
+            "last_modified": "Fri, 03 Jul 2026 23:49:31 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.8.1",
         "published_at": "2026-07-02",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v2.8.1/camillia-mt-tlora-pager-tft-v2.8.1.bin",
@@ -45129,60 +45183,6 @@
             "analyzed_at": "2026-06-27T21:51:59Z",
             "etag": "\"0x8DED22D3FDE87F8\"",
             "last_modified": "Wed, 24 Jun 2026 20:14:52 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.6.0",
-        "published_at": "2026-06-24",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.0/camillia-mt-tlora-pager-tft-v2.6.0.bin",
-        "Fs": 1706416,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 1640880,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 1640880,
-            "partition_size": 3145728,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3145728,
-              "source_offset": 65536,
-              "copy_size": 1640880,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 786432,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-06-27T21:51:59Z",
-            "etag": "\"0x8DED16B7A132363\"",
-            "last_modified": "Tue, 23 Jun 2026 21:07:47 GMT"
           }
         }
       }
@@ -46715,6 +46715,60 @@
     "fid": "CFWJBA62VDRQOGEXQEPVSOFKTOVT5PVD",
     "versions": [
       {
+        "version": "v0.1.35-alpha",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.35-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
+        "Fs": 3877696,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3812160,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3812160,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 3812160,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 8257536,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-04T01:15:57Z",
+            "etag": "\"0x8DED964C98EB34F\"",
+            "last_modified": "Sat, 04 Jul 2026 00:40:03 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.34-alpha",
         "published_at": "2026-06-29",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.34-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
@@ -47197,60 +47251,6 @@
             "analyzed_at": "2026-05-19T09:25:23Z",
             "etag": "\"0x8DEB580AC4DAB0E\"",
             "last_modified": "Tue, 19 May 2026 08:28:58 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.25-alpha",
-        "published_at": "2026-05-11",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.25-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
-        "Fs": 3735008,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3669472,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3669472,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3669472,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:47Z",
-            "etag": "\"0x8DEAF850A6ED4C6\"",
-            "last_modified": "Mon, 11 May 2026 17:45:07 GMT"
           }
         }
       }
@@ -48415,6 +48415,60 @@
     "fid": "CFW7NVZY5APBW7EH5BPMTY6B6IFXWC23",
     "versions": [
       {
+        "version": "v0.1.35-alpha",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.35-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
+        "Fs": 3489200,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3423664,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3423664,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 3423664,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 8257536,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-04T01:15:57Z",
+            "etag": "\"0x8DED964C9CD23A2\"",
+            "last_modified": "Sat, 04 Jul 2026 00:40:03 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.34-alpha",
         "published_at": "2026-06-29",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.34-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
@@ -48897,60 +48951,6 @@
             "analyzed_at": "2026-05-19T09:25:23Z",
             "etag": "\"0x8DEB580AC32797A\"",
             "last_modified": "Tue, 19 May 2026 08:28:58 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.25-alpha",
-        "published_at": "2026-05-11",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.25-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
-        "Fs": 3259968,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3194432,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-watch-s3",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3194432,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3194432,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:46Z",
-            "etag": "\"0x8DEAF850A7708ED\"",
-            "last_modified": "Mon, 11 May 2026 17:45:07 GMT"
           }
         }
       }
