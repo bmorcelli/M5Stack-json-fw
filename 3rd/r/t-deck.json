@@ -7129,6 +7129,60 @@
         "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
         "versions": [
             {
+                "version": "beta_29",
+                "published_at": "2026-07-05",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_29/wadamesh-tdeck-merged.bin",
+                "Fs": 3044832,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2979296,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2979296,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 2979296,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-05T08:31:06Z",
+                        "etag": "\"0x8DEDA6DAA1241E7\"",
+                        "last_modified": "Sun, 05 Jul 2026 08:16:07 GMT"
+                    }
+                }
+            },
+            {
                 "version": "beta_28",
                 "published_at": "2026-07-04",
                 "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_28/wadamesh-tdeck-merged.bin",
