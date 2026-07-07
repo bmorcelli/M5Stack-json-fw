@@ -4678,21 +4678,25 @@
                 "version": "v0.2.2",
                 "published_at": "2026-03-07",
                 "file": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/firmware.bin",
+                "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/bootloader.bin",
+                "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/partitions.bin",
                 "Fs": 2291584,
-                "nb": true,
                 "ao": 0,
                 "as": 2291584,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "t-deck",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 2291584,
-                        "partition_size": 2291584,
+                        "partition_size": 3145728,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -4702,22 +4706,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2291584,
+                            "size": 3145728,
                             "source_offset": 0,
                             "copy_size": 2291584,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1966080,
+                            "flash_offset": 6356992,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/firmware.bin",
+                        "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/bootloader.bin",
+                        "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:53Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:02Z",
                         "etag": "\"0x8DE79A89957554A\"",
-                        "last_modified": "Wed, 04 Mar 2026 04:43:36 GMT"
+                        "last_modified": "Wed, 04 Mar 2026 04:43:36 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/bootloader.bin",
+                            "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.2/partitions.bin"
+                        }
                     }
                 }
             },
@@ -4725,21 +4751,25 @@
                 "version": "v0.2.1",
                 "published_at": "2026-03-03",
                 "file": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/firmware.bin",
+                "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/bootloader.bin",
+                "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/partitions.bin",
                 "Fs": 2285152,
-                "nb": true,
                 "ao": 0,
                 "as": 2285152,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "t-deck",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 2285152,
-                        "partition_size": 2285152,
+                        "partition_size": 3145728,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -4749,22 +4779,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2285152,
+                            "size": 3145728,
                             "source_offset": 0,
                             "copy_size": 2285152,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1966080,
+                            "flash_offset": 6356992,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/firmware.bin",
+                        "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/bootloader.bin",
+                        "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:53Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:02Z",
                         "etag": "\"0x8DE78DD86230EB4\"",
-                        "last_modified": "Tue, 03 Mar 2026 04:29:56 GMT"
+                        "last_modified": "Tue, 03 Mar 2026 04:29:56 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/bootloader.bin",
+                            "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.1/partitions.bin"
+                        }
                     }
                 }
             },
@@ -4772,21 +4824,25 @@
                 "version": "v0.2.0",
                 "published_at": "2026-02-27",
                 "file": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/firmware.bin",
+                "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/bootloader.bin",
+                "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/partitions.bin",
                 "Fs": 2473600,
-                "nb": true,
                 "ao": 0,
                 "as": 2473600,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "t-deck",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 2473600,
-                        "partition_size": 2473600,
+                        "partition_size": 3145728,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -4796,22 +4852,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2473600,
+                            "size": 3145728,
                             "source_offset": 0,
                             "copy_size": 2473600,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1966080,
+                            "flash_offset": 6356992,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/firmware.bin",
+                        "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/bootloader.bin",
+                        "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:53Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:02Z",
                         "etag": "\"0x8DE74BA935BA433\"",
-                        "last_modified": "Wed, 25 Feb 2026 22:09:41 GMT"
+                        "last_modified": "Wed, 25 Feb 2026 22:09:41 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/bootloader.bin",
+                            "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.0/partitions.bin"
+                        }
                     }
                 }
             },

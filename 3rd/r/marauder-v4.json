@@ -1156,21 +1156,25 @@
                 "version": "v1.13.0",
                 "published_at": "2026-07-07",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.13.0/esp32_marauder_v1_13_0_20260707_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1569568,
-                "nb": true,
                 "ao": 0,
                 "as": 1569568,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1569568,
-                        "partition_size": 1569568,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1180,22 +1184,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1569568,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1569568,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.13.0/esp32_marauder_v1_13_0_20260707_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-07T05:35:22Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DEDBCAA91CCDD5\"",
-                        "last_modified": "Tue, 07 Jul 2026 01:54:20 GMT"
+                        "last_modified": "Tue, 07 Jul 2026 01:54:20 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1203,21 +1229,25 @@
                 "version": "v1.12.3",
                 "published_at": "2026-06-22",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.3/esp32_marauder_v1_12_3_20260622_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1719664,
-                "nb": true,
                 "ao": 0,
                 "as": 1719664,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1719664,
-                        "partition_size": 1719664,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1227,22 +1257,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1719664,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1719664,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.3/esp32_marauder_v1_12_3_20260622_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-22T19:22:53Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DED08CF435FF35\"",
-                        "last_modified": "Mon, 22 Jun 2026 18:34:54 GMT"
+                        "last_modified": "Mon, 22 Jun 2026 18:34:54 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1250,21 +1302,25 @@
                 "version": "v1.12.2",
                 "published_at": "2026-06-17",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.2/esp32_marauder_v1_12_2_20260617_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1723648,
-                "nb": true,
                 "ao": 0,
                 "as": 1723648,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1723648,
-                        "partition_size": 1723648,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1274,22 +1330,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1723648,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1723648,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.2/esp32_marauder_v1_12_2_20260617_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-18T13:43:57Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DECCA46F6D914A\"",
-                        "last_modified": "Wed, 17 Jun 2026 19:12:54 GMT"
+                        "last_modified": "Wed, 17 Jun 2026 19:12:54 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1297,21 +1375,25 @@
                 "version": "v1.12.1",
                 "published_at": "2026-05-05",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.1/esp32_marauder_v1_12_1_20260505_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1739280,
-                "nb": true,
                 "ao": 0,
                 "as": 1739280,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1739280,
-                        "partition_size": 1739280,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1321,22 +1403,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1739280,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1739280,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.1/esp32_marauder_v1_12_1_20260505_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:58Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DEAA51DB335E6D\"",
-                        "last_modified": "Tue, 05 May 2026 02:56:07 GMT"
+                        "last_modified": "Tue, 05 May 2026 02:56:07 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1344,21 +1448,25 @@
                 "version": "v1.12.0",
                 "published_at": "2026-04-30",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.0/esp32_marauder_v1_12_0_20260430_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1750624,
-                "nb": true,
                 "ao": 0,
                 "as": 1750624,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1750624,
-                        "partition_size": 1750624,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1368,22 +1476,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1750624,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1750624,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.0/esp32_marauder_v1_12_0_20260430_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:58Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DEA6BA5B434E91\"",
-                        "last_modified": "Thu, 30 Apr 2026 13:14:05 GMT"
+                        "last_modified": "Thu, 30 Apr 2026 13:14:05 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1391,21 +1521,25 @@
                 "version": "v1.11.1",
                 "published_at": "2026-04-15",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.1/esp32_marauder_v1_11_1_20260415_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1753312,
-                "nb": true,
                 "ao": 0,
                 "as": 1753312,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1753312,
-                        "partition_size": 1753312,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1415,22 +1549,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1753312,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1753312,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.1/esp32_marauder_v1_11_1_20260415_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:58Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DE9AF58B816C01\"",
-                        "last_modified": "Wed, 15 Apr 2026 13:47:33 GMT"
+                        "last_modified": "Wed, 15 Apr 2026 13:47:33 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1438,21 +1594,25 @@
                 "version": "v1.11.0",
                 "published_at": "2026-03-10",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.0/esp32_marauder_v1_11_0_20260310_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1752992,
-                "nb": true,
                 "ao": 0,
                 "as": 1752992,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1752992,
-                        "partition_size": 1752992,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1462,22 +1622,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1752992,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1752992,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.0/esp32_marauder_v1_11_0_20260310_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:58Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DE7E43E5FC3D99\"",
-                        "last_modified": "Tue, 10 Mar 2026 01:25:21 GMT"
+                        "last_modified": "Tue, 10 Mar 2026 01:25:21 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1485,21 +1667,25 @@
                 "version": "v1.10.2",
                 "published_at": "2026-02-06",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.2/esp32_marauder_v1_10_2_20260206_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1748832,
-                "nb": true,
                 "ao": 0,
                 "as": 1748832,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1748832,
-                        "partition_size": 1748832,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1509,22 +1695,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1748832,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1748832,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.2/esp32_marauder_v1_10_2_20260206_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:58Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:34:59Z",
                         "etag": "\"0x8DE65B2EAA6FA8A\"",
-                        "last_modified": "Fri, 06 Feb 2026 19:07:04 GMT"
+                        "last_modified": "Fri, 06 Feb 2026 19:07:04 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1532,21 +1740,25 @@
                 "version": "v1.10.1",
                 "published_at": "2026-01-27",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.1/esp32_marauder_v1_10_1_20260127_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1746224,
-                "nb": true,
                 "ao": 0,
                 "as": 1746224,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1746224,
-                        "partition_size": 1746224,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1556,22 +1768,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1746224,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1746224,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.1/esp32_marauder_v1_10_1_20260127_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:58Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DE5DF64A05B958\"",
-                        "last_modified": "Tue, 27 Jan 2026 22:49:11 GMT"
+                        "last_modified": "Tue, 27 Jan 2026 22:49:11 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1579,21 +1813,25 @@
                 "version": "v1.10.0",
                 "published_at": "2026-01-27",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.0/esp32_marauder_v1_10_0_20260127_old_hardware.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1746224,
-                "nb": true,
                 "ao": 0,
                 "as": 1746224,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1746224,
-                        "partition_size": 1746224,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1603,22 +1841,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1746224,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1746224,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.0/esp32_marauder_v1_10_0_20260127_old_hardware.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:58Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DE5DE9264CDACB\"",
-                        "last_modified": "Tue, 27 Jan 2026 21:15:08 GMT"
+                        "last_modified": "Tue, 27 Jan 2026 21:15:08 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             }
@@ -1638,21 +1898,25 @@
                 "version": "v1.13.0",
                 "published_at": "2026-07-07",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.13.0/esp32_marauder_v1_13_0_20260707_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1570032,
-                "nb": true,
                 "ao": 0,
                 "as": 1570032,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1570032,
-                        "partition_size": 1570032,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1662,22 +1926,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1570032,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1570032,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.13.0/esp32_marauder_v1_13_0_20260707_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-07T05:35:22Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DEDBCAA917A383\"",
-                        "last_modified": "Tue, 07 Jul 2026 01:54:19 GMT"
+                        "last_modified": "Tue, 07 Jul 2026 01:54:19 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1685,21 +1971,25 @@
                 "version": "v1.12.3",
                 "published_at": "2026-06-22",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.3/esp32_marauder_v1_12_3_20260622_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1720144,
-                "nb": true,
                 "ao": 0,
                 "as": 1720144,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1720144,
-                        "partition_size": 1720144,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1709,22 +1999,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1720144,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1720144,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.3/esp32_marauder_v1_12_3_20260622_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-22T19:22:53Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DED08CF45A077F\"",
-                        "last_modified": "Mon, 22 Jun 2026 18:34:54 GMT"
+                        "last_modified": "Mon, 22 Jun 2026 18:34:54 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1732,21 +2044,25 @@
                 "version": "v1.12.2",
                 "published_at": "2026-06-17",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.2/esp32_marauder_v1_12_2_20260617_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1724224,
-                "nb": true,
                 "ao": 0,
                 "as": 1724224,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1724224,
-                        "partition_size": 1724224,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1756,22 +2072,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1724224,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1724224,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.2/esp32_marauder_v1_12_2_20260617_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-18T13:43:57Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DECCA46F6B49EC\"",
-                        "last_modified": "Wed, 17 Jun 2026 19:12:54 GMT"
+                        "last_modified": "Wed, 17 Jun 2026 19:12:54 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1779,21 +2117,25 @@
                 "version": "v1.12.1",
                 "published_at": "2026-05-05",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.1/esp32_marauder_v1_12_1_20260505_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1739792,
-                "nb": true,
                 "ao": 0,
                 "as": 1739792,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1739792,
-                        "partition_size": 1739792,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1803,22 +2145,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1739792,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1739792,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.1/esp32_marauder_v1_12_1_20260505_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:59Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DEAA51DB7A29DA\"",
-                        "last_modified": "Tue, 05 May 2026 02:56:08 GMT"
+                        "last_modified": "Tue, 05 May 2026 02:56:08 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1826,21 +2190,25 @@
                 "version": "v1.12.0",
                 "published_at": "2026-04-30",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.0/esp32_marauder_v1_12_0_20260430_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1751072,
-                "nb": true,
                 "ao": 0,
                 "as": 1751072,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1751072,
-                        "partition_size": 1751072,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1850,22 +2218,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1751072,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1751072,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.0/esp32_marauder_v1_12_0_20260430_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:59Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DEA6BA5C6A081D\"",
-                        "last_modified": "Thu, 30 Apr 2026 13:14:07 GMT"
+                        "last_modified": "Thu, 30 Apr 2026 13:14:07 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1873,21 +2263,25 @@
                 "version": "v1.11.1",
                 "published_at": "2026-04-15",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.1/esp32_marauder_v1_11_1_20260415_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1753840,
-                "nb": true,
                 "ao": 0,
                 "as": 1753840,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1753840,
-                        "partition_size": 1753840,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1897,22 +2291,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1753840,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1753840,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.1/esp32_marauder_v1_11_1_20260415_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:59Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DE9AF58B514360\"",
-                        "last_modified": "Wed, 15 Apr 2026 13:47:32 GMT"
+                        "last_modified": "Wed, 15 Apr 2026 13:47:32 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1920,21 +2336,25 @@
                 "version": "v1.11.0",
                 "published_at": "2026-03-10",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.0/esp32_marauder_v1_11_0_20260310_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1753520,
-                "nb": true,
                 "ao": 0,
                 "as": 1753520,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1753520,
-                        "partition_size": 1753520,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1944,22 +2364,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1753520,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1753520,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.0/esp32_marauder_v1_11_0_20260310_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:59Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DE7E43E5FE5E0E\"",
-                        "last_modified": "Tue, 10 Mar 2026 01:25:21 GMT"
+                        "last_modified": "Tue, 10 Mar 2026 01:25:21 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -1967,21 +2409,25 @@
                 "version": "v1.10.2",
                 "published_at": "2026-02-06",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.2/esp32_marauder_v1_10_2_20260206_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1749728,
-                "nb": true,
                 "ao": 0,
                 "as": 1749728,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1749728,
-                        "partition_size": 1749728,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1991,22 +2437,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1749728,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1749728,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.2/esp32_marauder_v1_10_2_20260206_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:59Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DE65B2EA9A856A\"",
-                        "last_modified": "Fri, 06 Feb 2026 19:07:04 GMT"
+                        "last_modified": "Fri, 06 Feb 2026 19:07:04 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -2014,21 +2482,25 @@
                 "version": "v1.10.1",
                 "published_at": "2026-01-27",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.1/esp32_marauder_v1_10_1_20260127_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1747120,
-                "nb": true,
                 "ao": 0,
                 "as": 1747120,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1747120,
-                        "partition_size": 1747120,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2038,22 +2510,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1747120,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1747120,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.1/esp32_marauder_v1_10_1_20260127_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:59Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DE5DF64A10D06C\"",
-                        "last_modified": "Tue, 27 Jan 2026 22:49:11 GMT"
+                        "last_modified": "Tue, 27 Jan 2026 22:49:11 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             },
@@ -2061,21 +2555,25 @@
                 "version": "v1.10.0",
                 "published_at": "2026-01-27",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.0/esp32_marauder_v1_10_0_20260127_v6.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
                 "Fs": 1747120,
-                "nb": true,
                 "ao": 0,
                 "as": 1747120,
+                "nb": true,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "split",
                     "target": "marauder-v4",
                     "app": {
+                        "source": "firmware",
                         "source_offset": 0,
                         "image_size": 1747120,
-                        "partition_size": 1747120,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2085,22 +2583,44 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 1747120,
+                            "size": 1966080,
                             "source_offset": 0,
                             "copy_size": 1747120,
-                            "required": true
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 196608,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
                         }
                     ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.10.0/esp32_marauder_v1_10_0_20260127_v6.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
+                        "data": null
+                    },
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-15T16:44:59Z",
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-07-07T18:35:00Z",
                         "etag": "\"0x8DE5DE92647D760\"",
-                        "last_modified": "Tue, 27 Jan 2026 21:15:08 GMT"
+                        "last_modified": "Tue, 27 Jan 2026 21:15:08 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin"
+                        }
                     }
                 }
             }
