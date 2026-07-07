@@ -33,6 +33,10 @@ LEGACY_VERSION_FIELDS = [
     "install",
 ]
 
+# Campos auxiliares declarados no upstream (3rd/database) que influenciam a
+# análise/manifesto e cuja presença/alteração deve disparar reanálise.
+AUX_INPUT_FIELDS = ("bootloader", "partitions", "data")
+
 PARTITION_TYPE_APP = 0x00
 PARTITION_TYPE_DATA = 0x01
 PARTITION_SUBTYPE_SPIFFS = 0x82
@@ -48,6 +52,45 @@ FULL_FLASH_DUMP_SIZES = {4 << 20, 8 << 20, 16 << 20, 32 << 20}
 
 class FirmwareAnalysisError(Exception):
     pass
+
+
+def current_aux_inputs(version: Dict[str, Any]) -> Dict[str, Any]:
+    """Campos auxiliares (bootloader/partitions/data) presentes na versão do
+    upstream, isto é, os que deveriam ter sido considerados na análise."""
+    return {field: version[field] for field in AUX_INPUT_FIELDS if version.get(field)}
+
+
+def recorded_aux_inputs(version: Dict[str, Any]) -> Dict[str, Any]:
+    """Campos auxiliares que foram efetivamente usados na última análise,
+    carimbados dentro de ``install.analysis.aux_inputs`` no downstream."""
+    install = version.get("install") or {}
+    return install.get("analysis", {}).get("aux_inputs") or {}
+
+
+def stamp_aux_inputs(version: Dict[str, Any]) -> None:
+    """Registra no manifesto quais campos auxiliares foram considerados.
+
+    Só grava quando há campos auxiliares, para não poluir os manifestos dos
+    firmwares comuns (sem esses campos) com um ``aux_inputs`` vazio."""
+    install = version.get("install")
+    if not install:
+        return
+    aux = current_aux_inputs(version)
+    if aux:
+        install.setdefault("analysis", {})["aux_inputs"] = aux
+
+
+def aux_inputs_changed(version: Dict[str, Any]) -> bool:
+    """True quando o upstream tem campos auxiliares ainda não refletidos no
+    downstream (novos, alterados ou removidos)."""
+    return current_aux_inputs(version) != recorded_aux_inputs(version)
+
+
+def clear_derived_metadata(version: Dict[str, Any]) -> None:
+    """Remove metadados derivados para forçar uma reanálise limpa, preservando
+    os campos de origem (file/version/bootloader/partitions/data)."""
+    for field in LEGACY_VERSION_FIELDS:
+        version.pop(field, None)
 
 
 class RangeReader:
@@ -443,6 +486,176 @@ def build_install_from_partition_table(
     }
 
 
+def build_install_from_external_files(
+    version: Dict[str, Any],
+    item: Dict[str, Any],
+    table_partitions: List[Dict[str, Any]],
+    image_size: int,
+    data_size: int,
+    warnings: List[str],
+) -> Dict[str, Any]:
+    """Monta o manifesto de instalação quando o firmware é app-only e o layout
+    de partições vem de um arquivo externo (``partitions``), com a partição de
+    dados opcionalmente vinda de um arquivo externo (``data``).
+
+    Diferente do caso ``merged`` (um único arquivo), aqui cada partição indica,
+    através do campo ``source``, de qual arquivo os bytes devem ser lidos
+    (``firmware``/``data``); ``flash_offset`` traz o offset de destino na flash
+    obtido do arquivo de partições. Ausência de ``source`` mantém o significado
+    antigo (arquivo único ``file``).
+    """
+    app_parts = [p for p in table_partitions if p["type_id"] == PARTITION_TYPE_APP]
+    if not app_parts:
+        raise FirmwareAnalysisError("External partition table has no app partition")
+    app_part = app_parts[0]
+    app_offset = int(app_part["offset"])
+    partition_size = int(app_part["size"])
+    if image_size and image_size > partition_size:
+        warnings.append("Firmware image is larger than declared app partition.")
+        partition_size = image_size
+
+    app_entry = build_app_partition(0, image_size, partition_size)
+    app_entry["source"] = "firmware"
+    app_entry["flash_offset"] = app_offset
+    manifest_partitions = [app_entry]
+
+    data_assigned = False
+    for part in table_partitions:
+        if part["type_id"] == PARTITION_TYPE_APP:
+            continue
+        subtype = partition_subtype_name(part["type_id"], part["subtype_id"])
+        if subtype not in ("fat", "spiffs"):
+            continue
+        offset = int(part["offset"])
+        size = int(part["size"])
+        entry = {
+            "type": partition_type_name(part["type_id"]),
+            "subtype": subtype,
+            "label": part.get("label") or subtype,
+            "role": subtype,
+            "size": size,
+            "flash_offset": offset,
+            "required": True,
+        }
+        if not data_assigned and data_size:
+            copy_size = min(data_size, size)
+            if data_size > size:
+                warnings.append("Data file is larger than declared data partition; truncating.")
+            entry["source"] = "data"
+            entry["source_offset"] = 0
+            entry["copy_size"] = copy_size
+            data_assigned = True
+        else:
+            # Sem arquivo de dados: a partição é apenas alocada/apagada.
+            entry["source"] = None
+            entry["source_offset"] = None
+            entry["copy_size"] = 0
+        manifest_partitions.append(entry)
+
+    if version.get("data") and not data_assigned:
+        warnings.append("Data file provided but no fat/spiffs partition found to receive it.")
+
+    return {
+        "schema": 1,
+        "format": "split",
+        "target": normalize_target(item),
+        "app": {
+            "source": "firmware",
+            "source_offset": 0,
+            "image_size": image_size,
+            "partition_size": partition_size,
+            "flash_offset": app_offset,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota",
+        },
+        "partitions": manifest_partitions,
+        "sources": {
+            "firmware": version.get("file"),
+            "bootloader": version.get("bootloader"),
+            "partitions": version.get("partitions"),
+            "data": version.get("data"),
+        },
+        "analysis": {
+            "method": "external_partition_table",
+            "confidence": "exact",
+            "warnings": warnings,
+        },
+    }
+
+
+def _remote_content_length(url: str, session: Any, warnings: List[str], label: str) -> "RangeReader":
+    """Obtém o tamanho de um binário remoto via HEAD, com fallback para Range."""
+    reader = RangeReader(url, session=session)
+    reader.head()
+    if not reader.content_length:
+        try:
+            reader.read_header_chunk(1)
+        except Exception as exc:
+            warnings.append(f"Failed to read {label} size: {type(exc).__name__}: {exc}")
+    return reader
+
+
+def apply_external_partitions(
+    version: Dict[str, Any],
+    item: Dict[str, Any],
+    header_chunk: bytes,
+    fw_reader: "RangeReader",
+    partitions_url: str,
+    warnings: List[str],
+    session: Any = None,
+) -> None:
+    """Analisa um firmware app-only cujo layout vem de um arquivo de partições
+    externo. Baixa e parseia ``partitions``, mede o tamanho de ``data`` (quando
+    presente) e escreve o manifesto em ``version['install']``.
+
+    Pré-condição: o chamador já certificou que o firmware NÃO é ``merged``
+    (não há tabela de partições embutida em 0x8000).
+    """
+    firmware_size = fw_reader.content_length or int(version.get("Fs") or 0)
+
+    # Firmware app-only: o arquivo inteiro é a imagem do app.
+    image_size = firmware_size
+    if header_chunk[:1] == bytes([ESP_IMAGE_MAGIC]) and firmware_size:
+        try:
+            def _read_hdr(offset: int, size: int) -> bytes:
+                return header_chunk[offset:offset + size]
+
+            parsed = parse_esp_image_size(_read_hdr, 0, firmware_size)
+            if parsed:
+                image_size = parsed
+        except FirmwareAnalysisError:
+            image_size = firmware_size
+
+    # Baixa e parseia o arquivo de partições externo (pequeno).
+    pt_reader = RangeReader(partitions_url, session=session)
+    pt_reader.head()
+    pt_data = pt_reader.read_full()
+    fw_reader.bytes_downloaded += pt_reader.bytes_downloaded
+    table_partitions = parse_partition_table(pt_data, 0x8000)
+    if not table_partitions:
+        raise FirmwareAnalysisError("External partition table is empty or invalid")
+
+    # Mede o tamanho da partição de dados a partir do arquivo externo.
+    data_size = 0
+    if version.get("data"):
+        data_reader = _remote_content_length(version["data"], session, warnings, "data partition")
+        data_size = data_reader.content_length
+        fw_reader.bytes_downloaded += data_reader.bytes_downloaded
+
+    # Campos legados: app-only começando em 0; dados ficam apenas no install.
+    version["Fs"] = firmware_size
+    version["ao"] = 0
+    version["as"] = image_size
+    version["nb"] = True
+    version["s"] = int(version.get("s") or 0)
+    version["f"] = int(version.get("f") or 0)
+    version["f2"] = int(version.get("f2") or 0)
+
+    version["install"] = build_install_from_external_files(
+        version, item, table_partitions, image_size, data_size, warnings
+    )
+
+
 def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], session: Any = None) -> Dict[str, Any]:
     if version.get("invalid"):
         return version
@@ -481,6 +694,35 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
         app_parts = [p for p in partitions if p["type_id"] == PARTITION_TYPE_APP]
         if app_parts and int(app_parts[0]["offset"]) >= reader.content_length:
             partitions = []
+
+    # Layout de partições vindo de arquivo externo (firmware app-only + partitions.bin).
+    external_partitions_url = version.get("partitions")
+    if external_partitions_url:
+        if partitions:
+            # Certifica que NÃO é um binário "merged": há tabela embutida, então
+            # o arquivo de partições externo é ignorado e seguimos o fluxo normal.
+            warnings.append(
+                "External partitions provided but firmware contains an embedded "
+                "partition table (merged); using the embedded table."
+            )
+        else:
+            try:
+                apply_external_partitions(
+                    version, item, header_chunk, reader,
+                    external_partitions_url, warnings, session=session,
+                )
+                if version.get("install"):
+                    version["install"]["analysis"]["bytes_downloaded_for_analysis"] = reader.bytes_downloaded
+                    version["install"]["analysis"]["analyzed_at"] = now_iso()
+                    if reader.etag:
+                        version["install"]["analysis"]["etag"] = reader.etag
+                    if reader.last_modified:
+                        version["install"]["analysis"]["last_modified"] = reader.last_modified
+                    stamp_aux_inputs(version)
+                return version
+            except Exception as exc:
+                # Falhou a via externa: registra e cai no fluxo padrão abaixo.
+                warnings.append(f"External partitions analysis failed: {type(exc).__name__}: {exc}")
 
     try:
         if partitions:
@@ -569,16 +811,21 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
             version["install"]["analysis"]["etag"] = reader.etag
         if reader.last_modified:
             version["install"]["analysis"]["last_modified"] = reader.last_modified
+        stamp_aux_inputs(version)
 
     return version
 
 
 def ensure_install_manifest(version: Dict[str, Any], item: Dict[str, Any]) -> None:
-    if "install" in version or version.get("invalid"):
+    if version.get("invalid"):
+        return
+    if "install" in version:
+        stamp_aux_inputs(version)
         return
     manifest = build_install_from_legacy(version, item)
     if manifest:
         version["install"] = manifest
+        stamp_aux_inputs(version)
 
 
 def copy_preserved_version_fields(new_version: Dict[str, Any], old_version: Dict[str, Any]) -> None:

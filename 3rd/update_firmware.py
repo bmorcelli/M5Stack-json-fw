@@ -3,6 +3,7 @@ import fnmatch
 import hashlib
 import json
 import os
+import re
 from datetime import datetime
 
 import requests
@@ -118,6 +119,49 @@ def _asset_matches(asset_name: str, asset_contains: str) -> bool:
     return normalized_pattern in normalized_asset_name
 
 
+# Campos opcionais de binários auxiliares que podem ser declarados por device
+# em update_firmware.json. Cada um aceita duas formas:
+#   - "<campo>": link direto para o binário (bootloader/partitions/data)
+#   - "<campo>_contains": substring/padrão para localizar o binário nos assets
+#     da release (mesma lógica de asset_contains)
+AUXILIARY_BINARY_FIELDS = ("bootloader", "partitions", "data")
+
+
+def _normalize_binary_url(url: str) -> str:
+    """Converte links github.com/.../blob/... em .../raw/... para download direto."""
+    if not url:
+        return url
+    return re.sub(r"^(https://github\.com/[^/]+/[^/]+)/blob/", r"\1/raw/", url)
+
+
+def _resolve_auxiliary_link(device: dict, release: dict, field: str):
+    """Resolve o link de um binário auxiliar (bootloader/partitions/data).
+
+    Prioriza o link direto ("<field>"); caso ausente, procura nos assets da
+    release usando "<field>_contains" (mesma lógica de asset_contains).
+    """
+    direct = device.get(field)
+    if direct:
+        return _normalize_binary_url(direct)
+
+    contains = device.get(f"{field}_contains")
+    if contains and release:
+        for asset in release.get("assets", []):
+            if _asset_matches(asset.get("name", ""), contains):
+                return asset.get("browser_download_url")
+    return None
+
+
+def _apply_auxiliary_links(version: dict, device: dict, release: dict) -> None:
+    """Adiciona bootloader/partitions/data à versão quando declarados no device."""
+    for field in AUXILIARY_BINARY_FIELDS:
+        if field in version:
+            continue
+        link = _resolve_auxiliary_link(device, release, field)
+        if link:
+            version[field] = link
+
+
 def _should_include_release(release: dict, allow_prerelease: bool, only_prerelease: bool) -> bool:
     """Determina se uma release do GitHub deve ser incluída no JSON do firmware."""
     is_draft = release.get("draft", False)
@@ -164,6 +208,7 @@ def atualizar_firmware(fw_config: dict):
     print(f"{'=' * 60}")
 
     releases = fetch_all_releases(repo_owner, repo_name)
+    releases_by_tag = {rel.get("tag_name"): rel for rel in releases}
     devices_by_json = {}
     for device in devices:
         devices_by_json.setdefault(device["json"], []).append(device)
@@ -235,6 +280,15 @@ def atualizar_firmware(fw_config: dict):
             # Manter apenas as últimas 10 versões
             combined_versions.sort(key=lambda v: v["published_at"], reverse=True)
             combined_versions = combined_versions[:10]
+
+            # Propaga bootloader/partitions/data para todas as versões (novas e
+            # já existentes), usando a release correspondente a cada tag para
+            # resolver as variantes "_contains".
+            for version in combined_versions:
+                _apply_auxiliary_links(
+                    version, device, releases_by_tag.get(version.get("version"))
+                )
+
             firmware_display_name = f"{fw_config['name']} ({device['name']})"
 
             new_entry = {

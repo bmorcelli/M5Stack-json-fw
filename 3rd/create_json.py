@@ -10,7 +10,12 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-from script.firmware_manifest import analyze_remote_firmware_batch, ensure_install_manifest
+from script.firmware_manifest import (
+    analyze_remote_firmware_batch,
+    aux_inputs_changed,
+    clear_derived_metadata,
+    ensure_install_manifest,
+)
 
 
 def _generate_fid(existing_fids):
@@ -128,10 +133,22 @@ def process_jsons(max_workers: int = 4):
         tasks = []
         for item in merged_data:
             for version in item.get("versions", []):
-                if "s" in version:
+                already_analyzed = "s" in version
+                if already_analyzed and not aux_inputs_changed(version):
                     print(f"{item['name']} - {version.get('version', '?')} - Ok", flush=True)
                     ensure_install_manifest(version, item)
                 else:
+                    if already_analyzed:
+                        # Campos auxiliares (bootloader/partitions/data) presentes
+                        # no upstream (3rd/database) ainda não refletidos no
+                        # downstream (3rd/r): limpa metadados e força reanálise
+                        # apenas desta versão afetada.
+                        clear_derived_metadata(version)
+                        print(
+                            f"{item['name']} - {version.get('version', '?')} - "
+                            f"Reanalisando (campos auxiliares novos)",
+                            flush=True,
+                        )
                     tasks.append((item, version))
 
         result = analyze_remote_firmware_batch(tasks, max_workers=max_workers)
