@@ -1114,19 +1114,19 @@
                 "version": "T-Deck PLUS",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-deck-pro.bin",
-                "Fs": 4184560,
+                "Fs": 4184608,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4119024,
+                "as": 4119072,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-deck",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4119024,
+                        "image_size": 4119072,
                         "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -1139,7 +1139,7 @@
                             "role": "firmware",
                             "size": 4653056,
                             "source_offset": 65536,
-                            "copy_size": 4119024,
+                            "copy_size": 4119072,
                             "required": true
                         },
                         {
@@ -1158,9 +1158,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-07T11:46:06Z",
-                        "etag": "\"0x8DEDC0CA262C4DB\"",
-                        "last_modified": "Tue, 07 Jul 2026 09:46:35 GMT"
+                        "analyzed_at": "2026-07-08T03:46:35Z",
+                        "etag": "\"0x8DEDCA138493DFD\"",
+                        "last_modified": "Wed, 08 Jul 2026 03:30:12 GMT"
                     }
                 }
             },
@@ -1168,19 +1168,19 @@
                 "version": "T-Deck",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-deck.bin",
-                "Fs": 4184624,
+                "Fs": 4184688,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4119088,
+                "as": 4119152,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-deck",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4119088,
+                        "image_size": 4119152,
                         "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -1193,7 +1193,7 @@
                             "role": "firmware",
                             "size": 4653056,
                             "source_offset": 65536,
-                            "copy_size": 4119088,
+                            "copy_size": 4119152,
                             "required": true
                         },
                         {
@@ -1212,16 +1212,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-07T11:46:06Z",
-                        "etag": "\"0x8DEDC0CA26422DF\"",
-                        "last_modified": "Tue, 07 Jul 2026 09:46:35 GMT"
+                        "analyzed_at": "2026-07-08T03:46:35Z",
+                        "etag": "\"0x8DEDCA1384BAC4D\"",
+                        "last_modified": "Wed, 08 Jul 2026 03:30:12 GMT"
                     }
                 }
             }
         ],
         "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-        "esp": "s3",
-        "category": "t-deck"
+        "category": "t-deck",
+        "esp": "s3"
     },
     {
         "name": "Camillia-MT (T-Deck)",
@@ -1231,6 +1231,60 @@
         "github": "https://github.com/oumike/camillia-mt",
         "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
         "versions": [
+            {
+                "version": "v2.9.1",
+                "published_at": "2026-07-08",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v2.9.1/camillia-mt-tdeck-v2.9.1.bin",
+                "Fs": 1705504,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1639968,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1639968,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1639968,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 786432,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-08T03:46:35Z",
+                        "etag": "\"0x8DEDC89F9401FD8\"",
+                        "last_modified": "Wed, 08 Jul 2026 00:43:48 GMT"
+                    }
+                }
+            },
             {
                 "version": "v2.8.9",
                 "published_at": "2026-07-06",
@@ -1714,60 +1768,6 @@
                         "analyzed_at": "2026-06-30T22:25:33Z",
                         "etag": "\"0x8DED6F35D292B5C\"",
                         "last_modified": "Tue, 30 Jun 2026 22:03:06 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v2.6.7",
-                "published_at": "2026-06-29",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v2.6.7/camillia-mt-tdeck-v2.6.7.bin",
-                "Fs": 1664192,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1598656,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1598656,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 1598656,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 786432,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-06-29T01:23:03Z",
-                        "etag": "\"0x8DED573C6893876\"",
-                        "last_modified": "Mon, 29 Jun 2026 00:17:16 GMT"
                     }
                 }
             }
