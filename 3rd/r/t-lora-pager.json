@@ -2173,80 +2173,31 @@
         "category": "t-lora-pager"
     },
     {
-        "name": "Meshtastic",
         "author": "Meshtastic",
         "cover": "https://meshtastic.org/img/logo.svg",
+        "logic": "meshtastic",
+        "github": "https://meshtastic.org/",
+        "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+        "name": "Meshtastic",
         "versions": [
             {
-                "version": "2.6.11.60ec0",
-                "published_at": "2026-02-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.11.60ec05e/firmware-tlora-c6-2.6.11.60ec05e.bin",
-                "Fs": 1539952,
+                "version": "2.7.26.54e0d8d",
+                "published_at": "2026-06-24",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
+                "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin",
+                "Fs": 2470288,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 1474416,
+                "as": 2404752,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-lora-pager",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 1474416,
-                        "partition_size": 2424832,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2424832,
-                            "source_offset": 65536,
-                            "copy_size": 1474416,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 1048576,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:47Z",
-                        "etag": "W/\"0fc7c3c647c1b2c40e865e8fb5c2507e9e3bc02f361d167eec2ca136495c23f2\""
-                    }
-                }
-            },
-            {
-                "version": "2.7.11.ee685",
-                "published_at": "2026-02-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.11.ee68575/firmware-tlora-pager-2.7.11.ee68575.bin",
-                "Fs": 2347408,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2281872,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2281872,
+                        "image_size": 2404752,
                         "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -2259,7 +2210,7 @@
                             "role": "firmware",
                             "size": 6553600,
                             "source_offset": 65536,
-                            "copy_size": 2281872,
+                            "copy_size": 2404752,
                             "required": true
                         },
                         {
@@ -2278,85 +2229,33 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:47Z",
-                        "etag": "W/\"15dd7e3edcebda6490287a5cf7365e520e11cf8a87c87730b92e4d8b4aa52f34\""
-                    }
-                }
-            }
-        ],
-        "fid": "CFWU6X8FRVPCDIS69PR2IBQRNURFU18N",
-        "esp": "32",
-        "category": "t-lora-pager"
-    },
-    {
-        "name": "Meshtastic Fancy UI",
-        "author": "Meshtastic",
-        "versions": [
-            {
-                "version": "2.6.11.60ec0",
-                "published_at": "2026-02-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.11.60ec05e/firmware-tlora-c6-2.6.11.60ec05e-update.bin",
-                "Fs": 1474416,
-                "nb": true,
-                "ao": 0,
-                "as": 1474416,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 1474416,
-                        "partition_size": 1474416,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 1474416,
-                            "source_offset": 0,
-                            "copy_size": 1474416,
-                            "required": true
+                        "analyzed_at": "2026-07-08T14:28:14Z",
+                        "etag": "W/\"aaaa16cd274f7d32777baefc0b43fd54a785afdf6a104934d3db128d71dd6952\"",
+                        "aux_inputs": {
+                            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin"
                         }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:47Z",
-                        "etag": "W/\"c6331967293c88ee9ed53398685171f50bc4c9375576555d01f56b63aaa19e3a\""
                     }
                 }
             },
             {
-                "version": "2.7.11.ee685",
-                "published_at": "2026-02-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.11.ee68575/firmware-tlora-pager-2.7.11.ee68575-update.bin",
-                "Fs": 2281872,
-                "nb": true,
-                "ao": 0,
-                "as": 2281872,
+                "version": "2.7.15.567b8ea",
+                "published_at": "2025-11-19",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
+                "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin",
+                "Fs": 2359680,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 2294144,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "t-lora-pager",
                     "app": {
-                        "source_offset": 0,
-                        "image_size": 2281872,
-                        "partition_size": 2281872,
+                        "source_offset": 65536,
+                        "image_size": 2294144,
+                        "partition_size": 6553600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -2366,21 +2265,32 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2281872,
-                            "source_offset": 0,
-                            "copy_size": 2281872,
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2294144,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:47Z",
-                        "etag": "W/\"039d59e99797ee6ad3371f2ccdccc6ee70c1b5bd8a7db8cc206685d4a47c2c94\""
+                        "analyzed_at": "2026-07-08T14:28:14Z",
+                        "etag": "W/\"3e56057395b1f0e55af097bce976b33da5a22ef8cf224cbdd2da8228e6fe6210\"",
+                        "aux_inputs": {
+                            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin"
+                        }
                     }
                 }
             }

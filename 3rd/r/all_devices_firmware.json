@@ -37986,14 +37986,316 @@
     "category": "t-deck"
   },
   {
-    "name": "Meshtastic Fancy UI",
     "author": "Meshtastic",
     "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic",
     "versions": [
       {
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin",
+        "Fs": 2306304,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2240768,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2240768,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2240768,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"54863b938f4cc8540f98c5003c2666d90b0e0eb7997005c19aaa6538d6f941aa\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin"
+            }
+          }
+        }
+      },
+      {
         "version": "2.7.15.567b8ea",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
+        "published_at": "2025-11-19",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin",
+        "Fs": 2208672,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2143136,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2143136,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2143136,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"dd29b2b8c5b08ae63e756e1f9b97f0701fde4cda7ecc91efa9e50b0e64d31bf0\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin"
+            }
+          }
+        }
+      },
+      {
+        "version": "2.6.11.60ec05e",
+        "published_at": "2025-06-11",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin",
+        "Fs": 2084016,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2018480,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2018480,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2018480,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"4a5fd43d04eef9c39909f552128cb01acf8a7c5fb5ca71e1ae9834f33bf8ae91\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin"
+            }
+          }
+        }
+      },
+      {
+        "version": "2.6.10.9ce4455",
+        "published_at": "2025-06-02",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin",
+        "Fs": 2082304,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2016768,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2016768,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2016768,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"5bfa727a199cabef1f4333a51437002bac266b367257522c2f785a28dc9f8f7b\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin"
+            }
+          }
+        }
+      }
+    ],
+    "fid": "CFW04QB0MN83B0VC0ZFURLETKQGP1JRJ",
+    "category": "t-deck",
+    "esp": "s3"
+  },
+  {
+    "author": "Meshtastic",
+    "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic Fancy UI",
+    "versions": [
+      {
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin",
+        "Fs": 3694000,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3628464,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3628464,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3628464,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"e82979087f21df37d23397223666c6c44140808a2b64f405f814671ec10b9e12\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin"
+            }
+          }
+        }
+      },
+      {
+        "version": "2.7.15.567b8ea",
+        "published_at": "2025-11-19",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin",
         "Fs": 3593792,
         "s": 0,
         "f": 0,
@@ -38038,38 +38340,32 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:52Z",
-            "etag": "W/\"5d41819a17a80cb48b1c5062f0d74092f7ebd6f50c5c878ca71c9beac237359b\""
+            "analyzed_at": "2026-07-08T14:28:15Z",
+            "etag": "W/\"5d41819a17a80cb48b1c5062f0d74092f7ebd6f50c5c878ca71c9beac237359b\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin"
+            }
           }
         }
-      }
-    ],
-    "fid": "CFWYK797B74KHYXSBFOBW3G62SCWEBSV",
-    "esp": "s3",
-    "category": "t-deck"
-  },
-  {
-    "name": "Meshtastic Standard UI",
-    "author": "Meshtastic",
-    "cover": "https://meshtastic.org/img/logo.svg",
-    "versions": [
+      },
       {
-        "version": "2.6.4.b89355f",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.4.b89355f/firmware-t-deck-2.6.4.b89355f.bin",
-        "Fs": 2073472,
+        "version": "2.6.11.60ec05e",
+        "published_at": "2025-06-11",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin",
+        "Fs": 3195408,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2007936,
+        "as": 3129872,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-deck",
           "app": {
             "source_offset": 65536,
-            "image_size": 2007936,
+            "image_size": 3129872,
             "partition_size": 6553600,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -38082,7 +38378,7 @@
               "role": "firmware",
               "size": 6553600,
               "source_offset": 65536,
-              "copy_size": 2007936,
+              "copy_size": 3129872,
               "required": true
             },
             {
@@ -38101,13 +38397,73 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:52Z",
-            "etag": "W/\"07552f326759b9a3f933e7be02f7dc831341d2c05116353491611671c6e2ef51\""
+            "analyzed_at": "2026-07-08T14:28:15Z",
+            "etag": "W/\"86e17f1e9a21f6b912b85d75e078a2963f7d6051e5bbaf2ff31f20dc18558f61\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin"
+            }
+          }
+        }
+      },
+      {
+        "version": "2.6.10.9ce4455",
+        "published_at": "2025-06-02",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin",
+        "Fs": 3193120,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3127584,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3127584,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3127584,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:15Z",
+            "etag": "W/\"7db1139f93ef4431b750d6a1f7469cce9333da7f839e55a086830be0fa1b3cf9\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin"
+            }
           }
         }
       }
     ],
-    "fid": "CFW04QB0MN83B0VC0ZFURLETKQGP1JRJ",
+    "fid": "CFWYK797B74KHYXSBFOBW3G62SCWEBSV",
     "esp": "s3",
     "category": "t-deck"
   },
@@ -42604,14 +42960,75 @@
     "category": "t-deck-pro"
   },
   {
-    "name": "Meshtastic",
-    "cover": "https://meshtastic.org/img/logo.svg",
     "author": "Meshtastic",
+    "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic",
     "versions": [
       {
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin",
+        "Fs": 2222400,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2156864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck-pro",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2156864,
+            "partition_size": 2424832,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2424832,
+              "source_offset": 65536,
+              "copy_size": 2156864,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"660984c69aec50e33c82c58271bc6410943c7ad78ff0acf66bb86f0bc5052d8d\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin"
+            }
+          }
+        }
+      },
+      {
         "version": "2.7.15.567b8ea",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
+        "published_at": "2025-11-19",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin",
         "Fs": 2130256,
         "s": 0,
         "f": 0,
@@ -42656,8 +43073,11 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:55Z",
-            "etag": "W/\"3fa6ef01b5aa87f45f7bd09dec13e200ece1dbd7f82dd9780b6a66ff77ae7f00\""
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"3fa6ef01b5aa87f45f7bd09dec13e200ece1dbd7f82dd9780b6a66ff77ae7f00\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin"
+            }
           }
         }
       }
@@ -42665,6 +43085,76 @@
     "fid": "CFWOBBD3TUH58SSMDGWALM4KM6O6URZ5",
     "esp": "s3",
     "category": "t-deck-pro"
+  },
+  {
+    "author": "Meshtastic",
+    "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic (v1.1)",
+    "versions": [
+      {
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin",
+        "Fs": 2222848,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2157312,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck-pro",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2157312,
+            "partition_size": 2424832,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2424832,
+              "source_offset": 65536,
+              "copy_size": 2157312,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"6fdbba1ecce2c07ec204b527c1f3ec52590c4e914771d6070193f9d8e5eadfed\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin"
+            }
+          }
+        }
+      }
+    ],
+    "fid": "CFWTYH6I89R1K8LGSBW5X3DTDGKRC810",
+    "category": "t-deck-pro",
+    "esp": "s3"
   },
   {
     "name": "MeshOS (T-Display P4 AMOLED)",
@@ -49095,80 +49585,31 @@
     "category": "t-lora-pager"
   },
   {
-    "name": "Meshtastic",
     "author": "Meshtastic",
     "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic",
     "versions": [
       {
-        "version": "2.6.11.60ec0",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.11.60ec05e/firmware-tlora-c6-2.6.11.60ec05e.bin",
-        "Fs": 1539952,
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin",
+        "Fs": 2470288,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 1474416,
+        "as": 2404752,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-lora-pager",
           "app": {
             "source_offset": 65536,
-            "image_size": 1474416,
-            "partition_size": 2424832,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2424832,
-              "source_offset": 65536,
-              "copy_size": 1474416,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 1048576,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:47Z",
-            "etag": "W/\"0fc7c3c647c1b2c40e865e8fb5c2507e9e3bc02f361d167eec2ca136495c23f2\""
-          }
-        }
-      },
-      {
-        "version": "2.7.11.ee685",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.11.ee68575/firmware-tlora-pager-2.7.11.ee68575.bin",
-        "Fs": 2347408,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2281872,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2281872,
+            "image_size": 2404752,
             "partition_size": 6553600,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -49181,7 +49622,7 @@
               "role": "firmware",
               "size": 6553600,
               "source_offset": 65536,
-              "copy_size": 2281872,
+              "copy_size": 2404752,
               "required": true
             },
             {
@@ -49200,85 +49641,33 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:47Z",
-            "etag": "W/\"15dd7e3edcebda6490287a5cf7365e520e11cf8a87c87730b92e4d8b4aa52f34\""
-          }
-        }
-      }
-    ],
-    "fid": "CFWU6X8FRVPCDIS69PR2IBQRNURFU18N",
-    "esp": "32",
-    "category": "t-lora-pager"
-  },
-  {
-    "name": "Meshtastic Fancy UI",
-    "author": "Meshtastic",
-    "versions": [
-      {
-        "version": "2.6.11.60ec0",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.6.11.60ec05e/firmware-tlora-c6-2.6.11.60ec05e-update.bin",
-        "Fs": 1474416,
-        "nb": true,
-        "ao": 0,
-        "as": 1474416,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 0,
-            "image_size": 1474416,
-            "partition_size": 1474416,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 1474416,
-              "source_offset": 0,
-              "copy_size": 1474416,
-              "required": true
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"aaaa16cd274f7d32777baefc0b43fd54a785afdf6a104934d3db128d71dd6952\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin"
             }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:47Z",
-            "etag": "W/\"c6331967293c88ee9ed53398685171f50bc4c9375576555d01f56b63aaa19e3a\""
           }
         }
       },
       {
-        "version": "2.7.11.ee685",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.11.ee68575/firmware-tlora-pager-2.7.11.ee68575-update.bin",
-        "Fs": 2281872,
-        "nb": true,
-        "ao": 0,
-        "as": 2281872,
+        "version": "2.7.15.567b8ea",
+        "published_at": "2025-11-19",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin",
+        "Fs": 2359680,
         "s": 0,
         "f": 0,
         "f2": 0,
+        "ao": 65536,
+        "as": 2294144,
         "install": {
           "schema": 1,
-          "format": "app",
+          "format": "merged",
           "target": "t-lora-pager",
           "app": {
-            "source_offset": 0,
-            "image_size": 2281872,
-            "partition_size": 2281872,
+            "source_offset": 65536,
+            "image_size": 2294144,
+            "partition_size": 6553600,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
           },
@@ -49288,21 +49677,32 @@
               "subtype": "ota",
               "label": "auto",
               "role": "firmware",
-              "size": 2281872,
-              "source_offset": 0,
-              "copy_size": 2281872,
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2294144,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
               "required": true
             }
           ],
           "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:47Z",
-            "etag": "W/\"039d59e99797ee6ad3371f2ccdccc6ee70c1b5bd8a7db8cc206685d4a47c2c94\""
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"3e56057395b1f0e55af097bce976b33da5a22ef8cf224cbdd2da8228e6fe6210\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin"
+            }
           }
         }
       }
@@ -49942,6 +50342,146 @@
     ],
     "esp": "s3",
     "category": "t-lora-pager"
+  },
+  {
+    "author": "Meshtastic",
+    "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic (v1.0)",
+    "versions": [
+      {
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin",
+        "Fs": 2141024,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2075488,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-t5s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2075488,
+            "partition_size": 2424832,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2424832,
+              "source_offset": 65536,
+              "copy_size": 2075488,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:13Z",
+            "etag": "W/\"ca76103b62819bf25fbd8c05226e655cdce010606ec701344993bf0fe81723a6\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin"
+            }
+          }
+        }
+      }
+    ],
+    "fid": "CFWU4FCR91T9LONXWIB7MTWGKPTDV0XO",
+    "category": "t-t5s3",
+    "esp": "s3"
+  },
+  {
+    "author": "Meshtastic",
+    "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic (v1.1)",
+    "versions": [
+      {
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin",
+        "Fs": 2140880,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2075344,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-t5s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2075344,
+            "partition_size": 2424832,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2424832,
+              "source_offset": 65536,
+              "copy_size": 2075344,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:13Z",
+            "etag": "W/\"e3da473db16d2acb20815ed70d1117b24b9d6a3f21ffcd0477a1767887d4f233\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin"
+            }
+          }
+        }
+      }
+    ],
+    "fid": "CFWG15UHCA2HVO6PTG4BAAKPSP8DUNDD",
+    "category": "t-t5s3",
+    "esp": "s3"
   },
   {
     "name": "Bruce (T-Watch S3)",
@@ -51029,14 +51569,75 @@
     "category": "t-watch-s3"
   },
   {
-    "name": "Meshtastic",
     "author": "Meshtastic",
     "cover": "https://meshtastic.org/img/logo.svg",
+    "logic": "meshtastic",
+    "github": "https://meshtastic.org/",
+    "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+    "name": "Meshtastic",
     "versions": [
       {
+        "version": "2.7.26.54e0d8d",
+        "published_at": "2026-06-24",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin",
+        "Fs": 2316592,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2251056,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2251056,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2251056,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"6c7e7fc800f68d79ba457511c988047292855746fe2766ca972ca2d4daf51e14\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin"
+            }
+          }
+        }
+      },
+      {
         "version": "2.7.15.567b8ea",
-        "published_at": "2026-02-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
+        "published_at": "2025-11-19",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin",
         "Fs": 2194928,
         "s": 0,
         "f": 0,
@@ -51081,8 +51682,125 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-16T19:50:46Z",
-            "etag": "W/\"f4aed1d04faf65e45baa8d366b1581fa066a12384cce29a289dd64e08075747d\""
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"f4aed1d04faf65e45baa8d366b1581fa066a12384cce29a289dd64e08075747d\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin"
+            }
+          }
+        }
+      },
+      {
+        "version": "2.6.11.60ec05e",
+        "published_at": "2025-06-11",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin",
+        "Fs": 2078480,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2012944,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2012944,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2012944,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"b1c4b81fb36cf39456a52ca69f47138b000de67f71dca07a701b75dc53fc0474\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin"
+            }
+          }
+        }
+      },
+      {
+        "version": "2.6.10.9ce4455",
+        "published_at": "2025-06-02",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin",
+        "Fs": 2076720,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2011184,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2011184,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2011184,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-08T14:28:14Z",
+            "etag": "W/\"7c2c2ef51d4cef06b3def0af3fb245a222a661d8d1bdf1d74be471497bd8982f\"",
+            "aux_inputs": {
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin"
+            }
           }
         }
       }

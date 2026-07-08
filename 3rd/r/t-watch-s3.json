@@ -1085,14 +1085,75 @@
         "category": "t-watch-s3"
     },
     {
-        "name": "Meshtastic",
         "author": "Meshtastic",
         "cover": "https://meshtastic.org/img/logo.svg",
+        "logic": "meshtastic",
+        "github": "https://meshtastic.org/",
+        "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+        "name": "Meshtastic",
         "versions": [
             {
+                "version": "2.7.26.54e0d8d",
+                "published_at": "2026-06-24",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
+                "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin",
+                "Fs": 2316592,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2251056,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-watch-s3",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2251056,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2251056,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-08T14:28:14Z",
+                        "etag": "W/\"6c7e7fc800f68d79ba457511c988047292855746fe2766ca972ca2d4daf51e14\"",
+                        "aux_inputs": {
+                            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin"
+                        }
+                    }
+                }
+            },
+            {
                 "version": "2.7.15.567b8ea",
-                "published_at": "2026-02-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/370b180ac202538c3a47d1af661b5166652dd818/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
+                "published_at": "2025-11-19",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
+                "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin",
                 "Fs": 2194928,
                 "s": 0,
                 "f": 0,
@@ -1137,8 +1198,125 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-05-16T19:50:46Z",
-                        "etag": "W/\"f4aed1d04faf65e45baa8d366b1581fa066a12384cce29a289dd64e08075747d\""
+                        "analyzed_at": "2026-07-08T14:28:14Z",
+                        "etag": "W/\"f4aed1d04faf65e45baa8d366b1581fa066a12384cce29a289dd64e08075747d\"",
+                        "aux_inputs": {
+                            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "2.6.11.60ec05e",
+                "published_at": "2025-06-11",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
+                "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin",
+                "Fs": 2078480,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2012944,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-watch-s3",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2012944,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2012944,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-08T14:28:14Z",
+                        "etag": "W/\"b1c4b81fb36cf39456a52ca69f47138b000de67f71dca07a701b75dc53fc0474\"",
+                        "aux_inputs": {
+                            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "2.6.10.9ce4455",
+                "published_at": "2025-06-02",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
+                "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin",
+                "Fs": 2076720,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2011184,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-watch-s3",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2011184,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2011184,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-08T14:28:14Z",
+                        "etag": "W/\"7c2c2ef51d4cef06b3def0af3fb245a222a661d8d1bdf1d74be471497bd8982f\"",
+                        "aux_inputs": {
+                            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin"
+                        }
                     }
                 }
             }
