@@ -140,12 +140,20 @@ def collect_versions(device: dict, betas: list, commit_sha: str, mirror_paths: s
         if data_path not in mirror_paths:
             continue
 
+        file_url = _mirror_url(commit_sha, file_path)
+        data_url = _mirror_url(commit_sha, data_path)
         versions.append(
             {
                 "version": version,
                 "published_at": beta["published_at"],
-                "file": _mirror_url(commit_sha, file_path),
-                "data": _mirror_url(commit_sha, data_path),
+                "file": file_url,
+                "data": data_url,
+                "sources": {
+                    "firmware": file_url,
+                    "data": data_url,
+                    "bootloader": None,
+                    "partitions": None,
+                },
             }
         )
     return versions
