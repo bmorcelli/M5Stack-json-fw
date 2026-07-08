@@ -429,6 +429,7 @@ def build_install_from_partition_table(
     content_length: int,
     warnings: List[str],
     image_size: int = 0,
+    data_size: int = 0,
 ) -> Dict[str, Any]:
     app_parts = [p for p in partitions if p["type_id"] == PARTITION_TYPE_APP]
     if not app_parts:
@@ -443,7 +444,11 @@ def build_install_from_partition_table(
         warnings.append("ESP image is larger than declared app partition.")
         partition_size = image_size
 
-    manifest_partitions = [build_app_partition(source_offset, image_size, partition_size)]
+    app_entry = build_app_partition(source_offset, image_size, partition_size)
+    app_entry["source"] = "firmware"
+    manifest_partitions = [app_entry]
+
+    data_assigned = False
     for part in partitions:
         if part["type_id"] == PARTITION_TYPE_APP:
             continue
@@ -453,20 +458,54 @@ def build_install_from_partition_table(
         offset = int(part["offset"])
         size = int(part["size"])
         has_payload = not content_length or content_length >= offset + size
-        manifest_partitions.append(
-            {
+        if has_payload:
+            entry = {
                 "type": partition_type_name(part["type_id"]),
                 "subtype": subtype,
                 "label": part.get("label") or subtype,
                 "role": subtype,
                 "size": size,
-                "source_offset": offset if has_payload else None,
-                "copy_size": size if has_payload else 0,
+                "source": "firmware",
+                "source_offset": offset,
+                "copy_size": size,
                 "required": True,
             }
-        )
+        elif not data_assigned and data_size:
+            # Payload não está embutido no binário merged; a partição de dados
+            # veio de um arquivo externo (ex.: littlefs do Meshtastic).
+            copy_size = min(data_size, size)
+            if data_size > size:
+                warnings.append("Data file is larger than declared data partition; truncating.")
+            entry = {
+                "type": partition_type_name(part["type_id"]),
+                "subtype": subtype,
+                "label": part.get("label") or subtype,
+                "role": subtype,
+                "size": size,
+                "source": "data",
+                "source_offset": 0,
+                "copy_size": copy_size,
+                "required": True,
+            }
+            data_assigned = True
+        else:
+            entry = {
+                "type": partition_type_name(part["type_id"]),
+                "subtype": subtype,
+                "label": part.get("label") or subtype,
+                "role": subtype,
+                "size": size,
+                "source": None,
+                "source_offset": None,
+                "copy_size": 0,
+                "required": True,
+            }
+        manifest_partitions.append(entry)
 
-    return {
+    if version.get("data") and not data_assigned:
+        warnings.append("Data file provided but no fat/spiffs partition found to receive it.")
+
+    manifest = {
         "schema": 1,
         "format": "merged",
         "target": normalize_target(item),
@@ -484,6 +523,16 @@ def build_install_from_partition_table(
             "warnings": warnings,
         },
     }
+
+    if version.get("data") or version.get("bootloader") or version.get("partitions"):
+        manifest["sources"] = {
+            "firmware": version.get("file"),
+            "bootloader": version.get("bootloader"),
+            "partitions": version.get("partitions"),
+            "data": version.get("data"),
+        }
+
+    return manifest
 
 
 def build_install_from_external_files(
@@ -765,6 +814,13 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
 
             apply_legacy_fields_from_partitions(version, partitions, reader.content_length)
             version["as"] = image_size
+
+            data_size = 0
+            if version.get("data"):
+                data_reader = _remote_content_length(version["data"], session, warnings, "data partition")
+                data_size = data_reader.content_length
+                reader.bytes_downloaded += data_reader.bytes_downloaded
+
             version["install"] = build_install_from_partition_table(
                 version,
                 item,
@@ -773,6 +829,7 @@ def analyze_remote_firmware(version: Dict[str, Any], item: Dict[str, Any], sessi
                 reader.content_length,
                 warnings,
                 image_size=image_size,
+                data_size=data_size,
             )
         else:
             # No partition table — app-only or merged binary without table at 0x8000.

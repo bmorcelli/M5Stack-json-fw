@@ -147,13 +147,7 @@ def collect_versions(device: dict, betas: list, commit_sha: str, mirror_paths: s
                 "version": version,
                 "published_at": beta["published_at"],
                 "file": file_url,
-                "data": data_url,
-                "sources": {
-                    "firmware": file_url,
-                    "data": data_url,
-                    "bootloader": None,
-                    "partitions": None,
-                },
+                "data": data_url
             }
         )
     return versions
