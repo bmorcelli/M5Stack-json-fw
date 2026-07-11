@@ -37312,15 +37312,71 @@
     "fid": "CFWJGNNYZSCOSMBAXRGLMWNWFEWGIICY",
     "versions": [
       {
+        "version": "v1.5.5",
+        "published_at": "2026-07-11",
+        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.5-merged.bin",
+        "Fs": 5217792,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5152256,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5152256,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5152256,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-11T11:16:25Z",
+            "etag": "\"6a521968-4f9e00\"",
+            "last_modified": "Sat, 11 Jul 2026 10:22:32 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.3.8",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.8-merged.bin",
         "invalid": true,
         "analysis_error": "Failed to read firmware header: HTTPError: 404 Client Error: Not Found for url: https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.8-merged.bin"
       },
       {
         "version": "v1.3.6",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.6-merged.bin",
         "Fs": 2427168,
         "s": 0,
@@ -37374,7 +37430,7 @@
       },
       {
         "version": "v1.3.5",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.5-merged.bin",
         "Fs": 2422464,
         "s": 0,
@@ -37428,7 +37484,7 @@
       },
       {
         "version": "v1.3.4",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.4-merged.bin",
         "Fs": 2426016,
         "s": 0,
@@ -37482,7 +37538,7 @@
       },
       {
         "version": "v1.3.3",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.3-merged.bin",
         "Fs": 2426000,
         "s": 0,
@@ -37536,7 +37592,7 @@
       },
       {
         "version": "v1.3.2",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.2-merged.bin",
         "Fs": 2432640,
         "s": 0,
@@ -37590,7 +37646,7 @@
       },
       {
         "version": "v1.3.1",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.1-merged.bin",
         "Fs": 2436896,
         "s": 0,
@@ -37644,7 +37700,7 @@
       },
       {
         "version": "v1.3.0",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.0-merged.bin",
         "Fs": 2428720,
         "s": 0,
@@ -37698,7 +37754,7 @@
       },
       {
         "version": "v1.2.0",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.2.0-merged.bin",
         "Fs": 2408208,
         "s": 0,
@@ -37747,60 +37803,6 @@
             "analyzed_at": "2026-05-25T22:29:50Z",
             "etag": "\"69fa1da4-24bf10\"",
             "last_modified": "Tue, 05 May 2026 16:41:08 GMT"
-          }
-        }
-      },
-      {
-        "version": "v1.1.8",
-        "published_at": "2026-06-25",
-        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.1.8-merged.bin",
-        "Fs": 2394192,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2328656,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2328656,
-            "partition_size": 6553600,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6553600,
-              "source_offset": 65536,
-              "copy_size": 2328656,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-05-25T22:29:50Z",
-            "etag": "\"69e75b5f-248850\"",
-            "last_modified": "Tue, 21 Apr 2026 11:11:27 GMT"
           }
         }
       }
@@ -38112,14 +38114,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin",
         "Fs": 2306304,
         "s": 0,
         "f": 0,
@@ -38166,31 +38162,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:11Z",
+            "analyzed_at": "2026-07-11T11:16:25Z",
             "etag": "W/\"54863b938f4cc8540f98c5003c2666d90b0e0eb7997005c19aaa6538d6f941aa\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-2.7.26.54e0d8d.bin"
           }
         }
       },
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin",
         "Fs": 2208672,
         "s": 0,
         "f": 0,
@@ -38237,31 +38227,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:11Z",
+            "analyzed_at": "2026-07-11T11:16:25Z",
             "etag": "W/\"dd29b2b8c5b08ae63e756e1f9b97f0701fde4cda7ecc91efa9e50b0e64d31bf0\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-2.7.15.567b8ea.bin"
           }
         }
       },
       {
         "version": "2.6.11.60ec05e",
         "published_at": "2025-06-11",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin",
         "Fs": 2084016,
         "s": 0,
         "f": 0,
@@ -38308,31 +38292,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:11Z",
+            "analyzed_at": "2026-07-11T11:16:25Z",
             "etag": "W/\"4a5fd43d04eef9c39909f552128cb01acf8a7c5fb5ca71e1ae9834f33bf8ae91\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-deck-2.6.11.60ec05e.bin"
           }
         }
       },
       {
         "version": "2.6.10.9ce4455",
         "published_at": "2025-06-02",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin",
         "Fs": 2082304,
         "s": 0,
         "f": 0,
@@ -38379,17 +38357,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:11Z",
+            "analyzed_at": "2026-07-11T11:16:26Z",
             "etag": "W/\"5bfa727a199cabef1f4333a51437002bac266b367257522c2f785a28dc9f8f7b\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-deck-2.6.10.9ce4455.bin"
           }
         }
       }
@@ -38409,14 +38387,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin",
         "Fs": 3694000,
         "s": 0,
         "f": 0,
@@ -38463,31 +38435,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:12Z",
+            "analyzed_at": "2026-07-11T11:16:26Z",
             "etag": "W/\"e82979087f21df37d23397223666c6c44140808a2b64f405f814671ec10b9e12\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-tft-2.7.26.54e0d8d.bin"
           }
         }
       },
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin",
         "Fs": 3593792,
         "s": 0,
         "f": 0,
@@ -38534,31 +38500,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:12Z",
+            "analyzed_at": "2026-07-11T11:16:26Z",
             "etag": "W/\"5d41819a17a80cb48b1c5062f0d74092f7ebd6f50c5c878ca71c9beac237359b\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-tft-2.7.15.567b8ea.bin"
           }
         }
       },
       {
         "version": "2.6.11.60ec05e",
         "published_at": "2025-06-11",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin",
         "Fs": 3195408,
         "s": 0,
         "f": 0,
@@ -38605,31 +38565,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:12Z",
+            "analyzed_at": "2026-07-11T11:16:26Z",
             "etag": "W/\"86e17f1e9a21f6b912b85d75e078a2963f7d6051e5bbaf2ff31f20dc18558f61\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-deck-tft-2.6.11.60ec05e.bin"
           }
         }
       },
       {
         "version": "2.6.10.9ce4455",
         "published_at": "2025-06-02",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin",
         "Fs": 3193120,
         "s": 0,
         "f": 0,
@@ -38676,17 +38630,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:12Z",
+            "analyzed_at": "2026-07-11T11:16:26Z",
             "etag": "W/\"7db1139f93ef4431b750d6a1f7469cce9333da7f839e55a086830be0fa1b3cf9\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-deck-tft-2.6.10.9ce4455.bin"
           }
         }
       }
@@ -40740,6 +40694,62 @@
     "fid": "CFW7UKIJW436AWBCH5OTRSG3Q7CK5PNN",
     "versions": [
       {
+        "version": "beta_40",
+        "published_at": "2026-07-10",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_40/wadamesh-tdeck-merged.bin",
+        "Fs": 3208096,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3142560,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3142560,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3142560,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-11T11:16:26Z",
+            "etag": "\"0x8DEDEA232D0BED1\"",
+            "last_modified": "Fri, 10 Jul 2026 16:42:15 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_35",
         "published_at": "2026-07-06",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_35/wadamesh-tdeck-merged.bin",
@@ -41222,60 +41232,6 @@
             "analyzed_at": "2026-06-26T18:16:05Z",
             "etag": "\"0x8DED3ACFB9AAFA7\"",
             "last_modified": "Fri, 26 Jun 2026 18:01:44 GMT"
-          }
-        }
-      },
-      {
-        "version": "beta_15",
-        "published_at": "2026-06-24",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_15/wadamesh-tdeck-merged.bin",
-        "Fs": 2966928,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2901392,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2901392,
-            "partition_size": 4063232,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4063232,
-              "source_offset": 65536,
-              "copy_size": 2901392,
-              "required": true
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-06-24T09:03:33Z",
-            "etag": "\"0x8DED1CF5EE7779B\"",
-            "last_modified": "Wed, 24 Jun 2026 09:02:51 GMT"
           }
         }
       }
@@ -43262,14 +43218,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin",
         "Fs": 2222400,
         "s": 0,
         "f": 0,
@@ -43316,31 +43266,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:10Z",
+            "analyzed_at": "2026-07-11T11:16:25Z",
             "etag": "W/\"660984c69aec50e33c82c58271bc6410943c7ad78ff0acf66bb86f0bc5052d8d\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-2.7.26.54e0d8d.bin"
           }
         }
       },
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin",
         "Fs": 2130256,
         "s": 0,
         "f": 0,
@@ -43387,17 +43331,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:10Z",
+            "analyzed_at": "2026-07-11T11:16:24Z",
             "etag": "W/\"3fa6ef01b5aa87f45f7bd09dec13e200ece1dbd7f82dd9780b6a66ff77ae7f00\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-deck-pro-2.7.15.567b8ea.bin"
           }
         }
       }
@@ -43417,14 +43361,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin",
         "Fs": 2222848,
         "s": 0,
         "f": 0,
@@ -43471,17 +43409,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:10Z",
+            "analyzed_at": "2026-07-11T11:16:24Z",
             "etag": "W/\"6fdbba1ecce2c07ec204b527c1f3ec52590c4e914771d6070193f9d8e5eadfed\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-deck-pro-v1_1-2.7.26.54e0d8d.bin"
           }
         }
       }
@@ -43500,7 +43438,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-1.0.1-merged.bin",
         "Fs": 10732848,
         "s": 0,
@@ -43554,7 +43492,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-merged.bin",
         "Fs": 10600336,
         "s": 0,
@@ -43620,7 +43558,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-LCD-1.0.1-merged.bin",
         "Fs": 10749168,
         "s": 0,
@@ -43674,7 +43612,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-LCD-merged.bin",
         "Fs": 10616224,
         "s": 0,
@@ -49435,14 +49373,14 @@
     "versions": [
       {
         "version": "v1.3.8",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.8-merged.bin",
         "invalid": true,
         "analysis_error": "Failed to read firmware header: HTTPError: 404 Client Error: Not Found for url: https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.8-merged.bin"
       },
       {
         "version": "v1.3.6",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.6-merged.bin",
         "Fs": 2607168,
         "s": 0,
@@ -49496,7 +49434,7 @@
       },
       {
         "version": "v1.3.5",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.5-merged.bin",
         "Fs": 2601920,
         "s": 0,
@@ -49550,7 +49488,7 @@
       },
       {
         "version": "v1.3.4",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.4-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -49604,7 +49542,7 @@
       },
       {
         "version": "v1.3.3",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.3-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -49658,7 +49596,7 @@
       },
       {
         "version": "v1.3.2",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.2-merged.bin",
         "Fs": 2609584,
         "s": 0,
@@ -49712,7 +49650,7 @@
       },
       {
         "version": "v1.3.1",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.1-merged.bin",
         "Fs": 2617424,
         "s": 0,
@@ -49766,7 +49704,7 @@
       },
       {
         "version": "v1.3.0",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.0-merged.bin",
         "Fs": 2612784,
         "s": 0,
@@ -49820,7 +49758,7 @@
       },
       {
         "version": "v1.2.0",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.2.0-merged.bin",
         "Fs": 2590928,
         "s": 0,
@@ -49874,7 +49812,7 @@
       },
       {
         "version": "v1.1.8",
-        "published_at": "2026-06-25",
+        "published_at": "2026-07-11",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.1.8-merged.bin",
         "Fs": 2576880,
         "s": 0,
@@ -49941,14 +49879,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin",
         "Fs": 2470288,
         "s": 0,
         "f": 0,
@@ -49995,31 +49927,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:12Z",
+            "analyzed_at": "2026-07-11T11:16:24Z",
             "etag": "W/\"aaaa16cd274f7d32777baefc0b43fd54a785afdf6a104934d3db128d71dd6952\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-tlora-pager-2.7.26.54e0d8d.bin"
           }
         }
       },
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin",
         "Fs": 2359680,
         "s": 0,
         "f": 0,
@@ -50066,17 +49992,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:12Z",
+            "analyzed_at": "2026-07-11T11:16:24Z",
             "etag": "W/\"3e56057395b1f0e55af097bce976b33da5a22ef8cf224cbdd2da8228e6fe6210\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-tlora-pager-2.7.15.567b8ea.bin"
           }
         }
       }
@@ -50728,14 +50654,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin",
         "Fs": 2141024,
         "s": 0,
         "f": 0,
@@ -50782,17 +50702,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:13Z",
+            "analyzed_at": "2026-07-11T11:16:22Z",
             "etag": "W/\"ca76103b62819bf25fbd8c05226e655cdce010606ec701344993bf0fe81723a6\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v1-2.7.26.54e0d8d.bin"
           }
         }
       }
@@ -50812,14 +50732,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin",
         "Fs": 2140880,
         "s": 0,
         "f": 0,
@@ -50866,17 +50780,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:13Z",
+            "analyzed_at": "2026-07-11T11:16:22Z",
             "etag": "W/\"e3da473db16d2acb20815ed70d1117b24b9d6a3f21ffcd0477a1767887d4f233\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t5s3-epaper-v2-2.7.26.54e0d8d.bin"
           }
         }
       }
@@ -51983,14 +51897,8 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin",
         "Fs": 2316592,
         "s": 0,
         "f": 0,
@@ -52037,31 +51945,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:14Z",
+            "analyzed_at": "2026-07-11T11:16:23Z",
             "etag": "W/\"6c7e7fc800f68d79ba457511c988047292855746fe2766ca972ca2d4daf51e14\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.26.54e0d8d/littlefs-t-watch-s3-2.7.26.54e0d8d.bin"
           }
         }
       },
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin",
         "Fs": 2194928,
         "s": 0,
         "f": 0,
@@ -52108,31 +52010,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:14Z",
+            "analyzed_at": "2026-07-11T11:16:23Z",
             "etag": "W/\"f4aed1d04faf65e45baa8d366b1581fa066a12384cce29a289dd64e08075747d\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.7.15.567b8ea/littlefs-t-watch-s3-2.7.15.567b8ea.bin"
           }
         }
       },
       {
         "version": "2.6.11.60ec05e",
         "published_at": "2025-06-11",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin",
         "Fs": 2078480,
         "s": 0,
         "f": 0,
@@ -52179,31 +52075,25 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:14Z",
+            "analyzed_at": "2026-07-11T11:16:23Z",
             "etag": "W/\"b1c4b81fb36cf39456a52ca69f47138b000de67f71dca07a701b75dc53fc0474\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.11.60ec05e/littlefs-t-watch-s3-2.6.11.60ec05e.bin"
           }
         }
       },
       {
         "version": "2.6.10.9ce4455",
         "published_at": "2025-06-02",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
-        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin",
-        "sources": {
-          "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
-          "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin",
-          "bootloader": null,
-          "partitions": null
-        },
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
+        "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin",
         "Fs": 2076720,
         "s": 0,
         "f": 0,
@@ -52250,17 +52140,17 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-08T15:34:14Z",
+            "analyzed_at": "2026-07-11T11:16:23Z",
             "etag": "W/\"7c2c2ef51d4cef06b3def0af3fb245a222a661d8d1bdf1d74be471497bd8982f\"",
             "aux_inputs": {
-              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin"
+              "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin"
             }
           },
           "sources": {
-            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
+            "firmware": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
             "bootloader": null,
             "partitions": null,
-            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/590e5d9f4b45b56b20ee817712c9b9c18fe0785d/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin"
+            "data": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8e16f1d9c27ddc135273b81ae1f09a3be248f307/firmware-2.6.10.9ce4455/littlefs-t-watch-s3-2.6.10.9ce4455.bin"
           }
         }
       }
