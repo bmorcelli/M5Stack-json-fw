@@ -9583,6 +9583,53 @@
     "fid": "CFW3TMV2H6G2YR2VVPOVKXUKPUQ4BESO",
     "versions": [
       {
+        "version": "v2.11.1",
+        "published_at": "2026-07-14",
+        "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.11.1/CYM-NM28C5.bin",
+        "Fs": 2985840,
+        "nb": true,
+        "ao": 0,
+        "as": 2985840,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "nm-cyd-c5",
+          "app": {
+            "source_offset": 0,
+            "image_size": 2985840,
+            "partition_size": 2985840,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2985840,
+              "source_offset": 0,
+              "copy_size": 2985840,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-14T04:14:14Z",
+            "etag": "\"0x8DEE152E8D48434\"",
+            "last_modified": "Tue, 14 Jul 2026 02:52:14 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.11.0",
         "published_at": "2026-07-10",
         "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.11.0/CYM-NM28C5.bin",
@@ -10002,53 +10049,6 @@
             "analyzed_at": "2026-06-24T21:29:02Z",
             "etag": "\"0x8DED23423B078B4\"",
             "last_modified": "Wed, 24 Jun 2026 21:04:11 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.10.16",
-        "published_at": "2026-06-18",
-        "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.10.16/CYM-NM28C5.bin",
-        "Fs": 2913296,
-        "nb": true,
-        "ao": 0,
-        "as": 2913296,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "nm-cyd-c5",
-          "app": {
-            "source_offset": 0,
-            "image_size": 2913296,
-            "partition_size": 2913296,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2913296,
-              "source_offset": 0,
-              "copy_size": 2913296,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-06-18T15:56:11Z",
-            "etag": "\"0x8DECD4FA9083463\"",
-            "last_modified": "Thu, 18 Jun 2026 15:38:35 GMT"
           }
         }
       }
@@ -37782,6 +37782,62 @@
     "github": "https://github.com/PhilMo6/meshpunk",
     "fid": "CFWBFELPCYS64CBKDIJJDRYQDCTA5P5N",
     "versions": [
+      {
+        "version": "v0.2.6",
+        "published_at": "2026-07-14",
+        "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.2.6/meshpunk-v0.2.6-launcher.bin",
+        "Fs": 4347296,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4281760,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4281760,
+            "partition_size": 5767168,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5767168,
+              "source_offset": 65536,
+              "copy_size": 4281760,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "assets",
+              "role": "spiffs",
+              "size": 6291456,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-14T04:14:14Z",
+            "etag": "\"0x8DEE14BBB06DE0C\"",
+            "last_modified": "Tue, 14 Jul 2026 02:00:50 GMT"
+          }
+        }
+      },
       {
         "version": "v0.2.5",
         "published_at": "2026-07-12",
