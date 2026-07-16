@@ -424,6 +424,53 @@
         "fid": "CFWS6ZPJ4PT77ROTEHJCTVQGGVB3M6XO",
         "versions": [
             {
+                "version": "v3.0.1",
+                "published_at": "2026-07-16",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v3.0.1/camillia-mt-tlora-pager-tft-v3.0.1-ota.bin",
+                "Fs": 1720800,
+                "nb": true,
+                "ao": 0,
+                "as": 1720800,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1720800,
+                        "partition_size": 1720800,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1720800,
+                            "source_offset": 0,
+                            "copy_size": 1720800,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-16T03:43:26Z",
+                        "etag": "\"0x8DEE2D4AAC8A507\"",
+                        "last_modified": "Thu, 16 Jul 2026 00:53:35 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v3.0.0",
                 "published_at": "2026-07-15",
                 "file": "https://github.com/oumike/camillia-mt/releases/download/v3.0.0/camillia-mt-tlora-pager-tft-v3.0.0-ota.bin",
@@ -861,62 +908,6 @@
                         "analyzed_at": "2026-07-15T21:49:04Z",
                         "etag": "\"0x8DEDD554F3C9630\"",
                         "last_modified": "Thu, 09 Jul 2026 00:59:20 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v2.9.1",
-                "published_at": "2026-07-08",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v2.9.1/camillia-mt-tlora-pager-tft-v2.9.1.bin",
-                "Fs": 1756736,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1691200,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1691200,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 1691200,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 786432,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-15T21:49:04Z",
-                        "etag": "\"0x8DEDC89F93BB7F7\"",
-                        "last_modified": "Wed, 08 Jul 2026 00:43:48 GMT"
                     }
                 }
             }
