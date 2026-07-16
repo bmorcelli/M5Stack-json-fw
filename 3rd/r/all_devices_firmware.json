@@ -41351,6 +41351,62 @@
     "fid": "CFW7UKIJW436AWBCH5OTRSG3Q7CK5PNN",
     "versions": [
       {
+        "version": "beta_45",
+        "published_at": "2026-07-15",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_45/wadamesh-tdeck-merged.bin",
+        "Fs": 3317664,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3252128,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3252128,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3252128,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-16T21:39:51Z",
+            "etag": "\"0x8DEE2A325FB8823\"",
+            "last_modified": "Wed, 15 Jul 2026 18:59:07 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_40",
         "published_at": "2026-07-10",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_40/wadamesh-tdeck-merged.bin",
@@ -41853,24 +41909,36 @@
             "last_modified": "Sat, 27 Jun 2026 13:16:41 GMT"
           }
         }
-      },
+      }
+    ],
+    "esp": "s3",
+    "category": "t-deck"
+  },
+  {
+    "name": "WADAMESH BETA (T-Deck Plus)",
+    "author": "ALLFATHER-BV",
+    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
+    "versions": [
       {
-        "version": "beta_18",
-        "published_at": "2026-06-26",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_18/wadamesh-tdeck-merged.bin",
-        "Fs": 2982720,
+        "version": "beta_46",
+        "published_at": "2026-07-16",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_46/wadamesh-tdeck-merged.bin",
+        "Fs": 3321920,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2917184,
+        "as": 3256384,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-deck",
           "app": {
             "source_offset": 65536,
-            "image_size": 2917184,
+            "image_size": 3256384,
             "partition_size": 4063232,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -41883,7 +41951,7 @@
               "role": "firmware",
               "size": 4063232,
               "source_offset": 65536,
-              "copy_size": 2917184,
+              "copy_size": 3256384,
               "required": true,
               "source": "firmware"
             },
@@ -41904,24 +41972,12 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-15T21:50:23Z",
-            "etag": "\"0x8DED3ACFB9AAFA7\"",
-            "last_modified": "Fri, 26 Jun 2026 18:01:44 GMT"
+            "analyzed_at": "2026-07-16T21:39:51Z",
+            "etag": "\"0x8DEE37B942CAEAD\"",
+            "last_modified": "Thu, 16 Jul 2026 20:48:23 GMT"
           }
         }
-      }
-    ],
-    "esp": "s3",
-    "category": "t-deck"
-  },
-  {
-    "name": "WADAMESH BETA (T-Deck Plus)",
-    "author": "ALLFATHER-BV",
-    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
-    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
-    "github": "https://github.com/ALLFATHER-BV/wadamesh",
-    "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
-    "versions": [
+      },
       {
         "version": "beta_45",
         "published_at": "2026-07-15",
@@ -42423,62 +42479,6 @@
             "analyzed_at": "2026-07-15T21:50:24Z",
             "etag": "\"0x8DEDD2E36F9C149\"",
             "last_modified": "Wed, 08 Jul 2026 20:19:29 GMT"
-          }
-        }
-      },
-      {
-        "version": "beta_36",
-        "published_at": "2026-07-07",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_36/wadamesh-tdeck-merged.bin",
-        "Fs": 3060528,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2994992,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2994992,
-            "partition_size": 4063232,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4063232,
-              "source_offset": 65536,
-              "copy_size": 2994992,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-15T21:50:24Z",
-            "etag": "\"0x8DEDC0A1855ED85\"",
-            "last_modified": "Tue, 07 Jul 2026 09:28:24 GMT"
           }
         }
       }
