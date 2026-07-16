@@ -3794,6 +3794,62 @@
         "fid": "CFWJGNNYZSCOSMBAXRGLMWNWFEWGIICY",
         "versions": [
             {
+                "version": "v1.5.9",
+                "published_at": "2026-07-16",
+                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.9-merged.bin",
+                "Fs": 5247504,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 5181968,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 5181968,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 5181968,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-16T16:57:26Z",
+                        "etag": "\"6a590461-501210\"",
+                        "last_modified": "Thu, 16 Jul 2026 16:18:41 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.5.8",
                 "published_at": "2026-07-16",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.8-merged.bin",
@@ -4294,62 +4350,6 @@
                         "analyzed_at": "2026-07-15T21:50:15Z",
                         "etag": "\"6a0209ea-250490\"",
                         "last_modified": "Mon, 11 May 2026 16:55:06 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.3.2",
-                "published_at": "2026-07-16",
-                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.3.2-merged.bin",
-                "Fs": 2432640,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2367104,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2367104,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 2367104,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-15T21:50:15Z",
-                        "etag": "\"69ff1043-251e80\"",
-                        "last_modified": "Sat, 09 May 2026 10:45:23 GMT"
                     }
                 }
             }
