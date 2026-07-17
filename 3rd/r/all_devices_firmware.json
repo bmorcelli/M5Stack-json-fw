@@ -44956,8 +44956,8 @@
         }
       }
     ],
-    "category": "t-embed-cc1101",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-embed-cc1101"
   },
   {
     "name": "Bruce (T-Embed CC1101)",
@@ -52148,6 +52148,278 @@
     ],
     "esp": "s3",
     "category": "t-lora-pager"
+  },
+  {
+    "name": "WADAMESH (T-LoRa Pager (LR1121))",
+    "author": "ALLFATHER-BV",
+    "description": "MeshCore companion radio with a full touch UI for the LilyGo T-Deck \u2014 LoRa mesh DMs, channels & room servers, contacts, offline maps, and multi-language keyboards.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWE6UJOLIK7ZNRYY5LISDFNN26XHCO3",
+    "versions": [
+      {
+        "version": "beta_45",
+        "published_at": "2026-07-15",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_45/wadamesh-tlora-pager-lr1121-merged.bin",
+        "Fs": 3268608,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3203072,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3203072,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3203072,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-17T10:28:02Z",
+            "etag": "\"0x8DEE2A2398F4FFC\"",
+            "last_modified": "Wed, 15 Jul 2026 18:52:31 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-lora-pager",
+    "esp": "s3"
+  },
+  {
+    "name": "WADAMESH (T-LoRa Pager (SX1262))",
+    "author": "ALLFATHER-BV",
+    "description": "MeshCore companion radio with a full touch UI for the LilyGo T-Deck \u2014 LoRa mesh DMs, channels & room servers, contacts, offline maps, and multi-language keyboards.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWBXVMXEMELBRHQRFQTVEMGEQA3GT6R",
+    "versions": [
+      {
+        "version": "beta_45",
+        "published_at": "2026-07-15",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_45/wadamesh-tlora-pager-sx1262-merged.bin",
+        "Fs": 3269504,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3203968,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3203968,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3203968,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-17T10:28:02Z",
+            "etag": "\"0x8DEE2A239D46FB2\"",
+            "last_modified": "Wed, 15 Jul 2026 18:52:31 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-lora-pager",
+    "esp": "s3"
+  },
+  {
+    "name": "WADAMESH BETA (T-LoRa Pager (LR1121))",
+    "author": "ALLFATHER-BV",
+    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWFRWQO44EP2U6OJKWSSULNOMOSJA44",
+    "versions": [
+      {
+        "version": "beta_46",
+        "published_at": "2026-07-16",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_46/wadamesh-tlora-pager-lr1121-merged.bin",
+        "Fs": 3272976,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3207440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3207440,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3207440,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-17T10:28:02Z",
+            "etag": "\"0x8DEE37AB04A3E60\"",
+            "last_modified": "Thu, 16 Jul 2026 20:42:01 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-lora-pager",
+    "esp": "s3"
+  },
+  {
+    "name": "WADAMESH BETA (T-LoRa Pager (SX1262))",
+    "author": "ALLFATHER-BV",
+    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWXK2SEBQC3RH6MDX2UAIUG4HACEN2C",
+    "versions": [
+      {
+        "version": "beta_46",
+        "published_at": "2026-07-16",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_46/wadamesh-tlora-pager-sx1262-merged.bin",
+        "Fs": 3273824,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3208288,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3208288,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3208288,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-17T10:28:02Z",
+            "etag": "\"0x8DEE37AB03740F6\"",
+            "last_modified": "Thu, 16 Jul 2026 20:42:01 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-lora-pager",
+    "esp": "s3"
   },
   {
     "author": "Meshtastic",
