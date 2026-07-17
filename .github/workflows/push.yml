@@ -1,10 +1,10 @@
-name: 3rd Party JSON Files
+name: Database Update
 
 on:
   workflow_dispatch:
     inputs:
       force_download_all:
-        description: "Force reanalysis by clearing generated/cached JSON before running"
+        description: "Force reanalysis, clearing JSONs before running"
         required: false
         default: false
         type: boolean
@@ -12,6 +12,11 @@ on:
   schedule:
     - cron: "7,22,37,52 * * * *"
 
+# Garante que apenas uma execução deste workflow rode por vez no repositório
+concurrency:
+  group: database-update-group
+  cancel-in-progress: false # NÃO cancela a execução com force_download_all=true
+  
 permissions:
   contents: write
   actions: write
@@ -26,7 +31,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+         
     - name: Run Python script
       id: process
       env:
