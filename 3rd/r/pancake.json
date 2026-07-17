@@ -1,5 +1,75 @@
 [
     {
+        "name": "ASCII-Aquarium (Pancake)",
+        "author": "H4W9",
+        "description": "ASCII Aquarium turns your Marauder Pancake into a tiny animated ASCII fish tank. It renders a live aquarium scene with animated fish, bubbles, swaying seaweed, tap-to-feed food flakes, occasional octopus & seahorse visitors, selectable backgrounds, preferences, optional Wi-Fi clock sync, & More!",
+        "cover": "",
+        "github": "https://github.com/H4W9/ASCII-Aquarium",
+        "fid": "CFWOFMXHIV4SAC3JNNXV3UY27AYKAAPD",
+        "versions": [
+            {
+                "version": "v2.39-pancake",
+                "published_at": "2026-07-17",
+                "file": "https://github.com/H4W9/ASCII-Aquarium/releases/download/v2.39-pancake/ASCII_Aquarium_merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1270720,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1270720,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1270720,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 917504,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-07-17T00:58:20Z",
+                        "etag": "\"0x8DEE39A83480203\"",
+                        "last_modified": "Fri, 17 Jul 2026 00:29:50 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
         "name": "ESP32 FlipSocial (Pancake)",
         "author": "H4W9",
         "description": "A standalone touch firmware that runs FlipSocial natively on the Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch) \u2014 no Flipper Zero attached. It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",

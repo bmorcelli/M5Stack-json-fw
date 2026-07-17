@@ -30042,6 +30042,76 @@
     "category": "marauder-v8"
   },
   {
+    "name": "ASCII-Aquarium (Pancake)",
+    "author": "H4W9",
+    "description": "ASCII Aquarium turns your Marauder Pancake into a tiny animated ASCII fish tank. It renders a live aquarium scene with animated fish, bubbles, swaying seaweed, tap-to-feed food flakes, occasional octopus & seahorse visitors, selectable backgrounds, preferences, optional Wi-Fi clock sync, & More!",
+    "cover": "",
+    "github": "https://github.com/H4W9/ASCII-Aquarium",
+    "fid": "CFWOFMXHIV4SAC3JNNXV3UY27AYKAAPD",
+    "versions": [
+      {
+        "version": "v2.39-pancake",
+        "published_at": "2026-07-17",
+        "file": "https://github.com/H4W9/ASCII-Aquarium/releases/download/v2.39-pancake/ASCII_Aquarium_merged.bin",
+        "Fs": 4194304,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1270720,
+        "so": 3211264,
+        "ss": 917504,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "pancake",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1270720,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1270720,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": "firmware",
+              "source_offset": 3211264,
+              "copy_size": 917504,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4231168,
+            "analyzed_at": "2026-07-17T00:58:20Z",
+            "etag": "\"0x8DEE39A83480203\"",
+            "last_modified": "Fri, 17 Jul 2026 00:29:50 GMT"
+          }
+        }
+      }
+    ],
+    "category": "pancake",
+    "esp": "c5"
+  },
+  {
     "name": "ESP32 FlipSocial (Pancake)",
     "author": "H4W9",
     "description": "A standalone touch firmware that runs FlipSocial natively on the Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch) \u2014 no Flipper Zero attached. It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
@@ -35205,6 +35275,53 @@
     "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
     "versions": [
       {
+        "version": "v3.0.4",
+        "published_at": "2026-07-17",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v3.0.4/camillia-mt-tdeck-v3.0.4-ota.bin",
+        "Fs": 1669760,
+        "nb": true,
+        "ao": 0,
+        "as": 1669760,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1669760,
+            "partition_size": 1669760,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1669760,
+              "source_offset": 0,
+              "copy_size": 1669760,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-17T00:58:21Z",
+            "etag": "\"0x8DEE39904EAB23D\"",
+            "last_modified": "Fri, 17 Jul 2026 00:19:08 GMT"
+          }
+        }
+      },
+      {
         "version": "v3.0.1",
         "published_at": "2026-07-16",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v3.0.1/camillia-mt-tdeck-v3.0.1-ota.bin",
@@ -35633,62 +35750,6 @@
             "analyzed_at": "2026-07-15T21:50:08Z",
             "etag": "\"0x8DEDEE88AA1E62D\"",
             "last_modified": "Sat, 11 Jul 2026 01:05:47 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.9.2",
-        "published_at": "2026-07-09",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.9.2/camillia-mt-tdeck-v2.9.2.bin",
-        "Fs": 1705504,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 1639968,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 1639968,
-            "partition_size": 3145728,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3145728,
-              "source_offset": 65536,
-              "copy_size": 1639968,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 786432,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-15T21:50:09Z",
-            "etag": "\"0x8DEDD554F2C649D\"",
-            "last_modified": "Thu, 09 Jul 2026 00:59:20 GMT"
           }
         }
       }
@@ -49009,6 +49070,53 @@
     "fid": "CFWS6ZPJ4PT77ROTEHJCTVQGGVB3M6XO",
     "versions": [
       {
+        "version": "v3.0.4",
+        "published_at": "2026-07-17",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v3.0.4/camillia-mt-tlora-pager-tft-v3.0.4-ota.bin",
+        "Fs": 1720800,
+        "nb": true,
+        "ao": 0,
+        "as": 1720800,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1720800,
+            "partition_size": 1720800,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1720800,
+              "source_offset": 0,
+              "copy_size": 1720800,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-17T00:58:21Z",
+            "etag": "\"0x8DEE39904DE6403\"",
+            "last_modified": "Fri, 17 Jul 2026 00:19:08 GMT"
+          }
+        }
+      },
+      {
         "version": "v3.0.1",
         "published_at": "2026-07-16",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v3.0.1/camillia-mt-tlora-pager-tft-v3.0.1-ota.bin",
@@ -49437,62 +49545,6 @@
             "analyzed_at": "2026-07-15T21:49:04Z",
             "etag": "\"0x8DEDEE88A96F5FD\"",
             "last_modified": "Sat, 11 Jul 2026 01:05:47 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.9.2",
-        "published_at": "2026-07-09",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v2.9.2/camillia-mt-tlora-pager-tft-v2.9.2.bin",
-        "Fs": 1756240,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 1690704,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 1690704,
-            "partition_size": 3145728,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3145728,
-              "source_offset": 65536,
-              "copy_size": 1690704,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 786432,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-15T21:49:04Z",
-            "etag": "\"0x8DEDD554F3C9630\"",
-            "last_modified": "Thu, 09 Jul 2026 00:59:20 GMT"
           }
         }
       }
