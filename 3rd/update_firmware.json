@@ -737,12 +737,17 @@
         "author": "H4W9",
         "cover": "",
         "github": "https://github.com/H4W9/ESP32_FlipSocial",
-        "description": "A standalone touch firmware that runs FlipSocial natively on the Pancake board (ESP32-C5, ST7796 320×480, FT6336 capacitive touch) — no Flipper Zero attached. It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
+        "description": "A standalone touch firmware that runs FlipSocial natively on the Marauder V8 and Pancake board (ESP32-C5, ST7796 320×480, FT6336 capacitive touch). It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
         "fid_prefix": "FlipSocial",
         "devices": [
             {
+                "name": "Marauder V8",
+                "asset_contains": "ESP32_FlipSocial*v8_merged.bin",
+                "json": "marauder-v8.json"
+            },
+            {
                 "name": "Pancake",
-                "asset_contains" :"ESP32_FlipSocial_merged.bin",
+                "asset_contains" :"ESP32_FlipSocial*pancake_merged.bin",
                 "json": "pancake.json"
             }
         ]
