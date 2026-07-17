@@ -31,25 +31,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Check if heavy job is running
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        # Se este for um evento de schedule
-        if [ "${{ github.event_name }}" = "schedule" ]; then
-          echo "Verificando se há um download forçado em andamento..."
-          
-          # Procura por execuções ativas do tipo workflow_dispatch (manual)
-          RUNNING_MANUAL=$(gh run list --workflow "${{ github.workflow }}" --status in_progress --event workflow_dispatch --json id -q '.[] | .id')
-          
-          if [ ! -z "$RUNNING_MANUAL" ]; then
-            echo "⚠️ Uma execução manual longa está ativa. Cancelando este scheduler para evitar conflitos."
-            gh run cancel ${{ github.run_id }}
-            sleep 10 # Dá tempo para o GitHub processar o cancelamento
-          fi
-        fi
-          
+         
     - name: Run Python script
       id: process
       env:
