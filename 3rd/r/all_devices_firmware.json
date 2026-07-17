@@ -29573,6 +29573,91 @@
     "category": "marauder-v7"
   },
   {
+    "name": "ESP32 FlipSocial (Marauder V8)",
+    "author": "H4W9",
+    "description": "A standalone touch firmware that runs FlipSocial natively on the Marauder V8 and Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch). It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
+    "cover": "",
+    "github": "https://github.com/H4W9/ESP32_FlipSocial",
+    "fid": "CFWEYCAGE6BINUYW7TTLELHD67MC7HJY",
+    "versions": [
+      {
+        "version": "v1.0.2",
+        "published_at": "2026-07-17",
+        "file": "https://github.com/H4W9/ESP32_FlipSocial/releases/download/v1.0.2/ESP32_FlipSocial_v1_0_2_v8_merged.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 1,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3604480,
+        "so": 7340032,
+        "ss": 262144,
+        "fo": 7602176,
+        "fs": 786432,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-v8",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3604480,
+            "partition_size": 3604480,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3604480,
+              "source_offset": 131072,
+              "copy_size": 3604480,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 262144,
+              "source": "firmware",
+              "source_offset": 7340032,
+              "copy_size": 262144,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 786432,
+              "source": "firmware",
+              "source_offset": 7602176,
+              "copy_size": 786432,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "ESP segment parse failed on full flash, using partition_size: ESP image not found at 0x20000"
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-07-17T18:26:31Z",
+            "etag": "\"0x8DEE43060FFC4B5\"",
+            "last_modified": "Fri, 17 Jul 2026 18:22:37 GMT"
+          }
+        }
+      }
+    ],
+    "category": "marauder-v8",
+    "esp": "c5"
+  },
+  {
     "name": "Ghost v2.0",
     "author": "GhostESP-Revival",
     "description": "Welcome to Ghost ESP, a robust and feature-rich firmware designed for your ESP32 microcontroller, enabling advanced wireless network exploration and security testing. With Ghost ESP installed, you can leverage the power of your ESP32 device to conduct in-depth WiFi and Bluetooth Low Energy (BLE) analysis, launch strategic wireless attacks, and explore a wide range of wireless environments.",
@@ -30154,11 +30239,84 @@
   {
     "name": "ESP32 FlipSocial (Pancake)",
     "author": "H4W9",
-    "description": "A standalone touch firmware that runs FlipSocial natively on the Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch) \u2014 no Flipper Zero attached. It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
+    "description": "A standalone touch firmware that runs FlipSocial natively on the Marauder V8 and Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch). It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
     "cover": "",
     "github": "https://github.com/H4W9/ESP32_FlipSocial",
     "fid": "CFWOMEENONSYJAMSO3RQXCYJMYDYKK7V",
     "versions": [
+      {
+        "version": "v1.0.2",
+        "published_at": "2026-07-17",
+        "file": "https://github.com/H4W9/ESP32_FlipSocial/releases/download/v1.0.2/ESP32_FlipSocial_v1_0_2_pancake_merged.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 1,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3604480,
+        "so": 7340032,
+        "ss": 262144,
+        "fo": 7602176,
+        "fs": 786432,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "pancake",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3604480,
+            "partition_size": 3604480,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3604480,
+              "source_offset": 131072,
+              "copy_size": 3604480,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 262144,
+              "source": "firmware",
+              "source_offset": 7340032,
+              "copy_size": 262144,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 786432,
+              "source": "firmware",
+              "source_offset": 7602176,
+              "copy_size": 786432,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "ESP segment parse failed on full flash, using partition_size: ESP image not found at 0x20000"
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-07-17T18:26:30Z",
+            "etag": "\"0x8DEE43060B2230C\"",
+            "last_modified": "Fri, 17 Jul 2026 18:22:36 GMT"
+          }
+        }
+      },
       {
         "version": "v1.0.1",
         "published_at": "2026-07-16",
