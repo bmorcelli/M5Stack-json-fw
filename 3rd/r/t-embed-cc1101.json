@@ -3593,5 +3593,73 @@
         ],
         "esp": "s3",
         "category": "t-embed-cc1101"
+    },
+    {
+        "name": "Zhilly (CC1101)",
+        "author": "sacriphanius",
+        "description": "This project is an advanced AI Pentester Assistant based on the Xiaozhi-esp32 infrastructure, optimized for the LilyGO T-Embed CC1101 hardware. It combines natural language AI interaction with physical hardware testing tools, making it a versitile companion for cybersecurity research and daily technical tasks.",
+        "cover": "",
+        "github": "https://github.com/sacriphanius/Zhilly",
+        "fid": "CFWM224YLFVFVFPEKK7ZBJ6BR22HIASS",
+        "versions": [
+            {
+                "version": "v1.3.3",
+                "published_at": "2026-07-19",
+                "file": "https://github.com/sacriphanius/Zhilly/releases/download/v1.3.3/Zhilly_Firmware_T-Embed-cc1101.bin",
+                "Fs": 11127906,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 131072,
+                "as": 2736896,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 2736896,
+                        "partition_size": 4128768,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4128768,
+                            "source_offset": 131072,
+                            "copy_size": 2736896,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "assets",
+                            "role": "spiffs",
+                            "size": 8388608,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 11164770,
+                        "analyzed_at": "2026-07-19T18:34:32Z",
+                        "etag": "\"0x8DEE5BC5DE7D34E\"",
+                        "last_modified": "Sun, 19 Jul 2026 17:37:12 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-embed-cc1101",
+        "esp": "s3"
     }
 ]
