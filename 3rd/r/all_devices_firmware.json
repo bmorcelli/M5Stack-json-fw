@@ -932,8 +932,8 @@
       }
     ],
     "fid": "CFW704U4QG18DZO94DWWO0H0GJMZC30V",
-    "category": "CYD",
-    "esp": "32"
+    "esp": "32",
+    "category": "CYD"
   },
   {
     "name": "ESP32 MFA Authenticator",
@@ -9329,8 +9329,8 @@
       }
     ],
     "fid": "CFW8F9FNIDNW7LI4B4FRTHY0L2XWO1VL",
-    "category": "NM-CYD-C5",
-    "esp": "c5"
+    "esp": "c5",
+    "category": "NM-CYD-C5"
   },
   {
     "name": "Cheap Yellow Monster (NM-CYD-C5)",
@@ -10041,8 +10041,8 @@
       }
     ],
     "fid": "CFW134BRLCTDS8LA4X6SDWQ3XGF15CXL",
-    "category": "cardputer",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "cardputer"
   },
   {
     "name": "GLIDE-Synth (Cardputer and ADV)",
@@ -12916,8 +12916,8 @@
       }
     ],
     "fid": "CFWTHFK5VQMW6Z3AU8QU5U0L4KG41ETV",
-    "category": "marauder",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder"
   },
   {
     "name": "Ghost v2.0",
@@ -19926,8 +19926,8 @@
       }
     ],
     "fid": "CFWRLMWGA43PYY22QQY4YD90674DUJIE",
-    "category": "marauder-mini",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-mini"
   },
   {
     "name": "Ghost v2.0",
@@ -22543,8 +22543,8 @@
       }
     ],
     "fid": "CFWWE1XNRQHE1A8CAGZIFIVZ6C4Z7UPJ",
-    "category": "marauder-v4",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v4"
   },
   {
     "name": "Ghost v2.0",
@@ -25727,8 +25727,8 @@
       }
     ],
     "fid": "CFWS2WC9QWL49OKJO0XMBS8ZZZO8A0VJ",
-    "category": "marauder-v6x",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v6x"
   },
   {
     "name": "Ghost v2.0",
@@ -28288,8 +28288,8 @@
       }
     ],
     "fid": "CFWVFN5OQ0EGG7IAY4RE5IB3OT6BTX3H",
-    "category": "marauder-v7",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v7"
   },
   {
     "name": "Launcher (Marauder V7)",
@@ -31396,8 +31396,8 @@
       }
     ],
     "fid": "CFWRGP2OGPVURWWYZZVDGDCXW21B5HSS",
-    "category": "phantom",
-    "esp": "32"
+    "esp": "32",
+    "category": "phantom"
   },
   {
     "name": "Ghost v1.9.9",
@@ -33598,8 +33598,8 @@
       }
     ],
     "fid": "CFW0Z8GF89YPTA2NNFJ9PO38UG3MNT8U",
-    "category": "smoochiee_v2",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "smoochiee_v2"
   },
   {
     "name": "Launcher (Smoochiee V2)",
@@ -34289,8 +34289,8 @@
       }
     ],
     "fid": "CFW2EWO7Y6H00KVS5JD01LJ9LHXJXD65",
-    "category": "stickc",
-    "esp": "32"
+    "esp": "32",
+    "category": "stickc"
   },
   {
     "name": "Bruce StickS3 (BETA)",
@@ -34358,8 +34358,8 @@
       }
     ],
     "fid": "CFWPIDASD4N9WUNV8NTVGP67RBECIDOU",
-    "category": "stickc",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "stickc"
   },
   {
     "name": "Bruce (T-Deck Plus)",
@@ -35626,8 +35626,8 @@
       }
     ],
     "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-    "category": "t-deck",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-deck"
   },
   {
     "name": "Camillia-MT (T-Deck)",
@@ -41766,6 +41766,62 @@
     "fid": "CFW7UKIJW436AWBCH5OTRSG3Q7CK5PNN",
     "versions": [
       {
+        "version": "beta_46",
+        "published_at": "2026-07-16",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_46/wadamesh-tdeck-merged.bin",
+        "Fs": 3321920,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3256384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3256384,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3256384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-19T15:27:33Z",
+            "etag": "\"0x8DEE37B942CAEAD\"",
+            "last_modified": "Thu, 16 Jul 2026 20:48:23 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_45",
         "published_at": "2026-07-15",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_45/wadamesh-tdeck-merged.bin",
@@ -42266,62 +42322,6 @@
             "analyzed_at": "2026-07-15T21:50:23Z",
             "etag": "\"0x8DED55E590B75BB\"",
             "last_modified": "Sun, 28 Jun 2026 21:43:53 GMT"
-          }
-        }
-      },
-      {
-        "version": "beta_19",
-        "published_at": "2026-06-27",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_19/wadamesh-tdeck-merged.bin",
-        "Fs": 2984992,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2919456,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2919456,
-            "partition_size": 4063232,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4063232,
-              "source_offset": 65536,
-              "copy_size": 2919456,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-15T21:50:23Z",
-            "etag": "\"0x8DED44E53C23459\"",
-            "last_modified": "Sat, 27 Jun 2026 13:16:41 GMT"
           }
         }
       }
@@ -46578,8 +46578,8 @@
       }
     ],
     "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-    "category": "t-embed-cc1101",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-embed-cc1101"
   },
   {
     "name": "Capibara Zero",
@@ -48839,8 +48839,8 @@
       }
     ],
     "fid": "CFW7B2TIST1N5CMKWQYAWJM51S9COHLT",
-    "category": "t-hmi",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-hmi"
   },
   {
     "name": "Factory Firmware",
@@ -49894,8 +49894,8 @@
       }
     ],
     "fid": "CFWW2L7Q7BDDLSWLRJX3KAC9COHJCSWQ",
-    "category": "t-lora-pager",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-lora-pager"
   },
   {
     "name": "Camillia-MT (Pager)",
@@ -52503,6 +52503,62 @@
     "fid": "CFWE6UJOLIK7ZNRYY5LISDFNN26XHCO3",
     "versions": [
       {
+        "version": "beta_46",
+        "published_at": "2026-07-16",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_46/wadamesh-tlora-pager-lr1121-merged.bin",
+        "Fs": 3272976,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3207440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3207440,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3207440,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-19T15:27:33Z",
+            "etag": "\"0x8DEE37AB04A3E60\"",
+            "last_modified": "Thu, 16 Jul 2026 20:42:01 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_45",
         "published_at": "2026-07-15",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_45/wadamesh-tlora-pager-lr1121-merged.bin",
@@ -52570,6 +52626,62 @@
     "github": "https://github.com/ALLFATHER-BV/wadamesh",
     "fid": "CFWBXVMXEMELBRHQRFQTVEMGEQA3GT6R",
     "versions": [
+      {
+        "version": "beta_46",
+        "published_at": "2026-07-16",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_46/wadamesh-tlora-pager-sx1262-merged.bin",
+        "Fs": 3273824,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3208288,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3208288,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3208288,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-19T15:27:33Z",
+            "etag": "\"0x8DEE37AB03740F6\"",
+            "last_modified": "Thu, 16 Jul 2026 20:42:01 GMT"
+          }
+        }
+      },
       {
         "version": "beta_45",
         "published_at": "2026-07-15",
@@ -53503,8 +53615,8 @@
       }
     ],
     "fid": "CFWFJKMW8FERS9053UCTDQAO02KA7244",
-    "category": "t-watch-s3",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-watch-s3"
   },
   {
     "name": "Factory Firmware",
