@@ -1264,8 +1264,8 @@
             }
         ],
         "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-        "category": "t-deck",
-        "esp": "s3"
+        "esp": "s3",
+        "category": "t-deck"
     },
     {
         "name": "Camillia-MT (T-Deck)",
@@ -4347,6 +4347,62 @@
         "github": "https://github.com/PhilMo6/meshpunk",
         "fid": "CFWBFELPCYS64CBKDIJJDRYQDCTA5P5N",
         "versions": [
+            {
+                "version": "v0.2.7",
+                "published_at": "2026-07-20",
+                "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.2.7/meshpunk-v0.2.7-launcher.bin",
+                "Fs": 4377280,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4311744,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4311744,
+                        "partition_size": 5767168,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 5767168,
+                            "source_offset": 65536,
+                            "copy_size": 4311744,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "assets",
+                            "role": "spiffs",
+                            "size": 6291456,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-20T08:15:05Z",
+                        "etag": "\"0x8DEE6249F43CC01\"",
+                        "last_modified": "Mon, 20 Jul 2026 06:03:29 GMT"
+                    }
+                }
+            },
             {
                 "version": "v0.2.6",
                 "published_at": "2026-07-14",
