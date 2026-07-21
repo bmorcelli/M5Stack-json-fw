@@ -39,7 +39,7 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        if [ "${{ github.event_name }}" = "schedule" ]; then
+        # if [ "${{ github.event_name }}" = "schedule" ]; then
           echo "Checking running manual executions..."
         
           RUNNING_MANUAL=$(gh run list \
@@ -54,7 +54,7 @@ jobs:
             gh run cancel "${{ github.run_id }}"
             exit 0
           fi
-        fi
+        # fi
         
     - name: Run Python script
       id: process
