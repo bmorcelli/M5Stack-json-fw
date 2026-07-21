@@ -43,7 +43,7 @@ jobs:
           echo "Checking running manual executions..."
         
           RUNNING_MANUAL=$(gh run list \
-            --workflow "${{ github.workflow_ref }}" \
+            --workflow "Database Update" \
             --event workflow_dispatch \
             --status in_progress \
             --json databaseId \
