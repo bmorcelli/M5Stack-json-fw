@@ -34,7 +34,28 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-         
+
+    - name: Check if heavy job is running
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        if [ "${{ github.event_name }}" = "schedule" ]; then
+          echo "Checking running manual executions..."
+        
+          RUNNING_MANUAL=$(gh run list \
+            --workflow "${{ github.workflow_ref }}" \
+            --event workflow_dispatch \
+            --status in_progress \
+            --json databaseId \
+            --jq '.[].databaseId')
+        
+          if [ -n "$RUNNING_MANUAL" ]; then
+            echo "Manual execution detected."
+            gh run cancel "${{ github.run_id }}"
+            exit 0
+          fi
+        fi
+        
     - name: Run Python script
       id: process
       env:
