@@ -8,6 +8,62 @@
         "fid": "CFWWULKDSUWQZNNXDN7PGSCTKL476YRM",
         "versions": [
             {
+                "version": "1.16",
+                "published_at": "2026-07-24",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-Awok-Mini.bin",
+                "Fs": 3630960,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3565424,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3565424,
+                        "partition_size": 4653056,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4653056,
+                            "source_offset": 65536,
+                            "copy_size": 3565424,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-24T01:28:46Z",
+                        "etag": "\"0x8DEE91FA1DED3C0\"",
+                        "last_modified": "Fri, 24 Jul 2026 01:05:20 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.15",
                 "published_at": "2026-05-25",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/1.15/Bruce-Awok-Mini.bin",
@@ -467,6 +523,62 @@
         "github": "https://github.com/BruceDevices/firmware",
         "fid": "CFWOGOUP5Q5FHWQ7OKAX2QWRLD4NXKPB",
         "versions": [
+            {
+                "version": "1.16",
+                "published_at": "2026-07-24",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Marauder-Mini.bin",
+                "Fs": 2465600,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2400064,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2400064,
+                        "partition_size": 2555904,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2555904,
+                            "source_offset": 65536,
+                            "copy_size": 2400064,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-24T01:28:46Z",
+                        "etag": "\"0x8DEE91FA1DC517A\"",
+                        "last_modified": "Fri, 24 Jul 2026 01:05:20 GMT"
+                    }
+                }
+            },
             {
                 "version": "1.15",
                 "published_at": "2026-05-25",
@@ -1040,8 +1152,8 @@
             }
         ],
         "fid": "CFWRLMWGA43PYY22QQY4YD90674DUJIE",
-        "category": "marauder-mini",
-        "esp": "32"
+        "esp": "32",
+        "category": "marauder-mini"
     },
     {
         "name": "Ghost v2.0",

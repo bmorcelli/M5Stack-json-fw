@@ -8,6 +8,62 @@
         "fid": "CFWQU5264NPT5JPMLZMH23YLV3O4UDMV",
         "versions": [
             {
+                "version": "1.16",
+                "published_at": "2026-07-24",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Marauder-v7.bin",
+                "Fs": 2465840,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2400304,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v7",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2400304,
+                        "partition_size": 2555904,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2555904,
+                            "source_offset": 65536,
+                            "copy_size": 2400304,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-24T01:28:45Z",
+                        "etag": "\"0x8DEE91FA1F46B6C\"",
+                        "last_modified": "Fri, 24 Jul 2026 01:05:20 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.15",
                 "published_at": "2026-05-25",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/1.15/Bruce-LAUNCHER_Marauder-v7.bin",
@@ -524,8 +580,8 @@
             }
         ],
         "fid": "CFWVFN5OQ0EGG7IAY4RE5IB3OT6BTX3H",
-        "category": "marauder-v7",
-        "esp": "32"
+        "esp": "32",
+        "category": "marauder-v7"
     },
     {
         "name": "Launcher (Marauder V7)",
