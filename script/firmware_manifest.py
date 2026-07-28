@@ -457,7 +457,10 @@ def build_install_from_partition_table(
             continue
         offset = int(part["offset"])
         size = int(part["size"])
-        has_payload = not content_length or content_length >= offset + size
+        copy_size = size
+        if content_length >= offset and content_length < offset + size:
+            copy_size = content_length - offset
+        has_payload = not content_length or content_length >= offset + copy_size
         if has_payload:
             entry = {
                 "type": partition_type_name(part["type_id"]),
@@ -467,7 +470,7 @@ def build_install_from_partition_table(
                 "size": size,
                 "source": "firmware",
                 "source_offset": offset,
-                "copy_size": size,
+                "copy_size": copy_size,
                 "required": True,
             }
         elif not data_assigned and data_size:
