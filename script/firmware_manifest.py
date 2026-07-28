@@ -305,6 +305,24 @@ def partition_subtype_name(type_id: int, subtype_id: int) -> str:
     return f"0x{subtype_id:02x}"
 
 
+def _partition_payload_is_empty(read_at, offset: int, copy_size: int) -> bool:
+    """Detecta se o trecho de uma partição de dados (spiffs/fat/littlefs) está
+    vazio — apagado (0xFF) ou zerado — e portanto não precisa ser copiado.
+
+    Filesystems recém-formatados sem arquivos ainda gravam metadados no início
+    da partição; uma região totalmente uniforme em 0xFF/0x00 é o sinal de que
+    a flash nunca foi escrita ali."""
+    if copy_size <= 0:
+        return True
+    data = read_at(offset, copy_size)
+    if not data:
+        return True
+    first = data[0]
+    if first not in (0x00, 0xFF):
+        return False
+    return data.count(first) == len(data)
+
+
 def build_app_partition(source_offset: int, image_size: int, partition_size: int) -> Dict[str, Any]:
     return {
         "type": "app",
@@ -462,6 +480,11 @@ def build_install_from_partition_table(
             copy_size = content_length - offset
         has_payload = not content_length or content_length >= offset + copy_size
         if has_payload:
+            if _partition_payload_is_empty(read_at, offset, copy_size):
+                copy_size = 0
+                warnings.append(
+                    f"Data partition '{part.get('label') or subtype}' ({subtype}) has no content; copy_size set to 0."
+                )
             entry = {
                 "type": partition_type_name(part["type_id"]),
                 "subtype": subtype,

@@ -60,12 +60,7 @@ jobs:
       id: process
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: | 
-        # if force download is requested, delete all cached JSON files to ensure they are re-downloaded
-        if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
-          find ./3rd/r -mindepth 1 -maxdepth 1 -type f -delete
-        fi
-
+      run: |
         # Checks for firmware updates and writes new JSON files
         # Run on push/workflow_dispatch always, or on schedule only between 00:00 and 00:14
         if [ "${{ github.event_name }}" != "schedule" ] || [ "$(date +%H%M)" -lt 0015 ]; then
@@ -77,22 +72,20 @@ jobs:
         python ./3rd/meshtastic.py
         python ./3rd/update_firmware.py
 
-
-        # this script writes CHANGED and creates the all_device_firmware.json file based on the individual JSON files created by the previous scripts
-        if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
-          python ./3rd/create_json.py --max-workers=8
-        else
-          python ./3rd/create_json.py
-        fi
-
         # the next script writes FILES_ADDED checking m5burner updates
         if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
+          python ./3rd/create_json.py --force-download-all --max-workers=8
           python ./v2/update_json.py --force-download-all --max-workers=8
         else
+          python ./3rd/create_json.py
           python ./v2/update_json.py
         fi
        
-
+    - name: Run Python script
+      id: relatorio
+      run: |
+        python data_partition_analisys.py
+        
     - name: Check for .bin files
       id: check_bin
       run: |

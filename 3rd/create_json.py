@@ -31,11 +31,18 @@ def _generate_fid(existing_fids):
             return fid
 
 
-def process_jsons(max_workers: int = 4):
+def process_jsons(max_workers: int = 4, force_download_all: bool = False):
     input_folder = "./3rd/database/"
     output_folder = "./3rd/r/"
 
     os.makedirs(output_folder, exist_ok=True)
+
+    if force_download_all:
+        for filename in os.listdir(output_folder):
+            file_path = os.path.join(output_folder, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+
     files_added_total = 0
     output_changed = False
     aggregated_devices = []
@@ -207,6 +214,12 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        "--force-download-all",
+        action="store_true",
+        default=False,
+        help="Force full reanalysis by removing cached JSON files first.",
+    )
+    parser.add_argument(
         "--max-workers",
         type=int,
         default=4,
@@ -214,7 +227,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    changed = process_jsons(max_workers=args.max_workers)
+    changed = process_jsons(max_workers=args.max_workers, force_download_all=args.force_download_all)
     github_output = os.environ.get("GITHUB_OUTPUT")
     if github_output:
         with open(github_output, "a", encoding="utf-8") as fh:
