@@ -1,5 +1,7 @@
 import json
 import os
+import time
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 REPO_OWNER = "meshtastic"
@@ -44,13 +46,29 @@ else:
     print("[meshtastic.py] AVISO: GitHub token não encontrado, usando limite anônimo", flush=True)
 
 
-def _api_get(url: str, params: dict = None):
+def _api_get(url: str, params: dict = None, retries: int = 4):
     if params:
         from urllib.parse import urlencode
         url = f"{url}?{urlencode(params)}"
     request = Request(url, headers=HEADERS)
-    with urlopen(request, timeout=60) as response:
-        return json.loads(response.read().decode("utf-8")), response.headers
+
+    for attempt in range(1, retries + 1):
+        try:
+            with urlopen(request, timeout=60) as response:
+                return json.loads(response.read().decode("utf-8")), response.headers
+        except HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="replace")
+            transient = exc.code in (500, 502, 503, 504)
+            if not transient or attempt == retries:
+                print(f"[meshtastic.py] Erro HTTP {exc.code} em {url}: {body[:500]}", flush=True)
+                raise
+        except URLError:
+            if attempt == retries:
+                raise
+
+        wait = 2 ** attempt
+        print(f"[meshtastic.py] Tentativa {attempt}/{retries} falhou para {url}, retry em {wait}s", flush=True)
+        time.sleep(wait)
 
 
 def _parse_next_link(link_header: str):
@@ -230,6 +248,6 @@ if __name__ == "__main__":
         atualizar_meshtastic()
     except Exception as exc:
         print(f"Erro ao processar meshtastic.py: {exc}")
-        raise
+        print("Falha ao atualizar meshtastic.py, mas seguindo sem interromper o workflow.")
 
     print("\nProcesso concluído!")
