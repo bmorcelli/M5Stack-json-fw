@@ -24,6 +24,7 @@
             },
             {
                 "name": "CYD S028R 2USB",
+                "variant": "2USB",
                 "asset_contains": "cyd_2432s028_2usb.bin",
                 "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.bootloader.bin",
                 "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/FlashFiles/MarauderV4/esp32_marauder.ino.partitions.bin",
@@ -96,6 +97,7 @@
             },
             {
                 "name": "T-Deck Plus",
+                "variant": "Plus",
                 "asset_contains": "launcher-lilygo-t-deck-plus.bin",
                 "json": "t-deck.json"
             },
@@ -107,7 +109,7 @@
             {
                 "name": "T-Embed",
                 "asset_contains": "Launcher-lilygo-t-embed.bin",
-                "json": "t-embed-cc1101.json"
+                "json": "t-embed.json"
             },
             {
                 "name": "T-Embed CC1101",
@@ -141,6 +143,7 @@
             },
             {
                 "name": "CYD 2USB",
+                "variant": "2USB",
                 "asset_contains": "launcher-cyd-2-usb.bin",
                 "json": "CYD.json"
             },
@@ -171,11 +174,13 @@
             },
             {
                 "name": "Awok Mini",
+                "variant": "Awok",
                 "asset_contains": "launcher-awok-mini.bin",
                 "json": "marauder-mini.json"
             },
             {
                 "name": "Awok Touch",
+                "variant": "Awok",
                 "asset_contains": "launcher-awok-touch.bin",
                 "json": "marauder-v6x.json"
             },
@@ -242,13 +247,14 @@
             },
             {
                 "name": "T-Deck Plus",
+                "variant": "Plus",
                 "asset_contains": "Bruce-lilygo-t-deck-pro.bin",
                 "json": "t-deck.json"
             },
             {
                 "name": "T-Embed",
                 "asset_contains": "Bruce-lilygo-t-embed.bin",
-                "json": "t-embed-cc1101.json"
+                "json": "t-embed.json"
             },
             {
                 "name": "T-Embed CC1101",
@@ -277,6 +283,7 @@
             },
             {
                 "name": "CYD 2USB",
+                "variant": "2USB",
                 "asset_contains": "Bruce-LAUNCHER_cyd-2-usb.bin",
                 "json": "CYD.json"
             },
@@ -307,11 +314,13 @@
             },
             {
                 "name": "Awok Mini",
+                "variant": "Awok",
                 "asset_contains": "Bruce-awok-mini.bin",
                 "json": "marauder-mini.json"
             },
             {
                 "name": "Awok Touch",
+                "variant": "Awok",
                 "asset_contains": "Bruce-awok-touch.bin",
                 "json": "marauder-v6x.json"
             },
@@ -411,6 +420,7 @@
             },
             {
                 "name": "SX1262",
+                "variant": "SX1262",
                 "asset_contains": "tlora-pager-sx1262-webflash.bin",
                 "json": "t-lora-pager.json"
             },
@@ -451,7 +461,7 @@
             {
                 "name": "not CC1101",
                 "asset_contains" :"rogue-radar",
-                "json": "t-embed-cc1101.json"
+                "json": "t-embed.json"
             }
         ]
     },
@@ -472,6 +482,7 @@
             },
             {
                 "name": "S028v3",
+                "variant": "v3",
                 "asset_contains" :"cyd-2432s028rv3.bin",
                 "json": "CYD.json"
             },
@@ -537,11 +548,13 @@
             },
             {
                 "name": "T-LoRa Pager (LR1121)",
+                "variant": "LR1121",
                 "asset_contains": "tlora-pager-lr1121-merged.bin",
                 "json": "t-lora-pager.json"
             },
             {
                 "name": "T-LoRa Pager (SX1262)",
+                "variant": "SX1262",
                 "asset_contains": "tlora-pager-sx1262-merged.bin",
                 "json": "t-lora-pager.json"
             }
@@ -873,6 +886,50 @@
                 "name": "Plus",
                 "asset_contains": "PocketSSH-*-release.bin",
                 "json": "t-deck.json"
+            }
+        ]
+    },
+    {
+        "name": "ESP32-Bit-Pirate",
+        "repo_owner": "geo-tp",
+        "repo_name": "ESP32-Bit-Pirate",
+        "author": "geo-tp",
+        "cover": "https://raw.githubusercontent.com/geo-tp/ESP32-Bit-Pirate/refs/heads/pioarduino/images/presentation_mobile.png",
+        "github": "https://github.com/geo-tp/ESP32-Bit-Pirate",
+        "description": "ESP32 Bit Pirate is open-source firmware that turns your device into a multi-protocol development and analysis tool, inspired by the legendary Bus Pirate.\n\nIt supports sniffing, sending, scripting, and interacting with various digital protocols (I2C, UART, 1-Wire, SPI, etc.) via a serial terminal or web-based CLI. It also communicates with radio protocols like Bluetooth, Wi-Fi, Sub-GHz and RFID.",
+        "fid_prefix": "ESP32-Bit-Pirate",
+        "devices": [
+            {
+                "name": "CC1101",
+                "asset_contains" :"bit_pirate_*_tembedcc1101.bin",
+                "json": "t-embed-cc1101.json"
+            },
+            {
+                "name": "CC1101 Plus",
+                "variant": "Plus",
+                "asset_contains" :"bit_pirate_*_tembedcc1101plus.bin",
+                "json": "t-embed-cc1101.json"
+            }
+        ]
+    },
+    {
+        "name": "Picoware",
+        "repo_owner": "jblanked",
+        "repo_name": "Picoware",
+        "author": "jblanked",
+        "cover": "",
+        "github": "https://github.com/jblanked/Picoware",
+        "description": "Open-source custom firmware for PicoCalc, Cardputer ADV, Flipper Zero, and other ESP32/Raspberry Pi Pico devices.",
+        "fid_prefix": "Picoware",
+        "files_on_repo": true,
+        "devices": [
+            {
+                "name": "Pancake",
+                "asset_on_repo": "builds/MicroPython/Picoware-Pancake.bin",
+                "bootloader_on_repo": "builds/MicroPython/Picoware-Pancake-bootloader.bin",
+                "partition_on_repo": "builds/MicroPython/Picoware-Pancake-partition-table.bin",
+                "data_on_repo": null,
+                "json": "pancake.json"
             }
         ]
     }

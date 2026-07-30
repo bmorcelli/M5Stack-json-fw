@@ -29,9 +29,32 @@ def load_firmware_configs():
     - fid_prefix: Prefixo usado para gerar IDs únicos (FIDs)
     - pre_release: Autoriza pre-releases para serem adicionadas ao arquivo
     - only_pre_releases: Adiciona SOMENTE pre-releases (caso de beta firmwares)
+    - files_on_repo: Quando true, os binários dos devices NÃO são assets da
+      release (não estão no tarball anexado a ela), e sim arquivos versionados
+      dentro do próprio repositório. Nesse modo, os devices usam os campos
+      "*_on_repo" abaixo em vez de "asset_contains"/"bootloader"/etc., e cada
+      link é resolvido como:
+      https://github.com/{repo_owner}/{repo_name}/raw/refs/tags/{tag}/{caminho}
     - devices: Lista de dispositivos suportados
-      - name: Nome do dispositivo
+      - name: Nome do dispositivo, usado apenas para gerar o fid (não aparece
+        mais no nome exibido do firmware)
+      - variant: Opcional. Quando presente, é adicionado entre parênteses ao
+        nome do firmware exibido (ex.: "Marauder (V8)"). Sem variant, o nome
+        exibido é só o nome do firmware, igual para todos os devices dele
       - asset_contains: Substring ou padrão com '*' para identificar o arquivo
+        do firmware entre os assets da release (modo padrão, sem files_on_repo)
+      - bootloader / bootloader_contains: link direto ou padrão de busca nos
+        assets da release para o bootloader (modo padrão)
+      - partitions / partitions_contains: idem, para o binário de partitions
+      - data / data_contains: idem, para o binário de data
+      - asset_on_repo: caminho do binário do firmware dentro do repositório
+        (usado somente quando files_on_repo=true)
+      - bootloader_on_repo: caminho do bootloader dentro do repositório
+        (files_on_repo=true). Se ausente ou null, o device não tem bootloader
+      - partition_on_repo: caminho do binário de partitions dentro do
+        repositório (files_on_repo=true). Se ausente ou null, não existe
+      - data_on_repo: caminho do binário de data dentro do repositório
+        (files_on_repo=true). Se ausente ou null, não existe
       - json: Arquivo JSON do database onde as informações serão salvas
     """
     source_file = os.path.join(os.path.dirname(__file__), "update_firmware.json")
@@ -176,6 +199,116 @@ def _should_include_release(release: dict, allow_prerelease: bool, only_prerelea
     return not only_prerelease
 
 
+# Campos "*_on_repo" declarados por device quando o firmware usa
+# files_on_repo=true, e a chave correspondente no dicionário de versão salvo
+# no database. "asset_on_repo" não entra aqui pois mapeia para "file" e é
+# tratado separadamente (é obrigatório, os demais são opcionais).
+ON_REPO_AUXILIARY_FIELDS = {
+    "bootloader_on_repo": "bootloader",
+    "partition_on_repo": "partitions",
+    "data_on_repo": "data",
+}
+
+
+def _parse_owner_repo(github_url: str):
+    """Extrai (owner, repo) de uma URL https://github.com/{owner}/{repo}[...].
+
+    Usado como fallback quando repo_owner/repo_name não são informados no
+    config (por exemplo, em firmwares com files_on_repo onde só o campo
+    "github" foi preenchido).
+    """
+    if not github_url:
+        return None, None
+    match = re.match(r"^https?://github\.com/([^/]+)/([^/]+?)/?(?:/.*)?$", github_url.strip())
+    if not match:
+        return None, None
+    return match.group(1), match.group(2)
+
+
+def _build_on_repo_url(repo_owner: str, repo_name: str, tag: str, path: str) -> str:
+    """Monta o link raw de um arquivo versionado dentro do próprio repositório."""
+    return f"https://github.com/{repo_owner}/{repo_name}/raw/refs/tags/{tag}/{path}"
+
+
+def _url_exists(url: str) -> bool:
+    """Verifica se um arquivo existe em `url` sem baixá-lo por completo.
+
+    Faz HEAD primeiro (rápido, sem corpo). Como alguns hosts (ex.: redirects
+    do GitHub) não suportam HEAD corretamente, um retorno ambíguo (405, 403,
+    5xx) é confirmado com um GET em streaming, fechado imediatamente após o
+    status ser lido.
+    """
+    try:
+        resp = requests.head(url, allow_redirects=True, timeout=15)
+        if resp.status_code == 200:
+            return True
+        if resp.status_code in (403, 405) or resp.status_code >= 500:
+            resp = requests.get(url, allow_redirects=True, timeout=15, stream=True)
+            resp.close()
+            return resp.status_code == 200
+        return False
+    except requests.RequestException:
+        return False
+
+
+def _find_versions_on_repo(
+    device: dict,
+    repo_owner: str,
+    repo_name: str,
+    releases: list,
+    existing_versions: set,
+    allow_prerelease: bool,
+    only_prerelease: bool,
+) -> list:
+    """Localiza versões de um device cujos binários vivem dentro do próprio
+    repositório (files_on_repo=true), em vez de como assets de release.
+
+    Percorre as releases da mais recente para a mais antiga (ordem já
+    retornada pela API do GitHub) e, para cada uma, monta o link raw da tag
+    e confirma via HTTP se o arquivo principal (asset_on_repo) existe. A
+    busca para em dois casos, para evitar checagens desnecessárias:
+      - ao alcançar uma tag já presente em existing_versions, ou seja, já
+        processada em uma execução anterior;
+      - ao encontrar a primeira release (mais recente -> mais antiga) em que
+        o arquivo principal não existe mais, assumindo que releases ainda
+        mais antigas também não o terão.
+    """
+    asset_path = device.get("asset_on_repo")
+    if not asset_path:
+        return []
+
+    new_versions = []
+    for release in releases:
+        tag = release.get("tag_name")
+        if tag in existing_versions:
+            break
+
+        if not _should_include_release(release, allow_prerelease, only_prerelease):
+            continue
+
+        asset_url = _build_on_repo_url(repo_owner, repo_name, tag, asset_path)
+        if not _url_exists(asset_url):
+            break
+
+        version = {
+            "version": tag,
+            "published_at": release.get("published_at", "")[:10],
+            "file": asset_url,
+        }
+
+        for field, version_key in ON_REPO_AUXILIARY_FIELDS.items():
+            aux_path = device.get(field)
+            if not aux_path:
+                continue
+            aux_url = _build_on_repo_url(repo_owner, repo_name, tag, aux_path)
+            if _url_exists(aux_url):
+                version[version_key] = aux_url
+
+        new_versions.append(version)
+
+    return new_versions
+
+
 def fetch_all_releases(repo_owner: str, repo_name: str):
     """Busca todas as releases de um repositório."""
     releases = []
@@ -194,6 +327,15 @@ def atualizar_firmware(fw_config: dict):
     """Atualiza todos os devices de um firmware."""
     repo_owner = fw_config["repo_owner"]
     repo_name = fw_config["repo_name"]
+    if not repo_owner or not repo_name:
+        # Fallback para configs (ex.: files_on_repo) que só preenchem "github"
+        parsed_owner, parsed_repo = _parse_owner_repo(fw_config.get("github"))
+        repo_owner = repo_owner or parsed_owner
+        repo_name = repo_name or parsed_repo
+    if not repo_owner or not repo_name:
+        raise ValueError(
+            f"Não foi possível determinar repo_owner/repo_name para {fw_config.get('fid_prefix')}"
+        )
     author = fw_config["author"]
     github_url = f"https://github.com/{repo_owner}/{repo_name}"
     cover = fw_config["cover"]
@@ -202,6 +344,7 @@ def atualizar_firmware(fw_config: dict):
     devices = fw_config["devices"]
     allow_prerelease = fw_config.get("pre_release", False)
     only_prerelease = fw_config.get("only_pre_releases", False)
+    files_on_repo = fw_config.get("files_on_repo", False)
 
     print(f"\n{'=' * 60}")
     print(f"Processando {fw_config['name']}...")
@@ -240,33 +383,39 @@ def atualizar_firmware(fw_config: dict):
                 v["version"] for v in existing_entries.get(fid, {}).get("versions", [])
             }
 
-            new_versions = []
-            for rel in releases:
-                if not _should_include_release(rel, allow_prerelease, only_prerelease):
-                    continue
-
-                tag = rel.get("tag_name")
-                published_at = rel.get("published_at", "")[:10]
-
-                matching_asset = None
-                for asset in rel.get("assets", []):
-                    if _asset_matches(asset.get("name", ""), device["asset_contains"]):
-                        matching_asset = asset
-                        break
-
-                if not matching_asset:
-                    continue
-
-                if tag in existing_versions:
-                    continue
-
-                new_versions.append(
-                    {
-                        "version": tag,
-                        "published_at": published_at,
-                        "file": matching_asset.get("browser_download_url"),
-                    }
+            if files_on_repo:
+                new_versions = _find_versions_on_repo(
+                    device, repo_owner, repo_name, releases,
+                    existing_versions, allow_prerelease, only_prerelease,
                 )
+            else:
+                new_versions = []
+                for rel in releases:
+                    if not _should_include_release(rel, allow_prerelease, only_prerelease):
+                        continue
+
+                    tag = rel.get("tag_name")
+                    published_at = rel.get("published_at", "")[:10]
+
+                    matching_asset = None
+                    for asset in rel.get("assets", []):
+                        if _asset_matches(asset.get("name", ""), device["asset_contains"]):
+                            matching_asset = asset
+                            break
+
+                    if not matching_asset:
+                        continue
+
+                    if tag in existing_versions:
+                        continue
+
+                    new_versions.append(
+                        {
+                            "version": tag,
+                            "published_at": published_at,
+                            "file": matching_asset.get("browser_download_url"),
+                        }
+                    )
 
             combined_versions = []
             if fid in existing_entries:
@@ -289,7 +438,10 @@ def atualizar_firmware(fw_config: dict):
                     version, device, releases_by_tag.get(version.get("version"))
                 )
 
-            firmware_display_name = f"{fw_config['name']} ({device['name']})"
+            variant = device.get("variant")
+            firmware_display_name = (
+                f"{fw_config['name']} ({variant})" if variant else fw_config["name"]
+            )
 
             new_entry = {
                 "name": firmware_display_name,
