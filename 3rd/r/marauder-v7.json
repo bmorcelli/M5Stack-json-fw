@@ -1052,6 +1052,51 @@
         "fid": "CFWJCZOEPSBSAQ3IXYU2C4H3ZHABS5N3",
         "versions": [
             {
+                "version": "2.8.0",
+                "published_at": "2026-07-31",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.8.0/Launcher-Marauder-v7.bin",
+                "Fs": 1376864,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1311328,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v7",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1311328,
+                        "partition_size": 1376256,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1376256,
+                            "source_offset": 65536,
+                            "copy_size": 1311328,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-31T15:31:45Z",
+                        "etag": "\"0x8DEEF187DAF790E\"",
+                        "last_modified": "Fri, 31 Jul 2026 15:29:20 GMT"
+                    }
+                }
+            },
+            {
                 "version": "2.7.2",
                 "published_at": "2026-05-25",
                 "file": "https://github.com/bmorcelli/Launcher/releases/download/2.7.2/Launcher-Marauder-v7.bin",
@@ -1519,62 +1564,6 @@
                         "analyzed_at": "2026-07-30T19:08:32Z",
                         "etag": "\"0x8DE52ADF96E1FEB\"",
                         "last_modified": "Tue, 13 Jan 2026 14:13:50 GMT"
-                    }
-                }
-            },
-            {
-                "version": "2.6.4",
-                "published_at": "2025-11-24",
-                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.4/Launcher-Marauder-v7.bin",
-                "Fs": 1466928,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1401392,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "marauder-v7",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1401392,
-                        "partition_size": 1441792,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 1441792,
-                            "source_offset": 65536,
-                            "copy_size": 1401392,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 131072,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:32Z",
-                        "etag": "\"0x8DE2AFD0300CAA9\"",
-                        "last_modified": "Mon, 24 Nov 2025 01:58:49 GMT"
                     }
                 }
             }

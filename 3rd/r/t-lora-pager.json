@@ -1085,6 +1085,51 @@
         "fid": "CFW7X6QBCHRSEJQQEFIOSRQTFOQU6PKG",
         "versions": [
             {
+                "version": "2.8.0",
+                "published_at": "2026-07-31",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.8.0/Launcher-lilygo-t-lora-pager.bin",
+                "Fs": 1397568,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1332032,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1332032,
+                        "partition_size": 1572864,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1572864,
+                            "source_offset": 65536,
+                            "copy_size": 1332032,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-07-31T15:31:42Z",
+                        "etag": "\"0x8DEEF187DA76BC8\"",
+                        "last_modified": "Fri, 31 Jul 2026 15:29:19 GMT"
+                    }
+                }
+            },
+            {
                 "version": "2.7.2",
                 "published_at": "2026-05-25",
                 "file": "https://github.com/bmorcelli/Launcher/releases/download/2.7.2/Launcher-lilygo-t-lora-pager.bin",
@@ -1613,84 +1658,6 @@
                         "analyzed_at": "2026-07-30T19:08:07Z",
                         "etag": "\"0x8DE628D27FA8B5A\"",
                         "last_modified": "Mon, 02 Feb 2026 18:59:13 GMT"
-                    }
-                }
-            },
-            {
-                "version": "2.6.5",
-                "published_at": "2026-01-13",
-                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.5/Launcher-lilygo-t-lora-pager.bin",
-                "Fs": 1505056,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1439520,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1439520,
-                        "partition_size": 2031616,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2031616,
-                            "source_offset": 65536,
-                            "copy_size": 1439520,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "sys",
-                            "role": "fat",
-                            "size": 1048576,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "vfs",
-                            "role": "fat",
-                            "size": 2097152,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 2949120,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:08Z",
-                        "etag": "\"0x8DE52ADF94FE465\"",
-                        "last_modified": "Tue, 13 Jan 2026 14:13:49 GMT"
                     }
                 }
             }
