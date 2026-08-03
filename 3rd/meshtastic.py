@@ -146,7 +146,7 @@ def collect_versions(device: dict, betas: list, commit_sha: str, mirror_paths: s
         folder = f"firmware-{version}"
         factory_path = f"{folder}/firmware-{target}-{version}.factory.bin"
         plain_path = f"{folder}/firmware-{target}-{version}.bin"
-        data_path = f"{folder}/littlefs-{target}-{version}.bin"
+        # data_path = f"{folder}/littlefs-{target}-{version}.bin"
 
         if factory_path in mirror_paths:
             file_path = factory_path
@@ -155,17 +155,17 @@ def collect_versions(device: dict, betas: list, commit_sha: str, mirror_paths: s
         else:
             continue
 
-        if data_path not in mirror_paths:
-            continue
+        # if data_path not in mirror_paths:
+        #     continue
 
         file_url = _mirror_url(commit_sha, file_path)
-        data_url = _mirror_url(commit_sha, data_path)
+        # data_url = _mirror_url(commit_sha, data_path)
         versions.append(
             {
                 "version": version,
                 "published_at": beta["published_at"],
                 "file": file_url,
-                "data": data_url
+                # "data": data_url
             }
         )
     return versions
