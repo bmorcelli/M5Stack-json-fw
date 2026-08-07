@@ -54577,6 +54577,64 @@
     "category": "t-display-p4"
   },
   {
+    "name": "Meshtastic (Amoled)(fork)",
+    "author": "Homertrix",
+    "cover": "",
+    "description": "A fully functional Meshtastic mesh networking node with touchscreen UI, built on ESP-IDF v5.4.3 and the official T-Display P4 SDK. Uses real Meshtastic packet format, AES-128-CTR encryption, and correct LoRa parameters for interoperability with official Meshtastic devices.",
+    "github": "https://github.com/Homertrix/meshtastic-tdisplay-p4",
+    "checkFileOnRepo": true,
+    "versions": [
+      {
+        "version": "Lastest",
+        "published_at": "2026-03-26",
+        "file": "https://github.com/Homertrix/meshtastic-tdisplay-p4/raw/refs/heads/main/firmware/meshtastic_p4_amoled.bin",
+        "Fs": 1267488,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1201952,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1201952,
+            "partition_size": 15728640,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 15728640,
+              "source_offset": 65536,
+              "copy_size": 1201952,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-07T10:46:01Z",
+            "etag": "W/\"c4497f2a4603d63bd7d51b3d7b2ab0b191187107928803bda017ecb9b9ddbe1c\""
+          }
+        }
+      }
+    ],
+    "lastCommit": "2bc0062148de36bac86d1b9bf07aed028b7d4ba2",
+    "fid": "CFWV2F7L2MB3RUK7UD28JWUCFHDN9HTI",
+    "category": "t-display-p4",
+    "esp": "p4"
+  },
+  {
     "name": "WADAMESH (Amoled)",
     "author": "ALLFATHER-BV",
     "description": "MeshCore companion radio with a full touch UI for the LilyGo T-Deck \u2014 LoRa mesh DMs, channels & room servers, contacts, offline maps, and multi-language keyboards.",
@@ -54753,8 +54811,8 @@
         }
       }
     ],
-    "category": "t-display-p4",
-    "esp": "p4"
+    "esp": "p4",
+    "category": "t-display-p4"
   },
   {
     "name": "WADAMESH (TFT)",
@@ -54821,8 +54879,8 @@
         }
       }
     ],
-    "category": "t-display-p4",
-    "esp": "p4"
+    "esp": "p4",
+    "category": "t-display-p4"
   },
   {
     "name": "WADAMESH BETA (Amoled)",
@@ -55393,8 +55451,8 @@
         }
       }
     ],
-    "category": "t-display-p4",
-    "esp": "p4"
+    "esp": "p4",
+    "category": "t-display-p4"
   },
   {
     "name": "WADAMESH BETA (TFT)",
@@ -55965,8 +56023,8 @@
         }
       }
     ],
-    "category": "t-display-p4",
-    "esp": "p4"
+    "esp": "p4",
+    "category": "t-display-p4"
   },
   {
     "name": "Bruce",
