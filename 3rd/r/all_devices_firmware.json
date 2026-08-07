@@ -48014,6 +48014,62 @@
     "fid": "CFWBFELPCYS64CBKDIJJDRYQDCTA5P5N",
     "versions": [
       {
+        "version": "v0.3.3",
+        "published_at": "2026-08-06",
+        "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.3.3/meshpunk-v0.3.3-launcher.bin",
+        "Fs": 4454192,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4388656,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4388656,
+            "partition_size": 5767168,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5767168,
+              "source_offset": 65536,
+              "copy_size": 4388656,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "assets",
+              "role": "spiffs",
+              "size": 6291456,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-07T00:19:08Z",
+            "etag": "\"0x8DEF403322ED543\"",
+            "last_modified": "Thu, 06 Aug 2026 21:39:29 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.3.2",
         "published_at": "2026-07-31",
         "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.3.2/meshpunk-v0.3.2-launcher.bin",
@@ -48514,62 +48570,6 @@
             "analyzed_at": "2026-08-03T20:14:56Z",
             "etag": "\"0x8DEDE129CF5D400\"",
             "last_modified": "Thu, 09 Jul 2026 23:34:25 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.2.3",
-        "published_at": "2026-07-04",
-        "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.2.3/meshpunk-v0.2.3-launcher.bin",
-        "Fs": 4364448,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 4298912,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 4298912,
-            "partition_size": 5767168,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 5767168,
-              "source_offset": 65536,
-              "copy_size": 4298912,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "assets",
-              "role": "spiffs",
-              "size": 6291456,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:56Z",
-            "etag": "\"0x8DED98354A9C6DB\"",
-            "last_modified": "Sat, 04 Jul 2026 04:18:41 GMT"
           }
         }
       }
