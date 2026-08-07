@@ -527,6 +527,18 @@
                 "name": "T-LoRa Pager (SX1262)",
                 "asset_contains": "tlora-pager-sx1262-merged.bin",
                 "json": "t-lora-pager.json"
+            },
+            {
+                "name": "T-Display P4 Amoled",
+                "variant": "Amoled",
+                "asset_contains": "wadamesh-tdisplay-p4-merged.bin",
+                "json": "t-display-p4.json"
+            },
+            {
+                "name": "T-Display P4 TFT",
+                "variant": "TFT",
+                "asset_contains": "wadamesh-tdisplay-p4-lcd-merged.bin",
+                "json": "t-display-p4.json"
             }
         ]
     },
@@ -557,6 +569,18 @@
                 "variant": "SX1262",
                 "asset_contains": "tlora-pager-sx1262-merged.bin",
                 "json": "t-lora-pager.json"
+            },
+            {
+                "name": "T-Display P4 Amoled",
+                "variant": "Amoled",
+                "asset_contains": "wadamesh-tdisplay-p4-merged.bin",
+                "json": "t-display-p4.json"
+            },
+            {
+                "name": "T-Display P4 TFT",
+                "variant": "TFT",
+                "asset_contains": "wadamesh-tdisplay-p4-lcd-merged.bin",
+                "json": "t-display-p4.json"
             }
         ]
     },
@@ -952,6 +976,30 @@
                 "partition_on_repo": "builds/MicroPython/Picoware-Pancake-partition-table.bin",
                 "data_on_repo": null,
                 "json": "pancake.json"
+            }
+        ]
+    },
+    {
+        "name": "Meck-P4",
+        "repo_owner": "pelgraine",
+        "repo_name": "Meck-P4",
+        "author": "pelgraine",
+        "cover": "",
+        "github": "https://github.com/pelgraine/Meck-P4",
+        "description": "A port of Meck (a MeshCore fork) to the LilyGo T-Display P4. Targets the ESP32-P4 main MCU; as of v0.4 the onboard ESP32-C6 is used for WiFi companion connectivity to the MeshCore app (BLE is not yet enabled). Built on top of LilyGo T-Display-P4 example tree with a meshcore ESP-IDF component added on top.",
+        "fid_prefix": "Meck-P4",
+        "devices": [
+            {
+                "name": "Amoled",
+                "variant": "Amoled",
+                "asset_contains" :"meck-p4*-amoled-merged.bin",
+                "json": "t-display-p4.json"
+            },
+            {
+                "name": "Tft",
+                "variant": "TFT",
+                "asset_contains" :"meck-p4*-tft-merged.bin",
+                "json": "t-display-p4.json"
             }
         ]
     }
