@@ -54519,6 +54519,75 @@
     "category": "t-deck-pro"
   },
   {
+    "name": "Factory Firmware",
+    "author": "Lilygo",
+    "cover": "",
+    "description": "Factory Firmware",
+    "github": "https://github.com/Xinyuan-LilyGO/T-Display-C5",
+    "checkFileOnRepo": true,
+    "versions": [
+      {
+        "version": "Lastest",
+        "published_at": "2026-06-20",
+        "file": "https://github.com/Xinyuan-LilyGO/T-Display-C5/raw/refs/heads/master/firmware/T-Display-C5-V1.1/T-Display-C5_factory_V1.1.bin",
+        "Fs": 1621744,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1556208,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-c5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1556208,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 1556208,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-08T21:50:14Z",
+            "etag": "W/\"86b148fbdc2bf736f27802f0654669e1c5dfe143b63f32dbbd6399f5798a076d\""
+          }
+        }
+      }
+    ],
+    "lastCommit": "bd69f8fff65fa8a28f1864dada62d8b34d14c345",
+    "fid": "CFWAQZGIFLSL6XOVZZXXR9FKPNHHHK5T",
+    "category": "t-display-c5",
+    "esp": "c5"
+  },
+  {
     "name": "MeshOS (T-Display P4 AMOLED)",
     "author": "meshcore",
     "description": "Easy to use, smartphone-like MeshCore experience. Activate your license on: https://meshcore.co.uk/activate.html",
