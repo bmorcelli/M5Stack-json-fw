@@ -140,6 +140,62 @@
     "fid": "CFWN34VYCGIOYTKADFVWJSN35F5UDAVK",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_CYD-2432S028.bin",
+        "Fs": 2487184,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2421648,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2421648,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2421648,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA88E3F4F0\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_CYD-2432S028.bin",
@@ -642,62 +698,6 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-LAUNCHER_CYD-2432S028.bin",
-        "Fs": 2584912,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2519376,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "cyd",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2519376,
-            "partition_size": 3670016,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3670016,
-              "source_offset": 65536,
-              "copy_size": 2519376,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 458752,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:47Z",
-            "etag": "\"0x8DD9BD798E526BD\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-          }
-        }
       }
     ],
     "esp": "32",
@@ -714,19 +714,19 @@
         "version": "S028",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2432S028.bin",
-        "Fs": 2487600,
+        "Fs": 2487184,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2422064,
+        "as": 2421648,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "cyd",
           "app": {
             "source_offset": 65536,
-            "image_size": 2422064,
+            "image_size": 2421648,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -739,7 +739,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2422064,
+              "copy_size": 2421648,
               "required": true,
               "source": "firmware"
             },
@@ -760,9 +760,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:50Z",
-            "etag": "\"0x8DEF7627615204F\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA92F3B855\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -770,19 +770,19 @@
         "version": "CYD-2USB",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2USB.bin",
-        "Fs": 2487648,
+        "Fs": 2487232,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2422112,
+        "as": 2421696,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "cyd",
           "app": {
             "source_offset": 65536,
-            "image_size": 2422112,
+            "image_size": 2421696,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -795,7 +795,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2422112,
+              "copy_size": 2421696,
               "required": true,
               "source": "firmware"
             },
@@ -816,9 +816,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:50Z",
-            "etag": "\"0x8DEF762760D1312\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA92EA262C\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -826,19 +826,19 @@
         "version": "W328C",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2432W328C.bin",
-        "Fs": 2487152,
+        "Fs": 2486736,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2421616,
+        "as": 2421200,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "cyd",
           "app": {
             "source_offset": 65536,
-            "image_size": 2421616,
+            "image_size": 2421200,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -851,7 +851,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2421616,
+              "copy_size": 2421200,
               "required": true,
               "source": "firmware"
             },
@@ -872,9 +872,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:50Z",
-            "etag": "\"0x8DEF762761BA8A7\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA92E9D865\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -882,19 +882,19 @@
         "version": "W328R/S024R",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
-        "Fs": 2488704,
+        "Fs": 2488240,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2423168,
+        "as": 2422704,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "cyd",
           "app": {
             "source_offset": 65536,
-            "image_size": 2423168,
+            "image_size": 2422704,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -907,7 +907,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2423168,
+              "copy_size": 2422704,
               "required": true,
               "source": "firmware"
             },
@@ -928,16 +928,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:50Z",
-            "etag": "\"0x8DEF76276297BC9\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA92E6CE8D\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       }
     ],
     "fid": "CFW704U4QG18DZO94DWWO0H0GJMZC30V",
-    "esp": "32",
-    "category": "CYD"
+    "category": "CYD",
+    "esp": "32"
   },
   {
     "name": "ESP32 MFA Authenticator",
@@ -4178,6 +4178,62 @@
     "fid": "CFWL2R3UB7T35JU2Q4PH7R7ZCDB3ZISL",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
+        "Fs": 2488240,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2422704,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432s024r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2422704,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2422704,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA88E9E1B0\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
@@ -4678,62 +4734,6 @@
             "analyzed_at": "2026-07-30T19:08:30Z",
             "etag": "\"0x8DDA05AF1982537\"",
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
-          }
-        }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
-        "Fs": 2585152,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2519616,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "cyd-2432s024r",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2519616,
-            "partition_size": 2555904,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2555904,
-              "source_offset": 65536,
-              "copy_size": 2519616,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 1572864,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:30Z",
-            "etag": "\"0x8DD9BD798F7FD52\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
           }
         }
       }
@@ -5801,6 +5801,62 @@
     "fid": "CFWYCKVZPQWOXVENQHS4J6IQ75B26ERR",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_CYD-2432W328C.bin",
+        "Fs": 2486736,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2421200,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2421200,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2421200,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:25Z",
+            "etag": "\"0x8DEF7CA88DFDACF\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_CYD-2432W328C.bin",
@@ -6303,62 +6359,6 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-LAUNCHER_CYD-2432W328C.bin",
-        "Fs": 2584320,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2518784,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "cyd-2432w328c",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2518784,
-            "partition_size": 3670016,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3670016,
-              "source_offset": 65536,
-              "copy_size": 2518784,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 458752,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:10Z",
-            "etag": "\"0x8DD9BD798ED340C\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-          }
-        }
       }
     ],
     "esp": "32",
@@ -6851,6 +6851,62 @@
     "github": "https://github.com/BruceDevices/firmware",
     "fid": "CFWFJPR5Y66DJSEM5JQUFF3VL3YWJ2NF",
     "versions": [
+      {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
+        "Fs": 2488240,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2422704,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2422704,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2422704,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:24Z",
+            "etag": "\"0x8DEF7CA88E9E1B0\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
       {
         "version": "1.16",
         "published_at": "2026-07-24",
@@ -7352,62 +7408,6 @@
             "analyzed_at": "2026-07-30T19:08:04Z",
             "etag": "\"0x8DDA05AF1982537\"",
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
-          }
-        }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
-        "Fs": 2585152,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2519616,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "cyd-2432w328r",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2519616,
-            "partition_size": 2555904,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2555904,
-              "source_offset": 65536,
-              "copy_size": 2519616,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 1572864,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:04Z",
-            "etag": "\"0x8DD9BD798F7FD52\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
           }
         }
       }
@@ -8475,6 +8475,62 @@
     "fid": "CFWFRHVST5KR2V54GSU5BMZZEIP552NX",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_CYD-3248S035C.bin",
+        "Fs": 2491712,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2426176,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2426176,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2426176,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA8903677D\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_CYD-3248S035C.bin",
@@ -9186,6 +9242,62 @@
     "fid": "CFWJSUZEQOQ7ER4AYAKDRDGCZCEWF2XW",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_CYD-3248S035R.bin",
+        "Fs": 2487904,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2422368,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2422368,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2422368,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:27Z",
+            "etag": "\"0x8DEF7CA88CF4BA3\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_CYD-3248S035R.bin",
@@ -9896,19 +10008,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-nm-cyd-c5.bin",
-        "Fs": 4194976,
+        "Fs": 4194128,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4129440,
+        "as": 4128592,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "nm-cyd-c5",
           "app": {
             "source_offset": 65536,
-            "image_size": 4129440,
+            "image_size": 4128592,
             "partition_size": 5111808,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -9921,7 +10033,7 @@
               "role": "firmware",
               "size": 5111808,
               "source_offset": 65536,
-              "copy_size": 4129440,
+              "copy_size": 4128592,
               "required": true,
               "source": "firmware"
             },
@@ -9942,16 +10054,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:47Z",
-            "etag": "\"0x8DEF7627663446D\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:26Z",
+            "etag": "\"0x8DEF7CA93650D86\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFW8F9FNIDNW7LI4B4FRTHY0L2XWO1VL",
-    "esp": "c5",
-    "category": "NM-CYD-C5"
+    "category": "NM-CYD-C5",
+    "esp": "c5"
   },
   {
     "name": "Cheap Yellow Monster",
@@ -10648,19 +10760,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-m5stack-cardputer.bin",
-        "Fs": 4167792,
+        "Fs": 4166960,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4102256,
+        "as": 4101424,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "cardputer",
           "app": {
             "source_offset": 65536,
-            "image_size": 4102256,
+            "image_size": 4101424,
             "partition_size": 5111808,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -10673,7 +10785,7 @@
               "role": "firmware",
               "size": 5111808,
               "source_offset": 65536,
-              "copy_size": 4102256,
+              "copy_size": 4101424,
               "required": true,
               "source": "firmware"
             },
@@ -10694,16 +10806,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:49Z",
-            "etag": "\"0x8DEF762765CF36F\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:29Z",
+            "etag": "\"0x8DEF7CA93697556\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFW134BRLCTDS8LA4X6SDWQ3XGF15CXL",
-    "esp": "s3",
-    "category": "cardputer"
+    "category": "cardputer",
+    "esp": "s3"
   },
   {
     "name": "GLIDE-Synth",
@@ -13075,19 +13187,19 @@
         "version": "AVOK Mini v2",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-Awok-Mini.bin",
-        "Fs": 3646560,
+        "Fs": 3645952,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3581024,
+        "as": 3580416,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 3581024,
+            "image_size": 3580416,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13100,7 +13212,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 3581024,
+              "copy_size": 3580416,
               "required": true,
               "source": "firmware"
             },
@@ -13121,9 +13233,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF7627646A6F4\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA932FBA8D\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13131,19 +13243,19 @@
         "version": "AWOK Touch v2",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-Awok-Touch.bin",
-        "Fs": 3649152,
+        "Fs": 3648528,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3583616,
+        "as": 3582992,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 3583616,
+            "image_size": 3582992,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13156,7 +13268,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 3583616,
+              "copy_size": 3582992,
               "required": true,
               "source": "firmware"
             },
@@ -13177,9 +13289,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762764BF82A\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA933690AA\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13187,19 +13299,19 @@
         "version": "GUITON",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Phantom_S024R.bin",
-        "Fs": 2487280,
+        "Fs": 2486688,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2421744,
+        "as": 2421152,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 2421744,
+            "image_size": 2421152,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13212,7 +13324,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2421744,
+              "copy_size": 2421152,
               "required": true,
               "source": "firmware"
             },
@@ -13233,9 +13345,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762760DFC6F\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92E7B7EA\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13243,19 +13355,19 @@
         "version": "CYD S028R",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_CYD-2432S028.bin",
-        "Fs": 2487600,
+        "Fs": 2487184,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2422064,
+        "as": 2421648,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 2422064,
+            "image_size": 2421648,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13268,7 +13380,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2422064,
+              "copy_size": 2421648,
               "required": true,
               "source": "firmware"
             },
@@ -13289,9 +13401,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF7627615204F\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92F3B855\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13299,19 +13411,19 @@
         "version": "Mini",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-Mini.bin",
-        "Fs": 2478960,
+        "Fs": 2478432,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2413424,
+        "as": 2412896,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 2413424,
+            "image_size": 2412896,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13324,7 +13436,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2413424,
+              "copy_size": 2412896,
               "required": true,
               "source": "firmware"
             },
@@ -13345,9 +13457,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762761A23BC\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92E7B7EA\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13355,19 +13467,19 @@
         "version": "V4 or V6",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-V4-V6.bin",
-        "Fs": 2480768,
+        "Fs": 2480224,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2415232,
+        "as": 2414688,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 2415232,
+            "image_size": 2414688,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13380,7 +13492,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2415232,
+              "copy_size": 2414688,
               "required": true,
               "source": "firmware"
             },
@@ -13401,9 +13513,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF76275FECB44\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92EB8436\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13411,19 +13523,19 @@
         "version": "V6.x",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-v61.bin",
-        "Fs": 2480736,
+        "Fs": 2480192,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2415200,
+        "as": 2414656,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 2415200,
+            "image_size": 2414656,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13436,7 +13548,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2415200,
+              "copy_size": 2414656,
               "required": true,
               "source": "firmware"
             },
@@ -13457,9 +13569,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762760F5A70\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92E6A7A1\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13467,19 +13579,19 @@
         "version": "v7",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-v7.bin",
-        "Fs": 2479184,
+        "Fs": 2478640,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2413648,
+        "as": 2413104,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 2413648,
+            "image_size": 2413104,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13492,7 +13604,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2413648,
+              "copy_size": 2413104,
               "required": true,
               "source": "firmware"
             },
@@ -13513,9 +13625,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762761E64B2\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92FC6135\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -13523,19 +13635,19 @@
         "version": "WaveSentry",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_WaveSentry-R1.bin",
-        "Fs": 2482960,
+        "Fs": 2482432,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2417424,
+        "as": 2416896,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder",
           "app": {
             "source_offset": 65536,
-            "image_size": 2417424,
+            "image_size": 2416896,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -13548,7 +13660,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2417424,
+              "copy_size": 2416896,
               "required": true,
               "source": "firmware"
             },
@@ -13569,16 +13681,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF76276180343\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92F039D4\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       }
     ],
     "fid": "CFWTHFK5VQMW6Z3AU8QU5U0L4KG41ETV",
-    "esp": "32",
-    "category": "marauder"
+    "category": "marauder",
+    "esp": "32"
   },
   {
     "name": "Ghost v2.1",
@@ -19555,6 +19667,62 @@
     "fid": "CFWOGOUP5Q5FHWQ7OKAX2QWRLD4NXKPB",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_Marauder-Mini.bin",
+        "Fs": 2478432,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2412896,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-mini",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2412896,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2412896,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA88DCAA1D\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Marauder-Mini.bin",
@@ -20530,6 +20698,62 @@
     "github": "https://github.com/BruceDevices/firmware",
     "fid": "CFWWULKDSUWQZNNXDN7PGSCTKL476YRM",
     "versions": [
+      {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-Awok-Mini.bin",
+        "Fs": 3645952,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3580416,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-mini",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3580416,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 3580416,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA88E0EB17\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
       {
         "version": "1.16",
         "published_at": "2026-07-24",
@@ -21509,19 +21733,19 @@
         "version": "AVOK Mini v2",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-Awok-Mini.bin",
-        "Fs": 3646560,
+        "Fs": 3645952,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3581024,
+        "as": 3580416,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder-mini",
           "app": {
             "source_offset": 65536,
-            "image_size": 3581024,
+            "image_size": 3580416,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -21534,7 +21758,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 3581024,
+              "copy_size": 3580416,
               "required": true,
               "source": "firmware"
             },
@@ -21555,9 +21779,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:49Z",
-            "etag": "\"0x8DEF7627646A6F4\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA932FBA8D\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -21565,19 +21789,19 @@
         "version": "Mini",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-Mini.bin",
-        "Fs": 2478960,
+        "Fs": 2478432,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2413424,
+        "as": 2412896,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder-mini",
           "app": {
             "source_offset": 65536,
-            "image_size": 2413424,
+            "image_size": 2412896,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -21590,7 +21814,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2413424,
+              "copy_size": 2412896,
               "required": true,
               "source": "firmware"
             },
@@ -21611,16 +21835,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:49Z",
-            "etag": "\"0x8DEF762761A23BC\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:31Z",
+            "etag": "\"0x8DEF7CA92E7B7EA\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       }
     ],
     "fid": "CFWRLMWGA43PYY22QQY4YD90674DUJIE",
-    "esp": "32",
-    "category": "marauder-mini"
+    "category": "marauder-mini",
+    "esp": "32"
   },
   {
     "name": "Ghost v2.1",
@@ -25370,6 +25594,62 @@
     "fid": "CFWQ6B6ZI2U6LIS456M63ZRA2FWID3PC",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_Marauder-V4-V6.bin",
+        "Fs": 2480224,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2414688,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-v4",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2414688,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2414688,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:23Z",
+            "etag": "\"0x8DEF7CA88D475F7\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Marauder-V4-V6.bin",
@@ -25888,19 +26168,19 @@
         "version": "V4 or V6",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-V4-V6.bin",
-        "Fs": 2480768,
+        "Fs": 2480224,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2415232,
+        "as": 2414688,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder-v4",
           "app": {
             "source_offset": 65536,
-            "image_size": 2415232,
+            "image_size": 2414688,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -25913,7 +26193,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2415232,
+              "copy_size": 2414688,
               "required": true,
               "source": "firmware"
             },
@@ -25934,9 +26214,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:46Z",
-            "etag": "\"0x8DEF76275FECB44\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:23Z",
+            "etag": "\"0x8DEF7CA92EB8436\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -25944,19 +26224,19 @@
         "version": "WaveSentry",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_WaveSentry-R1.bin",
-        "Fs": 2482960,
+        "Fs": 2482432,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2417424,
+        "as": 2416896,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder-v4",
           "app": {
             "source_offset": 65536,
-            "image_size": 2417424,
+            "image_size": 2416896,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -25969,7 +26249,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2417424,
+              "copy_size": 2416896,
               "required": true,
               "source": "firmware"
             },
@@ -25990,16 +26270,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:46Z",
-            "etag": "\"0x8DEF76276180343\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:23Z",
+            "etag": "\"0x8DEF7CA92F039D4\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       }
     ],
     "fid": "CFWWE1XNRQHE1A8CAGZIFIVZ6C4Z7UPJ",
-    "esp": "32",
-    "category": "marauder-v4"
+    "category": "marauder-v4",
+    "esp": "32"
   },
   {
     "name": "Ghost v2.1",
@@ -29163,6 +29443,62 @@
     "fid": "CFWQTNOQ6K5JFHOMCN7H74BWEY5TISZF",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_Marauder-v61.bin",
+        "Fs": 2480192,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2414656,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-v6x",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2414656,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2414656,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:23Z",
+            "etag": "\"0x8DEF7CA88D38C9F\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Marauder-v61.bin",
@@ -30138,6 +30474,62 @@
     "github": "https://github.com/BruceDevices/firmware",
     "fid": "CFWCLW3ZI2KOJXGIZHTOLFRTXZ5PTJIP",
     "versions": [
+      {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-Awok-Touch.bin",
+        "Fs": 3648528,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3582992,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-v6x",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3582992,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 3582992,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:23Z",
+            "etag": "\"0x8DEF7CA8902A4FE\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
       {
         "version": "1.16",
         "published_at": "2026-07-24",
@@ -31117,19 +31509,19 @@
         "version": "AWOK Touch v2",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-Awok-Touch.bin",
-        "Fs": 3649152,
+        "Fs": 3648528,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3583616,
+        "as": 3582992,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder-v6x",
           "app": {
             "source_offset": 65536,
-            "image_size": 3583616,
+            "image_size": 3582992,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -31142,7 +31534,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 3583616,
+              "copy_size": 3582992,
               "required": true,
               "source": "firmware"
             },
@@ -31163,9 +31555,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:45Z",
-            "etag": "\"0x8DEF762764BF82A\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:23Z",
+            "etag": "\"0x8DEF7CA933690AA\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       },
@@ -31173,19 +31565,19 @@
         "version": "V6.x",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-v61.bin",
-        "Fs": 2480736,
+        "Fs": 2480192,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2415200,
+        "as": 2414656,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder-v6x",
           "app": {
             "source_offset": 65536,
-            "image_size": 2415200,
+            "image_size": 2414656,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -31198,7 +31590,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2415200,
+              "copy_size": 2414656,
               "required": true,
               "source": "firmware"
             },
@@ -31219,16 +31611,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:45Z",
-            "etag": "\"0x8DEF762760F5A70\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:23Z",
+            "etag": "\"0x8DEF7CA92E6A7A1\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       }
     ],
     "fid": "CFWS2WC9QWL49OKJO0XMBS8ZZZO8A0VJ",
-    "esp": "32",
-    "category": "marauder-v6x"
+    "category": "marauder-v6x",
+    "esp": "32"
   },
   {
     "name": "Ghost v2.1",
@@ -34488,6 +34880,62 @@
     "fid": "CFWQU5264NPT5JPMLZMH23YLV3O4UDMV",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_Marauder-v7.bin",
+        "Fs": 2478640,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2413104,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-v7",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2413104,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2413104,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA88E15FC1\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Marauder-v7.bin",
@@ -35466,19 +35914,19 @@
         "version": "v7",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-v7.bin",
-        "Fs": 2479184,
+        "Fs": 2478640,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2413648,
+        "as": 2413104,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "marauder-v7",
           "app": {
             "source_offset": 65536,
-            "image_size": 2413648,
+            "image_size": 2413104,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -35491,7 +35939,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2413648,
+              "copy_size": 2413104,
               "required": true,
               "source": "firmware"
             },
@@ -35512,16 +35960,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762761E64B2\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:28Z",
+            "etag": "\"0x8DEF7CA92FC6135\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       }
     ],
     "fid": "CFWVFN5OQ0EGG7IAY4RE5IB3OT6BTX3H",
-    "esp": "32",
-    "category": "marauder-v7"
+    "category": "marauder-v7",
+    "esp": "32"
   },
   {
     "name": "Launcher",
@@ -40975,6 +41423,62 @@
     "fid": "CFW7ML6KJOTQKEWEEP3QUQ3ERXGITDU4",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_Phantom_S024R.bin",
+        "Fs": 2486688,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2421152,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "phantom",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2421152,
+            "partition_size": 2555904,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2555904,
+              "source_offset": 65536,
+              "copy_size": 2421152,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:27Z",
+            "etag": "\"0x8DEF7CA88CA6F1C\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Phantom_S024R.bin",
@@ -41477,62 +41981,6 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-LAUNCHER_Phantom_S024R.bin",
-        "Fs": 2583744,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2518208,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "phantom",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2518208,
-            "partition_size": 2555904,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2555904,
-              "source_offset": 65536,
-              "copy_size": 2518208,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 1572864,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:25Z",
-            "etag": "\"0x8DD9BD798F1E9A9\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-          }
-        }
       }
     ],
     "esp": "32",
@@ -41549,19 +41997,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Phantom_S024R.bin",
-        "Fs": 2487280,
+        "Fs": 2486688,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2421744,
+        "as": 2421152,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "phantom",
           "app": {
             "source_offset": 65536,
-            "image_size": 2421744,
+            "image_size": 2421152,
             "partition_size": 2555904,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -41574,7 +42022,7 @@
               "role": "firmware",
               "size": 2555904,
               "source_offset": 65536,
-              "copy_size": 2421744,
+              "copy_size": 2421152,
               "required": true,
               "source": "firmware"
             },
@@ -41595,16 +42043,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:47Z",
-            "etag": "\"0x8DEF762760DFC6F\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:27Z",
+            "etag": "\"0x8DEF7CA92E7B7EA\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
           }
         }
       }
     ],
     "fid": "CFWRGP2OGPVURWWYZZVDGDCXW21B5HSS",
-    "esp": "32",
-    "category": "phantom"
+    "category": "phantom",
+    "esp": "32"
   },
   {
     "name": "Ghost v1.9.9",
@@ -42895,6 +43343,62 @@
     "fid": "CFW6C5Z26BAPQHFZHM7DLJ7S5HYSDXR3",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-reaper.bin",
+        "Fs": 3780112,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3714576,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "reaper-bruce",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3714576,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 3714576,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:24Z",
+            "etag": "\"0x8DEF7CA88FB3359\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-reaper.bin",
@@ -43266,6 +43770,62 @@
     "github": "https://github.com/BruceDevices/firmware",
     "fid": "CFW7S4C2Y3KP6VX54A3HDELMQC6FM444",
     "versions": [
+      {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-smoochiee-board.bin",
+        "Fs": 3889120,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3823584,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3823584,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 3823584,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:26Z",
+            "etag": "\"0x8DEF7CA88E6632E\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
       {
         "version": "1.16",
         "published_at": "2026-07-24",
@@ -43769,62 +44329,6 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-smoochiee-board.bin",
-        "Fs": 3521328,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3455792,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "smoochiee-v2",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3455792,
-            "partition_size": 4653056,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4653056,
-              "source_offset": 65536,
-              "copy_size": 3455792,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 11993088,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:12Z",
-            "etag": "\"0x8DD9BD798F5B5E8\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-          }
-        }
       }
     ],
     "esp": "s3",
@@ -43841,19 +44345,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-smoochiee-board.bin",
-        "Fs": 3889952,
+        "Fs": 3889120,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3824416,
+        "as": 3823584,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "smoochiee-v2",
           "app": {
             "source_offset": 65536,
-            "image_size": 3824416,
+            "image_size": 3823584,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -43866,7 +44370,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 3824416,
+              "copy_size": 3823584,
               "required": true,
               "source": "firmware"
             },
@@ -43887,16 +44391,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:47Z",
-            "etag": "\"0x8DEF7627650123E\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:26Z",
+            "etag": "\"0x8DEF7CA93501671\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFW0Z8GF89YPTA2NNFJ9PO38UG3MNT8U",
-    "esp": "s3",
-    "category": "smoochiee_v2"
+    "category": "smoochiee_v2",
+    "esp": "s3"
   },
   {
     "name": "Launcher",
@@ -44499,19 +45003,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-m5stack-cplus2.bin",
-        "Fs": 3859024,
+        "Fs": 3858240,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3793488,
+        "as": 3792704,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "stickc",
           "app": {
             "source_offset": 65536,
-            "image_size": 3793488,
+            "image_size": 3792704,
             "partition_size": 5111808,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -44524,7 +45028,7 @@
               "role": "firmware",
               "size": 5111808,
               "source_offset": 65536,
-              "copy_size": 3793488,
+              "copy_size": 3792704,
               "required": true,
               "source": "firmware"
             },
@@ -44545,16 +45049,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:49Z",
-            "etag": "\"0x8DEF7627656B8E9\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:30Z",
+            "etag": "\"0x8DEF7CA93683E36\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFW2EWO7Y6H00KVS5JD01LJ9LHXJXD65",
-    "esp": "32",
-    "category": "stickc"
+    "category": "stickc",
+    "esp": "32"
   },
   {
     "name": "Bruce StickS3 (BETA)",
@@ -44568,19 +45072,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-m5stack-sticks3.bin",
-        "Fs": 4380656,
+        "Fs": 4379856,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4315120,
+        "as": 4314320,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "stickc",
           "app": {
             "source_offset": 65536,
-            "image_size": 4315120,
+            "image_size": 4314320,
             "partition_size": 5111808,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -44593,7 +45097,7 @@
               "role": "firmware",
               "size": 5111808,
               "source_offset": 65536,
-              "copy_size": 4315120,
+              "copy_size": 4314320,
               "required": true,
               "source": "firmware"
             },
@@ -44614,16 +45118,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:49Z",
-            "etag": "\"0x8DEF762765FFD47\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:30Z",
+            "etag": "\"0x8DEF7CA936471EB\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFWPIDASD4N9WUNV8NTVGP67RBECIDOU",
-    "esp": "s3",
-    "category": "stickc"
+    "category": "stickc",
+    "esp": "s3"
   },
   {
     "name": "Bruce",
@@ -44633,6 +45137,62 @@
     "github": "https://github.com/BruceDevices/firmware",
     "fid": "CFWNPFYWXZSORFSLC5OAZXOTE65L54JP",
     "versions": [
+      {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-deck.bin",
+        "Fs": 4262592,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4197056,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4197056,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 4197056,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:26Z",
+            "etag": "\"0x8DEF7CA88D2F10A\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
       {
         "version": "1.16",
         "published_at": "2026-07-24",
@@ -45136,24 +45696,36 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
+      }
+    ],
+    "esp": "s3",
+    "category": "t-deck"
+  },
+  {
+    "name": "Bruce (Plus)",
+    "author": "pr3y",
+    "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
+    "cover": "https://bruce.computer/img/bruce.png",
+    "github": "https://github.com/BruceDevices/firmware",
+    "fid": "CFWPCAOTWGE725KI765YOMZGTWQ2A42J",
+    "versions": [
       {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-lilygo-t-deck.bin",
-        "Fs": 3549088,
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-deck-pro.bin",
+        "Fs": 4261648,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3483552,
+        "as": 4196112,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-deck",
           "app": {
             "source_offset": 65536,
-            "image_size": 3483552,
+            "image_size": 4196112,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -45166,7 +45738,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 3483552,
+              "copy_size": 4196112,
               "required": true,
               "source": "firmware"
             },
@@ -45187,24 +45759,12 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:48Z",
-            "etag": "\"0x8DD9BD798F9A917\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
+            "analyzed_at": "2026-08-11T17:16:26Z",
+            "etag": "\"0x8DEF7CA88DE0820\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
           }
         }
-      }
-    ],
-    "esp": "s3",
-    "category": "t-deck"
-  },
-  {
-    "name": "Bruce (Plus)",
-    "author": "pr3y",
-    "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
-    "cover": "https://bruce.computer/img/bruce.png",
-    "github": "https://github.com/BruceDevices/firmware",
-    "fid": "CFWPCAOTWGE725KI765YOMZGTWQ2A42J",
-    "versions": [
+      },
       {
         "version": "1.16",
         "published_at": "2026-07-24",
@@ -45708,62 +46268,6 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-lilygo-t-deck-pro.bin",
-        "Fs": 3548992,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3483456,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3483456,
-            "partition_size": 4653056,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4653056,
-              "source_offset": 65536,
-              "copy_size": 3483456,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 11993088,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:49Z",
-            "etag": "\"0x8DD9BD798F788A5\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-          }
-        }
       }
     ],
     "esp": "s3",
@@ -45780,19 +46284,19 @@
         "version": "T-Deck PLUS",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-deck-pro.bin",
-        "Fs": 4262672,
+        "Fs": 4261648,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4197136,
+        "as": 4196112,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-deck",
           "app": {
             "source_offset": 65536,
-            "image_size": 4197136,
+            "image_size": 4196112,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -45805,7 +46309,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 4197136,
+              "copy_size": 4196112,
               "required": true,
               "source": "firmware"
             },
@@ -45826,9 +46330,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:47Z",
-            "etag": "\"0x8DEF762768035D4\"",
-            "last_modified": "Tue, 11 Aug 2026 04:39:00 GMT"
+            "analyzed_at": "2026-08-11T17:16:26Z",
+            "etag": "\"0x8DEF7CA936A10E7\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       },
@@ -45836,19 +46340,19 @@
         "version": "T-Deck",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-deck.bin",
-        "Fs": 4263616,
+        "Fs": 4262592,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4198080,
+        "as": 4197056,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-deck",
           "app": {
             "source_offset": 65536,
-            "image_size": 4198080,
+            "image_size": 4197056,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -45861,7 +46365,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 4198080,
+              "copy_size": 4197056,
               "required": true,
               "source": "firmware"
             },
@@ -45882,16 +46386,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:47Z",
-            "etag": "\"0x8DEF762766847E5\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:26Z",
+            "etag": "\"0x8DEF7CA93681751\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-    "esp": "s3",
-    "category": "t-deck"
+    "category": "t-deck",
+    "esp": "s3"
   },
   {
     "name": "Camillia-MT",
@@ -57000,6 +57504,62 @@
     "fid": "CFW4LLX7KG6NOGNWLVI2AQFIPEDU6U24",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-embed.bin",
+        "Fs": 4252464,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4186928,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4186928,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 4186928,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:29Z",
+            "etag": "\"0x8DEF7CA88FA97C8\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-lilygo-t-embed.bin",
@@ -57502,62 +58062,6 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-lilygo-t-embed.bin",
-        "Fs": 3893552,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3828016,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-embed",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3828016,
-            "partition_size": 4653056,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4653056,
-              "source_offset": 65536,
-              "copy_size": 3828016,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 11993088,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:34Z",
-            "etag": "\"0x8DD9BD799003172\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-          }
-        }
       }
     ],
     "esp": "s3",
@@ -57574,19 +58078,19 @@
         "version": "beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-embed.bin",
-        "Fs": 4253232,
+        "Fs": 4252464,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4187696,
+        "as": 4186928,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-embed",
           "app": {
             "source_offset": 65536,
-            "image_size": 4187696,
+            "image_size": 4186928,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -57599,7 +58103,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 4187696,
+              "copy_size": 4186928,
               "required": true,
               "source": "firmware"
             },
@@ -57620,16 +58124,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762765FFD47\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:29Z",
+            "etag": "\"0x8DEF7CA93655B5C\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-    "esp": "s3",
-    "category": "t-embed"
+    "category": "t-embed",
+    "esp": "s3"
   },
   {
     "name": "Factory Firmware",
@@ -59067,6 +59571,62 @@
     "fid": "CFWPDFE5OWQPASOU3QFROVUBTBCIVHGE",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-embed-cc1101.bin",
+        "Fs": 4264656,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4199120,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4199120,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 4199120,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:27Z",
+            "etag": "\"0x8DEF7CA88D8B6EF\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-lilygo-t-embed-cc1101.bin",
@@ -59567,62 +60127,6 @@
             "analyzed_at": "2026-07-30T19:08:29Z",
             "etag": "\"0x8DDA05AF1B48DF2\"",
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
-          }
-        }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-lilygo-t-embed-cc1101.bin",
-        "Fs": 3899920,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3834384,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-embed-cc1101",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3834384,
-            "partition_size": 4653056,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4653056,
-              "source_offset": 65536,
-              "copy_size": 3834384,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 11993088,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:29Z",
-            "etag": "\"0x8DD9BD799072E78\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
           }
         }
       }
@@ -60213,19 +60717,19 @@
         "version": "CC1101",
         "published_at": "2026-05-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-embed-cc1101.bin",
-        "Fs": 4265456,
+        "Fs": 4264656,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4199920,
+        "as": 4199120,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-embed-cc1101",
           "app": {
             "source_offset": 65536,
-            "image_size": 4199920,
+            "image_size": 4199120,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -60238,7 +60742,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 4199920,
+              "copy_size": 4199120,
               "required": true,
               "source": "firmware"
             },
@@ -60259,9 +60763,9 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF7627663B916\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:27Z",
+            "etag": "\"0x8DEF7CA937A7943\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       },
@@ -60269,19 +60773,19 @@
         "version": "Non CC1101",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-embed.bin",
-        "Fs": 4253232,
+        "Fs": 4252464,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4187696,
+        "as": 4186928,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-embed-cc1101",
           "app": {
             "source_offset": 65536,
-            "image_size": 4187696,
+            "image_size": 4186928,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -60294,7 +60798,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 4187696,
+              "copy_size": 4186928,
               "required": true,
               "source": "firmware"
             },
@@ -60315,16 +60819,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:48Z",
-            "etag": "\"0x8DEF762765FFD47\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:27Z",
+            "etag": "\"0x8DEF7CA93655B5C\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-    "esp": "s3",
-    "category": "t-embed-cc1101"
+    "category": "t-embed-cc1101",
+    "esp": "s3"
   },
   {
     "name": "Capibara Zero",
@@ -62236,6 +62740,62 @@
     "fid": "CFWPPBEVG4EJGKBB35TAHFTEKQUKHVXH",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-hmi.bin",
+        "Fs": 3825472,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3759936,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-hmi",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3759936,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 3759936,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:25Z",
+            "etag": "\"0x8DEF7CA88E41BCC\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-lilygo-t-hmi.bin",
@@ -62642,19 +63202,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-hmi.bin",
-        "Fs": 3826272,
+        "Fs": 3825472,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3760736,
+        "as": 3759936,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-hmi",
           "app": {
             "source_offset": 65536,
-            "image_size": 3760736,
+            "image_size": 3759936,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -62667,7 +63227,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 3760736,
+              "copy_size": 3759936,
               "required": true,
               "source": "firmware"
             },
@@ -62688,16 +63248,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:46Z",
-            "etag": "\"0x8DEF762765B956B\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:25Z",
+            "etag": "\"0x8DEF7CA93658235\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFW7B2TIST1N5CMKWQYAWJM51S9COHLT",
-    "esp": "s3",
-    "category": "t-hmi"
+    "category": "t-hmi",
+    "esp": "s3"
   },
   {
     "name": "Factory Firmware",
@@ -63314,6 +63874,62 @@
     "fid": "CFWKLPPL7I6LEAJ3BNT5632FZQX2H6ZY",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-lora-pager.bin",
+        "Fs": 4275392,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4209856,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4209856,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 4209856,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:25Z",
+            "etag": "\"0x8DEF7CA88FDC87F\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-lilygo-t-lora-pager.bin",
@@ -63720,19 +64336,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-lora-pager.bin",
-        "Fs": 4276208,
+        "Fs": 4275392,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4210672,
+        "as": 4209856,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-lora-pager",
           "app": {
             "source_offset": 65536,
-            "image_size": 4210672,
+            "image_size": 4209856,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -63745,7 +64361,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 4210672,
+              "copy_size": 4209856,
               "required": true,
               "source": "firmware"
             },
@@ -63766,16 +64382,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:46Z",
-            "etag": "\"0x8DEF7627666753A\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:25Z",
+            "etag": "\"0x8DEF7CA9371D061\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFWW2L7Q7BDDLSWLRJX3KAC9COHJCSWQ",
-    "esp": "s3",
-    "category": "t-lora-pager"
+    "category": "t-lora-pager",
+    "esp": "s3"
   },
   {
     "name": "Camillia-MT",
@@ -67790,6 +68406,62 @@
     "fid": "CFWIO43GTGGVYW4J3XRM3EJIUGRDKNFP",
     "versions": [
       {
+        "version": "1.16.1",
+        "published_at": "2026-08-11",
+        "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-watch-s3.bin",
+        "Fs": 4233120,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4167584,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4167584,
+            "partition_size": 4653056,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4653056,
+              "source_offset": 65536,
+              "copy_size": 4167584,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 11993088,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-11T17:16:30Z",
+            "etag": "\"0x8DEF7CA88E1FB4F\"",
+            "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+          }
+        }
+      },
+      {
         "version": "1.16",
         "published_at": "2026-07-24",
         "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-lilygo-t-watch-s3.bin",
@@ -68292,62 +68964,6 @@
             "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
           }
         }
-      },
-      {
-        "version": "1.10",
-        "published_at": "2025-05-25",
-        "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-lilygo-t-watch-s3.bin",
-        "Fs": 3955408,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3889872,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-watch-s3",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3889872,
-            "partition_size": 4653056,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4653056,
-              "source_offset": 65536,
-              "copy_size": 3889872,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 11993088,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:06Z",
-            "etag": "\"0x8DD9BD79911354A\"",
-            "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-          }
-        }
       }
     ],
     "esp": "s3",
@@ -68364,19 +68980,19 @@
         "version": "Beta",
         "published_at": "2026-04-04",
         "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-watch-s3.bin",
-        "Fs": 4233920,
+        "Fs": 4233120,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 4168384,
+        "as": 4167584,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-watch-s3",
           "app": {
             "source_offset": 65536,
-            "image_size": 4168384,
+            "image_size": 4167584,
             "partition_size": 4653056,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -68389,7 +69005,7 @@
               "role": "firmware",
               "size": 4653056,
               "source_offset": 65536,
-              "copy_size": 4168384,
+              "copy_size": 4167584,
               "required": true,
               "source": "firmware"
             },
@@ -68410,16 +69026,16 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-11T05:17:49Z",
-            "etag": "\"0x8DEF7627663B916\"",
-            "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+            "analyzed_at": "2026-08-11T17:16:30Z",
+            "etag": "\"0x8DEF7CA936900B0\"",
+            "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
           }
         }
       }
     ],
     "fid": "CFWFJKMW8FERS9053UCTDQAO02KA7244",
-    "esp": "s3",
-    "category": "t-watch-s3"
+    "category": "t-watch-s3",
+    "esp": "s3"
   },
   {
     "name": "Factory Firmware",

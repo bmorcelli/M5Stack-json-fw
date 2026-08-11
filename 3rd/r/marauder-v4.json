@@ -8,6 +8,62 @@
         "fid": "CFWQ6B6ZI2U6LIS456M63ZRA2FWID3PC",
         "versions": [
             {
+                "version": "1.16.1",
+                "published_at": "2026-08-11",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_Marauder-V4-V6.bin",
+                "Fs": 2480224,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2414688,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v4",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2414688,
+                        "partition_size": 2555904,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2555904,
+                            "source_offset": 65536,
+                            "copy_size": 2414688,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-11T17:16:23Z",
+                        "etag": "\"0x8DEF7CA88D475F7\"",
+                        "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.16",
                 "published_at": "2026-07-24",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Marauder-V4-V6.bin",
@@ -526,19 +582,19 @@
                 "version": "V4 or V6",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Marauder-V4-V6.bin",
-                "Fs": 2480768,
+                "Fs": 2480224,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2415232,
+                "as": 2414688,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "marauder-v4",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2415232,
+                        "image_size": 2414688,
                         "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -551,7 +607,7 @@
                             "role": "firmware",
                             "size": 2555904,
                             "source_offset": 65536,
-                            "copy_size": 2415232,
+                            "copy_size": 2414688,
                             "required": true,
                             "source": "firmware"
                         },
@@ -572,9 +628,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-11T05:17:46Z",
-                        "etag": "\"0x8DEF76275FECB44\"",
-                        "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+                        "analyzed_at": "2026-08-11T17:16:23Z",
+                        "etag": "\"0x8DEF7CA92EB8436\"",
+                        "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
                     }
                 }
             },
@@ -582,19 +638,19 @@
                 "version": "WaveSentry",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_WaveSentry-R1.bin",
-                "Fs": 2482960,
+                "Fs": 2482432,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2417424,
+                "as": 2416896,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "marauder-v4",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2417424,
+                        "image_size": 2416896,
                         "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -607,7 +663,7 @@
                             "role": "firmware",
                             "size": 2555904,
                             "source_offset": 65536,
-                            "copy_size": 2417424,
+                            "copy_size": 2416896,
                             "required": true,
                             "source": "firmware"
                         },
@@ -628,16 +684,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-11T05:17:46Z",
-                        "etag": "\"0x8DEF76276180343\"",
-                        "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+                        "analyzed_at": "2026-08-11T17:16:23Z",
+                        "etag": "\"0x8DEF7CA92F039D4\"",
+                        "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
                     }
                 }
             }
         ],
         "fid": "CFWWE1XNRQHE1A8CAGZIFIVZ6C4Z7UPJ",
-        "esp": "32",
-        "category": "marauder-v4"
+        "category": "marauder-v4",
+        "esp": "32"
     },
     {
         "name": "Ghost v2.1",

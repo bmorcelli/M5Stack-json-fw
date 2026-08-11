@@ -8,6 +8,62 @@
         "fid": "CFW4LLX7KG6NOGNWLVI2AQFIPEDU6U24",
         "versions": [
             {
+                "version": "1.16.1",
+                "published_at": "2026-08-11",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-lilygo-t-embed.bin",
+                "Fs": 4252464,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4186928,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4186928,
+                        "partition_size": 4653056,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4653056,
+                            "source_offset": 65536,
+                            "copy_size": 4186928,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 11993088,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-11T17:16:29Z",
+                        "etag": "\"0x8DEF7CA88FA97C8\"",
+                        "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.16",
                 "published_at": "2026-07-24",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-lilygo-t-embed.bin",
@@ -510,62 +566,6 @@
                         "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
                     }
                 }
-            },
-            {
-                "version": "1.10",
-                "published_at": "2025-05-25",
-                "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-lilygo-t-embed.bin",
-                "Fs": 3893552,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3828016,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-embed",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3828016,
-                        "partition_size": 4653056,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4653056,
-                            "source_offset": 65536,
-                            "copy_size": 3828016,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 11993088,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:34Z",
-                        "etag": "\"0x8DD9BD799003172\"",
-                        "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-                    }
-                }
             }
         ],
         "esp": "s3",
@@ -582,19 +582,19 @@
                 "version": "beta",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-embed.bin",
-                "Fs": 4253232,
+                "Fs": 4252464,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4187696,
+                "as": 4186928,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-embed",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4187696,
+                        "image_size": 4186928,
                         "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -607,7 +607,7 @@
                             "role": "firmware",
                             "size": 4653056,
                             "source_offset": 65536,
-                            "copy_size": 4187696,
+                            "copy_size": 4186928,
                             "required": true,
                             "source": "firmware"
                         },
@@ -628,16 +628,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-11T05:17:48Z",
-                        "etag": "\"0x8DEF762765FFD47\"",
-                        "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+                        "analyzed_at": "2026-08-11T17:16:29Z",
+                        "etag": "\"0x8DEF7CA93655B5C\"",
+                        "last_modified": "Tue, 11 Aug 2026 17:04:16 GMT"
                     }
                 }
             }
         ],
         "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-        "esp": "s3",
-        "category": "t-embed"
+        "category": "t-embed",
+        "esp": "s3"
     },
     {
         "name": "Factory Firmware",

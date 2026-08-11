@@ -8,6 +8,62 @@
         "fid": "CFW7ML6KJOTQKEWEEP3QUQ3ERXGITDU4",
         "versions": [
             {
+                "version": "1.16.1",
+                "published_at": "2026-08-11",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_Phantom_S024R.bin",
+                "Fs": 2486688,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2421152,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "phantom",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2421152,
+                        "partition_size": 2555904,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2555904,
+                            "source_offset": 65536,
+                            "copy_size": 2421152,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-11T17:16:27Z",
+                        "etag": "\"0x8DEF7CA88CA6F1C\"",
+                        "last_modified": "Tue, 11 Aug 2026 17:03:58 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.16",
                 "published_at": "2026-07-24",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/1.16/Bruce-LAUNCHER_Phantom_S024R.bin",
@@ -510,62 +566,6 @@
                         "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
                     }
                 }
-            },
-            {
-                "version": "1.10",
-                "published_at": "2025-05-25",
-                "file": "https://github.com/BruceDevices/firmware/releases/download/1.10/Bruce-LAUNCHER_Phantom_S024R.bin",
-                "Fs": 2583744,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2518208,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "phantom",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2518208,
-                        "partition_size": 2555904,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2555904,
-                            "source_offset": 65536,
-                            "copy_size": 2518208,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 1572864,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:25Z",
-                        "etag": "\"0x8DD9BD798F1E9A9\"",
-                        "last_modified": "Sun, 25 May 2025 22:00:44 GMT"
-                    }
-                }
             }
         ],
         "esp": "32",
@@ -582,19 +582,19 @@
                 "version": "Beta",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-LAUNCHER_Phantom_S024R.bin",
-                "Fs": 2487280,
+                "Fs": 2486688,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2421744,
+                "as": 2421152,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "phantom",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2421744,
+                        "image_size": 2421152,
                         "partition_size": 2555904,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -607,7 +607,7 @@
                             "role": "firmware",
                             "size": 2555904,
                             "source_offset": 65536,
-                            "copy_size": 2421744,
+                            "copy_size": 2421152,
                             "required": true,
                             "source": "firmware"
                         },
@@ -628,16 +628,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-11T05:17:47Z",
-                        "etag": "\"0x8DEF762760DFC6F\"",
-                        "last_modified": "Tue, 11 Aug 2026 04:38:59 GMT"
+                        "analyzed_at": "2026-08-11T17:16:27Z",
+                        "etag": "\"0x8DEF7CA92E7B7EA\"",
+                        "last_modified": "Tue, 11 Aug 2026 17:04:15 GMT"
                     }
                 }
             }
         ],
         "fid": "CFWRGP2OGPVURWWYZZVDGDCXW21B5HSS",
-        "esp": "32",
-        "category": "phantom"
+        "category": "phantom",
+        "esp": "32"
     },
     {
         "name": "Ghost v1.9.9",
