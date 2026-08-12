@@ -1,0 +1,1544 @@
+[
+    {
+        "name": "ASCII-Aquarium",
+        "author": "H4W9",
+        "description": "ASCII Aquarium turns your Marauder Pancake into a tiny animated ASCII fish tank. It renders a live aquarium scene with animated fish, bubbles, swaying seaweed, tap-to-feed food flakes, occasional octopus & seahorse visitors, selectable backgrounds, preferences, optional Wi-Fi clock sync, & More!",
+        "cover": "",
+        "github": "https://github.com/H4W9/ASCII-Aquarium",
+        "fid": "CFWOFMXHIV4SAC3JNNXV3UY27AYKAAPD",
+        "versions": [
+            {
+                "version": "v2.39-pancake",
+                "published_at": "2026-07-17",
+                "file": "https://github.com/H4W9/ASCII-Aquarium/releases/download/v2.39-pancake/ASCII_Aquarium_merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1270720,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1270720,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1270720,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-08-12T16:41:46Z",
+                        "etag": "\"0x8DEE39A83480203\"",
+                        "last_modified": "Fri, 17 Jul 2026 00:29:50 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.0",
+                "published_at": "2026-07-08",
+                "file": "https://github.com/H4W9/ASCII-Aquarium/releases/download/v1.0/ASCII_Aquarium_Pancake.bin",
+                "Fs": 1265312,
+                "nb": true,
+                "ao": 0,
+                "as": 1265312,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1265312,
+                        "partition_size": 1265312,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1265312,
+                            "source_offset": 0,
+                            "copy_size": 1265312,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:46Z",
+                        "etag": "\"0x8DEDCBA8A8D83D6\"",
+                        "last_modified": "Wed, 08 Jul 2026 06:31:27 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "FlipSocial",
+        "author": "H4W9",
+        "description": "A standalone touch firmware that runs FlipSocial natively on the Marauder V8 and Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch). It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_FlipSocial",
+        "fid": "CFWOMEENONSYJAMSO3RQXCYJMYDYKK7V",
+        "versions": [
+            {
+                "version": "v1.0.2",
+                "published_at": "2026-07-17",
+                "file": "https://github.com/H4W9/ESP32_FlipSocial/releases/download/v1.0.2/ESP32_FlipSocial_v1_0_2_pancake_merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 131072,
+                "as": 3604480,
+                "so": 7340032,
+                "ss": 262144,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 3604480,
+                        "partition_size": 3604480,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3604480,
+                            "source_offset": 131072,
+                            "copy_size": 3604480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 262144,
+                            "source": "firmware",
+                            "source_offset": 7340032,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "ESP segment parse failed on full flash, using partition_size: ESP image not found at 0x20000",
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-08-12T16:41:46Z",
+                        "etag": "\"0x8DEEFC6B4EED6AE\"",
+                        "last_modified": "Sat, 01 Aug 2026 12:16:25 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.0.1",
+                "published_at": "2026-07-16",
+                "file": "https://github.com/H4W9/ESP32_FlipSocial/releases/download/v1.0.1/ESP32_FlipSocial_merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 1,
+                "f2": 0,
+                "ao": 131072,
+                "as": 3604480,
+                "so": 7340032,
+                "ss": 262144,
+                "fo": 7602176,
+                "fs": 786432,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 3604480,
+                        "partition_size": 3604480,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3604480,
+                            "source_offset": 131072,
+                            "copy_size": 3604480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 262144,
+                            "source": "firmware",
+                            "source_offset": 7340032,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 786432,
+                            "source": "firmware",
+                            "source_offset": 7602176,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "ESP segment parse failed on full flash, using partition_size: ESP image not found at 0x20000",
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0.",
+                            "Data partition 'storage' (fat) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-08-12T16:41:46Z",
+                        "etag": "\"0x8DEE341461DC497\"",
+                        "last_modified": "Thu, 16 Jul 2026 13:51:02 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.0.0",
+                "published_at": "2026-07-15",
+                "file": "https://github.com/H4W9/ESP32_FlipSocial/releases/download/v1.0.0/ESP32_FlipSocial_merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 1,
+                "f2": 0,
+                "ao": 131072,
+                "as": 3604480,
+                "so": 7340032,
+                "ss": 262144,
+                "fo": 7602176,
+                "fs": 786432,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 3604480,
+                        "partition_size": 3604480,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3604480,
+                            "source_offset": 131072,
+                            "copy_size": 3604480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 262144,
+                            "source": "firmware",
+                            "source_offset": 7340032,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 786432,
+                            "source": "firmware",
+                            "source_offset": 7602176,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "ESP segment parse failed on full flash, using partition_size: ESP image not found at 0x20000",
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0.",
+                            "Data partition 'storage' (fat) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DEE2B0694D184F\"",
+                        "last_modified": "Wed, 15 Jul 2026 20:34:04 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Ghost v2.1",
+        "author": "GhostESP-Revival",
+        "description": "Welcome to Ghost ESP, a robust and feature-rich firmware designed for your ESP32 microcontroller, enabling advanced wireless network exploration and security testing. With Ghost ESP installed, you can leverage the power of your ESP32 device to conduct in-depth WiFi and Bluetooth Low Energy (BLE) analysis, launch strategic wireless attacks, and explore a wide range of wireless environments.",
+        "cover": "73a76385ad90e1e7537e066187476e77.png",
+        "fid": "CFW65JYEX4CBVRVGK0CR8TIE9A4INIIX",
+        "github": "https://github.com/GhostESP-Revival/GhostESP",
+        "versions": [
+            {
+                "version": "v2.1-MarauderPancake",
+                "published_at": "2026-08-03",
+                "file": "https://github.com/bmorcelli/M5Stack-json-fw/releases/download/GhostESP/MarauderPancake.bin",
+                "Fs": 3511312,
+                "nb": true,
+                "ao": 0,
+                "as": 3511312,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 3511312,
+                        "partition_size": 3511312,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3511312,
+                            "source_offset": 0,
+                            "copy_size": 3511312,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:46Z",
+                        "etag": "\"0x8DEF17D683E3AC0\"",
+                        "last_modified": "Mon, 03 Aug 2026 16:36:45 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Launcher",
+        "author": "bmorcelli",
+        "description": "With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI.",
+        "cover": "8a0100966905599183f9431ea873058f.gif",
+        "github": "https://github.com/bmorcelli/Launcher",
+        "fid": "CFWSGPUMS7NZVB3PWP273VYB5NHJT42C",
+        "versions": [
+            {
+                "version": "2.8.0",
+                "published_at": "2026-07-31",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.8.0/Launcher-pancake.bin",
+                "Fs": 1498416,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1432880,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1432880,
+                        "partition_size": 1572864,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1572864,
+                            "source_offset": 65536,
+                            "copy_size": 1432880,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:46Z",
+                        "etag": "\"0x8DEEF187DABFA8A\"",
+                        "last_modified": "Fri, 31 Jul 2026 15:29:19 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Library",
+        "author": "H4W9",
+        "description": "A library/dictionary firmware for ESP32-C5 with a touch display",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Library",
+        "fid": "CFWS65J4XC6AOZIK5BGMXMGHFSA7TTS6",
+        "versions": [
+            {
+                "version": "v1.0.0",
+                "published_at": "2026-07-18",
+                "file": "https://github.com/H4W9/ESP32_Library/releases/download/v1.0.0/ESP32_Library_v1.0.0_pancake.bin",
+                "Fs": 1817664,
+                "nb": true,
+                "ao": 0,
+                "as": 1817664,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1817664,
+                        "partition_size": 1817664,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1817664,
+                            "source_offset": 0,
+                            "copy_size": 1817664,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:46Z",
+                        "etag": "\"0x8DEEFC67BEE1F29\"",
+                        "last_modified": "Sat, 01 Aug 2026 12:14:49 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Marauder",
+        "author": "JustCallMeKoko",
+        "description": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32. Use Launcher to install",
+        "cover": "3183675bd52534e015bcc8ae2ae603a0.png",
+        "github": "https://github.com/justcallmekoko/ESP32Marauder",
+        "fid": "CFW5HH4UDRDVQLZAIUYKNESSA7VE7GMF",
+        "versions": [
+            {
+                "version": "v1.14.1",
+                "published_at": "2026-08-01",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.1/esp32_marauder_installer_v1_14_1_20260801_pancake.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1945472,
+                "ao": 0,
+                "as": 1945472,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "pancake",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1945472,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1945472,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.1/esp32_marauder_installer_v1_14_1_20260801_pancake.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DEEF99698490B1\"",
+                        "last_modified": "Sat, 01 Aug 2026 06:52:11 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.14.0",
+                "published_at": "2026-07-22",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.0/esp32_marauder_v1_14_0_20260721_pancake.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1945472,
+                "ao": 0,
+                "as": 1945472,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "pancake",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1945472,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1945472,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.0/esp32_marauder_v1_14_0_20260721_pancake.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DEE74D6D8D5BEF\"",
+                        "last_modified": "Tue, 21 Jul 2026 17:28:06 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Mastermine",
+        "author": "H4W9",
+        "description": "Minesweeper on the surface of a rotatable 3D cube, recreated in Arduino IDE after Mastermine by Adam Soutar.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Mastermine",
+        "fid": "CFWCAE3XES3IQAAUFCVZBPT2JFIB7U7F",
+        "versions": [
+            {
+                "version": "v0.3.0",
+                "published_at": "2026-08-02",
+                "file": "https://github.com/H4W9/ESP32_Mastermine/releases/download/v0.3.0/ESP32_Mastermine_v0_3_0_pancake.bin",
+                "Fs": 1569616,
+                "nb": true,
+                "ao": 0,
+                "as": 1569616,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1569616,
+                        "partition_size": 1569616,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1569616,
+                            "source_offset": 0,
+                            "copy_size": 1569616,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DEF0E0F5C54711\"",
+                        "last_modified": "Sun, 02 Aug 2026 21:56:51 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.2.0",
+                "published_at": "2026-08-01",
+                "file": "https://github.com/H4W9/ESP32_Mastermine/releases/download/v0.2.0/ESP32_Mastermine_v0_2_0_pancake.bin",
+                "Fs": 1567552,
+                "nb": true,
+                "ao": 0,
+                "as": 1567552,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1567552,
+                        "partition_size": 1567552,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1567552,
+                            "source_offset": 0,
+                            "copy_size": 1567552,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DEF0C56F89054F\"",
+                        "last_modified": "Sun, 02 Aug 2026 18:39:50 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.0",
+                "published_at": "2026-07-20",
+                "file": "https://github.com/H4W9/ESP32_Mastermine/releases/download/v0.1.0/ESP32_Mastermine_v0_1_0_pancake.bin",
+                "Fs": 1563632,
+                "nb": true,
+                "ao": 0,
+                "as": 1563632,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1563632,
+                        "partition_size": 1563632,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1563632,
+                            "source_offset": 0,
+                            "copy_size": 1563632,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DEE75F559E6B41\"",
+                        "last_modified": "Tue, 21 Jul 2026 19:36:17 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Pancake",
+        "author": "C5Lab",
+        "description": "Pancake is a portable, touchscreen-driven WiFi security toolkit running on the Waveshare ESP32-C5-WIFI6-KIT. Inspired by Pwnagotchi-style devices, it combines a rich set of offensive and defensive WiFi tools with BLE scanning, GPS wardriving, and a beautiful Material-style dark UI \u2014 all packed into a handheld form factor with a 3.5\" capacitive touch display.",
+        "cover": "https://github.com/user-attachments/assets/85c42338-14af-4657-bb06-fee8f34061de",
+        "github": "https://github.com/C5Lab/pancake",
+        "fid": "CFWLI4GOKA2FVAZ7LJAOONJ6OIRAFYSK",
+        "versions": [
+            {
+                "version": "v0.5.2",
+                "published_at": "2026-03-24",
+                "file": "https://github.com/C5Lab/pancake/releases/download/v0.5.2/pancake-esp32c5-full-0.5.2.bin",
+                "Fs": 2241344,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2175808,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2175808,
+                        "partition_size": 7340032,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 7340032,
+                            "source_offset": 65536,
+                            "copy_size": 2175808,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DED8D894BA30AA\"",
+                        "last_modified": "Fri, 03 Jul 2026 07:56:25 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.5.1",
+                "published_at": "2026-03-23",
+                "file": "https://github.com/C5Lab/pancake/releases/download/v0.5.1/pancake-esp32c5-full-0.5.1.bin",
+                "Fs": 2218656,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2153120,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2153120,
+                        "partition_size": 7340032,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 7340032,
+                            "source_offset": 65536,
+                            "copy_size": 2153120,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:47Z",
+                        "etag": "\"0x8DE898255094606\"",
+                        "last_modified": "Tue, 24 Mar 2026 08:49:59 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Picoware",
+        "author": "jblanked",
+        "description": "Open-source custom firmware for PicoCalc, Cardputer ADV, Flipper Zero, and other ESP32/Raspberry Pi Pico devices.",
+        "cover": "",
+        "github": "https://github.com/jblanked/Picoware",
+        "fid": "CFWGK5FZCLPFM4UEKZND26ZY5KCBBSSQ",
+        "versions": [
+            {
+                "version": "v2.1.0",
+                "published_at": "2026-07-28",
+                "file": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake.bin",
+                "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+                "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+                "Fs": 2628320,
+                "ao": 0,
+                "as": 2628320,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "pancake",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2628320,
+                        "partition_size": 2686976,
+                        "flash_offset": 131072,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2686976,
+                            "source_offset": 0,
+                            "copy_size": 2628320,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 131072
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 5570560,
+                            "flash_offset": 2818048,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake.bin",
+                        "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+                        "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "W/\"5213e0c82b50fa77cf794ccfc821349e4f4abd1987454b449f9bbaa1af8a1b5a\"",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+                            "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.1.0/builds/MicroPython/Picoware-Pancake-partition-table.bin"
+                        }
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "32"
+    },
+    {
+        "name": "Porkchop",
+        "author": "H4W9",
+        "description": "ON NO! Someone put an RPG in a packet sniffer. M5PORKCHOP by 0ct0sec, ported to Marauder Pancake.",
+        "cover": "",
+        "github": "https://github.com/H4W9/M5PORKCHOP",
+        "fid": "CFWEVU7POQMOWIKVOMCTESGWTRPSQ22F",
+        "versions": [
+            {
+                "version": "v0.2.0-PSTH-PANCAKE",
+                "published_at": "2026-08-09",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.2.0-PSTH-PANCAKE/porkchop_pancake.bin",
+                "Fs": 2383664,
+                "nb": true,
+                "ao": 0,
+                "as": 2383664,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2383664,
+                        "partition_size": 2383664,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2383664,
+                            "source_offset": 0,
+                            "copy_size": 2383664,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF5C77B2564A5\"",
+                        "last_modified": "Sun, 09 Aug 2026 03:37:04 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.2.1-PSTH-PANCAKE",
+                "published_at": "2026-08-09",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.2.1-PSTH-PANCAKE/porkchop_pancake.bin",
+                "Fs": 2383824,
+                "nb": true,
+                "ao": 0,
+                "as": 2383824,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2383824,
+                        "partition_size": 2383824,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2383824,
+                            "source_offset": 0,
+                            "copy_size": 2383824,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF66CC2D2EEA5\"",
+                        "last_modified": "Sun, 09 Aug 2026 23:20:11 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.9a-PSTH-PANCAKE",
+                "published_at": "2026-08-08",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.1.9a-PSTH-PANCAKE/porkchop_pancake.bin",
+                "Fs": 2382768,
+                "nb": true,
+                "ao": 0,
+                "as": 2382768,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2382768,
+                        "partition_size": 2382768,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2382768,
+                            "source_offset": 0,
+                            "copy_size": 2382768,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF4FD903D7988\"",
+                        "last_modified": "Sat, 08 Aug 2026 03:31:41 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.9-PSTH-PANCAKE",
+                "published_at": "2026-08-07",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.1.9-PSTH-PANCAKE/porkchop_pancake.bin",
+                "Fs": 2382688,
+                "nb": true,
+                "ao": 0,
+                "as": 2382688,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2382688,
+                        "partition_size": 2382688,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2382688,
+                            "source_offset": 0,
+                            "copy_size": 2382688,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF48524330F60\"",
+                        "last_modified": "Fri, 07 Aug 2026 13:09:40 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.8b-PSTH-PANCAKE",
+                "published_at": "2026-08-01",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.1.8b-PSTH-PANCAKE/porkchop_pancake.bin",
+                "Fs": 2384384,
+                "nb": true,
+                "ao": 0,
+                "as": 2384384,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2384384,
+                        "partition_size": 2384384,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2384384,
+                            "source_offset": 0,
+                            "copy_size": 2384384,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF0BAD70A7B0A\"",
+                        "last_modified": "Sun, 02 Aug 2026 17:23:59 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Scrabble",
+        "author": "H4W9",
+        "description": "Classic Scrabble for ESP32 hardware.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Scrabble",
+        "fid": "CFW6S5TMRL3RORNZWP5PQAATXLMMZPII",
+        "versions": [
+            {
+                "version": "v0.1.1",
+                "published_at": "2026-08-10",
+                "file": "https://github.com/H4W9/ESP32_Scrabble/releases/download/v0.1.1/ESP32_Scrabble_v0_1_1_pancake.bin",
+                "Fs": 1579968,
+                "nb": true,
+                "ao": 0,
+                "as": 1579968,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1579968,
+                        "partition_size": 1579968,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1579968,
+                            "source_offset": 0,
+                            "copy_size": 1579968,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF6FD463EEB05\"",
+                        "last_modified": "Mon, 10 Aug 2026 16:34:39 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.0",
+                "published_at": "2026-08-09",
+                "file": "https://github.com/H4W9/ESP32_Scrabble/releases/download/v0.1.0/ESP32_Scrabble_v0_1_0_pancake.bin",
+                "Fs": 1579824,
+                "nb": true,
+                "ao": 0,
+                "as": 1579824,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1579824,
+                        "partition_size": 1579824,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1579824,
+                            "source_offset": 0,
+                            "copy_size": 1579824,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF647848084A5\"",
+                        "last_modified": "Sun, 09 Aug 2026 18:53:35 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    },
+    {
+        "name": "Sudoku",
+        "author": "H4W9",
+        "description": "Classic sudoku for ESP32 hardware.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Sudoku",
+        "fid": "CFWUXN6YQDST3WXVWW7ORPE7XYLZTVVO",
+        "versions": [
+            {
+                "version": "v1.1.0",
+                "published_at": "2026-08-11",
+                "file": "https://github.com/H4W9/ESP32_Sudoku/releases/download/v1.1.0/ESP32_Sudoku_v1_1_0_pancake.bin",
+                "Fs": 750816,
+                "nb": true,
+                "ao": 0,
+                "as": 750816,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 750816,
+                        "partition_size": 750816,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 750816,
+                            "source_offset": 0,
+                            "copy_size": 750816,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF760EDFBB191\"",
+                        "last_modified": "Tue, 11 Aug 2026 04:28:01 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.2.0",
+                "published_at": "2026-08-11",
+                "file": "https://github.com/H4W9/ESP32_Sudoku/releases/download/v1.2.0/ESP32_Sudoku_v1_2_0_pancake.bin",
+                "Fs": 751056,
+                "nb": true,
+                "ao": 0,
+                "as": 751056,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 751056,
+                        "partition_size": 751056,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 751056,
+                            "source_offset": 0,
+                            "copy_size": 751056,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:48Z",
+                        "etag": "\"0x8DEF7A85D232A7F\"",
+                        "last_modified": "Tue, 11 Aug 2026 12:59:22 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.0.0",
+                "published_at": "2026-08-10",
+                "file": "https://github.com/H4W9/ESP32_Sudoku/releases/download/v1.0.0/ESP32_Sudoku_v1_0_0_pancake.bin",
+                "Fs": 745984,
+                "nb": true,
+                "ao": 0,
+                "as": 745984,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "pancake",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 745984,
+                        "partition_size": 745984,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 745984,
+                            "source_offset": 0,
+                            "copy_size": 745984,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:49Z",
+                        "etag": "\"0x8DEF720020FD361\"",
+                        "last_modified": "Mon, 10 Aug 2026 20:43:17 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "pancake",
+        "esp": "c5"
+    }
+]

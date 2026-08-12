@@ -1,0 +1,1505 @@
+[
+    {
+        "name": "FlipSocial",
+        "author": "H4W9",
+        "description": "A standalone touch firmware that runs FlipSocial natively on the Marauder V8 and Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch). It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_FlipSocial",
+        "fid": "CFWEYCAGE6BINUYW7TTLELHD67MC7HJY",
+        "versions": [
+            {
+                "version": "v1.0.2",
+                "published_at": "2026-07-17",
+                "file": "https://github.com/H4W9/ESP32_FlipSocial/releases/download/v1.0.2/ESP32_FlipSocial_v1_0_2_v8_merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 131072,
+                "as": 3604480,
+                "so": 7340032,
+                "ss": 262144,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 3604480,
+                        "partition_size": 3604480,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3604480,
+                            "source_offset": 131072,
+                            "copy_size": 3604480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 262144,
+                            "source": "firmware",
+                            "source_offset": 7340032,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "ESP segment parse failed on full flash, using partition_size: ESP image not found at 0x20000",
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-08-12T16:41:43Z",
+                        "etag": "\"0x8DEEFC6B530E4B5\"",
+                        "last_modified": "Sat, 01 Aug 2026 12:16:25 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Ghost v2.1",
+        "author": "GhostESP-Revival",
+        "description": "Welcome to Ghost ESP, a robust and feature-rich firmware designed for your ESP32 microcontroller, enabling advanced wireless network exploration and security testing. With Ghost ESP installed, you can leverage the power of your ESP32 device to conduct in-depth WiFi and Bluetooth Low Energy (BLE) analysis, launch strategic wireless attacks, and explore a wide range of wireless environments.",
+        "cover": "73a76385ad90e1e7537e066187476e77.png",
+        "fid": "CFW65JYEX4CBVRVGK0CR8TIE9A4INIIX",
+        "github": "https://github.com/GhostESP-Revival/GhostESP",
+        "versions": [
+            {
+                "version": "v2.1-MarauderV8",
+                "published_at": "2026-08-03",
+                "file": "https://github.com/bmorcelli/M5Stack-json-fw/releases/download/GhostESP/MarauderV8.bin",
+                "Fs": 3504496,
+                "nb": true,
+                "ao": 0,
+                "as": 3504496,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 3504496,
+                        "partition_size": 3504496,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3504496,
+                            "source_offset": 0,
+                            "copy_size": 3504496,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:43Z",
+                        "etag": "\"0x8DEF17D683C6818\"",
+                        "last_modified": "Mon, 03 Aug 2026 16:36:45 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Launcher",
+        "author": "bmorcelli",
+        "description": "With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI.",
+        "cover": "8a0100966905599183f9431ea873058f.gif",
+        "github": "https://github.com/bmorcelli/Launcher",
+        "fid": "CFWKGNSVGLHSEC7WJ2CEJL7WTMWDIN67",
+        "versions": [
+            {
+                "version": "2.8.0",
+                "published_at": "2026-07-31",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.8.0/Launcher-Marauder-v8.bin",
+                "Fs": 1495088,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1429552,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1429552,
+                        "partition_size": 1441792,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1441792,
+                            "source_offset": 65536,
+                            "copy_size": 1429552,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:43Z",
+                        "etag": "\"0x8DEEF187DAE1B03\"",
+                        "last_modified": "Fri, 31 Jul 2026 15:29:20 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Library",
+        "author": "H4W9",
+        "description": "A library/dictionary firmware for ESP32-C5 with a touch display",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Library",
+        "fid": "CFW4QTU7OZZ37A3ESQ43V5VOGIN7FBFY",
+        "versions": [
+            {
+                "version": "v1.0.0",
+                "published_at": "2026-07-18",
+                "file": "https://github.com/H4W9/ESP32_Library/releases/download/v1.0.0/ESP32_Library_v1.0.0_v8.bin",
+                "Fs": 1821280,
+                "nb": true,
+                "ao": 0,
+                "as": 1821280,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1821280,
+                        "partition_size": 1821280,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1821280,
+                            "source_offset": 0,
+                            "copy_size": 1821280,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:43Z",
+                        "etag": "\"0x8DEEFC67C2BA640\"",
+                        "last_modified": "Sat, 01 Aug 2026 12:14:49 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Marauder",
+        "author": "JustCallMeKoko",
+        "description": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32. Use Launcher to install",
+        "cover": "3183675bd52534e015bcc8ae2ae603a0.png",
+        "github": "https://github.com/justcallmekoko/ESP32Marauder",
+        "fid": "CFWPORON46CVJ5KKVKNTSX4S5YUS66J7",
+        "versions": [
+            {
+                "version": "v1.14.1",
+                "published_at": "2026-08-01",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.1/esp32_marauder_v1_14_1_20260801_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1948864,
+                "ao": 0,
+                "as": 1948864,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1948864,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1948864,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.1/esp32_marauder_v1_14_1_20260801_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:43Z",
+                        "etag": "\"0x8DEEF9865781F5B\"",
+                        "last_modified": "Sat, 01 Aug 2026 06:44:54 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.14.0",
+                "published_at": "2026-07-22",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.0/esp32_marauder_v1_14_0_20260721_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1948864,
+                "ao": 0,
+                "as": 1948864,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1948864,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1948864,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.14.0/esp32_marauder_v1_14_0_20260721_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:43Z",
+                        "etag": "\"0x8DEE75501E14F70\"",
+                        "last_modified": "Tue, 21 Jul 2026 18:22:22 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.13.0",
+                "published_at": "2026-07-07",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.13.0/esp32_marauder_v1_13_0_20260707_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1818352,
+                "ao": 0,
+                "as": 1818352,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1818352,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1818352,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.13.0/esp32_marauder_v1_13_0_20260707_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:43Z",
+                        "etag": "\"0x8DEDBD2AE9148DB\"",
+                        "last_modified": "Tue, 07 Jul 2026 02:51:45 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.12.3",
+                "published_at": "2026-06-22",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.3/esp32_marauder_v1_12_3_20260622_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1949152,
+                "ao": 0,
+                "as": 1949152,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1949152,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1949152,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.3/esp32_marauder_v1_12_3_20260622_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DED08E19EA347B\"",
+                        "last_modified": "Mon, 22 Jun 2026 18:43:07 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.12.2",
+                "published_at": "2026-06-17",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.2/esp32_marauder_v1_12_2_20260617_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1949152,
+                "ao": 0,
+                "as": 1949152,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1949152,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1949152,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.2/esp32_marauder_v1_12_2_20260617_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DECCAA1C63A890\"",
+                        "last_modified": "Wed, 17 Jun 2026 19:53:32 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.12.1",
+                "published_at": "2026-05-05",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.1/esp32_marauder_v1_12_1_20260505_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1958768,
+                "ao": 0,
+                "as": 1958768,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1958768,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1958768,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.1/esp32_marauder_v1_12_1_20260505_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DEAA5B4F2A8E77\"",
+                        "last_modified": "Tue, 05 May 2026 04:03:48 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.12.0",
+                "published_at": "2026-04-30",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.0/esp32_marauder_v1_12_0_20260430_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1966016,
+                "ao": 0,
+                "as": 1966016,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1966016,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1966016,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.12.0/esp32_marauder_v1_12_0_20260430_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DEA6BB6A8B22E1\"",
+                        "last_modified": "Thu, 30 Apr 2026 13:21:40 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.11.1",
+                "published_at": "2026-04-15",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.1/esp32_marauder_v1_11_1_20260415_v8.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 1965888,
+                "ao": 0,
+                "as": 1965888,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 1965888,
+                        "partition_size": 1966080,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1966080,
+                            "source_offset": 0,
+                            "copy_size": 1965888,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.11.1/esp32_marauder_v1_11_1_20260415_v8.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DE9AF61007811F\"",
+                        "last_modified": "Wed, 15 Apr 2026 13:51:15 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Mastermine",
+        "author": "H4W9",
+        "description": "Minesweeper on the surface of a rotatable 3D cube, recreated in Arduino IDE after Mastermine by Adam Soutar.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Mastermine",
+        "fid": "CFWFZRGVA6TN3VXMZSTMA6MLJWNPZHZI",
+        "versions": [
+            {
+                "version": "v0.3.0",
+                "published_at": "2026-08-02",
+                "file": "https://github.com/H4W9/ESP32_Mastermine/releases/download/v0.3.0/ESP32_Mastermine_v0_3_0_v8.bin",
+                "Fs": 1569200,
+                "nb": true,
+                "ao": 0,
+                "as": 1569200,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1569200,
+                        "partition_size": 1569200,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1569200,
+                            "source_offset": 0,
+                            "copy_size": 1569200,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DEF0E0F5C8031A\"",
+                        "last_modified": "Sun, 02 Aug 2026 21:56:52 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.2.0",
+                "published_at": "2026-08-01",
+                "file": "https://github.com/H4W9/ESP32_Mastermine/releases/download/v0.2.0/ESP32_Mastermine_v0_2_0_v8.bin",
+                "Fs": 1567152,
+                "nb": true,
+                "ao": 0,
+                "as": 1567152,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1567152,
+                        "partition_size": 1567152,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1567152,
+                            "source_offset": 0,
+                            "copy_size": 1567152,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DEF0C56F869707\"",
+                        "last_modified": "Sun, 02 Aug 2026 18:39:50 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.0",
+                "published_at": "2026-07-20",
+                "file": "https://github.com/H4W9/ESP32_Mastermine/releases/download/v0.1.0/ESP32_Mastermine_v0_1_0_v8.bin",
+                "Fs": 1564272,
+                "nb": true,
+                "ao": 0,
+                "as": 1564272,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1564272,
+                        "partition_size": 1564272,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1564272,
+                            "source_offset": 0,
+                            "copy_size": 1564272,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DEE75F55902387\"",
+                        "last_modified": "Tue, 21 Jul 2026 19:36:17 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Porkchop",
+        "author": "H4W9",
+        "description": "ON NO! Someone put an RPG in a packet sniffer. M5PORKCHOP by 0ct0sec, ported to Marauder Pancake.",
+        "cover": "",
+        "github": "https://github.com/H4W9/M5PORKCHOP",
+        "fid": "CFWXJ4DOCYEVX3QIBTGCQJECMYVZBJD4",
+        "versions": [
+            {
+                "version": "v0.2.0-PSTH-PANCAKE",
+                "published_at": "2026-08-09",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.2.0-PSTH-PANCAKE/porkchop_v8.bin",
+                "Fs": 2384832,
+                "nb": true,
+                "ao": 0,
+                "as": 2384832,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2384832,
+                        "partition_size": 2384832,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2384832,
+                            "source_offset": 0,
+                            "copy_size": 2384832,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DEF5C77C56AB42\"",
+                        "last_modified": "Sun, 09 Aug 2026 03:37:06 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.2.1-PSTH-PANCAKE",
+                "published_at": "2026-08-09",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.2.1-PSTH-PANCAKE/porkchop_v8.bin",
+                "Fs": 2384976,
+                "nb": true,
+                "ao": 0,
+                "as": 2384976,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2384976,
+                        "partition_size": 2384976,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2384976,
+                            "source_offset": 0,
+                            "copy_size": 2384976,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:44Z",
+                        "etag": "\"0x8DEF66CC3F0B604\"",
+                        "last_modified": "Sun, 09 Aug 2026 23:20:13 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.9a-PSTH-PANCAKE",
+                "published_at": "2026-08-08",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.1.9a-PSTH-PANCAKE/porkchop_v8.bin",
+                "Fs": 2383920,
+                "nb": true,
+                "ao": 0,
+                "as": 2383920,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2383920,
+                        "partition_size": 2383920,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2383920,
+                            "source_offset": 0,
+                            "copy_size": 2383920,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF4FD918A1817\"",
+                        "last_modified": "Sat, 08 Aug 2026 03:31:43 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.9-PSTH-PANCAKE",
+                "published_at": "2026-08-07",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.1.9-PSTH-PANCAKE/porkchop_v8.bin",
+                "Fs": 2383856,
+                "nb": true,
+                "ao": 0,
+                "as": 2383856,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2383856,
+                        "partition_size": 2383856,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2383856,
+                            "source_offset": 0,
+                            "copy_size": 2383856,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF485254FB365\"",
+                        "last_modified": "Fri, 07 Aug 2026 13:09:42 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.8b-PSTH-PANCAKE",
+                "published_at": "2026-08-02",
+                "file": "https://github.com/H4W9/M5PORKCHOP/releases/download/v0.1.8b-PSTH-PANCAKE/porkchop_v8.bin",
+                "Fs": 2385680,
+                "nb": true,
+                "ao": 0,
+                "as": 2385680,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2385680,
+                        "partition_size": 2385680,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2385680,
+                            "source_offset": 0,
+                            "copy_size": 2385680,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF0BAD87BB9AC\"",
+                        "last_modified": "Sun, 02 Aug 2026 17:24:01 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Scrabble",
+        "author": "H4W9",
+        "description": "Classic Scrabble for ESP32 hardware.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Scrabble",
+        "fid": "CFWDUAITS7YEDBESWCSQVVB3HCQ5JLIU",
+        "versions": [
+            {
+                "version": "v0.1.1",
+                "published_at": "2026-08-10",
+                "file": "https://github.com/H4W9/ESP32_Scrabble/releases/download/v0.1.1/ESP32_Scrabble_v0_1_1_v8.bin",
+                "Fs": 1581376,
+                "nb": true,
+                "ao": 0,
+                "as": 1581376,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1581376,
+                        "partition_size": 1581376,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1581376,
+                            "source_offset": 0,
+                            "copy_size": 1581376,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF6FD46102056\"",
+                        "last_modified": "Mon, 10 Aug 2026 16:34:39 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.1.0",
+                "published_at": "2026-08-09",
+                "file": "https://github.com/H4W9/ESP32_Scrabble/releases/download/v0.1.0/ESP32_Scrabble_v0_1_0_v8.bin",
+                "Fs": 1580928,
+                "nb": true,
+                "ao": 0,
+                "as": 1580928,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1580928,
+                        "partition_size": 1580928,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1580928,
+                            "source_offset": 0,
+                            "copy_size": 1580928,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF647846FCE87\"",
+                        "last_modified": "Sun, 09 Aug 2026 18:53:35 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "Sudoku",
+        "author": "H4W9",
+        "description": "Classic sudoku for ESP32 hardware.",
+        "cover": "",
+        "github": "https://github.com/H4W9/ESP32_Sudoku",
+        "fid": "CFWT6FRBK6YLPDMXC2NO6ODYSUUHYLCS",
+        "versions": [
+            {
+                "version": "v1.1.0",
+                "published_at": "2026-08-11",
+                "file": "https://github.com/H4W9/ESP32_Sudoku/releases/download/v1.1.0/ESP32_Sudoku_v1_1_0_v8.bin",
+                "Fs": 752000,
+                "nb": true,
+                "ao": 0,
+                "as": 752000,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 752000,
+                        "partition_size": 752000,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 752000,
+                            "source_offset": 0,
+                            "copy_size": 752000,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF760EE03BED3\"",
+                        "last_modified": "Tue, 11 Aug 2026 04:28:01 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.2.0",
+                "published_at": "2026-08-11",
+                "file": "https://github.com/H4W9/ESP32_Sudoku/releases/download/v1.2.0/ESP32_Sudoku_v1_2_0_v8.bin",
+                "Fs": 752240,
+                "nb": true,
+                "ao": 0,
+                "as": 752240,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 752240,
+                        "partition_size": 752240,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 752240,
+                            "source_offset": 0,
+                            "copy_size": 752240,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF7A85D1CEFF4\"",
+                        "last_modified": "Tue, 11 Aug 2026 12:59:22 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.0.0",
+                "published_at": "2026-08-10",
+                "file": "https://github.com/H4W9/ESP32_Sudoku/releases/download/v1.0.0/ESP32_Sudoku_v1_0_0_v8.bin",
+                "Fs": 747216,
+                "nb": true,
+                "ao": 0,
+                "as": 747216,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 747216,
+                        "partition_size": 747216,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 747216,
+                            "source_offset": 0,
+                            "copy_size": 747216,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-12T16:41:45Z",
+                        "etag": "\"0x8DEF720021AC39A\"",
+                        "last_modified": "Mon, 10 Aug 2026 20:43:17 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    }
+]
