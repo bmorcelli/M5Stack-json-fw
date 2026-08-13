@@ -8416,6 +8416,62 @@
         "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
         "versions": [
             {
+                "version": "beta_64",
+                "published_at": "2026-08-13",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_64/wadamesh-tdeck-merged.bin",
+                "Fs": 3198720,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3133184,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3133184,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3133184,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-13T15:43:09Z",
+                        "etag": "\"0x8DEF94F8ECEDA7E\"",
+                        "last_modified": "Thu, 13 Aug 2026 15:28:42 GMT"
+                    }
+                }
+            },
+            {
                 "version": "beta_63",
                 "published_at": "2026-08-12",
                 "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_63/wadamesh-tdeck-merged.bin",
@@ -8916,62 +8972,6 @@
                         "analyzed_at": "2026-08-03T20:15:03Z",
                         "etag": "\"0x8DEEFB2DF955B2E\"",
                         "last_modified": "Sat, 01 Aug 2026 09:54:26 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_54",
-                "published_at": "2026-07-31",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_54/wadamesh-tdeck-merged.bin",
-                "Fs": 3379328,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3313792,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3313792,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3313792,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-03T20:15:03Z",
-                        "etag": "\"0x8DEEF1D04057CA3\"",
-                        "last_modified": "Fri, 31 Jul 2026 16:01:43 GMT"
                     }
                 }
             }
