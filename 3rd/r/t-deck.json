@@ -5601,6 +5601,79 @@
         "fid": "CFWC6WZNQ24SDYPCYTGGJZONAE3HNNMJ",
         "versions": [
             {
+                "version": "v0.3.4",
+                "published_at": "2026-08-14",
+                "file": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/firmware.bin",
+                "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/bootloader.bin",
+                "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/partitions.bin",
+                "Fs": 2788128,
+                "ao": 0,
+                "as": 2788128,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2788128,
+                        "partition_size": 3145728,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 0,
+                            "copy_size": 2788128,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1966080,
+                            "flash_offset": 6356992,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/firmware.bin",
+                        "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/bootloader.bin",
+                        "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-14T17:59:09Z",
+                        "etag": "\"0x8DEFA2B823DD080\"",
+                        "last_modified": "Fri, 14 Aug 2026 17:43:10 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/bootloader.bin",
+                            "partitions": "https://github.com/torlando-tech/pyxis/releases/download/v0.3.4/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
                 "version": "v0.2.6",
                 "published_at": "2026-08-03",
                 "file": "https://github.com/torlando-tech/pyxis/releases/download/v0.2.6/firmware.bin",
