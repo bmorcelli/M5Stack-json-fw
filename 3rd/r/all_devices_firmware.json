@@ -52807,6 +52807,295 @@
     "category": "t-deck"
   },
   {
+    "name": "T-Deck LXMF Messenger",
+    "author": "varna9000",
+    "description": "A handheld messenger for the LilyGO T-Deck. It works with no phone signal, no wifi and no internet \u2014 the devices talk to each other directly over long-range radio, up to several kilometres. If wifi is available it can use that instead. Everything you send is encrypted, and there is no account to sign up for.",
+    "cover": "https://raw.githubusercontent.com/varna9000/reticulum-tdeck/refs/heads/master/images/splash.jpeg",
+    "github": "https://github.com/varna9000/reticulum-tdeck",
+    "fid": "CFW7UC55OXEBZO4K3VZTHBKMF4BRZHAF",
+    "versions": [
+      {
+        "version": "v1.3.0",
+        "published_at": "2026-08-15",
+        "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.3.0/tdeck_firmware.bin",
+        "Fs": 4194304,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2055312,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2055312,
+            "partition_size": 3080192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3080192,
+              "source_offset": 65536,
+              "copy_size": 2055312,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4231168,
+            "analyzed_at": "2026-08-15T18:37:51Z",
+            "etag": "\"0x8DEFAB47E35F8F8\"",
+            "last_modified": "Sat, 15 Aug 2026 10:03:45 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.2.0",
+        "published_at": "2026-08-09",
+        "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.2.0/tdeck_firmware.bin",
+        "Fs": 8388608,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2143952,
+        "fo": 3145728,
+        "fs": 5242880,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2143952,
+            "partition_size": 3080192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3080192,
+              "source_offset": 65536,
+              "copy_size": 2143952,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 5242880,
+              "source": "firmware",
+              "source_offset": 3145728,
+              "copy_size": 5242880,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-08-15T18:37:51Z",
+            "etag": "\"0x8DEF5EF3BCA0A6C\"",
+            "last_modified": "Sun, 09 Aug 2026 08:21:38 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.1.1",
+        "published_at": "2026-07-26",
+        "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.1.1/tdeck_firmware.bin",
+        "Fs": 8388608,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2137392,
+        "fo": 3145728,
+        "fs": 5242880,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2137392,
+            "partition_size": 3080192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3080192,
+              "source_offset": 65536,
+              "copy_size": 2137392,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 5242880,
+              "source": "firmware",
+              "source_offset": 3145728,
+              "copy_size": 5242880,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-08-15T18:37:51Z",
+            "etag": "\"0x8DEEB0B7F71C5F8\"",
+            "last_modified": "Sun, 26 Jul 2026 11:46:14 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.1.0",
+        "published_at": "2026-07-25",
+        "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.1.0/tdeck_firmware.bin",
+        "Fs": 8388608,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2134176,
+        "fo": 3145728,
+        "fs": 5242880,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2134176,
+            "partition_size": 3080192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3080192,
+              "source_offset": 65536,
+              "copy_size": 2134176,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 5242880,
+              "source": "firmware",
+              "source_offset": 3145728,
+              "copy_size": 5242880,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-08-15T18:37:51Z",
+            "etag": "\"0x8DEEA92800651C7\"",
+            "last_modified": "Sat, 25 Jul 2026 21:20:06 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.0.0",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.0.0/tdeck_firmware.bin",
+        "Fs": 8388608,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1781472,
+        "fo": 2097152,
+        "fs": 6291456,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1781472,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1781472,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 6291456,
+              "source": "firmware",
+              "source_offset": 2097152,
+              "copy_size": 6291456,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-08-15T18:37:51Z",
+            "etag": "\"0x8DEB4001E60830D\"",
+            "last_modified": "Sun, 17 May 2026 10:36:13 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-deck",
+    "esp": "s3"
+  },
+  {
     "name": "Tactility",
     "author": "bytewelder",
     "description": "Tactility is an operating system that focuses on the ESP32 microcontroller family.\n See https://tactilityproject.org for more information.",
