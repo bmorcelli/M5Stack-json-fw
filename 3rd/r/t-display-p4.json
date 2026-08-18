@@ -1,5 +1,119 @@
 [
     {
+        "name": "Meck-P4 (Amoled)",
+        "author": "pelgraine",
+        "description": "A port of Meck (a MeshCore fork) to the LilyGo T-Display P4. Targets the ESP32-P4 main MCU; as of v0.4 the onboard ESP32-C6 is used for WiFi companion connectivity to the MeshCore app (BLE is not yet enabled). Built on top of LilyGo T-Display-P4 example tree with a meshcore ESP-IDF component added on top.",
+        "cover": "",
+        "github": "https://github.com/pelgraine/Meck-P4",
+        "fid": "CFWXUF5ZD6BOYVTMILMNSRIA55J66RU7",
+        "versions": [
+            {
+                "version": "0.7.3",
+                "published_at": "2026-08-18",
+                "file": "https://github.com/pelgraine/Meck-P4/releases/download/0.7.3/meck-p4-0.7.3-amoled-merged.bin",
+                "Fs": 7934640,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 7869104,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-display-p4",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 7869104,
+                        "partition_size": 15728640,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 15728640,
+                            "source_offset": 65536,
+                            "copy_size": 7869104,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-18T21:32:40Z",
+                        "etag": "\"0x8DEFD6BCFA4B3BA\"",
+                        "last_modified": "Tue, 18 Aug 2026 21:01:02 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-display-p4",
+        "esp": "p4"
+    },
+    {
+        "name": "Meck-P4 (TFT)",
+        "author": "pelgraine",
+        "description": "A port of Meck (a MeshCore fork) to the LilyGo T-Display P4. Targets the ESP32-P4 main MCU; as of v0.4 the onboard ESP32-C6 is used for WiFi companion connectivity to the MeshCore app (BLE is not yet enabled). Built on top of LilyGo T-Display-P4 example tree with a meshcore ESP-IDF component added on top.",
+        "cover": "",
+        "github": "https://github.com/pelgraine/Meck-P4",
+        "fid": "CFWEM7ON7DJEEURNOOMNGGGNJRGFTWHC",
+        "versions": [
+            {
+                "version": "0.7.3",
+                "published_at": "2026-08-18",
+                "file": "https://github.com/pelgraine/Meck-P4/releases/download/0.7.3/meck-p4-0.7.3-tft-merged.bin",
+                "Fs": 7941488,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 7875952,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-display-p4",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 7875952,
+                        "partition_size": 15728640,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 15728640,
+                            "source_offset": 65536,
+                            "copy_size": 7875952,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-18T21:32:40Z",
+                        "etag": "\"0x8DEFD6C875F5356\"",
+                        "last_modified": "Tue, 18 Aug 2026 21:06:10 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-display-p4",
+        "esp": "p4"
+    },
+    {
         "name": "MeshOS (T-Display P4 AMOLED)",
         "author": "meshcore",
         "description": "Easy to use, smartphone-like MeshCore experience. Activate your license on: https://meshcore.co.uk/activate.html",
