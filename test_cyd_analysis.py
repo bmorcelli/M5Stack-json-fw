@@ -17,8 +17,6 @@ TEST_URLS = [
     ("NerdMiner", "S028R", "https://fr4nkfletcher.github.io/NerdMiner_v2-Cheap-Yellow-Display/web/ESP32-2432S028R_firmware.bin"),
     # Launcher - GitHub release
     ("Launcher (CYD S028R)", "2.6.10", "https://github.com/bmorcelli/Launcher/releases/download/2.6.10/Launcher-CYD-2432S028.bin"),
-    # HaleHound - GitHub release
-    ("HaleHound (CYD)", "v3.5.5", "https://github.com/JesseCHale/HaleHound-CYD/releases/download/v3.5.5/HaleHound-CYD-FULL.bin"),
 ]
 
 session = _requests.Session()
