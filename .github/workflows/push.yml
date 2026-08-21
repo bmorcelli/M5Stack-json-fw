@@ -34,6 +34,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        submodules: true
 
     - name: Check if heavy job is running
       env:
@@ -56,6 +58,12 @@ jobs:
           fi
         fi
         
+    - name: Update seeedstudio-reterminal-sticky submodule
+      run: |
+        git -C 3rd/repos/seeedstudio-reterminal-sticky fetch origin main
+        git -C 3rd/repos/seeedstudio-reterminal-sticky checkout main
+        git -C 3rd/repos/seeedstudio-reterminal-sticky pull origin main
+
     - name: Run Python script
       id: process
       env:
@@ -70,6 +78,7 @@ jobs:
         python ./3rd/GhostESP.py
         python ./3rd/meshOS.py
         python ./3rd/meshtastic.py
+        python ./3rd/seeedstudio_reterminal_sticky.py
         python ./3rd/update_firmware.py
 
         # the next script writes FILES_ADDED checking m5burner updates
