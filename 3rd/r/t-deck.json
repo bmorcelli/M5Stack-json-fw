@@ -4282,6 +4282,64 @@
         "fid": "CFWBFELPCYS64CBKDIJJDRYQDCTA5P5N",
         "versions": [
             {
+                "version": "v0.3.6",
+                "published_at": "2026-08-22",
+                "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.3.6/meshpunk-v0.3.6-launcher.bin",
+                "Fs": 12124160,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4468304,
+                "so": 5832704,
+                "ss": 6291456,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4468304,
+                        "partition_size": 5767168,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 5767168,
+                            "source_offset": 65536,
+                            "copy_size": 4468304,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "assets",
+                            "role": "spiffs",
+                            "size": 6291456,
+                            "source": "firmware",
+                            "source_offset": 5832704,
+                            "copy_size": 6291456,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 12161024,
+                        "analyzed_at": "2026-08-22T21:30:46Z",
+                        "etag": "\"0x8DF00937CFB62EE\"",
+                        "last_modified": "Sat, 22 Aug 2026 21:22:36 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.3.5",
                 "published_at": "2026-08-18",
                 "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.3.5/meshpunk-v0.3.5-launcher.bin",
@@ -4786,62 +4844,6 @@
                         "analyzed_at": "2026-08-03T20:14:55Z",
                         "etag": "\"0x8DEE6249F43CC01\"",
                         "last_modified": "Mon, 20 Jul 2026 06:03:29 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.2.6",
-                "published_at": "2026-07-14",
-                "file": "https://github.com/PhilMo6/meshpunk/releases/download/v0.2.6/meshpunk-v0.2.6-launcher.bin",
-                "Fs": 4347296,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 4281760,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 4281760,
-                        "partition_size": 5767168,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 5767168,
-                            "source_offset": 65536,
-                            "copy_size": 4281760,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "assets",
-                            "role": "spiffs",
-                            "size": 6291456,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-03T20:14:56Z",
-                        "etag": "\"0x8DEE14BBB06DE0C\"",
-                        "last_modified": "Tue, 14 Jul 2026 02:00:50 GMT"
                     }
                 }
             }
