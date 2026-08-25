@@ -38793,6 +38793,66 @@
     "fid": "CFWLXGMMXKPC2GGKSWL4WI2AEI7HQII7",
     "versions": [
       {
+        "version": "v1.2.0",
+        "published_at": "2026-08-25",
+        "file": "https://github.com/H4W9/ESP32_FlipWorld/releases/download/v1.2.0/ESP32_FlipWorld_v1_2_0_v8_merged.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1735360,
+        "so": 8126464,
+        "ss": 262144,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "marauder-v8",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1735360,
+            "partition_size": 8060928,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8060928,
+              "source_offset": 65536,
+              "copy_size": 1735360,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 262144,
+              "source": "firmware",
+              "source_offset": 8126464,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-08-25T21:47:52Z",
+            "etag": "\"0x8DF02F0AAE8FFFD\"",
+            "last_modified": "Tue, 25 Aug 2026 21:34:39 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.1.0",
         "published_at": "2026-08-24",
         "file": "https://github.com/H4W9/ESP32_FlipWorld/releases/download/v1.1.0/ESP32_FlipWorld_v1_1_0_v8_merged.bin",
@@ -41030,6 +41090,66 @@
     "github": "https://github.com/H4W9/ESP32_FlipWorld",
     "fid": "CFWJDGITQPHYUPT5BRW3U4SLBJ3I43XJ",
     "versions": [
+      {
+        "version": "v1.2.0",
+        "published_at": "2026-08-25",
+        "file": "https://github.com/H4W9/ESP32_FlipWorld/releases/download/v1.2.0/ESP32_FlipWorld_v1_2_0_pancake_merged.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1734528,
+        "so": 8126464,
+        "ss": 262144,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "pancake",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1734528,
+            "partition_size": 8060928,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8060928,
+              "source_offset": 65536,
+              "copy_size": 1734528,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 262144,
+              "source": "firmware",
+              "source_offset": 8126464,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-08-25T21:47:52Z",
+            "etag": "\"0x8DF02F0AAB75B7F\"",
+            "last_modified": "Tue, 25 Aug 2026 21:34:38 GMT"
+          }
+        }
+      },
       {
         "version": "v1.1.0",
         "published_at": "2026-08-24",
