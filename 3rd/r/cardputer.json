@@ -65,8 +65,8 @@
             }
         ],
         "fid": "CFW134BRLCTDS8LA4X6SDWQ3XGF15CXL",
-        "category": "cardputer",
-        "esp": "s3"
+        "esp": "s3",
+        "category": "cardputer"
     },
     {
         "name": "GLIDE-Synth",
@@ -76,6 +76,53 @@
         "github": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV",
         "fid": "CFWPTP3BS5HBKOBVJ54T25TQWKZWBGUC",
         "versions": [
+            {
+                "version": "v2.7",
+                "published_at": "2026-08-26",
+                "file": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/download/v2.7/GLIDE.bin",
+                "Fs": 898384,
+                "nb": true,
+                "ao": 0,
+                "as": 898384,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 898384,
+                        "partition_size": 898384,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 898384,
+                            "source_offset": 0,
+                            "copy_size": 898384,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-26T19:15:27Z",
+                        "etag": "\"0x8DF039E5C4C6EE7\"",
+                        "last_modified": "Wed, 26 Aug 2026 18:17:59 GMT"
+                    }
+                }
+            },
             {
                 "version": "v2.6",
                 "published_at": "2026-08-23",
