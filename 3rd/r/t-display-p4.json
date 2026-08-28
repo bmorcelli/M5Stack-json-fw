@@ -1046,6 +1046,62 @@
                 }
             },
             {
+                "version": "beta_74",
+                "published_at": "2026-08-28",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_74/wadamesh-tdisplay-p4-merged.bin",
+                "Fs": 3448736,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 131072,
+                "as": 3317664,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-display-p4",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 3317664,
+                        "partition_size": 4194304,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4194304,
+                            "source_offset": 131072,
+                            "copy_size": 3317664,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 8192000,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-28T21:28:11Z",
+                        "etag": "\"0x8DF052AD56B3963\"",
+                        "last_modified": "Fri, 28 Aug 2026 17:36:03 GMT"
+                    }
+                }
+            },
+            {
                 "version": "beta_71",
                 "published_at": "2026-08-27",
                 "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_71/wadamesh-tdisplay-p4-merged.bin",
@@ -1492,62 +1548,6 @@
                         "last_modified": "Thu, 13 Aug 2026 15:21:38 GMT"
                     }
                 }
-            },
-            {
-                "version": "beta_65",
-                "published_at": "2026-08-13",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_65/wadamesh-tdisplay-p4-merged.bin",
-                "Fs": 3328208,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 131072,
-                "as": 3197136,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-display-p4",
-                    "app": {
-                        "source_offset": 131072,
-                        "image_size": 3197136,
-                        "partition_size": 4194304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 131072,
-                            "copy_size": 3197136,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "storage",
-                            "role": "fat",
-                            "size": 8192000,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-13T17:45:09Z",
-                        "etag": "\"0x8DEF961DC38A00B\"",
-                        "last_modified": "Thu, 13 Aug 2026 17:39:43 GMT"
-                    }
-                }
             }
         ],
         "esp": "p4",
@@ -1614,6 +1614,62 @@
                         "analyzed_at": "2026-08-28T11:13:31Z",
                         "etag": "\"0x8DF04E0DAD92E59\"",
                         "last_modified": "Fri, 28 Aug 2026 08:46:30 GMT"
+                    }
+                }
+            },
+            {
+                "version": "beta_74",
+                "published_at": "2026-08-28",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_74/wadamesh-tdisplay-p4-lcd-merged.bin",
+                "Fs": 3451120,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 131072,
+                "as": 3320048,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-display-p4",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 3320048,
+                        "partition_size": 4194304,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4194304,
+                            "source_offset": 131072,
+                            "copy_size": 3320048,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 8192000,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-28T21:28:11Z",
+                        "etag": "\"0x8DF052AD4C2835E\"",
+                        "last_modified": "Fri, 28 Aug 2026 17:36:02 GMT"
                     }
                 }
             },
@@ -2062,62 +2118,6 @@
                         "analyzed_at": "2026-08-13T15:43:10Z",
                         "etag": "\"0x8DEF94E8EE86A98\"",
                         "last_modified": "Thu, 13 Aug 2026 15:21:33 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_65",
-                "published_at": "2026-08-13",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_65/wadamesh-tdisplay-p4-lcd-merged.bin",
-                "Fs": 3330464,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 131072,
-                "as": 3199392,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-display-p4",
-                    "app": {
-                        "source_offset": 131072,
-                        "image_size": 3199392,
-                        "partition_size": 4194304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 131072,
-                            "copy_size": 3199392,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "storage",
-                            "role": "fat",
-                            "size": 8192000,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-13T17:45:09Z",
-                        "etag": "\"0x8DEF961DB8F317E\"",
-                        "last_modified": "Thu, 13 Aug 2026 17:39:42 GMT"
                     }
                 }
             }
