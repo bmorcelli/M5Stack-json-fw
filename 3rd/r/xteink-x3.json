@@ -490,6 +490,79 @@
         "fid": "CFWN5LJPZO2OIN5HJL6TYUBE5XFDTDGZ",
         "versions": [
             {
+                "version": "1.5.8",
+                "published_at": "2026-08-29",
+                "file": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/firmware.bin",
+                "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/bootloader.bin",
+                "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/partitions.bin",
+                "Fs": 5845136,
+                "ao": 0,
+                "as": 5845136,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "xteink-x3",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 5845136,
+                        "partition_size": 6553600,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 0,
+                            "copy_size": 5845136,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "flash_offset": 13172736,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/firmware.bin",
+                        "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/bootloader.bin",
+                        "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-08-29T10:13:55Z",
+                        "etag": "\"0x8DF05B62D03DFF6\"",
+                        "last_modified": "Sat, 29 Aug 2026 10:13:30 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/bootloader.bin",
+                            "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
                 "version": "1.5.7",
                 "published_at": "2026-08-22",
                 "file": "https://github.com/0x1abin/crossmux/releases/download/1.5.7/firmware.bin",
@@ -1145,16 +1218,28 @@
                         }
                     }
                 }
-            },
+            }
+        ],
+        "esp": "c3",
+        "category": "xteink-x3"
+    },
+    {
+        "name": "Crossmux (CN)",
+        "author": "0x1abin",
+        "description": "CrossMux stays true to the CrossPoint reading experience, puts first-class CJK reading support at its core, blends the best ideas from leading forks, and adds playful extensions of its own. Xteink X3 and X4 are supported today, with more devices on the way.",
+        "cover": "https://crossmux.com/logo.svg",
+        "github": "https://github.com/0x1abin/crossmux",
+        "fid": "CFWPLZT4XV3XOJGNLAMH2JVUDID52FZ2",
+        "versions": [
             {
-                "version": "1.4.0",
-                "published_at": "2026-06-25",
-                "file": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/firmware.bin",
-                "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/bootloader.bin",
-                "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/partitions.bin",
-                "Fs": 5437456,
+                "version": "1.5.8",
+                "published_at": "2026-08-29",
+                "file": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/firmware-cn.bin",
+                "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/bootloader.bin",
+                "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/partitions.bin",
+                "Fs": 5845136,
                 "ao": 0,
-                "as": 5437456,
+                "as": 5845136,
                 "nb": true,
                 "s": 0,
                 "f": 0,
@@ -1166,7 +1251,7 @@
                     "app": {
                         "source": "firmware",
                         "source_offset": 0,
-                        "image_size": 5437456,
+                        "image_size": 5845136,
                         "partition_size": 6553600,
                         "flash_offset": 65536,
                         "label_policy": "next_app",
@@ -1180,7 +1265,7 @@
                             "role": "firmware",
                             "size": 6553600,
                             "source_offset": 0,
-                            "copy_size": 5437456,
+                            "copy_size": 5845136,
                             "required": true,
                             "source": "firmware",
                             "flash_offset": 65536
@@ -1199,9 +1284,9 @@
                         }
                     ],
                     "sources": {
-                        "firmware": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/firmware.bin",
-                        "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/bootloader.bin",
-                        "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/partitions.bin",
+                        "firmware": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/firmware-cn.bin",
+                        "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/bootloader.bin",
+                        "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/partitions.bin",
                         "data": null
                     },
                     "analysis": {
@@ -1209,28 +1294,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 39936,
-                        "analyzed_at": "2026-08-21T14:22:06Z",
-                        "etag": "\"0x8DED27F9ED3D902\"",
-                        "last_modified": "Thu, 25 Jun 2026 06:04:30 GMT",
+                        "analyzed_at": "2026-08-29T10:13:55Z",
+                        "etag": "\"0x8DF05B62D00616F\"",
+                        "last_modified": "Sat, 29 Aug 2026 10:13:30 GMT",
                         "aux_inputs": {
-                            "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/bootloader.bin",
-                            "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/partitions.bin"
+                            "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/bootloader.bin",
+                            "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.5.8/partitions.bin"
                         }
                     }
                 }
-            }
-        ],
-        "esp": "c3",
-        "category": "xteink-x3"
-    },
-    {
-        "name": "Crossmux (CN)",
-        "author": "0x1abin",
-        "description": "CrossMux stays true to the CrossPoint reading experience, puts first-class CJK reading support at its core, blends the best ideas from leading forks, and adds playful extensions of its own. Xteink X3 and X4 are supported today, with more devices on the way.",
-        "cover": "https://crossmux.com/logo.svg",
-        "github": "https://github.com/0x1abin/crossmux",
-        "fid": "CFWPLZT4XV3XOJGNLAMH2JVUDID52FZ2",
-        "versions": [
+            },
             {
                 "version": "1.5.7",
                 "published_at": "2026-08-22",
@@ -1884,79 +1957,6 @@
                         "aux_inputs": {
                             "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.4.1/bootloader.bin",
                             "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.4.1/partitions.bin"
-                        }
-                    }
-                }
-            },
-            {
-                "version": "1.4.0",
-                "published_at": "2026-06-25",
-                "file": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/firmware-cn.bin",
-                "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/bootloader.bin",
-                "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/partitions.bin",
-                "Fs": 6209984,
-                "ao": 0,
-                "as": 6209984,
-                "nb": true,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "split",
-                    "target": "xteink-x3",
-                    "app": {
-                        "source": "firmware",
-                        "source_offset": 0,
-                        "image_size": 6209984,
-                        "partition_size": 6553600,
-                        "flash_offset": 65536,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 0,
-                            "copy_size": 6209984,
-                            "required": true,
-                            "source": "firmware",
-                            "flash_offset": 65536
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "flash_offset": 13172736,
-                            "required": true,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0
-                        }
-                    ],
-                    "sources": {
-                        "firmware": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/firmware-cn.bin",
-                        "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/bootloader.bin",
-                        "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/partitions.bin",
-                        "data": null
-                    },
-                    "analysis": {
-                        "method": "external_partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 39936,
-                        "analyzed_at": "2026-08-21T14:22:06Z",
-                        "etag": "\"0x8DED27F9E88F382\"",
-                        "last_modified": "Thu, 25 Jun 2026 06:04:29 GMT",
-                        "aux_inputs": {
-                            "bootloader": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/bootloader.bin",
-                            "partitions": "https://github.com/0x1abin/crossmux/releases/download/1.4.0/partitions.bin"
                         }
                     }
                 }
