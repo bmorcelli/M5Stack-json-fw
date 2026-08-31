@@ -77,6 +77,53 @@
         "fid": "CFWPTP3BS5HBKOBVJ54T25TQWKZWBGUC",
         "versions": [
             {
+                "version": "v2.8",
+                "published_at": "2026-08-30",
+                "file": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/download/v2.8/GLIDE.bin",
+                "Fs": 911120,
+                "nb": true,
+                "ao": 0,
+                "as": 911120,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 911120,
+                        "partition_size": 911120,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 911120,
+                            "source_offset": 0,
+                            "copy_size": 911120,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-31T00:54:46Z",
+                        "etag": "\"0x8DF06EEA616DACE\"",
+                        "last_modified": "Sun, 30 Aug 2026 23:30:16 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v2.7",
                 "published_at": "2026-08-26",
                 "file": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/download/v2.7/GLIDE.bin",
@@ -496,53 +543,6 @@
                         "analyzed_at": "2026-08-14T16:00:23Z",
                         "etag": "\"0x8DEFA1D1DF68E8D\"",
                         "last_modified": "Fri, 14 Aug 2026 16:00:09 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.2-generative",
-                "published_at": "2026-06-28",
-                "file": "https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/download/v1.2-generative/GLIDE.bin",
-                "Fs": 878304,
-                "nb": true,
-                "ao": 0,
-                "as": 878304,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "cardputer",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 878304,
-                        "partition_size": 878304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 878304,
-                            "source_offset": 0,
-                            "copy_size": 878304,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:35Z",
-                        "etag": "\"0x8DEECDFC4E876A7\"",
-                        "last_modified": "Tue, 28 Jul 2026 19:38:15 GMT"
                     }
                 }
             }
