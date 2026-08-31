@@ -936,8 +936,8 @@
       }
     ],
     "fid": "CFW704U4QG18DZO94DWWO0H0GJMZC30V",
-    "category": "CYD",
-    "esp": "32"
+    "esp": "32",
+    "category": "CYD"
   },
   {
     "name": "ESP32 MFA Authenticator",
@@ -9981,8 +9981,8 @@
       }
     ],
     "fid": "CFW8F9FNIDNW7LI4B4FRTHY0L2XWO1VL",
-    "category": "NM-CYD-C5",
-    "esp": "c5"
+    "esp": "c5",
+    "category": "NM-CYD-C5"
   },
   {
     "name": "Cheap Yellow Monster",
@@ -10733,8 +10733,8 @@
       }
     ],
     "fid": "CFW134BRLCTDS8LA4X6SDWQ3XGF15CXL",
-    "category": "cardputer",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "cardputer"
   },
   {
     "name": "GLIDE-Synth",
@@ -14031,8 +14031,8 @@
       }
     ],
     "fid": "CFWTHFK5VQMW6Z3AU8QU5U0L4KG41ETV",
-    "category": "marauder",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder"
   },
   {
     "name": "Ghost v2.1.1",
@@ -22185,8 +22185,8 @@
       }
     ],
     "fid": "CFWRLMWGA43PYY22QQY4YD90674DUJIE",
-    "category": "marauder-mini",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-mini"
   },
   {
     "name": "Ghost v2.1.1",
@@ -26620,8 +26620,8 @@
       }
     ],
     "fid": "CFWWE1XNRQHE1A8CAGZIFIVZ6C4Z7UPJ",
-    "category": "marauder-v4",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v4"
   },
   {
     "name": "Ghost v2.1.1",
@@ -31961,8 +31961,8 @@
       }
     ],
     "fid": "CFWS2WC9QWL49OKJO0XMBS8ZZZO8A0VJ",
-    "category": "marauder-v6x",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v6x"
   },
   {
     "name": "Ghost v2.1.1",
@@ -36310,8 +36310,8 @@
       }
     ],
     "fid": "CFWVFN5OQ0EGG7IAY4RE5IB3OT6BTX3H",
-    "category": "marauder-v7",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v7"
   },
   {
     "name": "Launcher",
@@ -44317,8 +44317,8 @@
       }
     ],
     "fid": "CFWRGP2OGPVURWWYZZVDGDCXW21B5HSS",
-    "category": "phantom",
-    "esp": "32"
+    "esp": "32",
+    "category": "phantom"
   },
   {
     "name": "Ghost v1.9.9",
@@ -47551,8 +47551,8 @@
       }
     ],
     "fid": "CFW0Z8GF89YPTA2NNFJ9PO38UG3MNT8U",
-    "category": "smoochiee_v2",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "smoochiee_v2"
   },
   {
     "name": "Launcher",
@@ -48209,8 +48209,8 @@
       }
     ],
     "fid": "CFW2EWO7Y6H00KVS5JD01LJ9LHXJXD65",
-    "category": "stickc",
-    "esp": "32"
+    "esp": "32",
+    "category": "stickc"
   },
   {
     "name": "Bruce StickS3 (BETA)",
@@ -48278,8 +48278,8 @@
       }
     ],
     "fid": "CFWPIDASD4N9WUNV8NTVGP67RBECIDOU",
-    "category": "stickc",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "stickc"
   },
   {
     "name": "Bruce",
@@ -49546,8 +49546,8 @@
       }
     ],
     "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-    "category": "t-deck",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-deck"
   },
   {
     "name": "Camillia-MT",
@@ -51992,8 +51992,64 @@
     "fid": "CFWJGNNYZSCOSMBAXRGLMWNWFEWGIICY",
     "versions": [
       {
+        "version": "v1.7.0",
+        "published_at": "2026-08-31",
+        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.0-merged.bin",
+        "Fs": 5364128,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5298592,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5298592,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5298592,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-31T15:02:14Z",
+            "etag": "\"6a95642d-51d9a0\"",
+            "last_modified": "Mon, 31 Aug 2026 11:23:25 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.6.6",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.6-merged.bin",
         "Fs": 5287904,
         "s": 0,
@@ -52049,7 +52105,7 @@
       },
       {
         "version": "v1.6.5",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.5-merged.bin",
         "Fs": 5280736,
         "s": 0,
@@ -52105,7 +52161,7 @@
       },
       {
         "version": "v1.6.2",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.2-merged.bin",
         "Fs": 5269744,
         "s": 0,
@@ -52161,7 +52217,7 @@
       },
       {
         "version": "v1.6.1",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.1-merged.bin",
         "Fs": 5272464,
         "s": 0,
@@ -52217,7 +52273,7 @@
       },
       {
         "version": "v1.6.0",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.0-merged.bin",
         "Fs": 5260736,
         "s": 0,
@@ -52273,7 +52329,7 @@
       },
       {
         "version": "v1.5.9",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.9-merged.bin",
         "Fs": 5247504,
         "s": 0,
@@ -52329,7 +52385,7 @@
       },
       {
         "version": "v1.5.8",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.8-merged.bin",
         "Fs": 5247776,
         "s": 0,
@@ -52385,7 +52441,7 @@
       },
       {
         "version": "v1.5.7",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.7-merged.bin",
         "Fs": 5233296,
         "s": 0,
@@ -52441,7 +52497,7 @@
       },
       {
         "version": "v1.5.6",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.6-merged.bin",
         "Fs": 5218864,
         "s": 0,
@@ -52492,62 +52548,6 @@
             "analyzed_at": "2026-08-03T20:14:54Z",
             "etag": "\"6a52332c-4fa230\"",
             "last_modified": "Sat, 11 Jul 2026 12:12:28 GMT"
-          }
-        }
-      },
-      {
-        "version": "v1.5.5",
-        "published_at": "2026-08-22",
-        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.5.5-merged.bin",
-        "Fs": 5218864,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 5153328,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 5153328,
-            "partition_size": 6553600,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6553600,
-              "source_offset": 65536,
-              "copy_size": 5153328,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:54Z",
-            "etag": "\"6a522fb2-4fa230\"",
-            "last_modified": "Sat, 11 Jul 2026 11:57:38 GMT"
           }
         }
       }
@@ -53267,7 +53267,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
         "Fs": 2306304,
         "s": 0,
         "f": 0,
@@ -53314,7 +53314,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "W/\"54863b938f4cc8540f98c5003c2666d90b0e0eb7997005c19aaa6538d6f941aa\""
           }
         }
@@ -53322,7 +53322,7 @@
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
         "Fs": 2208672,
         "s": 0,
         "f": 0,
@@ -53369,7 +53369,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "W/\"dd29b2b8c5b08ae63e756e1f9b97f0701fde4cda7ecc91efa9e50b0e64d31bf0\""
           }
         }
@@ -53377,7 +53377,7 @@
       {
         "version": "2.6.11.60ec05e",
         "published_at": "2025-06-11",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.6.11.60ec05e/firmware-t-deck-2.6.11.60ec05e.bin",
         "Fs": 2084016,
         "s": 0,
         "f": 0,
@@ -53424,7 +53424,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "W/\"4a5fd43d04eef9c39909f552128cb01acf8a7c5fb5ca71e1ae9834f33bf8ae91\""
           }
         }
@@ -53432,7 +53432,7 @@
       {
         "version": "2.6.10.9ce4455",
         "published_at": "2025-06-02",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.6.10.9ce4455/firmware-t-deck-2.6.10.9ce4455.bin",
         "Fs": 2082304,
         "s": 0,
         "f": 0,
@@ -53479,7 +53479,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "W/\"5bfa727a199cabef1f4333a51437002bac266b367257522c2f785a28dc9f8f7b\""
           }
         }
@@ -53500,7 +53500,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
         "Fs": 3694000,
         "s": 0,
         "f": 0,
@@ -53547,7 +53547,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "W/\"e82979087f21df37d23397223666c6c44140808a2b64f405f814671ec10b9e12\""
           }
         }
@@ -53555,7 +53555,7 @@
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
         "Fs": 3593792,
         "s": 0,
         "f": 0,
@@ -53602,7 +53602,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:14Z",
             "etag": "W/\"5d41819a17a80cb48b1c5062f0d74092f7ebd6f50c5c878ca71c9beac237359b\""
           }
         }
@@ -53610,7 +53610,7 @@
       {
         "version": "2.6.11.60ec05e",
         "published_at": "2025-06-11",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.6.11.60ec05e/firmware-t-deck-tft-2.6.11.60ec05e.bin",
         "Fs": 3195408,
         "s": 0,
         "f": 0,
@@ -53657,7 +53657,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:14Z",
             "etag": "W/\"86e17f1e9a21f6b912b85d75e078a2963f7d6051e5bbaf2ff31f20dc18558f61\""
           }
         }
@@ -53665,7 +53665,7 @@
       {
         "version": "2.6.10.9ce4455",
         "published_at": "2025-06-02",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.6.10.9ce4455/firmware-t-deck-tft-2.6.10.9ce4455.bin",
         "Fs": 3193120,
         "s": 0,
         "f": 0,
@@ -53712,7 +53712,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:14Z",
             "etag": "W/\"7db1139f93ef4431b750d6a1f7469cce9333da7f839e55a086830be0fa1b3cf9\""
           }
         }
@@ -56068,6 +56068,62 @@
     "fid": "CFWAF7ZP2EZ6PUSTWGJO5CQGF7MZAANN",
     "versions": [
       {
+        "version": "v0.1.44-alpha",
+        "published_at": "2026-08-31",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.44-alpha/trail-mate-tdeck-webflash.bin",
+        "Fs": 4024576,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3959040,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3959040,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3959040,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-31T15:02:14Z",
+            "etag": "\"0x8DF0748E1508CFA\"",
+            "last_modified": "Mon, 31 Aug 2026 10:16:10 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.43-alpha",
         "published_at": "2026-08-28",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.43-alpha/trail-mate-tdeck-webflash.bin",
@@ -56568,62 +56624,6 @@
             "analyzed_at": "2026-08-03T20:15:02Z",
             "etag": "\"0x8DED9B7D2B0B501\"",
             "last_modified": "Sat, 04 Jul 2026 10:34:27 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.34-alpha",
-        "published_at": "2026-06-29",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.34-alpha/trail-mate-tdeck-webflash.bin",
-        "Fs": 3430272,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3364736,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3364736,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3364736,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:02Z",
-            "etag": "\"0x8DED5B5FF13AB74\"",
-            "last_modified": "Mon, 29 Jun 2026 08:11:17 GMT"
           }
         }
       }
@@ -59214,7 +59214,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-2.7.26.54e0d8d.factory.bin",
         "Fs": 2222400,
         "s": 0,
         "f": 0,
@@ -59261,7 +59261,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:11Z",
             "etag": "W/\"660984c69aec50e33c82c58271bc6410943c7ad78ff0acf66bb86f0bc5052d8d\""
           }
         }
@@ -59269,7 +59269,7 @@
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.15.567b8ea/firmware-t-deck-pro-2.7.15.567b8ea.bin",
         "Fs": 2130256,
         "s": 0,
         "f": 0,
@@ -59316,7 +59316,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:11Z",
             "etag": "W/\"3fa6ef01b5aa87f45f7bd09dec13e200ece1dbd7f82dd9780b6a66ff77ae7f00\""
           }
         }
@@ -59337,7 +59337,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-t-deck-pro-v1_1-2.7.26.54e0d8d.factory.bin",
         "Fs": 2222848,
         "s": 0,
         "f": 0,
@@ -59384,7 +59384,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:11Z",
             "etag": "W/\"6fdbba1ecce2c07ec204b527c1f3ec52590c4e914771d6070193f9d8e5eadfed\""
           }
         }
@@ -59767,7 +59767,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-1.0.1-merged.bin",
         "Fs": 10732848,
         "s": 0,
@@ -59823,7 +59823,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-merged.bin",
         "Fs": 10600336,
         "s": 0,
@@ -59891,7 +59891,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-LCD-1.0.1-merged.bin",
         "Fs": 10749168,
         "s": 0,
@@ -59947,7 +59947,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-LCD-merged.bin",
         "Fs": 10616224,
         "s": 0,
@@ -62316,8 +62316,8 @@
       }
     ],
     "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-    "category": "t-embed",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-embed"
   },
   {
     "name": "Factory Firmware",
@@ -63273,6 +63273,73 @@
     "fid": "CFWOQA6P2PVJVEBKVG7SQVQWNXGTN26O",
     "versions": [
       {
+        "version": "v0.9.13",
+        "published_at": "2026-08-31",
+        "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.13/bboink-t-embed-cc1101.bin",
+        "Fs": 1501056,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1435520,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1435520,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1435520,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "littlefs",
+              "role": "spiffs",
+              "size": 8781824,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-31T15:02:11Z",
+            "etag": "\"0x8DF076308E84FD7\"",
+            "last_modified": "Mon, 31 Aug 2026 13:23:24 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.9.12",
         "published_at": "2026-07-06",
         "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.12/bboink-app-t-embed-cc1101.bin",
@@ -63692,53 +63759,6 @@
             "analyzed_at": "2026-07-30T19:08:28Z",
             "etag": "\"0x8DED851D167AEB3\"",
             "last_modified": "Thu, 02 Jul 2026 15:51:45 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.9.3",
-        "published_at": "2026-07-02",
-        "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.3/bboink-app-t-embed-cc1101.bin",
-        "Fs": 1229376,
-        "nb": true,
-        "ao": 0,
-        "as": 1229376,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-embed-cc1101",
-          "app": {
-            "source_offset": 0,
-            "image_size": 1229376,
-            "partition_size": 1229376,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 1229376,
-              "source_offset": 0,
-              "copy_size": 1229376,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:28Z",
-            "etag": "\"0x8DED850BEF4D678\"",
-            "last_modified": "Thu, 02 Jul 2026 15:44:04 GMT"
           }
         }
       }
@@ -65011,8 +65031,8 @@
       }
     ],
     "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-    "category": "t-embed-cc1101",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-embed-cc1101"
   },
   {
     "name": "Capibara Zero",
@@ -67440,8 +67460,8 @@
       }
     ],
     "fid": "CFW7B2TIST1N5CMKWQYAWJM51S9COHLT",
-    "category": "t-hmi",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-hmi"
   },
   {
     "name": "Factory Firmware",
@@ -68574,8 +68594,8 @@
       }
     ],
     "fid": "CFWW2L7Q7BDDLSWLRJX3KAC9COHJCSWQ",
-    "category": "t-lora-pager",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-lora-pager"
   },
   {
     "name": "Camillia-MT",
@@ -69781,7 +69801,7 @@
     "versions": [
       {
         "version": "v1.3.8",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.8-merged.bin",
         "Fs": 2628624,
         "s": 0,
@@ -69837,7 +69857,7 @@
       },
       {
         "version": "v1.3.6",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.6-merged.bin",
         "Fs": 2607168,
         "s": 0,
@@ -69893,7 +69913,7 @@
       },
       {
         "version": "v1.3.5",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.5-merged.bin",
         "Fs": 2601920,
         "s": 0,
@@ -69949,7 +69969,7 @@
       },
       {
         "version": "v1.3.4",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.4-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -70005,7 +70025,7 @@
       },
       {
         "version": "v1.3.3",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.3-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -70061,7 +70081,7 @@
       },
       {
         "version": "v1.3.2",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.2-merged.bin",
         "Fs": 2609584,
         "s": 0,
@@ -70117,7 +70137,7 @@
       },
       {
         "version": "v1.3.1",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.1-merged.bin",
         "Fs": 2617424,
         "s": 0,
@@ -70173,7 +70193,7 @@
       },
       {
         "version": "v1.3.0",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.0-merged.bin",
         "Fs": 2612784,
         "s": 0,
@@ -70229,7 +70249,7 @@
       },
       {
         "version": "v1.2.0",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.2.0-merged.bin",
         "Fs": 2590928,
         "s": 0,
@@ -70285,7 +70305,7 @@
       },
       {
         "version": "v1.1.8",
-        "published_at": "2026-08-22",
+        "published_at": "2026-08-31",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.1.8-merged.bin",
         "Fs": 2576880,
         "s": 0,
@@ -70354,7 +70374,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
         "Fs": 2470288,
         "s": 0,
         "f": 0,
@@ -70401,7 +70421,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "W/\"aaaa16cd274f7d32777baefc0b43fd54a785afdf6a104934d3db128d71dd6952\""
           }
         }
@@ -70409,7 +70429,7 @@
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
         "Fs": 2359680,
         "s": 0,
         "f": 0,
@@ -70456,7 +70476,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:59Z",
+            "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "W/\"3e56057395b1f0e55af097bce976b33da5a22ef8cf224cbdd2da8228e6fe6210\""
           }
         }
@@ -70557,6 +70577,62 @@
     "github": "https://github.com/vicliu624/trail-mate",
     "fid": "CFWJBA62VDRQOGEXQEPVSOFKTOVT5PVD",
     "versions": [
+      {
+        "version": "v0.1.44-alpha",
+        "published_at": "2026-08-31",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.44-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
+        "Fs": 4222000,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4156464,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4156464,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 4156464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-31T15:02:13Z",
+            "etag": "\"0x8DF0748E1554295\"",
+            "last_modified": "Mon, 31 Aug 2026 10:16:10 GMT"
+          }
+        }
+      },
       {
         "version": "v0.1.43-alpha",
         "published_at": "2026-08-28",
@@ -71058,62 +71134,6 @@
             "analyzed_at": "2026-08-03T20:14:45Z",
             "etag": "\"0x8DED9B7D2B260CD\"",
             "last_modified": "Sat, 04 Jul 2026 10:34:27 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.34-alpha",
-        "published_at": "2026-06-29",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.34-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
-        "Fs": 3865664,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3800128,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3800128,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3800128,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:45Z",
-            "etag": "\"0x8DED5B5FF353E8D\"",
-            "last_modified": "Mon, 29 Jun 2026 08:11:18 GMT"
           }
         }
       }
@@ -72568,7 +72588,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
         "Fs": 2141024,
         "s": 0,
         "f": 0,
@@ -72615,7 +72635,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:12Z",
             "etag": "W/\"ca76103b62819bf25fbd8c05226e655cdce010606ec701344993bf0fe81723a6\""
           }
         }
@@ -72636,7 +72656,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
         "Fs": 2140880,
         "s": 0,
         "f": 0,
@@ -72683,7 +72703,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:12Z",
             "etag": "W/\"e3da473db16d2acb20815ed70d1117b24b9d6a3f21ffcd0477a1767887d4f233\""
           }
         }
@@ -73330,8 +73350,8 @@
       }
     ],
     "fid": "CFWFJKMW8FERS9053UCTDQAO02KA7244",
-    "category": "t-watch-s3",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-watch-s3"
   },
   {
     "name": "Factory Firmware",
@@ -73926,7 +73946,7 @@
       {
         "version": "2.7.26.54e0d8d",
         "published_at": "2026-06-24",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.26.54e0d8d/firmware-t-watch-s3-2.7.26.54e0d8d.factory.bin",
         "Fs": 2316592,
         "s": 0,
         "f": 0,
@@ -73973,7 +73993,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:12Z",
             "etag": "W/\"6c7e7fc800f68d79ba457511c988047292855746fe2766ca972ca2d4daf51e14\""
           }
         }
@@ -73981,7 +74001,7 @@
       {
         "version": "2.7.15.567b8ea",
         "published_at": "2025-11-19",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.7.15.567b8ea/firmware-t-watch-s3-2.7.15.567b8ea.bin",
         "Fs": 2194928,
         "s": 0,
         "f": 0,
@@ -74028,7 +74048,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:12Z",
             "etag": "W/\"f4aed1d04faf65e45baa8d366b1581fa066a12384cce29a289dd64e08075747d\""
           }
         }
@@ -74036,7 +74056,7 @@
       {
         "version": "2.6.11.60ec05e",
         "published_at": "2025-06-11",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.6.11.60ec05e/firmware-t-watch-s3-2.6.11.60ec05e.bin",
         "Fs": 2078480,
         "s": 0,
         "f": 0,
@@ -74083,7 +74103,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:12Z",
             "etag": "W/\"b1c4b81fb36cf39456a52ca69f47138b000de67f71dca07a701b75dc53fc0474\""
           }
         }
@@ -74091,7 +74111,7 @@
       {
         "version": "2.6.10.9ce4455",
         "published_at": "2025-06-02",
-        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/8def918bcbe05d133807ef19decbc6bc93befbbc/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
+        "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b1017eff2ec96e8fa1dd2db0b78ddc3c7ff1f070/firmware-2.6.10.9ce4455/firmware-t-watch-s3-2.6.10.9ce4455.bin",
         "Fs": 2076720,
         "s": 0,
         "f": 0,
@@ -74138,7 +74158,7 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-30T13:00:58Z",
+            "analyzed_at": "2026-08-31T15:02:12Z",
             "etag": "W/\"7c2c2ef51d4cef06b3def0af3fb245a222a661d8d1bdf1d74be471497bd8982f\""
           }
         }
@@ -74156,6 +74176,62 @@
     "github": "https://github.com/vicliu624/trail-mate",
     "fid": "CFW7NVZY5APBW7EH5BPMTY6B6IFXWC23",
     "versions": [
+      {
+        "version": "v0.1.44-alpha",
+        "published_at": "2026-08-31",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.44-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
+        "Fs": 4013184,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3947648,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3947648,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3947648,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-08-31T15:02:12Z",
+            "etag": "\"0x8DF0748E165F8AB\"",
+            "last_modified": "Mon, 31 Aug 2026 10:16:11 GMT"
+          }
+        }
+      },
       {
         "version": "v0.1.43-alpha",
         "published_at": "2026-08-28",
@@ -74657,62 +74733,6 @@
             "analyzed_at": "2026-08-03T20:15:08Z",
             "etag": "\"0x8DED9B7D2AF7DE0\"",
             "last_modified": "Sat, 04 Jul 2026 10:34:27 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.34-alpha",
-        "published_at": "2026-06-29",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.34-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
-        "Fs": 3485760,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3420224,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-watch-s3",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3420224,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3420224,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:08Z",
-            "etag": "\"0x8DED5B5FF17EC70\"",
-            "last_modified": "Mon, 29 Jun 2026 08:11:17 GMT"
           }
         }
       }
