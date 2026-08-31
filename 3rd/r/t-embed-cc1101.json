@@ -75,6 +75,73 @@
                 }
             },
             {
+                "version": "v0.9.14",
+                "published_at": "2026-08-31",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.14/bboink-t-embed-cc1101.bin",
+                "Fs": 1501056,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1435520,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1435520,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1435520,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-08-31T20:46:26Z",
+                        "etag": "\"0x8DF07A0DB70A8B7\"",
+                        "last_modified": "Mon, 31 Aug 2026 20:45:56 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.9.12",
                 "published_at": "2026-07-06",
                 "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.12/bboink-app-t-embed-cc1101.bin",
@@ -447,53 +514,6 @@
                         "analyzed_at": "2026-07-30T19:08:28Z",
                         "etag": "\"0x8DED8544081E8FC\"",
                         "last_modified": "Thu, 02 Jul 2026 16:09:10 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.9.4",
-                "published_at": "2026-07-02",
-                "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.4/bboink-app-t-embed-cc1101.bin",
-                "Fs": 1229712,
-                "nb": true,
-                "ao": 0,
-                "as": 1229712,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-embed-cc1101",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 1229712,
-                        "partition_size": 1229712,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 1229712,
-                            "source_offset": 0,
-                            "copy_size": 1229712,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:28Z",
-                        "etag": "\"0x8DED851D167AEB3\"",
-                        "last_modified": "Thu, 02 Jul 2026 15:51:45 GMT"
                     }
                 }
             }
@@ -1702,9 +1722,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-31T06:57:00Z",
-                        "etag": "\"0x8DF0703BB6EAF1B\"",
-                        "last_modified": "Mon, 31 Aug 2026 02:01:12 GMT"
+                        "analyzed_at": "2026-08-31T20:46:26Z",
+                        "etag": "\"0x8DF0771221AB559\"",
+                        "last_modified": "Mon, 31 Aug 2026 15:04:19 GMT"
                     }
                 }
             },
@@ -1758,16 +1778,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-31T06:57:00Z",
-                        "etag": "\"0x8DF0703BB6F4AAD\"",
-                        "last_modified": "Mon, 31 Aug 2026 02:01:12 GMT"
+                        "analyzed_at": "2026-08-31T20:46:25Z",
+                        "etag": "\"0x8DF07712220EFF6\"",
+                        "last_modified": "Mon, 31 Aug 2026 15:04:19 GMT"
                     }
                 }
             }
         ],
         "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-        "esp": "s3",
-        "category": "t-embed-cc1101"
+        "category": "t-embed-cc1101",
+        "esp": "s3"
     },
     {
         "name": "Capibara Zero",
