@@ -1731,7 +1731,7 @@
         "versions": [
             {
                 "version": "v1.3.8",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.8-merged.bin",
                 "Fs": 2628624,
                 "s": 0,
@@ -1787,7 +1787,7 @@
             },
             {
                 "version": "v1.3.6",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.6-merged.bin",
                 "Fs": 2607168,
                 "s": 0,
@@ -1843,7 +1843,7 @@
             },
             {
                 "version": "v1.3.5",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.5-merged.bin",
                 "Fs": 2601920,
                 "s": 0,
@@ -1899,7 +1899,7 @@
             },
             {
                 "version": "v1.3.4",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.4-merged.bin",
                 "Fs": 2604992,
                 "s": 0,
@@ -1955,7 +1955,7 @@
             },
             {
                 "version": "v1.3.3",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.3-merged.bin",
                 "Fs": 2604992,
                 "s": 0,
@@ -2011,7 +2011,7 @@
             },
             {
                 "version": "v1.3.2",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.2-merged.bin",
                 "Fs": 2609584,
                 "s": 0,
@@ -2067,7 +2067,7 @@
             },
             {
                 "version": "v1.3.1",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.1-merged.bin",
                 "Fs": 2617424,
                 "s": 0,
@@ -2123,7 +2123,7 @@
             },
             {
                 "version": "v1.3.0",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.0-merged.bin",
                 "Fs": 2612784,
                 "s": 0,
@@ -2179,7 +2179,7 @@
             },
             {
                 "version": "v1.2.0",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.2.0-merged.bin",
                 "Fs": 2590928,
                 "s": 0,
@@ -2235,7 +2235,7 @@
             },
             {
                 "version": "v1.1.8",
-                "published_at": "2026-08-31",
+                "published_at": "2026-09-01",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.1.8-merged.bin",
                 "Fs": 2576880,
                 "s": 0,
@@ -3372,6 +3372,62 @@
         "fid": "CFWFRWQO44EP2U6OJKWSSULNOMOSJA44",
         "versions": [
             {
+                "version": "beta_75",
+                "published_at": "2026-09-01",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_75/wadamesh-tlora-pager-lr1121-merged.bin",
+                "Fs": 3595440,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3529904,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3529904,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3529904,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-01T14:45:12Z",
+                        "etag": "\"0x8DF081A84255126\"",
+                        "last_modified": "Tue, 01 Sep 2026 11:16:48 GMT"
+                    }
+                }
+            },
+            {
                 "version": "beta_73",
                 "published_at": "2026-08-28",
                 "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_73/wadamesh-tlora-pager-lr1121-merged.bin",
@@ -3874,24 +3930,36 @@
                         "last_modified": "Wed, 19 Aug 2026 14:42:57 GMT"
                     }
                 }
-            },
+            }
+        ],
+        "esp": "s3",
+        "category": "t-lora-pager"
+    },
+    {
+        "name": "WADAMESH BETA (SX1262)",
+        "author": "ALLFATHER-BV",
+        "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+        "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+        "github": "https://github.com/ALLFATHER-BV/wadamesh",
+        "fid": "CFWXK2SEBQC3RH6MDX2UAIUG4HACEN2C",
+        "versions": [
             {
-                "version": "beta_64",
-                "published_at": "2026-08-13",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_64/wadamesh-tlora-pager-lr1121-merged.bin",
-                "Fs": 3477248,
+                "version": "beta_75",
+                "published_at": "2026-09-01",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_75/wadamesh-tlora-pager-sx1262-merged.bin",
+                "Fs": 3596240,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 3411712,
+                "as": 3530704,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-lora-pager",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 3411712,
+                        "image_size": 3530704,
                         "partition_size": 4063232,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -3904,7 +3972,7 @@
                             "role": "firmware",
                             "size": 4063232,
                             "source_offset": 65536,
-                            "copy_size": 3411712,
+                            "copy_size": 3530704,
                             "required": true,
                             "source": "firmware"
                         },
@@ -3925,24 +3993,12 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-13T15:43:08Z",
-                        "etag": "\"0x8DEF94E932DFCB8\"",
-                        "last_modified": "Thu, 13 Aug 2026 15:21:40 GMT"
+                        "analyzed_at": "2026-09-01T14:45:12Z",
+                        "etag": "\"0x8DF081A85274FC1\"",
+                        "last_modified": "Tue, 01 Sep 2026 11:16:50 GMT"
                     }
                 }
-            }
-        ],
-        "esp": "s3",
-        "category": "t-lora-pager"
-    },
-    {
-        "name": "WADAMESH BETA (SX1262)",
-        "author": "ALLFATHER-BV",
-        "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
-        "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
-        "github": "https://github.com/ALLFATHER-BV/wadamesh",
-        "fid": "CFWXK2SEBQC3RH6MDX2UAIUG4HACEN2C",
-        "versions": [
+            },
             {
                 "version": "beta_73",
                 "published_at": "2026-08-28",
@@ -4444,62 +4500,6 @@
                         "analyzed_at": "2026-08-19T14:44:28Z",
                         "etag": "\"0x8DEFE0029270242\"",
                         "last_modified": "Wed, 19 Aug 2026 14:42:57 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_64",
-                "published_at": "2026-08-13",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_64/wadamesh-tlora-pager-sx1262-merged.bin",
-                "Fs": 3478512,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3412976,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3412976,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3412976,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-13T15:43:08Z",
-                        "etag": "\"0x8DEF94E9566BA3E\"",
-                        "last_modified": "Thu, 13 Aug 2026 15:21:44 GMT"
                     }
                 }
             }
