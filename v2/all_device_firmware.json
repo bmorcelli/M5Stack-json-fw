@@ -3014,7 +3014,7 @@
     "tags": [],
     "author": "Jay-Jay",
     "github": "https://github.com/Jay-Jayismyname1/Cardputer-ABS-B-Radar",
-    "download": 509,
+    "download": 510,
     "versions": [
       {
         "version": "2.6",
@@ -3326,6 +3326,83 @@
     "esp": "s3"
   },
   {
+    "_id": "6a22a14538b4ee9da029e4e5",
+    "fid": "d9e1bc4dcfa2adfd51b143e15e929abf",
+    "name": "AI TaskHub",
+    "description": "TaskHub turns the M5StickS3 into a pocket status light for your AI coding agents.\nIt shows which of Codex, Claude Code, Cursor, Cline, Gemini CLI, Copilot CLI,\nKimi, Manus and more are RUNNING, WAITING for your approval, DONE or FAILED,\nbuzzes when one needs you, and opens the right window on your Mac with one\nbutton. Everything stays on your LAN.\n\nSetup (no terminal needed):\n1. Burn this firmware and power the Stick on.\n2. On your phone, join the Wi-Fi \"TaskHub-XXXX\" shown on the screen and pick\n   your home network in the page that pops up.\n3. On your Mac, install TaskHub Host from GitHub (one command or the .pkg) and\n   type the 4-digit code shown on the Stick when asked.\n\nMac Host + source: https://github.com/sheepxux/Taskhub-for-StickS3\nButtons: A = next task, hold A = refresh, B = open task on the Mac, hold B = voice note.\nBoth buttons at power-on = factory reset (redo Wi-Fi + pairing).",
+    "cover": "78e98979a776f1c777839e558f39df62.png",
+    "category": "stickc",
+    "tags": [],
+    "author": "sheepxu",
+    "github": "https://github.com/sheepxux/Taskhub-for-StickS3",
+    "download": 312,
+    "versions": [
+      {
+        "version": "v2.3.0",
+        "published_at": "2026-06-05",
+        "file": "ce95bb22c34726b5eb4f8fccf8e13a77.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1915152,
+        "so": 3735552,
+        "ss": 4521984,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1915152,
+            "partition_size": 3670016,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3670016,
+              "source_offset": 65536,
+              "copy_size": 1915152,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4521984,
+              "source": "firmware",
+              "source_offset": 3735552,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-09-04T09:59:16Z",
+            "etag": "\"F3A6E1A4C89D0CEF2BE62585F4AEE67B\"",
+            "last_modified": "Fri, 04 Sep 2026 07:13:48 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3",
+    "description_en": "TaskHub for StickS3 You can put what is running on your computer AI The task is displayed to StickS3 superior\u3002For example, which tasks are still running?\u3001what has been completed\u3001Which ones need you to come back and deal with?\uff0cCan be seen at a glance\u3002Now supports multiple computers to display together\u3001Open corresponding App\uff0cAnd press and hold voice input to convert text and send\u3001Remote monitoring and other functions\u3002",
+    "description_src": "TaskHub for StickS3 \u53ef\u4ee5\u628a\u4f60\u7535\u8111\u91cc\u6b63\u5728\u8dd1\u7684 AI \u4efb\u52a1\u663e\u793a\u5230 StickS3 \u4e0a\u3002\u6bd4\u5982\u54ea\u4e9b\u4efb\u52a1\u8fd8\u5728\u8dd1\u3001\u54ea\u4e9b\u5df2\u7ecf\u5b8c\u6210\u3001\u54ea\u4e9b\u9700\u8981\u4f60\u56de\u6765\u5904\u7406\uff0c\u90fd\u80fd\u4e00\u773c\u770b\u5230\u3002\u73b0\u5df2\u652f\u6301\u591a\u53f0\u7535\u8111\u4e00\u8d77\u663e\u793a\u3001\u6253\u5f00\u5bf9\u5e94 App\uff0c\u4ee5\u53ca\u957f\u6309\u8bed\u97f3\u8f93\u5165\u8f6c\u6587\u5b57\u5e76\u53d1\u9001\u3001\u8fdc\u7a0b\u76d1\u63a7\u7b49\u7b49\u529f\u80fd\u3002"
+  },
+  {
     "_id": "69807ff23a26d0d6589a7ee9",
     "fid": "78de0ee0a52e2177733a5e34ecc57e1b",
     "name": "AI-cardputer-adv",
@@ -3397,7 +3474,7 @@
     "tags": [],
     "author": "vc1235",
     "github": "https://github.com/m5stack/AIFlow",
-    "download": 23,
+    "download": 25,
     "versions": [
       {
         "version": "1.0.3-beta",
@@ -3751,7 +3828,7 @@
     "tags": [],
     "author": "t_mac116",
     "github": "https://github.com/ToshihiroMakuuchi/AI_StackChan2",
-    "download": 193,
+    "download": 194,
     "versions": [
       {
         "version": "\u5185\u8535LED\uff0b\u30cd\u30b3\u30df\u30dfLED \u203bVer 0.0.11 (ChatGPT-4o mini)",
@@ -3944,7 +4021,7 @@
     "tags": [],
     "author": "u-tanick",
     "github": "https://github.com/u-tanick/AI_StackChan2_for_DEBUG",
-    "download": 278,
+    "download": 279,
     "versions": [
       {
         "version": "0.0.1",
@@ -5369,7 +5446,7 @@
     "tags": [],
     "author": "bomberman30",
     "github": "https://github.com/bomberman30/AdvanceOS-for-cardputer",
-    "download": 24195,
+    "download": 24205,
     "versions": [
       {
         "version": "1.5.4",
@@ -5991,7 +6068,7 @@
     "tags": [],
     "author": "Teapot174",
     "github": "https://github.com/Teapot174/AirMouseS3",
-    "download": 1559,
+    "download": 1561,
     "versions": [
       {
         "version": "v1.0",
@@ -6444,7 +6521,7 @@
     "tags": [],
     "author": "AbdulKus",
     "github": "https://github.com/TheBricktop/Anarch-Cardputer",
-    "download": 2948,
+    "download": 2951,
     "versions": [
       {
         "version": "0.2",
@@ -9343,7 +9420,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 439,
+    "download": 440,
     "versions": [
       {
         "version": "v0.1",
@@ -9403,7 +9480,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 360,
+    "download": 361,
     "versions": [
       {
         "version": "v0.1",
@@ -11379,7 +11456,7 @@
     "tags": [],
     "author": "pepeangell",
     "github": "https://github.com/pepeangell5/BWifiKill-CARDPUTER-ADV",
-    "download": 284,
+    "download": 285,
     "versions": [
       {
         "version": "4.0",
@@ -11705,7 +11782,7 @@
     "tags": [],
     "author": "TurboHsu",
     "github": "https://github.com/TurboHsu/badapple_cardputer_adv",
-    "download": 777,
+    "download": 778,
     "versions": [
       {
         "version": "v0.1.0",
@@ -11840,7 +11917,7 @@
     "tags": [],
     "author": "VoidNoi",
     "github": "https://github.com/VoidNoi/BadCard",
-    "download": 9882,
+    "download": 9884,
     "versions": [
       {
         "version": "1.7.2",
@@ -12596,7 +12673,7 @@
     "tags": [],
     "author": "beepb0t",
     "github": "https://github.com/bradmcnally/beepbotdx",
-    "download": 191,
+    "download": 192,
     "versions": [
       {
         "version": "0.5.0",
@@ -12900,7 +12977,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/ESP32-Bus-Pirate",
-    "download": 17924,
+    "download": 17933,
     "versions": [
       {
         "version": "0.1",
@@ -14722,7 +14799,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/ESP32-Bus-Pirate",
-    "download": 1974,
+    "download": 1975,
     "versions": [
       {
         "version": "1.3",
@@ -16620,7 +16697,7 @@
     "tags": [],
     "author": "autoflowdanilo",
     "github": "https://github.com/autoflowdanilo-IT/Blipputer",
-    "download": 227,
+    "download": 228,
     "versions": [
       {
         "version": "1.1.0",
@@ -17059,7 +17136,7 @@
     "tags": [],
     "author": "erwantest123",
     "github": "https://github.com/m5stack/M5Unified/tree/master/examples/Advanced/Bluetooth_with_ESP32A2DP",
-    "download": 306,
+    "download": 309,
     "versions": [
       {
         "version": "1.0.0",
@@ -17329,7 +17406,7 @@
     "tags": [],
     "author": "johnhw",
     "github": "https://github.com/johnhw/cardputer_drums",
-    "download": 1659,
+    "download": 1660,
     "versions": [
       {
         "version": "1.0.1",
@@ -18005,7 +18082,7 @@
     "tags": [],
     "author": "aat440hz",
     "github": "https://github.com/aat440hz/BrainWaveGenerator-M5Cardputer",
-    "download": 2855,
+    "download": 2857,
     "versions": [
       {
         "version": "1.0",
@@ -20521,7 +20598,7 @@
     "tags": [],
     "author": "Apead",
     "github": "https://github.com/BruceDevices",
-    "download": 8303,
+    "download": 8312,
     "versions": [
       {
         "version": "1.16.1",
@@ -21590,7 +21667,7 @@
     "tags": [],
     "author": "MindMeld",
     "github": "https://github.com/tutyr2-jpg/Bruce-A-C-Edition",
-    "download": 1005,
+    "download": 1008,
     "versions": [
       {
         "version": "1.0.1",
@@ -22302,7 +22379,7 @@
     "tags": [],
     "author": "ananas8867",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 961,
+    "download": 964,
     "versions": [
       {
         "version": "1.15",
@@ -24063,7 +24140,7 @@
     "tags": [],
     "author": "GameCat7428",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 11696,
+    "download": 11699,
     "versions": [
       {
         "version": "1.0.0",
@@ -31997,7 +32074,7 @@
     "tags": [],
     "author": "NailecTech",
     "github": "https://github.com/naileclevrai/Bruce-nemo-ble/",
-    "download": 3345,
+    "download": 3346,
     "versions": [
       {
         "version": "8.1",
@@ -33365,7 +33442,7 @@
     "tags": [],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 102413,
+    "download": 102454,
     "versions": [
       {
         "version": "1.16.1",
@@ -33711,7 +33788,7 @@
     "tags": [],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 1401,
+    "download": 1402,
     "versions": [
       {
         "version": "1.16.1",
@@ -33924,7 +34001,7 @@
     "tags": [],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 17481,
+    "download": 17482,
     "versions": [
       {
         "version": "1.16.1",
@@ -33995,7 +34072,7 @@
     "tags": [],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 148445,
+    "download": 148453,
     "versions": [
       {
         "version": "1.16.1",
@@ -34137,7 +34214,7 @@
     "tags": [],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 3234,
+    "download": 3239,
     "versions": [
       {
         "version": "1.16.1",
@@ -34838,7 +34915,7 @@
     "tags": [],
     "author": "saheadley",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 211,
+    "download": 212,
     "versions": [
       {
         "version": "1.14",
@@ -36479,7 +36556,7 @@
     "tags": [],
     "author": "monkeypatcher",
     "github": "https://github.com/amiika/bytebed",
-    "download": 126,
+    "download": 127,
     "versions": [
       {
         "version": "0.2.0",
@@ -36554,7 +36631,7 @@
     "tags": [],
     "author": "tokage666",
     "github": "https://github.com/oldtokage-collab/C.P.S.--Cardputer-SYHNTH--",
-    "download": 345,
+    "download": 348,
     "versions": [
       {
         "version": "v0.7o",
@@ -37984,7 +38061,7 @@
     "tags": [],
     "author": "intellect",
     "github": "https://github.com/question-and-answer/cave-mine-cardputer-alpha1",
-    "download": 1136,
+    "download": 1137,
     "versions": [
       {
         "version": "alpha_1",
@@ -38557,7 +38634,7 @@
     "tags": [],
     "author": "andjiang",
     "github": "",
-    "download": 314,
+    "download": 316,
     "versions": [
       {
         "version": "1.1.0",
@@ -38703,7 +38780,7 @@
     "tags": [],
     "author": "andjiang",
     "github": "",
-    "download": 85,
+    "download": 86,
     "versions": [
       {
         "version": "1.1",
@@ -39505,7 +39582,7 @@
     "tags": [],
     "author": "rizumu",
     "github": "",
-    "download": 11,
+    "download": 13,
     "versions": [
       {
         "version": "26.0.0",
@@ -39799,7 +39876,7 @@
     "tags": [],
     "author": "REZOR",
     "github": "https://github.com/therezor/card-craft",
-    "download": 124,
+    "download": 126,
     "versions": [
       {
         "version": "1.0",
@@ -39943,7 +40020,7 @@
     "tags": [],
     "author": "LoveVector",
     "github": "https://github.com/spreedated/cardcharge",
-    "download": 56,
+    "download": 57,
     "versions": [
       {
         "version": "v1.0.0",
@@ -40419,7 +40496,7 @@
     "tags": [],
     "author": "Gansta",
     "github": "https://github.com/girs1982/GanstaWifiCyberPunker",
-    "download": 1845,
+    "download": 1846,
     "versions": [
       {
         "version": "1.02 adv",
@@ -40689,7 +40766,7 @@
     "tags": [],
     "author": "aat440hz",
     "github": "https://github.com/aat440hz/CardSkimmerDetector-M5Cardputer",
-    "download": 8651,
+    "download": 8653,
     "versions": [
       {
         "version": "1.1",
@@ -41520,7 +41597,7 @@
     "tags": [],
     "author": "SushiBro30",
     "github": "",
-    "download": 2141,
+    "download": 2142,
     "versions": [
       {
         "version": "0.0.1",
@@ -41582,7 +41659,7 @@
     "tags": [],
     "author": "szilamer",
     "github": "https://github.com/zspuspoki/CardPuterAdvancedDoom/",
-    "download": 3613,
+    "download": 3617,
     "versions": [
       {
         "version": "0.0.1",
@@ -42465,7 +42542,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 8023,
+    "download": 8036,
     "versions": [
       {
         "version": "v2.7.22",
@@ -42884,7 +42961,7 @@
     "tags": [],
     "author": "rennancockles",
     "github": "",
-    "download": 4884,
+    "download": 4885,
     "versions": [
       {
         "version": "0.1",
@@ -42946,7 +43023,7 @@
     "tags": [],
     "author": "chongjiazhen",
     "github": "https://github.com/chongjiazhen/cardputer-puzzles",
-    "download": 57,
+    "download": 58,
     "versions": [
       {
         "version": "1.2.0",
@@ -43242,7 +43319,7 @@
     "tags": [],
     "author": "gdantas04",
     "github": "https://github.com/gdantas04/Cardputer-System-Monitor",
-    "download": 2662,
+    "download": 2663,
     "versions": [
       {
         "version": "1.0.0",
@@ -43523,7 +43600,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/M5Cardputer-UserDemo",
-    "download": 21867,
+    "download": 21869,
     "versions": [
       {
         "version": "V0.9.1",
@@ -43999,7 +44076,7 @@
     "tags": [],
     "author": "halbeshuhn",
     "github": "https://github.com/halbeshuhn/Cardputer-WebRadio",
-    "download": 541,
+    "download": 542,
     "versions": [
       {
         "version": "3.1.1",
@@ -44758,7 +44835,7 @@
     "tags": [],
     "author": "erwantest123",
     "github": "",
-    "download": 1333,
+    "download": 1334,
     "versions": [
       {
         "version": "1.0.2 server1 >",
@@ -45197,7 +45274,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 20673,
+    "download": 20678,
     "versions": [
       {
         "version": "v0.1",
@@ -45418,7 +45495,7 @@
     "tags": [],
     "author": "DevinWatson",
     "github": "https://github.com/DevinWatson/Cardputer-Adv-GPS-Info",
-    "download": 1547,
+    "download": 1550,
     "versions": [
       {
         "version": "2.0",
@@ -46531,7 +46608,7 @@
     "tags": [],
     "author": "g-hostproxy",
     "github": "https://github.com/g-hostproxy/CardputerRemote",
-    "download": 69,
+    "download": 70,
     "versions": [
       {
         "version": "v1.0.3",
@@ -46941,7 +47018,7 @@
     "tags": [],
     "author": "nishad2m8",
     "github": "https://github.com/nishad2m8/CardPuter-Games",
-    "download": 760,
+    "download": 761,
     "versions": [
       {
         "version": "1.0.0",
@@ -47089,7 +47166,7 @@
     "tags": [],
     "author": "Stachu0",
     "github": "https://github.com/Stachugit/CatHack",
-    "download": 57454,
+    "download": 57457,
     "versions": [
       {
         "version": "v1.4",
@@ -48293,7 +48370,7 @@
     "tags": [],
     "author": "oliverxing",
     "github": "https://github.com/oliverxing2025/StopWatch-ChronoTrace",
-    "download": 6,
+    "download": 7,
     "versions": [
       {
         "version": "1.0.1",
@@ -49895,7 +49972,7 @@
     "tags": [],
     "author": "IAMLIUBO",
     "github": "https://github.com/anthropics/claude-desktop-buddy",
-    "download": 747,
+    "download": 748,
     "versions": [
       {
         "version": "V0.1",
@@ -50593,7 +50670,7 @@
     "tags": [],
     "author": "warko",
     "github": "https://github.com/warko-san/cardputer-remote-cloner",
-    "download": 3777,
+    "download": 3778,
     "versions": [
       {
         "version": "0.0.1",
@@ -50944,7 +51021,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 3487,
+    "download": 3488,
     "versions": [
       {
         "version": "v0.4",
@@ -52440,7 +52517,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/CoreS3-Box",
-    "download": 1501,
+    "download": 1502,
     "versions": [
       {
         "version": "v0.1",
@@ -52599,7 +52676,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/ESP32DE/Boot-Linux-ESP32S3-Playground",
-    "download": 1325,
+    "download": 1326,
     "versions": [
       {
         "version": "20230707",
@@ -52889,7 +52966,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/CoreS3-UserDemo",
-    "download": 8138,
+    "download": 8141,
     "versions": [
       {
         "version": "v0.4",
@@ -53671,7 +53748,7 @@
     "tags": [],
     "author": "CaosAquatico",
     "github": "https://github.com/JonasLacerda/crowos",
-    "download": 5318,
+    "download": 5319,
     "versions": [
       {
         "version": "v0.0.1",
@@ -53957,7 +54034,7 @@
     "tags": [],
     "author": "Dlazder",
     "github": "https://github.com/Dlazder/m5_crystal_firmware",
-    "download": 1597,
+    "download": 1599,
     "versions": [
       {
         "version": "1.0.1",
@@ -54874,7 +54951,7 @@
     "tags": [],
     "author": "3xp10rt",
     "github": "https://github.com/nongxl/CyberDeck-Tarot",
-    "download": 552,
+    "download": 553,
     "versions": [
       {
         "version": "v1.1",
@@ -56431,7 +56508,7 @@
     "tags": [],
     "author": "Hades2001",
     "github": "",
-    "download": 16518,
+    "download": 16519,
     "versions": [
       {
         "version": "v1.0",
@@ -57379,7 +57456,7 @@
     "tags": [],
     "author": "romalik",
     "github": "https://github.com/romalik/m5cardputer_doom",
-    "download": 34707,
+    "download": 34713,
     "versions": [
       {
         "version": "0.1",
@@ -57810,7 +57887,7 @@
     "tags": [],
     "author": "AntonioJLara",
     "github": "",
-    "download": 3037,
+    "download": 3038,
     "versions": [
       {
         "version": "1.0",
@@ -58027,7 +58104,7 @@
     "tags": [],
     "author": "zacharypowers",
     "github": "https://github.com/failpowers/dualmesh-cardputer",
-    "download": 37,
+    "download": 38,
     "versions": [
       {
         "version": "1.0",
@@ -59200,7 +59277,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/espressif/esp-claw",
-    "download": 1315,
+    "download": 1316,
     "versions": [
       {
         "version": "V0.1",
@@ -59501,7 +59578,7 @@
     "tags": [],
     "author": "justcallmekoko",
     "github": "https://github.com/justcallmekoko/ESP32Marauder",
-    "download": 7991,
+    "download": 7996,
     "versions": [
       {
         "version": "v1.8.3",
@@ -60150,7 +60227,7 @@
     "tags": [],
     "author": "nickhasla",
     "github": "",
-    "download": 368,
+    "download": 369,
     "versions": [
       {
         "version": "1.13.0",
@@ -60345,7 +60422,7 @@
     "tags": [],
     "author": "tobozo",
     "github": "",
-    "download": 2424,
+    "download": 2425,
     "versions": [
       {
         "version": "v1.0",
@@ -61729,7 +61806,7 @@
     "tags": [],
     "author": "vorobusshek",
     "github": "",
-    "download": 8354,
+    "download": 8355,
     "versions": [
       {
         "version": "1.6.1",
@@ -63513,7 +63590,7 @@
     "tags": [],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 83842,
+    "download": 83862,
     "versions": [
       {
         "version": "v1.5.2",
@@ -64150,7 +64227,7 @@
     "tags": [],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 1463,
+    "download": 1464,
     "versions": [
       {
         "version": "v1.1.9",
@@ -64517,7 +64594,7 @@
     "tags": [],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Project",
-    "download": 2921,
+    "download": 2929,
     "versions": [
       {
         "version": "v1.5.1-beta",
@@ -64590,7 +64667,7 @@
     "tags": [],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 106,
+    "download": 108,
     "versions": [
       {
         "version": "Beta",
@@ -65327,7 +65404,7 @@
     "tags": [],
     "author": "hans0422",
     "github": "https://github.com/hansgao0422/DeskClock-Cardputer",
-    "download": 161,
+    "download": 163,
     "versions": [
       {
         "version": "0.1.02",
@@ -65415,7 +65492,7 @@
     "tags": [],
     "author": "EnderM3",
     "github": "",
-    "download": 1207,
+    "download": 1208,
     "versions": [
       {
         "version": "1.1",
@@ -65696,7 +65773,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 4922,
+    "download": 4923,
     "versions": [
       {
         "version": "v0.0.2",
@@ -66631,7 +66708,7 @@
     "tags": [],
     "author": "\u3074\u3088\u306d\u3053\u3071\u3059\u3059",
     "github": "",
-    "download": 81,
+    "download": 83,
     "versions": [
       {
         "version": "v1.0.0",
@@ -66817,7 +66894,7 @@
     "tags": [],
     "author": "halloween",
     "github": "https://github.com/0xhalloween/Flipper-Zero-ESP32-ADV",
-    "download": 1567,
+    "download": 1568,
     "versions": [
       {
         "version": "0.5",
@@ -66877,7 +66954,7 @@
     "tags": [],
     "author": "Profynn58",
     "github": "",
-    "download": 13738,
+    "download": 13739,
     "versions": [
       {
         "version": "v1.0.0",
@@ -66975,7 +67052,7 @@
     "tags": [],
     "author": "Elicoft",
     "github": "https://github.com/ElicoftZ/Flipper-Zero-meets-M5Stack-Cardputer",
-    "download": 756,
+    "download": 759,
     "versions": [
       {
         "version": "1.15",
@@ -67108,7 +67185,7 @@
     "tags": [],
     "author": "aat440hz",
     "github": "https://github.com/aat440hz/FlockCameraDetector-M5CardputerAdv",
-    "download": 169,
+    "download": 170,
     "versions": [
       {
         "version": "1.0",
@@ -67852,7 +67929,7 @@
     "tags": [],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/Piano-Tiles-ADV",
-    "download": 8158,
+    "download": 8160,
     "versions": [
       {
         "version": "1.2 (24.03.2026)",
@@ -68191,7 +68268,7 @@
     "tags": [],
     "author": "meister44",
     "github": "https://github.com/meister5/m5stack-cardputer-adv-gps-tracker",
-    "download": 2229,
+    "download": 2230,
     "versions": [
       {
         "version": "v1",
@@ -68643,7 +68720,7 @@
     "tags": [],
     "author": "lunarc3",
     "github": "https://github.com/lunarc3/CardputerGPSMap",
-    "download": 447,
+    "download": 448,
     "versions": [
       {
         "version": "1.0.4",
@@ -68988,7 +69065,7 @@
     "tags": [],
     "author": "yama2010",
     "github": "",
-    "download": 80,
+    "download": 81,
     "versions": [
       {
         "version": "0.0.2",
@@ -69404,7 +69481,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Cardputer-Game-Station-Emulators",
-    "download": 17527,
+    "download": 17529,
     "versions": [
       {
         "version": "0.1",
@@ -70226,7 +70303,7 @@
     "tags": [],
     "author": "Darangus",
     "github": "matthew-5plPeanut-GB",
-    "download": 12289,
+    "download": 12290,
     "versions": [
       {
         "version": "0.4",
@@ -70573,7 +70650,7 @@
     "tags": [],
     "author": "MrPaul",
     "github": "https://github.com/Mr-PauI/Gameboy-Enhanced-Firmware-m5stack-cardputer-",
-    "download": 24167,
+    "download": 24170,
     "versions": [
       {
         "version": "0.78.10",
@@ -71311,7 +71388,7 @@
     "tags": [],
     "author": "vanshksingh",
     "github": "https://github.com/vanshksingh/M5Cardputer-Chat-with-Gemini-API/",
-    "download": 10406,
+    "download": 10408,
     "versions": [
       {
         "version": "0.1.2",
@@ -71382,7 +71459,7 @@
     "tags": [],
     "author": "nishad2m8",
     "github": "https://github.com/nishad2m8/GeminiPuter",
-    "download": 4423,
+    "download": 4424,
     "versions": [
       {
         "version": "2.0.0",
@@ -71708,7 +71785,7 @@
     "tags": [],
     "author": "Spooky4576",
     "github": "https://github.com/Spooks4576/Ghost_ESP",
-    "download": 10239,
+    "download": 10244,
     "versions": [
       {
         "version": "VA1.4",
@@ -71972,7 +72049,7 @@
     "tags": [],
     "author": "SmonSE",
     "github": "https://github.com/SmonSE/GhostBLE",
-    "download": 142,
+    "download": 143,
     "versions": [
       {
         "version": "v1.4.6",
@@ -72043,7 +72120,7 @@
     "tags": [],
     "author": "jaylikesbunda",
     "github": "https://github.com/jaylikesbunda/Ghost_ESP",
-    "download": 2535,
+    "download": 2536,
     "versions": [
       {
         "version": "1.5.1",
@@ -75559,7 +75636,7 @@
     "tags": [],
     "author": "Makkuro",
     "github": "https://github.com/genkigenki/hotspot-arcade-cardputer",
-    "download": 249,
+    "download": 251,
     "versions": [
       {
         "version": "0.1.0",
@@ -78793,7 +78870,7 @@
     "tags": [],
     "author": "hhgtds",
     "github": "https://github.com/SUB0PT1MAL/InteractiveSetup-M5Cardputer-SSHClient",
-    "download": 6656,
+    "download": 6658,
     "versions": [
       {
         "version": "0.1.5",
@@ -79362,7 +79439,7 @@
     "tags": [],
     "author": "gabrielwlucio",
     "github": "",
-    "download": 28,
+    "download": 29,
     "versions": [
       {
         "version": "1.0",
@@ -84379,7 +84456,7 @@
     "tags": [],
     "author": "Volos23",
     "github": "https://github.com/VolosR/M5StickS3saber",
-    "download": 1308,
+    "download": 1309,
     "versions": [
       {
         "version": "1.0.0",
@@ -85421,7 +85498,7 @@
     "tags": [],
     "author": "terror420",
     "github": "",
-    "download": 106,
+    "download": 107,
     "versions": [
       {
         "version": "1.9.1",
@@ -85567,7 +85644,7 @@
     "tags": [],
     "author": "Lobojpm",
     "github": "",
-    "download": 330,
+    "download": 331,
     "versions": [
       {
         "version": "1.8",
@@ -86726,7 +86803,7 @@
     "tags": [],
     "author": "R3Ck_",
     "github": "https://github.com/rennancockles/m5-chameleon-ultra",
-    "download": 3512,
+    "download": 3514,
     "versions": [
       {
         "version": "1.0",
@@ -86996,7 +87073,7 @@
     "tags": [],
     "author": "fbiego",
     "github": "https://github.com/fbiego/esp32-c3-mini",
-    "download": 1083,
+    "download": 1084,
     "versions": [
       {
         "version": "6.0",
@@ -87366,7 +87443,7 @@
     "tags": [],
     "author": "EvilAngel91",
     "github": "https://github.com/bmorcelli/Launcher",
-    "download": 472,
+    "download": 473,
     "versions": [
       {
         "version": "v2.6.6",
@@ -88789,7 +88866,7 @@
     "tags": [],
     "author": "d4rkmen",
     "github": "https://github.com/d4rkmen/M5Apps",
-    "download": 9061,
+    "download": 9067,
     "versions": [
       {
         "version": "1.3",
@@ -90573,7 +90650,7 @@
     "tags": [],
     "author": "Emil39",
     "github": "https://github.com/emilnier/M5Cardputer-IR-Tool",
-    "download": 207,
+    "download": 208,
     "versions": [
       {
         "version": "2.7",
@@ -90794,7 +90871,7 @@
     "tags": [],
     "author": "Aurelio",
     "github": "https://github.com/cyberwisk/M5Cardputer_WebRadio",
-    "download": 18221,
+    "download": 18223,
     "versions": [
       {
         "version": "Beta 1.0.5",
@@ -91551,7 +91628,7 @@
     "tags": [],
     "author": "vladtheraven",
     "github": "",
-    "download": 1767,
+    "download": 1768,
     "versions": [
       {
         "version": "0.3",
@@ -91772,7 +91849,7 @@
     "tags": [],
     "author": "d4rkmen",
     "github": "https://github.com/d4rkmen/M5Gemini",
-    "download": 4812,
+    "download": 4813,
     "versions": [
       {
         "version": "1.0.BURNER",
@@ -92012,7 +92089,7 @@
     "tags": [],
     "author": "Devsur",
     "github": "https://github.com/Devsur11/M5Gotchi",
-    "download": 14180,
+    "download": 14183,
     "versions": [
       {
         "version": "v0.5.3",
@@ -93435,7 +93512,7 @@
     "tags": [],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 111856,
+    "download": 111918,
     "versions": [
       {
         "version": "2.4.10",
@@ -93876,7 +93953,7 @@
     "tags": [],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher",
-    "download": 2357,
+    "download": 2361,
     "versions": [
       {
         "version": "2.4.10",
@@ -94350,7 +94427,7 @@
     "tags": [],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher",
-    "download": 2540,
+    "download": 2541,
     "versions": [
       {
         "version": "2.4.10",
@@ -96141,7 +96218,7 @@
     "tags": [],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher/",
-    "download": 3130,
+    "download": 3135,
     "versions": [
       {
         "version": "2.6.10",
@@ -96766,7 +96843,7 @@
     "tags": [],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher",
-    "download": 1862,
+    "download": 1863,
     "versions": [
       {
         "version": "2.4.10",
@@ -97480,7 +97557,7 @@
     "tags": [],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher",
-    "download": 3130,
+    "download": 3132,
     "versions": [
       {
         "version": "2.7.1",
@@ -97720,7 +97797,7 @@
     "tags": [],
     "author": "Pagan",
     "github": "",
-    "download": 50,
+    "download": 51,
     "versions": [
       {
         "version": "1.0",
@@ -100368,7 +100445,7 @@
     "tags": [],
     "author": "sorinbidian",
     "github": "",
-    "download": 57,
+    "download": 58,
     "versions": [
       {
         "version": "1.0.0",
@@ -102477,7 +102554,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 11752,
+    "download": 11754,
     "versions": [
       {
         "version": "v1.0",
@@ -103051,7 +103128,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/M5StickCPlus2-UserDemo",
-    "download": 22015,
+    "download": 22016,
     "versions": [
       {
         "version": "V0.1",
@@ -103610,7 +103687,7 @@
     "tags": [],
     "author": "RiviaRammer",
     "github": "https://github.com/RiviaRammer/M5Term",
-    "download": 238,
+    "download": 239,
     "versions": [
       {
         "version": "v1.0.0",
@@ -106549,7 +106626,7 @@
     "tags": [],
     "author": "sanchitminda",
     "github": "https://github.com/sanchitminda/MP3PlayerForM5Cardputer",
-    "download": 15322,
+    "download": 15328,
     "versions": [
       {
         "version": "1.1",
@@ -108957,7 +109034,7 @@
     "tags": [],
     "author": "marivaaldo",
     "github": "https://github.com/marivaaldo/ESP32Marauder/tree/feature/add-m5cardputer-support",
-    "download": 36962,
+    "download": 36970,
     "versions": [
       {
         "version": "v0.13.7",
@@ -109144,7 +109221,7 @@
     "tags": [],
     "author": "Serialgeist",
     "github": "https://github.com/serialgeist/ESP32Marauder/tree/feature/add-m5cardputer-support",
-    "download": 4582,
+    "download": 4583,
     "versions": [
       {
         "version": "v0.13.7",
@@ -109931,7 +110008,7 @@
     "tags": [],
     "author": "EricYou",
     "github": "",
-    "download": 3737,
+    "download": 3739,
     "versions": [
       {
         "version": "0.0.3",
@@ -110618,7 +110695,7 @@
     "tags": [],
     "author": "Noxious",
     "github": "https://github.com/01Mayo01/MeowUSB-BLE",
-    "download": 765,
+    "download": 767,
     "versions": [
       {
         "version": "0.2.6",
@@ -110680,7 +110757,7 @@
     "tags": [],
     "author": "MultiMote",
     "github": "https://github.com/MultiMote/meshcore-cardputer-adv",
-    "download": 664,
+    "download": 666,
     "versions": [
       {
         "version": "1.16.0-2026.7.0",
@@ -110992,7 +111069,7 @@
     "tags": [],
     "author": "Stachu0",
     "github": "https://github.com/Stachugit/MeshCore-Cardputer-ADV",
-    "download": 6225,
+    "download": 6228,
     "versions": [
       {
         "version": "v1.1.0",
@@ -111329,7 +111406,7 @@
     "tags": [],
     "author": "randoom",
     "github": "https://github.com/anton-vinogradov/meshtastic-adv",
-    "download": 601,
+    "download": 602,
     "versions": [
       {
         "version": "0.4.8",
@@ -113480,7 +113557,7 @@
     "tags": [],
     "author": "ozbk",
     "github": "",
-    "download": 21407,
+    "download": 21412,
     "versions": [
       {
         "version": "v2.7.4",
@@ -113764,7 +113841,7 @@
     "tags": [],
     "author": "Gt4kill3r",
     "github": "",
-    "download": 12983,
+    "download": 12991,
     "versions": [
       {
         "version": "2.7.23 (15/04/2026)",
@@ -114358,7 +114435,7 @@
     "tags": [],
     "author": "onimahoni",
     "github": "",
-    "download": 275,
+    "download": 277,
     "versions": [
       {
         "version": "2.7.20.79f469c ",
@@ -114822,7 +114899,7 @@
     "tags": [],
     "author": "kotovkot",
     "github": "https://github.com/digital-farms/MicroCast",
-    "download": 1820,
+    "download": 1821,
     "versions": [
       {
         "version": "v0.9",
@@ -114897,7 +114974,7 @@
     "tags": [],
     "author": "cookiejarwell",
     "github": "https://github.com/echo-lalia/Cardputer-MicroHydra",
-    "download": 2766,
+    "download": 2767,
     "versions": [
       {
         "version": "0.8",
@@ -114968,7 +115045,7 @@
     "tags": [],
     "author": "Szuszjan",
     "github": "",
-    "download": 562,
+    "download": 564,
     "versions": [
       {
         "version": "1.0",
@@ -115039,7 +115116,7 @@
     "tags": [],
     "author": "echolalia",
     "github": "https://github.com/echo-lalia/Cardputer-MicroHydra",
-    "download": 12241,
+    "download": 12245,
     "versions": [
       {
         "version": "0.10",
@@ -115624,7 +115701,7 @@
     "tags": [],
     "author": "BeanpieChen",
     "github": "https://github.com/BeanPieChen/MicroPythonShell",
-    "download": 3548,
+    "download": 3552,
     "versions": [
       {
         "version": "1.2",
@@ -116552,7 +116629,7 @@
     "tags": [],
     "author": "urtubia",
     "github": "https://github.com/urtubia/miniacid",
-    "download": 3477,
+    "download": 3481,
     "versions": [
       {
         "version": "0.0.8",
@@ -116773,7 +116850,7 @@
     "tags": [],
     "author": "chillyc0de",
     "github": "https://github.com/chillyc0de/MiniMaze-for-Cardputer-ADV",
-    "download": 278,
+    "download": 279,
     "versions": [
       {
         "version": "1.0.1",
@@ -117327,7 +117404,7 @@
     "tags": [],
     "author": "sebasPinto",
     "github": "https://github.com/SebasPinto/misspoppyrabbit",
-    "download": 151,
+    "download": 152,
     "versions": [
       {
         "version": "0.7.1",
@@ -119909,7 +119986,7 @@
     "tags": [],
     "author": "XPY-US",
     "github": "https://github.com/XPY-US/Commercial-FirmEsp32/releases/tag/FIRMWARE",
-    "download": 1621,
+    "download": 1624,
     "versions": [
       {
         "version": "v3.2.1",
@@ -119980,7 +120057,7 @@
     "tags": [],
     "author": "4x0nn",
     "github": "https://github.com/n0xa/m5stick-nemo",
-    "download": 48197,
+    "download": 48207,
     "versions": [
       {
         "version": "2.4.1-pt_br",
@@ -121201,7 +121278,7 @@
     "tags": [],
     "author": "4x0nn",
     "github": "https://github.com/n0xa/m5stick-nemo/",
-    "download": 72764,
+    "download": 72765,
     "versions": [
       {
         "version": "2.4.1-pt_br",
@@ -122060,7 +122137,7 @@
     "tags": [],
     "author": "4x0nn",
     "github": "https://github.com/n0xa/m5stick-nemo",
-    "download": 900,
+    "download": 901,
     "versions": [
       {
         "version": "3.2.1-en_US",
@@ -122394,7 +122471,7 @@
     "tags": [],
     "author": "VmThings",
     "github": "https://github.com/AndyAiCardputer/nes-tab5-usb-host",
-    "download": 254,
+    "download": 255,
     "versions": [
       {
         "version": "v2.1.12 (v0.1 Latest)",
@@ -126377,7 +126454,7 @@
     "tags": [],
     "author": "oliverxing",
     "github": "https://github.com/oliverxing2025/nostalgic-fruit-machine",
-    "download": 111,
+    "download": 112,
     "versions": [
       {
         "version": "0.7.0",
@@ -126746,18 +126823,18 @@
     "tags": [],
     "author": "luffydz",
     "github": "",
-    "download": 13,
+    "download": 14,
     "versions": [
       {
         "version": "1.0.4",
         "published_at": "2026-08-27",
         "file": "951479bfc8cd55c4ad592672f19d307d.bin",
         "Fs": 16777216,
+        "as": 5090208,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 5090208,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -128737,7 +128814,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Open-Wifi-Scanner",
-    "download": 1297,
+    "download": 1299,
     "versions": [
       {
         "version": "1.1",
@@ -129003,7 +129080,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 1744,
+    "download": 1746,
     "versions": [
       {
         "version": "v1.0",
@@ -129824,7 +129901,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Open-Wifi-Scanner",
-    "download": 16463,
+    "download": 16465,
     "versions": [
       {
         "version": "1.0",
@@ -130303,7 +130380,7 @@
     "tags": [],
     "author": "hardcoreerik",
     "github": "https://github.com/hardcoreerik/OrcSDR",
-    "download": 2,
+    "download": 3,
     "versions": [
       {
         "version": "0.2.0-beta.1",
@@ -131220,7 +131297,7 @@
     "tags": [],
     "author": "0ct0x0",
     "github": "https://github.com/0ct0sec/M5PORKCHOP",
-    "download": 22425,
+    "download": 22437,
     "versions": [
       {
         "version": "0.1.6_iddqd_hotfix",
@@ -132120,7 +132197,7 @@
     "tags": [],
     "author": "wavaeve",
     "github": "https://github.com/GeneralDussDuss/poseidon",
-    "download": 357,
+    "download": 358,
     "versions": [
       {
         "version": "0.6.8",
@@ -134538,7 +134615,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "github.com/MarsTechHAN/crosspoint-reader-mono",
-    "download": 116,
+    "download": 117,
     "versions": [
       {
         "version": "1.5.0",
@@ -134671,7 +134748,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/M5PaperMono-UserDemo",
-    "download": 78,
+    "download": 79,
     "versions": [
       {
         "version": "1.2.0",
@@ -134731,7 +134808,7 @@
     "tags": [],
     "author": "Artem76228",
     "github": "https://github.com/Artem76228/PaperOS",
-    "download": 574,
+    "download": 575,
     "versions": [
       {
         "version": "v1.3",
@@ -135297,7 +135374,7 @@
     "tags": [],
     "author": "pslon",
     "github": "",
-    "download": 420,
+    "download": 421,
     "versions": [
       {
         "version": "v1.0",
@@ -136068,7 +136145,7 @@
     "tags": [],
     "author": "Artem76228",
     "github": "https://github.com/Artem76228/PaperWeb",
-    "download": 981,
+    "download": 982,
     "versions": [
       {
         "version": "v1.3.0",
@@ -136303,7 +136380,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Password-Manager",
-    "download": 6266,
+    "download": 6267,
     "versions": [
       {
         "version": "1.0",
@@ -136374,7 +136451,7 @@
     "tags": [],
     "author": "fcavalcantirj",
     "github": "https://github.com/fcavalcantirj/pense-bem-cardputer-adv",
-    "download": 17,
+    "download": 18,
     "versions": [
       {
         "version": "0.0.1",
@@ -136445,7 +136522,7 @@
     "tags": [],
     "author": "RogueOps",
     "github": "https://github.com/M5RogueOps/Periscope-OS",
-    "download": 526,
+    "download": 527,
     "versions": [
       {
         "version": "V1.2",
@@ -136668,7 +136745,7 @@
     "tags": [],
     "author": "jblanked",
     "github": "https://github.com/jblanked/Picoware",
-    "download": 880,
+    "download": 885,
     "versions": [
       {
         "version": "v1.8.6",
@@ -137930,7 +138007,7 @@
     "tags": [],
     "author": "d4rkmen",
     "github": "https://github.com/d4rkmen/plai",
-    "download": 1374,
+    "download": 1375,
     "versions": [
       {
         "version": "1.8",
@@ -138260,7 +138337,7 @@
     "tags": [],
     "author": "zmattmanz",
     "github": "https://github.com/zmattmanz/Plume",
-    "download": 491,
+    "download": 493,
     "versions": [
       {
         "version": "v1.0-beta",
@@ -138996,7 +139073,7 @@
     "tags": [],
     "author": "mkattdas",
     "github": "https://github.com/mohith-das/pomodoro-card",
-    "download": 22,
+    "download": 24,
     "versions": [
       {
         "version": "1.0.0",
@@ -139432,7 +139509,7 @@
     "tags": [],
     "author": "kurpiq",
     "github": "https://github.com/GeneralDussDuss/poseidon",
-    "download": 880,
+    "download": 882,
     "versions": [
       {
         "version": "V0.6.1",
@@ -139503,7 +139580,7 @@
     "tags": [],
     "author": "Savvy",
     "github": "https://github.com/GeneralDussDuss/poseidon/releases/download/v0.5.0/poseidon-launcher.bin",
-    "download": 997,
+    "download": 999,
     "versions": [
       {
         "version": "5",
@@ -139764,7 +139841,7 @@
     "tags": [],
     "author": "pandian_nano",
     "github": "",
-    "download": 86,
+    "download": 87,
     "versions": [
       {
         "version": "v1.11.1",
@@ -140192,7 +140269,7 @@
     "tags": [],
     "author": "EnemyofGLaDOS",
     "github": "https://github.com/EnemyofGLaDOS/PulseOS.git",
-    "download": 1800,
+    "download": 1803,
     "versions": [
       {
         "version": "1.4",
@@ -141716,7 +141793,7 @@
     "tags": [],
     "author": "aat440hz",
     "github": "https://github.com/aat440hz/RF433ANY-M5Cardputer",
-    "download": 2755,
+    "download": 2756,
     "versions": [
       {
         "version": "1.0",
@@ -142008,7 +142085,7 @@
     "tags": [],
     "author": "bearbears",
     "github": "https://github.com/Jojorel/RFID-PN532-i2c-CARDPUTER/tree/main",
-    "download": 3019,
+    "download": 3021,
     "versions": [
       {
         "version": "1.6",
@@ -143184,7 +143261,7 @@
     "tags": [],
     "author": "acpayers",
     "github": "https://github.com/acpayers-alt/raising-hell-cardputer/releases/tag/v2.1.1",
-    "download": 2037,
+    "download": 2038,
     "versions": [
       {
         "version": "1.0.3",
@@ -143459,7 +143536,7 @@
     "tags": [],
     "author": "ChrisDaCrunk",
     "github": "",
-    "download": 5335,
+    "download": 5338,
     "versions": [
       {
         "version": "0.9.5",
@@ -143532,7 +143609,7 @@
     "tags": [],
     "author": "hosseios",
     "github": "https://github.com/7h30th3r0n3/Raspyjack",
-    "download": 537,
+    "download": 538,
     "versions": [
       {
         "version": "1.0.7",
@@ -143935,7 +144012,7 @@
     "tags": [],
     "author": "andjiang",
     "github": "",
-    "download": 98,
+    "download": 99,
     "versions": [
       {
         "version": "1.0",
@@ -144555,7 +144632,7 @@
     "tags": [],
     "author": "rizumu",
     "github": "https://github.com/LittleSound/RizumuTimer",
-    "download": 42,
+    "download": 43,
     "versions": [
       {
         "version": "26.1.0",
@@ -145638,7 +145715,7 @@
     "tags": [],
     "author": "CabraVabra",
     "github": "",
-    "download": 23,
+    "download": 24,
     "versions": [
       {
         "version": "1.0",
@@ -146045,7 +146122,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Esp32-USB-Stick",
-    "download": 3431,
+    "download": 3432,
     "versions": [
       {
         "version": "0.1",
@@ -146680,7 +146757,7 @@
     "tags": [],
     "author": "bpivk",
     "github": "https://github.com/bpivk/M5-SSH-Wireguard",
-    "download": 979,
+    "download": 981,
     "versions": [
       {
         "version": "1.1",
@@ -147055,7 +147132,7 @@
     "tags": [],
     "author": "adammelancon",
     "github": "https://github.com/adammelancon/cardputer-iss-tracker",
-    "download": 2031,
+    "download": 2033,
     "versions": [
       {
         "version": "v2.5.5",
@@ -147117,7 +147194,7 @@
     "tags": [],
     "author": "henriquesebastiao",
     "github": "https://github.com/henriquesebastiao/saturn",
-    "download": 14266,
+    "download": 14269,
     "versions": [
       {
         "version": "v1.0.0-pt_br",
@@ -147911,7 +147988,7 @@
     "tags": [],
     "author": "dagnazty",
     "github": "https://github.com/dagnazty/Semi-Evil-M5Dial",
-    "download": 564,
+    "download": 565,
     "versions": [
       {
         "version": "1.3.0",
@@ -148372,7 +148449,7 @@
     "tags": [],
     "author": "A2005H",
     "github": "https://github.com/AH2005NA/m5stick-shark",
-    "download": 20217,
+    "download": 20221,
     "versions": [
       {
         "version": "DEV 1.0.1 en-us",
@@ -149634,7 +149711,7 @@
     "tags": [],
     "author": "A2005H",
     "github": "https://github.com/AH2005NA/m5stick-shark",
-    "download": 1462,
+    "download": 1463,
     "versions": [
       {
         "version": "DEV 1.0.5 en-us",
@@ -153074,7 +153151,7 @@
     "tags": [],
     "author": "chatelp",
     "github": "https://github.com/chatelp/silicon-bubbles-cardputeradv",
-    "download": 25,
+    "download": 26,
     "versions": [
       {
         "version": "0.19",
@@ -153608,7 +153685,7 @@
     "tags": [],
     "author": "3xp10rt",
     "github": "https://github.com/nongxl/SkyCompass_Satellite",
-    "download": 497,
+    "download": 498,
     "versions": [
       {
         "version": "v1.5",
@@ -153681,7 +153758,7 @@
     "tags": [],
     "author": "vcraftjp",
     "github": "",
-    "download": 19215,
+    "download": 19216,
     "versions": [
       {
         "version": "v1.0",
@@ -153983,7 +154060,7 @@
     "tags": [],
     "author": "liyongjian5179",
     "github": "https://github.com/liyongjian5179/M5Stack_StickS3_Lucky_Slots",
-    "download": 1563,
+    "download": 1564,
     "versions": [
       {
         "version": "0.0.1",
@@ -154054,7 +154131,7 @@
     "tags": [],
     "author": "Aspick",
     "github": "https://github.com/AspikRay/Solotputer",
-    "download": 4577,
+    "download": 4578,
     "versions": [
       {
         "version": "0.0.1",
@@ -154316,7 +154393,7 @@
     "tags": [],
     "author": "e00e0",
     "github": "",
-    "download": 714,
+    "download": 715,
     "versions": [
       {
         "version": "1.0.0",
@@ -155215,7 +155292,7 @@
     "tags": [],
     "author": "GalaxyShad",
     "github": "",
-    "download": 2367,
+    "download": 2368,
     "versions": [
       {
         "version": "v1.0",
@@ -155871,7 +155948,7 @@
     "tags": [],
     "author": "kylebing",
     "github": "https://github.com/KyleBing/m5stack-cardputer-sparks",
-    "download": 369,
+    "download": 370,
     "versions": [
       {
         "version": "v1.11",
@@ -156716,7 +156793,7 @@
     "tags": [],
     "author": "Styles01",
     "github": "https://github.com/styles01/StackChan-OpenClaw-Hermes",
-    "download": 53,
+    "download": 54,
     "versions": [
       {
         "version": "0.1",
@@ -156778,7 +156855,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 5342,
+    "download": 5349,
     "versions": [
       {
         "version": "V0.4",
@@ -158494,7 +158571,7 @@
     "tags": [],
     "author": "mr_oscy",
     "github": "https://github.com/kisaragi-mochi/stackchan-mcp",
-    "download": 342,
+    "download": 343,
     "versions": [
       {
         "version": "1.8",
@@ -159535,7 +159612,7 @@
     "tags": [],
     "author": "andjiang",
     "github": "",
-    "download": 216,
+    "download": 217,
     "versions": [
       {
         "version": "0.2.1",
@@ -160103,7 +160180,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 1586,
+    "download": 1592,
     "versions": [
       {
         "version": "M5PM1-O",
@@ -160444,7 +160521,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 3776,
+    "download": 3780,
     "versions": [
       {
         "version": "v2.1.0",
@@ -160575,7 +160652,7 @@
     "tags": [],
     "author": "kawacci",
     "github": "",
-    "download": 490,
+    "download": 491,
     "versions": [
       {
         "version": "Factory code",
@@ -160869,7 +160946,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 357,
+    "download": 358,
     "versions": [
       {
         "version": "v0.4",
@@ -161142,7 +161219,7 @@
     "tags": [],
     "author": "wisnc",
     "github": "",
-    "download": 39,
+    "download": 40,
     "versions": [
       {
         "version": "0.1",
@@ -161275,7 +161352,7 @@
     "tags": [],
     "author": "palani",
     "github": "https://github.com/palaniraja/sudoku-m5papers3",
-    "download": 690,
+    "download": 691,
     "versions": [
       {
         "version": "v2.3.1",
@@ -161460,7 +161537,7 @@
     "tags": [],
     "author": "Treblewolf",
     "github": "https://github.com/Treblewolf/M5Cardputer-Sun-Rider",
-    "download": 6108,
+    "download": 6110,
     "versions": [
       {
         "version": "v1.0",
@@ -163170,7 +163247,7 @@
     "tags": [],
     "author": "RJ01988",
     "github": "",
-    "download": 12144,
+    "download": 12148,
     "versions": [
       {
         "version": "v1.0 for burning directly from M5Burner",
@@ -163753,7 +163830,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 542,
+    "download": 544,
     "versions": [
       {
         "version": "v0.1",
@@ -164693,7 +164770,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 4834,
+    "download": 4837,
     "versions": [
       {
         "version": "v0.1",
@@ -165036,7 +165113,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 1270,
+    "download": 1271,
     "versions": [
       {
         "version": "v1.8.4",
@@ -165478,7 +165555,7 @@
     "tags": [],
     "author": "zhaoker",
     "github": "https://github.com/zhaoker/M5stack_Tab5_AIO_box",
-    "download": 653,
+    "download": 655,
     "versions": [
       {
         "version": "2026.0623",
@@ -165664,7 +165741,7 @@
     "tags": [],
     "author": "Calcaware",
     "github": "https://github.com/Calcaware/Tama-Search-Uni",
-    "download": 14,
+    "download": 15,
     "versions": [
       {
         "version": "1.0.1",
@@ -165739,7 +165816,7 @@
     "tags": [],
     "author": "rm-rf_",
     "github": "https://github.com/mindovermiles262/tamaputer",
-    "download": 720,
+    "download": 721,
     "versions": [
       {
         "version": "v1.0.1",
@@ -165981,83 +166058,6 @@
       }
     ],
     "esp": "s3"
-  },
-  {
-    "_id": "6a22a14538b4ee9da029e4e5",
-    "fid": "d9e1bc4dcfa2adfd51b143e15e929abf",
-    "name": "TaskHub for StickS3",
-    "description": "TaskHub for StickS3 \u53ef\u4ee5\u628a\u4f60\u7535\u8111\u91cc\u6b63\u5728\u8dd1\u7684 AI \u4efb\u52a1\u663e\u793a\u5230 StickS3 \u4e0a\u3002\u6bd4\u5982\u54ea\u4e9b\u4efb\u52a1\u8fd8\u5728\u8dd1\u3001\u54ea\u4e9b\u5df2\u7ecf\u5b8c\u6210\u3001\u54ea\u4e9b\u9700\u8981\u4f60\u56de\u6765\u5904\u7406\uff0c\u90fd\u80fd\u4e00\u773c\u770b\u5230\u3002\u73b0\u5df2\u652f\u6301\u591a\u53f0\u7535\u8111\u4e00\u8d77\u663e\u793a\u3001\u6253\u5f00\u5bf9\u5e94 App\uff0c\u4ee5\u53ca\u957f\u6309\u8bed\u97f3\u8f93\u5165\u8f6c\u6587\u5b57\u5e76\u53d1\u9001\u3001\u8fdc\u7a0b\u76d1\u63a7\u7b49\u7b49\u529f\u80fd\u3002",
-    "cover": "78e98979a776f1c777839e558f39df62.png",
-    "category": "stickc",
-    "tags": [],
-    "author": "sheepxu",
-    "github": "https://github.com/sheepxux/Taskhub-for-StickS3",
-    "download": 312,
-    "versions": [
-      {
-        "version": "v2.0.2",
-        "published_at": "2026-06-05",
-        "file": "7d9e4b4ea73faf5fe53dcdda412b76bd.bin",
-        "Fs": 8388608,
-        "as": 1846160,
-        "ao": 65536,
-        "ss": 4521984,
-        "so": 3735552,
-        "s": 1,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "stickc",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 1846160,
-            "partition_size": 3670016,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3670016,
-              "source_offset": 65536,
-              "copy_size": 1846160,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 4521984,
-              "source": "firmware",
-              "source_offset": 3735552,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [
-              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
-            ],
-            "bytes_downloaded_for_analysis": 8425472,
-            "analyzed_at": "2026-07-28T21:31:07Z",
-            "etag": "\"FE18F59BEFC4279FEEB886BEAF4CCE1C\"",
-            "last_modified": "Tue, 16 Jun 2026 04:24:54 GMT"
-          }
-        }
-      }
-    ],
-    "esp": "s3",
-    "description_en": "TaskHub for StickS3 You can put what is running on your computer AI The task is displayed to StickS3 superior\u3002For example, which tasks are still running?\u3001what has been completed\u3001Which ones need you to come back and deal with?\uff0cCan be seen at a glance\u3002Now supports multiple computers to display together\u3001Open corresponding App\uff0cAnd press and hold voice input to convert text and send\u3001Remote monitoring and other functions\u3002",
-    "description_src": "TaskHub for StickS3 \u53ef\u4ee5\u628a\u4f60\u7535\u8111\u91cc\u6b63\u5728\u8dd1\u7684 AI \u4efb\u52a1\u663e\u793a\u5230 StickS3 \u4e0a\u3002\u6bd4\u5982\u54ea\u4e9b\u4efb\u52a1\u8fd8\u5728\u8dd1\u3001\u54ea\u4e9b\u5df2\u7ecf\u5b8c\u6210\u3001\u54ea\u4e9b\u9700\u8981\u4f60\u56de\u6765\u5904\u7406\uff0c\u90fd\u80fd\u4e00\u773c\u770b\u5230\u3002\u73b0\u5df2\u652f\u6301\u591a\u53f0\u7535\u8111\u4e00\u8d77\u663e\u793a\u3001\u6253\u5f00\u5bf9\u5e94 App\uff0c\u4ee5\u53ca\u957f\u6309\u8bed\u97f3\u8f93\u5165\u8f6c\u6587\u5b57\u5e76\u53d1\u9001\u3001\u8fdc\u7a0b\u76d1\u63a7\u7b49\u7b49\u529f\u80fd\u3002"
   },
   {
     "_id": "66fb1b067b7868d6d0f99dc6",
@@ -167076,7 +167076,7 @@
     "tags": [],
     "author": "Aleks_AlcDel",
     "github": "https://github.com/AleksAlcDel/Tetris-for-M5StickCPlus2",
-    "download": 6231,
+    "download": 6232,
     "versions": [
       {
         "version": "1.6.9",
@@ -167626,7 +167626,7 @@
     "tags": [],
     "author": "oldmanrukus1",
     "github": "",
-    "download": 700,
+    "download": 701,
     "versions": [
       {
         "version": "1",
@@ -168336,7 +168336,7 @@
     "tags": [],
     "author": "lunarc3",
     "github": "https://github.com/lunarc3/CardputerTiltJump",
-    "download": 75,
+    "download": 76,
     "versions": [
       {
         "version": "0.1",
@@ -170747,7 +170747,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 80416,
+    "download": 80419,
     "requiredPlugin": "wifi",
     "versions": [
       {
@@ -182497,7 +182497,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 43796,
+    "download": 43801,
     "versions": [
       {
         "version": "v2.0.3",
@@ -186490,7 +186490,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 36740,
+    "download": 36742,
     "versions": [
       {
         "version": "Alpha-29-4MB",
@@ -193384,7 +193384,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 25950,
+    "download": 25960,
     "versions": [
       {
         "version": "Alpha-29",
@@ -201567,7 +201567,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 18943,
+    "download": 18944,
     "versions": [
       {
         "version": "Alpha-29-ATOMS3",
@@ -213654,7 +213654,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 18065,
+    "download": 18070,
     "versions": [
       {
         "version": "Alpha-29",
@@ -218926,7 +218926,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 10781,
+    "download": 10783,
     "versions": [
       {
         "version": "v2.0.3-ATOM-LITE",
@@ -238763,7 +238763,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 6823,
+    "download": 6824,
     "versions": [
       {
         "version": "v2.2.9",
@@ -249216,7 +249216,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 1995,
+    "download": 1996,
     "versions": [
       {
         "version": "v2.4.4",
@@ -282012,7 +282012,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 4531,
+    "download": 4532,
     "versions": [
       {
         "version": "v2.1.4",
@@ -288223,7 +288223,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 27974,
+    "download": 27981,
     "versions": [
       {
         "version": "v2.3.5",
@@ -289660,7 +289660,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 12156,
+    "download": 12157,
     "versions": [
       {
         "version": "Alpha-29",
@@ -301110,7 +301110,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 24501,
+    "download": 24503,
     "versions": [
       {
         "version": "Alpha-29",
@@ -303970,7 +303970,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 67286,
+    "download": 67287,
     "versions": [
       {
         "version": "Alpha-29",
@@ -307964,7 +307964,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 7140,
+    "download": 7149,
     "versions": [
       {
         "version": "v2.4.0",
@@ -316156,7 +316156,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 63198,
+    "download": 63200,
     "requiredPlugin": "wifi",
     "versions": [
       {
@@ -320071,7 +320071,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 18555,
+    "download": 18556,
     "requiredPlugin": "wifi",
     "versions": [
       {
@@ -347720,7 +347720,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 4354,
+    "download": 4355,
     "requiredPlugin": "wifi",
     "versions": [
       {
@@ -351868,7 +351868,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Bluetooth-Keyboard-Mouse-Emulator",
-    "download": 13670,
+    "download": 13672,
     "versions": [
       {
         "version": "1.0",
@@ -352351,7 +352351,7 @@
     "tags": [],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Ultimate-Remote",
-    "download": 39617,
+    "download": 39625,
     "versions": [
       {
         "version": "1.0",
@@ -355447,7 +355447,7 @@
     "tags": [],
     "author": "Volos",
     "github": "https://github.com/VolosR/evilClock",
-    "download": 16700,
+    "download": 16702,
     "versions": [
       {
         "version": "1.0.0",
@@ -356234,7 +356234,7 @@
     "tags": [],
     "author": "Darangus",
     "github": "Volos-TV-Remote",
-    "download": 6689,
+    "download": 6690,
     "versions": [
       {
         "version": "0.1",
@@ -356806,7 +356806,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 255,
+    "download": 256,
     "versions": [
       {
         "version": "v1.0",
@@ -357174,7 +357174,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "",
-    "download": 3081,
+    "download": 3082,
     "requiredPlugin": "paper-weather-station",
     "versions": [
       {
@@ -357658,7 +357658,7 @@
     "tags": [],
     "author": "ZrutrA",
     "github": "https://github.com/ZrutrA/WiFi-Capture-Page-M5Cardputer",
-    "download": 2830,
+    "download": 2831,
     "versions": [
       {
         "version": "1.0",
@@ -357887,7 +357887,7 @@
     "tags": [],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/Cardputer-ADV-WiFi-BLE-Radar",
-    "download": 13790,
+    "download": 13794,
     "versions": [
       {
         "version": "3.1 (22.04.2026)",
@@ -358018,7 +358018,7 @@
     "tags": [],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/Cardputer-ADV-CSI-Radar",
-    "download": 23435,
+    "download": 23450,
     "versions": [
       {
         "version": "1.43 (22.03.2026)",
@@ -358288,7 +358288,7 @@
     "tags": [],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/WiFi-Remote-Display-ADV",
-    "download": 5170,
+    "download": 5172,
     "versions": [
       {
         "version": "v1.0  (21.04.2026)",
@@ -358608,7 +358608,7 @@
     "tags": [],
     "author": "tobozo",
     "github": "",
-    "download": 1424,
+    "download": 1426,
     "versions": [
       {
         "version": "v1.0.0",
@@ -359009,7 +359009,7 @@
     "tags": [],
     "author": "Jirochan",
     "github": "https://github.com/ji1ore/M5CoreHamCAT/",
-    "download": 90,
+    "download": 91,
     "versions": [
       {
         "version": "2.51",
@@ -359593,7 +359593,7 @@
     "tags": [],
     "author": "Drinello",
     "github": "",
-    "download": 515,
+    "download": 516,
     "versions": [
       {
         "version": "1.1.7",
@@ -359726,7 +359726,7 @@
     "tags": [],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/Wikipedia-Offline-ADV",
-    "download": 7174,
+    "download": 7178,
     "versions": [
       {
         "version": "1.0 (25.05.2026)",
@@ -362035,7 +362035,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/78/xiaozhi-esp32.git",
-    "download": 760,
+    "download": 761,
     "versions": [
       {
         "version": "v1.6.2",
@@ -362226,7 +362226,7 @@
     "tags": [],
     "author": "M5Stack",
     "github": "https://github.com/78/xiaozhi-esp32.git",
-    "download": 2824,
+    "download": 2826,
     "versions": [
       {
         "version": "v1.3.0-NiHaoXiaoZhi",
@@ -384390,7 +384390,7 @@
     "tags": [],
     "author": "atomic14",
     "github": "",
-    "download": 2246,
+    "download": 2247,
     "versions": [
       {
         "version": "v1.0.0",
@@ -385140,7 +385140,7 @@
     "tags": [],
     "author": "evanmyt",
     "github": "",
-    "download": 17,
+    "download": 18,
     "versions": [
       {
         "version": "1.0",
@@ -385998,7 +385998,7 @@
     "tags": [],
     "author": "lolzik1111",
     "github": "",
-    "download": 188,
+    "download": 190,
     "versions": [
       {
         "version": "idk",
@@ -393028,7 +393028,7 @@
     "tags": [],
     "author": "whynand",
     "github": "",
-    "download": 1091,
+    "download": 1092,
     "versions": [
       {
         "version": "1",
@@ -394358,7 +394358,7 @@
     "tags": [],
     "author": "Lexiko",
     "github": "https://github.com/lexilexiko/0N3P0rK",
-    "download": 462,
+    "download": 465,
     "versions": [
       {
         "version": "1.2.5.6.5",
@@ -398015,7 +398015,7 @@
     "tags": [],
     "author": "admin123321",
     "github": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
-    "download": 50,
+    "download": 51,
     "versions": [
       {
         "version": "2",
@@ -404726,7 +404726,7 @@
     "tags": [],
     "author": "\u5854\u5c14\u5854\u7f57\u65af",
     "github": "",
-    "download": 570,
+    "download": 571,
     "versions": [
       {
         "version": "1.1.1",
@@ -405321,7 +405321,7 @@
     "tags": [],
     "author": "gywan94",
     "github": "",
-    "download": 156,
+    "download": 157,
     "versions": [
       {
         "version": "1.3",
@@ -409027,7 +409027,7 @@
     "tags": [],
     "author": "i12bp8",
     "github": "https://github.com/i12bp8/wMBuster-ADV",
-    "download": 229,
+    "download": 230,
     "versions": [
       {
         "version": "1.0",
@@ -409089,7 +409089,7 @@
     "tags": [],
     "author": "olekalek321123",
     "github": "https://github.com/olekalek112233/web-browser-cardputer-ADV/tree/main",
-    "download": 572,
+    "download": 573,
     "versions": [
       {
         "version": "v101.00",
@@ -412428,7 +412428,7 @@
     "tags": [],
     "author": "YWolf",
     "github": "",
-    "download": 961,
+    "download": 962,
     "versions": [
       {
         "version": "v1.4.1",
@@ -412505,7 +412505,7 @@
     "tags": [],
     "author": "flye871948499",
     "github": "",
-    "download": 248,
+    "download": 249,
     "versions": [
       {
         "version": "1.0.1",
@@ -414736,7 +414736,7 @@
     "tags": [],
     "author": "mengxiyou",
     "github": "",
-    "download": 16817,
+    "download": 16818,
     "versions": [
       {
         "version": "2.1.0(\u5386\u53f2\u7248\u672c)",
