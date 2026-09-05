@@ -1,5 +1,375 @@
 [
     {
+        "name": "BBoink",
+        "author": "whitewhidow",
+        "description": "Minimal WiFi handshake / PMKID capture firmware for the LilyGo T-Embed CC1101 and CC1101 PLUS (ESP32-S3, rotary encoder + side button, ST7789 320\u00d7170). It captures EAPOL handshakes and PMKIDs over the air and uploads them for cloud cracking",
+        "cover": "",
+        "github": "https://github.com/whitewhidow/bboink",
+        "fid": "CFWWS6UQROCO2UBUM67GN6A2KGLPZUHM",
+        "versions": [
+            {
+                "version": "v1.1.2",
+                "published_at": "2026-09-05",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v1.1.2/bboink-cardputer-adv.bin",
+                "Fs": 1473120,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1407584,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1407584,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1407584,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 393216,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T21:31:23Z",
+                        "etag": "\"0x8DF0B80C328B3DB\"",
+                        "last_modified": "Sat, 05 Sep 2026 19:06:16 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.1.1",
+                "published_at": "2026-09-05",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v1.1.1/bboink-cardputer-adv.bin",
+                "Fs": 1463424,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1397888,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1397888,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1397888,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 393216,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T21:31:23Z",
+                        "etag": "\"0x8DF0B637716083E\"",
+                        "last_modified": "Sat, 05 Sep 2026 15:36:33 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.1.0",
+                "published_at": "2026-09-05",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v1.1.0/bboink-cardputer-adv.bin",
+                "Fs": 1462464,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1396928,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1396928,
+                        "partition_size": 3014656,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3014656,
+                            "source_offset": 65536,
+                            "copy_size": 1396928,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 2293760,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T21:31:23Z",
+                        "etag": "\"0x8DF0B3E3ADC4A8A\"",
+                        "last_modified": "Sat, 05 Sep 2026 11:10:01 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.0.0",
+                "published_at": "2026-09-04",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v1.0.0/bboink-cardputer-adv.bin",
+                "Fs": 1460144,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1394608,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1394608,
+                        "partition_size": 3014656,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3014656,
+                            "source_offset": 65536,
+                            "copy_size": 1394608,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 2293760,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T21:31:23Z",
+                        "etag": "\"0x8DF0A838AD858B6\"",
+                        "last_modified": "Fri, 04 Sep 2026 12:53:39 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.9.23",
+                "published_at": "2026-09-03",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.23/bboink-cardputer-adv.bin",
+                "Fs": 1460144,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1394608,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1394608,
+                        "partition_size": 3014656,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3014656,
+                            "source_offset": 65536,
+                            "copy_size": 1394608,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 2293760,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T21:31:24Z",
+                        "etag": "\"0x8DF09EC1A24D042\"",
+                        "last_modified": "Thu, 03 Sep 2026 18:49:36 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.9.22",
+                "published_at": "2026-09-02",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.22/bboink-cardputer-adv.bin",
+                "Fs": 1453936,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1388400,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cardputer",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1388400,
+                        "partition_size": 3014656,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3014656,
+                            "source_offset": 65536,
+                            "copy_size": 1388400,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 2293760,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T21:31:24Z",
+                        "etag": "\"0x8DF092BD9C401A2\"",
+                        "last_modified": "Wed, 02 Sep 2026 19:53:25 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "cardputer",
+        "esp": "s3"
+    },
+    {
         "name": "Bruce Firmware (BETA)",
         "author": "pr3y-dev",
         "description": "Bruce is a custom firmware for the M5Stack Carduputer, designed to enhance its functionality and user experience. This beta version includes new features and improvements over the stock firmware.",
