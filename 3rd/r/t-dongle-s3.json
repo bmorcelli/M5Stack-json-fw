@@ -209,6 +209,73 @@
                 }
             },
             {
+                "version": "v1.1.3",
+                "published_at": "2026-09-05",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v1.1.3/bboink-tdongle-s3.bin",
+                "Fs": 1461792,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1396256,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-dongle-s3",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1396256,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1396256,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T23:23:48Z",
+                        "etag": "\"0x8DF0B9A44B96FF0\"",
+                        "last_modified": "Sat, 05 Sep 2026 22:08:51 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.0.0",
                 "published_at": "2026-09-04",
                 "file": "https://github.com/whitewhidow/bboink/releases/download/v1.0.0/bboink-tdongle-s3.bin",
