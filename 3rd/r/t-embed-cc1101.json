@@ -8,6 +8,73 @@
         "fid": "CFWOQA6P2PVJVEBKVG7SQVQWNXGTN26O",
         "versions": [
             {
+                "version": "v1.1.0",
+                "published_at": "2026-09-05",
+                "file": "https://github.com/whitewhidow/bboink/releases/download/v1.1.0/bboink-t-embed-cc1101.bin",
+                "Fs": 1530512,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1464976,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1464976,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1464976,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "littlefs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-05T12:08:22Z",
+                        "etag": "\"0x8DF0B3E06659A13\"",
+                        "last_modified": "Sat, 05 Sep 2026 11:08:33 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.0.0",
                 "published_at": "2026-09-04",
                 "file": "https://github.com/whitewhidow/bboink/releases/download/v1.0.0/bboink-t-embed-cc1101.bin",
@@ -607,73 +674,6 @@
                         "analyzed_at": "2026-08-31T20:46:26Z",
                         "etag": "\"0x8DF07A0DB70A8B7\"",
                         "last_modified": "Mon, 31 Aug 2026 20:45:56 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.9.16",
-                "published_at": "2026-08-31",
-                "file": "https://github.com/whitewhidow/bboink/releases/download/v0.9.16/bboink-t-embed-cc1101.bin",
-                "Fs": 1501056,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1435520,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-embed-cc1101",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1435520,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 1435520,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 1572864,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "littlefs",
-                            "role": "spiffs",
-                            "size": 8781824,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-01T00:07:43Z",
-                        "etag": "\"0x8DF07A6CE6D8633\"",
-                        "last_modified": "Mon, 31 Aug 2026 21:28:31 GMT"
                     }
                 }
             }
@@ -2326,8 +2326,8 @@
                 }
             }
         ],
-        "category": "t-embed-cc1101",
-        "esp": "s3"
+        "esp": "s3",
+        "category": "t-embed-cc1101"
     },
     {
         "name": "Launcher",
