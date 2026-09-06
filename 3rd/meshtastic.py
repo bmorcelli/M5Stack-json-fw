@@ -34,6 +34,8 @@ DEVICES = [
     {"target": "t5s3-epaper-v1", "json": "t-t5s3.json", "variant": "v1.0"},
     {"target": "t5s3-epaper-v2", "json": "t-t5s3.json", "variant": "v1.1"},
     {"target": "t-watch-s3", "json": "t-watch-s3.json"},
+    {"target": "seeed-sensecap-indicator-tft", "json": "seeedstudio-sensecap.json", "is_fancy": True},
+    {"target": "seeed-sensecap-indicator", "json": "seeedstudio-sensecap.json"},
 ]
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
