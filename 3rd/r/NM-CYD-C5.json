@@ -10,19 +10,19 @@
                 "version": "Beta",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-nm-cyd-c5.bin",
-                "Fs": 4236128,
+                "Fs": 4237152,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4170592,
+                "as": 4171616,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4170592,
+                        "image_size": 4171616,
                         "partition_size": 5111808,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -35,7 +35,7 @@
                             "role": "firmware",
                             "size": 5111808,
                             "source_offset": 65536,
-                            "copy_size": 4170592,
+                            "copy_size": 4171616,
                             "required": true,
                             "source": "firmware"
                         },
@@ -56,16 +56,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-31T20:46:25Z",
-                        "etag": "\"0x8DF0771220FC535\"",
-                        "last_modified": "Mon, 31 Aug 2026 15:04:19 GMT"
+                        "analyzed_at": "2026-09-07T22:05:29Z",
+                        "etag": "\"0x8DF0D2480DF953E\"",
+                        "last_modified": "Mon, 07 Sep 2026 21:10:54 GMT"
                     }
                 }
             }
         ],
         "fid": "CFW8F9FNIDNW7LI4B4FRTHY0L2XWO1VL",
-        "esp": "c5",
-        "category": "NM-CYD-C5"
+        "category": "NM-CYD-C5",
+        "esp": "c5"
     },
     {
         "name": "Cheap Yellow Monster",
@@ -75,6 +75,53 @@
         "github": "https://github.com/JimGat/CYM-NM28C5",
         "fid": "CFW3TMV2H6G2YR2VVPOVKXUKPUQ4BESO",
         "versions": [
+            {
+                "version": "v2.13.43",
+                "published_at": "2026-09-07",
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.13.43/CYM-NM28C5.bin",
+                "Fs": 3097248,
+                "nb": true,
+                "ao": 0,
+                "as": 3097248,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "nm-cyd-c5",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 3097248,
+                        "partition_size": 3097248,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3097248,
+                            "source_offset": 0,
+                            "copy_size": 3097248,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-07T04:52:17Z",
+                        "etag": "\"0x8DF0C85A58EDF5E\"",
+                        "last_modified": "Mon, 07 Sep 2026 02:13:45 GMT"
+                    }
+                }
+            },
             {
                 "version": "v2.12.2",
                 "published_at": "2026-08-12",
@@ -497,13 +544,6 @@
                         "last_modified": "Sat, 04 Jul 2026 03:56:17 GMT"
                     }
                 }
-            },
-            {
-                "version": "vv2.10.25",
-                "published_at": "2026-07-04",
-                "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/vv2.10.25/CYM-NM28C5.bin",
-                "invalid": true,
-                "analysis_error": "Failed to read firmware header: HTTPError: 404 Client Error: Not Found for url: https://github.com/JimGat/CYM-NM28C5/releases/download/vv2.10.25/CYM-NM28C5.bin"
             }
         ],
         "esp": "c5",

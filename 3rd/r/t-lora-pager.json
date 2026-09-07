@@ -470,19 +470,19 @@
                 "version": "Beta",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-lora-pager.bin",
-                "Fs": 4318608,
+                "Fs": 4319456,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4253072,
+                "as": 4253920,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-lora-pager",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4253072,
+                        "image_size": 4253920,
                         "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -495,7 +495,7 @@
                             "role": "firmware",
                             "size": 4653056,
                             "source_offset": 65536,
-                            "copy_size": 4253072,
+                            "copy_size": 4253920,
                             "required": true,
                             "source": "firmware"
                         },
@@ -516,16 +516,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-31T20:46:28Z",
-                        "etag": "\"0x8DF07712228AF61\"",
-                        "last_modified": "Mon, 31 Aug 2026 15:04:19 GMT"
+                        "analyzed_at": "2026-09-07T22:05:35Z",
+                        "etag": "\"0x8DF0D2480E057B9\"",
+                        "last_modified": "Mon, 07 Sep 2026 21:10:54 GMT"
                     }
                 }
             }
         ],
         "fid": "CFWW2L7Q7BDDLSWLRJX3KAC9COHJCSWQ",
-        "esp": "s3",
-        "category": "t-lora-pager"
+        "category": "t-lora-pager",
+        "esp": "s3"
     },
     {
         "name": "Camillia-MT",
@@ -535,6 +535,147 @@
         "github": "https://github.com/oumike/camillia-mt",
         "fid": "CFWS6ZPJ4PT77ROTEHJCTVQGGVB3M6XO",
         "versions": [
+            {
+                "version": "v4.9.1",
+                "published_at": "2026-09-07",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v4.9.1/camillia-mt-tlora-pager-tft-v4.9.1-ota.bin",
+                "Fs": 3057584,
+                "nb": true,
+                "ao": 0,
+                "as": 3057584,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 3057584,
+                        "partition_size": 3057584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3057584,
+                            "source_offset": 0,
+                            "copy_size": 3057584,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-07T04:52:17Z",
+                        "etag": "\"0x8DF0C7F0AE367A5\"",
+                        "last_modified": "Mon, 07 Sep 2026 01:26:29 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v4.9.2",
+                "published_at": "2026-09-07",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v4.9.2/camillia-mt-tlora-pager-tft-v4.9.2-ota.bin",
+                "Fs": 3067184,
+                "nb": true,
+                "ao": 0,
+                "as": 3067184,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 3067184,
+                        "partition_size": 3067184,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3067184,
+                            "source_offset": 0,
+                            "copy_size": 3067184,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-07T22:05:35Z",
+                        "etag": "\"0x8DF0D17973C8843\"",
+                        "last_modified": "Mon, 07 Sep 2026 19:38:28 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v4.9.0",
+                "published_at": "2026-09-06",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v4.9.0/camillia-mt-tlora-pager-tft-v4.9.0-ota.bin",
+                "Fs": 2998816,
+                "nb": true,
+                "ao": 0,
+                "as": 2998816,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 2998816,
+                        "partition_size": 2998816,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2998816,
+                            "source_offset": 0,
+                            "copy_size": 2998816,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-06T22:25:19Z",
+                        "etag": "\"0x8DF0C617775BC17\"",
+                        "last_modified": "Sun, 06 Sep 2026 21:54:46 GMT"
+                    }
+                }
+            },
             {
                 "version": "v4.8.1",
                 "published_at": "2026-09-05",
@@ -861,147 +1002,6 @@
                         "analyzed_at": "2026-09-03T18:32:48Z",
                         "etag": "\"0x8DF09DC044D9D90\"",
                         "last_modified": "Thu, 03 Sep 2026 16:54:27 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v4.7.6",
-                "published_at": "2026-09-02",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v4.7.6/camillia-mt-tlora-pager-tft-v4.7.6-ota.bin",
-                "Fs": 2978272,
-                "nb": true,
-                "ao": 0,
-                "as": 2978272,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 2978272,
-                        "partition_size": 2978272,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2978272,
-                            "source_offset": 0,
-                            "copy_size": 2978272,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-02T01:05:10Z",
-                        "etag": "\"0x8DF088C9929F6CD\"",
-                        "last_modified": "Wed, 02 Sep 2026 00:53:26 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v4.7.7",
-                "published_at": "2026-09-02",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v4.7.7/camillia-mt-tlora-pager-tft-v4.7.7-ota.bin",
-                "Fs": 2978592,
-                "nb": true,
-                "ao": 0,
-                "as": 2978592,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 2978592,
-                        "partition_size": 2978592,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2978592,
-                            "source_offset": 0,
-                            "copy_size": 2978592,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-02T05:43:07Z",
-                        "etag": "\"0x8DF089C29B6A777\"",
-                        "last_modified": "Wed, 02 Sep 2026 02:44:51 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v4.7.9",
-                "published_at": "2026-09-02",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v4.7.9/camillia-mt-tlora-pager-tft-v4.7.9-ota.bin",
-                "Fs": 2983632,
-                "nb": true,
-                "ao": 0,
-                "as": 2983632,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 2983632,
-                        "partition_size": 2983632,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2983632,
-                            "source_offset": 0,
-                            "copy_size": 2983632,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-02T20:57:54Z",
-                        "etag": "\"0x8DF0921DFAF2054\"",
-                        "last_modified": "Wed, 02 Sep 2026 18:42:00 GMT"
                     }
                 }
             }
@@ -2238,7 +2238,7 @@
             {
                 "version": "2.7.26.54e0d8d",
                 "published_at": "2026-06-24",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/37051990d95d7ec5fe254a598be7eef2d7fa0b25/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/ecf8353223e4f49045528310f4845988ed538d01/firmware-2.7.26.54e0d8d/firmware-tlora-pager-2.7.26.54e0d8d.factory.bin",
                 "Fs": 2470288,
                 "s": 0,
                 "f": 0,
@@ -2285,7 +2285,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-05T08:40:16Z",
+                        "analyzed_at": "2026-09-06T10:48:32Z",
                         "etag": "W/\"aaaa16cd274f7d32777baefc0b43fd54a785afdf6a104934d3db128d71dd6952\""
                     }
                 }
@@ -2293,7 +2293,7 @@
             {
                 "version": "2.7.15.567b8ea",
                 "published_at": "2025-11-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/37051990d95d7ec5fe254a598be7eef2d7fa0b25/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/ecf8353223e4f49045528310f4845988ed538d01/firmware-2.7.15.567b8ea/firmware-tlora-pager-2.7.15.567b8ea.bin",
                 "Fs": 2359680,
                 "s": 0,
                 "f": 0,
@@ -2340,7 +2340,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-05T08:40:16Z",
+                        "analyzed_at": "2026-09-06T10:48:32Z",
                         "etag": "W/\"3e56057395b1f0e55af097bce976b33da5a22ef8cf224cbdd2da8228e6fe6210\""
                     }
                 }
@@ -3306,6 +3306,118 @@
         "fid": "CFWFRWQO44EP2U6OJKWSSULNOMOSJA44",
         "versions": [
             {
+                "version": "beta_78",
+                "published_at": "2026-09-07",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_78/wadamesh-tlora-pager-lr1121-merged.bin",
+                "Fs": 3646048,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3580512,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3580512,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3580512,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-07T15:19:13Z",
+                        "etag": "\"0x8DF0CF11BAEE04C\"",
+                        "last_modified": "Mon, 07 Sep 2026 15:03:00 GMT"
+                    }
+                }
+            },
+            {
+                "version": "beta_77",
+                "published_at": "2026-09-06",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_77/wadamesh-tlora-pager-lr1121-merged.bin",
+                "Fs": 3645264,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3579728,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3579728,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3579728,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-06T18:36:19Z",
+                        "etag": "\"0x8DF0C35082483A3\"",
+                        "last_modified": "Sun, 06 Sep 2026 16:36:41 GMT"
+                    }
+                }
+            },
+            {
                 "version": "beta_76",
                 "published_at": "2026-09-04",
                 "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_76/wadamesh-tlora-pager-lr1121-merged.bin",
@@ -3752,118 +3864,6 @@
                         "last_modified": "Sat, 22 Aug 2026 22:07:21 GMT"
                     }
                 }
-            },
-            {
-                "version": "beta_67",
-                "published_at": "2026-08-21",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_67/wadamesh-tlora-pager-lr1121-merged.bin",
-                "Fs": 3496000,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3430464,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3430464,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3430464,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-21T16:55:41Z",
-                        "etag": "\"0x8DEFFA02596E89F\"",
-                        "last_modified": "Fri, 21 Aug 2026 16:20:42 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_68",
-                "published_at": "2026-08-21",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_68/wadamesh-tlora-pager-lr1121-merged.bin",
-                "Fs": 3513712,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3448176,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3448176,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3448176,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-21T20:09:48Z",
-                        "etag": "\"0x8DEFFC003DE2055\"",
-                        "last_modified": "Fri, 21 Aug 2026 20:08:49 GMT"
-                    }
-                }
             }
         ],
         "esp": "s3",
@@ -3877,6 +3877,118 @@
         "github": "https://github.com/ALLFATHER-BV/wadamesh",
         "fid": "CFWXK2SEBQC3RH6MDX2UAIUG4HACEN2C",
         "versions": [
+            {
+                "version": "beta_78",
+                "published_at": "2026-09-07",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_78/wadamesh-tlora-pager-sx1262-merged.bin",
+                "Fs": 3647264,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3581728,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3581728,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3581728,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-07T15:19:13Z",
+                        "etag": "\"0x8DF0CF11E23B6D3\"",
+                        "last_modified": "Mon, 07 Sep 2026 15:03:04 GMT"
+                    }
+                }
+            },
+            {
+                "version": "beta_77",
+                "published_at": "2026-09-06",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_77/wadamesh-tlora-pager-sx1262-merged.bin",
+                "Fs": 3646416,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3580880,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3580880,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3580880,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-06T18:36:19Z",
+                        "etag": "\"0x8DF0C350A90D589\"",
+                        "last_modified": "Sun, 06 Sep 2026 16:36:45 GMT"
+                    }
+                }
+            },
             {
                 "version": "beta_76",
                 "published_at": "2026-09-04",
@@ -4322,118 +4434,6 @@
                         "analyzed_at": "2026-08-22T22:32:23Z",
                         "etag": "\"0x8DF0099BE55B73D\"",
                         "last_modified": "Sat, 22 Aug 2026 22:07:23 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_67",
-                "published_at": "2026-08-21",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_67/wadamesh-tlora-pager-sx1262-merged.bin",
-                "Fs": 3497328,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3431792,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3431792,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3431792,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-21T16:55:41Z",
-                        "etag": "\"0x8DEFFA0273A6B64\"",
-                        "last_modified": "Fri, 21 Aug 2026 16:20:45 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_68",
-                "published_at": "2026-08-21",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_68/wadamesh-tlora-pager-sx1262-merged.bin",
-                "Fs": 3514896,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3449360,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3449360,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3449360,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-21T20:09:48Z",
-                        "etag": "\"0x8DEFFC0047C021F\"",
-                        "last_modified": "Fri, 21 Aug 2026 20:08:50 GMT"
                     }
                 }
             }
