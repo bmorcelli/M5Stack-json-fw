@@ -48236,6 +48236,312 @@
     "category": "seeedstudio-reterminal-sticky"
   },
   {
+    "name": "Factory Firmware",
+    "author": "SeeedStudio",
+    "github": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.0",
+    "description": "",
+    "cover": "",
+    "versions": [
+      {
+        "version": "v1.0.0",
+        "published_at": "2023-04-20",
+        "file": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/download/v1.0.0/Default_Factory_Firmware_ESP32-S3_v1.0.0.bin",
+        "Fs": 2036000,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1970464,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-sensecap",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1970464,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 1970464,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-09T19:34:44Z",
+            "etag": "\"0x8DB4177EB54529B\"",
+            "last_modified": "Thu, 20 Apr 2023 08:19:10 GMT"
+          }
+        }
+      }
+    ],
+    "fid": "CFWJH1MUQTRGYYAZWEXNHDRY05YVZNIC",
+    "category": "seeedstudio-sensecap",
+    "esp": "s3"
+  },
+  {
+    "name": "Home Assistant Firmware Demo",
+    "author": "SeeedStudio",
+    "github": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.2",
+    "description": "",
+    "cover": "",
+    "versions": [
+      {
+        "version": "v1.0.2",
+        "published_at": "2023-10-09",
+        "file": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/download/v1.0.2/indicator_ha.bin",
+        "Fs": 2313968,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2248432,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-sensecap",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2248432,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 2248432,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-09T19:34:44Z",
+            "etag": "\"0x8DBC8A90A23093C\"",
+            "last_modified": "Mon, 09 Oct 2023 09:20:54 GMT"
+          }
+        }
+      }
+    ],
+    "fid": "CFWEQXY4CMGDYR6UFJ4Y19P8125RNT2W",
+    "category": "seeedstudio-sensecap",
+    "esp": "s3"
+  },
+  {
+    "name": "LoRaHub Demo Firmware",
+    "author": "SeeedStudio",
+    "github": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.3-beta-lorahub-demo",
+    "description": "",
+    "cover": "",
+    "versions": [
+      {
+        "version": "v1.0.0",
+        "published_at": "2024-11-7",
+        "file": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/download/v1.0.3-beta-lorahub-demo/Indicator_Lorahub_v1.0.0.bin",
+        "Fs": 2405328,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2339792,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-sensecap",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2339792,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 2339792,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-09T19:34:44Z",
+            "etag": "\"0x8DCFEF293048E3A\"",
+            "last_modified": "Thu, 07 Nov 2024 06:08:18 GMT"
+          }
+        }
+      }
+    ],
+    "fid": "CFWE0RKFXCFQFBEZ3R4246HNYHKOJHBO",
+    "category": "seeedstudio-sensecap",
+    "esp": "s3"
+  },
+  {
+    "name": "LoRaWAN Firmware Demo",
+    "author": "SeeedStudio",
+    "github": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.3",
+    "description": "",
+    "cover": "",
+    "versions": [
+      {
+        "version": "v1.0.1",
+        "published_at": "2024-01-05",
+        "file": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/download/v1.0.3-beta/indicator_lorawan.bin",
+        "Fs": 2434160,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2368624,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-sensecap",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2368624,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 2368624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-09T19:34:44Z",
+            "etag": "\"0x8DC0DCBF49A5DD3\"",
+            "last_modified": "Fri, 05 Jan 2024 08:54:41 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.0.0",
+        "published_at": "2023-12-18",
+        "file": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/download/v1.0.3/indicator_lorawan.bin",
+        "Fs": 2429888,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2364352,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-sensecap",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2364352,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 2364352,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-09T19:34:44Z",
+            "etag": "\"0x8DC02B81D736E98\"",
+            "last_modified": "Fri, 22 Dec 2023 06:34:57 GMT"
+          }
+        }
+      }
+    ],
+    "fid": "CFWEFOVLR99Q60EQPFRA7AELUKBQ3UOA",
+    "category": "seeedstudio-sensecap",
+    "esp": "s3"
+  },
+  {
     "author": "Meshtastic",
     "cover": "https://meshtastic.org/img/logo.svg",
     "logic": "meshtastic",
@@ -48480,6 +48786,63 @@
     "fid": "CFWDQ47R0A8968FNYOMJLJ1HSLH3QSRT",
     "esp": "s3",
     "category": "seeedstudio-sensecap"
+  },
+  {
+    "name": "OpenAI Firmware Demo",
+    "author": "SeeedStudio",
+    "github": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.1.0",
+    "description": "",
+    "cover": "",
+    "versions": [
+      {
+        "version": "v1.0.0",
+        "published_at": "2025-11-28",
+        "file": "https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/download/v1.1.0/merged_indicator_openai.bin",
+        "Fs": 2404096,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2338560,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-sensecap",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2338560,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 2338560,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-09T19:34:44Z",
+            "etag": "\"0x8DE2E6586BA21E5\"",
+            "last_modified": "Fri, 28 Nov 2025 10:04:32 GMT"
+          }
+        }
+      }
+    ],
+    "fid": "CFWDFDSW2FMB82AC9BVOUJ9TE5EA9ZV0",
+    "category": "seeedstudio-sensecap",
+    "esp": "s3"
   },
   {
     "name": "Bruce",
