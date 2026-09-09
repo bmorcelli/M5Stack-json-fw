@@ -1272,6 +1272,62 @@
         "fid": "CFWXYTLZ42QBQP3UJ4JMPE7SX5B2EBH6",
         "versions": [
             {
+                "version": "beta_79",
+                "published_at": "2026-09-09",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_79/wadamesh-tdisplay-p4-merged.bin",
+                "Fs": 3508560,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 131072,
+                "as": 3377488,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-display-p4",
+                    "app": {
+                        "source_offset": 131072,
+                        "image_size": 3377488,
+                        "partition_size": 4194304,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4194304,
+                            "source_offset": 131072,
+                            "copy_size": 3377488,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 8192000,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-09T14:26:10Z",
+                        "etag": "\"0x8DF0E64B8AC9D94\"",
+                        "last_modified": "Wed, 09 Sep 2026 11:23:06 GMT"
+                    }
+                }
+            },
+            {
                 "version": "beta_78",
                 "published_at": "2026-09-07",
                 "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_78/wadamesh-tdisplay-p4-merged.bin",
@@ -1774,24 +1830,36 @@
                         "last_modified": "Thu, 27 Aug 2026 20:30:24 GMT"
                     }
                 }
-            },
+            }
+        ],
+        "esp": "p4",
+        "category": "t-display-p4"
+    },
+    {
+        "name": "WADAMESH BETA (TFT)",
+        "author": "ALLFATHER-BV",
+        "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+        "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+        "github": "https://github.com/ALLFATHER-BV/wadamesh",
+        "fid": "CFWT3QB6FPRZEHUA64RJJEYP36RSJYXL",
+        "versions": [
             {
-                "version": "beta_69",
-                "published_at": "2026-08-22",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_69/wadamesh-tdisplay-p4-merged.bin",
-                "Fs": 3377504,
+                "version": "beta_79",
+                "published_at": "2026-09-09",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_79/wadamesh-tdisplay-p4-lcd-merged.bin",
+                "Fs": 3510560,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 131072,
-                "as": 3246432,
+                "as": 3379488,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-display-p4",
                     "app": {
                         "source_offset": 131072,
-                        "image_size": 3246432,
+                        "image_size": 3379488,
                         "partition_size": 4194304,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -1804,7 +1872,7 @@
                             "role": "firmware",
                             "size": 4194304,
                             "source_offset": 131072,
-                            "copy_size": 3246432,
+                            "copy_size": 3379488,
                             "required": true,
                             "source": "firmware"
                         },
@@ -1825,24 +1893,12 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-22T22:32:23Z",
-                        "etag": "\"0x8DF0099BA1316DF\"",
-                        "last_modified": "Sat, 22 Aug 2026 22:07:16 GMT"
+                        "analyzed_at": "2026-09-09T14:26:10Z",
+                        "etag": "\"0x8DF0E64B7D0DB78\"",
+                        "last_modified": "Wed, 09 Sep 2026 11:23:05 GMT"
                     }
                 }
-            }
-        ],
-        "esp": "p4",
-        "category": "t-display-p4"
-    },
-    {
-        "name": "WADAMESH BETA (TFT)",
-        "author": "ALLFATHER-BV",
-        "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
-        "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
-        "github": "https://github.com/ALLFATHER-BV/wadamesh",
-        "fid": "CFWT3QB6FPRZEHUA64RJJEYP36RSJYXL",
-        "versions": [
+            },
             {
                 "version": "beta_78",
                 "published_at": "2026-09-07",
@@ -2344,62 +2400,6 @@
                         "analyzed_at": "2026-08-27T23:57:00Z",
                         "etag": "\"0x8DF047A04DC9F95\"",
                         "last_modified": "Thu, 27 Aug 2026 20:30:22 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_69",
-                "published_at": "2026-08-22",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_69/wadamesh-tdisplay-p4-lcd-merged.bin",
-                "Fs": 3379888,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 131072,
-                "as": 3248816,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-display-p4",
-                    "app": {
-                        "source_offset": 131072,
-                        "image_size": 3248816,
-                        "partition_size": 4194304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 131072,
-                            "copy_size": 3248816,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "storage",
-                            "role": "fat",
-                            "size": 8192000,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-22T22:32:23Z",
-                        "etag": "\"0x8DF0099B8876926\"",
-                        "last_modified": "Sat, 22 Aug 2026 22:07:13 GMT"
                     }
                 }
             }
