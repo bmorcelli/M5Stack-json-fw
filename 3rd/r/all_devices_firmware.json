@@ -47265,6 +47265,74 @@
     "category": "reaper_bruce"
   },
   {
+    "name": "Factory firmware",
+    "author": "SeeedStudio",
+    "github": "https://github.com/Seeed-Studio/reTerminal-D1001",
+    "checkFileOnRepo": true,
+    "versions": [
+      {
+        "version": "v1.0.1",
+        "published_at": "2025-12-17",
+        "file": "https://raw.githubusercontent.com/Seeed-Studio/reTerminal-D1001/refs/heads/main/firmware/reTerminal_D1001_esp32p4_factory_firmware_2025_12_17_01.bin",
+        "Fs": 13697024,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 7158960,
+        "so": 9502720,
+        "ss": 4194304,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-reterminal-d1001",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 7158960,
+            "partition_size": 9437184,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 9437184,
+              "source_offset": 65536,
+              "copy_size": 7158960,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 4194304,
+              "source": "firmware",
+              "source_offset": 9502720,
+              "copy_size": 4194304,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 13733888,
+            "analyzed_at": "2026-09-10T18:07:35Z",
+            "etag": "W/\"f12b7182080ae7926e0df47e47d3180ca1aac3448bb5187d502f0482d15ebfe2\""
+          }
+        }
+      }
+    ],
+    "fid": "CFWECVJ9N6AE0YNZLYBW4ZA69H5SO4JU",
+    "category": "seeedstudio-reterminal-d1001",
+    "esp": "p4"
+  },
+  {
     "name": "Battery Monitor (Demo)",
     "author": "SeeedStudio",
     "github": "https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/releases/tag/fw-2026.08.31",
