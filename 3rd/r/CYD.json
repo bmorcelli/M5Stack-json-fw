@@ -1060,6 +1060,53 @@
                 }
             },
             {
+                "version": "v5.9.5",
+                "published_at": "2026-09-10",
+                "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v5.9.5/firmware.bin",
+                "Fs": 1809984,
+                "nb": true,
+                "ao": 0,
+                "as": 1809984,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "cyd",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1809984,
+                        "partition_size": 1809984,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1809984,
+                            "source_offset": 0,
+                            "copy_size": 1809984,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-10T20:58:13Z",
+                        "etag": "\"0x8DF0F737C999169\"",
+                        "last_modified": "Thu, 10 Sep 2026 19:41:19 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v5.8.6",
                 "published_at": "2026-09-09",
                 "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v5.8.6/firmware.bin",
@@ -1432,53 +1479,6 @@
                         "analyzed_at": "2026-09-07T22:38:59Z",
                         "etag": "\"0x8DF0C245700C9BE\"",
                         "last_modified": "Sun, 06 Sep 2026 14:37:12 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v5.7.0",
-                "published_at": "2026-09-06",
-                "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v5.7.0/firmware.bin",
-                "Fs": 1683984,
-                "nb": true,
-                "ao": 0,
-                "as": 1683984,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "cyd",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 1683984,
-                        "partition_size": 1683984,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 1683984,
-                            "source_offset": 0,
-                            "copy_size": 1683984,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-07T22:38:59Z",
-                        "etag": "\"0x8DF0BBB3082C70F\"",
-                        "last_modified": "Sun, 06 Sep 2026 02:04:31 GMT"
                     }
                 }
             }
