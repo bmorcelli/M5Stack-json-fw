@@ -187,32 +187,31 @@
     },
     {
         "name": "CrossPoint Reader",
-        "author": "CrossPoint Reader",
-        "description": "Install the CrossPoint Reader firmware package prepared for reTerminal Sticky.",
+        "author": "crosspoint-reader",
+        "description": "CrossPoint is open-source e-reader firmware - community-built, fully hackable, free forever. It's maintained by a growing community of developers and readers who believe your device should do what you want - not what a manufacturer decided for you.",
+        "cover": "https://crosspointreader.com/logo.png",
+        "github": "https://github.com/crosspoint-reader/crosspoint-reader",
+        "fid": "CFWHDZNRBNKYQRDBJDGO6AJ32ZTJTYDL",
         "versions": [
             {
-                "version": "1.5",
-                "published_at": "2026-09-03",
-                "file": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/firmware.bin",
-                "bootloader": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/bootloader.bin",
-                "partitions": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/partitions.bin",
-                "Fs": 5434432,
-                "ao": 0,
-                "as": 5434432,
+                "version": "1.6.0",
+                "published_at": "2026-09-05",
+                "file": "https://github.com/crosspoint-reader/crosspoint-reader/releases/download/1.6.0/crosspoint-1.6.0-sticky.bin",
+                "Fs": 5234176,
                 "nb": true,
+                "ao": 0,
+                "as": 5234176,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "install": {
                     "schema": 1,
-                    "format": "split",
+                    "format": "app",
                     "target": "seeedstudio-reterminal-sticky",
                     "app": {
-                        "source": "firmware",
                         "source_offset": 0,
-                        "image_size": 5434432,
-                        "partition_size": 6553600,
-                        "flash_offset": 65536,
+                        "image_size": 5234176,
+                        "partition_size": 5234176,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -222,51 +221,26 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 6553600,
+                            "size": 5234176,
                             "source_offset": 0,
-                            "copy_size": 5434432,
-                            "required": true,
-                            "source": "firmware",
-                            "flash_offset": 65536
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "flash_offset": 13172736,
-                            "required": true,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0
+                            "copy_size": 5234176,
+                            "required": true
                         }
                     ],
-                    "sources": {
-                        "firmware": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/firmware.bin",
-                        "bootloader": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/bootloader.bin",
-                        "partitions": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/partitions.bin",
-                        "data": null
-                    },
                     "analysis": {
-                        "method": "external_partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 39936,
-                        "analyzed_at": "2026-09-03T05:54:10Z",
-                        "etag": "W/\"51fd78e86955256856fed6316e06dba90d18bdd9cf62f26b1ba6f159f2d52ccd\"",
-                        "aux_inputs": {
-                            "bootloader": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/bootloader.bin",
-                            "partitions": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/firmware/1.5/partitions.bin"
-                        }
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-11T12:16:43Z",
+                        "etag": "\"0x8DF0D0D87927746\"",
+                        "last_modified": "Mon, 07 Sep 2026 18:26:27 GMT"
                     }
                 }
             }
         ],
-        "fid": "CFWCNXDQXPMIGAJ4EAVPCKJIW6SSQFJ2",
-        "managed_by": "seeedstudio-reterminal-sticky",
-        "github": "https://github.com/crosspoint-reader/crosspoint-reader",
-        "cover": "https://raw.githubusercontent.com/Seeed-Projects/reterminal-sticky-playground-registry/756ca89a07a00faf6b4c9b40812bb711623a2a01/integrations/crosspoint/assets/logo.jpg",
         "esp": "s3",
         "category": "seeedstudio-reterminal-sticky"
     },
