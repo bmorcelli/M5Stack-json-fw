@@ -1060,6 +1060,53 @@
         }
       },
       {
+        "version": "v6.1.0",
+        "published_at": "2026-09-11",
+        "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v6.1.0/firmware.bin",
+        "Fs": 1825664,
+        "nb": true,
+        "ao": 0,
+        "as": 1825664,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "cyd",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1825664,
+            "partition_size": 1825664,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1825664,
+              "source_offset": 0,
+              "copy_size": 1825664,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-12T00:34:20Z",
+            "etag": "\"0x8DF105DE597A307\"",
+            "last_modified": "Fri, 11 Sep 2026 23:39:17 GMT"
+          }
+        }
+      },
+      {
         "version": "v5.9.1",
         "published_at": "2026-09-10",
         "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v5.9.1/firmware.bin",
@@ -1432,53 +1479,6 @@
             "analyzed_at": "2026-09-07T22:38:58Z",
             "etag": "\"0x8DF0C5C1EDC8153\"",
             "last_modified": "Sun, 06 Sep 2026 21:16:30 GMT"
-          }
-        }
-      },
-      {
-        "version": "v5.7.6",
-        "published_at": "2026-09-06",
-        "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v5.7.6/firmware.bin",
-        "Fs": 1691184,
-        "nb": true,
-        "ao": 0,
-        "as": 1691184,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "cyd",
-          "app": {
-            "source_offset": 0,
-            "image_size": 1691184,
-            "partition_size": 1691184,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 1691184,
-              "source_offset": 0,
-              "copy_size": 1691184,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-07T22:38:58Z",
-            "etag": "\"0x8DF0C4E5387449E\"",
-            "last_modified": "Sun, 06 Sep 2026 19:37:45 GMT"
           }
         }
       }
