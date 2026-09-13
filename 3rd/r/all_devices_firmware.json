@@ -42600,6 +42600,62 @@
     "fid": "CFWXMC2CGMFCGA5BC4HDYUXTAZKMWOSS",
     "versions": [
       {
+        "version": "v0.5.8",
+        "published_at": "2026-09-13",
+        "file": "https://github.com/H4W9/pancake/releases/download/v0.5.8/JanOS_pancake_full_v0.5.8.bin",
+        "Fs": 2461856,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2396320,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "pancake",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2396320,
+            "partition_size": 7340032,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7340032,
+              "source_offset": 65536,
+              "copy_size": 2396320,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 983040,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-13T10:34:26Z",
+            "etag": "\"0x8DF113D31FF60CE\"",
+            "last_modified": "Sun, 13 Sep 2026 02:17:43 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.5.7",
         "published_at": "2026-09-02",
         "file": "https://github.com/H4W9/pancake/releases/download/v0.5.7/JanOS_pancake_full_v0.5.7.bin",
@@ -53349,6 +53405,18 @@
     "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
     "versions": [
       {
+        "version": "v5.1.0",
+        "published_at": "2026-09-13",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.1.0/camillia-mt-tdeck-pro-v5.1.0-ota.bin",
+        "nb": true,
+        "ao": 0,
+        "as": 0,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": null
+      },
+      {
         "version": "v5.0.4",
         "published_at": "2026-09-11",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v5.0.4/camillia-mt-tdeck-pro-v5.0.4-ota.bin",
@@ -53768,53 +53836,6 @@
             "analyzed_at": "2026-09-08T22:44:33Z",
             "etag": "\"0x8DF0DEFC7FC945A\"",
             "last_modified": "Tue, 08 Sep 2026 21:26:01 GMT"
-          }
-        }
-      },
-      {
-        "version": "v4.9.1",
-        "published_at": "2026-09-07",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v4.9.1/camillia-mt-tdeck-pro-v4.9.1-ota.bin",
-        "Fs": 2954768,
-        "nb": true,
-        "ao": 0,
-        "as": 2954768,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 0,
-            "image_size": 2954768,
-            "partition_size": 2954768,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2954768,
-              "source_offset": 0,
-              "copy_size": 2954768,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-07T04:52:17Z",
-            "etag": "\"0x8DF0C7F0ABB245E\"",
-            "last_modified": "Mon, 07 Sep 2026 01:26:29 GMT"
           }
         }
       }
@@ -64056,6 +64077,51 @@
     "fid": "CFWXUF5ZD6BOYVTMILMNSRIA55J66RU7",
     "versions": [
       {
+        "version": "v0.8.1",
+        "published_at": "2026-09-13",
+        "file": "https://github.com/pelgraine/Meck-P4/releases/download/v0.8.1/meck-p4-0.8.1-amoled-merged.bin",
+        "Fs": 8122240,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 8056704,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 8056704,
+            "partition_size": 15728640,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 15728640,
+              "source_offset": 65536,
+              "copy_size": 8056704,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-13T10:34:27Z",
+            "etag": "\"0x8DF11764D59C087\"",
+            "last_modified": "Sun, 13 Sep 2026 09:06:31 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.8",
         "published_at": "2026-09-05",
         "file": "https://github.com/pelgraine/Meck-P4/releases/download/v0.8/meck-p4-0.8-amoled-merged.bin",
@@ -64247,6 +64313,51 @@
     "github": "https://github.com/pelgraine/Meck-P4",
     "fid": "CFWEM7ON7DJEEURNOOMNGGGNJRGFTWHC",
     "versions": [
+      {
+        "version": "v0.8.1",
+        "published_at": "2026-09-13",
+        "file": "https://github.com/pelgraine/Meck-P4/releases/download/v0.8.1/meck-p4-0.8.1-tft-merged.bin",
+        "Fs": 8129152,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 8063616,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 8063616,
+            "partition_size": 15728640,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 15728640,
+              "source_offset": 65536,
+              "copy_size": 8063616,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-13T10:34:27Z",
+            "etag": "\"0x8DF117642420A9F\"",
+            "last_modified": "Sun, 13 Sep 2026 09:06:12 GMT"
+          }
+        }
+      },
       {
         "version": "v0.8",
         "published_at": "2026-09-05",
@@ -74196,6 +74307,53 @@
     "fid": "CFWS6ZPJ4PT77ROTEHJCTVQGGVB3M6XO",
     "versions": [
       {
+        "version": "v5.1.0",
+        "published_at": "2026-09-13",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.1.0/camillia-mt-tlora-pager-tft-v5.1.0-ota.bin",
+        "Fs": 3029616,
+        "nb": true,
+        "ao": 0,
+        "as": 3029616,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3029616,
+            "partition_size": 3029616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3029616,
+              "source_offset": 0,
+              "copy_size": 3029616,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-13T10:34:26Z",
+            "etag": "\"0x8DF113B9E919336\"",
+            "last_modified": "Sun, 13 Sep 2026 02:06:27 GMT"
+          }
+        }
+      },
+      {
         "version": "v5.0.4",
         "published_at": "2026-09-11",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v5.0.4/camillia-mt-tlora-pager-tft-v5.0.4-ota.bin",
@@ -74615,53 +74773,6 @@
             "analyzed_at": "2026-09-08T22:44:34Z",
             "etag": "\"0x8DF0DEFC848FED7\"",
             "last_modified": "Tue, 08 Sep 2026 21:26:01 GMT"
-          }
-        }
-      },
-      {
-        "version": "v4.9.1",
-        "published_at": "2026-09-07",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v4.9.1/camillia-mt-tlora-pager-tft-v4.9.1-ota.bin",
-        "Fs": 3057584,
-        "nb": true,
-        "ao": 0,
-        "as": 3057584,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 0,
-            "image_size": 3057584,
-            "partition_size": 3057584,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3057584,
-              "source_offset": 0,
-              "copy_size": 3057584,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-07T04:52:17Z",
-            "etag": "\"0x8DF0C7F0AE367A5\"",
-            "last_modified": "Mon, 07 Sep 2026 01:26:29 GMT"
           }
         }
       }
