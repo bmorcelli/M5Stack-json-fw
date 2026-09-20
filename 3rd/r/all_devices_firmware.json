@@ -55840,8 +55840,64 @@
     "fid": "CFWJGNNYZSCOSMBAXRGLMWNWFEWGIICY",
     "versions": [
       {
+        "version": "v1.7.5",
+        "published_at": "2026-09-20",
+        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.5-merged.bin",
+        "Fs": 5387152,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5321616,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5321616,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5321616,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-20T12:14:27Z",
+            "etag": "\"6aaf8bce-523390\"",
+            "last_modified": "Sun, 20 Sep 2026 07:31:26 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.7.4",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.4-merged.bin",
         "Fs": 5387056,
         "s": 0,
@@ -55897,7 +55953,7 @@
       },
       {
         "version": "v1.7.3",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.3-merged.bin",
         "Fs": 5358464,
         "s": 0,
@@ -55953,7 +56009,7 @@
       },
       {
         "version": "v1.7.2",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.2-merged.bin",
         "Fs": 5358112,
         "s": 0,
@@ -56009,7 +56065,7 @@
       },
       {
         "version": "v1.7.1",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.1-merged.bin",
         "Fs": 5363712,
         "s": 0,
@@ -56065,7 +56121,7 @@
       },
       {
         "version": "v1.7.0",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.0-merged.bin",
         "Fs": 5364128,
         "s": 0,
@@ -56121,7 +56177,7 @@
       },
       {
         "version": "v1.6.6",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.6-merged.bin",
         "Fs": 5287904,
         "s": 0,
@@ -56177,7 +56233,7 @@
       },
       {
         "version": "v1.6.5",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.5-merged.bin",
         "Fs": 5280736,
         "s": 0,
@@ -56233,7 +56289,7 @@
       },
       {
         "version": "v1.6.2",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.2-merged.bin",
         "Fs": 5269744,
         "s": 0,
@@ -56289,7 +56345,7 @@
       },
       {
         "version": "v1.6.1",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.1-merged.bin",
         "Fs": 5272464,
         "s": 0,
@@ -56340,62 +56396,6 @@
             "analyzed_at": "2026-08-12T16:40:12Z",
             "etag": "\"6a7c981a-507390\"",
             "last_modified": "Wed, 12 Aug 2026 15:58:18 GMT"
-          }
-        }
-      },
-      {
-        "version": "v1.6.0",
-        "published_at": "2026-09-19",
-        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.0-merged.bin",
-        "Fs": 5260736,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 5195200,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 5195200,
-            "partition_size": 6553600,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6553600,
-              "source_offset": 65536,
-              "copy_size": 5195200,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:53Z",
-            "etag": "\"6a64bd4b-5045c0\"",
-            "last_modified": "Sat, 25 Jul 2026 13:42:35 GMT"
           }
         }
       }
@@ -59696,6 +59696,51 @@
         }
       },
       {
+        "version": "v1.6.1",
+        "published_at": "2026-09-20",
+        "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.6.1/tdeck_firmware.bin",
+        "Fs": 4194304,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2093104,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2093104,
+            "partition_size": 3080192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3080192,
+              "source_offset": 65536,
+              "copy_size": 2093104,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4231168,
+            "analyzed_at": "2026-09-20T12:14:27Z",
+            "etag": "\"0x8DF16FC40E7E39E\"",
+            "last_modified": "Sun, 20 Sep 2026 09:47:58 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.5.1",
         "published_at": "2026-09-19",
         "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.5.1/tdeck_firmware.bin",
@@ -60157,6 +60202,62 @@
     "github": "https://github.com/vicliu624/trail-mate",
     "fid": "CFWAF7ZP2EZ6PUSTWGJO5CQGF7MZAANN",
     "versions": [
+      {
+        "version": "v0.1.48-alpha",
+        "published_at": "2026-09-20",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.48-alpha/trail-mate-tdeck-webflash.bin",
+        "Fs": 4054224,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3988688,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3988688,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3988688,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-20T12:14:27Z",
+            "etag": "\"0x8DF1703D9C78920\"",
+            "last_modified": "Sun, 20 Sep 2026 10:42:21 GMT"
+          }
+        }
+      },
       {
         "version": "v0.1.47-alpha",
         "published_at": "2026-09-18",
@@ -60658,62 +60759,6 @@
             "analyzed_at": "2026-08-03T20:15:02Z",
             "etag": "\"0x8DEEDE2146001A8\"",
             "last_modified": "Thu, 30 Jul 2026 02:27:19 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.35-alpha",
-        "published_at": "2026-07-04",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.35-alpha/trail-mate-tdeck-webflash.bin",
-        "Fs": 3440368,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3374832,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3374832,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3374832,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:02Z",
-            "etag": "\"0x8DED964C9611FE9\"",
-            "last_modified": "Sat, 04 Jul 2026 00:40:03 GMT"
           }
         }
       }
@@ -64857,7 +64902,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-1.0.1-merged.bin",
         "Fs": 10732848,
         "s": 0,
@@ -64913,7 +64958,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-merged.bin",
         "Fs": 10600336,
         "s": 0,
@@ -64981,7 +65026,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-LCD-1.0.1-merged.bin",
         "Fs": 10749168,
         "s": 0,
@@ -65037,7 +65082,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-LCD-merged.bin",
         "Fs": 10616224,
         "s": 0,
@@ -75169,7 +75214,7 @@
     "versions": [
       {
         "version": "v1.3.8",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.8-merged.bin",
         "Fs": 2628624,
         "s": 0,
@@ -75225,7 +75270,7 @@
       },
       {
         "version": "v1.3.6",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.6-merged.bin",
         "Fs": 2607168,
         "s": 0,
@@ -75281,7 +75326,7 @@
       },
       {
         "version": "v1.3.5",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.5-merged.bin",
         "Fs": 2601920,
         "s": 0,
@@ -75337,7 +75382,7 @@
       },
       {
         "version": "v1.3.4",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.4-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -75393,7 +75438,7 @@
       },
       {
         "version": "v1.3.3",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.3-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -75449,7 +75494,7 @@
       },
       {
         "version": "v1.3.2",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.2-merged.bin",
         "Fs": 2609584,
         "s": 0,
@@ -75505,7 +75550,7 @@
       },
       {
         "version": "v1.3.1",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.1-merged.bin",
         "Fs": 2617424,
         "s": 0,
@@ -75561,7 +75606,7 @@
       },
       {
         "version": "v1.3.0",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.0-merged.bin",
         "Fs": 2612784,
         "s": 0,
@@ -75617,7 +75662,7 @@
       },
       {
         "version": "v1.2.0",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.2.0-merged.bin",
         "Fs": 2590928,
         "s": 0,
@@ -75673,7 +75718,7 @@
       },
       {
         "version": "v1.1.8",
-        "published_at": "2026-09-19",
+        "published_at": "2026-09-20",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.1.8-merged.bin",
         "Fs": 2576880,
         "s": 0,
@@ -75945,6 +75990,62 @@
     "github": "https://github.com/vicliu624/trail-mate",
     "fid": "CFWJBA62VDRQOGEXQEPVSOFKTOVT5PVD",
     "versions": [
+      {
+        "version": "v0.1.48-alpha",
+        "published_at": "2026-09-20",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.48-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
+        "Fs": 4251584,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4186048,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4186048,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 4186048,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-20T12:14:28Z",
+            "etag": "\"0x8DF1703D9CDB59E\"",
+            "last_modified": "Sun, 20 Sep 2026 10:42:21 GMT"
+          }
+        }
+      },
       {
         "version": "v0.1.47-alpha",
         "published_at": "2026-09-18",
@@ -76446,62 +76547,6 @@
             "analyzed_at": "2026-08-03T20:14:45Z",
             "etag": "\"0x8DEEDE21459887C\"",
             "last_modified": "Thu, 30 Jul 2026 02:27:19 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.35-alpha",
-        "published_at": "2026-07-04",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.35-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
-        "Fs": 3877696,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3812160,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3812160,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3812160,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:45Z",
-            "etag": "\"0x8DED964C98EB34F\"",
-            "last_modified": "Sat, 04 Jul 2026 00:40:03 GMT"
           }
         }
       }
@@ -79635,6 +79680,62 @@
     "fid": "CFW7NVZY5APBW7EH5BPMTY6B6IFXWC23",
     "versions": [
       {
+        "version": "v0.1.48-alpha",
+        "published_at": "2026-09-20",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.48-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
+        "Fs": 4042256,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3976720,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3976720,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3976720,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-20T12:14:27Z",
+            "etag": "\"0x8DF1703D9C95BD0\"",
+            "last_modified": "Sun, 20 Sep 2026 10:42:21 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.47-alpha",
         "published_at": "2026-09-18",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.47-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
@@ -80135,62 +80236,6 @@
             "analyzed_at": "2026-08-03T20:15:08Z",
             "etag": "\"0x8DEEDE21461869D\"",
             "last_modified": "Thu, 30 Jul 2026 02:27:19 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.35-alpha",
-        "published_at": "2026-07-04",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.35-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
-        "Fs": 3489200,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3423664,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-watch-s3",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3423664,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3423664,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:08Z",
-            "etag": "\"0x8DED964C9CD23A2\"",
-            "last_modified": "Sat, 04 Jul 2026 00:40:03 GMT"
           }
         }
       }
