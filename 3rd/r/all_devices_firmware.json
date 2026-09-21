@@ -44136,6 +44136,78 @@
     "fid": "CFWGK5FZCLPFM4UEKZND26ZY5KCBBSSQ",
     "versions": [
       {
+        "version": "v2.4.0",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake.bin",
+        "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+        "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+        "Fs": 2880960,
+        "ao": 0,
+        "as": 2880960,
+        "nb": true,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "split",
+          "target": "pancake",
+          "app": {
+            "source": "firmware",
+            "source_offset": 0,
+            "image_size": 2880960,
+            "partition_size": 3145728,
+            "flash_offset": 131072,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 0,
+              "copy_size": 2880960,
+              "required": true,
+              "source": "firmware",
+              "flash_offset": 131072
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 5111808,
+              "flash_offset": 3276800,
+              "required": true,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0
+            }
+          ],
+          "sources": {
+            "firmware": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake.bin",
+            "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+            "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+            "data": null
+          },
+          "analysis": {
+            "method": "external_partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 39936,
+            "analyzed_at": "2026-09-21T18:46:15Z",
+            "etag": "W/\"29b64686b2cfc1059bfc531be9feba485635a2b881ba8de7ae0d20076f625da7\"",
+            "aux_inputs": {
+              "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+              "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake-partition-table.bin"
+            }
+          }
+        }
+      },
+      {
         "version": "v2.3.0",
         "published_at": "2026-08-30",
         "file": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.3.0/builds/MicroPython/Picoware-Pancake.bin",
@@ -53585,6 +53657,53 @@
         }
       },
       {
+        "version": "v5.3.1",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.3.1/camillia-mt-tdeck-pro-v5.3.1-ota.bin",
+        "Fs": 3055952,
+        "nb": true,
+        "ao": 0,
+        "as": 3055952,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3055952,
+            "partition_size": 3055952,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3055952,
+              "source_offset": 0,
+              "copy_size": 3055952,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T18:46:14Z",
+            "etag": "\"0x8DF17EE4BFC6822\"",
+            "last_modified": "Mon, 21 Sep 2026 14:40:35 GMT"
+          }
+        }
+      },
+      {
         "version": "v5.2.3",
         "published_at": "2026-09-20",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v5.2.3/camillia-mt-tdeck-pro-v5.2.3-ota.bin",
@@ -53957,53 +54076,6 @@
             "analyzed_at": "2026-09-16T15:35:06Z",
             "etag": "\"0x8DF13FA192D1385\"",
             "last_modified": "Wed, 16 Sep 2026 13:54:59 GMT"
-          }
-        }
-      },
-      {
-        "version": "v5.1.6",
-        "published_at": "2026-09-15",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.1.6/camillia-mt-tdeck-pro-v5.1.6-ota.bin",
-        "Fs": 3009344,
-        "nb": true,
-        "ao": 0,
-        "as": 3009344,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 0,
-            "image_size": 3009344,
-            "partition_size": 3009344,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3009344,
-              "source_offset": 0,
-              "copy_size": 3009344,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-15T01:50:43Z",
-            "etag": "\"0x8DF12C8F654F07B\"",
-            "last_modified": "Tue, 15 Sep 2026 01:30:44 GMT"
           }
         }
       }
@@ -74289,6 +74361,53 @@
         }
       },
       {
+        "version": "v5.3.1",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.3.1/camillia-mt-tlora-pager-tft-v5.3.1-ota.bin",
+        "Fs": 3083408,
+        "nb": true,
+        "ao": 0,
+        "as": 3083408,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3083408,
+            "partition_size": 3083408,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3083408,
+              "source_offset": 0,
+              "copy_size": 3083408,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T18:46:15Z",
+            "etag": "\"0x8DF17EE4C3AB1E7\"",
+            "last_modified": "Mon, 21 Sep 2026 14:40:35 GMT"
+          }
+        }
+      },
+      {
         "version": "v5.2.3",
         "published_at": "2026-09-20",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v5.2.3/camillia-mt-tlora-pager-tft-v5.2.3-ota.bin",
@@ -74661,53 +74780,6 @@
             "analyzed_at": "2026-09-16T15:35:08Z",
             "etag": "\"0x8DF13FA194A8C83\"",
             "last_modified": "Wed, 16 Sep 2026 13:54:59 GMT"
-          }
-        }
-      },
-      {
-        "version": "v5.1.6",
-        "published_at": "2026-09-15",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.1.6/camillia-mt-tlora-pager-tft-v5.1.6-ota.bin",
-        "Fs": 3031216,
-        "nb": true,
-        "ao": 0,
-        "as": 3031216,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 0,
-            "image_size": 3031216,
-            "partition_size": 3031216,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3031216,
-              "source_offset": 0,
-              "copy_size": 3031216,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-15T01:50:43Z",
-            "etag": "\"0x8DF12C8F67918AA\"",
-            "last_modified": "Tue, 15 Sep 2026 01:30:44 GMT"
           }
         }
       }
