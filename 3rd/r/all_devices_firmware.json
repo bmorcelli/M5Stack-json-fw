@@ -10321,6 +10321,53 @@
     "fid": "CFW3TMV2H6G2YR2VVPOVKXUKPUQ4BESO",
     "versions": [
       {
+        "version": "v2.14.02",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/JimGat/CYM/releases/download/v2.14.02/CYM-NM28C5.bin",
+        "Fs": 3117120,
+        "nb": true,
+        "ao": 0,
+        "as": 3117120,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "nm-cyd-c5",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3117120,
+            "partition_size": 3117120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3117120,
+              "source_offset": 0,
+              "copy_size": 3117120,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:24Z",
+            "etag": "\"0x8DF17D39994EFEE\"",
+            "last_modified": "Mon, 21 Sep 2026 11:29:29 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.14.01",
         "published_at": "2026-09-17",
         "file": "https://github.com/JimGat/CYM/releases/download/v2.14.01/CYM-NM28C5.bin",
@@ -10740,53 +10787,6 @@
             "analyzed_at": "2026-07-30T19:08:13Z",
             "etag": "\"0x8DEE2A7031C054C\"",
             "last_modified": "Wed, 15 Jul 2026 19:26:47 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.11.0",
-        "published_at": "2026-07-10",
-        "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.11.0/CYM-NM28C5.bin",
-        "Fs": 2985840,
-        "nb": true,
-        "ao": 0,
-        "as": 2985840,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "nm-cyd-c5",
-          "app": {
-            "source_offset": 0,
-            "image_size": 2985840,
-            "partition_size": 2985840,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2985840,
-              "source_offset": 0,
-              "copy_size": 2985840,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-07-30T19:08:13Z",
-            "etag": "\"0x8DEE150BE90E4FD\"",
-            "last_modified": "Tue, 14 Jul 2026 02:36:44 GMT"
           }
         }
       }
@@ -60248,6 +60248,62 @@
     "fid": "CFWAF7ZP2EZ6PUSTWGJO5CQGF7MZAANN",
     "versions": [
       {
+        "version": "v0.1.49-alpha",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.49-alpha/trail-mate-tdeck-webflash.bin",
+        "Fs": 4054592,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3989056,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3989056,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3989056,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:24Z",
+            "etag": "\"0x8DF17BFAA293343\"",
+            "last_modified": "Mon, 21 Sep 2026 09:06:47 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.48-alpha",
         "published_at": "2026-09-20",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.48-alpha/trail-mate-tdeck-webflash.bin",
@@ -60750,62 +60806,6 @@
             "last_modified": "Fri, 31 Jul 2026 09:33:04 GMT"
           }
         }
-      },
-      {
-        "version": "v0.1.38-alpha",
-        "published_at": "2026-07-30",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.38-alpha/trail-mate-tdeck-webflash.bin",
-        "Fs": 3936912,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3871376,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3871376,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3871376,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:02Z",
-            "etag": "\"0x8DEEDE2146001A8\"",
-            "last_modified": "Thu, 30 Jul 2026 02:27:19 GMT"
-          }
-        }
       }
     ],
     "esp": "s3",
@@ -60819,6 +60819,62 @@
     "github": "https://github.com/ALLFATHER-BV/wadamesh",
     "fid": "CFW7UKIJW436AWBCH5OTRSG3Q7CK5PNN",
     "versions": [
+      {
+        "version": "beta_83",
+        "published_at": "2026-09-19",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_83/wadamesh-tdeck-merged.bin",
+        "Fs": 3470128,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3404592,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3404592,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3404592,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:24Z",
+            "etag": "\"0x8DF1639E7B32D9B\"",
+            "last_modified": "Sat, 19 Sep 2026 10:36:46 GMT"
+          }
+        }
+      },
       {
         "version": "beta_65",
         "published_at": "2026-08-13",
@@ -61322,24 +61378,36 @@
             "last_modified": "Sun, 05 Jul 2026 21:44:34 GMT"
           }
         }
-      },
+      }
+    ],
+    "esp": "s3",
+    "category": "t-deck"
+  },
+  {
+    "name": "WADAMESH BETA",
+    "author": "ALLFATHER-BV",
+    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
+    "versions": [
       {
-        "version": "beta_27",
-        "published_at": "2026-07-03",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_27/wadamesh-tdeck-merged.bin",
-        "Fs": 3033904,
+        "version": "beta_84",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_84/wadamesh-tdeck-merged.bin",
+        "Fs": 3477488,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 2968368,
+        "as": 3411952,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-deck",
           "app": {
             "source_offset": 65536,
-            "image_size": 2968368,
+            "image_size": 3411952,
             "partition_size": 4063232,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -61352,7 +61420,7 @@
               "role": "firmware",
               "size": 4063232,
               "source_offset": 65536,
-              "copy_size": 2968368,
+              "copy_size": 3411952,
               "required": true,
               "source": "firmware"
             },
@@ -61373,24 +61441,12 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:03Z",
-            "etag": "\"0x8DED8CA35E40EE0\"",
-            "last_modified": "Fri, 03 Jul 2026 06:13:33 GMT"
+            "analyzed_at": "2026-09-21T13:16:24Z",
+            "etag": "\"0x8DF17E08C4E6151\"",
+            "last_modified": "Mon, 21 Sep 2026 13:02:10 GMT"
           }
         }
-      }
-    ],
-    "esp": "s3",
-    "category": "t-deck"
-  },
-  {
-    "name": "WADAMESH BETA",
-    "author": "ALLFATHER-BV",
-    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
-    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
-    "github": "https://github.com/ALLFATHER-BV/wadamesh",
-    "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
-    "versions": [
+      },
       {
         "version": "beta_83",
         "published_at": "2026-09-19",
@@ -61892,62 +61948,6 @@
             "analyzed_at": "2026-09-01T14:45:13Z",
             "etag": "\"0x8DF081B76B916BC\"",
             "last_modified": "Tue, 01 Sep 2026 11:23:35 GMT"
-          }
-        }
-      },
-      {
-        "version": "beta_73",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_73/wadamesh-tdeck-merged.bin",
-        "Fs": 3333072,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3267536,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3267536,
-            "partition_size": 4063232,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4063232,
-              "source_offset": 65536,
-              "copy_size": 3267536,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:32Z",
-            "etag": "\"0x8DF04E1D0DDE887\"",
-            "last_modified": "Fri, 28 Aug 2026 08:53:22 GMT"
           }
         }
       }
@@ -65252,6 +65252,62 @@
     "fid": "CFWLMKEMWC7SOFK6H2TVQZWXY2NU362H",
     "versions": [
       {
+        "version": "beta_83",
+        "published_at": "2026-09-19",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_83/wadamesh-tdisplay-p4-merged.bin",
+        "Fs": 3527088,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3396016,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3396016,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 3396016,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 8192000,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF1638D8C42286\"",
+            "last_modified": "Sat, 19 Sep 2026 10:29:12 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_65",
         "published_at": "2026-08-13",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_65/wadamesh-tdisplay-p4-merged.bin",
@@ -65544,6 +65600,62 @@
     "fid": "CFW3KKKOUAHEDVNHFN45LSQOGXQ74FGG",
     "versions": [
       {
+        "version": "beta_83",
+        "published_at": "2026-09-19",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_83/wadamesh-tdisplay-p4-lcd-merged.bin",
+        "Fs": 3529136,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3398064,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3398064,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 3398064,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 8192000,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF1638D3AE3458\"",
+            "last_modified": "Sat, 19 Sep 2026 10:29:03 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_65",
         "published_at": "2026-08-13",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_65/wadamesh-tdisplay-p4-lcd-merged.bin",
@@ -65723,6 +65835,62 @@
     "github": "https://github.com/ALLFATHER-BV/wadamesh",
     "fid": "CFWXYTLZ42QBQP3UJ4JMPE7SX5B2EBH6",
     "versions": [
+      {
+        "version": "beta_84",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_84/wadamesh-tdisplay-p4-merged.bin",
+        "Fs": 3538256,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3407184,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3407184,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 3407184,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 8192000,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF17DF92042572\"",
+            "last_modified": "Mon, 21 Sep 2026 12:55:10 GMT"
+          }
+        }
+      },
       {
         "version": "beta_83",
         "published_at": "2026-09-19",
@@ -66226,24 +66394,36 @@
             "last_modified": "Tue, 01 Sep 2026 11:16:42 GMT"
           }
         }
-      },
+      }
+    ],
+    "esp": "p4",
+    "category": "t-display-p4"
+  },
+  {
+    "name": "WADAMESH BETA (TFT)",
+    "author": "ALLFATHER-BV",
+    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWT3QB6FPRZEHUA64RJJEYP36RSJYXL",
+    "versions": [
       {
-        "version": "beta_73",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_73/wadamesh-tdisplay-p4-merged.bin",
-        "Fs": 3448704,
+        "version": "beta_84",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_84/wadamesh-tdisplay-p4-lcd-merged.bin",
+        "Fs": 3540176,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 131072,
-        "as": 3317632,
+        "as": 3409104,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-display-p4",
           "app": {
             "source_offset": 131072,
-            "image_size": 3317632,
+            "image_size": 3409104,
             "partition_size": 4194304,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -66256,7 +66436,7 @@
               "role": "firmware",
               "size": 4194304,
               "source_offset": 131072,
-              "copy_size": 3317632,
+              "copy_size": 3409104,
               "required": true,
               "source": "firmware"
             },
@@ -66277,24 +66457,12 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:31Z",
-            "etag": "\"0x8DF04E0DCA58572\"",
-            "last_modified": "Fri, 28 Aug 2026 08:46:33 GMT"
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF17DF8E2DEC72\"",
+            "last_modified": "Mon, 21 Sep 2026 12:55:04 GMT"
           }
         }
-      }
-    ],
-    "esp": "p4",
-    "category": "t-display-p4"
-  },
-  {
-    "name": "WADAMESH BETA (TFT)",
-    "author": "ALLFATHER-BV",
-    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
-    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
-    "github": "https://github.com/ALLFATHER-BV/wadamesh",
-    "fid": "CFWT3QB6FPRZEHUA64RJJEYP36RSJYXL",
-    "versions": [
+      },
       {
         "version": "beta_83",
         "published_at": "2026-09-19",
@@ -66796,62 +66964,6 @@
             "analyzed_at": "2026-09-01T14:45:13Z",
             "etag": "\"0x8DF081A7F910F76\"",
             "last_modified": "Tue, 01 Sep 2026 11:16:41 GMT"
-          }
-        }
-      },
-      {
-        "version": "beta_73",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_73/wadamesh-tdisplay-p4-lcd-merged.bin",
-        "Fs": 3451088,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 131072,
-        "as": 3320016,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-display-p4",
-          "app": {
-            "source_offset": 131072,
-            "image_size": 3320016,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 131072,
-              "copy_size": 3320016,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "storage",
-              "role": "fat",
-              "size": 8192000,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:31Z",
-            "etag": "\"0x8DF04E0DAD92E59\"",
-            "last_modified": "Fri, 28 Aug 2026 08:46:30 GMT"
           }
         }
       }
@@ -76036,6 +76148,62 @@
     "fid": "CFWJBA62VDRQOGEXQEPVSOFKTOVT5PVD",
     "versions": [
       {
+        "version": "v0.1.49-alpha",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.49-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
+        "Fs": 4251952,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4186416,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4186416,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 4186416,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF17BFAA2DC208\"",
+            "last_modified": "Mon, 21 Sep 2026 09:06:47 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.48-alpha",
         "published_at": "2026-09-20",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.48-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
@@ -76538,62 +76706,6 @@
             "last_modified": "Fri, 31 Jul 2026 09:33:04 GMT"
           }
         }
-      },
-      {
-        "version": "v0.1.38-alpha",
-        "published_at": "2026-07-30",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.38-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
-        "Fs": 4132352,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 4066816,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 4066816,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 4066816,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:14:45Z",
-            "etag": "\"0x8DEEDE21459887C\"",
-            "last_modified": "Thu, 30 Jul 2026 02:27:19 GMT"
-          }
-        }
       }
     ],
     "esp": "s3",
@@ -76607,6 +76719,62 @@
     "github": "https://github.com/ALLFATHER-BV/wadamesh",
     "fid": "CFWBXVMXEMELBRHQRFQTVEMGEQA3GT6R",
     "versions": [
+      {
+        "version": "beta_83",
+        "published_at": "2026-09-19",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_83/wadamesh-tlora-pager-sx1262-merged.bin",
+        "Fs": 3707952,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3642416,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3642416,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3642416,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF1638E50EBDB2\"",
+            "last_modified": "Sat, 19 Sep 2026 10:29:32 GMT"
+          }
+        }
+      },
       {
         "version": "beta_65",
         "published_at": "2026-08-13",
@@ -76899,6 +77067,62 @@
     "github": "https://github.com/ALLFATHER-BV/wadamesh",
     "fid": "CFWFRWQO44EP2U6OJKWSSULNOMOSJA44",
     "versions": [
+      {
+        "version": "beta_84",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_84/wadamesh-tlora-pager-lr1121-merged.bin",
+        "Fs": 3714208,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3648672,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3648672,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3648672,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF17DF9A1AABE1\"",
+            "last_modified": "Mon, 21 Sep 2026 12:55:24 GMT"
+          }
+        }
+      },
       {
         "version": "beta_83",
         "published_at": "2026-09-19",
@@ -77402,24 +77626,36 @@
             "last_modified": "Tue, 01 Sep 2026 11:16:48 GMT"
           }
         }
-      },
+      }
+    ],
+    "esp": "s3",
+    "category": "t-lora-pager"
+  },
+  {
+    "name": "WADAMESH BETA (SX1262)",
+    "author": "ALLFATHER-BV",
+    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+    "github": "https://github.com/ALLFATHER-BV/wadamesh",
+    "fid": "CFWXK2SEBQC3RH6MDX2UAIUG4HACEN2C",
+    "versions": [
       {
-        "version": "beta_73",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_73/wadamesh-tlora-pager-lr1121-merged.bin",
-        "Fs": 3590992,
+        "version": "beta_84",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_84/wadamesh-tlora-pager-sx1262-merged.bin",
+        "Fs": 3715280,
         "s": 0,
         "f": 0,
         "f2": 0,
         "ao": 65536,
-        "as": 3525456,
+        "as": 3649744,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "t-lora-pager",
           "app": {
             "source_offset": 65536,
-            "image_size": 3525456,
+            "image_size": 3649744,
             "partition_size": 4063232,
             "label_policy": "next_app",
             "subtype_policy": "next_ota"
@@ -77432,7 +77668,7 @@
               "role": "firmware",
               "size": 4063232,
               "source_offset": 65536,
-              "copy_size": 3525456,
+              "copy_size": 3649744,
               "required": true,
               "source": "firmware"
             },
@@ -77453,24 +77689,12 @@
             "confidence": "exact",
             "warnings": [],
             "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:31Z",
-            "etag": "\"0x8DF04E0DFD3C884\"",
-            "last_modified": "Fri, 28 Aug 2026 08:46:38 GMT"
+            "analyzed_at": "2026-09-21T13:16:25Z",
+            "etag": "\"0x8DF17DF9E464888\"",
+            "last_modified": "Mon, 21 Sep 2026 12:55:31 GMT"
           }
         }
-      }
-    ],
-    "esp": "s3",
-    "category": "t-lora-pager"
-  },
-  {
-    "name": "WADAMESH BETA (SX1262)",
-    "author": "ALLFATHER-BV",
-    "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
-    "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
-    "github": "https://github.com/ALLFATHER-BV/wadamesh",
-    "fid": "CFWXK2SEBQC3RH6MDX2UAIUG4HACEN2C",
-    "versions": [
+      },
       {
         "version": "beta_83",
         "published_at": "2026-09-19",
@@ -77972,62 +78196,6 @@
             "analyzed_at": "2026-09-01T14:45:12Z",
             "etag": "\"0x8DF081A85274FC1\"",
             "last_modified": "Tue, 01 Sep 2026 11:16:50 GMT"
-          }
-        }
-      },
-      {
-        "version": "beta_73",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_73/wadamesh-tlora-pager-sx1262-merged.bin",
-        "Fs": 3591952,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3526416,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3526416,
-            "partition_size": 4063232,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4063232,
-              "source_offset": 65536,
-              "copy_size": 3526416,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:31Z",
-            "etag": "\"0x8DF04E0E150D8F7\"",
-            "last_modified": "Fri, 28 Aug 2026 08:46:40 GMT"
           }
         }
       }
@@ -79725,6 +79893,62 @@
     "fid": "CFW7NVZY5APBW7EH5BPMTY6B6IFXWC23",
     "versions": [
       {
+        "version": "v0.1.49-alpha",
+        "published_at": "2026-09-21",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.49-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
+        "Fs": 4042672,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3977136,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3977136,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3977136,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-21T13:16:23Z",
+            "etag": "\"0x8DF17BFAA2E5D95\"",
+            "last_modified": "Mon, 21 Sep 2026 09:06:47 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.48-alpha",
         "published_at": "2026-09-20",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.48-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
@@ -80225,62 +80449,6 @@
             "analyzed_at": "2026-08-03T20:15:08Z",
             "etag": "\"0x8DEEEE6B91C3F8A\"",
             "last_modified": "Fri, 31 Jul 2026 09:33:04 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.38-alpha",
-        "published_at": "2026-07-30",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.38-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
-        "Fs": 3968080,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3902544,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-watch-s3",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3902544,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3902544,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 8257536,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:08Z",
-            "etag": "\"0x8DEEDE21461869D\"",
-            "last_modified": "Thu, 30 Jul 2026 02:27:19 GMT"
           }
         }
       }

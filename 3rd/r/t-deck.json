@@ -7986,6 +7986,62 @@
         "fid": "CFWAF7ZP2EZ6PUSTWGJO5CQGF7MZAANN",
         "versions": [
             {
+                "version": "v0.1.49-alpha",
+                "published_at": "2026-09-21",
+                "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.49-alpha/trail-mate-tdeck-webflash.bin",
+                "Fs": 4054592,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3989056,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3989056,
+                        "partition_size": 6291456,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6291456,
+                            "source_offset": 65536,
+                            "copy_size": 3989056,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "ffat",
+                            "role": "fat",
+                            "size": 4063232,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-21T13:16:24Z",
+                        "etag": "\"0x8DF17BFAA293343\"",
+                        "last_modified": "Mon, 21 Sep 2026 09:06:47 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.1.48-alpha",
                 "published_at": "2026-09-20",
                 "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.48-alpha/trail-mate-tdeck-webflash.bin",
@@ -8488,62 +8544,6 @@
                         "last_modified": "Fri, 31 Jul 2026 09:33:04 GMT"
                     }
                 }
-            },
-            {
-                "version": "v0.1.38-alpha",
-                "published_at": "2026-07-30",
-                "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.38-alpha/trail-mate-tdeck-webflash.bin",
-                "Fs": 3936912,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3871376,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3871376,
-                        "partition_size": 4194304,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4194304,
-                            "source_offset": 65536,
-                            "copy_size": 3871376,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "ffat",
-                            "role": "fat",
-                            "size": 8257536,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-03T20:15:02Z",
-                        "etag": "\"0x8DEEDE2146001A8\"",
-                        "last_modified": "Thu, 30 Jul 2026 02:27:19 GMT"
-                    }
-                }
             }
         ],
         "esp": "s3",
@@ -8557,6 +8557,62 @@
         "github": "https://github.com/ALLFATHER-BV/wadamesh",
         "fid": "CFW7UKIJW436AWBCH5OTRSG3Q7CK5PNN",
         "versions": [
+            {
+                "version": "beta_83",
+                "published_at": "2026-09-19",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_83/wadamesh-tdeck-merged.bin",
+                "Fs": 3470128,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3404592,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3404592,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3404592,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-09-21T13:16:24Z",
+                        "etag": "\"0x8DF1639E7B32D9B\"",
+                        "last_modified": "Sat, 19 Sep 2026 10:36:46 GMT"
+                    }
+                }
+            },
             {
                 "version": "beta_65",
                 "published_at": "2026-08-13",
@@ -9060,24 +9116,36 @@
                         "last_modified": "Sun, 05 Jul 2026 21:44:34 GMT"
                     }
                 }
-            },
+            }
+        ],
+        "esp": "s3",
+        "category": "t-deck"
+    },
+    {
+        "name": "WADAMESH BETA",
+        "author": "ALLFATHER-BV",
+        "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
+        "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
+        "github": "https://github.com/ALLFATHER-BV/wadamesh",
+        "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
+        "versions": [
             {
-                "version": "beta_27",
-                "published_at": "2026-07-03",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_27/wadamesh-tdeck-merged.bin",
-                "Fs": 3033904,
+                "version": "beta_84",
+                "published_at": "2026-09-21",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_84/wadamesh-tdeck-merged.bin",
+                "Fs": 3477488,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2968368,
+                "as": 3411952,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-deck",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2968368,
+                        "image_size": 3411952,
                         "partition_size": 4063232,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -9090,7 +9158,7 @@
                             "role": "firmware",
                             "size": 4063232,
                             "source_offset": 65536,
-                            "copy_size": 2968368,
+                            "copy_size": 3411952,
                             "required": true,
                             "source": "firmware"
                         },
@@ -9111,24 +9179,12 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-03T20:15:03Z",
-                        "etag": "\"0x8DED8CA35E40EE0\"",
-                        "last_modified": "Fri, 03 Jul 2026 06:13:33 GMT"
+                        "analyzed_at": "2026-09-21T13:16:24Z",
+                        "etag": "\"0x8DF17E08C4E6151\"",
+                        "last_modified": "Mon, 21 Sep 2026 13:02:10 GMT"
                     }
                 }
-            }
-        ],
-        "esp": "s3",
-        "category": "t-deck"
-    },
-    {
-        "name": "WADAMESH BETA",
-        "author": "ALLFATHER-BV",
-        "description": "Test builds of WADAMESH \u2014 the newest features before they reach the stable channel, less tested. For everyday use install the stable WADAMESH entry instead. MeshCore companion radio with a full touch UI for the LilyGo T-Deck.",
-        "cover": "https://raw.githubusercontent.com/ALLFATHER-BV/wadamesh/main/deploy/site/wadamesh-icon-512.png",
-        "github": "https://github.com/ALLFATHER-BV/wadamesh",
-        "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
-        "versions": [
+            },
             {
                 "version": "beta_83",
                 "published_at": "2026-09-19",
@@ -9630,62 +9686,6 @@
                         "analyzed_at": "2026-09-01T14:45:13Z",
                         "etag": "\"0x8DF081B76B916BC\"",
                         "last_modified": "Tue, 01 Sep 2026 11:23:35 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_73",
-                "published_at": "2026-08-28",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_73/wadamesh-tdeck-merged.bin",
-                "Fs": 3333072,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3267536,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3267536,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3267536,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-28T11:13:32Z",
-                        "etag": "\"0x8DF04E1D0DDE887\"",
-                        "last_modified": "Fri, 28 Aug 2026 08:53:22 GMT"
                     }
                 }
             }
