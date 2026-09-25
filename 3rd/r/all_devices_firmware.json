@@ -53751,6 +53751,53 @@
         }
       },
       {
+        "version": "v5.4.3",
+        "published_at": "2026-09-25",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.4.3/camillia-mt-tdeck-pro-v5.4.3-ota.bin",
+        "Fs": 3064400,
+        "nb": true,
+        "ao": 0,
+        "as": 3064400,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3064400,
+            "partition_size": 3064400,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3064400,
+              "source_offset": 0,
+              "copy_size": 3064400,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-25T15:30:30Z",
+            "etag": "\"0x8DF1B0BEF9001ED\"",
+            "last_modified": "Fri, 25 Sep 2026 13:50:18 GMT"
+          }
+        }
+      },
+      {
         "version": "v5.3.6",
         "published_at": "2026-09-23",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v5.3.6/camillia-mt-tdeck-pro-v5.3.6-ota.bin",
@@ -54029,53 +54076,6 @@
             "analyzed_at": "2026-09-22T22:17:26Z",
             "etag": "\"0x8DF18EA9A0D6153\"",
             "last_modified": "Tue, 22 Sep 2026 20:46:39 GMT"
-          }
-        }
-      },
-      {
-        "version": "v5.3.0",
-        "published_at": "2026-09-21",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.3.0/camillia-mt-tdeck-pro-v5.3.0-ota.bin",
-        "Fs": 3056000,
-        "nb": true,
-        "ao": 0,
-        "as": 3056000,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 0,
-            "image_size": 3056000,
-            "partition_size": 3056000,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3056000,
-              "source_offset": 0,
-              "copy_size": 3056000,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-21T01:12:27Z",
-            "etag": "\"0x8DF1776B6D0DC4B\"",
-            "last_modified": "Mon, 21 Sep 2026 00:24:35 GMT"
           }
         }
       }
@@ -59187,6 +59187,62 @@
         }
       },
       {
+        "version": "v1.3.3",
+        "published_at": "2026-09-25",
+        "file": "https://github.com/868meshbot/Saitama/releases/download/v1.3.3/saitama-t-deck-plus-1.3.3-merged.bin",
+        "Fs": 2661728,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2596192,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2596192,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2596192,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3407872,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-25T15:30:30Z",
+            "etag": "\"0x8DF1B0ED6C5B3EA\"",
+            "last_modified": "Fri, 25 Sep 2026 14:11:05 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.3.0",
         "published_at": "2026-09-02",
         "file": "https://github.com/868meshbot/Saitama/releases/download/v1.3.0/saitama-t-deck-plus-1.3.0-merged.bin",
@@ -59631,62 +59687,6 @@
             "analyzed_at": "2026-08-03T20:15:01Z",
             "etag": "\"0x8DED5D1C803D63A\"",
             "last_modified": "Mon, 29 Jun 2026 11:30:11 GMT"
-          }
-        }
-      },
-      {
-        "version": "v1.0.0",
-        "published_at": "2026-06-12",
-        "file": "https://github.com/868meshbot/Saitama/releases/download/v1.0.0/saitama-t-deck-plus-1.0.0-merged.bin",
-        "Fs": 2532720,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2467184,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2467184,
-            "partition_size": 6553600,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6553600,
-              "source_offset": 65536,
-              "copy_size": 2467184,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3407872,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:01Z",
-            "etag": "\"0x8DEC85DB8E1DE51\"",
-            "last_modified": "Fri, 12 Jun 2026 08:36:39 GMT"
           }
         }
       }
@@ -74455,6 +74455,53 @@
         }
       },
       {
+        "version": "v5.4.3",
+        "published_at": "2026-09-25",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.4.3/camillia-mt-tlora-pager-tft-v5.4.3-ota.bin",
+        "Fs": 3091936,
+        "nb": true,
+        "ao": 0,
+        "as": 3091936,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3091936,
+            "partition_size": 3091936,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3091936,
+              "source_offset": 0,
+              "copy_size": 3091936,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-09-25T15:30:29Z",
+            "etag": "\"0x8DF1B0BEFEC4095\"",
+            "last_modified": "Fri, 25 Sep 2026 13:50:19 GMT"
+          }
+        }
+      },
+      {
         "version": "v5.3.6",
         "published_at": "2026-09-23",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v5.3.6/camillia-mt-tlora-pager-tft-v5.3.6-ota.bin",
@@ -74733,53 +74780,6 @@
             "analyzed_at": "2026-09-22T22:17:26Z",
             "etag": "\"0x8DF18EA9A3838C6\"",
             "last_modified": "Tue, 22 Sep 2026 20:46:39 GMT"
-          }
-        }
-      },
-      {
-        "version": "v5.3.0",
-        "published_at": "2026-09-21",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v5.3.0/camillia-mt-tlora-pager-tft-v5.3.0-ota.bin",
-        "Fs": 3078928,
-        "nb": true,
-        "ao": 0,
-        "as": 3078928,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 0,
-            "image_size": 3078928,
-            "partition_size": 3078928,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3078928,
-              "source_offset": 0,
-              "copy_size": 3078928,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-21T01:12:27Z",
-            "etag": "\"0x8DF1776B703E7DE\"",
-            "last_modified": "Mon, 21 Sep 2026 00:24:35 GMT"
           }
         }
       }
