@@ -7389,6 +7389,51 @@
         "fid": "CFW7UC55OXEBZO4K3VZTHBKMF4BRZHAF",
         "versions": [
             {
+                "version": "v1.8.3",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.8.3/tdeck_firmware.bin",
+                "Fs": 4194304,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1850560,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1850560,
+                        "partition_size": 3080192,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3080192,
+                            "source_offset": 65536,
+                            "copy_size": 1850560,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-27T17:57:37Z",
+                        "etag": "\"0x8DF1C9E77C16AE6\"",
+                        "last_modified": "Sun, 27 Sep 2026 13:51:44 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.8.2",
                 "published_at": "2026-09-26",
                 "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.8.2/tdeck_firmware.bin",
@@ -7790,51 +7835,6 @@
                         "analyzed_at": "2026-09-14T10:33:06Z",
                         "etag": "\"0x8DF12448928A323\"",
                         "last_modified": "Mon, 14 Sep 2026 09:42:47 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.3.0",
-                "published_at": "2026-08-15",
-                "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.3.0/tdeck_firmware.bin",
-                "Fs": 4194304,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2055312,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2055312,
-                        "partition_size": 3080192,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3080192,
-                            "source_offset": 65536,
-                            "copy_size": 2055312,
-                            "required": true,
-                            "source": "firmware"
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 4231168,
-                        "analyzed_at": "2026-08-15T18:37:51Z",
-                        "etag": "\"0x8DEFAB47E35F8F8\"",
-                        "last_modified": "Sat, 15 Aug 2026 10:03:45 GMT"
                     }
                 }
             }
