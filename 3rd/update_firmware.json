@@ -451,17 +451,27 @@
     {
         "name": "Cheap Yellow Monster",
         "repo_owner": "JimGat",
-        "repo_name": "CYM-NM28C5",
+        "repo_name": "CYM",
         "author": "JimGat",
-        "cover": "https://github.com/JimGat/CYM-NM28C5/raw/main/docs/screenshots/CYM_Dexter_Logo.png",
-        "github": "https://github.com/JimGat/CYM-NM28C5",
+        "cover": "https://github.com/JimGat/CYM/raw/main/docs/screenshots/CYM_Dexter_Logo.png",
+        "github": "https://github.com/JimGat/CYM",
         "description": "Cheap Yellow Monster is a portable, touchscreen-driven WiFi security toolkit running on the NM-CYD-C5 ESP32-C5-WIFI6-KIT. Originally inspired by Pancake, it combines a rich set of offensive and defensive WiFi tools with BLE scanning, GPS wardriving, and a beautiful Material-style dark UI — all packed into a handheld form factor with a 2.8in resistive touch display.",
         "fid_prefix": "CYM",
         "devices": [
             {
                 "name": "NM-CYD-C5",
-                "asset_contains" :"CYM-NM28C5.bin",
+                "asset_contains" :"CYM-NM28C5-full.bin",
                 "json": "NM-CYD-C5.json"
+            },
+            {
+                "name": "CYDS028R",
+                "asset_contains" :"CYM-CYD-2432S028-full.bin",
+                "json": "CYD.json"
+            },
+            {
+                "name": "WSC5",
+                "asset_contains" :"CYM-WS-C5-28-full.bin",
+                "json": "waveshare-esp32-c5-lcd-280.json"
             }
         ]
     },
@@ -1299,6 +1309,51 @@
                 "name": "cyd",
                 "asset_contains": "firmware.bin",
                 "json": "CYD.json"
+            }
+        ]
+    },
+    {
+        "name": "AxD",
+        "repo_owner": "dagnazty",
+        "repo_name": "awokxdag",
+        "author": "dag",
+        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
+        "github": "https://github.com/dagnazty/awokxdag",
+        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
+        "fid_prefix": "AWOKxDAG",
+        "devices": [
+            {
+                "name": "mini",
+                "asset_contains": "awokxdag-esp32-mini-v3-merged.bin",
+                "json": "marauder-mini.json"
+            },
+            {
+                "name": "minib",
+                "variant": "Bridge",
+                "asset_contains": "awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "json": "marauder-mini.json"
+            },
+            {
+                "name": "v6x",
+                "asset_contains": "awokxdag-esp32-touch-v3-merged.bin",
+                "json": "marauder-v6x.json"
+            },
+            {
+                "name": "v6xb",
+                "variant": "Bridge",
+                "asset_contains": "awokxdag-esp32-touch-bridge-v3-merged.bin",
+                "json": "marauder-v6x.json"
+            },
+            {
+                "name": "v8",
+                "asset_contains": "awokxdag-touch-merged.bin",
+                "json": "marauder-v8.json"
+            },
+            {
+                "name": "v8b",
+                "variant": "Bridge",
+                "asset_contains": "awokxdag-bridge-merged.bin",
+                "json": "marauder-v8.json"
             }
         ]
     }
