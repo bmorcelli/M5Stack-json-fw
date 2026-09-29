@@ -1,5 +1,1229 @@
 [
     {
+        "name": "AxD",
+        "author": "dag",
+        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
+        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
+        "github": "https://github.com/dagnazty/awokxdag",
+        "fid": "CFW3JFWRADGV6HGES4S76PPMDVTO6QMW",
+        "versions": [
+            {
+                "version": "v1.7.7",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.7/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2296112,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2296112,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2296112,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:46Z",
+                        "etag": "\"0x8DF1CDDBF52ACAF\"",
+                        "last_modified": "Sun, 27 Sep 2026 21:24:43 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.6",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.6/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2294992,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2294992,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2294992,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:46Z",
+                        "etag": "\"0x8DF1C512DA3CB13\"",
+                        "last_modified": "Sun, 27 Sep 2026 04:38:29 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.5",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.5/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2294800,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2294800,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2294800,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:46Z",
+                        "etag": "\"0x8DF1B06449F8FCF\"",
+                        "last_modified": "Fri, 25 Sep 2026 13:09:44 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.4",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.4/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2290288,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2290288,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2290288,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:46Z",
+                        "etag": "\"0x8DF1AC1BEDA704E\"",
+                        "last_modified": "Fri, 25 Sep 2026 04:59:14 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.3",
+                "published_at": "2026-09-24",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.3/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2289232,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2289232,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2289232,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:46Z",
+                        "etag": "\"0x8DF1A27FFC8888E\"",
+                        "last_modified": "Thu, 24 Sep 2026 10:38:40 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.2",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.2/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2237360,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2237360,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2237360,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:46Z",
+                        "etag": "\"0x8DF1981071AB73C\"",
+                        "last_modified": "Wed, 23 Sep 2026 14:43:27 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.1",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.1/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2111936,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2111936,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2111936,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF192E34AED265\"",
+                        "last_modified": "Wed, 23 Sep 2026 04:50:35 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.0",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.0/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2131872,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2131872,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2131872,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF18D37EB8F989\"",
+                        "last_modified": "Tue, 22 Sep 2026 18:01:15 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.5",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.5/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2128064,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2128064,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2128064,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF18A409BEC105\"",
+                        "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.4",
+                "published_at": "2026-09-21",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2104144,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2104144,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2104144,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF181F7B492F56\"",
+                        "last_modified": "Mon, 21 Sep 2026 20:32:40 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
+        "name": "AxD (Bridge)",
+        "author": "dag",
+        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
+        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
+        "github": "https://github.com/dagnazty/awokxdag",
+        "fid": "CFWHIU64I3BV7IBYY6LYVBPHAG4URIIQ",
+        "versions": [
+            {
+                "version": "v1.7.7",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.7/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2111600,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2111600,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2111600,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF1CDDBF67F184\"",
+                        "last_modified": "Sun, 27 Sep 2026 21:24:43 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.6",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.6/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2110480,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2110480,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2110480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF1C512DA466A8\"",
+                        "last_modified": "Sun, 27 Sep 2026 04:38:29 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.5",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.5/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2123248,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2123248,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2123248,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF1B0644AACDCC\"",
+                        "last_modified": "Fri, 25 Sep 2026 13:09:44 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.4",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.4/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2119584,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2119584,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2119584,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF1AC1BEE256AE\"",
+                        "last_modified": "Fri, 25 Sep 2026 04:59:14 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.3",
+                "published_at": "2026-09-24",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.3/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2118512,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2118512,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2118512,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF1A27FFD4FDB7\"",
+                        "last_modified": "Thu, 24 Sep 2026 10:38:40 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.2",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.2/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2072688,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2072688,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2072688,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF19810711E77B\"",
+                        "last_modified": "Wed, 23 Sep 2026 14:43:26 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.1",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.1/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1946000,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1946000,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 1946000,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:47Z",
+                        "etag": "\"0x8DF192E34AA916C\"",
+                        "last_modified": "Wed, 23 Sep 2026 04:50:35 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.0",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.0/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1965920,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1965920,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 1965920,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:48Z",
+                        "etag": "\"0x8DF18D37EBE4AC2\"",
+                        "last_modified": "Tue, 22 Sep 2026 18:01:15 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.5",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.5/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1960480,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1960480,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 1960480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:48Z",
+                        "etag": "\"0x8DF18A409BE4C54\"",
+                        "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.4",
+                "published_at": "2026-09-21",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-bridge-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1937456,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1937456,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 1937456,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-09-29T19:21:48Z",
+                        "etag": "\"0x8DF181F7B4D4969\"",
+                        "last_modified": "Mon, 21 Sep 2026 20:32:40 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-v8",
+        "esp": "c5"
+    },
+    {
         "name": "FlipSocial",
         "author": "H4W9",
         "description": "A standalone touch firmware that runs FlipSocial natively on the Marauder V8 and Pancake board (ESP32-C5, ST7796 320\u00d7480, FT6336 capacitive touch). It talks to the FlipSocial API directly over WiFi/HTTPS and is built on Picoware panel / touch / HTTP core.",

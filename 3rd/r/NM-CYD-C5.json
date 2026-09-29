@@ -71,29 +71,28 @@
         "name": "Cheap Yellow Monster",
         "author": "JimGat",
         "description": "Cheap Yellow Monster is a portable, touchscreen-driven WiFi security toolkit running on the NM-CYD-C5 ESP32-C5-WIFI6-KIT. Originally inspired by Pancake, it combines a rich set of offensive and defensive WiFi tools with BLE scanning, GPS wardriving, and a beautiful Material-style dark UI \u2014 all packed into a handheld form factor with a 2.8in resistive touch display.",
-        "cover": "https://github.com/JimGat/CYM-NM28C5/raw/main/docs/screenshots/CYM_Dexter_Logo.png",
-        "github": "https://github.com/JimGat/CYM-NM28C5",
+        "cover": "https://github.com/JimGat/CYM/raw/main/docs/screenshots/CYM_Dexter_Logo.png",
+        "github": "https://github.com/JimGat/CYM",
         "fid": "CFW3TMV2H6G2YR2VVPOVKXUKPUQ4BESO",
         "versions": [
             {
                 "version": "v2.15.34",
                 "published_at": "2026-09-28",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.15.34/CYM-NM28C5.bin",
-                "Fs": 3194032,
-                "nb": true,
-                "ao": 0,
-                "as": 3194032,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.15.34/CYM-NM28C5-full.bin",
+                "Fs": 3259568,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3194032,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3194032,
-                        "partition_size": 3194032,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -103,21 +102,31 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3194032,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3194032,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-28T08:37:25Z",
-                        "etag": "\"0x8DF1D0AC7170A05\"",
+                        "analyzed_at": "2026-09-29T19:21:44Z",
+                        "etag": "\"0x8DF1D0AC70ABBD1\"",
                         "last_modified": "Mon, 28 Sep 2026 02:47:03 GMT"
                     }
                 }
@@ -125,22 +134,21 @@
             {
                 "version": "v2.15.20",
                 "published_at": "2026-09-23",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.15.20/CYM-NM28C5.bin",
-                "Fs": 3163424,
-                "nb": true,
-                "ao": 0,
-                "as": 3163424,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.15.20/CYM-NM28C5-full.bin",
+                "Fs": 3228960,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3163424,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3163424,
-                        "partition_size": 3163424,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -150,21 +158,31 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3163424,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3163424,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-23T10:04:56Z",
-                        "etag": "\"0x8DF1932CFC9FDA2\"",
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DF1932CFDD969F\"",
                         "last_modified": "Wed, 23 Sep 2026 05:23:33 GMT"
                     }
                 }
@@ -172,22 +190,21 @@
             {
                 "version": "v2.15.10",
                 "published_at": "2026-09-22",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.15.10/CYM-NM28C5.bin",
-                "Fs": 3152720,
-                "nb": true,
-                "ao": 0,
-                "as": 3152720,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.15.10/CYM-NM28C5-full.bin",
+                "Fs": 3218256,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3152720,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3152720,
-                        "partition_size": 3152720,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -197,44 +214,53 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3152720,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3152720,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-22T06:03:38Z",
-                        "etag": "\"0x8DF186DB78E09C3\"",
-                        "last_modified": "Tue, 22 Sep 2026 05:52:41 GMT"
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DF19208B4A22E6\"",
+                        "last_modified": "Wed, 23 Sep 2026 03:12:47 GMT"
                     }
                 }
             },
             {
                 "version": "v2.14.02",
                 "published_at": "2026-09-21",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.14.02/CYM-NM28C5.bin",
-                "Fs": 3117120,
-                "nb": true,
-                "ao": 0,
-                "as": 3117120,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.14.02/CYM-NM28C5-full.bin",
+                "Fs": 3182656,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3117120,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3117120,
-                        "partition_size": 3117120,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -244,21 +270,31 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3117120,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3117120,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-21T13:16:24Z",
-                        "etag": "\"0x8DF17D39994EFEE\"",
+                        "analyzed_at": "2026-09-29T19:21:44Z",
+                        "etag": "\"0x8DF17D39980E244\"",
                         "last_modified": "Mon, 21 Sep 2026 11:29:29 GMT"
                     }
                 }
@@ -266,22 +302,21 @@
             {
                 "version": "v2.14.01",
                 "published_at": "2026-09-17",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.14.01/CYM-NM28C5.bin",
-                "Fs": 3116048,
-                "nb": true,
-                "ao": 0,
-                "as": 3116048,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.14.01/CYM-NM28C5-full.bin",
+                "Fs": 3181584,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3116048,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3116048,
-                        "partition_size": 3116048,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -291,21 +326,31 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3116048,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3116048,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-17T14:52:58Z",
-                        "etag": "\"0x8DF14ACAEC745D7\"",
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DF14ACAEC6D136\"",
                         "last_modified": "Thu, 17 Sep 2026 11:13:20 GMT"
                     }
                 }
@@ -313,22 +358,21 @@
             {
                 "version": "v2.14.00",
                 "published_at": "2026-09-15",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.14.00/CYM-NM28C5.bin",
-                "Fs": 3115616,
-                "nb": true,
-                "ao": 0,
-                "as": 3115616,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.14.00/CYM-NM28C5-full.bin",
+                "Fs": 3181152,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3115616,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3115616,
-                        "partition_size": 3115616,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -338,21 +382,31 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3115616,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3115616,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-15T06:47:50Z",
-                        "etag": "\"0x8DF12D33BBD9635\"",
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DF12D33BB7F734\"",
                         "last_modified": "Tue, 15 Sep 2026 02:44:15 GMT"
                     }
                 }
@@ -360,22 +414,21 @@
             {
                 "version": "v2.13.43",
                 "published_at": "2026-09-07",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.13.43/CYM-NM28C5.bin",
-                "Fs": 3097248,
-                "nb": true,
-                "ao": 0,
-                "as": 3097248,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.13.43/CYM-NM28C5-full.bin",
+                "Fs": 3162784,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3097248,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3097248,
-                        "partition_size": 3097248,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -385,44 +438,53 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3097248,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3097248,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-07T04:52:17Z",
-                        "etag": "\"0x8DF0C85A58EDF5E\"",
-                        "last_modified": "Mon, 07 Sep 2026 02:13:45 GMT"
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DF0CF705B19F21\"",
+                        "last_modified": "Mon, 07 Sep 2026 15:45:20 GMT"
                     }
                 }
             },
             {
                 "version": "v2.12.2",
                 "published_at": "2026-08-12",
-                "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.12.2/CYM-NM28C5.bin",
-                "Fs": 3056976,
-                "nb": true,
-                "ao": 0,
-                "as": 3056976,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.12.2/CYM-NM28C5-full.bin",
+                "Fs": 3122512,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3056976,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3056976,
-                        "partition_size": 3056976,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -432,44 +494,53 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3056976,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3056976,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-12T06:01:50Z",
-                        "etag": "\"0x8DEF82C406F0986\"",
-                        "last_modified": "Wed, 12 Aug 2026 04:43:27 GMT"
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DEF82C40A7B40A\"",
+                        "last_modified": "Wed, 12 Aug 2026 04:43:28 GMT"
                     }
                 }
             },
             {
                 "version": "v2.12.0",
                 "published_at": "2026-08-02",
-                "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.12.0/CYM-NM28C5.bin",
-                "Fs": 3053760,
-                "nb": true,
-                "ao": 0,
-                "as": 3053760,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.12.0/CYM-NM28C5-full.bin",
+                "Fs": 3119296,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 3053760,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 3053760,
-                        "partition_size": 3053760,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -479,44 +550,53 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3053760,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 3053760,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-02T22:41:18Z",
-                        "etag": "\"0x8DEF0E35A56E73D\"",
-                        "last_modified": "Sun, 02 Aug 2026 22:13:59 GMT"
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DEF1651CBE66E9\"",
+                        "last_modified": "Mon, 03 Aug 2026 13:42:50 GMT"
                     }
                 }
             },
             {
                 "version": "v2.11.7",
                 "published_at": "2026-07-26",
-                "file": "https://github.com/JimGat/CYM-NM28C5/releases/download/v2.11.7/CYM-NM28C5.bin",
-                "Fs": 2986784,
-                "nb": true,
-                "ao": 0,
-                "as": 2986784,
+                "file": "https://github.com/JimGat/CYM/releases/download/v2.11.7/CYM-NM28C5-full.bin",
+                "Fs": 3052320,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
+                "ao": 65536,
+                "as": 2986784,
                 "install": {
                     "schema": 1,
-                    "format": "app",
+                    "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
-                        "source_offset": 0,
+                        "source_offset": 65536,
                         "image_size": 2986784,
-                        "partition_size": 2986784,
+                        "partition_size": 7340032,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -526,21 +606,31 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2986784,
-                            "source_offset": 0,
+                            "size": 7340032,
+                            "source_offset": 65536,
                             "copy_size": 2986784,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
                             "required": true
                         }
                     ],
                     "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:13Z",
-                        "etag": "\"0x8DEEB222EAFAE5F\"",
+                        "analyzed_at": "2026-09-29T19:21:45Z",
+                        "etag": "\"0x8DEEB222EA7B9A2\"",
                         "last_modified": "Sun, 26 Jul 2026 14:28:37 GMT"
                     }
                 }

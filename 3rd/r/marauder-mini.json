@@ -1,5 +1,1229 @@
 [
     {
+        "name": "AxD",
+        "author": "dag",
+        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
+        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
+        "github": "https://github.com/dagnazty/awokxdag",
+        "fid": "CFWLZOFT2EIAVYEM53QOBGPLCQ7SWDGJ",
+        "versions": [
+            {
+                "version": "v1.7.7",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.7/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1934640,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1934640,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1934640,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:49Z",
+                        "etag": "\"0x8DF1CDDBF44B29D\"",
+                        "last_modified": "Sun, 27 Sep 2026 21:24:43 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.6",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.6/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1933712,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1933712,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1933712,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:49Z",
+                        "etag": "\"0x8DF1C512D7EE07A\"",
+                        "last_modified": "Sun, 27 Sep 2026 04:38:29 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.5",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.5/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1934048,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1934048,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1934048,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:49Z",
+                        "etag": "\"0x8DF1B0644845D73\"",
+                        "last_modified": "Fri, 25 Sep 2026 13:09:44 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.4",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.4/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1929472,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1929472,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1929472,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:49Z",
+                        "etag": "\"0x8DF1AC1BEC49000\"",
+                        "last_modified": "Fri, 25 Sep 2026 04:59:14 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.3",
+                "published_at": "2026-09-24",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.3/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1928480,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1928480,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1928480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:49Z",
+                        "etag": "\"0x8DF1A27FFA108C6\"",
+                        "last_modified": "Thu, 24 Sep 2026 10:38:40 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.2",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.2/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1884032,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1884032,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1884032,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:49Z",
+                        "etag": "\"0x8DF198106F31073\"",
+                        "last_modified": "Wed, 23 Sep 2026 14:43:26 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.1",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.1/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1761440,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1761440,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1761440,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF192E347E3507\"",
+                        "last_modified": "Wed, 23 Sep 2026 04:50:34 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.0",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.0/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1767088,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1767088,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1767088,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:49Z",
+                        "etag": "\"0x8DF18D37E8FF4BB\"",
+                        "last_modified": "Tue, 22 Sep 2026 18:01:15 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.5",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.5/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1764016,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1764016,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1764016,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF18A409A0AC75\"",
+                        "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.4",
+                "published_at": "2026-09-21",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1746400,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1746400,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1746400,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF181F7B31A30D\"",
+                        "last_modified": "Mon, 21 Sep 2026 20:32:39 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-mini",
+        "esp": "32"
+    },
+    {
+        "name": "AxD (Bridge)",
+        "author": "dag",
+        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
+        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
+        "github": "https://github.com/dagnazty/awokxdag",
+        "fid": "CFWWIGJZRDNXK75F2GSKOT7CN4AKCGDZ",
+        "versions": [
+            {
+                "version": "v1.7.7",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.7/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1953664,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1953664,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1953664,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF1CDDBF45C2E7\"",
+                        "last_modified": "Sun, 27 Sep 2026 21:24:43 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.6",
+                "published_at": "2026-09-27",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.6/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1943616,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1943616,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1943616,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF1C512D87FDF4\"",
+                        "last_modified": "Sun, 27 Sep 2026 04:38:29 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.5",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.5/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1943840,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1943840,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1943840,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF1B06448C91EF\"",
+                        "last_modified": "Fri, 25 Sep 2026 13:09:44 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.4",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.4/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1940288,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1940288,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1940288,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF1AC1BEC358C8\"",
+                        "last_modified": "Fri, 25 Sep 2026 04:59:14 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.3",
+                "published_at": "2026-09-24",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.3/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1939232,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1939232,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1939232,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF1A27FFA87A6E\"",
+                        "last_modified": "Thu, 24 Sep 2026 10:38:40 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.2",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.2/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1889904,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1889904,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1889904,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:50Z",
+                        "etag": "\"0x8DF198106EEF659\"",
+                        "last_modified": "Wed, 23 Sep 2026 14:43:26 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.1",
+                "published_at": "2026-09-23",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.1/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1766864,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1766864,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1766864,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:51Z",
+                        "etag": "\"0x8DF192E34824F34\"",
+                        "last_modified": "Wed, 23 Sep 2026 04:50:35 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.7.0",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.0/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1772528,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1772528,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1772528,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:51Z",
+                        "etag": "\"0x8DF18D37E8FCDD3\"",
+                        "last_modified": "Tue, 22 Sep 2026 18:01:15 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.5",
+                "published_at": "2026-09-22",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.5/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1767280,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1767280,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1767280,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:51Z",
+                        "etag": "\"0x8DF18A409A25838\"",
+                        "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v1.6.4",
+                "published_at": "2026-09-21",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-esp32-mini-bridge-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1749600,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1749600,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1749600,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-09-29T19:21:51Z",
+                        "etag": "\"0x8DF181F7B2A5846\"",
+                        "last_modified": "Mon, 21 Sep 2026 20:32:39 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "marauder-mini",
+        "esp": "32"
+    },
+    {
         "name": "Bruce",
         "author": "pr3y",
         "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
