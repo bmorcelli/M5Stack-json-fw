@@ -2396,6 +2396,78 @@
         "fid": "CFWGK5FZCLPFM4UEKZND26ZY5KCBBSSQ",
         "versions": [
             {
+                "version": "v2.5.0",
+                "published_at": "2026-10-03",
+                "file": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake.bin",
+                "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+                "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+                "Fs": 2891376,
+                "ao": 0,
+                "as": 2891376,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "pancake",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2891376,
+                        "partition_size": 3145728,
+                        "flash_offset": 131072,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 0,
+                            "copy_size": 2891376,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 131072
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "vfs",
+                            "role": "fat",
+                            "size": 5111808,
+                            "flash_offset": 3276800,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake.bin",
+                        "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+                        "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-10-03T19:31:14Z",
+                        "etag": "W/\"1f7c0eb772288e3027a81986829f3154d9552d9039caee4da8bd3db2b83d4656\"",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+                            "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake-partition-table.bin"
+                        }
+                    }
+                }
+            },
+            {
                 "version": "v2.4.0",
                 "published_at": "2026-09-21",
                 "file": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.4.0/builds/MicroPython/Picoware-Pancake.bin",
