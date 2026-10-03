@@ -36,6 +36,7 @@ DEVICES = [
     {"target": "t-watch-s3", "json": "t-watch-s3.json"},
     {"target": "seeed-sensecap-indicator-tft", "json": "seeedstudio-sensecap.json", "is_fancy": True},
     {"target": "seeed-sensecap-indicator", "json": "seeedstudio-sensecap.json"},
+    {"target": "thinknode_m9-tft", "json": "elecrow_thinknode_m9.json"},
 ]
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")

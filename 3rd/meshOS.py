@@ -26,6 +26,11 @@ FIRMWARE_CONFIG = {
             "json": "t-deck.json",
         },
         {
+            "name": "T-Deck Pro",
+            "config_device": "LilyGo T-Deck Pro",
+            "json": "t-deck-pro.json",
+        },
+        {
             "name": "T-LoraPager",
             "config_device": "LilyGo T-Lora Pager",
             "json": "t-lora-pager.json",
@@ -41,6 +46,11 @@ FIRMWARE_CONFIG = {
             "config_device": "LilyGo T-Display P4",
             "title_contains": "LCD",
             "json": "t-display-p4.json",
+        },
+        {
+            "name": "Elecrow ThinkNode M9",
+            "config_device": "Elecrow ThinkNode M9",
+            "json": "elecrow_thinknode_m9.json",
         },
     ],
 }
