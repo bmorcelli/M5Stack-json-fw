@@ -105,8 +105,9 @@ def fetch_beta_releases():
         name = release.get("name") or ""
         if "Revoked" in name:
             continue
-        if "Beta" not in name:
-            continue
+        # Allow Alphas
+        # if "Beta" not in name:
+        #     continue
         tag = release.get("tag_name", "")
         version = tag[1:] if tag.startswith("v") else tag
         betas.append(
