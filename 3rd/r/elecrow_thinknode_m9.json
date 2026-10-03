@@ -568,6 +568,74 @@
                 }
             }
         ],
+        "esp": "s3",
+        "category": "elecrow_thinknode_m9"
+    },
+    {
+        "author": "Meshtastic",
+        "cover": "https://meshtastic.org/img/logo.svg",
+        "logic": "meshtastic",
+        "github": "https://meshtastic.org/",
+        "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
+        "name": "Meshtastic",
+        "versions": [
+            {
+                "version": "2.8.1.8e6a88d",
+                "published_at": "2026-10-01",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b4aad2ed0bbdb1c59aea8e64d82b8ad37b81aba6/firmware-2.8.1.8e6a88d/firmware-thinknode_m9-tft-2.8.1.8e6a88d.factory.bin",
+                "Fs": 3949312,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3883776,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "elecrow-thinknode-m9",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3883776,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3883776,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-03T14:52:37Z",
+                        "etag": "W/\"97f924223cc0c41dcc0ac0aa0af5d4a4fe8e6d36de47c8fc5830a4f097422a50\""
+                    }
+                }
+            }
+        ],
+        "fid": "CFWW3WQZ4MZEC1QY30OV18NGCCBLAU41",
         "category": "elecrow_thinknode_m9",
         "esp": "s3"
     }
