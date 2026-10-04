@@ -583,6 +583,53 @@
                 }
             },
             {
+                "version": "v5.7.1",
+                "published_at": "2026-10-04",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v5.7.1/camillia-mt-tlora-pager-tft-v5.7.1-ota.bin",
+                "Fs": 4090880,
+                "nb": true,
+                "ao": 0,
+                "as": 4090880,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 4090880,
+                        "partition_size": 4090880,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4090880,
+                            "source_offset": 0,
+                            "copy_size": 4090880,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-04T08:20:28Z",
+                        "etag": "\"0x8DF21C733B5E3CA\"",
+                        "last_modified": "Sun, 04 Oct 2026 03:25:55 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v5.6.2",
                 "published_at": "2026-10-02",
                 "file": "https://github.com/oumike/camillia-mt/releases/download/v5.6.2/camillia-mt-tlora-pager-tft-v5.6.2-ota.bin",
@@ -955,53 +1002,6 @@
                         "analyzed_at": "2026-09-28T02:01:43Z",
                         "etag": "\"0x8DF1CFE0BFCBBBA\"",
                         "last_modified": "Mon, 28 Sep 2026 01:15:55 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v5.5.4",
-                "published_at": "2026-09-28",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v5.5.4/camillia-mt-tlora-pager-tft-v5.5.4-ota.bin",
-                "Fs": 4063936,
-                "nb": true,
-                "ao": 0,
-                "as": 4063936,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 4063936,
-                        "partition_size": 4063936,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063936,
-                            "source_offset": 0,
-                            "copy_size": 4063936,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-28T22:30:20Z",
-                        "etag": "\"0x8DF1DA1DACC0C75\"",
-                        "last_modified": "Mon, 28 Sep 2026 20:48:30 GMT"
                     }
                 }
             }
