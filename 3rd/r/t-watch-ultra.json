@@ -681,6 +681,62 @@
         "fid": "CFWZXK2XGQCHAJ4MLIQ3TCQGONMOVAWJ",
         "versions": [
             {
+                "version": "v0.4.5",
+                "published_at": "2026-10-05",
+                "file": "https://github.com/laserir/MCLite/releases/download/v0.4.5/mclite-watch-v0.4.5.bin",
+                "Fs": 2753312,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2687776,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-watch-ultra",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2687776,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2687776,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-05T12:44:01Z",
+                        "etag": "\"0x8DF22A9A798277C\"",
+                        "last_modified": "Mon, 05 Oct 2026 06:26:56 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v0.4.4",
                 "published_at": "2026-09-12",
                 "file": "https://github.com/laserir/MCLite/releases/download/v0.4.4/mclite-watch-v0.4.4.bin",
@@ -1181,62 +1237,6 @@
                         "analyzed_at": "2026-07-30T19:08:39Z",
                         "etag": "\"0x8DEC867A642BCEB\"",
                         "last_modified": "Fri, 12 Jun 2026 09:47:42 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v0.3.5",
-                "published_at": "2026-06-11",
-                "file": "https://github.com/laserir/MCLite/releases/download/v0.3.5/mclite-watch-v0.3.5.bin",
-                "Fs": 2419904,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2354368,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-watch-ultra",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2354368,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 2354368,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:39Z",
-                        "etag": "\"0x8DEC7A517EF6642\"",
-                        "last_modified": "Thu, 11 Jun 2026 10:35:01 GMT"
                     }
                 }
             }
