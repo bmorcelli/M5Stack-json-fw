@@ -1519,6 +1519,81 @@
         "fid": "CFW5HH4UDRDVQLZAIUYKNESSA7VE7GMF",
         "versions": [
             {
+                "version": "v1.18.0",
+                "published_at": "2026-10-06",
+                "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.18.0/esp32_marauder_v1_18_0_20261006_pancake.bin",
+                "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                "Fs": 2080256,
+                "ao": 0,
+                "as": 2080256,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "pancake",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2080256,
+                        "partition_size": 2080256,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2080256,
+                            "source_offset": 0,
+                            "copy_size": 2080256,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 131072,
+                            "flash_offset": 3997696,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.18.0/esp32_marauder_v1_18_0_20261006_pancake.bin",
+                        "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                        "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Firmware image is larger than declared app partition."
+                        ],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-10-06T20:10:00Z",
+                        "etag": "\"0x8DF23BE253363E1\"",
+                        "last_modified": "Tue, 06 Oct 2026 15:26:08 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/bootloader.bin",
+                            "partitions": "https://github.com/justcallmekoko/ESP32Marauder/raw/master/C5_Py_Flasher_for_v8/bins/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
                 "version": "v1.17.0",
                 "published_at": "2026-09-16",
                 "file": "https://github.com/justcallmekoko/ESP32Marauder/releases/download/v1.17.0/esp32_marauder_v1_17_0_20260916_pancake.bin",
