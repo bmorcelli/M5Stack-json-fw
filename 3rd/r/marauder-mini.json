@@ -8,6 +8,66 @@
         "fid": "CFWLZOFT2EIAVYEM53QOBGPLCQ7SWDGJ",
         "versions": [
             {
+                "version": "v1.7.8",
+                "published_at": "2026-10-09",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.8/awokxdag-esp32-mini-v3-merged.bin",
+                "Fs": 4194304,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1941328,
+                "so": 3211264,
+                "ss": 917504,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-mini",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1941328,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 1941328,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 917504,
+                            "source": "firmware",
+                            "source_offset": 3211264,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-10-09T07:58:25Z",
+                        "etag": "\"0x8DF25BC5A885E10\"",
+                        "last_modified": "Fri, 09 Oct 2026 04:18:21 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.7.7",
                 "published_at": "2026-09-27",
                 "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.7/awokxdag-esp32-mini-v3-merged.bin",
@@ -546,17 +606,29 @@
                         "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
                     }
                 }
-            },
+            }
+        ],
+        "esp": "32",
+        "category": "marauder-mini"
+    },
+    {
+        "name": "AxD (Bridge)",
+        "author": "dag",
+        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
+        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
+        "github": "https://github.com/dagnazty/awokxdag",
+        "fid": "CFWWIGJZRDNXK75F2GSKOT7CN4AKCGDZ",
+        "versions": [
             {
-                "version": "v1.6.4",
-                "published_at": "2026-09-21",
-                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-esp32-mini-v3-merged.bin",
+                "version": "v1.7.8",
+                "published_at": "2026-10-09",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.8/awokxdag-esp32-mini-bridge-v3-merged.bin",
                 "Fs": 4194304,
                 "s": 1,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 1746400,
+                "as": 1960576,
                 "so": 3211264,
                 "ss": 917504,
                 "install": {
@@ -565,7 +637,7 @@
                     "target": "marauder-mini",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 1746400,
+                        "image_size": 1960576,
                         "partition_size": 3145728,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -578,7 +650,7 @@
                             "role": "firmware",
                             "size": 3145728,
                             "source_offset": 65536,
-                            "copy_size": 1746400,
+                            "copy_size": 1960576,
                             "required": true,
                             "source": "firmware"
                         },
@@ -601,24 +673,12 @@
                             "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
                         ],
                         "bytes_downloaded_for_analysis": 4231168,
-                        "analyzed_at": "2026-09-29T19:21:50Z",
-                        "etag": "\"0x8DF181F7B31A30D\"",
-                        "last_modified": "Mon, 21 Sep 2026 20:32:39 GMT"
+                        "analyzed_at": "2026-10-09T07:58:25Z",
+                        "etag": "\"0x8DF25BC5A88F9AB\"",
+                        "last_modified": "Fri, 09 Oct 2026 04:18:21 GMT"
                     }
                 }
-            }
-        ],
-        "esp": "32",
-        "category": "marauder-mini"
-    },
-    {
-        "name": "AxD (Bridge)",
-        "author": "dag",
-        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
-        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
-        "github": "https://github.com/dagnazty/awokxdag",
-        "fid": "CFWWIGJZRDNXK75F2GSKOT7CN4AKCGDZ",
-        "versions": [
+            },
             {
                 "version": "v1.7.7",
                 "published_at": "2026-09-27",
@@ -1156,66 +1216,6 @@
                         "analyzed_at": "2026-09-29T19:21:51Z",
                         "etag": "\"0x8DF18A409A25838\"",
                         "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.6.4",
-                "published_at": "2026-09-21",
-                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-esp32-mini-bridge-v3-merged.bin",
-                "Fs": 4194304,
-                "s": 1,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1749600,
-                "so": 3211264,
-                "ss": 917504,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "marauder-mini",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1749600,
-                        "partition_size": 3145728,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3145728,
-                            "source_offset": 65536,
-                            "copy_size": 1749600,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 917504,
-                            "source": "firmware",
-                            "source_offset": 3211264,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [
-                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
-                        ],
-                        "bytes_downloaded_for_analysis": 4231168,
-                        "analyzed_at": "2026-09-29T19:21:51Z",
-                        "etag": "\"0x8DF181F7B2A5846\"",
-                        "last_modified": "Mon, 21 Sep 2026 20:32:39 GMT"
                     }
                 }
             }
@@ -3412,7 +3412,7 @@
         "category": "marauder-mini"
     },
     {
-        "name": "Ghost v2.2",
+        "name": "Ghost v2.2.1",
         "author": "GhostESP-Revival",
         "description": "Welcome to Ghost ESP, a robust and feature-rich firmware designed for your ESP32 microcontroller, enabling advanced wireless network exploration and security testing. With Ghost ESP installed, you can leverage the power of your ESP32 device to conduct in-depth WiFi and Bluetooth Low Energy (BLE) analysis, launch strategic wireless attacks, and explore a wide range of wireless environments.",
         "cover": "73a76385ad90e1e7537e066187476e77.png",
@@ -3420,13 +3420,13 @@
         "github": "https://github.com/GhostESP-Revival/GhostESP",
         "versions": [
             {
-                "version": "v2.2-AwokMini",
-                "published_at": "2026-10-06",
+                "version": "v2.2.1-AwokMini",
+                "published_at": "2026-10-09",
                 "file": "https://github.com/bmorcelli/M5Stack-json-fw/releases/download/GhostESP/AwokMini.bin",
-                "Fs": 2736192,
+                "Fs": 2795600,
                 "nb": true,
                 "ao": 0,
-                "as": 2736192,
+                "as": 2795600,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
@@ -3436,8 +3436,8 @@
                     "target": "marauder-mini",
                     "app": {
                         "source_offset": 0,
-                        "image_size": 2736192,
-                        "partition_size": 2736192,
+                        "image_size": 2795600,
+                        "partition_size": 2795600,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -3447,9 +3447,9 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 2736192,
+                            "size": 2795600,
                             "source_offset": 0,
-                            "copy_size": 2736192,
+                            "copy_size": 2795600,
                             "required": true
                         }
                     ],
@@ -3460,15 +3460,15 @@
                             "No partition table found; manifest generated from file size and detected app offset."
                         ],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-06T08:04:11Z",
-                        "etag": "\"0x8DF0B29567C2F04\"",
-                        "last_modified": "Sat, 05 Sep 2026 08:40:28 GMT"
+                        "analyzed_at": "2026-10-09T07:58:25Z",
+                        "etag": "\"0x8DF238071C99E97\"",
+                        "last_modified": "Tue, 06 Oct 2026 08:04:28 GMT"
                     }
                 }
             }
         ],
-        "esp": "32",
-        "category": "marauder-mini"
+        "category": "marauder-mini",
+        "esp": "32"
     },
     {
         "name": "Launcher",

@@ -8,6 +8,66 @@
         "fid": "CFW3JFWRADGV6HGES4S76PPMDVTO6QMW",
         "versions": [
             {
+                "version": "v1.7.8",
+                "published_at": "2026-10-09",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.8/awokxdag-touch-merged.bin",
+                "Fs": 8388608,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2318160,
+                "so": 6750208,
+                "ss": 1572864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "marauder-v8",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2318160,
+                        "partition_size": 3342336,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3342336,
+                            "source_offset": 65536,
+                            "copy_size": 2318160,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": "firmware",
+                            "source_offset": 6750208,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [
+                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+                        ],
+                        "bytes_downloaded_for_analysis": 8425472,
+                        "analyzed_at": "2026-10-09T07:58:24Z",
+                        "etag": "\"0x8DF25BC5ABC79DB\"",
+                        "last_modified": "Fri, 09 Oct 2026 04:18:21 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.7.7",
                 "published_at": "2026-09-27",
                 "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.7/awokxdag-touch-merged.bin",
@@ -546,17 +606,29 @@
                         "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
                     }
                 }
-            },
+            }
+        ],
+        "esp": "c5",
+        "category": "marauder-v8"
+    },
+    {
+        "name": "AxD (Bridge)",
+        "author": "dag",
+        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
+        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
+        "github": "https://github.com/dagnazty/awokxdag",
+        "fid": "CFWHIU64I3BV7IBYY6LYVBPHAG4URIIQ",
+        "versions": [
             {
-                "version": "v1.6.4",
-                "published_at": "2026-09-21",
-                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-touch-merged.bin",
+                "version": "v1.7.8",
+                "published_at": "2026-10-09",
+                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.7.8/awokxdag-bridge-merged.bin",
                 "Fs": 8388608,
                 "s": 1,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 2104144,
+                "as": 2117296,
                 "so": 6750208,
                 "ss": 1572864,
                 "install": {
@@ -565,7 +637,7 @@
                     "target": "marauder-v8",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 2104144,
+                        "image_size": 2117296,
                         "partition_size": 3342336,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -578,7 +650,7 @@
                             "role": "firmware",
                             "size": 3342336,
                             "source_offset": 65536,
-                            "copy_size": 2104144,
+                            "copy_size": 2117296,
                             "required": true,
                             "source": "firmware"
                         },
@@ -601,24 +673,12 @@
                             "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
                         ],
                         "bytes_downloaded_for_analysis": 8425472,
-                        "analyzed_at": "2026-09-29T19:21:47Z",
-                        "etag": "\"0x8DF181F7B492F56\"",
-                        "last_modified": "Mon, 21 Sep 2026 20:32:40 GMT"
+                        "analyzed_at": "2026-10-09T07:58:24Z",
+                        "etag": "\"0x8DF25BC5ABDD7E2\"",
+                        "last_modified": "Fri, 09 Oct 2026 04:18:21 GMT"
                     }
                 }
-            }
-        ],
-        "esp": "c5",
-        "category": "marauder-v8"
-    },
-    {
-        "name": "AxD (Bridge)",
-        "author": "dag",
-        "description": "Dual-band Wi-Fi / BLE penetration-testing toolkit for the ESP32-C5 (AWOK Dual C5, white-USB screen board with an ILI9341 touchscreen)",
-        "cover": "https://raw.githubusercontent.com/dagnazty/awokxdag/refs/heads/main/assets/boot_screen_240x320.png",
-        "github": "https://github.com/dagnazty/awokxdag",
-        "fid": "CFWHIU64I3BV7IBYY6LYVBPHAG4URIIQ",
-        "versions": [
+            },
             {
                 "version": "v1.7.7",
                 "published_at": "2026-09-27",
@@ -1158,66 +1218,6 @@
                         "last_modified": "Tue, 22 Sep 2026 12:21:32 GMT"
                     }
                 }
-            },
-            {
-                "version": "v1.6.4",
-                "published_at": "2026-09-21",
-                "file": "https://github.com/dagnazty/awokxdag/releases/download/v1.6.4/awokxdag-bridge-merged.bin",
-                "Fs": 8388608,
-                "s": 1,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1937456,
-                "so": 6750208,
-                "ss": 1572864,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "marauder-v8",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1937456,
-                        "partition_size": 3342336,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3342336,
-                            "source_offset": 65536,
-                            "copy_size": 1937456,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 1572864,
-                            "source": "firmware",
-                            "source_offset": 6750208,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [
-                            "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
-                        ],
-                        "bytes_downloaded_for_analysis": 8425472,
-                        "analyzed_at": "2026-09-29T19:21:48Z",
-                        "etag": "\"0x8DF181F7B4D4969\"",
-                        "last_modified": "Mon, 21 Sep 2026 20:32:40 GMT"
-                    }
-                }
             }
         ],
         "esp": "c5",
@@ -1656,7 +1656,7 @@
         "category": "marauder-v8"
     },
     {
-        "name": "Ghost v2.2",
+        "name": "Ghost v2.2.1",
         "author": "GhostESP-Revival",
         "description": "Welcome to Ghost ESP, a robust and feature-rich firmware designed for your ESP32 microcontroller, enabling advanced wireless network exploration and security testing. With Ghost ESP installed, you can leverage the power of your ESP32 device to conduct in-depth WiFi and Bluetooth Low Energy (BLE) analysis, launch strategic wireless attacks, and explore a wide range of wireless environments.",
         "cover": "73a76385ad90e1e7537e066187476e77.png",
@@ -1664,13 +1664,13 @@
         "github": "https://github.com/GhostESP-Revival/GhostESP",
         "versions": [
             {
-                "version": "v2.2-MarauderV8",
-                "published_at": "2026-10-06",
+                "version": "v2.2.1-MarauderV8",
+                "published_at": "2026-10-09",
                 "file": "https://github.com/bmorcelli/M5Stack-json-fw/releases/download/GhostESP/MarauderV8.bin",
-                "Fs": 3807968,
+                "Fs": 3880608,
                 "nb": true,
                 "ao": 0,
-                "as": 3807968,
+                "as": 3880608,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
@@ -1680,8 +1680,8 @@
                     "target": "marauder-v8",
                     "app": {
                         "source_offset": 0,
-                        "image_size": 3807968,
-                        "partition_size": 3807968,
+                        "image_size": 3880608,
+                        "partition_size": 3880608,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
                     },
@@ -1691,9 +1691,9 @@
                             "subtype": "ota",
                             "label": "auto",
                             "role": "firmware",
-                            "size": 3807968,
+                            "size": 3880608,
                             "source_offset": 0,
-                            "copy_size": 3807968,
+                            "copy_size": 3880608,
                             "required": true
                         }
                     ],
@@ -1704,15 +1704,15 @@
                             "No partition table found; manifest generated from file size and detected app offset."
                         ],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-06T08:04:10Z",
-                        "etag": "\"0x8DF0B29569DBEE8\"",
-                        "last_modified": "Sat, 05 Sep 2026 08:40:28 GMT"
+                        "analyzed_at": "2026-10-09T07:58:24Z",
+                        "etag": "\"0x8DF238071DAA274\"",
+                        "last_modified": "Tue, 06 Oct 2026 08:04:28 GMT"
                     }
                 }
             }
         ],
-        "esp": "c5",
-        "category": "marauder-v8"
+        "category": "marauder-v8",
+        "esp": "c5"
     },
     {
         "name": "Launcher",
