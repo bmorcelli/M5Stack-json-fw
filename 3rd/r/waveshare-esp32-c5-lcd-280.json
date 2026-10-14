@@ -8,6 +8,62 @@
         "fid": "CFWNHRQDGOIPSVMHQBRQD3VAY52K3DFO",
         "versions": [
             {
+                "version": "v3.0.0",
+                "published_at": "2026-10-14",
+                "file": "https://github.com/JimGat/CYM/releases/download/v3.0.0/CYM-WS-C5-28-full.bin",
+                "Fs": 3930304,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3864768,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "waveshare-esp32-c5-lcd-280",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3864768,
+                        "partition_size": 7340032,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 7340032,
+                            "source_offset": 65536,
+                            "copy_size": 3864768,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-14T10:19:12Z",
+                        "etag": "\"0x8DF29B6897E621C\"",
+                        "last_modified": "Wed, 14 Oct 2026 05:46:47 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v2.15.47",
                 "published_at": "2026-10-01",
                 "file": "https://github.com/JimGat/CYM/releases/download/v2.15.47/CYM-WS-C5-28-full.bin",
