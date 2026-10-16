@@ -1473,6 +1473,53 @@
     "fid": "CFWIOZWK2GIMX3IDFFTZU7ZWADYYNILB",
     "versions": [
       {
+        "version": "v6.9.1",
+        "published_at": "2026-10-16",
+        "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v6.9.1/firmware.bin",
+        "Fs": 1866432,
+        "nb": true,
+        "ao": 0,
+        "as": 1866432,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "cyd",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1866432,
+            "partition_size": 1866432,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1866432,
+              "source_offset": 0,
+              "copy_size": 1866432,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-16T18:11:43Z",
+            "etag": "\"0x8DF2B982B32F7D0\"",
+            "last_modified": "Fri, 16 Oct 2026 15:14:26 GMT"
+          }
+        }
+      },
+      {
         "version": "v6.9.0",
         "published_at": "2026-10-03",
         "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v6.9.0/firmware.bin",
@@ -1892,53 +1939,6 @@
             "analyzed_at": "2026-09-16T15:35:09Z",
             "etag": "\"0x8DF13FBC770E007\"",
             "last_modified": "Wed, 16 Sep 2026 14:07:01 GMT"
-          }
-        }
-      },
-      {
-        "version": "v6.3.0",
-        "published_at": "2026-09-15",
-        "file": "https://github.com/Eiswolf-BG/eiswolfs-flightradar-CYD/releases/download/v6.3.0/firmware.bin",
-        "Fs": 1826288,
-        "nb": true,
-        "ao": 0,
-        "as": 1826288,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "cyd",
-          "app": {
-            "source_offset": 0,
-            "image_size": 1826288,
-            "partition_size": 1826288,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 1826288,
-              "source_offset": 0,
-              "copy_size": 1826288,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-09-15T01:50:44Z",
-            "etag": "\"0x8DF12BE1A5803CD\"",
-            "last_modified": "Tue, 15 Sep 2026 00:13:00 GMT"
           }
         }
       }
@@ -66159,6 +66159,62 @@
     "fid": "CFWAF7ZP2EZ6PUSTWGJO5CQGF7MZAANN",
     "versions": [
       {
+        "version": "v1.0.0",
+        "published_at": "2026-10-16",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v1.0.0/trail-mate-tdeck-webflash.bin",
+        "Fs": 4763088,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4697552,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4697552,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 4697552,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-16T18:11:42Z",
+            "etag": "\"0x8DF2BAD9D7C6706\"",
+            "last_modified": "Fri, 16 Oct 2026 17:47:58 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.53-alpha",
         "published_at": "2026-10-10",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.53-alpha/trail-mate-tdeck-webflash.bin",
@@ -66659,62 +66715,6 @@
             "analyzed_at": "2026-08-31T15:02:14Z",
             "etag": "\"0x8DF0748E1508CFA\"",
             "last_modified": "Mon, 31 Aug 2026 10:16:10 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.43-alpha",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.43-alpha/trail-mate-tdeck-webflash.bin",
-        "Fs": 4024576,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3959040,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3959040,
-            "partition_size": 6291456,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6291456,
-              "source_offset": 65536,
-              "copy_size": 3959040,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 4063232,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:32Z",
-            "etag": "\"0x8DF04BC57329D3F\"",
-            "last_modified": "Fri, 28 Aug 2026 04:25:07 GMT"
           }
         }
       }
@@ -83113,6 +83113,62 @@
     "fid": "CFWJBA62VDRQOGEXQEPVSOFKTOVT5PVD",
     "versions": [
       {
+        "version": "v1.0.0",
+        "published_at": "2026-10-16",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v1.0.0/trail-mate-tlora-pager-sx1262-webflash.bin",
+        "Fs": 4963776,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4898240,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4898240,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 4898240,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-16T18:11:42Z",
+            "etag": "\"0x8DF2BAD9DA0CF84\"",
+            "last_modified": "Fri, 16 Oct 2026 17:47:58 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.53-alpha",
         "published_at": "2026-10-10",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.53-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
@@ -83613,62 +83669,6 @@
             "analyzed_at": "2026-08-31T15:02:13Z",
             "etag": "\"0x8DF0748E1554295\"",
             "last_modified": "Mon, 31 Aug 2026 10:16:10 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.43-alpha",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.43-alpha/trail-mate-tlora-pager-sx1262-webflash.bin",
-        "Fs": 4221504,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 4155968,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 4155968,
-            "partition_size": 6291456,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6291456,
-              "source_offset": 65536,
-              "copy_size": 4155968,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 4063232,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:31Z",
-            "etag": "\"0x8DF04BC5737B872\"",
-            "last_modified": "Fri, 28 Aug 2026 04:25:07 GMT"
           }
         }
       }
@@ -87574,6 +87574,62 @@
     "fid": "CFW7NVZY5APBW7EH5BPMTY6B6IFXWC23",
     "versions": [
       {
+        "version": "v1.0.0",
+        "published_at": "2026-10-16",
+        "file": "https://github.com/vicliu624/trail-mate/releases/download/v1.0.0/trail-mate-lilygo-twatch-s3-webflash.bin",
+        "Fs": 4560064,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4494528,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-watch-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4494528,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 4494528,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "ffat",
+              "role": "fat",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-16T18:11:41Z",
+            "etag": "\"0x8DF2BAD9D88DC0E\"",
+            "last_modified": "Fri, 16 Oct 2026 17:47:58 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.1.53-alpha",
         "published_at": "2026-10-10",
         "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.53-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
@@ -88074,62 +88130,6 @@
             "analyzed_at": "2026-08-31T15:02:12Z",
             "etag": "\"0x8DF0748E165F8AB\"",
             "last_modified": "Mon, 31 Aug 2026 10:16:11 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.1.43-alpha",
-        "published_at": "2026-08-28",
-        "file": "https://github.com/vicliu624/trail-mate/releases/download/v0.1.43-alpha/trail-mate-lilygo-twatch-s3-webflash.bin",
-        "Fs": 4013184,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 3947648,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-watch-s3",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3947648,
-            "partition_size": 6291456,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6291456,
-              "source_offset": 65536,
-              "copy_size": 3947648,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "fat",
-              "label": "ffat",
-              "role": "fat",
-              "size": 4063232,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-28T11:13:30Z",
-            "etag": "\"0x8DF04BC5733FB41\"",
-            "last_modified": "Fri, 28 Aug 2026 04:25:07 GMT"
           }
         }
       }
