@@ -1082,13 +1082,13 @@
         "devices": [
             {
                 "name": "CC1101",
-                "asset_contains" :"bit_pirate_*_tembedcc1101.bin",
+                "asset_contains" :"bit_pirate_*_t-embed-s3-cc1101.bin",
                 "json": "t-embed-cc1101.json"
             },
             {
                 "name": "CC1101 Plus",
                 "variant": "Plus",
-                "asset_contains" :"bit_pirate_*_tembedcc1101plus.bin",
+                "asset_contains" :"bit_pirate_*_t-embed-cc1101plus.bin",
                 "json": "t-embed-cc1101.json"
             }
         ]
@@ -1364,6 +1364,33 @@
                 "variant": "Bridge",
                 "asset_contains": "awokxdag-bridge-merged.bin",
                 "json": "marauder-v8.json"
+            }
+        ]
+    },
+    {
+        "name": "CAIRN",
+        "repo_owner": "cvhviz",
+        "repo_name": "CAIRN",
+        "author": "cvhviz",
+        "cover": "https://github.com/cvhviz/CAIRN/raw/main/docs/logo/cairn-lockup-stacked-onlight.png",
+        "github": "https://github.com/cvhviz/CAIRN",
+        "description": "Cairn is a fork of the MeshCore companion firmware. Every board is built from one source tree that shares MeshCore mesh and radio code, and every build works with the official MeshCore apps (web, Android, iOS).",
+        "fid_prefix": "CAIRN",
+        "devices": [
+            {
+                "name": "tDeck",
+                "asset_contains" :"MeshCore-TDeckPlus-*-full.bin",
+                "json": "t-deck.json"
+            },
+            {
+                "name": "wiol2",
+                "asset_contains" :"MeshCore-WioL2Pro-*-full.bin",
+                "json": "seeedstudio_wio_tracker_l2.json"
+            },
+            {
+                "name": "thinknonem9",
+                "asset_contains" :"MeshCore-ThinkNodeM9-*-full.bin",
+                "json": "elecrow_thinknode_m9.json"
             }
         ]
     }
