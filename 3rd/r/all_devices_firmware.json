@@ -936,8 +936,8 @@
       }
     ],
     "fid": "CFW704U4QG18DZO94DWWO0H0GJMZC30V",
-    "category": "CYD",
-    "esp": "32"
+    "esp": "32",
+    "category": "CYD"
   },
   {
     "name": "Cheap Yellow Monster",
@@ -10825,8 +10825,8 @@
       }
     ],
     "fid": "CFW8F9FNIDNW7LI4B4FRTHY0L2XWO1VL",
-    "category": "NM-CYD-C5",
-    "esp": "c5"
+    "esp": "c5",
+    "category": "NM-CYD-C5"
   },
   {
     "name": "Cheap Yellow Monster",
@@ -12144,8 +12144,8 @@
       }
     ],
     "fid": "CFW134BRLCTDS8LA4X6SDWQ3XGF15CXL",
-    "category": "cardputer",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "cardputer"
   },
   {
     "name": "GLIDE-Synth",
@@ -12628,6 +12628,578 @@
     ],
     "esp": "32",
     "category": "cardputer"
+  },
+  {
+    "name": "CAIRN",
+    "author": "cvhviz",
+    "description": "Cairn is a fork of the MeshCore companion firmware. Every board is built from one source tree that shares MeshCore mesh and radio code, and every build works with the official MeshCore apps (web, Android, iOS).",
+    "cover": "https://github.com/cvhviz/CAIRN/raw/main/docs/logo/cairn-lockup-stacked-onlight.png",
+    "github": "https://github.com/cvhviz/CAIRN",
+    "fid": "CFW4AY4WXB6G7LLCPSUHC5ICGP5UJT7Z",
+    "versions": [
+      {
+        "version": "cairn-v120",
+        "published_at": "2026-10-19",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v120/MeshCore-ThinkNodeM9-Cairn120-2026-10-19-full.bin",
+        "Fs": 3804400,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3738864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3738864,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3738864,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF2DA3D07ABC35\"",
+            "last_modified": "Mon, 19 Oct 2026 05:42:51 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v119",
+        "published_at": "2026-10-18",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v119/MeshCore-ThinkNodeM9-Cairn119-2026-10-17-full.bin",
+        "Fs": 3774448,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3708912,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3708912,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3708912,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF2CABF2B0A202\"",
+            "last_modified": "Sun, 18 Oct 2026 00:08:33 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v118",
+        "published_at": "2026-10-15",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v118/MeshCore-ThinkNodeM9-Cairn118-2026-10-15-full.bin",
+        "Fs": 3629344,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3563808,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3563808,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3563808,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF2AF6A486EB7C\"",
+            "last_modified": "Thu, 15 Oct 2026 19:58:12 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v116",
+        "published_at": "2026-10-14",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v116/MeshCore-ThinkNodeM9-Cairn116-2026-10-14-full.bin",
+        "Fs": 3592496,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3526960,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3526960,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3526960,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF2A2614FFBF4A\"",
+            "last_modified": "Wed, 14 Oct 2026 19:05:15 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v115",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v115/MeshCore-ThinkNodeM9-Cairn115-2026-10-12-full.bin",
+        "Fs": 3521200,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3455664,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3455664,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3455664,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF289AA0374315\"",
+            "last_modified": "Mon, 12 Oct 2026 19:54:28 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v114",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v114/MeshCore-ThinkNodeM9-Cairn114-2026-10-12-full.bin",
+        "Fs": 3508864,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3443328,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3443328,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3443328,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF282AF46748FA\"",
+            "last_modified": "Mon, 12 Oct 2026 06:35:06 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v113",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v113/MeshCore-ThinkNodeM9-Cairn113-2026-10-11-full.bin",
+        "Fs": 3476624,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3411088,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3411088,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3411088,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF27FC0FD0ED0E\"",
+            "last_modified": "Mon, 12 Oct 2026 00:59:26 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v112",
+        "published_at": "2026-10-10",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v112/MeshCore-ThinkNodeM9-Cairn112-2026-10-09-full.bin",
+        "Fs": 3392208,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3326672,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3326672,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3326672,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF268337160AA1\"",
+            "last_modified": "Sat, 10 Oct 2026 04:01:51 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v111",
+        "published_at": "2026-10-08",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v111/MeshCore-ThinkNodeM9-Cairn111-2026-10-08-full.bin",
+        "Fs": 3337008,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3271472,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3271472,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3271472,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:09Z",
+            "etag": "\"0x8DF258F85597A07\"",
+            "last_modified": "Thu, 08 Oct 2026 22:57:25 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v110",
+        "published_at": "2026-10-08",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v110/MeshCore-ThinkNodeM9-Cairn110-2026-10-08-full.bin",
+        "Fs": 3307648,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3242112,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3242112,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3242112,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF250576CBBF93\"",
+            "last_modified": "Thu, 08 Oct 2026 06:29:10 GMT"
+          }
+        }
+      }
+    ],
+    "category": "elecrow_thinknode_m9",
+    "esp": "s3"
   },
   {
     "name": "MeshOS (Elecrow ThinkNode M9)",
@@ -16141,8 +16713,8 @@
       }
     ],
     "fid": "CFWTHFK5VQMW6Z3AU8QU5U0L4KG41ETV",
-    "category": "marauder",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder"
   },
   {
     "name": "Ghost v2.2.2",
@@ -25519,8 +26091,8 @@
       }
     ],
     "fid": "CFWRLMWGA43PYY22QQY4YD90674DUJIE",
-    "category": "marauder-mini",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-mini"
   },
   {
     "name": "Ghost v2.2.2",
@@ -29866,8 +30438,8 @@
       }
     ],
     "fid": "CFWWE1XNRQHE1A8CAGZIFIVZ6C4Z7UPJ",
-    "category": "marauder-v4",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v4"
   },
   {
     "name": "Ghost v2.2.2",
@@ -36409,8 +36981,8 @@
       }
     ],
     "fid": "CFWS2WC9QWL49OKJO0XMBS8ZZZO8A0VJ",
-    "category": "marauder-v6x",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v6x"
   },
   {
     "name": "Ghost v2.2.2",
@@ -40670,8 +41242,8 @@
       }
     ],
     "fid": "CFWVFN5OQ0EGG7IAY4RE5IB3OT6BTX3H",
-    "category": "marauder-v7",
-    "esp": "32"
+    "esp": "32",
+    "category": "marauder-v7"
   },
   {
     "name": "Launcher",
@@ -50872,8 +51444,8 @@
       }
     ],
     "fid": "CFWRGP2OGPVURWWYZZVDGDCXW21B5HSS",
-    "category": "phantom",
-    "esp": "32"
+    "esp": "32",
+    "category": "phantom"
   },
   {
     "name": "Ghost v1.9.9",
@@ -56540,6 +57112,578 @@
     "category": "seeedstudio-sensecap"
   },
   {
+    "name": "CAIRN",
+    "author": "cvhviz",
+    "description": "Cairn is a fork of the MeshCore companion firmware. Every board is built from one source tree that shares MeshCore mesh and radio code, and every build works with the official MeshCore apps (web, Android, iOS).",
+    "cover": "https://github.com/cvhviz/CAIRN/raw/main/docs/logo/cairn-lockup-stacked-onlight.png",
+    "github": "https://github.com/cvhviz/CAIRN",
+    "fid": "CFWTFFO5WLB2HIVQXA3EAUETPPMTTT5Y",
+    "versions": [
+      {
+        "version": "cairn-v120",
+        "published_at": "2026-10-19",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v120/MeshCore-WioL2Pro-Cairn120-2026-10-19-full.bin",
+        "Fs": 4052192,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3986656,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3986656,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3986656,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF2DA3D11122FF\"",
+            "last_modified": "Mon, 19 Oct 2026 05:42:52 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v119",
+        "published_at": "2026-10-18",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v119/MeshCore-WioL2Pro-Cairn119-2026-10-17-full.bin",
+        "Fs": 4023840,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3958304,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3958304,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3958304,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF2CABF37845D0\"",
+            "last_modified": "Sun, 18 Oct 2026 00:08:34 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v118",
+        "published_at": "2026-10-15",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v118/MeshCore-WioL2Pro-Cairn118-2026-10-15-full.bin",
+        "Fs": 3876944,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3811408,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3811408,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3811408,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF2AF6A4FAECCC\"",
+            "last_modified": "Thu, 15 Oct 2026 19:58:12 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v116",
+        "published_at": "2026-10-14",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v116/MeshCore-WioL2Pro-Cairn116-2026-10-14-full.bin",
+        "Fs": 3830192,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3764656,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3764656,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3764656,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF2A2614F2D580\"",
+            "last_modified": "Wed, 14 Oct 2026 19:05:15 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v115",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v115/MeshCore-WioL2Pro-Cairn115-2026-10-12-full.bin",
+        "Fs": 3751776,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3686240,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3686240,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3686240,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF289AA0C0048B\"",
+            "last_modified": "Mon, 12 Oct 2026 19:54:29 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v114",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v114/MeshCore-WioL2Pro-Cairn114-2026-10-12-full.bin",
+        "Fs": 3719328,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3653792,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3653792,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3653792,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF282AF4E8D9C6\"",
+            "last_modified": "Mon, 12 Oct 2026 06:35:07 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v113",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v113/MeshCore-WioL2Pro-Cairn113-2026-10-11-full.bin",
+        "Fs": 3651840,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3586304,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3586304,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3586304,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF27FC10540E6C\"",
+            "last_modified": "Mon, 12 Oct 2026 00:59:26 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v112",
+        "published_at": "2026-10-10",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v112/MeshCore-WioL2Pro-Cairn112-2026-10-09-full.bin",
+        "Fs": 3486944,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3421408,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3421408,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3421408,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:10Z",
+            "etag": "\"0x8DF26833754CEF4\"",
+            "last_modified": "Sat, 10 Oct 2026 04:01:52 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v111",
+        "published_at": "2026-10-08",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v111/MeshCore-WioL2Pro-Cairn111-2026-10-08-full.bin",
+        "Fs": 3431520,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3365984,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3365984,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3365984,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:11Z",
+            "etag": "\"0x8DF258F85A3A45D\"",
+            "last_modified": "Thu, 08 Oct 2026 22:57:26 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v110",
+        "published_at": "2026-10-08",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v110/MeshCore-WioL2Pro-Cairn110-2026-10-08-full.bin",
+        "Fs": 3402000,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3336464,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "seeedstudio-wio-tracker-l2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3336464,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3336464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:11Z",
+            "etag": "\"0x8DF250576EC83E3\"",
+            "last_modified": "Thu, 08 Oct 2026 06:29:11 GMT"
+          }
+        }
+      }
+    ],
+    "category": "seeedstudio_wio_tracker_l2",
+    "esp": "s3"
+  },
+  {
     "name": "Bruce",
     "author": "pr3y",
     "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
@@ -57176,8 +58320,8 @@
       }
     ],
     "fid": "CFW0Z8GF89YPTA2NNFJ9PO38UG3MNT8U",
-    "category": "smoochiee_v2",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "smoochiee_v2"
   },
   {
     "name": "Launcher",
@@ -57768,8 +58912,8 @@
       }
     ],
     "fid": "CFW2EWO7Y6H00KVS5JD01LJ9LHXJXD65",
-    "category": "stickc",
-    "esp": "32"
+    "esp": "32",
+    "category": "stickc"
   },
   {
     "name": "Bruce StickS3 (BETA)",
@@ -57837,8 +58981,8 @@
       }
     ],
     "fid": "CFWPIDASD4N9WUNV8NTVGP67RBECIDOU",
-    "category": "stickc",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "stickc"
   },
   {
     "name": "Bruce",
@@ -59105,6 +60249,578 @@
       }
     ],
     "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
+    "esp": "s3",
+    "category": "t-deck"
+  },
+  {
+    "name": "CAIRN",
+    "author": "cvhviz",
+    "description": "Cairn is a fork of the MeshCore companion firmware. Every board is built from one source tree that shares MeshCore mesh and radio code, and every build works with the official MeshCore apps (web, Android, iOS).",
+    "cover": "https://github.com/cvhviz/CAIRN/raw/main/docs/logo/cairn-lockup-stacked-onlight.png",
+    "github": "https://github.com/cvhviz/CAIRN",
+    "fid": "CFWGOP6AZDMZFB22V45LTK6GU5HTT4XF",
+    "versions": [
+      {
+        "version": "cairn-v120",
+        "published_at": "2026-10-19",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v120/MeshCore-TDeckPlus-Cairn120-2026-10-19-full.bin",
+        "Fs": 4001696,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3936160,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3936160,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3936160,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"0x8DF2DA3CFEB321A\"",
+            "last_modified": "Mon, 19 Oct 2026 05:42:50 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v119",
+        "published_at": "2026-10-18",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v119/MeshCore-TDeckPlus-Cairn119-2026-10-17-full.bin",
+        "Fs": 3971744,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3906208,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3906208,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3906208,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"0x8DF2CABF18196CF\"",
+            "last_modified": "Sun, 18 Oct 2026 00:08:31 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v118",
+        "published_at": "2026-10-15",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v118/MeshCore-TDeckPlus-Cairn118-2026-10-15-full.bin",
+        "Fs": 3825632,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3760096,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3760096,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3760096,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"0x8DF2AF6A3DA98F3\"",
+            "last_modified": "Thu, 15 Oct 2026 19:58:10 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v116",
+        "published_at": "2026-10-14",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v116/MeshCore-TDeckPlus-Cairn116-2026-10-14-full.bin",
+        "Fs": 3776992,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3711456,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3711456,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3711456,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"0x8DF2A26163322A6\"",
+            "last_modified": "Wed, 14 Oct 2026 19:05:17 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v115",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v115/MeshCore-TDeckPlus-Cairn115-2026-10-12-full.bin",
+        "Fs": 3698928,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3633392,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3633392,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3633392,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"0x8DF289A9FBD27F5\"",
+            "last_modified": "Mon, 12 Oct 2026 19:54:27 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v114",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v114/MeshCore-TDeckPlus-Cairn114-2026-10-12-full.bin",
+        "Fs": 3670864,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3605328,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3605328,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3605328,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"0x8DF282AF3CB6A05\"",
+            "last_modified": "Mon, 12 Oct 2026 06:35:05 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v113",
+        "published_at": "2026-10-12",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v113/MeshCore-TDeckPlus-Cairn113-2026-10-11-full.bin",
+        "Fs": 3602736,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3537200,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3537200,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3537200,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"0x8DF27FC0F2D7CED\"",
+            "last_modified": "Mon, 12 Oct 2026 00:59:24 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v112",
+        "published_at": "2026-10-10",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v112/MeshCore-TDeckPlus-Cairn112-2026-10-09-full.bin",
+        "Fs": 3431056,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3365520,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3365520,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3365520,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:13Z",
+            "etag": "\"0x8DF268336EF55C7\"",
+            "last_modified": "Sat, 10 Oct 2026 04:01:51 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v111",
+        "published_at": "2026-10-08",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v111/MeshCore-TDeckPlus-Cairn111-2026-10-08-full.bin",
+        "Fs": 3376400,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3310864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3310864,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3310864,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:13Z",
+            "etag": "\"0x8DF258F852033E7\"",
+            "last_modified": "Thu, 08 Oct 2026 22:57:25 GMT"
+          }
+        }
+      },
+      {
+        "version": "cairn-v110",
+        "published_at": "2026-10-08",
+        "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v110/MeshCore-TDeckPlus-Cairn110-2026-10-08-full.bin",
+        "Fs": 3342288,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3276752,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3276752,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3276752,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:13Z",
+            "etag": "\"0x8DF250576A5F621\"",
+            "last_modified": "Thu, 08 Oct 2026 06:29:10 GMT"
+          }
+        }
+      }
+    ],
     "category": "t-deck",
     "esp": "s3"
   },
@@ -74823,8 +76539,8 @@
       }
     ],
     "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-    "category": "t-embed",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-embed"
   },
   {
     "name": "Factory Firmware",
@@ -77146,8 +78862,8 @@
       }
     ],
     "fid": "CFWN8EXC3DSSES2LW2U6DXK1OJN27CUH",
-    "category": "t-embed-cc1101",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-embed-cc1101"
   },
   {
     "name": "Capibara Zero",
@@ -77271,6 +78987,118 @@
     "github": "https://github.com/geo-tp/ESP32-Bit-Pirate",
     "fid": "CFWHMGHME4NO3UP3RZEMBXZZV3AGMQ5L",
     "versions": [
+      {
+        "version": "v1.8",
+        "published_at": "2026-10-11",
+        "file": "https://github.com/geo-tp/ESP32-Bit-Pirate/releases/download/v1.8/bit_pirate_18_t-embed-s3-cc1101.bin",
+        "Fs": 4029376,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3963840,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3963840,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 3963840,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:11Z",
+            "etag": "\"0x8DF27CFE6C42439\"",
+            "last_modified": "Sun, 11 Oct 2026 19:43:19 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.7",
+        "published_at": "2026-08-06",
+        "file": "https://github.com/geo-tp/ESP32-Bit-Pirate/releases/download/v1.7/bit_pirate_17_t-embed-s3-cc1101.bin",
+        "Fs": 3971728,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3906192,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3906192,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 3906192,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4063232,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-19T19:45:11Z",
+            "etag": "\"0x8DEF3C775647814\"",
+            "last_modified": "Thu, 06 Aug 2026 14:31:52 GMT"
+          }
+        }
+      },
       {
         "version": "v1.6",
         "published_at": "2026-06-05",
@@ -79425,18 +81253,122 @@
     "author": "sacriphanius",
     "description": "This project is an advanced AI Pentester Assistant based on the Xiaozhi-esp32 infrastructure, optimized for the LilyGO T-Embed CC1101 hardware. It combines natural language AI interaction with physical hardware testing tools, making it a versitile companion for cybersecurity research and daily technical tasks.",
     "cover": "",
-    "github": "https://github.com/sacriphanius/Zhilly",
+    "github": "https://gitlab.com/sacriphanius/Zhilly",
     "fid": "CFWM224YLFVFVFPEKK7ZBJ6BR22HIASS",
     "versions": [
       {
-        "version": "v1.3.3",
-        "published_at": "2026-07-19",
-        "file": "https://github.com/sacriphanius/Zhilly/releases/download/v1.3.3/Zhilly_Firmware_T-Embed-cc1101.bin",
-        "invalid": true,
-        "analysis_error": "Failed to read firmware header: HTTPError: 404 Client Error: Not Found for url: https://github.com/sacriphanius/Zhilly/releases/download/v1.3.3/Zhilly_Firmware_T-Embed-cc1101.bin"
+        "version": "Latest",
+        "published_at": "2026-08-25",
+        "file": "https://gitlab.com/sacriphanius/Zhilly/-/raw/main/firmwares/Zhilly_Firmware_T-Embed-cc1101.bin",
+        "Fs": 11127906,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 2736896,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 2736896,
+            "partition_size": 4128768,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4128768,
+              "source_offset": 131072,
+              "copy_size": 2736896,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "assets",
+              "role": "spiffs",
+              "size": 8388608,
+              "source": "firmware",
+              "source_offset": 8388608,
+              "copy_size": 2739298,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 11164770,
+            "analyzed_at": "2026-10-19T19:45:12Z",
+            "etag": "\"54dc37a0ba4b1b9428c966ee92335ff5\""
+          }
+        }
+      },
+      {
+        "version": "Latest (Plus)",
+        "published_at": "2026-08-25",
+        "file": "https://gitlab.com/sacriphanius/Zhilly/-/raw/main/firmwares/Zhilly_Firmware_T-Embed-cc1101-Plus.bin",
+        "Fs": 11127906,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 2736896,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 2736896,
+            "partition_size": 4128768,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4128768,
+              "source_offset": 131072,
+              "copy_size": 2736896,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "assets",
+              "role": "spiffs",
+              "size": 8388608,
+              "source": "firmware",
+              "source_offset": 8388608,
+              "copy_size": 2739298,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 11164770,
+            "analyzed_at": "2026-10-19T19:45:11Z",
+            "etag": "\"54dc37a0ba4b1b9428c966ee92335ff5\""
+          }
+        }
       }
     ],
-    "category": "t-embed-cc1101"
+    "category": "t-embed-cc1101",
+    "esp": "s3"
   },
   {
     "name": "Bruce",
@@ -79963,8 +81895,8 @@
       }
     ],
     "fid": "CFW7B2TIST1N5CMKWQYAWJM51S9COHLT",
-    "category": "t-hmi",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-hmi"
   },
   {
     "name": "Factory Firmware",
@@ -81031,8 +82963,8 @@
       }
     ],
     "fid": "CFWW2L7Q7BDDLSWLRJX3KAC9COHJCSWQ",
-    "category": "t-lora-pager",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-lora-pager"
   },
   {
     "name": "Camillia-MT",
@@ -86493,8 +88425,8 @@
       }
     ],
     "fid": "CFWFJKMW8FERS9053UCTDQAO02KA7244",
-    "category": "t-watch-s3",
-    "esp": "s3"
+    "esp": "s3",
+    "category": "t-watch-s3"
   },
   {
     "name": "Factory Firmware",

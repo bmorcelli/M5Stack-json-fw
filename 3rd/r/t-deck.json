@@ -1264,6 +1264,578 @@
             }
         ],
         "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
+        "esp": "s3",
+        "category": "t-deck"
+    },
+    {
+        "name": "CAIRN",
+        "author": "cvhviz",
+        "description": "Cairn is a fork of the MeshCore companion firmware. Every board is built from one source tree that shares MeshCore mesh and radio code, and every build works with the official MeshCore apps (web, Android, iOS).",
+        "cover": "https://github.com/cvhviz/CAIRN/raw/main/docs/logo/cairn-lockup-stacked-onlight.png",
+        "github": "https://github.com/cvhviz/CAIRN",
+        "fid": "CFWGOP6AZDMZFB22V45LTK6GU5HTT4XF",
+        "versions": [
+            {
+                "version": "cairn-v120",
+                "published_at": "2026-10-19",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v120/MeshCore-TDeckPlus-Cairn120-2026-10-19-full.bin",
+                "Fs": 4001696,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3936160,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3936160,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3936160,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:12Z",
+                        "etag": "\"0x8DF2DA3CFEB321A\"",
+                        "last_modified": "Mon, 19 Oct 2026 05:42:50 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v119",
+                "published_at": "2026-10-18",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v119/MeshCore-TDeckPlus-Cairn119-2026-10-17-full.bin",
+                "Fs": 3971744,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3906208,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3906208,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3906208,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:12Z",
+                        "etag": "\"0x8DF2CABF18196CF\"",
+                        "last_modified": "Sun, 18 Oct 2026 00:08:31 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v118",
+                "published_at": "2026-10-15",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v118/MeshCore-TDeckPlus-Cairn118-2026-10-15-full.bin",
+                "Fs": 3825632,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3760096,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3760096,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3760096,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:12Z",
+                        "etag": "\"0x8DF2AF6A3DA98F3\"",
+                        "last_modified": "Thu, 15 Oct 2026 19:58:10 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v116",
+                "published_at": "2026-10-14",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v116/MeshCore-TDeckPlus-Cairn116-2026-10-14-full.bin",
+                "Fs": 3776992,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3711456,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3711456,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3711456,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:12Z",
+                        "etag": "\"0x8DF2A26163322A6\"",
+                        "last_modified": "Wed, 14 Oct 2026 19:05:17 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v115",
+                "published_at": "2026-10-12",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v115/MeshCore-TDeckPlus-Cairn115-2026-10-12-full.bin",
+                "Fs": 3698928,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3633392,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3633392,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3633392,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:12Z",
+                        "etag": "\"0x8DF289A9FBD27F5\"",
+                        "last_modified": "Mon, 12 Oct 2026 19:54:27 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v114",
+                "published_at": "2026-10-12",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v114/MeshCore-TDeckPlus-Cairn114-2026-10-12-full.bin",
+                "Fs": 3670864,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3605328,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3605328,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3605328,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:12Z",
+                        "etag": "\"0x8DF282AF3CB6A05\"",
+                        "last_modified": "Mon, 12 Oct 2026 06:35:05 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v113",
+                "published_at": "2026-10-12",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v113/MeshCore-TDeckPlus-Cairn113-2026-10-11-full.bin",
+                "Fs": 3602736,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3537200,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3537200,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3537200,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:12Z",
+                        "etag": "\"0x8DF27FC0F2D7CED\"",
+                        "last_modified": "Mon, 12 Oct 2026 00:59:24 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v112",
+                "published_at": "2026-10-10",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v112/MeshCore-TDeckPlus-Cairn112-2026-10-09-full.bin",
+                "Fs": 3431056,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3365520,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3365520,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3365520,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:13Z",
+                        "etag": "\"0x8DF268336EF55C7\"",
+                        "last_modified": "Sat, 10 Oct 2026 04:01:51 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v111",
+                "published_at": "2026-10-08",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v111/MeshCore-TDeckPlus-Cairn111-2026-10-08-full.bin",
+                "Fs": 3376400,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3310864,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3310864,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3310864,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:13Z",
+                        "etag": "\"0x8DF258F852033E7\"",
+                        "last_modified": "Thu, 08 Oct 2026 22:57:25 GMT"
+                    }
+                }
+            },
+            {
+                "version": "cairn-v110",
+                "published_at": "2026-10-08",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v110/MeshCore-TDeckPlus-Cairn110-2026-10-08-full.bin",
+                "Fs": 3342288,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3276752,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3276752,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3276752,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T19:45:13Z",
+                        "etag": "\"0x8DF250576A5F621\"",
+                        "last_modified": "Thu, 08 Oct 2026 06:29:10 GMT"
+                    }
+                }
+            }
+        ],
         "category": "t-deck",
         "esp": "s3"
     },
