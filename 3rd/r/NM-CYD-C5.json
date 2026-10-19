@@ -10,19 +10,19 @@
                 "version": "Beta",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-nm-cyd-c5.bin",
-                "Fs": 4320208,
+                "Fs": 4320832,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4254672,
+                "as": 4255296,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "nm-cyd-c5",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4254672,
+                        "image_size": 4255296,
                         "partition_size": 5111808,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -35,7 +35,7 @@
                             "role": "firmware",
                             "size": 5111808,
                             "source_offset": 65536,
-                            "copy_size": 4254672,
+                            "copy_size": 4255296,
                             "required": true,
                             "source": "firmware"
                         },
@@ -56,16 +56,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-18T17:30:55Z",
-                        "etag": "\"0x8DF2D3CA6227E2A\"",
-                        "last_modified": "Sun, 18 Oct 2026 17:24:21 GMT"
+                        "analyzed_at": "2026-10-19T14:35:53Z",
+                        "etag": "\"0x8DF2DDD08C0A938\"",
+                        "last_modified": "Mon, 19 Oct 2026 12:32:26 GMT"
                     }
                 }
             }
         ],
         "fid": "CFW8F9FNIDNW7LI4B4FRTHY0L2XWO1VL",
-        "esp": "c5",
-        "category": "NM-CYD-C5"
+        "category": "NM-CYD-C5",
+        "esp": "c5"
     },
     {
         "name": "Cheap Yellow Monster",
@@ -75,6 +75,62 @@
         "github": "https://github.com/JimGat/CYM",
         "fid": "CFW3TMV2H6G2YR2VVPOVKXUKPUQ4BESO",
         "versions": [
+            {
+                "version": "v3.0.27",
+                "published_at": "2026-10-19",
+                "file": "https://github.com/JimGat/CYM/releases/download/v3.0.27/CYM-NM28C5-full.bin",
+                "Fs": 3435536,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3370000,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "nm-cyd-c5",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3370000,
+                        "partition_size": 7340032,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 7340032,
+                            "source_offset": 65536,
+                            "copy_size": 3370000,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 983040,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-19T14:35:53Z",
+                        "etag": "\"0x8DF2DD6DA6A7B1A\"",
+                        "last_modified": "Mon, 19 Oct 2026 11:48:12 GMT"
+                    }
+                }
+            },
             {
                 "version": "v3.0.0",
                 "published_at": "2026-10-14",
@@ -576,62 +632,6 @@
                         "analyzed_at": "2026-09-29T19:21:45Z",
                         "etag": "\"0x8DF14ACAEC6D136\"",
                         "last_modified": "Thu, 17 Sep 2026 11:13:20 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v2.14.00",
-                "published_at": "2026-09-15",
-                "file": "https://github.com/JimGat/CYM/releases/download/v2.14.00/CYM-NM28C5-full.bin",
-                "Fs": 3181152,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3115616,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "nm-cyd-c5",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3115616,
-                        "partition_size": 7340032,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 7340032,
-                            "source_offset": 65536,
-                            "copy_size": 3115616,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "storage",
-                            "role": "fat",
-                            "size": 983040,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-29T19:21:45Z",
-                        "etag": "\"0x8DF12D33BB7F734\"",
-                        "last_modified": "Tue, 15 Sep 2026 02:44:15 GMT"
                     }
                 }
             }
