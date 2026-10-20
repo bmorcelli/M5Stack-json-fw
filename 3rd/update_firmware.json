@@ -391,17 +391,27 @@
     {
         "name": "Ratdeck",
         "repo_owner": "ratspeak",
-        "repo_name": "ratdeck",
+        "repo_name": "ratspeak-handheld",
         "author": "ratspeak",
         "cover": "979129683efffd3ad701c6eb0cb79ce6.png",
-        "github": "https://github.com/ratspeak/ratdeck",
-        "description": "Standalone Reticulum for T-Deck, based on microReticulum.",
+        "github": "https://github.com/ratspeak/ratspeak-handheld",
+        "description": "Standalone Reticulum for T-Deck, T-LoraPager and ThinkNode M9, based on microReticulum.",
         "fid_prefix": "Ratdeck_",
         "devices": [
             {
                 "name": "T-Deck",
-                "asset_contains": "merged",
+                "asset_contains": "tdeck-standalone.bin",
                 "json": "t-deck.json"
+            },
+            {
+                "name": "T-LoraPager",
+                "asset_contains": "pager-standalone.bin",
+                "json": "t-lora-pager.json"
+            },
+            {
+                "name": "thinknodem9",
+                "asset_contains": "m9-standalone.bin",
+                "json": "elecrow_thinknode_m9.json"
             }
         ]
     },
