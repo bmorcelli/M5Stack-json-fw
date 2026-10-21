@@ -1200,9 +1200,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-20T17:56:11Z",
-                        "etag": "\"0x8DF2ED21359F4A1\"",
-                        "last_modified": "Tue, 20 Oct 2026 17:46:31 GMT"
+                        "analyzed_at": "2026-10-21T18:54:28Z",
+                        "etag": "\"0x8DF2F90443A7892\"",
+                        "last_modified": "Wed, 21 Oct 2026 16:27:57 GMT"
                     }
                 }
             },
@@ -1256,16 +1256,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-20T17:56:11Z",
-                        "etag": "\"0x8DF2ED21363D4A6\"",
-                        "last_modified": "Tue, 20 Oct 2026 17:46:31 GMT"
+                        "analyzed_at": "2026-10-21T18:54:28Z",
+                        "etag": "\"0x8DF2F90440A0236\"",
+                        "last_modified": "Wed, 21 Oct 2026 16:27:57 GMT"
                     }
                 }
             }
         ],
         "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-        "esp": "s3",
-        "category": "t-deck"
+        "category": "t-deck",
+        "esp": "s3"
     },
     {
         "name": "CAIRN",
@@ -1275,6 +1275,62 @@
         "github": "https://github.com/cvhviz/CAIRN",
         "fid": "CFWGOP6AZDMZFB22V45LTK6GU5HTT4XF",
         "versions": [
+            {
+                "version": "cairn-v121",
+                "published_at": "2026-10-21",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v121/MeshCore-TDeckPlus-Cairn121-2026-10-21-full.bin",
+                "Fs": 4002144,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3936608,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3936608,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3936608,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-21T18:54:28Z",
+                        "etag": "\"0x8DF2F94234845BD\"",
+                        "last_modified": "Wed, 21 Oct 2026 16:55:40 GMT"
+                    }
+                }
+            },
             {
                 "version": "cairn-v120",
                 "published_at": "2026-10-19",
@@ -1776,62 +1832,6 @@
                         "analyzed_at": "2026-10-19T19:45:13Z",
                         "etag": "\"0x8DF258F852033E7\"",
                         "last_modified": "Thu, 08 Oct 2026 22:57:25 GMT"
-                    }
-                }
-            },
-            {
-                "version": "cairn-v110",
-                "published_at": "2026-10-08",
-                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v110/MeshCore-TDeckPlus-Cairn110-2026-10-08-full.bin",
-                "Fs": 3342288,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3276752,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3276752,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 3276752,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-19T19:45:13Z",
-                        "etag": "\"0x8DF250576A5F621\"",
-                        "last_modified": "Thu, 08 Oct 2026 06:29:10 GMT"
                     }
                 }
             }
@@ -9906,6 +9906,62 @@
         "fid": "CFWUIJNJ47ME6CHPUAEMDCJIA5HLOG4L",
         "versions": [
             {
+                "version": "beta_99",
+                "published_at": "2026-10-21",
+                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_99/wadamesh-tdeck-merged.bin",
+                "Fs": 3720576,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3655040,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3655040,
+                        "partition_size": 4063232,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4063232,
+                            "source_offset": 65536,
+                            "copy_size": 3655040,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-21T18:54:28Z",
+                        "etag": "\"0x8DF2F95221160AB\"",
+                        "last_modified": "Wed, 21 Oct 2026 17:02:47 GMT"
+                    }
+                }
+            },
+            {
                 "version": "beta_98",
                 "published_at": "2026-10-18",
                 "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_98/wadamesh-tdeck-merged.bin",
@@ -10406,62 +10462,6 @@
                         "analyzed_at": "2026-10-07T12:04:45Z",
                         "etag": "\"0x8DF245A86C8E225\"",
                         "last_modified": "Wed, 07 Oct 2026 10:05:33 GMT"
-                    }
-                }
-            },
-            {
-                "version": "beta_89",
-                "published_at": "2026-10-06",
-                "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_89/wadamesh-tdeck-merged.bin",
-                "Fs": 3541104,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3475568,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3475568,
-                        "partition_size": 4063232,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4063232,
-                            "source_offset": 65536,
-                            "copy_size": 3475568,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-06T23:53:20Z",
-                        "etag": "\"0x8DF23F800613456\"",
-                        "last_modified": "Tue, 06 Oct 2026 22:20:17 GMT"
                     }
                 }
             }
