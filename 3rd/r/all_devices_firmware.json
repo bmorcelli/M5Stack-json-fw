@@ -63540,6 +63540,65 @@
     "category": "t-deck"
   },
   {
+    "name": "MatterMesh OS (BETA) (Plus)",
+    "author": "mattermeshos",
+    "description": "free and open-source (GPL-3.0) firmware built on MeshCore, with a colour UI designed for the T-Deck Plus: encrypted LoRa channels and direct messages, live contacts, OpenStreetMap maps with GPS, weather, keyboard in 8 languages, MeshCore app over Bluetooth / USB / Wi-Fi, signed OTA updates.",
+    "cover": "https://raw.githubusercontent.com/mattermeshos/mattermesh-os/main/docs/images/mattermesh-icon-512.png",
+    "github": "https://github.com/mattermeshos/mattermesh-os",
+    "fid": "CFWLK3E4WVDHKWDYFJQRXZ5ZA67DES5D",
+    "versions": [
+      {
+        "version": "plus-0.4.0.4",
+        "published_at": "2026-10-25",
+        "file": "https://github.com/mattermeshos/mattermesh-os/releases/download/plus-0.4.0.4/mattermesh-os-tdeck-plus-free.bin",
+        "Fs": 3563840,
+        "nb": true,
+        "ao": 0,
+        "as": 3563840,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3563840,
+            "partition_size": 3563840,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3563840,
+              "source_offset": 0,
+              "copy_size": 3563840,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-26T12:24:54Z",
+            "etag": "\"0x8DF32929029CE5E\"",
+            "last_modified": "Sun, 25 Oct 2026 12:21:57 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-deck",
+    "esp": "32"
+  },
+  {
     "name": "MeshCom",
     "author": "icssw-org",
     "versions": [
