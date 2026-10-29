@@ -87,6 +87,74 @@
         "category": "t-deck-pro"
     },
     {
+        "name": "Faro (Max)",
+        "author": "radek-sixi",
+        "description": "Faro is a touch, keyboard and trackball UI (LVGL 9.3) for the MeshCore companion firmware. It runs on the device next to the normal companion interfaces, so the MeshCore phone app (BLE) and TCP clients (Wi-Fi, port 5000) keep working while you use the screen.",
+        "cover": "",
+        "github": "https://github.com/radek-sixi/sixi-tdeck-plus",
+        "fid": "CFWTFHBV3CYWFHHZU2SXFTRIPCSCBSIO",
+        "versions": [
+            {
+                "version": "v0.10.2",
+                "published_at": "2026-10-28",
+                "file": "https://github.com/radek-sixi/sixi-tdeck-plus/releases/download/v0.10.2/faro-tdeck-max-0.10.2-merged.bin",
+                "Fs": 2275232,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2209696,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck-pro",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2209696,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2209696,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-29T17:41:01Z",
+                        "etag": "\"0x8DF34E2EEAAB6CC\"",
+                        "last_modified": "Wed, 28 Oct 2026 11:02:18 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-deck-pro",
+        "esp": "s3"
+    },
+    {
         "name": "Launcher",
         "author": "bmorcelli",
         "description": "With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI.",
