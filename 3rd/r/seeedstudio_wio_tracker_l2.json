@@ -8,6 +8,62 @@
         "fid": "CFWTFFO5WLB2HIVQXA3EAUETPPMTTT5Y",
         "versions": [
             {
+                "version": "cairn-v124",
+                "published_at": "2026-10-29",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v124/MeshCore-WioL2Pro-Cairn124-2026-10-29-full.bin",
+                "Fs": 4105696,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4040160,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "seeedstudio-wio-tracker-l2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4040160,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 4040160,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-29T16:26:30Z",
+                        "etag": "\"0x8DF35BBB35EAE70\"",
+                        "last_modified": "Thu, 29 Oct 2026 12:53:59 GMT"
+                    }
+                }
+            },
+            {
                 "version": "cairn-v123",
                 "published_at": "2026-10-26",
                 "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v123/MeshCore-WioL2Pro-Cairn123-2026-10-25-full.bin",
@@ -508,62 +564,6 @@
                         "analyzed_at": "2026-10-19T19:45:10Z",
                         "etag": "\"0x8DF282AF4E8D9C6\"",
                         "last_modified": "Mon, 12 Oct 2026 06:35:07 GMT"
-                    }
-                }
-            },
-            {
-                "version": "cairn-v113",
-                "published_at": "2026-10-12",
-                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v113/MeshCore-WioL2Pro-Cairn113-2026-10-11-full.bin",
-                "Fs": 3651840,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3586304,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "seeedstudio-wio-tracker-l2",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3586304,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 3586304,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-19T19:45:10Z",
-                        "etag": "\"0x8DF27FC10540E6C\"",
-                        "last_modified": "Mon, 12 Oct 2026 00:59:26 GMT"
                     }
                 }
             }
