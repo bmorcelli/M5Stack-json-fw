@@ -2450,8 +2450,8 @@
                 }
             }
         ],
-        "category": "t-deck",
-        "esp": "s3"
+        "esp": "s3",
+        "category": "t-deck"
     },
     {
         "name": "Ghost v2.2.2",
@@ -8785,6 +8785,51 @@
                 }
             },
             {
+                "version": "v1.12.1",
+                "published_at": "2026-10-29",
+                "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.12.1/tdeck_firmware.bin",
+                "Fs": 4194304,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1883040,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1883040,
+                        "partition_size": 3080192,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3080192,
+                            "source_offset": 65536,
+                            "copy_size": 1883040,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 4231168,
+                        "analyzed_at": "2026-10-29T21:22:53Z",
+                        "etag": "\"0x8DF35EFEC3E3796\"",
+                        "last_modified": "Thu, 29 Oct 2026 19:07:48 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.11.1",
                 "published_at": "2026-10-14",
                 "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.11.1/tdeck_firmware.bin",
@@ -9141,51 +9186,6 @@
                         "analyzed_at": "2026-10-03T22:23:46Z",
                         "etag": "\"0x8DF21862AC63420\"",
                         "last_modified": "Sat, 03 Oct 2026 19:40:23 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.8.3",
-                "published_at": "2026-09-27",
-                "file": "https://github.com/varna9000/reticulum-tdeck/releases/download/v1.8.3/tdeck_firmware.bin",
-                "Fs": 4194304,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1850560,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1850560,
-                        "partition_size": 3080192,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3080192,
-                            "source_offset": 65536,
-                            "copy_size": 1850560,
-                            "required": true,
-                            "source": "firmware"
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 4231168,
-                        "analyzed_at": "2026-09-27T17:57:37Z",
-                        "etag": "\"0x8DF1C9E77C16AE6\"",
-                        "last_modified": "Sun, 27 Sep 2026 13:51:44 GMT"
                     }
                 }
             }
