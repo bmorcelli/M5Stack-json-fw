@@ -63814,6 +63814,53 @@
     "fid": "CFWLK3E4WVDHKWDYFJQRXZ5ZA67DES5D",
     "versions": [
       {
+        "version": "plus-0.4.0.13",
+        "published_at": "2026-10-31",
+        "file": "https://github.com/mattermeshos/mattermesh-os/releases/download/plus-0.4.0.13/mattermesh-os-tdeck-plus-free.bin",
+        "Fs": 3642112,
+        "nb": true,
+        "ao": 0,
+        "as": 3642112,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 3642112,
+            "partition_size": 3642112,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3642112,
+              "source_offset": 0,
+              "copy_size": 3642112,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-31T14:50:23Z",
+            "etag": "\"0x8DF375617AE699D\"",
+            "last_modified": "Sat, 31 Oct 2026 13:51:41 GMT"
+          }
+        }
+      },
+      {
         "version": "plus-0.4.0.12",
         "published_at": "2026-10-29",
         "file": "https://github.com/mattermeshos/mattermesh-os/releases/download/plus-0.4.0.12/mattermesh-os-tdeck-plus-free.bin",
@@ -69475,6 +69522,62 @@
     "fid": "CFW7UKIJW436AWBCH5OTRSG3Q7CK5PNN",
     "versions": [
       {
+        "version": "beta_101",
+        "published_at": "2026-10-28",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_101/wadamesh-tdeck-merged.bin",
+        "Fs": 3786560,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3721024,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3721024,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 3721024,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-31T14:50:23Z",
+            "etag": "\"0x8DF34FC58A1F1F5\"",
+            "last_modified": "Wed, 28 Oct 2026 14:04:13 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_85",
         "published_at": "2026-09-23",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_85/wadamesh-tdeck-merged.bin",
@@ -69975,62 +70078,6 @@
             "analyzed_at": "2026-08-03T20:15:03Z",
             "etag": "\"0x8DEDB53FB5F2B65\"",
             "last_modified": "Mon, 06 Jul 2026 11:44:47 GMT"
-          }
-        }
-      },
-      {
-        "version": "beta_31",
-        "published_at": "2026-07-05",
-        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_31/wadamesh-tdeck-merged.bin",
-        "Fs": 3048800,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2983264,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2983264,
-            "partition_size": 4063232,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4063232,
-              "source_offset": 65536,
-              "copy_size": 2983264,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:03Z",
-            "etag": "\"0x8DEDAC9DB618FF5\"",
-            "last_modified": "Sun, 05 Jul 2026 19:16:03 GMT"
           }
         }
       }
@@ -74787,6 +74834,62 @@
     "fid": "CFWLMKEMWC7SOFK6H2TVQZWXY2NU362H",
     "versions": [
       {
+        "version": "beta_101",
+        "published_at": "2026-10-28",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_101/wadamesh-tdisplay-p4-merged.bin",
+        "Fs": 4220080,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 4089008,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 4089008,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 4089008,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 8192000,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-31T14:50:23Z",
+            "etag": "\"0x8DF34FB10DA2B4D\"",
+            "last_modified": "Wed, 28 Oct 2026 13:55:03 GMT"
+          }
+        }
+      },
+      {
         "version": "beta_85",
         "published_at": "2026-09-23",
         "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_85/wadamesh-tdisplay-p4-merged.bin",
@@ -75190,6 +75293,62 @@
     "github": "https://github.com/ALLFATHER-BV/wadamesh",
     "fid": "CFW3KKKOUAHEDVNHFN45LSQOGXQ74FGG",
     "versions": [
+      {
+        "version": "beta_101",
+        "published_at": "2026-10-28",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_101/wadamesh-tdisplay-p4-lcd-merged.bin",
+        "Fs": 4222080,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 4091008,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-display-p4",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 4091008,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 4091008,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 8192000,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-31T14:50:23Z",
+            "etag": "\"0x8DF34FB02149832\"",
+            "last_modified": "Wed, 28 Oct 2026 13:54:38 GMT"
+          }
+        }
+      },
       {
         "version": "beta_85",
         "published_at": "2026-09-23",
@@ -87304,6 +87463,62 @@
     "github": "https://github.com/ALLFATHER-BV/wadamesh",
     "fid": "CFWBXVMXEMELBRHQRFQTVEMGEQA3GT6R",
     "versions": [
+      {
+        "version": "beta_101",
+        "published_at": "2026-10-28",
+        "file": "https://github.com/ALLFATHER-BV/wadamesh/releases/download/beta_101/wadamesh-tlora-pager-sx1262-merged.bin",
+        "Fs": 4075008,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4009472,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4009472,
+            "partition_size": 4063232,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4063232,
+              "source_offset": 65536,
+              "copy_size": 4009472,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-10-31T14:50:23Z",
+            "etag": "\"0x8DF34FB2080A0EF\"",
+            "last_modified": "Wed, 28 Oct 2026 13:55:29 GMT"
+          }
+        }
+      },
       {
         "version": "beta_85",
         "published_at": "2026-09-23",
