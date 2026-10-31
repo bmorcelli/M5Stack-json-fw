@@ -8148,6 +8148,62 @@
         "fid": "CFWSXCGEK73TCWYJ7WJ5BRLZUP3VXQFS",
         "versions": [
             {
+                "version": "v1.6.0",
+                "published_at": "2026-10-31",
+                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.6.0/saitama-t-deck-plus-1.6.0-merged.bin",
+                "Fs": 2792192,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2726656,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2726656,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2726656,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3407872,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-10-31T08:48:18Z",
+                        "etag": "\"0x8DF3721F91277B1\"",
+                        "last_modified": "Sat, 31 Oct 2026 07:38:36 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.5.0",
                 "published_at": "2026-10-11",
                 "file": "https://github.com/868meshbot/Saitama/releases/download/v1.5.0/saitama-t-deck-plus-1.5.0-merged.bin",
@@ -8648,62 +8704,6 @@
                         "analyzed_at": "2026-09-02T09:58:20Z",
                         "etag": "\"0x8DF08CD40AE4BAF\"",
                         "last_modified": "Wed, 02 Sep 2026 08:36:15 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.2.0",
-                "published_at": "2026-08-16",
-                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.2.0/saitama-t-deck-plus-1.2.0-merged.bin",
-                "Fs": 2581952,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2516416,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2516416,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 2516416,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3407872,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-16T13:38:55Z",
-                        "etag": "\"0x8DEFB9AA0B8FD03\"",
-                        "last_modified": "Sun, 16 Aug 2026 13:31:07 GMT"
                     }
                 }
             }
