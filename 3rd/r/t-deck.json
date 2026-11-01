@@ -1848,6 +1848,53 @@
         "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
         "versions": [
             {
+                "version": "v6.3.0",
+                "published_at": "2026-11-01",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.0/camillia-mt-tdeck-pro-v6.3.0-ota.bin",
+                "Fs": 3989808,
+                "nb": true,
+                "ao": 0,
+                "as": 3989808,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 3989808,
+                        "partition_size": 3989808,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3989808,
+                            "source_offset": 0,
+                            "copy_size": 3989808,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-01T00:59:13Z",
+                        "etag": "\"0x8DF37B3455E1189\"",
+                        "last_modified": "Sun, 01 Nov 2026 00:58:41 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v6.2.5",
                 "published_at": "2026-10-31",
                 "file": "https://github.com/oumike/camillia-mt/releases/download/v6.2.5/camillia-mt-tdeck-pro-v6.2.5-ota.bin",
@@ -2267,53 +2314,6 @@
                         "analyzed_at": "2026-10-23T23:03:52Z",
                         "etag": "\"0x8DF314D041FD8D7\"",
                         "last_modified": "Fri, 23 Oct 2026 21:31:36 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v6.1.0",
-                "published_at": "2026-10-23",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.1.0/camillia-mt-tdeck-pro-v6.1.0-ota.bin",
-                "Fs": 3927008,
-                "nb": true,
-                "ao": 0,
-                "as": 3927008,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 3927008,
-                        "partition_size": 3927008,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3927008,
-                            "source_offset": 0,
-                            "copy_size": 3927008,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-23T23:03:52Z",
-                        "etag": "\"0x8DF31411231C308\"",
-                        "last_modified": "Fri, 23 Oct 2026 20:06:05 GMT"
                     }
                 }
             }
