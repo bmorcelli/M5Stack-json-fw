@@ -8,6 +8,53 @@
         "fid": "CFWQYVSHB5LMI6FXUXITMGATMYQHMLYL",
         "versions": [
             {
+                "version": "2.0.0",
+                "published_at": "2026-11-01",
+                "file": "https://github.com/crosspoint-reader/crosspoint-reader/releases/download/2.0.0/firmware.bin",
+                "Fs": 5537104,
+                "nb": true,
+                "ao": 0,
+                "as": 5537104,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "xteink-x3",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 5537104,
+                        "partition_size": 5537104,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 5537104,
+                            "source_offset": 0,
+                            "copy_size": 5537104,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-01T14:28:30Z",
+                        "etag": "\"0x8DF3822C0467A9F\"",
+                        "last_modified": "Sun, 01 Nov 2026 14:16:41 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.6.5",
                 "published_at": "2026-09-27",
                 "file": "https://github.com/crosspoint-reader/crosspoint-reader/releases/download/1.6.5/firmware.bin",
@@ -427,53 +474,6 @@
                         "analyzed_at": "2026-08-21T14:22:05Z",
                         "etag": "\"0x8DE725B9F75E480\"",
                         "last_modified": "Sun, 22 Feb 2026 21:44:57 GMT"
-                    }
-                }
-            },
-            {
-                "version": "1.0.0",
-                "published_at": "2026-02-09",
-                "file": "https://github.com/crosspoint-reader/crosspoint-reader/releases/download/1.0.0/firmware.bin",
-                "Fs": 6429520,
-                "nb": true,
-                "ao": 0,
-                "as": 6429520,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "xteink-x3",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 6429520,
-                        "partition_size": 6429520,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6429520,
-                            "source_offset": 0,
-                            "copy_size": 6429520,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-21T14:22:05Z",
-                        "etag": "\"0x8DE67A6C90CBBFE\"",
-                        "last_modified": "Mon, 09 Feb 2026 06:45:16 GMT"
                     }
                 }
             }
