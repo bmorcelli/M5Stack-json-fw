@@ -1276,6 +1276,62 @@
         "fid": "CFWGOP6AZDMZFB22V45LTK6GU5HTT4XF",
         "versions": [
             {
+                "version": "cairn-v126",
+                "published_at": "2026-11-02",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v126/MeshCore-TDeckPlus-Cairn126-2026-11-01-full.bin",
+                "Fs": 4191632,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4126096,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4126096,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 4126096,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T02:21:44Z",
+                        "etag": "\"0x8DF38806A995237\"",
+                        "last_modified": "Mon, 02 Nov 2026 01:27:10 GMT"
+                    }
+                }
+            },
+            {
                 "version": "cairn-v125",
                 "published_at": "2026-10-30",
                 "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v125/MeshCore-TDeckPlus-Cairn125-2026-10-29-full.bin",
@@ -1776,62 +1832,6 @@
                         "analyzed_at": "2026-10-19T19:45:12Z",
                         "etag": "\"0x8DF2A26163322A6\"",
                         "last_modified": "Wed, 14 Oct 2026 19:05:17 GMT"
-                    }
-                }
-            },
-            {
-                "version": "cairn-v115",
-                "published_at": "2026-10-12",
-                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v115/MeshCore-TDeckPlus-Cairn115-2026-10-12-full.bin",
-                "Fs": 3698928,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3633392,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3633392,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 3633392,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-19T19:45:12Z",
-                        "etag": "\"0x8DF289A9FBD27F5\"",
-                        "last_modified": "Mon, 12 Oct 2026 19:54:27 GMT"
                     }
                 }
             }
@@ -4196,6 +4196,53 @@
         "fid": "CFWLK3E4WVDHKWDYFJQRXZ5ZA67DES5D",
         "versions": [
             {
+                "version": "plus-0.4.0.14",
+                "published_at": "2026-11-01",
+                "file": "https://github.com/mattermeshos/mattermesh-os/releases/download/plus-0.4.0.14/mattermesh-os-tdeck-plus-free.bin",
+                "Fs": 3720416,
+                "nb": true,
+                "ao": 0,
+                "as": 3720416,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 3720416,
+                        "partition_size": 3720416,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3720416,
+                            "source_offset": 0,
+                            "copy_size": 3720416,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T02:21:44Z",
+                        "etag": "\"0x8DF3870F68B62F4\"",
+                        "last_modified": "Sun, 01 Nov 2026 23:36:33 GMT"
+                    }
+                }
+            },
+            {
                 "version": "plus-0.4.0.13",
                 "published_at": "2026-10-31",
                 "file": "https://github.com/mattermeshos/mattermesh-os/releases/download/plus-0.4.0.13/mattermesh-os-tdeck-plus-free.bin",
@@ -5889,7 +5936,7 @@
             {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.8.1.8e6a88d/firmware-t-deck-2.8.1.8e6a88d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.1.8e6a88d/firmware-t-deck-2.8.1.8e6a88d.factory.bin",
                 "Fs": 2469856,
                 "s": 0,
                 "f": 0,
@@ -5936,7 +5983,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"6774c3c3f460f168e27eb87ca451d5088bc0b76a936de489d224f7eaa43556b9\""
                     }
                 }
@@ -5944,7 +5991,7 @@
             {
                 "version": "2.7.26.54e0d8d",
                 "published_at": "2026-06-24",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.26.54e0d8d/firmware-t-deck-2.7.26.54e0d8d.factory.bin",
                 "Fs": 2306304,
                 "s": 0,
                 "f": 0,
@@ -5991,7 +6038,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"54863b938f4cc8540f98c5003c2666d90b0e0eb7997005c19aaa6538d6f941aa\""
                     }
                 }
@@ -5999,7 +6046,7 @@
             {
                 "version": "2.7.25.104df5f",
                 "published_at": "2026-06-10",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.25.104df5f/firmware-t-deck-2.7.25.104df5f.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.25.104df5f/firmware-t-deck-2.7.25.104df5f.factory.bin",
                 "Fs": 2305888,
                 "s": 0,
                 "f": 0,
@@ -6046,7 +6093,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"b3a0ff0c8001f06aa26efab5cc86d9861e619178e66cd4a95c371f6009a63e33\""
                     }
                 }
@@ -6054,7 +6101,7 @@
             {
                 "version": "2.7.24.472b14c",
                 "published_at": "2026-05-23",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.24.472b14c/firmware-t-deck-2.7.24.472b14c.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.24.472b14c/firmware-t-deck-2.7.24.472b14c.factory.bin",
                 "Fs": 2295888,
                 "s": 0,
                 "f": 0,
@@ -6101,7 +6148,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"b625ed0382b4e14ab1a0e3520fcf044e90e56388327d93253844cc00d3a569bb\""
                     }
                 }
@@ -6109,7 +6156,7 @@
             {
                 "version": "2.7.23.b246bcd",
                 "published_at": "2026-05-08",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.23.b246bcd/firmware-t-deck-2.7.23.b246bcd.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.23.b246bcd/firmware-t-deck-2.7.23.b246bcd.factory.bin",
                 "Fs": 2295264,
                 "s": 0,
                 "f": 0,
@@ -6156,7 +6203,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"1c26a26b71203b68053c57257abbbf1ec12a307e814d993292934322b802ece8\""
                     }
                 }
@@ -6164,7 +6211,7 @@
             {
                 "version": "2.7.15.567b8ea",
                 "published_at": "2025-11-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.15.567b8ea/firmware-t-deck-2.7.15.567b8ea.bin",
                 "Fs": 2208672,
                 "s": 0,
                 "f": 0,
@@ -6211,7 +6258,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"dd29b2b8c5b08ae63e756e1f9b97f0701fde4cda7ecc91efa9e50b0e64d31bf0\""
                     }
                 }
@@ -6342,7 +6389,7 @@
             {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.8.1.8e6a88d/firmware-t-deck-tft-2.8.1.8e6a88d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.1.8e6a88d/firmware-t-deck-tft-2.8.1.8e6a88d.factory.bin",
                 "Fs": 3984608,
                 "s": 0,
                 "f": 0,
@@ -6389,7 +6436,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"f3ad9408d226444b236483d730ebb3a30baec5785e496711d328c8512efba096\""
                     }
                 }
@@ -6397,7 +6444,7 @@
             {
                 "version": "2.7.26.54e0d8d",
                 "published_at": "2026-06-24",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.26.54e0d8d/firmware-t-deck-tft-2.7.26.54e0d8d.factory.bin",
                 "Fs": 3694000,
                 "s": 0,
                 "f": 0,
@@ -6444,7 +6491,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"e82979087f21df37d23397223666c6c44140808a2b64f405f814671ec10b9e12\""
                     }
                 }
@@ -6452,7 +6499,7 @@
             {
                 "version": "2.7.25.104df5f",
                 "published_at": "2026-06-10",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.25.104df5f/firmware-t-deck-tft-2.7.25.104df5f.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.25.104df5f/firmware-t-deck-tft-2.7.25.104df5f.factory.bin",
                 "Fs": 3690912,
                 "s": 0,
                 "f": 0,
@@ -6499,7 +6546,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:44Z",
                         "etag": "W/\"8735432b71d7b8d3c5320616dadcce9ee4b5cb59e25e4fc8f70d72afa73db0f7\""
                     }
                 }
@@ -6507,7 +6554,7 @@
             {
                 "version": "2.7.24.472b14c",
                 "published_at": "2026-05-23",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.24.472b14c/firmware-t-deck-tft-2.7.24.472b14c.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.24.472b14c/firmware-t-deck-tft-2.7.24.472b14c.factory.bin",
                 "Fs": 3678224,
                 "s": 0,
                 "f": 0,
@@ -6554,7 +6601,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:45Z",
                         "etag": "W/\"2fd494667462df302a0bd12f67fb9803bc5a806964fe63868ef78a79dac8e88a\""
                     }
                 }
@@ -6562,7 +6609,7 @@
             {
                 "version": "2.7.23.b246bcd",
                 "published_at": "2026-05-08",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.23.b246bcd/firmware-t-deck-tft-2.7.23.b246bcd.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.23.b246bcd/firmware-t-deck-tft-2.7.23.b246bcd.factory.bin",
                 "Fs": 3677600,
                 "s": 0,
                 "f": 0,
@@ -6609,7 +6656,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:12Z",
+                        "analyzed_at": "2026-11-02T02:21:45Z",
                         "etag": "W/\"961175d25ce03174af65316dcc7c5bfdf0dbaf278c2720b6614de1424c366cf6\""
                     }
                 }
@@ -6617,7 +6664,7 @@
             {
                 "version": "2.7.15.567b8ea",
                 "published_at": "2025-11-19",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/83006e9689f1ffbf1821e00e036797a06896b504/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.15.567b8ea/firmware-t-deck-tft-2.7.15.567b8ea.bin",
                 "Fs": 3593792,
                 "s": 0,
                 "f": 0,
@@ -6664,7 +6711,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-31T21:58:13Z",
+                        "analyzed_at": "2026-11-02T02:21:45Z",
                         "etag": "W/\"5d41819a17a80cb48b1c5062f0d74092f7ebd6f50c5c878ca71c9beac237359b\""
                     }
                 }
@@ -8195,6 +8242,62 @@
         "fid": "CFWSXCGEK73TCWYJ7WJ5BRLZUP3VXQFS",
         "versions": [
             {
+                "version": "v1.6.1",
+                "published_at": "2026-11-01",
+                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.6.1/saitama-t-deck-plus-1.6.1-merged.bin",
+                "Fs": 2792720,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2727184,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2727184,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2727184,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3407872,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "etag": "\"0x8DF38738A5FE3A9\"",
+                        "last_modified": "Sun, 01 Nov 2026 23:55:00 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.6.0",
                 "published_at": "2026-10-31",
                 "file": "https://github.com/868meshbot/Saitama/releases/download/v1.6.0/saitama-t-deck-plus-1.6.0-merged.bin",
@@ -8695,62 +8798,6 @@
                         "analyzed_at": "2026-09-25T15:30:30Z",
                         "etag": "\"0x8DF1B0ED6C5B3EA\"",
                         "last_modified": "Fri, 25 Sep 2026 14:11:05 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.3.0",
-                "published_at": "2026-09-02",
-                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.3.0/saitama-t-deck-plus-1.3.0-merged.bin",
-                "Fs": 2623488,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2557952,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2557952,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 2557952,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3407872,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-02T09:58:20Z",
-                        "etag": "\"0x8DF08CD40AE4BAF\"",
-                        "last_modified": "Wed, 02 Sep 2026 08:36:15 GMT"
                     }
                 }
             }
