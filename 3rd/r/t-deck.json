@@ -6045,8 +6045,8 @@
                 }
             }
         ],
-        "category": "t-deck",
-        "esp": "s3"
+        "esp": "s3",
+        "category": "t-deck"
     },
     {
         "name": "Meshcore V8.2",
@@ -9068,6 +9068,1320 @@
         "lastCommit": "9403a23f729eda61744abfd120033ee6e95e88f0",
         "fid": "CFWYXM9S0SDKVXBLLRA6IX8GVNB7RIKJ",
         "category": "t-deck"
+    },
+    {
+        "name": "Squatch Mesh",
+        "author": "BamBam1121",
+        "description": "standalone MeshCore messenger with no phone needed: channels and DMs, offline maps with GPS, region scopes, repeater admin tools, custom themes, a touch UI on the T-Deck, and updates over Wi-Fi.",
+        "cover": "https://squatchmesh.com/assets/icon-512.png",
+        "github": "https://github.com/BamBam1121/inw-mesh",
+        "fid": "CFWKMKUBINMOCR6ARSMK6ZKBAGB6BU7R",
+        "versions": [
+            {
+                "version": "v1.2.15",
+                "published_at": "2026-10-22",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/partitions.bin",
+                "Fs": 2860016,
+                "ao": 0,
+                "as": 2860016,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2860016,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2860016,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:06Z",
+                        "etag": "\"0x8DF305A90A9093F\"",
+                        "last_modified": "Thu, 22 Oct 2026 16:36:04 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.15/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.13",
+                "published_at": "2026-10-19",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/partitions.bin",
+                "Fs": 2845968,
+                "ao": 0,
+                "as": 2845968,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2845968,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2845968,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF2DFBC5B25AAA\"",
+                        "last_modified": "Mon, 19 Oct 2026 16:12:28 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.13/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.11",
+                "published_at": "2026-10-16",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/partitions.bin",
+                "Fs": 2833568,
+                "ao": 0,
+                "as": 2833568,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2833568,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2833568,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:06Z",
+                        "etag": "\"0x8DF2BCA7397C1AB\"",
+                        "last_modified": "Fri, 16 Oct 2026 21:14:23 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.11/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.8",
+                "published_at": "2026-10-02",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/partitions.bin",
+                "Fs": 2823776,
+                "ao": 0,
+                "as": 2823776,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2823776,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2823776,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF20C208F5E80D\"",
+                        "last_modified": "Fri, 02 Oct 2026 20:16:25 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.8/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.7",
+                "published_at": "2026-10-01",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/partitions.bin",
+                "Fs": 2817312,
+                "ao": 0,
+                "as": 2817312,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2817312,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2817312,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF200AAF464898\"",
+                        "last_modified": "Thu, 01 Oct 2026 22:23:57 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.7/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.5",
+                "published_at": "2026-10-01",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/partitions.bin",
+                "Fs": 2792384,
+                "ao": 0,
+                "as": 2792384,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2792384,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2792384,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF1FDE7633B23C\"",
+                        "last_modified": "Thu, 01 Oct 2026 17:07:23 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.5/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.3",
+                "published_at": "2026-09-29",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/partitions.bin",
+                "Fs": 2781680,
+                "ao": 0,
+                "as": 2781680,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2781680,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2781680,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF1DDF59D9020B\"",
+                        "last_modified": "Tue, 29 Sep 2026 04:08:43 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.3/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.1",
+                "published_at": "2026-09-25",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/partitions.bin",
+                "Fs": 2577008,
+                "ao": 0,
+                "as": 2577008,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2577008,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2577008,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF1B47F88BA3E3\"",
+                        "last_modified": "Fri, 25 Sep 2026 21:00:03 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.2.0",
+                "published_at": "2026-09-24",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/partitions.bin",
+                "Fs": 2536176,
+                "ao": 0,
+                "as": 2536176,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2536176,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2536176,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF19EDAC05B1C1\"",
+                        "last_modified": "Thu, 24 Sep 2026 03:41:09 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
+                "version": "v1.1.21",
+                "published_at": "2026-09-18",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/partitions.bin",
+                "Fs": 2516256,
+                "ao": 0,
+                "as": 2516256,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-deck",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2516256,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2516256,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF15606A69D9F2\"",
+                        "last_modified": "Fri, 18 Sep 2026 08:39:55 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.1.21/partitions.bin"
+                        }
+                    }
+                }
+            }
+        ],
+        "category": "t-deck",
+        "esp": "32"
+    },
+    {
+        "name": "Squatch Mesh.",
+        "author": "BamBam1121",
+        "description": "standalone MeshCore messenger with no phone needed: channels and DMs, offline maps with GPS, region scopes, repeater admin tools, custom themes, a touch UI on the T-Deck, and updates over Wi-Fi.",
+        "cover": "https://squatchmesh.com/assets/icon-512.png",
+        "github": "https://github.com/BamBam1121/inw-mesh",
+        "fid": "CFWH62M2TSEJXKFC5O5XMQANDLSYTZL2",
+        "versions": [
+            {
+                "version": "tdeck-v1.2.6-beta3",
+                "published_at": "2026-10-29",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.6-beta3/squatch-mesh-tdeck-1.2.6-beta3-full.bin",
+                "Fs": 2709728,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2644192,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2644192,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2644192,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF35EBB042DCFE\"",
+                        "last_modified": "Thu, 29 Oct 2026 18:37:30 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.6-beta2",
+                "published_at": "2026-10-22",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.6-beta2/squatch-mesh-tdeck-1.2.6-beta2-full.bin",
+                "Fs": 2707856,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2642320,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2642320,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2642320,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF305D27EDE01C\"",
+                        "last_modified": "Thu, 22 Oct 2026 16:54:36 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.6-beta1",
+                "published_at": "2026-10-16",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.6-beta1/squatch-mesh-tdeck-1.2.6-beta1-full.bin",
+                "Fs": 2692720,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2627184,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2627184,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2627184,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:07Z",
+                        "etag": "\"0x8DF2BCD91A03790\"",
+                        "last_modified": "Fri, 16 Oct 2026 21:36:42 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.5",
+                "published_at": "2026-10-16",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.5/squatch-mesh-tdeck-1.2.5-full.bin",
+                "Fs": 2674608,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2609072,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2609072,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2609072,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:08Z",
+                        "etag": "\"0x8DF2BCB09AD6E7E\"",
+                        "last_modified": "Fri, 16 Oct 2026 21:18:35 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.5-beta2",
+                "published_at": "2026-10-12",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.5-beta2/squatch-mesh-tdeck-1.2.5-beta2-full.bin",
+                "Fs": 2674624,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2609088,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2609088,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2609088,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:08Z",
+                        "etag": "\"0x8DF282C08A86D40\"",
+                        "last_modified": "Mon, 12 Oct 2026 06:42:49 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.5-beta1",
+                "published_at": "2026-10-10",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.5-beta1/squatch-mesh-tdeck-1.2.5-beta1-full.bin",
+                "Fs": 2673392,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2607856,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2607856,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2607856,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:08Z",
+                        "etag": "\"0x8DF26A23B2DF200\"",
+                        "last_modified": "Sat, 10 Oct 2026 07:43:52 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.4",
+                "published_at": "2026-10-10",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.4/squatch-mesh-tdeck-1.2.4-full.bin",
+                "Fs": 2669568,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2604032,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2604032,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2604032,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:08Z",
+                        "etag": "\"0x8DF269FEA8BE65D\"",
+                        "last_modified": "Sat, 10 Oct 2026 07:27:18 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.4-beta11",
+                "published_at": "2026-10-09",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.4-beta11/squatch-mesh-tdeck-1.2.4-beta11-full.bin",
+                "Fs": 2669600,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2604064,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2604064,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2604064,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:08Z",
+                        "etag": "\"0x8DF259C92710D9D\"",
+                        "last_modified": "Fri, 09 Oct 2026 00:30:51 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.4-beta10",
+                "published_at": "2026-10-04",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.4-beta10/squatch-mesh-tdeck-1.2.4-beta10-full.bin",
+                "Fs": 2663216,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2597680,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2597680,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2597680,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:08Z",
+                        "etag": "\"0x8DF224B2065A7D5\"",
+                        "last_modified": "Sun, 04 Oct 2026 19:10:17 GMT"
+                    }
+                }
+            },
+            {
+                "version": "tdeck-v1.2.4-beta9",
+                "published_at": "2026-10-03",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.4-beta9/squatch-mesh-tdeck-1.2.4-beta9-full.bin",
+                "Fs": 2656848,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2591312,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2591312,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2591312,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T17:00:08Z",
+                        "etag": "\"0x8DF219A4D4F3FA3\"",
+                        "last_modified": "Sat, 03 Oct 2026 22:04:31 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-deck",
+        "esp": "s3"
     },
     {
         "name": "T-Deck LXMF Messenger",
