@@ -6178,6 +6178,61 @@
         "name": "Meshtastic",
         "versions": [
             {
+                "version": "2.8.2.4c89b69",
+                "published_at": "2026-11-02",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.2.4c89b69/firmware-t-deck-2.8.2.4c89b69.factory.bin",
+                "Fs": 2469184,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2403648,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2403648,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2403648,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T19:50:21Z",
+                        "etag": "W/\"6525c1e329c302878d700074fbc69a4cf911acaa6faf40b155a2bc0c2719cbbe\""
+                    }
+                }
+            },
+            {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",
                 "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.1.8e6a88d/firmware-t-deck-2.8.1.8e6a88d.factory.bin",
@@ -6630,6 +6685,61 @@
         "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
         "name": "Meshtastic Fancy UI",
         "versions": [
+            {
+                "version": "2.8.2.4c89b69",
+                "published_at": "2026-11-02",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.2.4c89b69/firmware-t-deck-tft-2.8.2.4c89b69.factory.bin",
+                "Fs": 3985536,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3920000,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3920000,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3920000,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T19:50:21Z",
+                        "etag": "W/\"a1e78c94e14f65fe76fbb88127fa7f42bcc4816bd3b2090916f840b94c7089f8\""
+                    }
+                }
+            },
             {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",

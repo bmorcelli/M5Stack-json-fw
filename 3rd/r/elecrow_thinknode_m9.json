@@ -1220,6 +1220,61 @@
         "name": "Meshtastic",
         "versions": [
             {
+                "version": "2.8.2.4c89b69",
+                "published_at": "2026-11-02",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.2.4c89b69/firmware-thinknode_m9-tft-2.8.2.4c89b69.factory.bin",
+                "Fs": 3950368,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3884832,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "elecrow-thinknode-m9",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3884832,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3884832,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-02T19:50:20Z",
+                        "etag": "W/\"bc9abce8beb755bbebcd5f41e8dd9b7124ba78cc231f3480b120a64fc775dc97\""
+                    }
+                }
+            },
+            {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",
                 "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.1.8e6a88d/firmware-thinknode_m9-tft-2.8.1.8e6a88d.factory.bin",
