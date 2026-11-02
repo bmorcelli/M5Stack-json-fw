@@ -570,5 +570,133 @@
         ],
         "esp": "s3",
         "category": "seeedstudio_wio_tracker_l2"
+    },
+    {
+        "name": "MeshPunk-dev",
+        "author": "PhilMo6",
+        "description": "MeshPunk (dev) - LVGL with Lua for T-Deck",
+        "cover": "https://raw.githubusercontent.com/PhilMo6/meshpunk/refs/heads/launcher/screenshots/1.jpg",
+        "github": "https://github.com/PhilMo6/meshpunk-dev",
+        "fid": "CFW72FHFKJD6K4IGIWKQAEI7Q576PD7A",
+        "versions": [
+            {
+                "version": "v0.5.0-dev4",
+                "published_at": "2026-10-22",
+                "file": "https://github.com/PhilMo6/meshpunk-dev/releases/download/v0.5.0-dev4/meshpunk-wio_l2-v0.5.0-dev4-launcher.bin",
+                "Fs": 12124160,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4958400,
+                "so": 5832704,
+                "ss": 6291456,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "seeedstudio-wio-tracker-l2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4958400,
+                        "partition_size": 5767168,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 5767168,
+                            "source_offset": 65536,
+                            "copy_size": 4958400,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "assets",
+                            "role": "spiffs",
+                            "size": 6291456,
+                            "source": "firmware",
+                            "source_offset": 5832704,
+                            "copy_size": 6291456,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 12161024,
+                        "analyzed_at": "2026-11-02T12:26:36Z",
+                        "etag": "\"0x8DF305B99A237CD\"",
+                        "last_modified": "Thu, 22 Oct 2026 16:43:28 GMT"
+                    }
+                }
+            },
+            {
+                "version": "v0.5.0-dev3",
+                "published_at": "2026-10-12",
+                "file": "https://github.com/PhilMo6/meshpunk-dev/releases/download/v0.5.0-dev3/meshpunk-wio_l2-v0.5.0-dev3-launcher.bin",
+                "Fs": 12124160,
+                "s": 1,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4958304,
+                "so": 5832704,
+                "ss": 6291456,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "seeedstudio-wio-tracker-l2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4958304,
+                        "partition_size": 5767168,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 5767168,
+                            "source_offset": 65536,
+                            "copy_size": 4958304,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "assets",
+                            "role": "spiffs",
+                            "size": 6291456,
+                            "source": "firmware",
+                            "source_offset": 5832704,
+                            "copy_size": 6291456,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 12161024,
+                        "analyzed_at": "2026-11-02T12:26:36Z",
+                        "etag": "\"0x8DF27FE857A505D\"",
+                        "last_modified": "Mon, 12 Oct 2026 01:17:02 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "seeedstudio_wio_tracker_l2",
+        "esp": "s3"
     }
 ]
