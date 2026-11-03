@@ -1264,8 +1264,8 @@
             }
         ],
         "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-        "category": "t-deck",
-        "esp": "s3"
+        "esp": "s3",
+        "category": "t-deck"
     },
     {
         "name": "CAIRN",
@@ -1848,6 +1848,53 @@
         "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
         "versions": [
             {
+                "version": "v6.3.3",
+                "published_at": "2026-11-03",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.3/camillia-mt-tdeck-pro-v6.3.3-ota.bin",
+                "Fs": 4008928,
+                "nb": true,
+                "ao": 0,
+                "as": 4008928,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 4008928,
+                        "partition_size": 4008928,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4008928,
+                            "source_offset": 0,
+                            "copy_size": 4008928,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T08:41:26Z",
+                        "etag": "\"0x8DF39501B7308DC\"",
+                        "last_modified": "Tue, 03 Nov 2026 02:13:53 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v6.3.0",
                 "published_at": "2026-11-01",
                 "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.0/camillia-mt-tdeck-pro-v6.3.0-ota.bin",
@@ -2267,53 +2314,6 @@
                         "analyzed_at": "2026-10-25T04:54:13Z",
                         "etag": "\"0x8DF3237DBB4C952\"",
                         "last_modified": "Sun, 25 Oct 2026 01:32:40 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v6.2.0",
-                "published_at": "2026-10-25",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.2.0/camillia-mt-tdeck-pro-v6.2.0-ota.bin",
-                "Fs": 3970032,
-                "nb": true,
-                "ao": 0,
-                "as": 3970032,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 3970032,
-                        "partition_size": 3970032,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3970032,
-                            "source_offset": 0,
-                            "copy_size": 3970032,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-26T00:39:19Z",
-                        "etag": "\"0x8DF32EC6CA360FD\"",
-                        "last_modified": "Sun, 25 Oct 2026 23:05:12 GMT"
                     }
                 }
             }
@@ -8596,6 +8596,62 @@
         "fid": "CFWSXCGEK73TCWYJ7WJ5BRLZUP3VXQFS",
         "versions": [
             {
+                "version": "v1.6.2",
+                "published_at": "2026-11-03",
+                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.6.2/saitama-t-deck-plus-1.6.2-merged.bin",
+                "Fs": 2793296,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2727760,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2727760,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2727760,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3407872,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T08:41:25Z",
+                        "etag": "\"0x8DF398494994EAE\"",
+                        "last_modified": "Tue, 03 Nov 2026 08:29:30 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.6.1",
                 "published_at": "2026-11-01",
                 "file": "https://github.com/868meshbot/Saitama/releases/download/v1.6.1/saitama-t-deck-plus-1.6.1-merged.bin",
@@ -9096,62 +9152,6 @@
                         "analyzed_at": "2026-09-25T10:30:29Z",
                         "etag": "\"0x8DF1AD3C99B3AB1\"",
                         "last_modified": "Fri, 25 Sep 2026 07:08:23 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.3.3",
-                "published_at": "2026-09-25",
-                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.3.3/saitama-t-deck-plus-1.3.3-merged.bin",
-                "Fs": 2661728,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2596192,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2596192,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 2596192,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3407872,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-09-25T15:30:30Z",
-                        "etag": "\"0x8DF1B0ED6C5B3EA\"",
-                        "last_modified": "Fri, 25 Sep 2026 14:11:05 GMT"
                     }
                 }
             }
