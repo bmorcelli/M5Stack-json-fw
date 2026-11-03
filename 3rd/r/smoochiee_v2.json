@@ -1161,5 +1161,521 @@
         ],
         "esp": "s3",
         "category": "smoochiee_v2"
+    },
+    {
+        "name": "UniGeek",
+        "author": "lshaf",
+        "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+        "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+        "github": "https://github.com/lshaf/unigeek",
+        "fid": "CFWKM5JQTHPRRKYFQ7PEFGVRQZMLH2FX",
+        "versions": [
+            {
+                "version": "1.9.0",
+                "published_at": "2026-11-01",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-diy_smoochie.bin",
+                "Fs": 3836368,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3770832,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3770832,
+                        "partition_size": 6291456,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6291456,
+                            "source_offset": 65536,
+                            "copy_size": 3770832,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 10354688,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:59Z",
+                        "etag": "\"0x8DF37CB62F630F7\"",
+                        "last_modified": "Sun, 01 Nov 2026 03:51:18 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.3",
+                "published_at": "2026-07-04",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-diy_smoochie.bin",
+                "Fs": 2742832,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2677296,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2677296,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 2677296,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13500416,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:59Z",
+                        "etag": "\"0x8DED97D66C3AADF\"",
+                        "last_modified": "Sat, 04 Jul 2026 03:36:15 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.2",
+                "published_at": "2026-05-26",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-diy_smoochie.bin",
+                "Fs": 2638544,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2573008,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2573008,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2573008,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:59Z",
+                        "etag": "\"0x8DEBACC515A541D\"",
+                        "last_modified": "Tue, 26 May 2026 02:13:03 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.1",
+                "published_at": "2026-05-17",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-diy_smoochie.bin",
+                "Fs": 2580992,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2515456,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2515456,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2515456,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:59Z",
+                        "etag": "\"0x8DEB3B7C603DFF1\"",
+                        "last_modified": "Sun, 17 May 2026 01:58:21 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.0",
+                "published_at": "2026-05-08",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-diy_smoochie.bin",
+                "Fs": 2543392,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2477856,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2477856,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2477856,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T15:00:00Z",
+                        "etag": "\"0x8DEAD1BDD9F3DD8\"",
+                        "last_modified": "Fri, 08 May 2026 16:07:12 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.2",
+                "published_at": "2026-05-01",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-diy_smoochie.bin",
+                "Fs": 2411712,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2346176,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2346176,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2346176,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T15:00:00Z",
+                        "etag": "\"0x8DEA779F6C478B0\"",
+                        "last_modified": "Fri, 01 May 2026 12:05:40 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.1",
+                "published_at": "2026-04-26",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-diy_smoochie.bin",
+                "Fs": 2372112,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2306576,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2306576,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2306576,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T15:00:00Z",
+                        "etag": "\"0x8DEA374585E8453\"",
+                        "last_modified": "Sun, 26 Apr 2026 09:15:22 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.0",
+                "published_at": "2026-04-23",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-diy_smoochie.bin",
+                "Fs": 2294336,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2228800,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2228800,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2228800,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T15:00:00Z",
+                        "etag": "\"0x8DEA129AB9614C4\"",
+                        "last_modified": "Thu, 23 Apr 2026 11:15:47 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.6.0",
+                "published_at": "2026-04-20",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.6.0/unigeek-diy_smoochie.bin",
+                "Fs": 2262288,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2196752,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "smoochiee-v2",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2196752,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2196752,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T15:00:00Z",
+                        "etag": "\"0x8DE9E82E95191A5\"",
+                        "last_modified": "Mon, 20 Apr 2026 02:17:03 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "smoochiee_v2",
+        "esp": "s3"
     }
 ]

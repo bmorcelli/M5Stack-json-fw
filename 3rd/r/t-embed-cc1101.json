@@ -3761,6 +3761,522 @@
         "category": "t-embed-cc1101"
     },
     {
+        "name": "UniGeek",
+        "author": "lshaf",
+        "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+        "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+        "github": "https://github.com/lshaf/unigeek",
+        "fid": "CFWW6PTVBN7GC52MFC2F67QVWXAVTIHK",
+        "versions": [
+            {
+                "version": "1.9.0",
+                "published_at": "2026-11-01",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-t_embed_cc1101.bin",
+                "Fs": 4271856,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4206320,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4206320,
+                        "partition_size": 6291456,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6291456,
+                            "source_offset": 65536,
+                            "copy_size": 4206320,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 10354688,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:56Z",
+                        "etag": "\"0x8DF37CBB2D56CE3\"",
+                        "last_modified": "Sun, 01 Nov 2026 03:53:32 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.3",
+                "published_at": "2026-07-04",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-t_embed_cc1101.bin",
+                "Fs": 2968160,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2902624,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2902624,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 2902624,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13500416,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:56Z",
+                        "etag": "\"0x8DED97D808BC81D\"",
+                        "last_modified": "Sat, 04 Jul 2026 03:36:58 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.2",
+                "published_at": "2026-05-26",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-t_embed_cc1101.bin",
+                "Fs": 2820880,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2755344,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2755344,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2755344,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:56Z",
+                        "etag": "\"0x8DEBACC5C3320DF\"",
+                        "last_modified": "Tue, 26 May 2026 02:13:21 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.1",
+                "published_at": "2026-05-17",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-t_embed_cc1101.bin",
+                "Fs": 2761920,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2696384,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2696384,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2696384,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:56Z",
+                        "etag": "\"0x8DEB3B7C9347141\"",
+                        "last_modified": "Sun, 17 May 2026 01:58:26 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.0",
+                "published_at": "2026-05-08",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-t_embed_cc1101.bin",
+                "Fs": 2714816,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2649280,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2649280,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2649280,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:57Z",
+                        "etag": "\"0x8DEAD1BEC92AE53\"",
+                        "last_modified": "Fri, 08 May 2026 16:07:37 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.2",
+                "published_at": "2026-05-01",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-t_embed_cc1101.bin",
+                "Fs": 2498128,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2432592,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2432592,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2432592,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:57Z",
+                        "etag": "\"0x8DEA779FC3ABE16\"",
+                        "last_modified": "Fri, 01 May 2026 12:05:49 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.1",
+                "published_at": "2026-04-26",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-t_embed_cc1101.bin",
+                "Fs": 2457920,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2392384,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2392384,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2392384,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:57Z",
+                        "etag": "\"0x8DEA3746A3733DF\"",
+                        "last_modified": "Sun, 26 Apr 2026 09:15:52 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.0",
+                "published_at": "2026-04-23",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-t_embed_cc1101.bin",
+                "Fs": 2380304,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2314768,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2314768,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2314768,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:57Z",
+                        "etag": "\"0x8DEA129AE5D37AD\"",
+                        "last_modified": "Thu, 23 Apr 2026 11:15:52 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.6.0",
+                "published_at": "2026-04-20",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.6.0/unigeek-t_embed_cc1101.bin",
+                "Fs": 2423680,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2358144,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-embed-cc1101",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2358144,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2358144,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:57Z",
+                        "etag": "\"0x8DE9E82F03EA0C6\"",
+                        "last_modified": "Mon, 20 Apr 2026 02:17:14 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-embed-cc1101",
+        "esp": "s3"
+    },
+    {
         "name": "Zhilly (CC1101)",
         "author": "sacriphanius",
         "description": "This project is an advanced AI Pentester Assistant based on the Xiaozhi-esp32 infrastructure, optimized for the LilyGO T-Embed CC1101 hardware. It combines natural language AI interaction with physical hardware testing tools, making it a versitile companion for cybersecurity research and daily technical tasks.",

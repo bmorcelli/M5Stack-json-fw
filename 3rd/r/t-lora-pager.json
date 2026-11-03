@@ -4525,6 +4525,578 @@
         "category": "t-lora-pager"
     },
     {
+        "name": "UniGeek",
+        "author": "lshaf",
+        "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+        "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+        "github": "https://github.com/lshaf/unigeek",
+        "fid": "CFWN2Z4MTVZFFZOKG2FKQX4DQOJNNFDG",
+        "versions": [
+            {
+                "version": "1.9.0",
+                "published_at": "2026-11-01",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-t_lora_pager.bin",
+                "Fs": 4008368,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3942832,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3942832,
+                        "partition_size": 6291456,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6291456,
+                            "source_offset": 65536,
+                            "copy_size": 3942832,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 10354688,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DF37CB8F1554FB\"",
+                        "last_modified": "Sun, 01 Nov 2026 03:52:32 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.3",
+                "published_at": "2026-07-04",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-t_lora_pager.bin",
+                "Fs": 2928704,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2863168,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2863168,
+                        "partition_size": 3145728,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3145728,
+                            "source_offset": 65536,
+                            "copy_size": 2863168,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13500416,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DED97D71F5F097\"",
+                        "last_modified": "Sat, 04 Jul 2026 03:36:33 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.2",
+                "published_at": "2026-05-26",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-t_lora_pager.bin",
+                "Fs": 2820256,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2754720,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2754720,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2754720,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DEBACC5F044B48\"",
+                        "last_modified": "Tue, 26 May 2026 02:13:26 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.1",
+                "published_at": "2026-05-17",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-t_lora_pager.bin",
+                "Fs": 2761248,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2695712,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2695712,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2695712,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DEB3B7CD131C10\"",
+                        "last_modified": "Sun, 17 May 2026 01:58:33 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.8.0",
+                "published_at": "2026-05-08",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-t_lora_pager.bin",
+                "Fs": 2714432,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2648896,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2648896,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2648896,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DEAD1C1747F579\"",
+                        "last_modified": "Fri, 08 May 2026 16:08:49 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.2",
+                "published_at": "2026-05-01",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-t_lora_pager.bin",
+                "Fs": 2498304,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2432768,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2432768,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2432768,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DEA77A0148A4FA\"",
+                        "last_modified": "Fri, 01 May 2026 12:05:58 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.1",
+                "published_at": "2026-04-26",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-t_lora_pager.bin",
+                "Fs": 2458432,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2392896,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2392896,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2392896,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DEA374636B1CE1\"",
+                        "last_modified": "Sun, 26 Apr 2026 09:15:41 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.7.0",
+                "published_at": "2026-04-23",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-t_lora_pager.bin",
+                "Fs": 2382608,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2317072,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2317072,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2317072,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:54Z",
+                        "etag": "\"0x8DEA129B56B642B\"",
+                        "last_modified": "Thu, 23 Apr 2026 11:16:04 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.6.0",
+                "published_at": "2026-04-20",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.6.0/unigeek-t_lora_pager.bin",
+                "Fs": 2422160,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2356624,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2356624,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2356624,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:55Z",
+                        "etag": "\"0x8DE9E82FCFA12AC\"",
+                        "last_modified": "Mon, 20 Apr 2026 02:17:36 GMT"
+                    }
+                }
+            },
+            {
+                "version": "1.5.0",
+                "published_at": "2026-04-12",
+                "file": "https://github.com/lshaf/unigeek/releases/download/1.5.0/unigeek-t_lora_pager.bin",
+                "Fs": 2316672,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2251136,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2251136,
+                        "partition_size": 2883584,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2883584,
+                            "source_offset": 65536,
+                            "copy_size": 2251136,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 13762560,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-03T14:59:55Z",
+                        "etag": "\"0x8DE985FC2411495\"",
+                        "last_modified": "Sun, 12 Apr 2026 06:50:18 GMT"
+                    }
+                }
+            }
+        ],
+        "category": "t-lora-pager",
+        "esp": "s3"
+    },
+    {
         "name": "WADAMESH",
         "author": "ALLFATHER-BV",
         "description": "MeshCore companion radio with a full touch UI for the LilyGo T-Deck \u2014 LoRa mesh DMs, channels & room servers, contacts, offline maps, and multi-language keyboards.",

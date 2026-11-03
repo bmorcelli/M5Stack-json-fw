@@ -4934,6 +4934,926 @@
     "category": "CYD"
   },
   {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFWMXFTLMR7B6NZ7S66UMONHMQUAM5R4",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-cyd_2432s028.bin",
+        "Fs": 3083424,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3017888,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3017888,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 3017888,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DF37CB56844489\"",
+            "last_modified": "Sun, 01 Nov 2026 03:50:57 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-cyd_2432s028.bin",
+        "Fs": 2872016,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2806480,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2806480,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2806480,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DED97D5FE99373\"",
+            "last_modified": "Sat, 04 Jul 2026 03:36:03 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-cyd_2432s028.bin",
+        "Fs": 2767120,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2701584,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2701584,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2701584,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DEBACC49F9A7B2\"",
+            "last_modified": "Tue, 26 May 2026 02:12:51 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-cyd_2432s028.bin",
+        "Fs": 2709168,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2643632,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2643632,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2643632,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DEB3B7C944D987\"",
+            "last_modified": "Sun, 17 May 2026 01:58:27 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-cyd_2432s028.bin",
+        "Fs": 2671808,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2606272,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2606272,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2606272,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DEAD1BD7F41D2E\"",
+            "last_modified": "Fri, 08 May 2026 16:07:03 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-cyd_2432s028.bin",
+        "Fs": 2539920,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2474384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2474384,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2474384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DEA779F2ED3EC7\"",
+            "last_modified": "Fri, 01 May 2026 12:05:34 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-cyd_2432s028.bin",
+        "Fs": 2499744,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2434208,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2434208,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2434208,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DEA374598A6822\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:24 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-cyd_2432s028.bin",
+        "Fs": 2417984,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2352448,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2352448,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2352448,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DEA129A41EA084\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:35 GMT"
+          }
+        }
+      }
+    ],
+    "category": "CYD",
+    "esp": "32"
+  },
+  {
+    "name": "UniGeek (2USB)",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFW5BDG56L44NR42PYIGLMTRZBNDQZFR",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 3083536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3018000,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3018000,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 3018000,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DF37CB7EED15B0\"",
+            "last_modified": "Sun, 01 Nov 2026 03:52:05 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 2872128,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2806592,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2806592,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2806592,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DED97D695B325D\"",
+            "last_modified": "Sat, 04 Jul 2026 03:36:19 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 2767216,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2701680,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2701680,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2701680,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:58Z",
+            "etag": "\"0x8DEBACC3077D0F2\"",
+            "last_modified": "Tue, 26 May 2026 02:12:08 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 2709280,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2643744,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2643744,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2643744,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DEB3B7C6ECEB60\"",
+            "last_modified": "Sun, 17 May 2026 01:58:23 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 2671920,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2606384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2606384,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2606384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DEAD1BE65FBD17\"",
+            "last_modified": "Fri, 08 May 2026 16:07:27 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 2540032,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2474496,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2474496,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2474496,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DEA779F0E20864\"",
+            "last_modified": "Fri, 01 May 2026 12:05:30 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 2499856,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2434320,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2434320,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2434320,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DEA3745ECC9190\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:33 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-cyd_2432s028_2usb.bin",
+        "Fs": 2418096,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2352560,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2352560,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2352560,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DEA129A67AF6B1\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:39 GMT"
+          }
+        }
+      }
+    ],
+    "category": "CYD",
+    "esp": "32"
+  },
+  {
     "name": "Weather Grrl",
     "author": "konsumer",
     "github": "https://github.com/konsumer/weathergrrl",
@@ -7729,6 +8649,466 @@
     "category": "CYD-2432W328C"
   },
   {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFWK4DVY4Z5CU2BZDPKGP4NTDGLPFSUE",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-cyd_2432w328c.bin",
+        "Fs": 3085600,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3020064,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3020064,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 3020064,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DF37CB66B303A4\"",
+            "last_modified": "Sun, 01 Nov 2026 03:51:25 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-cyd_2432w328c.bin",
+        "Fs": 2871872,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2806336,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2806336,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2806336,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DED97D5A3C9FA4\"",
+            "last_modified": "Sat, 04 Jul 2026 03:35:54 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-cyd_2432w328c.bin",
+        "Fs": 2766928,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2701392,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2701392,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2701392,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DEBACC54724A09\"",
+            "last_modified": "Tue, 26 May 2026 02:13:08 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-cyd_2432w328c.bin",
+        "Fs": 2708944,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2643408,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2643408,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2643408,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DEB3B7BB70D1EF\"",
+            "last_modified": "Sun, 17 May 2026 01:58:03 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-cyd_2432w328c.bin",
+        "Fs": 2671568,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2606032,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2606032,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2606032,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DEAD1BDEFEEEF7\"",
+            "last_modified": "Fri, 08 May 2026 16:07:15 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-cyd_2432w328c.bin",
+        "Fs": 2539712,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2474176,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2474176,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2474176,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DEA779EF8649B1\"",
+            "last_modified": "Fri, 01 May 2026 12:05:28 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-cyd_2432w328c.bin",
+        "Fs": 2499536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2434000,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2434000,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2434000,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DEA37457A09DEE\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:21 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-cyd_2432w328c.bin",
+        "Fs": 2417872,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2352336,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2352336,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2352336,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:01Z",
+            "etag": "\"0x8DEA129A56F6EE3\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:37 GMT"
+          }
+        }
+      }
+    ],
+    "category": "CYD-2432W328C",
+    "esp": "32"
+  },
+  {
     "name": "Bruce",
     "author": "pr3y",
     "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
@@ -9330,6 +10710,522 @@
     "category": "CYD-2432W328R"
   },
   {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFWJP3GO2ICPSMEOPL7BOZGLRXPTABDH",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-cyd_2432w328r.bin",
+        "Fs": 3083856,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3018320,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3018320,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 3018320,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:55Z",
+            "etag": "\"0x8DF37CB6809F6EC\"",
+            "last_modified": "Sun, 01 Nov 2026 03:51:27 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-cyd_2432w328r.bin",
+        "Fs": 2872528,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2806992,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2806992,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2806992,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:55Z",
+            "etag": "\"0x8DED97D5DDBABAF\"",
+            "last_modified": "Sat, 04 Jul 2026 03:36:00 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-cyd_2432w328r.bin",
+        "Fs": 2767648,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2702112,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2702112,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2702112,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:55Z",
+            "etag": "\"0x8DEBACC51BCC5E4\"",
+            "last_modified": "Tue, 26 May 2026 02:13:04 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-cyd_2432w328r.bin",
+        "Fs": 2709616,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2644080,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2644080,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2644080,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:55Z",
+            "etag": "\"0x8DEB3B7BDD88CD3\"",
+            "last_modified": "Sun, 17 May 2026 01:58:07 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-cyd_2432w328r.bin",
+        "Fs": 2672336,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2606800,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2606800,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2606800,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DEAD1BE2778184\"",
+            "last_modified": "Fri, 08 May 2026 16:07:20 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-cyd_2432w328r.bin",
+        "Fs": 2540416,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2474880,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2474880,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2474880,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DEA779FA81DEED\"",
+            "last_modified": "Fri, 01 May 2026 12:05:46 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-cyd_2432w328r.bin",
+        "Fs": 2500256,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2434720,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2434720,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2434720,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DEA37458443C17\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:22 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-cyd_2432w328r.bin",
+        "Fs": 2418544,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2353008,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2353008,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2353008,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DEA129A592121E\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:37 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.6.0",
+        "published_at": "2026-04-20",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.6.0/unigeek-cyd_2432w328r.bin",
+        "Fs": 2384240,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2318704,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-2432w328r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2318704,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2318704,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DE9E82E982CA80\"",
+            "last_modified": "Mon, 20 Apr 2026 02:17:03 GMT"
+          }
+        }
+      }
+    ],
+    "category": "CYD-2432W328R",
+    "esp": "32"
+  },
+  {
     "name": "Bruce",
     "author": "pr3y",
     "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
@@ -10075,6 +11971,466 @@
     "category": "CYD-3248S035C"
   },
   {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFWJALCN7US7LHSX7JZMKBKTLA7DYJFY",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-cyd_3248s035c.bin",
+        "Fs": 3091296,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3025760,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3025760,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 3025760,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DF37CB37E3F8F9\"",
+            "last_modified": "Sun, 01 Nov 2026 03:50:06 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-cyd_3248s035c.bin",
+        "Fs": 2877632,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2812096,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2812096,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2812096,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DED97D67F006FE\"",
+            "last_modified": "Sat, 04 Jul 2026 03:36:17 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-cyd_3248s035c.bin",
+        "Fs": 2772496,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2706960,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2706960,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2706960,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DEBACC492F4C1E\"",
+            "last_modified": "Tue, 26 May 2026 02:12:49 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-cyd_3248s035c.bin",
+        "Fs": 2714640,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2649104,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2649104,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2649104,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DEB3B7CDDE87A8\"",
+            "last_modified": "Sun, 17 May 2026 01:58:34 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-cyd_3248s035c.bin",
+        "Fs": 2677312,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2611776,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2611776,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2611776,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DEAD1BE3AF3E3E\"",
+            "last_modified": "Fri, 08 May 2026 16:07:22 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-cyd_3248s035c.bin",
+        "Fs": 2545216,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2479680,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2479680,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2479680,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DEA779FC3E3C9D\"",
+            "last_modified": "Fri, 01 May 2026 12:05:49 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-cyd_3248s035c.bin",
+        "Fs": 2505184,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2439648,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2439648,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2439648,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DEA37466B4BFAE\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:46 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-cyd_3248s035c.bin",
+        "Fs": 2423520,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2357984,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035c",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2357984,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2357984,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:53Z",
+            "etag": "\"0x8DEA129A79147D9\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:41 GMT"
+          }
+        }
+      }
+    ],
+    "category": "CYD-3248S035C",
+    "esp": "32"
+  },
+  {
     "name": "Bruce",
     "author": "pr3y",
     "description": "VISIT https://bruce.computer\nCHECK OUR GITHUB! supporting CC1101 and NRF24\nhttps://github.com/BruceDevices/firmware\nWiFi - BLE - RFID - RF - GPS - FM - NRF24 - Connect - Others\n### Our wiki: https://github.com/BruceDevices/bruce/wiki ### Discord: https://discord.gg/WJ9XF9czVT",
@@ -10815,6 +13171,466 @@
     ],
     "esp": "32",
     "category": "CYD-3248S035R"
+  },
+  {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFW3FX43UXBTDKUNRDKH77HZ7A3JRRJR",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-cyd_3248s035r.bin",
+        "Fs": 3083296,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3017760,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3017760,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 3017760,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DF37CB6EC5A7BF\"",
+            "last_modified": "Sun, 01 Nov 2026 03:51:38 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-cyd_3248s035r.bin",
+        "Fs": 2871888,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2806352,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2806352,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2806352,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DED97D5B9BE309\"",
+            "last_modified": "Sat, 04 Jul 2026 03:35:56 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-cyd_3248s035r.bin",
+        "Fs": 2766896,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2701360,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2701360,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2701360,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DEBACC4E112554\"",
+            "last_modified": "Tue, 26 May 2026 02:12:57 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-cyd_3248s035r.bin",
+        "Fs": 2708960,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2643424,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2643424,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2643424,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DEB3B7C634CAFE\"",
+            "last_modified": "Sun, 17 May 2026 01:58:21 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-cyd_3248s035r.bin",
+        "Fs": 2671680,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2606144,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2606144,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2606144,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DEAD1BDC856EAC\"",
+            "last_modified": "Fri, 08 May 2026 16:07:10 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-cyd_3248s035r.bin",
+        "Fs": 2539664,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2474128,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2474128,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2474128,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DEA779FA47D660\"",
+            "last_modified": "Fri, 01 May 2026 12:05:46 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-cyd_3248s035r.bin",
+        "Fs": 2499536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2434000,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2434000,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2434000,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DEA3745B0DF448\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:27 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-cyd_3248s035r.bin",
+        "Fs": 2417776,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2352240,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cyd-3248s035r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2352240,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2352240,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1179648,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:02Z",
+            "etag": "\"0x8DEA129A7B9D7E0\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:41 GMT"
+          }
+        }
+      }
+    ],
+    "category": "CYD-3248S035R",
+    "esp": "32"
   },
   {
     "name": "Bruce Firmware (BETA)",
@@ -59897,6 +62713,522 @@
     "category": "smoochiee_v2"
   },
   {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFWKM5JQTHPRRKYFQ7PEFGVRQZMLH2FX",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-diy_smoochie.bin",
+        "Fs": 3836368,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3770832,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3770832,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3770832,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 10354688,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DF37CB62F630F7\"",
+            "last_modified": "Sun, 01 Nov 2026 03:51:18 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-diy_smoochie.bin",
+        "Fs": 2742832,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2677296,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2677296,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2677296,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13500416,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DED97D66C3AADF\"",
+            "last_modified": "Sat, 04 Jul 2026 03:36:15 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-diy_smoochie.bin",
+        "Fs": 2638544,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2573008,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2573008,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2573008,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DEBACC515A541D\"",
+            "last_modified": "Tue, 26 May 2026 02:13:03 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-diy_smoochie.bin",
+        "Fs": 2580992,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2515456,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2515456,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2515456,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:59Z",
+            "etag": "\"0x8DEB3B7C603DFF1\"",
+            "last_modified": "Sun, 17 May 2026 01:58:21 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-diy_smoochie.bin",
+        "Fs": 2543392,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2477856,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2477856,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2477856,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:00Z",
+            "etag": "\"0x8DEAD1BDD9F3DD8\"",
+            "last_modified": "Fri, 08 May 2026 16:07:12 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-diy_smoochie.bin",
+        "Fs": 2411712,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2346176,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2346176,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2346176,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:00Z",
+            "etag": "\"0x8DEA779F6C478B0\"",
+            "last_modified": "Fri, 01 May 2026 12:05:40 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-diy_smoochie.bin",
+        "Fs": 2372112,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2306576,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2306576,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2306576,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:00Z",
+            "etag": "\"0x8DEA374585E8453\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:22 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-diy_smoochie.bin",
+        "Fs": 2294336,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2228800,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2228800,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2228800,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:00Z",
+            "etag": "\"0x8DEA129AB9614C4\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:47 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.6.0",
+        "published_at": "2026-04-20",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.6.0/unigeek-diy_smoochie.bin",
+        "Fs": 2262288,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2196752,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "smoochiee-v2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2196752,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2196752,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T15:00:00Z",
+            "etag": "\"0x8DE9E82E95191A5\"",
+            "last_modified": "Mon, 20 Apr 2026 02:17:03 GMT"
+          }
+        }
+      }
+    ],
+    "category": "smoochiee_v2",
+    "esp": "s3"
+  },
+  {
     "name": "Bruce StickCPlus2 (BETA)",
     "author": "pr3y-dev",
     "description": "Bruce is a custom firmware for the M5Stack Carduputer, designed to enhance its functionality and user experience. This beta version includes new features and improvements over the stock firmware.",
@@ -84128,6 +87460,522 @@
     "category": "t-embed-cc1101"
   },
   {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFWW6PTVBN7GC52MFC2F67QVWXAVTIHK",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-t_embed_cc1101.bin",
+        "Fs": 4271856,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4206320,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4206320,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 4206320,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 10354688,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DF37CBB2D56CE3\"",
+            "last_modified": "Sun, 01 Nov 2026 03:53:32 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-t_embed_cc1101.bin",
+        "Fs": 2968160,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2902624,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2902624,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2902624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13500416,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DED97D808BC81D\"",
+            "last_modified": "Sat, 04 Jul 2026 03:36:58 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-t_embed_cc1101.bin",
+        "Fs": 2820880,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2755344,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2755344,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2755344,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DEBACC5C3320DF\"",
+            "last_modified": "Tue, 26 May 2026 02:13:21 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-t_embed_cc1101.bin",
+        "Fs": 2761920,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2696384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2696384,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2696384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:56Z",
+            "etag": "\"0x8DEB3B7C9347141\"",
+            "last_modified": "Sun, 17 May 2026 01:58:26 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-t_embed_cc1101.bin",
+        "Fs": 2714816,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2649280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2649280,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2649280,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:57Z",
+            "etag": "\"0x8DEAD1BEC92AE53\"",
+            "last_modified": "Fri, 08 May 2026 16:07:37 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-t_embed_cc1101.bin",
+        "Fs": 2498128,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2432592,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2432592,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2432592,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:57Z",
+            "etag": "\"0x8DEA779FC3ABE16\"",
+            "last_modified": "Fri, 01 May 2026 12:05:49 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-t_embed_cc1101.bin",
+        "Fs": 2457920,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2392384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2392384,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2392384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:57Z",
+            "etag": "\"0x8DEA3746A3733DF\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:52 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-t_embed_cc1101.bin",
+        "Fs": 2380304,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2314768,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2314768,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2314768,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:57Z",
+            "etag": "\"0x8DEA129AE5D37AD\"",
+            "last_modified": "Thu, 23 Apr 2026 11:15:52 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.6.0",
+        "published_at": "2026-04-20",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.6.0/unigeek-t_embed_cc1101.bin",
+        "Fs": 2423680,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2358144,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-embed-cc1101",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2358144,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2358144,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:57Z",
+            "etag": "\"0x8DE9E82F03EA0C6\"",
+            "last_modified": "Mon, 20 Apr 2026 02:17:14 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-embed-cc1101",
+    "esp": "s3"
+  },
+  {
     "name": "Zhilly (CC1101)",
     "author": "sacriphanius",
     "description": "This project is an advanced AI Pentester Assistant based on the Xiaozhi-esp32 infrastructure, optimized for the LilyGO T-Embed CC1101 hardware. It combines natural language AI interaction with physical hardware testing tools, making it a versitile companion for cybersecurity research and daily technical tasks.",
@@ -89841,6 +93689,578 @@
     ],
     "esp": "s3",
     "category": "t-lora-pager"
+  },
+  {
+    "name": "UniGeek",
+    "author": "lshaf",
+    "description": "UniGeek is a single codebase that runs across many ESP32 handheld boards, turning each into a pocket security & RF multi-tool: WiFi attacks, Bluetooth scanning/spam, USB & BLE HID, NFC, IR, Sub-GHz (CC1101), NRF24, GPS wardriving, plus utilities and games.",
+    "cover": "https://github.com/lshaf/unigeek/raw/main/docs/img/logo.svg",
+    "github": "https://github.com/lshaf/unigeek",
+    "fid": "CFWN2Z4MTVZFFZOKG2FKQX4DQOJNNFDG",
+    "versions": [
+      {
+        "version": "1.9.0",
+        "published_at": "2026-11-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.9.0/unigeek-t_lora_pager.bin",
+        "Fs": 4008368,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3942832,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3942832,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3942832,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 10354688,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DF37CB8F1554FB\"",
+            "last_modified": "Sun, 01 Nov 2026 03:52:32 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.3",
+        "published_at": "2026-07-04",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.3/unigeek-t_lora_pager.bin",
+        "Fs": 2928704,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2863168,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2863168,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 2863168,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13500416,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DED97D71F5F097\"",
+            "last_modified": "Sat, 04 Jul 2026 03:36:33 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.2",
+        "published_at": "2026-05-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.2/unigeek-t_lora_pager.bin",
+        "Fs": 2820256,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2754720,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2754720,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2754720,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DEBACC5F044B48\"",
+            "last_modified": "Tue, 26 May 2026 02:13:26 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.1",
+        "published_at": "2026-05-17",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.1/unigeek-t_lora_pager.bin",
+        "Fs": 2761248,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2695712,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2695712,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2695712,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DEB3B7CD131C10\"",
+            "last_modified": "Sun, 17 May 2026 01:58:33 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.0",
+        "published_at": "2026-05-08",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.8.0/unigeek-t_lora_pager.bin",
+        "Fs": 2714432,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2648896,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2648896,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2648896,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DEAD1C1747F579\"",
+            "last_modified": "Fri, 08 May 2026 16:08:49 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.2",
+        "published_at": "2026-05-01",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.2/unigeek-t_lora_pager.bin",
+        "Fs": 2498304,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2432768,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2432768,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2432768,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DEA77A0148A4FA\"",
+            "last_modified": "Fri, 01 May 2026 12:05:58 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.1",
+        "published_at": "2026-04-26",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.1/unigeek-t_lora_pager.bin",
+        "Fs": 2458432,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2392896,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2392896,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2392896,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DEA374636B1CE1\"",
+            "last_modified": "Sun, 26 Apr 2026 09:15:41 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "published_at": "2026-04-23",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.7.0/unigeek-t_lora_pager.bin",
+        "Fs": 2382608,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2317072,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2317072,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2317072,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:54Z",
+            "etag": "\"0x8DEA129B56B642B\"",
+            "last_modified": "Thu, 23 Apr 2026 11:16:04 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.6.0",
+        "published_at": "2026-04-20",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.6.0/unigeek-t_lora_pager.bin",
+        "Fs": 2422160,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2356624,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2356624,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2356624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:55Z",
+            "etag": "\"0x8DE9E82FCFA12AC\"",
+            "last_modified": "Mon, 20 Apr 2026 02:17:36 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.5.0",
+        "published_at": "2026-04-12",
+        "file": "https://github.com/lshaf/unigeek/releases/download/1.5.0/unigeek-t_lora_pager.bin",
+        "Fs": 2316672,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2251136,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2251136,
+            "partition_size": 2883584,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2883584,
+              "source_offset": 65536,
+              "copy_size": 2251136,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 13762560,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-03T14:59:55Z",
+            "etag": "\"0x8DE985FC2411495\"",
+            "last_modified": "Sun, 12 Apr 2026 06:50:18 GMT"
+          }
+        }
+      }
+    ],
+    "category": "t-lora-pager",
+    "esp": "s3"
   },
   {
     "name": "WADAMESH",
