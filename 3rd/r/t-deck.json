@@ -1848,6 +1848,53 @@
         "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
         "versions": [
             {
+                "version": "v6.3.4",
+                "published_at": "2026-11-04",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.4/camillia-mt-tdeck-pro-v6.3.4-ota.bin",
+                "Fs": 4007392,
+                "nb": true,
+                "ao": 0,
+                "as": 4007392,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 4007392,
+                        "partition_size": 4007392,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4007392,
+                            "source_offset": 0,
+                            "copy_size": 4007392,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-04T17:28:33Z",
+                        "etag": "\"0x8DF3A7EA4CB9A14\"",
+                        "last_modified": "Wed, 04 Nov 2026 14:19:31 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v6.3.3",
                 "published_at": "2026-11-03",
                 "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.3/camillia-mt-tdeck-pro-v6.3.3-ota.bin",
@@ -2267,53 +2314,6 @@
                         "analyzed_at": "2026-10-27T00:55:24Z",
                         "etag": "\"0x8DF33AF932DDF8B\"",
                         "last_modified": "Mon, 26 Oct 2026 22:22:09 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v6.1.3",
-                "published_at": "2026-10-25",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.1.3/camillia-mt-tdeck-pro-v6.1.3-ota.bin",
-                "Fs": 3952480,
-                "nb": true,
-                "ao": 0,
-                "as": 3952480,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 3952480,
-                        "partition_size": 3952480,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3952480,
-                            "source_offset": 0,
-                            "copy_size": 3952480,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-25T04:54:13Z",
-                        "etag": "\"0x8DF3237DBB4C952\"",
-                        "last_modified": "Sun, 25 Oct 2026 01:32:40 GMT"
                     }
                 }
             }
@@ -4653,8 +4653,64 @@
         "fid": "CFWJGNNYZSCOSMBAXRGLMWNWFEWGIICY",
         "versions": [
             {
+                "version": "v1.7.10",
+                "published_at": "2026-11-04",
+                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.10-merged.bin",
+                "Fs": 5411744,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 5346208,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 5346208,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 5346208,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-04T17:28:33Z",
+                        "etag": "\"6aeb275e-5293a0\"",
+                        "last_modified": "Wed, 04 Nov 2026 12:38:54 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.7.9",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.9-merged.bin",
                 "Fs": 5407824,
                 "s": 0,
@@ -4710,7 +4766,7 @@
             },
             {
                 "version": "v1.7.8",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.8-merged.bin",
                 "Fs": 5406944,
                 "s": 0,
@@ -4766,7 +4822,7 @@
             },
             {
                 "version": "v1.7.6",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.6-merged.bin",
                 "Fs": 5383904,
                 "s": 0,
@@ -4822,7 +4878,7 @@
             },
             {
                 "version": "v1.7.5",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.5-merged.bin",
                 "Fs": 5387152,
                 "s": 0,
@@ -4878,7 +4934,7 @@
             },
             {
                 "version": "v1.7.4",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.4-merged.bin",
                 "Fs": 5387056,
                 "s": 0,
@@ -4934,7 +4990,7 @@
             },
             {
                 "version": "v1.7.3",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.3-merged.bin",
                 "Fs": 5358464,
                 "s": 0,
@@ -4990,7 +5046,7 @@
             },
             {
                 "version": "v1.7.2",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.2-merged.bin",
                 "Fs": 5358112,
                 "s": 0,
@@ -5046,7 +5102,7 @@
             },
             {
                 "version": "v1.7.1",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.1-merged.bin",
                 "Fs": 5363712,
                 "s": 0,
@@ -5102,7 +5158,7 @@
             },
             {
                 "version": "v1.7.0",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.0-merged.bin",
                 "Fs": 5364128,
                 "s": 0,
@@ -5153,62 +5209,6 @@
                         "analyzed_at": "2026-08-31T15:02:14Z",
                         "etag": "\"6a95642d-51d9a0\"",
                         "last_modified": "Mon, 31 Aug 2026 11:23:25 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.6.6",
-                "published_at": "2026-10-29",
-                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.6-merged.bin",
-                "Fs": 5287904,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 5222368,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 5222368,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 5222368,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-20T16:56:05Z",
-                        "etag": "\"6a872b31-50afe0\"",
-                        "last_modified": "Thu, 20 Aug 2026 16:28:33 GMT"
                     }
                 }
             }

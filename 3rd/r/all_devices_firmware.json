@@ -16220,8 +16220,64 @@
     "fid": "CFWK57TG3YQYTGYBQ2FCKWFBD4WCIYCT",
     "versions": [
       {
+        "version": "v1.7.10",
+        "published_at": "2026-11-04",
+        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.10-merged.bin",
+        "Fs": 4848016,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4782480,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "elecrow-thinknode-m9",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4782480,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 4782480,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-04T17:28:32Z",
+            "etag": "\"6aeb2754-49f990\"",
+            "last_modified": "Wed, 04 Nov 2026 12:38:44 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.7.9",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.9-merged.bin",
         "Fs": 4847264,
         "s": 0,
@@ -16277,7 +16333,7 @@
       },
       {
         "version": "v1.7.8",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.8-merged.bin",
         "Fs": 4846448,
         "s": 0,
@@ -16333,7 +16389,7 @@
       },
       {
         "version": "v1.7.7",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.7-merged.bin",
         "Fs": 4832624,
         "s": 0,
@@ -16389,7 +16445,7 @@
       },
       {
         "version": "v1.7.6",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.6-merged.bin",
         "Fs": 4832352,
         "s": 0,
@@ -16445,7 +16501,7 @@
       },
       {
         "version": "v1.7.5",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.5-merged.bin",
         "Fs": 4829632,
         "s": 0,
@@ -16501,7 +16557,7 @@
       },
       {
         "version": "v1.7.4",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.4-merged.bin",
         "Fs": 4829344,
         "s": 0,
@@ -16557,7 +16613,7 @@
       },
       {
         "version": "v1.7.3",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.3-merged.bin",
         "Fs": 4807984,
         "s": 0,
@@ -16613,7 +16669,7 @@
       },
       {
         "version": "v1.7.2",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.2-merged.bin",
         "Fs": 4804448,
         "s": 0,
@@ -16669,7 +16725,7 @@
       },
       {
         "version": "v1.7.1",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.1-merged.bin",
         "Fs": 4802784,
         "s": 0,
@@ -16720,62 +16776,6 @@
             "analyzed_at": "2026-10-03T14:32:16Z",
             "etag": "\"6a9843bd-4948e0\"",
             "last_modified": "Wed, 02 Sep 2026 15:41:49 GMT"
-          }
-        }
-      },
-      {
-        "version": "v1.7.0",
-        "published_at": "2026-10-29",
-        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.0-merged.bin",
-        "Fs": 4802128,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 4736592,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "elecrow-thinknode-m9",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 4736592,
-            "partition_size": 6553600,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6553600,
-              "source_offset": 65536,
-              "copy_size": 4736592,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-10-03T14:32:16Z",
-            "etag": "\"6a956436-494650\"",
-            "last_modified": "Mon, 31 Aug 2026 11:23:34 GMT"
           }
         }
       }
@@ -53386,6 +53386,78 @@
     "fid": "CFWGK5FZCLPFM4UEKZND26ZY5KCBBSSQ",
     "versions": [
       {
+        "version": "v2.6.0",
+        "published_at": "2026-11-04",
+        "file": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake.bin",
+        "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+        "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+        "Fs": 2959616,
+        "ao": 0,
+        "as": 2959616,
+        "nb": true,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "split",
+          "target": "pancake",
+          "app": {
+            "source": "firmware",
+            "source_offset": 0,
+            "image_size": 2959616,
+            "partition_size": 3145728,
+            "flash_offset": 131072,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 0,
+              "copy_size": 2959616,
+              "required": true,
+              "source": "firmware",
+              "flash_offset": 131072
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 5111808,
+              "flash_offset": 3276800,
+              "required": true,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0
+            }
+          ],
+          "sources": {
+            "firmware": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake.bin",
+            "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+            "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake-partition-table.bin",
+            "data": null
+          },
+          "analysis": {
+            "method": "external_partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 39936,
+            "analyzed_at": "2026-11-04T17:28:33Z",
+            "etag": "W/\"dc78a92a10cd65a5630be206b68b64e4caa81afc923c35fd44ddcc232838c017\"",
+            "aux_inputs": {
+              "bootloader": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake-bootloader.bin",
+              "partitions": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.6.0/builds/MicroPython/Picoware-Pancake-partition-table.bin"
+            }
+          }
+        }
+      },
+      {
         "version": "v2.5.0",
         "published_at": "2026-10-03",
         "file": "https://github.com/jblanked/Picoware/raw/refs/tags/v2.5.0/builds/MicroPython/Picoware-Pancake.bin",
@@ -65380,6 +65452,53 @@
     "fid": "CFW3NOU2GLN4MURBF3JHDQOPNJNRJ2O3",
     "versions": [
       {
+        "version": "v6.3.4",
+        "published_at": "2026-11-04",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.4/camillia-mt-tdeck-pro-v6.3.4-ota.bin",
+        "Fs": 4007392,
+        "nb": true,
+        "ao": 0,
+        "as": 4007392,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 0,
+            "image_size": 4007392,
+            "partition_size": 4007392,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4007392,
+              "source_offset": 0,
+              "copy_size": 4007392,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-04T17:28:33Z",
+            "etag": "\"0x8DF3A7EA4CB9A14\"",
+            "last_modified": "Wed, 04 Nov 2026 14:19:31 GMT"
+          }
+        }
+      },
+      {
         "version": "v6.3.3",
         "published_at": "2026-11-03",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.3/camillia-mt-tdeck-pro-v6.3.3-ota.bin",
@@ -65799,53 +65918,6 @@
             "analyzed_at": "2026-10-27T00:55:24Z",
             "etag": "\"0x8DF33AF932DDF8B\"",
             "last_modified": "Mon, 26 Oct 2026 22:22:09 GMT"
-          }
-        }
-      },
-      {
-        "version": "v6.1.3",
-        "published_at": "2026-10-25",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v6.1.3/camillia-mt-tdeck-pro-v6.1.3-ota.bin",
-        "Fs": 3952480,
-        "nb": true,
-        "ao": 0,
-        "as": 3952480,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 0,
-            "image_size": 3952480,
-            "partition_size": 3952480,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 3952480,
-              "source_offset": 0,
-              "copy_size": 3952480,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-10-25T04:54:13Z",
-            "etag": "\"0x8DF3237DBB4C952\"",
-            "last_modified": "Sun, 25 Oct 2026 01:32:40 GMT"
           }
         }
       }
@@ -68185,8 +68257,64 @@
     "fid": "CFWJGNNYZSCOSMBAXRGLMWNWFEWGIICY",
     "versions": [
       {
+        "version": "v1.7.10",
+        "published_at": "2026-11-04",
+        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.10-merged.bin",
+        "Fs": 5411744,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5346208,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5346208,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5346208,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-04T17:28:33Z",
+            "etag": "\"6aeb275e-5293a0\"",
+            "last_modified": "Wed, 04 Nov 2026 12:38:54 GMT"
+          }
+        }
+      },
+      {
         "version": "v1.7.9",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.9-merged.bin",
         "Fs": 5407824,
         "s": 0,
@@ -68242,7 +68370,7 @@
       },
       {
         "version": "v1.7.8",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.8-merged.bin",
         "Fs": 5406944,
         "s": 0,
@@ -68298,7 +68426,7 @@
       },
       {
         "version": "v1.7.6",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.6-merged.bin",
         "Fs": 5383904,
         "s": 0,
@@ -68354,7 +68482,7 @@
       },
       {
         "version": "v1.7.5",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.5-merged.bin",
         "Fs": 5387152,
         "s": 0,
@@ -68410,7 +68538,7 @@
       },
       {
         "version": "v1.7.4",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.4-merged.bin",
         "Fs": 5387056,
         "s": 0,
@@ -68466,7 +68594,7 @@
       },
       {
         "version": "v1.7.3",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.3-merged.bin",
         "Fs": 5358464,
         "s": 0,
@@ -68522,7 +68650,7 @@
       },
       {
         "version": "v1.7.2",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.2-merged.bin",
         "Fs": 5358112,
         "s": 0,
@@ -68578,7 +68706,7 @@
       },
       {
         "version": "v1.7.1",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.1-merged.bin",
         "Fs": 5363712,
         "s": 0,
@@ -68634,7 +68762,7 @@
       },
       {
         "version": "v1.7.0",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.7.0-merged.bin",
         "Fs": 5364128,
         "s": 0,
@@ -68685,62 +68813,6 @@
             "analyzed_at": "2026-08-31T15:02:14Z",
             "etag": "\"6a95642d-51d9a0\"",
             "last_modified": "Mon, 31 Aug 2026 11:23:25 GMT"
-          }
-        }
-      },
-      {
-        "version": "v1.6.6",
-        "published_at": "2026-10-29",
-        "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDeck-1.6.6-merged.bin",
-        "Fs": 5287904,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 5222368,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 5222368,
-            "partition_size": 6553600,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6553600,
-              "source_offset": 65536,
-              "copy_size": 5222368,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-20T16:56:05Z",
-            "etag": "\"6a872b31-50afe0\"",
-            "last_modified": "Thu, 20 Aug 2026 16:28:33 GMT"
           }
         }
       }
@@ -79836,7 +79908,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-1.0.1-merged.bin",
         "Fs": 10732848,
         "s": 0,
@@ -79892,7 +79964,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-merged.bin",
         "Fs": 10600336,
         "s": 0,
@@ -79960,7 +80032,7 @@
     "versions": [
       {
         "version": "v1.0.1",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TDisplay-P4-LCD-1.0.1-merged.bin",
         "Fs": 10749168,
         "s": 0,
@@ -80016,7 +80088,7 @@
       },
       {
         "version": "v1.0.0",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-V1.0.0-Tdisplay-p4-LCD-merged.bin",
         "Fs": 10616224,
         "s": 0,
@@ -90087,6 +90159,53 @@
     "fid": "CFWS6ZPJ4PT77ROTEHJCTVQGGVB3M6XO",
     "versions": [
       {
+        "version": "v6.3.4",
+        "published_at": "2026-11-04",
+        "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.4/camillia-mt-tlora-pager-tft-v6.3.4-ota.bin",
+        "Fs": 4304240,
+        "nb": true,
+        "ao": 0,
+        "as": 4304240,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 0,
+            "image_size": 4304240,
+            "partition_size": 4304240,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4304240,
+              "source_offset": 0,
+              "copy_size": 4304240,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-04T17:28:32Z",
+            "etag": "\"0x8DF3A7EA5BB1BD4\"",
+            "last_modified": "Wed, 04 Nov 2026 14:19:33 GMT"
+          }
+        }
+      },
+      {
         "version": "v6.3.3",
         "published_at": "2026-11-03",
         "file": "https://github.com/oumike/camillia-mt/releases/download/v6.3.3/camillia-mt-tlora-pager-tft-v6.3.3-ota.bin",
@@ -90506,53 +90625,6 @@
             "analyzed_at": "2026-10-27T00:55:25Z",
             "etag": "\"0x8DF33AF93DC6A1D\"",
             "last_modified": "Mon, 26 Oct 2026 22:22:10 GMT"
-          }
-        }
-      },
-      {
-        "version": "v6.1.3",
-        "published_at": "2026-10-25",
-        "file": "https://github.com/oumike/camillia-mt/releases/download/v6.1.3/camillia-mt-tlora-pager-tft-v6.1.3-ota.bin",
-        "Fs": 4207040,
-        "nb": true,
-        "ao": 0,
-        "as": 4207040,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 0,
-            "image_size": 4207040,
-            "partition_size": 4207040,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4207040,
-              "source_offset": 0,
-              "copy_size": 4207040,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-10-25T04:54:14Z",
-            "etag": "\"0x8DF3237DC27BCF6\"",
-            "last_modified": "Sun, 25 Oct 2026 01:32:40 GMT"
           }
         }
       }
@@ -91216,7 +91288,7 @@
     "versions": [
       {
         "version": "v1.3.8",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.8-merged.bin",
         "Fs": 2628624,
         "s": 0,
@@ -91272,7 +91344,7 @@
       },
       {
         "version": "v1.3.6",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.6-merged.bin",
         "Fs": 2607168,
         "s": 0,
@@ -91328,7 +91400,7 @@
       },
       {
         "version": "v1.3.5",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.5-merged.bin",
         "Fs": 2601920,
         "s": 0,
@@ -91384,7 +91456,7 @@
       },
       {
         "version": "v1.3.4",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.4-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -91440,7 +91512,7 @@
       },
       {
         "version": "v1.3.3",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.3-merged.bin",
         "Fs": 2604992,
         "s": 0,
@@ -91496,7 +91568,7 @@
       },
       {
         "version": "v1.3.2",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.2-merged.bin",
         "Fs": 2609584,
         "s": 0,
@@ -91552,7 +91624,7 @@
       },
       {
         "version": "v1.3.1",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.1-merged.bin",
         "Fs": 2617424,
         "s": 0,
@@ -91608,7 +91680,7 @@
       },
       {
         "version": "v1.3.0",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.3.0-merged.bin",
         "Fs": 2612784,
         "s": 0,
@@ -91664,7 +91736,7 @@
       },
       {
         "version": "v1.2.0",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.2.0-merged.bin",
         "Fs": 2590928,
         "s": 0,
@@ -91720,7 +91792,7 @@
       },
       {
         "version": "v1.1.8",
-        "published_at": "2026-10-29",
+        "published_at": "2026-11-04",
         "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-TPager-1.1.8-merged.bin",
         "Fs": 2576880,
         "s": 0,

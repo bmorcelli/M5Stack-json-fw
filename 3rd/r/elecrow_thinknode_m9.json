@@ -648,8 +648,64 @@
         "fid": "CFWK57TG3YQYTGYBQ2FCKWFBD4WCIYCT",
         "versions": [
             {
+                "version": "v1.7.10",
+                "published_at": "2026-11-04",
+                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.10-merged.bin",
+                "Fs": 4848016,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4782480,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "elecrow-thinknode-m9",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4782480,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 4782480,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-04T17:28:32Z",
+                        "etag": "\"6aeb2754-49f990\"",
+                        "last_modified": "Wed, 04 Nov 2026 12:38:44 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.7.9",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.9-merged.bin",
                 "Fs": 4847264,
                 "s": 0,
@@ -705,7 +761,7 @@
             },
             {
                 "version": "v1.7.8",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.8-merged.bin",
                 "Fs": 4846448,
                 "s": 0,
@@ -761,7 +817,7 @@
             },
             {
                 "version": "v1.7.7",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.7-merged.bin",
                 "Fs": 4832624,
                 "s": 0,
@@ -817,7 +873,7 @@
             },
             {
                 "version": "v1.7.6",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.6-merged.bin",
                 "Fs": 4832352,
                 "s": 0,
@@ -873,7 +929,7 @@
             },
             {
                 "version": "v1.7.5",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.5-merged.bin",
                 "Fs": 4829632,
                 "s": 0,
@@ -929,7 +985,7 @@
             },
             {
                 "version": "v1.7.4",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.4-merged.bin",
                 "Fs": 4829344,
                 "s": 0,
@@ -985,7 +1041,7 @@
             },
             {
                 "version": "v1.7.3",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.3-merged.bin",
                 "Fs": 4807984,
                 "s": 0,
@@ -1041,7 +1097,7 @@
             },
             {
                 "version": "v1.7.2",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.2-merged.bin",
                 "Fs": 4804448,
                 "s": 0,
@@ -1097,7 +1153,7 @@
             },
             {
                 "version": "v1.7.1",
-                "published_at": "2026-10-29",
+                "published_at": "2026-11-04",
                 "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.1-merged.bin",
                 "Fs": 4802784,
                 "s": 0,
@@ -1148,62 +1204,6 @@
                         "analyzed_at": "2026-10-03T14:32:16Z",
                         "etag": "\"6a9843bd-4948e0\"",
                         "last_modified": "Wed, 02 Sep 2026 15:41:49 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.7.0",
-                "published_at": "2026-10-29",
-                "file": "https://meshcore.co.uk/configurator/firmware/MeshOS-M9-1.7.0-merged.bin",
-                "Fs": 4802128,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 4736592,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "elecrow-thinknode-m9",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 4736592,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 4736592,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-03T14:32:16Z",
-                        "etag": "\"6a956436-494650\"",
-                        "last_modified": "Mon, 31 Aug 2026 11:23:34 GMT"
                     }
                 }
             }
