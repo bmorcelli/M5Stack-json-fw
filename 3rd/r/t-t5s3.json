@@ -8,6 +8,61 @@
         "name": "Meshtastic (v1.0)",
         "versions": [
             {
+                "version": "2.8.2.d5f1619",
+                "published_at": "2026-11-04",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.8.2.d5f1619/firmware-t5s3-epaper-v1-2.8.2.d5f1619.factory.bin",
+                "Fs": 2447408,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2381872,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-t5s3",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2381872,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2381872,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-04T02:11:23Z",
+                        "etag": "W/\"cc32f42b3a1e252930aa7ee8ce858611e492db939d00ad57138753dc1aa9d930\""
+                    }
+                }
+            },
+            {
                 "version": "2.8.2.4c89b69",
                 "published_at": "2026-11-02",
                 "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.2.4c89b69/firmware-t5s3-epaper-v1-2.8.2.4c89b69.factory.bin",
@@ -65,7 +120,7 @@
             {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.1.8e6a88d/firmware-t5s3-epaper-v1-2.8.1.8e6a88d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.8.1.8e6a88d/firmware-t5s3-epaper-v1-2.8.1.8e6a88d.factory.bin",
                 "Fs": 2445488,
                 "s": 0,
                 "f": 0,
@@ -112,7 +167,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"e2e1b3fe8f986d489c2c7a8d1a5e6ed521e23dc2cc021598e1ed757c043bc26a\""
                     }
                 }
@@ -120,7 +175,7 @@
             {
                 "version": "2.7.26.54e0d8d",
                 "published_at": "2026-06-24",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v1-2.7.26.54e0d8d.factory.bin",
                 "Fs": 2141024,
                 "s": 0,
                 "f": 0,
@@ -167,7 +222,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"ca76103b62819bf25fbd8c05226e655cdce010606ec701344993bf0fe81723a6\""
                     }
                 }
@@ -175,7 +230,7 @@
             {
                 "version": "2.7.25.104df5f",
                 "published_at": "2026-06-10",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.25.104df5f/firmware-t5s3-epaper-v1-2.7.25.104df5f.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.25.104df5f/firmware-t5s3-epaper-v1-2.7.25.104df5f.factory.bin",
                 "Fs": 2141104,
                 "s": 0,
                 "f": 0,
@@ -222,7 +277,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"87ef2ec58ddfe5c1fa91191cf786316773c7da00ed905170f9b7508d1eb4c966\""
                     }
                 }
@@ -230,7 +285,7 @@
             {
                 "version": "2.7.24.472b14c",
                 "published_at": "2026-05-23",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.24.472b14c/firmware-t5s3-epaper-v1-2.7.24.472b14c.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.24.472b14c/firmware-t5s3-epaper-v1-2.7.24.472b14c.factory.bin",
                 "Fs": 2132688,
                 "s": 0,
                 "f": 0,
@@ -277,7 +332,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"27bdd1e6186a50d3eb5bd6032bb18ea4b77c956599d1e9cd76af7bd8e0d6d103\""
                     }
                 }
@@ -285,7 +340,7 @@
             {
                 "version": "2.7.23.b246bcd",
                 "published_at": "2026-05-08",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.23.b246bcd/firmware-t5s3-epaper-v1-2.7.23.b246bcd.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.23.b246bcd/firmware-t5s3-epaper-v1-2.7.23.b246bcd.factory.bin",
                 "Fs": 2131856,
                 "s": 0,
                 "f": 0,
@@ -332,7 +387,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"01b22a330d94804aee781283562262980fb54c2230fffaec23880f87e7683487\""
                     }
                 }
@@ -350,6 +405,61 @@
         "description": "An open source, off-grid, decentralized mesh network built to run on affordable, low-power devices. No cell towers. No internet. Just pure peer-to-peer connectivity.",
         "name": "Meshtastic (v1.1)",
         "versions": [
+            {
+                "version": "2.8.2.d5f1619",
+                "published_at": "2026-11-04",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.8.2.d5f1619/firmware-t5s3-epaper-v2-2.8.2.d5f1619.factory.bin",
+                "Fs": 2449376,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2383840,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-t5s3",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2383840,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2383840,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-04T02:11:23Z",
+                        "etag": "W/\"63c46263f24ee3ed726cc72e45dd7ea339c5e2f91d27ed892a1b132acd724d5f\""
+                    }
+                }
+            },
             {
                 "version": "2.8.2.4c89b69",
                 "published_at": "2026-11-02",
@@ -408,7 +518,7 @@
             {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.1.8e6a88d/firmware-t5s3-epaper-v2-2.8.1.8e6a88d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.8.1.8e6a88d/firmware-t5s3-epaper-v2-2.8.1.8e6a88d.factory.bin",
                 "Fs": 2448176,
                 "s": 0,
                 "f": 0,
@@ -455,7 +565,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"17537e6041e248b3933dca2eb1747dc5faa26ce5da1b7845cc33b61c60f87f83\""
                     }
                 }
@@ -463,7 +573,7 @@
             {
                 "version": "2.7.26.54e0d8d",
                 "published_at": "2026-06-24",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.26.54e0d8d/firmware-t5s3-epaper-v2-2.7.26.54e0d8d.factory.bin",
                 "Fs": 2140880,
                 "s": 0,
                 "f": 0,
@@ -510,7 +620,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"e3da473db16d2acb20815ed70d1117b24b9d6a3f21ffcd0477a1767887d4f233\""
                     }
                 }
@@ -518,7 +628,7 @@
             {
                 "version": "2.7.25.104df5f",
                 "published_at": "2026-06-10",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.25.104df5f/firmware-t5s3-epaper-v2-2.7.25.104df5f.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.25.104df5f/firmware-t5s3-epaper-v2-2.7.25.104df5f.factory.bin",
                 "Fs": 2140512,
                 "s": 0,
                 "f": 0,
@@ -565,7 +675,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"911999248b2a7da8ee7a0d8b5d6f360f3fc58a44a40eebeecbdac9228650c250\""
                     }
                 }
@@ -573,7 +683,7 @@
             {
                 "version": "2.7.24.472b14c",
                 "published_at": "2026-05-23",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.24.472b14c/firmware-t5s3-epaper-v2-2.7.24.472b14c.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.24.472b14c/firmware-t5s3-epaper-v2-2.7.24.472b14c.factory.bin",
                 "Fs": 2132560,
                 "s": 0,
                 "f": 0,
@@ -620,7 +730,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"29439650fddd7fced0ee7ef38a3424fd398dc99a5733ab28f8a9a676eef2146c\""
                     }
                 }
@@ -628,7 +738,7 @@
             {
                 "version": "2.7.23.b246bcd",
                 "published_at": "2026-05-08",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.7.23.b246bcd/firmware-t5s3-epaper-v2-2.7.23.b246bcd.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.7.23.b246bcd/firmware-t5s3-epaper-v2-2.7.23.b246bcd.factory.bin",
                 "Fs": 2131776,
                 "s": 0,
                 "f": 0,
@@ -675,7 +785,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:45Z",
+                        "analyzed_at": "2026-11-04T02:11:23Z",
                         "etag": "W/\"473ba9880b695b2add7a6117cbb3114606c6dff5dce7d8d6056f691525f18e97\""
                     }
                 }

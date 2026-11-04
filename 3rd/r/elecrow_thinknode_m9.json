@@ -8,6 +8,62 @@
         "fid": "CFW4AY4WXB6G7LLCPSUHC5ICGP5UJT7Z",
         "versions": [
             {
+                "version": "cairn-v127",
+                "published_at": "2026-11-03",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v127/MeshCore-ThinkNodeM9-Cairn127-2026-11-03-full.bin",
+                "Fs": 4026128,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3960592,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "elecrow-thinknode-m9",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3960592,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3960592,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-04T02:11:22Z",
+                        "etag": "\"0x8DF39FD23F52EE8\"",
+                        "last_modified": "Tue, 03 Nov 2026 22:52:30 GMT"
+                    }
+                }
+            },
+            {
                 "version": "cairn-v126",
                 "published_at": "2026-11-02",
                 "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v126/MeshCore-ThinkNodeM9-Cairn126-2026-11-01-full.bin",
@@ -508,62 +564,6 @@
                         "analyzed_at": "2026-10-19T19:45:09Z",
                         "etag": "\"0x8DF2AF6A486EB7C\"",
                         "last_modified": "Thu, 15 Oct 2026 19:58:12 GMT"
-                    }
-                }
-            },
-            {
-                "version": "cairn-v116",
-                "published_at": "2026-10-14",
-                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v116/MeshCore-ThinkNodeM9-Cairn116-2026-10-14-full.bin",
-                "Fs": 3592496,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3526960,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "elecrow-thinknode-m9",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3526960,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 3526960,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-19T19:45:09Z",
-                        "etag": "\"0x8DF2A2614FFBF4A\"",
-                        "last_modified": "Wed, 14 Oct 2026 19:05:15 GMT"
                     }
                 }
             }
@@ -1220,6 +1220,61 @@
         "name": "Meshtastic",
         "versions": [
             {
+                "version": "2.8.2.d5f1619",
+                "published_at": "2026-11-04",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.8.2.d5f1619/firmware-thinknode_m9-tft-2.8.2.d5f1619.factory.bin",
+                "Fs": 3950080,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 3884544,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "elecrow-thinknode-m9",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 3884544,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 3884544,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-04T02:11:22Z",
+                        "etag": "W/\"26c10045eec8045b80bf314314d6625e88648188e3cd9a2c2c926506eb307d17\""
+                    }
+                }
+            },
+            {
                 "version": "2.8.2.4c89b69",
                 "published_at": "2026-11-02",
                 "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.2.4c89b69/firmware-thinknode_m9-tft-2.8.2.4c89b69.factory.bin",
@@ -1277,7 +1332,7 @@
             {
                 "version": "2.8.1.8e6a88d",
                 "published_at": "2026-10-01",
-                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/d69cd8401f30b199ce566d84d3d31edfa1d5512a/firmware-2.8.1.8e6a88d/firmware-thinknode_m9-tft-2.8.1.8e6a88d.factory.bin",
+                "file": "https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/b432e25654c932262d44ed812153704264449ea8/firmware-2.8.1.8e6a88d/firmware-thinknode_m9-tft-2.8.1.8e6a88d.factory.bin",
                 "Fs": 3949312,
                 "s": 0,
                 "f": 0,
@@ -1324,7 +1379,7 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T02:21:42Z",
+                        "analyzed_at": "2026-11-04T02:11:22Z",
                         "etag": "W/\"97f924223cc0c41dcc0ac0aa0af5d4a4fe8e6d36de47c8fc5830a4f097422a50\""
                     }
                 }
