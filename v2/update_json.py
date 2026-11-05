@@ -22,6 +22,20 @@ from script.firmware_manifest import (
 all_device_firmware = "./v2/all_device_firmware.json"
 all_device_firmware_old = "./v2/all_device_firmware.old.json"
 
+# Campos que mudam sozinhos na API e nao justificam um commit.
+VOLATILE_ITEM_FIELDS = {"download"}
+
+
+def catalog_fingerprint(items):
+    return json.dumps(
+        [
+            {key: value for key, value in item.items() if key not in VOLATILE_ITEM_FIELDS}
+            for item in items
+        ],
+        sort_keys=True,
+    )
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--force-download-all",
@@ -134,16 +148,10 @@ if tasks:
         for err in result["errors"]:
             print(f"  {err['item']} - {err['version']}: {err['error']}", flush=True)
 
-previous_final = ""
-if os.path.exists(all_device_firmware_old):
-    with open(all_device_firmware_old, "r", encoding="utf-8") as old_file:
-        previous_final = old_file.read()
-
-final_json = json.dumps(data, indent=2)
-data_changed = previous_final != final_json
+data_changed = catalog_fingerprint(old_data) != catalog_fingerprint(data)
 
 with open(all_device_firmware, "w", encoding="utf-8") as final_file:
-    final_file.write(final_json)
+    final_file.write(json.dumps(data, indent=2))
 
 github_env_path = os.environ.get("GITHUB_ENV")
 if github_env_path:
