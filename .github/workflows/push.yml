@@ -8,6 +8,11 @@ on:
         required: false
         default: false
         type: boolean
+      scheduled:
+        description: "Disparo externo: segue as regras do schedule"
+        required: false
+        default: false
+        type: boolean
   push:
     branches: 
       - main
@@ -71,7 +76,7 @@ jobs:
       run: |
         # Checks for firmware updates and writes new JSON files
         # Run on push/workflow_dispatch always, or on schedule only between 00:00 and 00:14
-        if [ "${{ github.event_name }}" != "schedule" ] || [ "$(date +%H%M)" -lt 0015 ]; then
+        if [ "${{ github.event_name }}" != "schedule" ] && [ "${{ inputs.scheduled }}" != "true" ] || [ "$(date +%H%M)" -lt 0015 ]; then
           python ./3rd/check_repo_updates.py
         fi
         python ./3rd/bruce_beta.py
