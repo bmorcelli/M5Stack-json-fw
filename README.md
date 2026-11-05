@@ -1,6 +1,12 @@
 # M5Stack-json-fw
 This repo analises the M5Burner list of firmwares, filters, simplifies and keep the json to be used in one of my projects
 
+## Atualização do catálogo M5Burner
+
+Execute `python v3/update_json.py` para coletar a nova API pública em
+`v3/all_device_firmware.json` e atualizar o catálogo compatível em
+`v2/all_device_firmware.json`. Veja o [modelo de dados e as opções](v3/README.md).
+
 ## Como executar `starred_list.html`
 
 Como a página lê arquivos JSON locais por meio de `fetch`, é necessário servi-la por um pequeno servidor HTTP em vez de abrir o arquivo diretamente no navegador (`file://`). Siga os passos abaixo:

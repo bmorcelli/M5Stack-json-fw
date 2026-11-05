@@ -89,10 +89,10 @@ jobs:
         # the next script writes FILES_ADDED checking m5burner updates
         if [ "$FORCE_DOWNLOAD_ALL" = "true" ]; then
           python ./3rd/create_json.py --force-download-all --max-workers=8
-          python ./v2/update_json.py --force-download-all --max-workers=8
+          python ./v3/update_json.py --force-download-all --max-workers=8
         else
           python ./3rd/create_json.py
-          python ./v2/update_json.py
+          python ./v3/update_json.py
         fi
        
     - name: Run Python script
