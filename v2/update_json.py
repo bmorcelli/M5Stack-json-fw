@@ -151,7 +151,7 @@ if tasks:
 data_changed = catalog_fingerprint(old_data) != catalog_fingerprint(data)
 
 with open(all_device_firmware, "w", encoding="utf-8") as final_file:
-    final_file.write(json.dumps(data, indent=2))
+    final_file.write(json.dumps(data, indent=2) + "\n")
 
 github_env_path = os.environ.get("GITHUB_ENV")
 if github_env_path:
