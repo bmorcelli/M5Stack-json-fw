@@ -7558,6 +7558,80 @@
     "description_src": "1.\u8bbe\u5907\u542f\u52a8\u540e\u6839\u636e\u63d0\u793a\u8fde\u63a5AP\u8fdb\u884c\u914d\u7f51\u3002\r\n2.\u8bbf\u95ee\u5c0f\u667a\u63a7\u5236\u53f0(xiaozhi.me)\u7ed1\u5b9a\u8bbe\u5907\u3002\r\n3.\u4f7f\u7528\u5524\u9192\u8bcd \"\u4f60\u597d\u5c0f\u667a\" \u5524\u9192\u5f00\u59cb\u5bf9\u8bdd\u3002"
   },
   {
+    "_id": "2118529634514075650",
+    "fid": "2118529634514075650",
+    "name": "Atom JoyStick v1.1-test",
+    "description": "Atom Joystick v1.1-test",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2109831287573606401/2118529634514075650/2118529634518269953/cover/2118529634518269955.png",
+    "category": "atom-s3",
+    "tags": [
+      "Tools"
+    ],
+    "author": "Booolue",
+    "github": "",
+    "download": 0,
+    "versions": [
+      {
+        "version": "Initial release",
+        "version_id": "2118529634518269953",
+        "published_at": "2026-11-06",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2109831287573606401/2118529634514075650/2118529634518269953/bin/2118529634518269954.bin",
+        "Fs": 1665824,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1600288,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1600288,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1600288,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-06T07:23:40Z",
+            "etag": "\"ED424E9D6B0E8A38429A631598993D77\"",
+            "last_modified": "Fri, 06 Nov 2026 02:23:20 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000001640",
     "fid": "1897200000000001640",
     "name": "Atom Plane Tracker",
@@ -49359,7 +49433,7 @@
     ],
     "author": "Sudrien",
     "github": "https://github.com/Sudrien/defeatist-music-player-for-m5tab5",
-    "download": 49,
+    "download": 50,
     "versions": [
       {
         "version": "v0.5.1",
@@ -65031,6 +65105,69 @@
     "description_src": "\u7528 M5StickS3 \u7684\u5c0f\u5c4f\u5e55\u6f14\u793a**\u5f15\u529b\u900f\u955c\u6548\u5e94**\u7684\u4ea4\u4e92\u6559\u5b66\u5de5\u5177\u3002\n\n\u4e09\u4e2a\u6a21\u5f0f\u9012\u8fdb\u6559\u5b66\uff1a\n\n| \u6a21\u5f0f | \u540d\u79f0 | \u76ee\u7684 |\n|------|------|------|\n| 0 | **Theater** \u5267\u573a | \u7b2c\u4e00\u773c\u9707\u64bc\uff1a\u81ea\u52a8\u6f14\u793a\u5f15\u529b\u900f\u955c\uff0c\u5f69\u8272\u5f27 + \u7231\u56e0\u65af\u5766\u73af |\n| 1 | **Explore** \u63a2\u7d22 | \u52a8\u624b\u73a9\uff1a\u8c03\u8d28\u91cf\u5927\u5c0f\u3001\u5f00\u5173\u900f\u955c\u5bf9\u6bd4\"\u6709\u65e0\u5f15\u529b\" |\n| 2 | **Spacetime** \u65f6\u7a7a\u7f51\u683c | \u8bb2\u539f\u7406\uff1a3D \u7f51\u683c\u51f9\u9677\u5c55\u793a\"\u65f6\u7a7a\u50cf\u6a61\u76ae\u5e03\u4e00\u6837\u88ab\u538b\u5f2f\" |\n\n## \u64cd\u4f5c\n\n| \u64cd\u4f5c | Mode 0 (\u5267\u573a) | Mode 1 (\u63a2\u7d22) | Mode 2 (\u7f51\u683c) |\n|------|--------------|--------------|--------------|\n| **BtnA** \u77ed\u6309 | \u4e0b\u4e00\u6a21\u5f0f | \u4e0b\u4e00\u6a21\u5f0f | \u4e0b\u4e00\u6a21\u5f0f |\n| **BtnB** \u77ed\u6309 | \u53d8\u7126 (\u00d71.5/2.5/4) | \u5faa\u73af\u8d28\u91cf (0-10) | \u53d8\u7126 (\u00d71.5/2.5/4) |\n| **BtnB** \u957f\u6309 | \u2014 | **\u5f00\u5173\u900f\u955c** (\u5bf9\u6bd4!) | \u2014 |\n| **IMU \u503e\u659c** | \u65cb\u8f6c\u89c6\u89d2 | \u65cb\u8f6c\u89c6\u89d2 | \u65cb\u8f6c\u89c6\u89d2 |\n\n\nInteractive gravitational lensing demonstration for M5StickS3. Three progressive modes for teaching:\n\n0. **Theater Mode** \u2014 Auto-demo with Einstein ring, colored arcs, and glowing lens\n1. **Explore Mode** \u2014 Adjust mass (BtnB), toggle lens on/off (BtnB long) to compare\n2. **Spacetime Grid** \u2014 3D \"rubber sheet\" showing curved spacetime\n\n## Controls\n\n| Action | Mode 0 (Theater) | Mode 1 (Explore) | Mode 2 (Spacetime) |\n|--------|------------------|------------------|-------------------|\n| **BtnA** short | Next mode | Next mode | Next mode |\n| **BtnB** short | Zoom (\u00d71.5/2.5/4) | Cycle mass (0-10) | Zoom (\u00d71.5/2.5/4) |\n| **BtnB** long | \u2014 | **Toggle lens ON/OFF** | \u2014 |\n| **Tilt (IMU)** | Rotate view | Rotate view | Rotate view |"
   },
   {
+    "_id": "2118531751039565826",
+    "fid": "2118531751039565826",
+    "name": "Grok Bot MultiFace \u00b7 StopWatch",
+    "description": "13 \u79cd\u89d2\u8272\u300111 \u79cd\u989c\u8272\u300112 \u79cd\u968f\u673a\u8f6e\u6362\u8868\u60c5\u7684\u72ec\u7acb\u79bb\u7ebf\u6f14\u793a\u3002\u89e6\u6478\u63a7\u5236\u5934\u90e8\u548c\u89c6\u7ebf\uff0cIMU \u652f\u6301\u76f8\u5bf9\u59ff\u6001\u8ddf\u968f\uff0c\u65e0\u9700\u7f51\u7edc\u6216\u8d26\u53f7\u3002\n\n## \u64cd\u4f5c\n- \u5de6\u952e A \u5355\u51fb\uff1a\u5207\u6362\u89d2\u8272\uff08\u7ea6 320 ms \u5ef6\u8fdf\uff0c\u7528\u4e8e\u533a\u5206\u53cc\u51fb\uff09\u3002\n- \u53f3\u952e B \u5355\u51fb\uff1a\u5207\u6362\u989c\u8272\u3002\n- \u53cc\u51fb A\uff1a\u5c06\u5f53\u524d\u59ff\u6001\u8bbe\u4e3a IMU \u4e2d\u7acb\u4f4d\u7f6e\uff0c\u63d0\u793a\u671f\u95f4\u4fdd\u6301\u7247\u523b\u9759\u6b62\u3002\n- \u540c\u65f6\u6309\u4f4f A+B \u4e00\u79d2\uff1a\u4e5f\u53ef\u91cd\u65b0\u6821\u51c6\u3002\n- \u89e6\u6478\u6216\u62d6\u52a8\uff1a\u5934\u548c\u773c\u775b\u8ddf\u968f\u624b\u6307\uff0c\u89e6\u6478\u4f18\u5148\u4e8e IMU\u3002\n\n## 0.3.0\n\u8fd0\u884c\u65f6\u89d2\u8272\u6b63\u7acb\uff0c\u5173\u95ed\u660e\u663e\u7684\u62c9\u957f\u3001\u538b\u6241\uff1b\u5fc3\u5f62\u5e95\u90e8\u66f4\u5706\uff0c\u56db\u89d2\u661f\u51f9\u53e3\u66f4\u6d45\u3002\u4e09\u89d2\u89d2\u8272\u91c7\u7528\u5706\u9525\u66f2\u9762\uff0c\u773c\u775b\u6cbf\u66f2\u9762\u8f6c\u52a8\u5e76\u5728\u4fa7\u9762\u81ea\u7136\u906e\u6321\u3002IMU \u878d\u5408\u9640\u87ba\u4eea\u4e0e\u91cd\u529b\u65b9\u5411\uff0c\u652f\u6301\u7ad6\u76f4\u6301\u63e1\u65f6\u7684\u5de6\u53f3\u8f6c\u52a8\u3002\u76f8\u5bf9\u822a\u5411\u53ef\u80fd\u7f13\u6162\u6f02\u79fb\uff0c\u53ef\u53cc\u51fb A \u5f52\u96f6\u3002\n\n466\u00d7466 \u539f\u5206\u8fa8\u7387\u3001\u8f6e\u5ed3\u7ed8\u5236\u548c\u5c40\u90e8\u5237\u5c4f\u30020.3.0 \u5df2\u5728\u767d\u8272 TriviaPOD TP-01-A\uff0832 MB Flash / 8 MB PSRAM\uff09\u70e7\u5f55\u5e76\u5b8c\u6574\u56de\u8bfb\u9a8c\u8bc1\uff0c\u9ed8\u8ba4\u6c34\u6ef4\u8138\u7a33\u5b9a\u9636\u6bb5\u7ea6 27\u201330 FPS\uff0c\u4e2d\u4f4d\u6570 29.8 FPS\u3002\u5176\u4ed6\u89d2\u8272\u5e27\u7387\u672a\u9010\u4e00\u6d4b\u91cf\uff1b\u7269\u7406 IMU \u8ddf\u968f\u65b9\u5411\u548c\u624b\u611f\u4ecd\u5f85\u8bd5\u7528\u786e\u8ba4\u3002StopWatch C152 \u4f7f\u7528\u76f8\u540c\u677f\u7ea7\u9a71\u52a8\uff0c\u672c\u8f6e\u672a\u5728 C152 \u5b9e\u7269\u4e0a\u9a8c\u8bc1\u3002\n\n\u8fd9\u662f\u7eaf\u8868\u60c5\u6f14\u793a\uff0c\u8bf4\u8bdd\u548c\u8046\u542c\u662f\u52a8\u753b\u72b6\u6001\uff0c\u4e0d\u542b\u8bed\u97f3\u8bc6\u522b\u3001TTS \u6216\u8054\u7f51\u529f\u80fd\u3002\u91cd\u542f\u540e\u89d2\u8272\u4e0e\u989c\u8272\u56de\u5230\u9ed8\u8ba4\u503c\u3002\n\n\u5c06\u5408\u5e76 BIN \u70e7\u5f55\u5230 **0x0**\u3002\u955c\u50cf\u4f7f\u7528 16 MB Flash \u5e03\u5c40\uff0c\u4f1a\u66ff\u6362\u8986\u76d6\u8303\u56f4\u5185\u7684\u5f15\u5bfc\u3001\u5206\u533a\u3001\u914d\u7f6e\u548c\u5e94\u7528\uff0c\u8bf7\u5148\u5907\u4efd\u9700\u8981\u4fdd\u7559\u7684\u539f\u56fa\u4ef6\u4e0e\u914d\u7f6e\u3002\n\n## English\nOffline procedural avatar demo: 13 shapes, 11 colors, 12 shuffled expressions, touch-driven head/eye tracking, six-axis IMU tracking and double-A recentering. Version 0.3.0 uses upright runtime poses, fixed proportions, a rounder heart, a softer four-point star and conical eye wrapping. Full 466\u00d7466 output with partial updates. Tested on a white TriviaPOD TP-01-A; a physical StopWatch C152 was not tested in this round. This is a silent visual demo. Flash the merged BIN at 0x0 after backing up the device.\n\n## \u81f4\u8c22 / Thanks\n\u611f\u8c22 [Grok Bot \u7f51\u9875\u53c2\u8003\u5b9e\u73b0](https://grokbot.yin.wiki/index.html) \u63d0\u4f9b\u7684\u4ea4\u4e92\u4e0e\u89c6\u89c9\u53c2\u8003\uff0c\u611f\u8c22 [xAI Grok Bot](https://x.ai/bot) \u7684\u89d2\u8272\u8bbe\u8ba1\u542f\u53d1\u3002\n\nSpecial thanks to https://grokbot.yin.wiki/index.html for the visual and interaction reference. This is an independent community demo, not an official xAI product. Geometry is generated within this project; no original web player or animation assets are bundled.\n\nBuilt with ESP-IDF 5.5.1, M5Unified 0.2.29 and M5GFX 0.2.35.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/6712/2118531751039565826/2118531751043760130/cover/2118531751043760132.png",
+    "category": "stopwatch",
+    "tags": [
+      "Display & Art"
+    ],
+    "author": "zhuzhe",
+    "github": "https://github.com/zhuzhe1983/grok-bot-esp32-stopwatch",
+    "download": 1,
+    "versions": [
+      {
+        "version": "0.3.0",
+        "version_id": "2118531751043760130",
+        "published_at": "2026-11-06",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/6712/2118531751039565826/2118531751043760130/bin/2118531751043760131.bin",
+        "Fs": 647664,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 582128,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stopwatch",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 582128,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 582128,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-06T07:23:40Z",
+            "etag": "\"CD513431CE9537BE91230A224FC7BE2D\"",
+            "last_modified": "Fri, 06 Nov 2026 02:31:44 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000002712",
     "fid": "1897200000000002712",
     "name": "Groqputer UNIFIED- CUSTOM! Personality Chatbot - Whisplay Groq Companion",
@@ -75196,7 +75333,7 @@
     "_id": "2118003706700595201",
     "fid": "2118003706700595201",
     "name": "LORA Tunnel \u2014 Cardputer ADV + Cap LoRa-1262",
-    "description": "LORA Tunnel is a passive Wi-Fi, BLE and receive-only LoRa wardriving and Recon tool for **Cardputer ADV + M5Stack U214 Cap LoRa-1262**. Requires the ADV, U214 cap with antenna, and a microSD card for configuration and sessions. Original Cardputer and U201 cap are not supported by this image.\n\nFeatures include a landscape keyboard interface, physical credential entry, GNSS logging, saved SD sessions, region selection, and Recon-only custom RTTTL alerts once per detected device per session. Optional WiGLE, Wardrift and WDGWars uploads run only while capture is stopped and saved; automatic uploads are OFF by default. LoRa reception uses one profile at a time.\n\nThis is the merged **FACTORY image for address 0x0**. It replaces the installed firmware. For Bmorcelli Launcher, use the separate **LAUNCHER-APP.bin** from the GitHub release instead. Both files contain the same application.\n\nPublic beta: source, dependency/relink materials, licenses, SD setup, checksums and controls/recovery instructions are available on GitHub. Software sleep does not disconnect the battery or cut power to the cap GNSS receiver.",
+    "description": "## LORA Tunnel\n\nA standalone wardriving recorder for **M5Stack Cardputer ADV + Cap LoRa-1262 (U214)**. Observe 2.4 GHz Wi-Fi, BLE advertisements and receive-only LoRa traffic, attach available receiver time and GNSS location, and save original sessions to microSD. A separate passive Recon mode groups supported Wi-Fi/BLE indicators with optional audible alerts.\n\nRequires Cardputer ADV, the U214 cap with its antennas, and a FAT32 microSD card. This listing is not for the original Cardputer, U201 or Heltec.\n\n### Version 0.5.0\n\nThe features below describe **0.5.0**. Check the selected version: older releases remain available and new submissions may await M5Stack review. The current release is also available through the [web installer](https://valleytech-lora-tunnel.pages.dev/) and [GitHub downloads](https://github.com/valleytechsolutions/LORA-Tunnel/releases/tag/v0.5.0).\n\n- Choose Meshtastic, MeshCore or Both / slow scan. One selected profile per protocol, with a default 30-second dwell.\n- Decode supported Meshtastic node information, positions, ordinary text and battery/voltage telemetry using public/default or privately configured channel keys.\n- Parse MeshCore public announcements and verify their Ed25519 signatures. Encrypted group/direct chat remains unsupported.\n- Preserve raw packets, RSSI/SNR and receive settings in native logs. Receiver location remains separate from mesh-advertised positions.\n- Use keyboard navigation, region selection, physical credential entry, Stop + Save and confirmed software sleep.\n- Optional WiGLE, Wardrift and WDGWars CSV uploads run only while capture is stopped and saved. Automatic uploads are off by default.\n\nThe SX1262 receives one modem configuration at a time. Combined mode cannot hear every frequency or preset simultaneously. Recon indicators are clues, not proof of device identity or recording; randomized BLE addresses are temporary.\n\n### Install and configure\n\nThe M5Burner package is the merged **FACTORY image for address 0x0**. It replaces the current firmware, including Launcher. Preserve a recovery copy and private SD settings first. To keep Bmorcelli Launcher, use the separate [LAUNCHER-APP.bin](https://github.com/valleytechsolutions/LORA-Tunnel/releases/download/v0.5.0/LORA-Tunnel-0.5.0-Cardputer-ADV-LoRa1262-LAUNCHER-APP.bin) through Launchers SD menu; never write it at address zero.\n\nCopy the release SD starter to the card and rename config.example.json to config.json inside /lora-tunnel/. Keep existing private configuration when updating. First boot leaves LoRa off until you select a supported region or Skip LoRa. While stopped, Settings \u2192 LoRa cycles receive modes. Match the MeshCore profile to your local network.\n\nUse Stop + Save and wait before removing power or storage. Software sleep does not disconnect the battery or cut power to the cap GNSS receiver. Keep credentials and private channel keys on your own SD card; never publish them.\n\n[Controls, hardware and recovery](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/CARDPUTER_ADV.md) \u00b7 [Configuration and uploads](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/UPLOADS.md) \u00b7 [Official U214 hardware](https://docs.m5stack.com/en/cap/Cap_LoRa-1262)\n\n![Synthetic Cardputer Home preview](https://valleytech-lora-tunnel.pages.dev/assets/ui/cardputer/home.png)\n\n![Synthetic combined-mode Settings preview](https://valleytech-lora-tunnel.pages.dev/assets/ui/cardputer/settings-combined.png)\n\nThese are source-rendered interface examples with synthetic values, not device photos or capture evidence.\n\n### Validation and limits\n\nBoth firmware builds and host checks passed. The final Cardputer application passed independent USB flash verification, startup, a user screen/navigation check and a short combined capture with GNSS fix and completed Stop + Save. It reported queue drops under Wi-Fi/BLE load, with zero errors or allocation failures. Known-source MeshCore reception, browser/Launcher installation and return, sustained drives, independent saved-geotag checks and live upload receipts remain unverified. WDGWars mesh ingestion is separate from CSV uploads. [Full release evidence](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/RELEASE_0_5_0.md).\n\nOriginal LORA Tunnel code is **MIT licensed**. LoRaPipe and Kismet inspired the capture/profile approach; Meshtastic and MeshCore informed protocol research. RadioLib, Arduino-ESP32, NimBLE, TinyGPSPlus, ArduinoJson, M5Stack libraries, Crypto, the Dragon Detector subset and its inherited notices, OpenDroneID and ESP Web Tools retain their licenses and required credits. [Attributions](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/THIRD_PARTY.md). Exact source, dependency/relink archives, SD starter and checksums accompany the release.",
     "cover": "https://m5burner-cdn.m5stack.com/community/116131/2118003706700595201/2118491821580058625/cover/2118491821580058627.png",
     "category": "cardputer-adv",
     "tags": [
@@ -84727,7 +84864,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104677,
+    "download": 104679,
     "versions": [
       {
         "version": "2.4.10",
@@ -85086,7 +85223,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104677,
+    "download": 104679,
     "versions": [
       {
         "version": "2.4.10",
@@ -99014,7 +99151,7 @@
     ],
     "author": "VmThings",
     "github": "https://github.com/yuleshow/M5Tab-Macintosh",
-    "download": 272,
+    "download": 273,
     "versions": [
       {
         "version": "v2.8",
@@ -102179,7 +102316,7 @@
     ],
     "author": "nullpainter",
     "github": "https://github.com/nullpainter/StackChan/tree/main/firmware",
-    "download": 61,
+    "download": 62,
     "versions": [
       {
         "version": "0.0.1",
@@ -108903,6 +109040,81 @@
             "analyzed_at": "2026-11-05T19:04:14Z",
             "etag": "\"4E4774C3085E0D8D0F03F1F4B099AEB8\"",
             "last_modified": "Wed, 23 Sep 2026 15:40:46 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2118250653571186689",
+    "fid": "2118250653571186689",
+    "name": "MonoSuite",
+    "description": "# MonoSuite\n\nMonoSuite bundles five small apps and an e-book reader into a single firmware\nimage, with a shared header, save system, sleep screen, and RTC clock.\n\n## Features\n\n### Apps\n\n| App | Description |\n|---|---|\n| **Reversi** | Othello against a heuristic AI with undo and pass detection |\n| **2048** | Classic tile-merging puzzle with best-score persistence |\n| **Minesweeper** | 12\u00d714 grid with flag mode and flood-fill reveal |\n| **Sokoban** | XSB level loader with deadlock detection and single-step undo |\n| **Reader** | Plain-text and EPUB reader with pagination, resume, and adjustable font size |",
+    "cover": "https://m5burner-cdn.m5stack.com/community/174446/2118250653571186689/2118250653571186690/cover/2118250653571186692.png",
+    "category": "paper-mono",
+    "tags": [
+      "Games",
+      "E-books & Reading"
+    ],
+    "author": "youeiken",
+    "github": "https://github.com/youeiken/MonoSuite",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0",
+        "version_id": "2118250653571186690",
+        "published_at": "2026-11-06",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/174446/2118250653571186689/2118250653571186690/bin/2118250653571186691.bin",
+        "Fs": 2558336,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2492800,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-mono",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2492800,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 2492800,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-06T07:23:40Z",
+            "etag": "\"8925EDECAA4D65B5AE874B298942217B\"",
+            "last_modified": "Thu, 05 Nov 2026 07:54:46 GMT"
           }
         }
       }
@@ -124288,7 +124500,7 @@
     ],
     "author": "Artem76228",
     "github": "https://github.com/Artem76228/PaperOS",
-    "download": 472,
+    "download": 473,
     "versions": [
       {
         "version": "v1.2",
@@ -148510,11 +148722,11 @@
         "published_at": "2026-11-06",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/105681/2118408999704035329/2118525157002280961/bin/2118525157002280962.bin",
         "Fs": 12857054,
+        "as": 3919280,
+        "ao": 131072,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 131072,
-        "as": 3919280,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -148567,11 +148779,11 @@
         "published_at": "2026-11-06",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/105681/2118408999704035329/2118518715889319938/bin/2118518715889319939.bin",
         "Fs": 12857054,
+        "as": 3918880,
+        "ao": 131072,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 131072,
-        "as": 3918880,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -148698,7 +148910,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4831,
+    "download": 4832,
     "versions": [
       {
         "version": "V0.4",
@@ -157307,7 +157519,7 @@
     ],
     "author": "Hiroki Kawakami",
     "github": "https://github.com/Hiroki-Kawakami/Tab5-Screen-Streamer",
-    "download": 500,
+    "download": 501,
     "versions": [
       {
         "version": "v0.1",
@@ -158773,7 +158985,7 @@
     ],
     "author": "Belekos",
     "github": "https://github.com/Belekos/Tab5OS",
-    "download": 25,
+    "download": 26,
     "versions": [
       {
         "version": "0.8.53",
@@ -158854,7 +159066,7 @@
     ],
     "author": "zhaoker",
     "github": "https://github.com/zhaoker/M5stack_Tab5_AIO_box",
-    "download": 465,
+    "download": 466,
     "versions": [
       {
         "version": "2026.0623",
@@ -234894,7 +235106,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 17701,
+    "download": 17702,
     "versions": [
       {
         "version": "Alpha-29",
@@ -289497,7 +289709,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 66439,
+    "download": 66440,
     "versions": [
       {
         "version": "Alpha-29",
