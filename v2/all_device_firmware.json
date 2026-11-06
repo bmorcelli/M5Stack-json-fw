@@ -75079,7 +75079,7 @@
     "fid": "2118003706700595201",
     "name": "LORA Tunnel \u2014 Cardputer ADV + Cap LoRa-1262",
     "description": "LORA Tunnel is a passive Wi-Fi, BLE and receive-only LoRa wardriving and Recon tool for **Cardputer ADV + M5Stack U214 Cap LoRa-1262**. Requires the ADV, U214 cap with antenna, and a microSD card for configuration and sessions. Original Cardputer and U201 cap are not supported by this image.\n\nFeatures include a landscape keyboard interface, physical credential entry, GNSS logging, saved SD sessions, region selection, and Recon-only custom RTTTL alerts once per detected device per session. Optional WiGLE, Wardrift and WDGWars uploads run only while capture is stopped and saved; automatic uploads are OFF by default. LoRa reception uses one profile at a time.\n\nThis is the merged **FACTORY image for address 0x0**. It replaces the installed firmware. For Bmorcelli Launcher, use the separate **LAUNCHER-APP.bin** from the GitHub release instead. Both files contain the same application.\n\nPublic beta: source, dependency/relink materials, licenses, SD setup, checksums and controls/recovery instructions are available on GitHub. Software sleep does not disconnect the battery or cut power to the cap GNSS receiver.",
-    "cover": "https://m5burner-cdn.m5stack.com/community/116131/2118003706700595201/2118003706700595202/cover/2118003706700595204.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/116131/2118003706700595201/2118491821580058625/cover/2118491821580058627.png",
     "category": "cardputer-adv",
     "tags": [
       "Tools",
@@ -75088,7 +75088,7 @@
     ],
     "author": "ValleytechSolutions",
     "github": "https://github.com/valleytechsolutions/LORA-Tunnel",
-    "download": 9,
+    "download": 10,
     "versions": [
       {
         "version": "0.4.0-beta.1",
@@ -75144,6 +75144,63 @@
             "analyzed_at": "2026-11-05T19:03:43Z",
             "etag": "\"2D64FC92809DBBA3E6D8B21F4E81674C\"",
             "last_modified": "Wed, 04 Nov 2026 15:33:29 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.5.0",
+        "version_id": "2118491821580058625",
+        "published_at": "2026-11-06",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/116131/2118003706700595201/2118491821580058625/bin/2118491821580058626.bin",
+        "Fs": 1819488,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1753952,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1753952,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1753952,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-06T01:23:43Z",
+            "etag": "\"A4AE56943F5B2D9F2E460E2DA27C2910\"",
+            "last_modified": "Thu, 05 Nov 2026 23:53:04 GMT"
           }
         }
       }
@@ -85259,7 +85316,7 @@
     "esp": "s3"
   },
   {
-    "_id": "1897200000000001510",
+    "_id": "1897200000000001510:core-series",
     "fid": "1897200000000001510",
     "name": "M5Launcher Core 16Mb (Fire, Basic, Gray)",
     "description": "M5Launcher for Core devices with 16Mb (Fire, Gray, all). With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI. \nTutorial: https://youtu.be/odlHWZ03shI \nSupport me: https://buymeacoffee.com/bmorcelliz \nWiki: https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
@@ -85651,7 +85708,399 @@
     "esp": "32"
   },
   {
-    "_id": "1897200000000002752",
+    "_id": "1897200000000001510:fire",
+    "fid": "1897200000000001510",
+    "name": "M5Launcher Core 16Mb (Fire, Basic, Gray)",
+    "description": "M5Launcher for Core devices with 16Mb (Fire, Gray, all). With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI. \nTutorial: https://youtu.be/odlHWZ03shI \nSupport me: https://buymeacoffee.com/bmorcelliz \nWiki: https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
+    "cover": "https://m5burner-cdn.m5stack.com/cover/be4f990fbefeda5ed7873ac2f09d9240.gif",
+    "category": "fire",
+    "tags": [
+      "UI & Launcher"
+    ],
+    "author": "bmorcelli",
+    "github": "https://github.com/bmorcelli/M5Stick-Launcher",
+    "download": 2354,
+    "versions": [
+      {
+        "version": "2.4.10",
+        "version_id": "1897300000000003144",
+        "published_at": "2025-06-05",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/6abb87a6e773c284acccf8dfc6a127d2.bin",
+        "Fs": 1654416,
+        "as": 1588880,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "fire",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1588880,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1588880,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 2097152,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 2949120,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"860E25B69482F7DCDE2993D5193B0ACF\"",
+            "last_modified": "Thu, 05 Jun 2025 18:35:10 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.5.2",
+        "version_id": "1897300000000003145",
+        "published_at": "2025-09-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/1dfee17553b98f0ef1adc261dfbb610e.bin",
+        "Fs": 1646512,
+        "as": 1580976,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "fire",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1580976,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1580976,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 2097152,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 2949120,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"DEF8953B5BABB67D2607D6C1FD48C36D\"",
+            "last_modified": "Thu, 25 Sep 2025 17:56:22 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.6.10",
+        "version_id": "1897300000000003146",
+        "published_at": "2026-05-11",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/722b8d398c29be403f4b2a0478869ab0.bin",
+        "Fs": 1670640,
+        "as": 1605104,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "fire",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1605104,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1605104,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 2097152,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 2949120,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"9E84EC712571C0BEE550454EB6335032\"",
+            "last_modified": "Mon, 11 May 2026 21:43:45 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.7.1",
+        "version_id": "1897300000000003147",
+        "published_at": "2026-05-24",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/2952e317d50c534ba392a1db017f93c6.bin",
+        "Fs": 1493504,
+        "as": 1427968,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "fire",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1427968,
+            "partition_size": 1572864,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1572864,
+              "source_offset": 65536,
+              "copy_size": 1427968,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"EEE4F5BB88BCD65EC71A08180B640CA0\"",
+            "last_modified": "Sun, 24 May 2026 21:27:39 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.7.2",
+        "version_id": "1897300000000003148",
+        "published_at": "2026-05-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/3cae0504f00fd61c13997f25e59a0185.bin",
+        "Fs": 1493632,
+        "as": 1428096,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "fire",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1428096,
+            "partition_size": 1572864,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1572864,
+              "source_offset": 65536,
+              "copy_size": 1428096,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:32Z",
+            "etag": "\"7D7831FE1EA2CFF96BAB7477278BEDB8\"",
+            "last_modified": "Mon, 25 May 2026 19:00:01 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.8.0",
+        "version_id": "1897300000000003149",
+        "published_at": "2026-07-31",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/fe1717c723466238ce570c992d6c16ca.bin",
+        "Fs": 1525232,
+        "as": 1459696,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "fire",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1459696,
+            "partition_size": 1572864,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1572864,
+              "source_offset": 65536,
+              "copy_size": 1459696,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-31T15:31:52Z",
+            "etag": "\"CA286A7BDF7A78F7E4B9D236C09697A5\"",
+            "last_modified": "Fri, 31 Jul 2026 15:29:29 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
+    "_id": "1897200000000002752:core2",
     "fid": "1897200000000002752",
     "name": "M5Launcher M5Core2 & Tough",
     "description": "M5Launcher for Core2 & Tough. With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI. \nTutorial: https://youtu.be/odlHWZ03shI \nSupport me: https://buymeacoffee.com/bmorcelliz \nWiki: https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
@@ -86043,6 +86492,398 @@
     "esp": "32"
   },
   {
+    "_id": "1897200000000002752:tough",
+    "fid": "1897200000000002752",
+    "name": "M5Launcher M5Core2 & Tough",
+    "description": "M5Launcher for Core2 & Tough. With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI. \nTutorial: https://youtu.be/odlHWZ03shI \nSupport me: https://buymeacoffee.com/bmorcelliz \nWiki: https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
+    "cover": "https://m5burner-cdn.m5stack.com/cover/0da3cd34df35896e06f257b25222111f.gif",
+    "category": "tough",
+    "tags": [
+      "UI & Launcher"
+    ],
+    "author": "bmorcelli",
+    "github": "https://github.com/bmorcelli/M5Stick-Launcher",
+    "download": 2490,
+    "versions": [
+      {
+        "version": "2.4.10",
+        "version_id": "1897300000000006142",
+        "published_at": "2025-06-05",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/b7273ee6323b4160d4a8bb474e90b094.bin",
+        "Fs": 1653680,
+        "as": 1588144,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1588144,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1588144,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 2097152,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 2949120,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:32Z",
+            "etag": "\"A508CCC53771BAF55BE8ECE32235CCA7\"",
+            "last_modified": "Thu, 05 Jun 2025 18:35:23 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.5.2",
+        "version_id": "1897300000000006143",
+        "published_at": "2025-09-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/7c1cbe96535b402cd45a32406f332318.bin",
+        "Fs": 1645952,
+        "as": 1580416,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1580416,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1580416,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 2097152,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 2949120,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:32Z",
+            "etag": "\"28ED3769043AF114589C50E396C2DB7D\"",
+            "last_modified": "Thu, 25 Sep 2025 17:56:37 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.6.10",
+        "version_id": "1897300000000006144",
+        "published_at": "2026-05-11",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/a9048f0ecd1b96f55dbfca5f2b6552aa.bin",
+        "Fs": 1668704,
+        "as": 1603168,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1603168,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1603168,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 2097152,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 2949120,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:32Z",
+            "etag": "\"9EE91A9FBB57AF582B21B375CCE83AD8\"",
+            "last_modified": "Mon, 11 May 2026 21:43:47 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.7.1",
+        "version_id": "1897300000000006145",
+        "published_at": "2026-05-24",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/db21133728c67eb124d978a36442d295.bin",
+        "Fs": 1492288,
+        "as": 1426752,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1426752,
+            "partition_size": 1572864,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1572864,
+              "source_offset": 65536,
+              "copy_size": 1426752,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:32Z",
+            "etag": "\"871ABDD3C8EA20B055E7EBD4676E9907\"",
+            "last_modified": "Sun, 24 May 2026 21:27:41 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.7.2",
+        "version_id": "1897300000000006146",
+        "published_at": "2026-05-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/f632ceb5455d94393790bbad304eb3ed.bin",
+        "Fs": 1492416,
+        "as": 1426880,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1426880,
+            "partition_size": 1572864,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1572864,
+              "source_offset": 65536,
+              "copy_size": 1426880,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:32Z",
+            "etag": "\"3D33035DA6788FC0277B22EE3557A274\"",
+            "last_modified": "Mon, 25 May 2026 19:00:02 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.8.0",
+        "version_id": "1897300000000006147",
+        "published_at": "2026-07-31",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/84d93dafc0234d350b274576cc6921d5.bin",
+        "Fs": 1522640,
+        "as": 1457104,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1457104,
+            "partition_size": 1572864,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1572864,
+              "source_offset": 65536,
+              "copy_size": 1457104,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-31T15:31:53Z",
+            "etag": "\"DDB36685985AB7BF95E2F21BF9F8CACA\"",
+            "last_modified": "Fri, 31 Jul 2026 15:29:30 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
     "_id": "1897200000000000523",
     "fid": "1897200000000000523",
     "name": "M5Launcher M5Stick-cplus2 indepentend data partitions",
@@ -86111,7 +86952,7 @@
     "name": "M5Launcher M5StickC",
     "description": "M5Launcher for M5StickC. With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI. \nTutorial: https://youtu.be/odlHWZ03shI \nSupport me: https://buymeacoffee.com/bmorcelliz \nWiki: https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
     "cover": "https://m5burner-cdn.m5stack.com/cover/6785135cde59618076b804885e3355ac.gif",
-    "category": "stickc-plus",
+    "category": "stickc",
     "tags": [
       "UI & Launcher"
     ],
@@ -86133,7 +86974,7 @@
         "install": {
           "schema": 1,
           "format": "merged",
-          "target": "stickc-plus",
+          "target": "stickc",
           "app": {
             "source_offset": 65536,
             "image_size": 1423888,
@@ -86190,7 +87031,7 @@
         "install": {
           "schema": 1,
           "format": "merged",
-          "target": "stickc-plus",
+          "target": "stickc",
           "app": {
             "source_offset": 65536,
             "image_size": 1396272,
@@ -86247,7 +87088,7 @@
         "install": {
           "schema": 1,
           "format": "merged",
-          "target": "stickc-plus",
+          "target": "stickc",
           "app": {
             "source_offset": 65536,
             "image_size": 1376896,
@@ -86304,7 +87145,7 @@
         "install": {
           "schema": 1,
           "format": "merged",
-          "target": "stickc-plus",
+          "target": "stickc",
           "app": {
             "source_offset": 65536,
             "image_size": 1254224,
@@ -86350,7 +87191,7 @@
         "install": {
           "schema": 1,
           "format": "merged",
-          "target": "stickc-plus",
+          "target": "stickc",
           "app": {
             "source_offset": 65536,
             "image_size": 1254368,
@@ -86396,7 +87237,7 @@
         "install": {
           "schema": 1,
           "format": "merged",
-          "target": "stickc-plus",
+          "target": "stickc",
           "app": {
             "source_offset": 65536,
             "image_size": 1289856,
@@ -87128,7 +87969,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher/",
-    "download": 2746,
+    "download": 2747,
     "versions": [
       {
         "version": "2.6.10",
@@ -87333,6 +88174,52 @@
             "analyzed_at": "2026-07-31T15:31:53Z",
             "etag": "\"08A4F10DF5535342DC274889EBFDE58C\"",
             "last_modified": "Fri, 31 Jul 2026 15:29:33 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.9.1",
+        "version_id": "2118435120835297282",
+        "published_at": "2026-11-06",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/73352/1897200000000002608/2118435120835297282/bin/2118435120835297283.bin",
+        "Fs": 1413488,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1347952,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1347952,
+            "partition_size": 1376256,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1376256,
+              "source_offset": 65536,
+              "copy_size": 1347952,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-06T01:23:43Z",
+            "etag": "\"EB68106791C613DBE40A9E269A05B631\"",
+            "last_modified": "Thu, 05 Nov 2026 20:07:46 GMT"
           }
         }
       }
@@ -101274,6 +102161,83 @@
       }
     ],
     "esp": "32"
+  },
+  {
+    "_id": "2118426108102279169",
+    "fid": "2118426108102279169",
+    "name": "Medusa-by-me",
+    "description": "Medusa \u2014 a pocket toolkit for Cardputer ADV: IR TV-B-Gone and signal generator (5 modes, 30\u201356 kHz), Wi-Fi network scanner, BLE AppleJuice/SwiftPair emulation, power management, and brightness settings saved to NVS. Ocean-blue UI, direct arrow navigation, no Fn needed. Single merged binary, flash at 0x0. For testing your own devices and networks only.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2116436897502433281/2118426108102279169/2118426108106473474/cover/2118426108106473476.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Security Research",
+      "Network & Communication",
+      "Development & Learning"
+    ],
+    "author": "lolzik1111",
+    "github": "https://github.com/lolzik-2/Medusa",
+    "download": 1,
+    "versions": [
+      {
+        "version": "0.0.1",
+        "version_id": "2118426108106473474",
+        "published_at": "2026-11-06",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2116436897502433281/2118426108102279169/2118426108106473474/bin/2118426108106473475.bin",
+        "Fs": 1402816,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1337280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1337280,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1337280,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-06T01:23:43Z",
+            "etag": "\"E2618491F8F4407B39F563739740CD2F\"",
+            "last_modified": "Thu, 05 Nov 2026 19:31:57 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
   },
   {
     "_id": "1897200000000002838",
@@ -129146,7 +130110,7 @@
     ],
     "author": "rainyyu214",
     "github": "https://github.com/rainy214-lang/podcast-player",
-    "download": 25,
+    "download": 26,
     "versions": [
       {
         "version": "1.0.0",
@@ -143215,7 +144179,7 @@
     ],
     "author": "\u94f2\u5c4e\u5927\u5b98\u4eba",
     "github": "https://github.com/nongxl/SkyCompass_Satellite",
-    "download": 467,
+    "download": 468,
     "versions": [
       {
         "version": "v1.4",
@@ -151841,6 +152805,81 @@
       }
     ],
     "esp": "32"
+  },
+  {
+    "_id": "2118388230903136258",
+    "fid": "2118388230903136258",
+    "name": "Sticker Level",
+    "description": "**Sticker Level** turns your M5StickS3 into a precise digital spirit level. It reads the built-in BMI270 IMU and switches between two modes on its own, depending on how you hold the device. No menus, no button press.\n\n## Two modes, chosen automatically\n\n**FLAT: check horizontal surfaces**\nLay the StickS3 flat with the screen up. A bubble-circle shows **pitch** (front/back) and **roll** (left/right) together, with live angles in degrees. The bubble turns **green** when the surface is level and **red** when it's tilted.\n\n**VERTICAL: check plumb, like a torpedo level**\nStand the StickS3 on its edge with the screen facing you, against a wall, post, door frame or picture frame. The display switches to a horizontal tube with a sliding bubble. It shows the **lean** angle and a **PLUMB / TILTED** status.\n\nA small hysteresis band stops the screen flickering between modes while you move the device.\n\n## Controls\n\n| Button | Action |\n|---|---|\n| **Left**, short press | Change tolerance: \u00b10.5\u00b0 \u2192 \u00b11\u00b0 \u2192 \u00b12\u00b0 \u2192 \u00b15\u00b0 |\n| **Left**, long press | **Tare**: set the current position as zero (until reboot) |\n| **Right**, short press | Clear the tare |\n| **Right**, long press | **Calibrate**: save a permanent zero to flash (~6 s) |\n\nFLAT and VERTICAL each keep their own tare and calibration. Calibrating one never changes the other.\n\n## First use: calibrate once\n\nEvery MEMS accelerometer has a small factory offset, so an uncalibrated unit can be off by up to about 1\u00b0.\n1. Place the StickS3 on a surface you **know** is level (for FLAT) or plumb (for VERTICAL).\n2. Hold the **Right** button until \"Calibrating...\" appears, then keep the device still for about 6 seconds.\n3. The offset is saved and loaded again on every boot.\n\n**VERTICAL mode must be calibrated once before you use it.** Until then it has no reliable reference for plumb.\n\n## Accuracy\nAfter calibration, expect accuracy within a few tenths of a degree. Each reading averages 8 samples, and calibration averages 600. If readings drift over time or with temperature, recalibrate.\n\n## Hardware\nM5StickS3 (ESP32-S3, BMI270 IMU, 135\u00d7240 display). Built with Arduino, M5Unified and M5PM1 on PlatformIO.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2118383081509978113/2118388230903136258/2118388230903136259/cover/2118391846737117186.png",
+    "category": "sticks3",
+    "tags": [
+      "Tools",
+      "Utilities"
+    ],
+    "author": "fdantasb",
+    "github": "https://github.com/fdantasb/sticker-level",
+    "download": 2,
+    "versions": [
+      {
+        "version": "v1.0.0",
+        "version_id": "2118388230903136259",
+        "published_at": "2026-11-06",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118383081509978113/2118388230903136258/2118388230903136259/bin/2118388230903136260.bin",
+        "Fs": 573776,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 508240,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 508240,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 508240,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-06T01:23:43Z",
+            "etag": "\"61FD2F8F237217EFD994926B36EA2984\"",
+            "last_modified": "Thu, 05 Nov 2026 17:01:26 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
   },
   {
     "_id": "1897200000000001391",
@@ -247285,7 +248324,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 7791,
+    "download": 7792,
     "versions": [
       {
         "version": "Alpha-29",
