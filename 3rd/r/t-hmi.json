@@ -553,6 +553,51 @@
         "fid": "CFWYY5I6EBX5YCOTZH3IIJQEPCMKPFB6",
         "versions": [
             {
+                "version": "3.0.0",
+                "published_at": "2026-11-06",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/3.0.0/Launcher-lilygo-t-hmi.bin",
+                "Fs": 1469168,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1403632,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-hmi",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1403632,
+                        "partition_size": 1572864,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1572864,
+                            "source_offset": 65536,
+                            "copy_size": 1403632,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-06T11:08:35Z",
+                        "etag": "\"0x8DF3BF5CD697017\"",
+                        "last_modified": "Fri, 06 Nov 2026 11:05:00 GMT"
+                    }
+                }
+            },
+            {
                 "version": "2.9.1",
                 "published_at": "2026-09-04",
                 "file": "https://github.com/bmorcelli/Launcher/releases/download/2.9.1/Launcher-lilygo-t-hmi.bin",
@@ -982,84 +1027,6 @@
                         "analyzed_at": "2026-07-30T19:08:11Z",
                         "etag": "\"0x8DEAFA65976C71C\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
-                    }
-                }
-            },
-            {
-                "version": "2.6.8",
-                "published_at": "2026-04-07",
-                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.8/Launcher-lilygo-t-hmi.bin",
-                "Fs": 1521696,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1456160,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-hmi",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1456160,
-                        "partition_size": 2031616,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2031616,
-                            "source_offset": 65536,
-                            "copy_size": 1456160,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "sys",
-                            "role": "fat",
-                            "size": 1048576,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "vfs",
-                            "role": "fat",
-                            "size": 2097152,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 2949120,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:11Z",
-                        "etag": "\"0x8DE948BF2041559\"",
-                        "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
                 }
             }

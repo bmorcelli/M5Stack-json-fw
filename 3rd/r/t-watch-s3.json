@@ -830,6 +830,51 @@
         "fid": "CFWER24X3RIXNNW34SPPC5YVUDCBVTBR",
         "versions": [
             {
+                "version": "3.0.0",
+                "published_at": "2026-11-06",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/3.0.0/Launcher-lilygo-t-watch-s3.bin",
+                "Fs": 1313184,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1247648,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-watch-s3",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1247648,
+                        "partition_size": 1572864,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1572864,
+                            "source_offset": 65536,
+                            "copy_size": 1247648,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-06T11:08:36Z",
+                        "etag": "\"0x8DF3BF5CD589323\"",
+                        "last_modified": "Fri, 06 Nov 2026 11:05:00 GMT"
+                    }
+                }
+            },
+            {
                 "version": "2.9.1",
                 "published_at": "2026-09-04",
                 "file": "https://github.com/bmorcelli/Launcher/releases/download/2.9.1/Launcher-lilygo-t-watch-s3.bin",
@@ -1237,73 +1282,6 @@
                         "analyzed_at": "2026-08-03T20:15:07Z",
                         "etag": "\"0x8DEAFA65973489C\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
-                    }
-                }
-            },
-            {
-                "version": "2.6.8",
-                "published_at": "2026-04-07",
-                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.8/Launcher-lilygo-t-watch-s3.bin",
-                "Fs": 1507872,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1442336,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-watch-s3",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1442336,
-                        "partition_size": 2031616,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2031616,
-                            "source_offset": 65536,
-                            "copy_size": 1442336,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "fat",
-                            "label": "ffat",
-                            "role": "fat",
-                            "size": 2097152,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3997696,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-08-03T20:15:07Z",
-                        "etag": "\"0x8DE948BF2114CFE\"",
-                        "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
                 }
             }

@@ -707,6 +707,51 @@
         "fid": "CFWF66SHHIEDLGLH6QQL7336DCL4TGGD",
         "versions": [
             {
+                "version": "3.0.0",
+                "published_at": "2026-11-06",
+                "file": "https://github.com/bmorcelli/Launcher/releases/download/3.0.0/Launcher-Phantom_S024R.bin",
+                "Fs": 1405360,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1339824,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "phantom",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1339824,
+                        "partition_size": 1376256,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1376256,
+                            "source_offset": 65536,
+                            "copy_size": 1339824,
+                            "required": true,
+                            "source": "firmware"
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-06T11:08:32Z",
+                        "etag": "\"0x8DF3BF5CD63D121\"",
+                        "last_modified": "Fri, 06 Nov 2026 11:05:00 GMT"
+                    }
+                }
+            },
+            {
                 "version": "2.9.1",
                 "published_at": "2026-09-04",
                 "file": "https://github.com/bmorcelli/Launcher/releases/download/2.9.1/Launcher-Phantom_S024R.bin",
@@ -1092,62 +1137,6 @@
                         "analyzed_at": "2026-07-30T19:08:26Z",
                         "etag": "\"0x8DEAFA659849A37\"",
                         "last_modified": "Mon, 11 May 2026 21:43:33 GMT"
-                    }
-                }
-            },
-            {
-                "version": "2.6.8",
-                "published_at": "2026-04-07",
-                "file": "https://github.com/bmorcelli/Launcher/releases/download/2.6.8/Launcher-Phantom_S024R.bin",
-                "Fs": 1476768,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 1411232,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "phantom",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 1411232,
-                        "partition_size": 1441792,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 1441792,
-                            "source_offset": 65536,
-                            "copy_size": 1411232,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 131072,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:26Z",
-                        "etag": "\"0x8DE948BF2108A80\"",
-                        "last_modified": "Tue, 07 Apr 2026 09:56:31 GMT"
                     }
                 }
             }
