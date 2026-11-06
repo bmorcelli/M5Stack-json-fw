@@ -84541,7 +84541,7 @@
     "esp": "c6"
   },
   {
-    "_id": "1897200000000001991",
+    "_id": "1897200000000001991:cardputer",
     "fid": "1897200000000001991",
     "name": "M5Launcher Cardputer & ADV",
     "description": "M5Launcher for Cardputer. With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI. \nTutorial: https://youtu.be/odlHWZ03shI \nSupport me: https://buymeacoffee.com/bmorcelliz \nWiki: https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
@@ -84865,6 +84865,365 @@
           "schema": 1,
           "format": "merged",
           "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1335744,
+            "partition_size": 1376256,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1376256,
+              "source_offset": 65536,
+              "copy_size": 1335744,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-31T15:31:52Z",
+            "etag": "\"E302977E24182BEC048D61C41955B04A\"",
+            "last_modified": "Fri, 31 Jul 2026 15:29:28 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "1897200000000001991:cardputer-adv",
+    "fid": "1897200000000001991",
+    "name": "M5Launcher Cardputer & ADV",
+    "description": "M5Launcher for Cardputer. With this app you can turn your device into a swiss knife, loading any .bin you have on your SD Card or wirelessly downloading from M5Burner repo or from your computer/smartphone through its WebUI. \nTutorial: https://youtu.be/odlHWZ03shI \nSupport me: https://buymeacoffee.com/bmorcelliz \nWiki: https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
+    "cover": "https://m5burner-cdn.m5stack.com/cover/8a0100966905599183f9431ea873058f.gif",
+    "category": "cardputer-adv",
+    "tags": [
+      "UI & Launcher"
+    ],
+    "author": "bmorcelli",
+    "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
+    "download": 104663,
+    "versions": [
+      {
+        "version": "2.4.10",
+        "version_id": "1897300000000004253",
+        "published_at": "2025-06-05",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/be58187431941f488b214cbb04bf488a.bin",
+        "Fs": 1523696,
+        "as": 1458160,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1458160,
+            "partition_size": 1572864,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1572864,
+              "source_offset": 65536,
+              "copy_size": 1458160,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 524288,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"AEE544C966B88D327E88BFF961BA3461\"",
+            "last_modified": "Thu, 05 Jun 2025 18:34:55 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.5.2",
+        "version_id": "1897300000000004254",
+        "published_at": "2025-09-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/309b683ddf8adefc8502f2b9012bf6ff.bin",
+        "Fs": 1496832,
+        "as": 1431296,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1431296,
+            "partition_size": 1441792,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1441792,
+              "source_offset": 65536,
+              "copy_size": 1431296,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 524288,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"48205EEC9C9ABAA277885DA5275151DB\"",
+            "last_modified": "Thu, 25 Sep 2025 17:56:05 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.6.10",
+        "version_id": "1897300000000004255",
+        "published_at": "2026-05-11",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/abad850bf7e3ae897a7271dcbd347dbf.bin",
+        "Fs": 1504640,
+        "as": 1439104,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1439104,
+            "partition_size": 1441792,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1441792,
+              "source_offset": 65536,
+              "copy_size": 1439104,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 524288,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"D0368F0DD125EAF3A1FCCF8D0D7C19CE\"",
+            "last_modified": "Mon, 11 May 2026 21:43:44 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.7.1",
+        "version_id": "1897300000000004256",
+        "published_at": "2026-05-24",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/f2e638d7b331368dc5754e05e87f1b3c.bin",
+        "Fs": 1354976,
+        "as": 1289440,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1289440,
+            "partition_size": 1376256,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1376256,
+              "source_offset": 65536,
+              "copy_size": 1289440,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"37CD7796719C178C749B1484CD10B459\"",
+            "last_modified": "Sun, 24 May 2026 21:27:38 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.7.2",
+        "version_id": "1897300000000004257",
+        "published_at": "2026-05-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/61ae83f2814a8adf2442ef85a0a3d69b.bin",
+        "Fs": 1354848,
+        "as": 1289312,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1289312,
+            "partition_size": 1376256,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1376256,
+              "source_offset": 65536,
+              "copy_size": 1289312,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-07-28T21:29:31Z",
+            "etag": "\"3FBF69DE7D9170393315CACBAE8AB0AA\"",
+            "last_modified": "Mon, 25 May 2026 19:00:00 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.8.0",
+        "version_id": "1897300000000004258",
+        "published_at": "2026-07-31",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/firmware/da3ca1bb0e2b204a87d784baeafe82e6.bin",
+        "Fs": 1401280,
+        "as": 1335744,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
           "app": {
             "source_offset": 65536,
             "image_size": 1335744,
@@ -114108,7 +114467,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 162,
+    "download": 163,
     "versions": [
       {
         "version": "v0.7.3",
@@ -114240,7 +114599,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 162,
+    "download": 163,
     "versions": [
       {
         "version": "v0.7.3",
@@ -116807,7 +117166,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 1951,
+    "download": 1952,
     "versions": [
       {
         "version": "v1.0",
@@ -146883,7 +147242,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4823,
+    "download": 4824,
     "versions": [
       {
         "version": "V0.4",
