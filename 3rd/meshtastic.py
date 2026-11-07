@@ -37,7 +37,7 @@ DEVICES = [
     {"target": "seeed-sensecap-indicator-tft", "json": "seeedstudio-sensecap.json", "is_fancy": True},
     {"target": "seeed-sensecap-indicator", "json": "seeedstudio-sensecap.json"},
     {"target": "thinknode_m9-tft", "json": "elecrow_thinknode_m9.json"},
-    {"target": "firmware-heltec-v4-r8-tft", "json": "heltec_lora32_expansion_v.json"},
+    {"target": "heltec-v4-r8-tft", "json": "heltec_lora32_expansion_v.json"},
 ]
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
