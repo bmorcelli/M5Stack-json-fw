@@ -3,8 +3,13 @@
 
 import re
 import json
+import argparse
+import math
+import random
 import sys
 import time
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -12,12 +17,6 @@ try:
     import requests
 except ModuleNotFoundError:
     requests = None
-
-try:
-    from deep_translator import GoogleTranslator
-except ModuleNotFoundError:
-    GoogleTranslator = None
-
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -56,16 +55,77 @@ RE_TARGET_SEGMENT = re.compile(
 )
 
 
-MAX_CHUNK_CHARS = 4500          # Google limit is 5000 per request
-SEGMENT_MODE_MAX_CHARS = 300    # per-segment translation only for short texts
+# GET parameters percent-encode CJK characters as nine bytes each. Keep URLs
+# small even when many short lines add repeated q parameters.
+MAX_CHUNK_CHARS = 1000
 DEFAULT_MAX_MINUTES = 40.0
-MIN_REQUEST_INTERVAL = 0.4      # seconds between requests
+MIN_REQUEST_INTERVAL = 5.0      # minimum pause after each completed request
 CHECKPOINT_EVERY = 25           # save cache every N new translations
-MAX_CONSECUTIVE_RATE_LIMITS = 3
+MAX_CONSECUTIVE_RATE_LIMITS = 6
 
 
 class BudgetExceeded(Exception):
     """Raised when the time budget ends or the rate limit circuit opens."""
+
+
+class TooManyRequests(Exception):
+    """Provider answered HTTP 429."""
+
+    def __init__(self, retry_after: float = 0.0) -> None:
+        super().__init__("Google Translate HTTP 429")
+        self.retry_after = retry_after
+
+
+class GoogleTranslator:
+    """Keyless Google Translate JSON endpoint (not the Cloud Translation API).
+
+    This public endpoint has no guaranteed quota or availability. Keep requests
+    serial and let GuardedTranslator handle throttling and HTTP 429 responses.
+    """
+
+    def __init__(self, source: str = "auto", target: str = "en") -> None:
+        self.source = source
+        self.target = target
+        self.session = requests.Session()
+
+    def translate(self, text: str) -> str:
+        # The /t response flattens newlines inside a single q parameter. Send
+        # each target-language line separately and restore blank/English lines
+        # locally, without making an HTTP request for every line.
+        lines = text.split("\n")
+        indices = [i for i, line in enumerate(lines) if RE_TARGET_LANG.search(line)]
+        if not indices:
+            return text
+        params = [("client", "dict-chrome-ex"), ("sl", self.source), ("tl", self.target)]
+        params.extend(("q", lines[i]) for i in indices)
+        with self.session.get(
+            "https://translate.googleapis.com/translate_a/t",
+            params=params,
+            timeout=(10, 30),
+        ) as response:
+            if response.status_code == 429:
+                retry_after = response.headers.get("Retry-After", "0")
+                try:
+                    seconds = float(retry_after)
+                except ValueError:
+                    try:
+                        seconds = (parsedate_to_datetime(retry_after) -
+                                   datetime.now(timezone.utc)).total_seconds()
+                    except (TypeError, ValueError, OverflowError):
+                        seconds = 0.0
+                raise TooManyRequests(max(0.0, seconds) if math.isfinite(seconds) else 0.0)
+            response.raise_for_status()
+            payload = response.json()
+            if not isinstance(payload, list) or len(payload) != len(indices):
+                raise ValueError("Unexpected Google Translate response")
+            for index, part in zip(indices, payload):
+                # Auto source: [[translation, detected_language], ...].
+                # Explicit source: [translation, ...].
+                translated = part[0] if isinstance(part, list) and part else part
+                if not isinstance(translated, str) or not translated.strip():
+                    raise ValueError("Empty or invalid Google Translate response")
+                lines[index] = translated
+            return "\n".join(lines)
 
 
 class GuardedTranslator:
@@ -73,12 +133,14 @@ class GuardedTranslator:
     budget and periodic cache checkpoints, so an interrupted run keeps its
     progress and the next run resumes from the cache."""
 
-    def __init__(self, translator: Any, cache: Dict[str, str], cache_path: Path, max_seconds: float) -> None:
+    def __init__(self, translator: Any, cache: Dict[str, str], cache_path: Path,
+                 max_seconds: float, min_interval: float = MIN_REQUEST_INTERVAL) -> None:
         self.translator = translator
         self.cache = cache
         self.cache_path = cache_path
         self.deadline = time.monotonic() + max_seconds
-        self.last_request = 0.0
+        self.last_request: Optional[float] = None
+        self.interval = min_interval
         self.since_checkpoint = 0
         self.consecutive_rate_limits = 0
         self.stopped = False
@@ -107,28 +169,42 @@ class GuardedTranslator:
             if time.monotonic() >= self.deadline:
                 self.stop("time budget exhausted")
 
-            wait = MIN_REQUEST_INTERVAL - (time.monotonic() - self.last_request)
+            wait = (self.interval - (time.monotonic() - self.last_request)
+                    if self.last_request is not None else 0.0)
             if wait > 0:
-                time.sleep(wait)
-            self.last_request = time.monotonic()
+                self.pause(wait)
             self.requests += 1
 
             try:
                 result = self.translator.translate(text)
-            except Exception as exc:
-                if "TooManyRequests" in type(exc).__name__ or "too many requests" in str(exc).lower():
-                    self.consecutive_rate_limits += 1
-                    if self.consecutive_rate_limits >= MAX_CONSECUTIVE_RATE_LIMITS:
-                        self.stop("rate limited by Google Translate")
-                    backoff = 30 * (2 ** (self.consecutive_rate_limits - 1))
-                    print(f"[WARN] Rate limited, sleeping {backoff}s", file=sys.stderr, flush=True)
-                    time.sleep(backoff)
-                    continue
-                raise
+            except TooManyRequests as exc:
+                self.consecutive_rate_limits += 1
+                self.interval = max(self.interval, min(60.0, self.interval * 2))
+                if self.consecutive_rate_limits >= MAX_CONSECUTIVE_RATE_LIMITS:
+                    self.stop("rate limited by Google Translate")
+                backoff = max(exc.retry_after, min(900, 60 * 2 ** (self.consecutive_rate_limits - 1)))
+                backoff += random.uniform(0, 5)
+                print(f"[WARN] Rate limited, sleeping {backoff:.1f}s; request interval {self.interval:.1f}s",
+                      file=sys.stderr, flush=True)
+                self.pause(backoff)
+                continue
+            finally:
+                self.last_request = time.monotonic()
 
             self.consecutive_rate_limits = 0
-            self.since_checkpoint += 1
             return result
+
+    def pause(self, seconds: float) -> None:
+        if seconds >= self.deadline - time.monotonic():
+            self.stop("time budget insufficient for next request")
+        time.sleep(seconds)
+        if time.monotonic() >= self.deadline:
+            self.stop("time budget exhausted")
+
+    def cache_translation(self, original: str, translated: str) -> None:
+        self.cache[original] = translated
+        self.since_checkpoint += 1
+        self.checkpoint()
 
 
 def split_chunks(text: str, limit: int = MAX_CHUNK_CHARS) -> List[str]:
@@ -233,9 +309,11 @@ def load_json_file(path: Path, default: Any) -> Any:
 
 def save_json_file(path: Path, data: Any, ensure_ascii: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
+    temporary = path.with_name(path.name + ".tmp")
+    with temporary.open("w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=ensure_ascii, indent=2)
         f.write("\n")
+    temporary.replace(path)
 
 
 def resolve_path(path_str: str) -> Path:
@@ -333,7 +411,7 @@ def is_effectively_translated(original: str, translated: str, allow_mixed_result
 
 def translate_segment(
     segment: str,
-    translator: GoogleTranslator,
+    translator: GuardedTranslator,
     cache: Dict[str, str],
     stats: Stats,
     errors: List[Dict[str, Any]],
@@ -356,14 +434,12 @@ def translate_segment(
 
             translated = translated.strip()
             if translated and translated != segment:
-                cache[segment] = translated
+                translator.cache_translation(segment, translated)
                 stats.new_translations += 1
                 return translated
 
+            # Same input gives the same output; retrying only wastes quota.
             last_error = "Segment translation returned unchanged text"
-            if attempt < retries:
-                time.sleep(delay)
-                continue
             log_runtime_error(
                 message=last_error,
                 error_type="TranslationSegmentError",
@@ -373,6 +449,7 @@ def translate_segment(
                     "original": segment,
                 },
             )
+            break
         except BudgetExceeded:
             raise
         except Exception as exc:
@@ -400,7 +477,7 @@ def translate_segment(
 
 def translate_mixed_text(
     text: str,
-    translator: GoogleTranslator,
+    translator: GuardedTranslator,
     cache: Dict[str, str],
     stats: Stats,
     errors: List[Dict[str, Any]],
@@ -410,6 +487,11 @@ def translate_mixed_text(
 ) -> Optional[str]:
     matches = list(RE_TARGET_SEGMENT.finditer(text))
     if not matches:
+        return None
+
+    # Reuse old segment cache entries, but never send one request per fragment.
+    # A cache miss is handled by translating the complete field once.
+    if any(match.group(0) not in cache for match in matches):
         return None
 
     translated_text = text
@@ -448,7 +530,7 @@ def translate_mixed_text(
 
 def translate_to_english(
     text: str,
-    translator: GoogleTranslator,
+    translator: GuardedTranslator,
     cache: Dict[str, str],
     stats: Stats,
     errors: List[Dict[str, Any]],
@@ -463,7 +545,7 @@ def translate_to_english(
         stats.cache_hits += 1
         return cached
 
-    if len(text) > SEGMENT_MODE_MAX_CHARS:
+    if len(text) > MAX_CHUNK_CHARS:
         chunked = translate_chunked(
             text=text,
             translator=translator,
@@ -476,6 +558,8 @@ def translate_to_english(
         )
         if chunked is None:
             stats.failed_translations += 1
+        elif chunked:
+            translator.cache_translation(text, chunked)
         return chunked
 
     if is_mixed_language_text(text):
@@ -490,6 +574,7 @@ def translate_to_english(
             delay=delay,
         )
         if mixed_translation and is_effectively_translated(text, mixed_translation, allow_mixed_result=True):
+            translator.cache_translation(text, mixed_translation)
             return mixed_translation
 
     cached = cache.get(text)
@@ -509,9 +594,6 @@ def translate_to_english(
 
             if not is_effectively_translated(text, translated):
                 last_error = "Translation returned unchanged or still contains target-language text"
-                if attempt < retries:
-                    time.sleep(delay)
-                    continue
                 log_runtime_error(
                     message=last_error,
                     error_type="TranslationResultError",
@@ -523,7 +605,7 @@ def translate_to_english(
                 )
                 break
 
-            cache[text] = translated
+            translator.cache_translation(text, translated)
             stats.new_translations += 1
             return translated
         except BudgetExceeded:
@@ -556,15 +638,12 @@ def process_field(
     item: Dict[str, Any],
     field: str,
     path: str,
-    translator: GoogleTranslator,
+    translator: GuardedTranslator,
     cache: Dict[str, str],
     stats: Stats,
     errors: List[Dict[str, Any]],
 ) -> None:
     original = item.get(field)
-
-    if translator.stopped:
-        return
 
     if not isinstance(original, str) or not original.strip():
         return
@@ -600,7 +679,7 @@ def process_field(
 def walk(
     obj: Any,
     path: str,
-    translator: GoogleTranslator,
+    translator: GuardedTranslator,
     cache: Dict[str, str],
     stats: Stats,
     errors: List[Dict[str, Any]],
@@ -658,8 +737,6 @@ def main() -> int:
     missing_modules: List[str] = []
     if requests is None:
         missing_modules.append("requests")
-    if GoogleTranslator is None:
-        missing_modules.append("deep-translator")
 
     if missing_modules:
         print(
@@ -671,22 +748,22 @@ def main() -> int:
         )
         return 1
 
-    args = sys.argv[1:]
-
-    max_minutes = DEFAULT_MAX_MINUTES
-    if "--max-minutes" in args:
-        idx = args.index("--max-minutes")
-        try:
-            max_minutes = float(args[idx + 1])
-        except (IndexError, ValueError):
-            print("--max-minutes requires a number", file=sys.stderr)
-            return 1
-        del args[idx:idx + 2]
-
-    use_url = False
-    if args and args[0] == "--url":
-        use_url = True
-        args = args[1:]
+    parser = argparse.ArgumentParser(description="Translate firmware fields using keyless Google Translate.")
+    parser.add_argument("paths", nargs="*")
+    parser.add_argument("--url", action="store_true", help="Fetch the source catalog from M5Stack")
+    parser.add_argument("--max-minutes", type=float, default=DEFAULT_MAX_MINUTES,
+                        help="Network time budget; 0 applies only cached translations")
+    parser.add_argument("--min-interval", type=float, default=MIN_REQUEST_INTERVAL,
+                        help="Minimum seconds between requests (default: 5)")
+    options = parser.parse_args()
+    if not math.isfinite(options.max_minutes) or options.max_minutes < 0:
+        parser.error("--max-minutes must be finite and nonnegative")
+    if not math.isfinite(options.min_interval) or options.min_interval < MIN_REQUEST_INTERVAL:
+        parser.error(f"--min-interval must be finite and at least {MIN_REQUEST_INTERVAL}")
+    args = options.paths
+    use_url = options.url
+    if len(args) > (1 if use_url else 2):
+        parser.error("too many paths")
 
     if use_url:
         output_path = resolve_path(args[0]) if len(args) >= 1 else DEFAULT_OUTPUT
@@ -710,11 +787,15 @@ def main() -> int:
     cache = normalize_cache(load_json_file(cache_path, {}))
     initial_cache_size = len(cache)
 
+    backend = GoogleTranslator(source="auto", target="en")
+    print(f"Translator: Google (/translate_a/t, keyless); minimum interval {options.min_interval}s")
+
     translator = GuardedTranslator(
-        translator=GoogleTranslator(source="auto", target="en"),
+        translator=backend,
         cache=cache,
         cache_path=cache_path,
-        max_seconds=max_minutes * 60,
+        max_seconds=options.max_minutes * 60,
+        min_interval=options.min_interval,
     )
 
     started = time.perf_counter()

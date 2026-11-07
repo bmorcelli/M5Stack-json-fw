@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install deep-translator requests
+          pip install requests
 
       - name: Run translator
         run: |
@@ -47,6 +47,6 @@ jobs:
             git fetch origin "$GITHUB_REF_NAME"
             git reset --hard "origin/$GITHUB_REF_NAME"
             cp "$RUNNER_TEMP/cache.json" v2/translation_cache.json
-            python v2/translate.py v2/all_device_firmware.json --max-minutes 5
+            python v2/translate.py v2/all_device_firmware.json --max-minutes 0
           done
           exit 1
