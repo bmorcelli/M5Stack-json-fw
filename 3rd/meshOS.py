@@ -55,7 +55,7 @@ FIRMWARE_CONFIG = {
         {
             "name": "Heltec v4 + Expansion Kit (Touch)",
             "config_device": "Heltec v4 + Expansion Kit (Touch)",
-            "json": "heltec_lora32_expansion_v.json",
+            "json": "heltec_lora32_expansion_v2.json",
         },
     ],
 }
