@@ -52,6 +52,11 @@ FIRMWARE_CONFIG = {
             "config_device": "Elecrow ThinkNode M9",
             "json": "elecrow_thinknode_m9.json",
         },
+        {
+            "name": "Heltec v4 + Expansion Kit (Touch)",
+            "config_device": "Heltec v4 + Expansion Kit (Touch)",
+            "json": "heltec_lora32_expansion_v.json",
+        },
     ],
 }
 
