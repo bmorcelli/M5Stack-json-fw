@@ -1154,19 +1154,19 @@
                 "version": "T-Deck PLUS",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-deck-pro.bin",
-                "Fs": 4639632,
+                "Fs": 4645376,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4574096,
+                "as": 4579840,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-deck",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4574096,
+                        "image_size": 4579840,
                         "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -1179,7 +1179,7 @@
                             "role": "firmware",
                             "size": 4653056,
                             "source_offset": 65536,
-                            "copy_size": 4574096,
+                            "copy_size": 4579840,
                             "required": true,
                             "source": "firmware"
                         },
@@ -1200,9 +1200,9 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-06T19:23:14Z",
-                        "etag": "\"0x8DF3C396438EC3E\"",
-                        "last_modified": "Fri, 06 Nov 2026 19:08:50 GMT"
+                        "analyzed_at": "2026-11-07T13:23:13Z",
+                        "etag": "\"0x8DF3CD143A51D99\"",
+                        "last_modified": "Sat, 07 Nov 2026 13:15:59 GMT"
                     }
                 }
             },
@@ -1210,19 +1210,19 @@
                 "version": "T-Deck",
                 "published_at": "2026-04-04",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/betaRelease/Bruce-lilygo-t-deck.bin",
-                "Fs": 4639648,
+                "Fs": 4645456,
                 "s": 0,
                 "f": 0,
                 "f2": 0,
                 "ao": 65536,
-                "as": 4574112,
+                "as": 4579920,
                 "install": {
                     "schema": 1,
                     "format": "merged",
                     "target": "t-deck",
                     "app": {
                         "source_offset": 65536,
-                        "image_size": 4574112,
+                        "image_size": 4579920,
                         "partition_size": 4653056,
                         "label_policy": "next_app",
                         "subtype_policy": "next_ota"
@@ -1235,7 +1235,7 @@
                             "role": "firmware",
                             "size": 4653056,
                             "source_offset": 65536,
-                            "copy_size": 4574112,
+                            "copy_size": 4579920,
                             "required": true,
                             "source": "firmware"
                         },
@@ -1256,16 +1256,16 @@
                         "confidence": "exact",
                         "warnings": [],
                         "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-06T19:23:14Z",
-                        "etag": "\"0x8DF3C3964296D58\"",
-                        "last_modified": "Fri, 06 Nov 2026 19:08:50 GMT"
+                        "analyzed_at": "2026-11-07T13:23:13Z",
+                        "etag": "\"0x8DF3CD143A2618B\"",
+                        "last_modified": "Sat, 07 Nov 2026 13:15:59 GMT"
                     }
                 }
             }
         ],
         "fid": "CFW0PGPGGP1YK324OL9TCGY78M5QYS4T",
-        "esp": "s3",
-        "category": "t-deck"
+        "category": "t-deck",
+        "esp": "s3"
     },
     {
         "name": "CAIRN",
@@ -8640,6 +8640,62 @@
         "fid": "CFWSXCGEK73TCWYJ7WJ5BRLZUP3VXQFS",
         "versions": [
             {
+                "version": "v1.6.4",
+                "published_at": "2026-11-07",
+                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.6.4/saitama-t-deck-plus-1.6.4-merged.bin",
+                "Fs": 2793600,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2728064,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2728064,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 2728064,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3407872,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-07T13:23:13Z",
+                        "etag": "\"0x8DF3CD1DC07865C\"",
+                        "last_modified": "Sat, 07 Nov 2026 13:20:14 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v1.6.3",
                 "published_at": "2026-11-05",
                 "file": "https://github.com/868meshbot/Saitama/releases/download/v1.6.3/saitama-t-deck-plus-1.6.3-merged.bin",
@@ -9140,62 +9196,6 @@
                         "analyzed_at": "2026-10-03T12:37:40Z",
                         "etag": "\"0x8DF212AE9D1F294\"",
                         "last_modified": "Sat, 03 Oct 2026 08:47:10 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v1.4.0",
-                "published_at": "2026-10-02",
-                "file": "https://github.com/868meshbot/Saitama/releases/download/v1.4.0/saitama-t-deck-plus-1.4.0-merged.bin",
-                "Fs": 2696544,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2631008,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2631008,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 2631008,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3407872,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-02T19:12:40Z",
-                        "etag": "\"0x8DF208E80994FD3\"",
-                        "last_modified": "Fri, 02 Oct 2026 14:07:32 GMT"
                     }
                 }
             }
