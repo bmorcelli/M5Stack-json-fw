@@ -140,7 +140,7 @@ def process_jsons(max_workers: int = 4, force_download_all: bool = False):
         tasks = []
         for item in merged_data:
             for version in item.get("versions", []):
-                already_analyzed = "s" in version
+                already_analyzed = "s" in version or bool(version.get("invalid"))
                 if already_analyzed and not aux_inputs_changed(version):
                     print(f"{item['name']} - {version.get('version', '?')} - Ok", flush=True)
                     ensure_install_manifest(version, item)
