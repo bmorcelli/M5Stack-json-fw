@@ -289,24 +289,6 @@ def preserve_metadata(items, old_items):
                     item[field + "_src"] = old_item.get(field + "_src", old_item[field])
 
 
-def catalog_fingerprint(items):
-    return json.dumps([{k: v for k, v in item.items() if k != "download"} for item in items], sort_keys=True)
-
-
-def snapshot_fingerprint(value):
-    volatile = {"fetchedAt", "statistics", "downloadCount", "firmwareCount",
-                "weeklyScore", "allTimeScore", "liked", "followed", "editable", "reviewable", "blocked"}
-
-    def stable(data):
-        if isinstance(data, dict):
-            return {key: stable(child) for key, child in data.items() if key not in volatile}
-        if isinstance(data, list):
-            return [stable(child) for child in data]
-        return data
-
-    return json.dumps(stable(value), sort_keys=True)
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-workers", type=int, default=8)
@@ -334,14 +316,18 @@ def main():
             else:
                 ensure_install_manifest(version, item)
     errors = []
+    processed = 0
     if tasks and not args.skip_analysis:
         result = analyze_remote_firmware_batch(tasks, max_workers=args.max_workers)
         errors = result["errors"]
+        processed = len(tasks) - len(errors)
         for item, version in tasks:
             if "s" in version or version.get("invalid"):
                 ensure_install_manifest(version, item)
-    changed = (catalog_fingerprint(items) != catalog_fingerprint(old)
-               or snapshot_fingerprint(raw) != snapshot_fingerprint(previous_raw))
+    # Only commit when binaries were actually processed; metadata-only drift
+    # (download counts, ranking/developer reordering) is saved locally but
+    # does not trigger a commit by itself.
+    changed = processed > 0
     # No catalog is replaced until the complete API crawl and transformation succeed.
     atomic_json(raw_path, raw)
     atomic_json(ROOT / "v3/unresolved_binaries.json", sorted(unresolved, key=lambda v: (v["firmwareId"], v["versionId"])))

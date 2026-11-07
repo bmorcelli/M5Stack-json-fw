@@ -44,7 +44,7 @@ def process_jsons(max_workers: int = 4, force_download_all: bool = False):
                 os.remove(file_path)
 
     files_added_total = 0
-    output_changed = False
+    binaries_processed = 0
     aggregated_devices = []
     existing_fids = set()
 
@@ -160,6 +160,7 @@ def process_jsons(max_workers: int = 4, force_download_all: bool = False):
 
         result = analyze_remote_firmware_batch(tasks, max_workers=max_workers)
         files_added = result["files_added"]
+        binaries_processed += len(tasks) - len(result["errors"])
 
         for item, version in tasks:
             if version.get("invalid"):
@@ -172,15 +173,7 @@ def process_jsons(max_workers: int = 4, force_download_all: bool = False):
             for err in result["errors"]:
                 print(f"  {err['item']} - {err['version']}: {err['error']}", flush=True)
 
-        previous_output = ""
-        if os.path.exists(output_path):
-            with open(output_path, "r", encoding="utf-8") as existing_file:
-                previous_output = existing_file.read()
-
         new_output = json.dumps(merged_data, indent=4)
-        if previous_output != new_output:
-            output_changed = True
-
         with open(output_path, "w", encoding="utf-8") as final_file:
             final_file.write(new_output)
 
@@ -194,20 +187,15 @@ def process_jsons(max_workers: int = 4, force_download_all: bool = False):
         key=lambda x: (x.get("category", ""), x.get("name", "")),
     )
 
-    previous_all_devices = ""
-    if os.path.exists(all_devices_path):
-        with open(all_devices_path, "r", encoding="utf-8") as existing_file:
-            previous_all_devices = existing_file.read()
-
     new_all_devices = json.dumps(aggregated_devices, indent=2)
-    if previous_all_devices != new_all_devices:
-        output_changed = True
 
     with open(all_devices_path, "w", encoding="utf-8") as all_devices_file:
         all_devices_file.write(new_all_devices)
 
     print(f"\n\nTotal de arquivos .bin adicionados em todos os JSONs: {files_added_total}\n")
-    return files_added_total > 0 or output_changed
+    # Only signal a commit when binaries were actually processed (valid or
+    # marked invalid); metadata-only changes do not trigger a commit.
+    return binaries_processed > 0
 
 
 if __name__ == "__main__":

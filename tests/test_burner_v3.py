@@ -73,19 +73,6 @@ class CatalogTests(unittest.TestCase):
     def test_legacy_filename_matches_full_url(self):
         self.assertEqual(updater.file_key("a.bin"), updater.file_key(updater.OSS + "/firmware/a.bin"))
 
-    def test_fingerprint_ignores_download_only(self):
-        self.assertEqual(updater.catalog_fingerprint([{"download": 1}]), updater.catalog_fingerprint([{"download": 2}]))
-        self.assertNotEqual(updater.catalog_fingerprint([{"name": "a"}]), updater.catalog_fingerprint([{"name": "b"}]))
-
-    def test_snapshot_tracks_device_changes_without_counter_churn(self):
-        old = {"fetchedAt": "old", "devices": [{"deviceSlug": "cardputer", "firmwareCount": 1}]}
-        new = deepcopy(old)
-        new.update(fetchedAt="new")
-        new["devices"][0]["firmwareCount"] = 2
-        self.assertEqual(updater.snapshot_fingerprint(old), updater.snapshot_fingerprint(new))
-        new["devices"][0]["deviceSlug"] = "cardputer-adv"
-        self.assertNotEqual(updater.snapshot_fingerprint(old), updater.snapshot_fingerprint(new))
-
 
 class ApiTests(unittest.TestCase):
     def test_listing_identity_ignores_counters_and_permissions(self):
