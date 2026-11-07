@@ -5,9 +5,14 @@ on:
   schedule:
     - cron: "11 */6 * * *"
 
+concurrency:
+  group: translate
+  cancel-in-progress: false
+
 jobs:
   translate:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v4
@@ -22,12 +27,26 @@ jobs:
 
       - name: Run translator
         run: |
-          python v2/translate.py v2/all_device_firmware.json
+          # Stops cleanly after the budget; progress is kept in the cache
+          # and the next scheduled run continues from there.
+          python v2/translate.py v2/all_device_firmware.json --max-minutes 40
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git diff --cached --quiet || git commit -m "Update translated catalog"
-          git push
+          for i in 1 2 3; do
+            git add .
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Update translated catalog"
+            git push && exit 0
+            # main moved (Database Update pushed). Rebuild on top of it,
+            # reapplying translations from the cache (no new requests needed).
+            cp v2/translation_cache.json "$RUNNER_TEMP/cache.json"
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+            cp "$RUNNER_TEMP/cache.json" v2/translation_cache.json
+            python v2/translate.py v2/all_device_firmware.json --max-minutes 5
+          done
+          exit 1
