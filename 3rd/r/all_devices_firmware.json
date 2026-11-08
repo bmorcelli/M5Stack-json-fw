@@ -21376,6 +21376,64 @@
     "fid": "CFWCZLKXTHUWYFF6R7LMLCOOJHJFYEP4",
     "versions": [
       {
+        "version": "v2.3.5",
+        "published_at": "2026-11-08",
+        "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.3.5/cardputer-standalone-launcher.bin",
+        "Fs": 2101248,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1997680,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1997680,
+            "partition_size": 2031616,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2031616,
+              "source_offset": 65536,
+              "copy_size": 1997680,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "littlefs",
+              "role": "spiffs",
+              "size": 458752,
+              "source": "firmware",
+              "source_offset": 2097152,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'littlefs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 2138112,
+            "analyzed_at": "2026-11-08T19:53:10Z",
+            "etag": "\"0x8DF3DD13C178036\"",
+            "last_modified": "Sun, 08 Nov 2026 19:48:17 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.3.4",
         "published_at": "2026-10-28",
         "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.3.4/cardputer-standalone-launcher.bin",
@@ -87669,6 +87727,64 @@
     "fid": "CFWJIELNMFRQOGDWM7GTTYISPV3IZYFU",
     "versions": [
       {
+        "version": "v2.3.5",
+        "published_at": "2026-11-08",
+        "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.3.5/tdeck-standalone-launcher.bin",
+        "Fs": 2756608,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2661984,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2661984,
+            "partition_size": 2686976,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2686976,
+              "source_offset": 65536,
+              "copy_size": 2661984,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "littlefs",
+              "role": "spiffs",
+              "size": 458752,
+              "source": "firmware",
+              "source_offset": 2752512,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'littlefs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 2793472,
+            "analyzed_at": "2026-11-08T19:53:10Z",
+            "etag": "\"0x8DF3DD143DE362C\"",
+            "last_modified": "Sun, 08 Nov 2026 19:48:30 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.3.4",
         "published_at": "2026-10-28",
         "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.3.4/tdeck-standalone-launcher.bin",
@@ -88108,53 +88224,6 @@
             "analyzed_at": "2026-10-20T11:51:10Z",
             "etag": "\"0x8DF19B67DFC0D27\"",
             "last_modified": "Wed, 23 Sep 2026 21:06:09 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.2.0",
-        "published_at": "2026-09-20",
-        "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.2.0/tdeck-standalone.bin",
-        "Fs": 2213280,
-        "nb": true,
-        "ao": 0,
-        "as": 2213280,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 0,
-            "image_size": 2213280,
-            "partition_size": 2213280,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2213280,
-              "source_offset": 0,
-              "copy_size": 2213280,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-10-20T11:51:10Z",
-            "etag": "\"0x8DF1727CEBB1EB9\"",
-            "last_modified": "Sun, 20 Sep 2026 14:59:44 GMT"
           }
         }
       }
@@ -107966,6 +108035,64 @@
     "fid": "CFWMLE67OKKHHWBX4RZ7KPWL43OCYHZN",
     "versions": [
       {
+        "version": "v2.3.5",
+        "published_at": "2026-11-08",
+        "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.3.5/pager-standalone-launcher.bin",
+        "Fs": 2756608,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2652960,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-lora-pager",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2652960,
+            "partition_size": 2686976,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2686976,
+              "source_offset": 65536,
+              "copy_size": 2652960,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "littlefs",
+              "role": "spiffs",
+              "size": 458752,
+              "source": "firmware",
+              "source_offset": 2752512,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'littlefs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 2793472,
+            "analyzed_at": "2026-11-08T19:53:10Z",
+            "etag": "\"0x8DF3DD13EBDFFE7\"",
+            "last_modified": "Sun, 08 Nov 2026 19:48:21 GMT"
+          }
+        }
+      },
+      {
         "version": "v2.3.4",
         "published_at": "2026-10-28",
         "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.3.4/pager-standalone-launcher.bin",
@@ -108405,53 +108532,6 @@
             "analyzed_at": "2026-10-20T11:51:11Z",
             "etag": "\"0x8DF19B67B42E19B\"",
             "last_modified": "Wed, 23 Sep 2026 21:06:05 GMT"
-          }
-        }
-      },
-      {
-        "version": "v2.2.0",
-        "published_at": "2026-09-20",
-        "file": "https://github.com/ratspeak/ratspeak-handheld/releases/download/v2.2.0/pager-standalone.bin",
-        "Fs": 2215952,
-        "nb": true,
-        "ao": 0,
-        "as": 2215952,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "app",
-          "target": "t-lora-pager",
-          "app": {
-            "source_offset": 0,
-            "image_size": 2215952,
-            "partition_size": 2215952,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 2215952,
-              "source_offset": 0,
-              "copy_size": 2215952,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "file_size",
-            "confidence": "partial",
-            "warnings": [
-              "No partition table found; manifest generated from file size and detected app offset."
-            ],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-10-20T11:51:11Z",
-            "etag": "\"0x8DF1727D0F9AE22\"",
-            "last_modified": "Sun, 20 Sep 2026 14:59:48 GMT"
           }
         }
       }
