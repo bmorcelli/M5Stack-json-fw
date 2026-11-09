@@ -475,10 +475,10 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/514652/2119222805013372929/2119222805017567233/bin/2119222805017567234.bin",
         "Fs": 505760,
-        "nb": true,
-        "ao": 0,
         "as": 505760,
+        "ao": 0,
         "s": 0,
+        "nb": true,
         "f": 0,
         "f2": 0,
         "install": {
@@ -9912,7 +9912,7 @@
     ],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/M5Cardputer-Audio-Stream-Server",
-    "download": 11443,
+    "download": 11444,
     "versions": [
       {
         "version": "1.0",
@@ -18184,7 +18184,7 @@
     ],
     "author": "Domka",
     "github": "",
-    "download": 146,
+    "download": 147,
     "versions": [
       {
         "version": "1.16.1",
@@ -30823,6 +30823,63 @@
             "last_modified": "Sun, 04 Oct 2026 18:22:57 GMT"
           }
         }
+      },
+      {
+        "version": "P.1.16.1.5",
+        "version_id": "2107176503327727618",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/137377/2106812332383805442/2107176503327727618/bin/2107176503327727619.bin",
+        "Fs": 3719824,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3654288,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3654288,
+            "partition_size": 3932160,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3932160,
+              "source_offset": 65536,
+              "copy_size": 3654288,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 196608,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T06:08:27Z",
+            "etag": "\"628FFDBFFF03B3DA38BD2AE910F99A35\"",
+            "last_modified": "Mon, 05 Oct 2026 18:30:02 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -32896,13 +32953,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/395643/2119635318217547778/2119667995452809217/bin/2119667995452809218.bin",
         "Fs": 8388608,
+        "as": 964240,
+        "ao": 65536,
+        "ss": 1572864,
+        "so": 6750208,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 964240,
-        "so": 6750208,
-        "ss": 1572864,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -47446,6 +47503,80 @@
     "esp": "32"
   },
   {
+    "_id": "2118687349905465346",
+    "fid": "2118687349905465346",
+    "name": "CrossPoint for PaperDIY (community port)",
+    "description": "PaperDIY Reader is a CrossPoint-based EPUB reader for the M5Stack PaperDIY (K159). It includes library, fonts, dictionary, OPDS, Calibre, KOReader Sync and web UI.\n\nSource, Magsafe case STL, releases and issues: https://github.com/dcarnicer/paperdiy-reader\n\nOnly for M5Stack PaperDIY. This is not an official M5Stack firmware.\n\nKnown limitations: BLE page-turner pairing is not validated with a real BLE remote; sleep current and real battery life are not measured; the original 140 mAh cell gives short battery life; ghosting after long reading is slight at the default 5-page refresh; KOReader Sync was validated against a local KOSync server.\n2.0.0-paperdiy.1",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2118687349905465346/2119521491337519106/cover/2119522818201395202.png",
+    "category": "paper-diy",
+    "tags": [
+      "E-books & Reading"
+    ],
+    "author": "dabidesu",
+    "github": "https://github.com/dcarnicer/paperdiy-reader",
+    "download": 1,
+    "versions": [
+      {
+        "version": "2.0.0-1",
+        "version_id": "2119521491337519106",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2118687349905465346/2119521491337519106/bin/2119521491337519107.bin",
+        "Fs": 5492688,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5427152,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5427152,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5427152,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T06:08:27Z",
+            "etag": "\"3C011855389FD87CF8423BB95D0A0973\"",
+            "last_modified": "Sun, 08 Nov 2026 20:04:37 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "2091144466157694978",
     "fid": "2091144466157694978",
     "name": "CrossPoint-PaperMono-CJK",
@@ -48290,7 +48421,7 @@
     ],
     "author": "Dlazder",
     "github": "https://github.com/Dlazder/m5stick_crystal_firmware",
-    "download": 1115,
+    "download": 1116,
     "versions": [
       {
         "version": "1.0.1",
@@ -57927,7 +58058,7 @@
     ],
     "author": "EnderM3",
     "github": "",
-    "download": 1035,
+    "download": 1036,
     "versions": [
       {
         "version": "1.1",
@@ -62275,11 +62406,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2115395465862520833/2115790204373901313/2119665646806147073/bin/2119665646806147074.bin",
         "Fs": 3347728,
+        "as": 3216656,
+        "ao": 131072,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 131072,
-        "as": 3216656,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -83989,13 +84120,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2119373385178456065/bin/2119373385178456066.bin",
         "Fs": 8388608,
+        "as": 1262224,
+        "ao": 65536,
+        "ss": 1572864,
+        "so": 6750208,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1262224,
-        "so": 6750208,
-        "ss": 1572864,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -84050,13 +84181,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2119008901494644738/bin/2119008901494644739.bin",
         "Fs": 8388608,
+        "as": 1222240,
+        "ao": 65536,
+        "ss": 1572864,
+        "so": 6750208,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1222240,
-        "so": 6750208,
-        "ss": 1572864,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -84111,13 +84242,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2119002294949945346/bin/2119002294949945347.bin",
         "Fs": 8388608,
+        "as": 1220400,
+        "ao": 65536,
+        "ss": 1572864,
+        "so": 6750208,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1220400,
-        "so": 6750208,
-        "ss": 1572864,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -84172,13 +84303,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2118952227857670146/bin/2118952227857670147.bin",
         "Fs": 8388608,
+        "as": 1213360,
+        "ao": 65536,
+        "ss": 1572864,
+        "so": 6750208,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1213360,
-        "so": 6750208,
-        "ss": 1572864,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -84233,13 +84364,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2118993783528529921/bin/2118993783528529922.bin",
         "Fs": 8388608,
+        "as": 1216624,
+        "ao": 65536,
+        "ss": 1572864,
+        "so": 6750208,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1216624,
-        "so": 6750208,
-        "ss": 1572864,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -92970,6 +93101,82 @@
       }
     ],
     "esp": "s3"
+  },
+  {
+    "_id": "2119398094133698562",
+    "fid": "2119398094133698562",
+    "name": "M5RetroBoy OS    11 GAME",
+    "description": "M5RetroBoy OS - Complete Retro Gaming & Music Firmware\nfirmware complet d'inspiration r\u00e9tro pour le M5StickC Plus2. Ce projet int\u00e8gre 11 jeux optimis\u00e9s et un lecteur de musique autonome, fonctionnant nativement sans aucun module additionnel.\n complete retro-inspired firmware for the M5StickC Plus2. This project features 11 optimized games and a standalone music player, running natively without any additional modules.\nGAMES LIST\n\u2022 Dino Game : L'authentique jeu du dinosaure de Chrome. / The authentic Chrome dinosaur game.\n\u2022 Flappy Bird : \u00c9vite les obstacles pour aller le plus loin possible. / Avoid obstacles and fly as far as possible.\n\u2022 Meteors : \u00c9vite les m\u00e9t\u00e9orites en utilisant le gyroscope. / Dodge space rocks using the gyroscope.\n\u2022 Labyrinthe Bille : Guide la bille \u00e0 travers le d\u00e9dale gr\u00e2ce au gyroscope. / Guide the marble through the maze using the gyroscope.\n\u2022 Casse-Briques : Casse-briques traditionnel contr\u00f4l\u00e9 par l'inclinaison de l'appareil. / Traditional brick breaker controlled by tilting the device.\n\u2022 Invaders : Dirige le vaisseau au gyroscope et tire avec le bouton principal M5. / Control the spaceship with the gyroscope and shoot with the main M5 button.\n\u2022 Slalom : D\u00e9vale la piste de ski, \u00e9vite les arbres et passe entre les drapeaux. / Ski down the slope, avoid trees, and clear the gates.\n\u2022 Stack : Empile les blocs au bon moment. Tout d\u00e9calage r\u00e9duit la taille du bloc. / Stack blocks with precise timing. Missing the timing shrinks the block.\n\u2022 Course : Conduis au gyroscope avec trafic en temps r\u00e9el, v\u00e9hicules et couleurs personnalisables. / Drive using the gyroscope with active traffic, customizable vehicles, and colors.\n\u2022 Rivi\u00e8re : Navigue et \u00e9vite les pierres ou les branches en utilisant le gyroscope. / Navigate and dodge rocks or branches using the gyroscope.\n\u2022 Poissons : Mange les poissons plus petits pour grandir et \u00e9vite les pr\u00e9dateurs. / Eat smaller fish to grow while avoiding larger predators.\nFONCTIONNALIT\u00c9S AUDIO / AUDIO FEATURES\n\u2022 Lecture de m\u00e9lodies c\u00e9l\u00e8bres via le buzzer interne (De nouvelles musiques sont en pr\u00e9paration, ainsi qu\u2019un moyen d\u2019ajouter vos propres morceaux personnalis\u00e9s.)\n\u2022 Playback of famous melodies using the internal buzzer (New music is on the way, along with a way to add your own custom tracks.)\nFONCTIONNALIT\u00c9S SYST\u00c8ME / SYSTEM FEATURES\n\u2022 Affichage du niveau de la batterie sur l'\u00e9cran d'accueil. / Battery status displayed on the home screen.\n\u2022 Gestion du volume (activation et d\u00e9sactivation du son). / Audio management (mute and unmute controls).\n\u2022 R\u00e9glage pr\u00e9cis de la luminosit\u00e9 de l'\u00e9cran. / Precise screen brightness adjustment.\n\u2022 Menu de calibration du gyroscope (IMU). / Gyroscope (IMU) calibration menu.\n\u2022 Gestion de l'\u00e9cran de veille avec minuteur ajustable avant la mise en veille compl\u00e8te. / Screensaver management with adjustable timer before full sleep mode.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2119398094133698563/cover/2119398094133698565.png",
+    "category": "stickc-plus2",
+    "tags": [
+      "Tools",
+      "Games",
+      "Audio & Media"
+    ],
+    "author": "ADdev",
+    "github": "https://github.com/adfffgyujyhkbvuyyhcbhj/M5-RetroBoy-OS/",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1",
+        "version_id": "2119398094133698563",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2119398094133698563/bin/2119398094133698564.bin",
+        "Fs": 649920,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 584384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 584384,
+            "partition_size": 1310720,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1310720,
+              "source_offset": 65536,
+              "copy_size": 584384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1441792,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T06:08:27Z",
+            "etag": "\"ED875431CB8C884EC18F109F76D99E19\"",
+            "last_modified": "Sun, 08 Nov 2026 11:54:17 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
   },
   {
     "_id": "1897200000000002087",
@@ -103991,6 +104198,63 @@
             "analyzed_at": "2026-07-28T21:29:51Z",
             "etag": "\"988FDEFCD608257A12F055E9DF0E9C40\"",
             "last_modified": "Tue, 07 Apr 2026 11:02:26 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.20",
+        "version_id": "2118662468950204417",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/73352/1897200000000003406/2118662468950204417/bin/2118662468950204418.bin",
+        "Fs": 1669248,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1603712,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1603712,
+            "partition_size": 1966080,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1966080,
+              "source_offset": 65536,
+              "copy_size": 1603712,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 131072,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T06:08:27Z",
+            "etag": "\"09361DB74BBC1E749DCD30998032C47A\"",
+            "last_modified": "Fri, 06 Nov 2026 11:11:10 GMT"
           }
         }
       }
@@ -124888,10 +125152,10 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/514652/2119223184715325442/2119223184715325443/bin/2119223184715325444.bin",
         "Fs": 1599360,
-        "nb": true,
-        "ao": 0,
         "as": 1599360,
+        "ao": 0,
         "s": 0,
+        "nb": true,
         "f": 0,
         "f2": 0,
         "install": {
@@ -125166,7 +125430,7 @@
     ],
     "author": "PandaDev",
     "github": "https://pandadevhub.com/app-catalogue/pandaos",
-    "download": 38,
+    "download": 39,
     "versions": [
       {
         "version": "0.5.0",
@@ -131063,11 +131327,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/514652/2119660509756825601/2119660509756825602/bin/2119660509756825603.bin",
         "Fs": 614400,
+        "as": 548864,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 548864,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -162921,11 +163185,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2118698580028596226/bin/2118698580028596227.bin",
         "Fs": 1676000,
+        "as": 1610464,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1610464,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -163112,11 +163376,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2118698580028596226/bin/2118698580028596227.bin",
         "Fs": 1676000,
+        "as": 1610464,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1610464,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -167585,6 +167849,69 @@
             "analyzed_at": "2026-07-28T21:31:12Z",
             "etag": "\"513BDA988E50D0D29C3F2A2096E540BA\"",
             "last_modified": "Wed, 20 May 2026 14:04:30 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2118985784638480386",
+    "fid": "2118985784638480386",
+    "name": "TouchFish News",
+    "description": "# TouchFish News \u00b7 PaperDIY\n\nTouchFish News \u662f\u4e00\u4e2a\u9762\u5411 M5Stack PaperDIY \u7684\u684c\u9762\u65b0\u95fb\u770b\u677f\u3002\u5b83\u628a\u65b0\u95fb\u3001\u6781\u7b80\u7684\u5ba0\u7269\u4e92\u52a8\u3001\n\u519c\u5386\u548c\u8282\u5047\u65e5\u4fe1\u606f\u96c6\u4e2d\u663e\u793a\u5728 4.7 \u82f1\u5bf8\u7535\u5b50\u7eb8\u4e0a\uff0c\u9002\u5408\u653e\u5728\u4e66\u684c\u3001\u7384\u5173\u6216\u529e\u516c\u5ba4\uff0c\n\u4f5c\u4e3a\u4f4e\u529f\u8017\u7684\u4fe1\u606f\u5c4f\u3002\n\n\n## \u786c\u4ef6\n\n- M5Stack PaperDIY Complete Kit\n- ESP32-S3-WROOM-1-N16R8\n- 16 MB Flash\uff0c8 MB Octal PSRAM\n- 4.7 \u82f1\u5bf8 960\u00d7540 \u7070\u5ea6\u7535\u5b50\u7eb8\n- Wi-Fi 2.4 GHz\n- \u673a\u8eab\u7535\u6e90\u952e\n- KEY1\uff1aGPIO4\n- KEY2\uff1aGPIO3\n\n## \u529f\u80fd\n\n- \u65b0\u95fb\u4e3b\u9898\uff1a\u8d22\u7ecf\u3001\u7efc\u5408\u3001\u79d1\u6280\u3001AI\u3001\u4f53\u80b2\u3001\u822a\u5929\u3001\u56fd\u9645\u548c\u5a31\u4e50\n- \u65b0\u95fb\u6765\u6e90\uff1a\n  - \u534e\u5c14\u8857\u89c1\u95fb\n  - \u65b0\u6d6a\u8d22\u7ecf\n  - \u4e1c\u65b9\u8d22\u5bcc\n  - IT\u4e4b\u5bb6\n  - \u65b0\u6d6a\u5a31\u4e50\n  - Wall Street Journal\n  - Hacker News\n  - ESPN\n  - arXiv AI\n  - NASA\n- \u65b0\u95fb\u6765\u6e90\u5728\u72ec\u7acb\u9875\u9762\u4e2d\u9009\u62e9\n- \u6765\u6e90\u5207\u6362\u524d\u4f1a\u5b9e\u9645\u8054\u7f51\u6293\u53d6\uff0c\u7f51\u7edc\u5931\u8d25\u65f6\u4e0d\u4f1a\u5207\u6362\n- \u65b0\u95fb\u9ed8\u8ba4 10 \u5206\u949f\u66f4\u65b0\u4e00\u6b21\uff0c\u53ef\u624b\u52a8\u5373\u65f6\u540c\u6b65\n- \u5ba0\u7269\u8868\u60c5\u968f\u65e5\u671f\u3001\u8282\u5047\u65e5\u3001\u591c\u95f4\u548c\u6309\u952e\u4e92\u52a8\u53d8\u5316\n- \u516c\u5386\u3001\u519c\u5386\u3001\u8282\u5047\u65e5\u540d\u79f0\u548c\u5012\u8ba1\u65f6\n- \u5de5\u4f5c\u65e5\u4e0a\u4e0b\u73ed\u6253\u5361\u63d0\u9192\uff0c\u53ef\u8bbe\u7f6e\u5177\u4f53\u65f6\u95f4\n- \u624b\u673a\u626b\u7801\u7f51\u9875\u914d\u7f51\n- \u652f\u6301 4 \u4e2a\u5c4f\u5e55\u65b9\u5411\uff0c\u6bcf\u6b21\u9006\u65f6\u9488\u65cb\u8f6c 90\u00b0\n- \u6a2a\u5c4f\u4e0e\u7ad6\u5c4f\u72ec\u7acb\u5e03\u5c40\n- \u7535\u5b50\u7eb8\u5c40\u90e8\u5237\u65b0\uff0c\u51cf\u5c11\u6574\u5c4f\u95ea\u70c1\u548c\u6b8b\u5f71\n- \u56fa\u5b9a\u4f7f\u7528 UTC+8\n\n## \u5f00\u673a\u4e0e\u65e5\u5e38\u4f7f\u7528\n\n\u8bbe\u5907\u5f00\u673a\u540e\u5148\u663e\u793a\u542f\u52a8\u65e5\u5fd7\uff0c\u4f9d\u6b21\u68c0\u67e5 Wi-Fi\u3001\u540c\u6b65\u65f6\u95f4\u548c\u7f51\u7edc\u6570\u636e\uff0c\u968f\u540e\u8fdb\u5165\n\u5ba0\u7269\u65b0\u95fb\u770b\u677f\u3002\n\n\u770b\u677f\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u4e0e\u5ba0\u7269\u4e92\u52a8\n- KEY1 \u957f\u6309\uff1a\u7acb\u5373\u540c\u6b65\u65b0\u95fb\u548c\u8282\u5047\u65e5\n- KEY2 \u77ed\u6309\uff1a\u6253\u5f00\u8bbe\u7f6e\n\n\u8bbe\u7f6e\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u5149\u6807\u4e0a\u79fb\n- KEY2 \u77ed\u6309\uff1a\u5149\u6807\u4e0b\u79fb\n- KEY1 \u957f\u6309\uff1a\u786e\u8ba4\u5f53\u524d\u9009\u9879\n- KEY2 \u957f\u6309\uff1a\u8fd4\u56de\u4e0a\u4e00\u7ea7\n\n\u65f6\u95f4\u9009\u62e9\u548c\u65b0\u95fb\u6765\u6e90\u9009\u62e9\u4e5f\u4f7f\u7528\u76f8\u540c\u903b\u8f91\uff1a\u77ed\u6309\u9009\u62e9\u3001\u957f\u6309\u786e\u8ba4\u3001\u957f\u6309 KEY2 \u8fd4\u56de\u3002\n\n## \u9996\u6b21\u914d\u7f51\n\n1. \u5728\u770b\u677f\u77ed\u6309 KEY2 \u6253\u5f00\u8bbe\u7f6e\u3002\n2. \u79fb\u52a8\u5230\u201cWi-Fi \u7f51\u7edc\u201d\uff0c\u957f\u6309 KEY1 \u786e\u8ba4\u3002\n3. \u624b\u673a\u626b\u63cf\u5c4f\u5e55\u4e8c\u7ef4\u7801\uff0c\u52a0\u5165 `InkPet-Paper-XXXX` \u4e34\u65f6\u70ed\u70b9\u3002\n4. \u5728\u6253\u5f00\u7684\u7f51\u9875\u4e2d\u9009\u62e9\u5bb6\u5ead Wi-Fi \u5e76\u8f93\u5165\u5bc6\u7801\u3002\n5. \u8bbe\u5907\u8054\u7f51\u540e\u81ea\u52a8\u4fdd\u5b58\u914d\u7f6e\u3001\u540c\u6b65\u65f6\u95f4\u5e76\u8fd4\u56de\u770b\u677f\u3002\n\n\u5982\u679c\u624b\u673a\u6ca1\u6709\u81ea\u52a8\u6253\u5f00\u914d\u7f51\u9875\u9762\uff0c\u8fde\u63a5\u70ed\u70b9\u540e\u8bbf\u95ee\uff1a\n\n```text\nhttp://192.168.4.1\n```\n\n## \u65b0\u95fb\u6765\u6e90\u5207\u6362\n\n1. \u6253\u5f00\u8bbe\u7f6e\uff0c\u8fdb\u5165\u201c\u65b0\u95fb\u6765\u6e90\u201d\u3002\n2. \u4f7f\u7528 KEY1 / KEY2 \u4e0a\u4e0b\u9009\u62e9\u6765\u6e90\u3002\n3. \u957f\u6309 KEY1 \u5f00\u59cb\u8054\u7f51\u68c0\u6d4b\u3002\n4. \u6293\u53d6\u6210\u529f\u540e\u7acb\u5373\u5207\u6362\uff1b\u5931\u8d25\u5219\u4fdd\u7559\u539f\u6765\u6e90\u5e76\u663e\u793a\u7f51\u7edc\u9519\u8bef\u3002\n\n\u5f53\u524d\u6765\u6e90\u4f1a\u663e\u793a\u5728\u4e3b\u754c\u9762\u5e95\u90e8\u3002\n\n## \u6253\u5361\u63d0\u9192\n\n\u5728\u8bbe\u7f6e\u4e2d\u5f00\u542f\u201c\u6253\u5361\u63d0\u9192\u201d\uff0c\u7136\u540e\u5206\u522b\u8fdb\u5165\u201c\u4e0a\u73ed\u65f6\u95f4\u201d\u548c\u201c\u4e0b\u73ed\u65f6\u95f4\u201d\uff1a\n\n- \u77ed\u6309 KEY1 / KEY2 \u4ee5 30 \u5206\u949f\u4e3a\u5355\u4f4d\u8c03\u6574\n- \u957f\u6309 KEY1 \u4fdd\u5b58\n- \u957f\u6309 KEY2 \u53d6\u6d88\u5e76\u8fd4\u56de\n\n\u63d0\u9192\u53ea\u5728\u5de5\u4f5c\u65e5\u89e6\u53d1\u3002\n\n## \u6ce8\u610f\u4e8b\u9879\n\n- \u65b0\u95fb\u63a5\u53e3\u5c5e\u4e8e\u516c\u5f00\u6216\u975e\u5b98\u65b9\u63a5\u53e3\uff0c\u672a\u6765\u53ef\u80fd\u8c03\u6574\u683c\u5f0f\u6216\u8bbf\u95ee\u7b56\u7565\u3002\n- \u8282\u5047\u65e5\u63a5\u53e3\u4e34\u65f6\u4e0d\u53ef\u7528\u65f6\uff0c\u4f1a\u56de\u9000\u5230\u5185\u7f6e\u6570\u636e\u3002\n- Wall Street Journal\u3001Hacker News\u3001ESPN\u3001arXiv \u548c NASA \u5185\u5bb9\u4e3a\u82f1\u6587\u3002\n- \u65b0\u95fb\u6765\u6e90\u5207\u6362\u548c\u5b9a\u65f6\u5237\u65b0\u4f1a\u6d88\u8017\u7f51\u7edc\u6d41\u91cf\u4e0e\u4e00\u5b9a\u7535\u91cf\u3002",
+    "cover": "https://m5burner-cdn.m5stack.com/community/515524/2118985784638480386/2118985784642674690/cover/2118985784642674692.png",
+    "category": "paper-diy",
+    "tags": [
+      "Display & Art"
+    ],
+    "author": "KILL_PID",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v1.0",
+        "version_id": "2118985784642674690",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/515524/2118985784638480386/2118985784642674690/bin/2118985784642674691.bin",
+        "Fs": 4207184,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4141648,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4141648,
+            "partition_size": 16711680,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 16711680,
+              "source_offset": 65536,
+              "copy_size": 4141648,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T06:08:27Z",
+            "etag": "\"469D044289A1E67D2EFDB7FF22DCE76C\"",
+            "last_modified": "Sat, 07 Nov 2026 08:35:54 GMT"
           }
         }
       }
@@ -293489,7 +293816,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 66458,
+    "download": 66459,
     "versions": [
       {
         "version": "Alpha-29",
@@ -360048,11 +360375,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2119405079717650434/2119405079717650435/bin/2119405079717650436.bin",
         "Fs": 1418016,
+        "as": 1352480,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1352480,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -363062,7 +363389,7 @@
     ],
     "author": "yehchiam",
     "github": "https://github.com/78/xiaozhi-esp32/releases",
-    "download": 159,
+    "download": 160,
     "versions": [
       {
         "version": "2.2.6",
@@ -379594,11 +379921,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/94426/2118813844900585474/2119665463322124290/bin/2119665463322124291.bin",
         "Fs": 2440144,
+        "as": 2374608,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2374608,
         "install": {
           "schema": 1,
           "format": "merged",
