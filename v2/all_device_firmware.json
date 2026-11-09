@@ -1362,11 +1362,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/519114/2116739475079532546/2119448693718032385/bin/2119448693718032386.bin",
         "Fs": 6363616,
+        "as": 6298080,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 6298080,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -3198,6 +3198,70 @@
     "esp": "s3"
   },
   {
+    "_id": "2119217619150741505",
+    "fid": "2119217619150741505",
+    "name": "AREA 512 for Cardputer v1.1",
+    "description": "Welcome to AREA512!\n\nAREA512 is an OS built for the Cardputer ADV and Cardputer v1.1, a tiny device with just 512KB of RAM and 8MB of flash storage!\n\nIt is based on FemtoRuby and includes MicroPython, so you can write Ruby and Python right on the Cardputer, then compile and run them \u2014 all on the device!",
+    "cover": "https://m5burner-cdn.m5stack.com/community/550615/2119217619150741505/2119217619154935810/cover/2119217619154935812.png",
+    "category": "cardputer",
+    "tags": [
+      "Tools",
+      "Games"
+    ],
+    "author": "EHamachang",
+    "github": "https://github.com/engneer-hamachan/area512",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v2.8",
+        "version_id": "2119217619154935810",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/550615/2119217619150741505/2119217619154935810/bin/2119217619154935811.bin",
+        "Fs": 5387888,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5322352,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5322352,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 5322352,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T01:53:45Z",
+            "etag": "\"79C3C80A0CA4EFF15AE8765DB2FA3A76\"",
+            "last_modified": "Sat, 07 Nov 2026 23:57:08 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000001969",
     "fid": "1897200000000001969",
     "name": "ATOM Babies",
@@ -4903,6 +4967,63 @@
             "analyzed_at": "2026-11-05T19:02:58Z",
             "etag": "\"31A5ACE5F3743144EA258F34E6303372\"",
             "last_modified": "Sat, 31 Oct 2026 19:21:46 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.8.0",
+        "version_id": "2119400931999784961",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2105575233919787009/2119400931999784961/bin/2119400931999784962.bin",
+        "Fs": 2601376,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2535840,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2535840,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 2535840,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T01:53:45Z",
+            "etag": "\"B5B98B99A01711BCED3C4F69A54CD5F1\"",
+            "last_modified": "Sun, 08 Nov 2026 12:05:33 GMT"
           }
         }
       }
@@ -53375,7 +53496,7 @@
     ],
     "author": "pkolbas",
     "github": "",
-    "download": 139,
+    "download": 140,
     "versions": [
       {
         "version": "0.1.35",
@@ -85047,7 +85168,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104901,
+    "download": 104902,
     "versions": [
       {
         "version": "2.4.10",
@@ -85406,7 +85527,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104901,
+    "download": 104902,
     "versions": [
       {
         "version": "2.4.10",
@@ -94451,7 +94572,7 @@
     ],
     "author": "matthewrogers",
     "github": "https://github.com/RamboRogers/M5StickCPlus2-AMG8833-Thermal-Camera",
-    "download": 579,
+    "download": 580,
     "versions": [
       {
         "version": "2.0",
@@ -97224,7 +97345,7 @@
     ],
     "author": "jsaludes",
     "github": "https://github.com/jsaludes/mccc",
-    "download": 117,
+    "download": 118,
     "versions": [
       {
         "version": "v1.1-English",
@@ -97453,7 +97574,7 @@
     ],
     "author": "jsaludes",
     "github": "https://github.com/jsaludes/mccc",
-    "download": 117,
+    "download": 118,
     "versions": [
       {
         "version": "v1.1-English",
@@ -120453,7 +120574,7 @@
     ],
     "author": "gadget_heaven",
     "github": "https://github.com/craigdianesmith-glitch/tab5-adsb-flight-tracker-cpp",
-    "download": 128,
+    "download": 129,
     "versions": [
       {
         "version": "1.1.2",
@@ -132493,7 +132614,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 148,
+    "download": 149,
     "versions": [
       {
         "version": "v3-20260918",
@@ -132680,6 +132801,70 @@
       }
     ],
     "esp": "s3"
+  },
+  {
+    "_id": "2119081865472811010",
+    "fid": "2119081865472811010",
+    "name": "Quansheng K1 Viewer",
+    "description": "K1Viewer turns the M5Stack Tab5 into an external display and touchscreen controller for the UV-K1/K5V3 radio. It mirrors the radio screen, provides a convenient virtual keypad, and connects through either the native USB-C port or a standard K cable.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/18981/2119081865472811010/2119081865477005314/cover/2119081865477005316.png",
+    "category": "tab5",
+    "tags": [
+      "Tools",
+      "Network & Communication"
+    ],
+    "author": "F4HWN",
+    "github": "https://github.com/armel/uv-k1-k5v3-firmware-custom",
+    "download": 2,
+    "versions": [
+      {
+        "version": "1.2.1",
+        "version_id": "2119081865477005314",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/18981/2119081865472811010/2119081865477005314/bin/2119081865477005315.bin",
+        "Fs": 8150912,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 8085376,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 8085376,
+            "partition_size": 8388608,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8388608,
+              "source_offset": 65536,
+              "copy_size": 8085376,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T01:53:45Z",
+            "etag": "\"73FB259625B9DEF79B6DDC3A51397102\"",
+            "last_modified": "Sat, 07 Nov 2026 14:57:42 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "p4"
   },
   {
     "_id": "1897200000000000856",
@@ -145121,7 +145306,7 @@
     ],
     "author": "\u94f2\u5c4e\u5927\u5b98\u4eba",
     "github": "https://github.com/nongxl/SkyCompass_Satellite",
-    "download": 483,
+    "download": 484,
     "versions": [
       {
         "version": "v1.4",
@@ -146203,6 +146388,63 @@
             "analyzed_at": "2026-11-05T19:04:49Z",
             "etag": "\"7E5DC2139A0EFBCAC246D7EA5C1B0BC4\"",
             "last_modified": "Wed, 04 Nov 2026 01:47:19 GMT"
+          }
+        }
+      },
+      {
+        "version": "v3.3",
+        "version_id": "2119013533436518402",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/316104/1897200000000000393/2119013533436518402/bin/2119013533436518403.bin",
+        "Fs": 2710784,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2645248,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2645248,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 2645248,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T01:53:45Z",
+            "etag": "\"2A99C7C7DE0EBBD1A7C092B71C4F203C\"",
+            "last_modified": "Sat, 07 Nov 2026 10:26:10 GMT"
           }
         }
       }
@@ -154070,7 +154312,7 @@
     ],
     "author": "Dylan Luo",
     "github": "https://github.com/Ocean-lhy/Stopwatch-GrokBot",
-    "download": 16,
+    "download": 17,
     "versions": [
       {
         "version": "v0.2",
@@ -156541,7 +156783,7 @@
     ],
     "author": "datou",
     "github": "https://github.com/yejun/tab5-fancy-clock",
-    "download": 85,
+    "download": 86,
     "versions": [
       {
         "version": "1.0.0",
@@ -161730,11 +161972,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2116598500839493634/2116599624682278914/2119556858249912321/bin/2119556858249912322.bin",
         "Fs": 1297968,
+        "as": 1232432,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1232432,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -165270,6 +165512,78 @@
             "analyzed_at": "2026-11-05T19:05:25Z",
             "etag": "\"6358F6C4C0574F8088DA9483078EAE7B\"",
             "last_modified": "Mon, 02 Nov 2026 10:31:25 GMT"
+          }
+        }
+      },
+      {
+        "version": "20261108",
+        "version_id": "2119300793138585602",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/121/2104900222973767682/2119300793138585602/bin/2119300793138585603.bin",
+        "Fs": 16777216,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4597504,
+        "fo": 9502720,
+        "fs": 4194304,
+        "fo2": 13697024,
+        "fs2": 3080192,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4597504,
+            "partition_size": 4718592,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4718592,
+              "source_offset": 65536,
+              "copy_size": 4597504,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "system",
+              "role": "fat",
+              "size": 4194304,
+              "source": "firmware",
+              "source_offset": 9502720,
+              "copy_size": 4194304,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 3080192,
+              "source": "firmware",
+              "source_offset": 13697024,
+              "copy_size": 3080192,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16814080,
+            "analyzed_at": "2026-11-09T01:53:47Z",
+            "etag": "\"EA84E5FB55BBD82B18F0DCAC0B354DAB\"",
+            "last_modified": "Sun, 08 Nov 2026 05:27:38 GMT"
           }
         }
       }
@@ -356435,7 +356749,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 58,
+    "download": 59,
     "versions": [
       {
         "version": "0.1.0",
@@ -356493,6 +356807,63 @@
             "last_modified": "Fri, 30 Oct 2026 13:13:01 GMT"
           }
         }
+      },
+      {
+        "version": "0.3.0",
+        "version_id": "2119403157870780418",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2116156419243347969/2119403157870780418/bin/2119403157870780419.bin",
+        "Fs": 1481152,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1415616,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1415616,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1415616,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T01:53:45Z",
+            "etag": "\"50B90CF11B3BC4C97E9B98E80F584C10\"",
+            "last_modified": "Sun, 08 Nov 2026 12:14:24 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -356514,7 +356885,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 58,
+    "download": 59,
     "versions": [
       {
         "version": "0.1.0",
@@ -356570,6 +356941,63 @@
             "analyzed_at": "2026-11-05T19:08:01Z",
             "etag": "\"85A928066616423B0FECF7C958675CD0\"",
             "last_modified": "Fri, 30 Oct 2026 13:13:01 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.3.0",
+        "version_id": "2119403157870780418",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2116156419243347969/2119403157870780418/bin/2119403157870780419.bin",
+        "Fs": 1481152,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1415616,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1415616,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1415616,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T01:53:45Z",
+            "etag": "\"50B90CF11B3BC4C97E9B98E80F584C10\"",
+            "last_modified": "Sun, 08 Nov 2026 12:14:24 GMT"
           }
         }
       }
@@ -388243,7 +388671,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18005,
+    "download": 18006,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
@@ -388443,7 +388871,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18005,
+    "download": 18006,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
