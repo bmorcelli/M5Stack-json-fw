@@ -456,6 +456,71 @@
     "esp": "32"
   },
   {
+    "_id": "2119222805013372929",
+    "fid": "2119222805013372929",
+    "name": "2048 Game",
+    "description": "Classic 2048 game for CORE2. Slide numbered tiles in the four directions; two same-numbered tiles, when they collide, will join to form a tile with the sum of the two tiles. Try to build up to 2048.\n\nThe AWS version of the game did not work on my CORE2, so I asked Claude to make one. I have never won the game, so I am unable to test that. If you win it, please let me know how it goes !",
+    "cover": "https://m5burner-cdn.m5stack.com/community/514652/2119222805013372929/2119222805017567233/cover/2119222805017567235.png",
+    "category": "core2",
+    "tags": [
+      "Games"
+    ],
+    "author": "crackulator",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0",
+        "version_id": "2119222805017567233",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/514652/2119222805013372929/2119222805017567233/bin/2119222805017567234.bin",
+        "Fs": 505760,
+        "nb": true,
+        "ao": 0,
+        "as": 505760,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "core2",
+          "app": {
+            "source_offset": 0,
+            "image_size": 505760,
+            "partition_size": 505760,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 505760,
+              "source_offset": 0,
+              "copy_size": 505760,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:29Z",
+            "etag": "\"7516DA72A9D13C492F16F7BD7CE5476F\"",
+            "last_modified": "Sun, 08 Nov 2026 00:17:44 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
     "_id": "1897200000000002549",
     "fid": "1897200000000002549",
     "name": "3,541 Jokes/Insults Desktop Scroller Plus1 Or Plus2",
@@ -5112,7 +5177,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/adversary",
-    "download": 111,
+    "download": 112,
     "versions": [
       {
         "version": "v0.3.0",
@@ -30061,7 +30126,7 @@
     ],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 2332,
+    "download": 2333,
     "versions": [
       {
         "version": "1.16",
@@ -30360,7 +30425,7 @@
     ],
     "author": "vasbous",
     "github": "https://github.com/pr3y/Bruce/releases",
-    "download": 3565,
+    "download": 3566,
     "versions": [
       {
         "version": "1.9.1",
@@ -32810,6 +32875,84 @@
       }
     ],
     "esp": "32"
+  },
+  {
+    "_id": "2119635318217547778",
+    "fid": "2119635318217547778",
+    "name": "CARD AQUARIUM \u5361\u724c\u6c34\u65cf\u9986",
+    "description": "CardAquarium(\u9c7c\u7f38\u517b\u9c7c + \u6df1\u6d77\u63a2\u9669),\u9002\u7528\u4e8e M5Stack Cardputer / Cardputer Adv(ESP32-S3)\u3002\n\n\u8fd9\u662f\u4e00\u6b3e\u50cf\u7d20\u98ce\u6c34\u65cf\u7bb1\u517b\u6210\u6e38\u620f\u3002\u4f60\u53ef\u4ee5\u5728\u9c7c\u7f38\u91cc\u517b\u9c7c\u3001\u5b75\u86cb\u3001\u80b2\u79cd,\u4e5f\u53ef\u4ee5\u9a7e\u9a76\u6f5c\u8247\u53bb\u6df1\u6d77\u63a2\u9669,\u8fd8\u81ea\u5e26 4 \u4e2a\u5c0f\u6e38\u620f\u3002\n\nThis is a pixel-art aquarium simulation game. You can raise fish, hatch eggs, and breed them in your tank, or pilot a submarine to explore the deep sea\u2014plus, it includes four built-in mini-games.\n\n- **\u4e3b\u754c\u9762\uff08\u9c7c\u7f38\uff09**\uff1aF/Enter \u5582\u98df\u3001G \u5207\u6362\u98df\u7269\u3001N \u9009\u9c7c\u3001T \u96f6\u98df\u3001C \u6e05\u6d01\u3001L \u706f\u5149\u3001P \u6fc0\u5149\u6233\u91d1\u6ce1\u6ce1\u3001R \u9017\u8783\u87f9\uff0c\u4ee5\u53ca K \u56fe\u9274\u3001V \u57fa\u56e0\u5b9e\u9a8c\u5ba4\u3001M \u5c0f\u6e38\u620f\u3001E \u63a2\u9669\u3001B \u5546\u5e97\u3001Q \u4efb\u52a1\u3001A \u9057\u7269\u3001W \u5929\u6c14\u3001S \u8bbe\u7f6e\u3001H \u5e2e\u52a9\u3002\n- **\u6df1\u6d77\u63a2\u9669\uff08\u6f5c\u8247\uff09**\uff1aWASD \u6e38\u52a8\u3001Space \u58f0\u5450\u3001F \u9c7c\u53c9\u3001G \u7535\u78c1\u8109\u51b2\u3001Enter \u4e92\u52a8/\u505c\u9760/\u6551\u52a9\u3001M \u5730\u56fe\u3001N \u5c0f\u5730\u56fe\u3001Esc \u6682\u505c\u3001Q \u7d27\u6025\u4e0a\u6d6e\uff0c\u53e6\u9644\u4e00\u53e5\u6c27\u6c14\u548c\u60ac\u8d4f\u7684\u63d0\u793a\u3002\n- **\u5c0f\u6e38\u620f**\uff1a\u73cd\u73e0\u72e9\u730e\u3001\u7901\u77f3\u51b2\u523a\u3001\u8783\u87f9\u5927\u4f5c\u6218\uff083\u00d73 \u952e\u4f4d\uff09\u3001\u73ca\u745a\u56de\u58f0\u5404\u81ea\u7684\u64cd\u4f5c\u3002\n- **\u83dc\u5355 / \u5546\u5e97 / \u56fe\u9274**\uff1a`;` `.` \u9009\u62e9\uff0c`,` `/` \u5207\u6362\u6807\u7b7e\uff0cEnter \u786e\u8ba4\u6216\u8d2d\u4e70\uff08\u8fde\u6309\u4e24\u6b21\u51fa\u552e\uff09\uff0cB/Esc \u8fd4\u56de\u3002\n- Main Interface (Fish Tank): F/Enter to feed, G to switch food, N to select a fish, T for treats, C to clean, L for lights, P to pop gold bubbles with a laser, R to tease the crab; plus K for the Bestiary, V for the Gene Lab, M for mini-games, E for expeditions, B for the shop, Q for quests, A for relics, W for weather, S for settings, and H for help.\n- Deep-Sea Expedition (Submarine): WASD to move, Space for sonar, F for harpoon, G for EMP, Enter to interact/dock/rescue, M for the map, N for the mini-map, Esc to pause, and Q for an emergency ascent\u2014plus a reminder regarding oxygen levels and bounties.\n- Mini-games: Specific controls for Pearl Hunt, Reef Dash, Crab Battle (3\u00d73 key layout), and Coral Echo.\n- Menus / Shop / Bestiary: Use ; and . to select, , and / to switch tabs, Enter to confirm or purchase (press twice to sell), and B/Esc to go back.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/395643/2119635318217547778/2119635318221742081/cover/2119635318221742083.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Games"
+    ],
+    "author": "jiaxian97",
+    "github": "",
+    "download": 3,
+    "versions": [
+      {
+        "version": "V01.1",
+        "version_id": "2119667995452809217",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/395643/2119635318217547778/2119667995452809217/bin/2119667995452809218.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 964240,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 964240,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 964240,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T05:53:31Z",
+            "etag": "\"50208B233FFEE1F4741D8D007A2B2E87\"",
+            "last_modified": "Mon, 09 Nov 2026 05:46:46 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
   },
   {
     "_id": "1897200000000002810",
@@ -37471,7 +37614,7 @@
     ],
     "author": "8bitcardputer",
     "github": "",
-    "download": 12,
+    "download": 13,
     "versions": [
       {
         "version": "1.0",
@@ -38277,7 +38420,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 6291,
+    "download": 6292,
     "versions": [
       {
         "version": "v2.7.22",
@@ -41220,7 +41363,7 @@
     ],
     "author": "RLee2o3",
     "github": "https://github.com/RLee203/CardputerOS.git",
-    "download": 518,
+    "download": 519,
     "versions": [
       {
         "version": "2.4",
@@ -50118,7 +50261,7 @@
     ],
     "author": "briguy",
     "github": "https://github.com/eyeofbri/Demonym",
-    "download": 20,
+    "download": 21,
     "versions": [
       {
         "version": "v0.9.23.2 - L",
@@ -52189,7 +52332,7 @@
     ],
     "author": "horseyofcoursey",
     "github": "https://github.com/HorseyofCoursey/EMBER",
-    "download": 64,
+    "download": 65,
     "versions": [
       {
         "version": "1.01",
@@ -58448,7 +58591,7 @@
     ],
     "author": "hedykan-0",
     "github": "https://github.com/hedykan/FeiyuOS",
-    "download": 22,
+    "download": 23,
     "versions": [
       {
         "version": "v0.5.3",
@@ -62113,6 +62256,80 @@
     "esp": "s3"
   },
   {
+    "_id": "2115790204373901313",
+    "fid": "2115790204373901313",
+    "name": "GRUVPAKT T8",
+    "description": "```\nAn 8-track groovebox for the M5Stack Tab5. Samples and five synth engines (FM, Wavetable, VA, PD, Granular), effects and knob automation \u2014 on encoders, keyboard and touch screen.\n\nWhat you need \u2014 all four are required:\n\u2022 M5Stack Tab5\n\u2022 8Encoder unit \u2014 every sound, effect and mix parameter is set with its knobs\n\u2022 Tab5 keyboard \u2014 save/load projects, undo, tracks and modes\n\u2022 microSD card formatted as FAT32 (cards of 64 GB and more come as exFAT \u2014 reformat them)\n\nAfter flashing, restart the Tab5 with its power button. Later versions install over WiFi, no computer needed.\n\nUser guide, case files for 3D printing and updates: https://gruvpakt.com\n```\n\n![Image](https://afgust.com/assets/img/screen_sequencer.png)",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2115395465862520833/2115790204373901313/2115790204373901314/cover/2115790204373901316.png",
+    "category": "tab5",
+    "tags": [
+      "Audio & Media"
+    ],
+    "author": "AFGgust",
+    "github": "https://afgust.com/products/gruvpakt/",
+    "download": 1,
+    "versions": [
+      {
+        "version": "0.6.897",
+        "version_id": "2119665646806147073",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2115395465862520833/2115790204373901313/2119665646806147073/bin/2119665646806147074.bin",
+        "Fs": 3347728,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3216656,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3216656,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 3216656,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 7733248,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:29Z",
+            "etag": "\"01DED17BFA5743760FE403313E1C2BF5\"",
+            "last_modified": "Mon, 09 Nov 2026 05:37:26 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "p4"
+  },
+  {
     "_id": "1897200000000001009",
     "fid": "1897200000000001009",
     "name": "GVM5BubbleLevel",
@@ -63587,7 +63804,7 @@
     ],
     "author": "\u6653\u5929\u5927\u4eba\u54d2",
     "github": "",
-    "download": 114,
+    "download": 115,
     "versions": [
       {
         "version": "0.0.1",
@@ -76365,7 +76582,7 @@
     ],
     "author": "ValleytechSolutions",
     "github": "https://github.com/valleytechsolutions/LORA-Tunnel",
-    "download": 19,
+    "download": 20,
     "versions": [
       {
         "version": "0.4.0-beta.1",
@@ -83752,6 +83969,329 @@
     "esp": "s3"
   },
   {
+    "_id": "2118952227857670145",
+    "fid": "2118952227857670145",
+    "name": "M5Clock v1.4.0 \u2014 \u4e2d\u82f1\u53cc\u8bed + \u81ea\u5b9a\u4e49\u70b9\u9635\u5b57\u7b26+\u97f3\u4e50\u9891\u8c31",
+    "description": "\u4e09\u4e2a 8\u00d78 Chain Mono \u70b9\u9635\u663e\u793a\u5317\u4eac\u65f6\u95f4 HH:MM:SS\uff0c\u6570\u5b57\u95f4\u8ddd\u52a0\u5bbd\u5e76\u79fb\u9664\u5e95\u90e8\u79d2\u70b9\uff1bAtomS3R 128\u00d7128 \u5c4f\u5e55\u663e\u793a UTC \u4e16\u754c\u65f6\uff0c\u5e76\u8f6e\u64ad\u5317\u4eac\u3001\u4f26\u6566\u3001\u7ebd\u7ea6\u3001\u6d1b\u6749\u77f6\u3001\u4e1c\u4eac\u3001\u6089\u5c3c\u516d\u57ce\u65f6\u95f4\uff0c\u81ea\u52a8\u5904\u7406\u590f\u4ee4\u65f6\u3002\u914d\u7f51\u9875\u548c\u5c4f\u5e55\u5747\u652f\u6301\u4e2d\u6587 / English\uff0c\u652f\u6301 AP \u914d\u7f51\u3001NTP \u81ea\u52a8\u5bf9\u65f6\u3001\u4eae\u5ea6\u4e0e Mono \u987a\u5e8f\u8c03\u8282\u3002\u5728v1.2.0\u52a0\u5165\u4e86\u70b9\u9635\u5c4f\u663e\u793a\u7684\u529f\u80fd\u3002\u5728v1.3.0\u4e2d\u4fee\u590d\u4e86\u4e00\u4e9bbug\uff0c\u4e3a\u70b9\u9635\u5c4f\u6dfb\u52a0\u4e86\u66f4\u591a\u529f\u80fd\u3002\u5728v1.3.2\u4e2d\uff0c\u4fee\u590d\u4e86\u4e00\u4e9bbug\uff0c\u6dfb\u52a0\u4e86utc+x\u7684\u65f6\u533a\u8bbe\u7f6e\uff08Tips: \u5207\u6362\u8bed\u8a00\u65f6\u8bf7\u8010\u5fc3\u7b49\u5f85\uff09\u3002\u5728v1.4.0\u4e2d \u6dfb\u52a0\u4e86\u97f3\u9891\u9891\u8c31\u529f\u80fd \u9700\u914d\u5408github\u8f6f\u4ef6\u4f7f\u7528\u3002",
+    "cover": "https://m5burner-cdn.m5stack.com/community/364606/2118952227857670145/2118952227857670146/cover/2118952227857670148.png",
+    "category": "atoms3r",
+    "tags": [
+      "Tools",
+      "Utilities"
+    ],
+    "author": "Apead",
+    "github": "https://github.com/Apeadv/M5Clock-AtomS3R",
+    "download": 6,
+    "versions": [
+      {
+        "version": "1.4.0",
+        "version_id": "2119373385178456065",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2119373385178456065/bin/2119373385178456066.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1262224,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1262224,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1262224,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T05:53:31Z",
+            "etag": "\"A425023E0EB1DDB0C748EDBD479D2468\"",
+            "last_modified": "Sun, 08 Nov 2026 10:16:06 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.3.2",
+        "version_id": "2119008901494644738",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2119008901494644738/bin/2119008901494644739.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1222240,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1222240,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1222240,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T05:53:31Z",
+            "etag": "\"951A4B487F1B824F708C99F722C6C72E\"",
+            "last_modified": "Sat, 07 Nov 2026 10:07:46 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.3.0",
+        "version_id": "2119002294949945346",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2119002294949945346/bin/2119002294949945347.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1220400,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1220400,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1220400,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T05:53:31Z",
+            "etag": "\"531AD006105D4FFF7C62BE0F3F65C820\"",
+            "last_modified": "Sat, 07 Nov 2026 09:41:31 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.1.0",
+        "version_id": "2118952227857670146",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2118952227857670146/bin/2118952227857670147.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1213360,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1213360,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1213360,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T05:53:31Z",
+            "etag": "\"BA327710CE8FBCEA84E76DDFF031B6C3\"",
+            "last_modified": "Sat, 07 Nov 2026 06:22:34 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.2.0",
+        "version_id": "2118993783528529921",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/2118952227857670145/2118993783528529921/bin/2118993783528529922.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1216624,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1216624,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1216624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T05:53:31Z",
+            "etag": "\"67E2C6640B09DA18B27B2D2193D94EF3\"",
+            "last_modified": "Sat, 07 Nov 2026 09:07:41 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000003434",
     "fid": "1897200000000003434",
     "name": "M5Core2 TouchPanel Recovery",
@@ -85942,7 +86482,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104912,
+    "download": 104913,
     "versions": [
       {
         "version": "2.4.10",
@@ -86347,7 +86887,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104912,
+    "download": 104913,
     "versions": [
       {
         "version": "2.4.10",
@@ -91433,7 +91973,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher",
-    "download": 2873,
+    "download": 2874,
     "versions": [
       {
         "version": "2.7.1",
@@ -93413,7 +93953,7 @@
     ],
     "author": "mongonta555",
     "github": "https://github.com/mongonta0716/m5stack-avatar-mic",
-    "download": 1382,
+    "download": 1383,
     "versions": [
       {
         "version": "1.3",
@@ -96053,7 +96593,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/M5StickCPlus2-UserDemo",
-    "download": 21776,
+    "download": 21777,
     "versions": [
       {
         "version": "V0.1",
@@ -99516,7 +100056,7 @@
     ],
     "author": "Tokagetchi",
     "github": "https://github.com/oldtokage-collab/MIASMORA",
-    "download": 17,
+    "download": 18,
     "versions": [
       {
         "version": "v1.0",
@@ -100081,7 +100621,7 @@
     ],
     "author": "K-Nana",
     "github": "https://github.com/k-7iro/MK75-Watch",
-    "download": 105,
+    "download": 106,
     "versions": [
       {
         "version": "26.2.1",
@@ -124329,6 +124869,71 @@
     "description_src": "\u4e3a M5StickS3\uff08ESP32-S3\uff09\u5f00\u53d1\u7684\u6f6e\u6c50/\u9ec4\u5386/\u6c34\u4f4d\u65f6\u949f\u56fa\u4ef6\uff0c\u4e13\u4e3a\u6c34\u4e0a\u8fd0\u52a8\u6bd4\u5982\u76ae\u5212\u8247\u4e0b\u6c34\u524d\u7684\u7efc\u5408\u5224\u65ad\u8bbe\u8ba1\u3002\n\u529f\u80fd\n\n\u4e09\u5c4f\u5207\u6362\uff08\u77ed\u6309 BtnA\uff09\uff1a\n\n\u5c4f 1\t\u519c\u5386\u65e5\u671f\u3001\u6850\u6d32\u5c9b\u7ad9\u540d\u3001\u6da8\u6f6e/\u843d\u6f6e\u72b6\u6001\uff08\u5927\u5b57\uff09\u3001\u8ddd\u4e0b\u6b21\u9ad8\u6f6e/\u4f4e\u6f6e\u5012\u8ba1\u65f6\n\u5c4f 2\t\u5f53\u65e5 4 \u4e2a\u6f6e\u6c50\u65f6\u523b\u8868\uff082 \u9ad8\u6f6e + 2 \u4f4e\u6f6e\uff0c\u542b\u6c34\u4f4d\u503c\uff09\n\u5c4f 3\t\u76ae\u5212\u8247\u9002\u5b9c\u5ea6\u8bc4\u5206\uff08X/10\uff09+ \u7ed3\u8bba + \u519c\u5386 + \u5e72\u652f + \u5b9c\u5fcc\u9996\u5b57\n\n\u6253\u5206\u7cfb\u7edf\uff1a\u57fa\u4e8e\u9ec4\u5386\u5b57\u6bb5\u6743\u91cd + \u51f6\u65e5\u5426\u51b3 + \u751f\u8096\u51b2\u715e\uff0c\u5f52\u4e00\u5316\u4e3a 0-10 \u8bc4\u5206\uff1a\n\n7-10\uff1a\u5b9c\u4e0b\u6c34\uff08\u7eff\uff09\n4-6\uff1a\u53ef\u4e0b\u6c34\uff08\u9ec4\uff09\n0-3\uff1a\u5fcc\u4e0b\u6c34\uff08\u7ea2\uff09"
   },
   {
+    "_id": "2119223184715325442",
+    "fid": "2119223184715325442",
+    "name": "Pale Blue Dot Webradio",
+    "description": "Full-featured Web Radio player for CORE2 with Module Audio (also works with internal speaker, if you must). Use the built-in web server to manage lists, search for stations, or add them manually.\n\nBecause it's designed to work without text-entry on the unit, it requires an SD card, with a file called \"wifi_known.csv\" in the root, to provide wifi credentials. In this file, should be one entry per wifi you would like to access, like \"name,password\" with no extra spaces.\n\nEnjoy irresponsibly!",
+    "cover": "https://m5burner-cdn.m5stack.com/community/514652/2119223184715325442/2119223184715325443/cover/2119223184715325445.png",
+    "category": "core2",
+    "tags": [
+      "Audio & Media"
+    ],
+    "author": "crackulator",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0",
+        "version_id": "2119223184715325443",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/514652/2119223184715325442/2119223184715325443/bin/2119223184715325444.bin",
+        "Fs": 1599360,
+        "nb": true,
+        "ao": 0,
+        "as": 1599360,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "core2",
+          "app": {
+            "source_offset": 0,
+            "image_size": 1599360,
+            "partition_size": 1599360,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1599360,
+              "source_offset": 0,
+              "copy_size": 1599360,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:29Z",
+            "etag": "\"61D72152F412460C43461B52AE82BD8C\"",
+            "last_modified": "Sun, 08 Nov 2026 00:19:15 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
     "_id": "1897200000000000586",
     "fid": "1897200000000000586",
     "name": "Palm Cards for M5Tab5",
@@ -130439,6 +131044,80 @@
     "esp": "32"
   },
   {
+    "_id": "2119660509756825601",
+    "fid": "2119660509756825601",
+    "name": "Planet Simulator",
+    "description": "Planetary gravity simulator for Tab5, inspired by cubic9com's gravsim for CORE2. Place different-sized planets in the universe, drag them to give them starting velocity, and let mathematically-correct gravity take over. See them orbit, spin off into space, or crash into the sun. Universal fun!",
+    "cover": "https://m5burner-cdn.m5stack.com/community/514652/2119660509756825601/2119660509756825602/cover/2119660509756825604.png",
+    "category": "tab5",
+    "tags": [
+      "Games"
+    ],
+    "author": "crackulator",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "2.0",
+        "version_id": "2119660509756825602",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/514652/2119660509756825601/2119660509756825602/bin/2119660509756825603.bin",
+        "Fs": 614400,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 548864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 548864,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 548864,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:29Z",
+            "etag": "\"C97A009674C6329EBCFF62646EC15F51\"",
+            "last_modified": "Mon, 09 Nov 2026 05:17:01 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "p4"
+  },
+  {
     "_id": "1897200000000003295",
     "fid": "1897200000000003295",
     "name": "Plume",
@@ -132253,7 +132932,7 @@
     ],
     "author": "8bitcardputer",
     "github": "",
-    "download": 23,
+    "download": 24,
     "versions": [
       {
         "version": "1.0",
@@ -134443,7 +135122,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 151,
+    "download": 152,
     "versions": [
       {
         "version": "v3-20260918",
@@ -136520,7 +137199,7 @@
     ],
     "author": "Layer8",
     "github": "https://github.com/Layer812/R8CoreS3",
-    "download": 21,
+    "download": 22,
     "versions": [
       {
         "version": "0.61",
@@ -137181,7 +137860,7 @@
     ],
     "author": "nullbeing",
     "github": "https://github.com/nullbeing/raincity-m5stack-cores3",
-    "download": 18,
+    "download": 19,
     "versions": [
       {
         "version": "1.0",
@@ -140888,7 +141567,7 @@
     ],
     "author": "henriquesebastiao",
     "github": "https://github.com/henriquesebastiao/saturn",
-    "download": 13811,
+    "download": 13812,
     "versions": [
       {
         "version": "v1.0.0-pt_br",
@@ -151606,7 +152285,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4892,
+    "download": 4894,
     "versions": [
       {
         "version": "V0.4",
@@ -153415,7 +154094,7 @@
     ],
     "author": "mr_oscy",
     "github": "https://github.com/kisaragi-mochi/stackchan-mcp",
-    "download": 358,
+    "download": 359,
     "versions": [
       {
         "version": "1.8",
@@ -156582,7 +157261,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 182,
+    "download": 183,
     "versions": [
       {
         "version": "v2.2.6",
@@ -162235,6 +162914,63 @@
             "last_modified": "Sat, 24 Oct 2026 08:34:31 GMT"
           }
         }
+      },
+      {
+        "version": "0.7.2",
+        "version_id": "2118698580028596226",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2118698580028596226/bin/2118698580028596227.bin",
+        "Fs": 1676000,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1610464,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1610464,
+            "partition_size": 1835008,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1835008,
+              "source_offset": 65536,
+              "copy_size": 1610464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4653056,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:30Z",
+            "etag": "\"91860646A9D4E8CFE86178A205151748\"",
+            "last_modified": "Fri, 06 Nov 2026 13:34:40 GMT"
+          }
+        }
       }
     ],
     "esp": "s3",
@@ -162367,6 +163103,63 @@
             "analyzed_at": "2026-11-05T19:05:01Z",
             "etag": "\"D454EF58BACF4EF86D0F3057238EC730\"",
             "last_modified": "Sat, 24 Oct 2026 08:34:31 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.7.2",
+        "version_id": "2118698580028596226",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2118698580028596226/bin/2118698580028596227.bin",
+        "Fs": 1676000,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1610464,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1610464,
+            "partition_size": 1835008,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1835008,
+              "source_offset": 65536,
+              "copy_size": 1610464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4653056,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:30Z",
+            "etag": "\"91860646A9D4E8CFE86178A205151748\"",
+            "last_modified": "Fri, 06 Nov 2026 13:34:40 GMT"
           }
         }
       }
@@ -167083,7 +167876,7 @@
     ],
     "author": "halasun",
     "github": "https://github.com/MinoruInachi/tulipcc",
-    "download": 65,
+    "download": 66,
     "versions": [
       {
         "version": "20261012",
@@ -168249,7 +169042,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 80291,
+    "download": 80292,
     "versions": [
       {
         "version": "v1.7.5-en",
@@ -238093,7 +238886,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 17724,
+    "download": 17726,
     "versions": [
       {
         "version": "Alpha-29",
@@ -266957,7 +267750,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 507,
+    "download": 508,
     "versions": [
       {
         "version": "v2.3.9",
@@ -315732,7 +316525,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 62981,
+    "download": 62982,
     "versions": [
       {
         "version": "v1.9.0-core2",
@@ -358975,7 +359768,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 60,
+    "download": 62,
     "versions": [
       {
         "version": "0.1.0",
@@ -359111,7 +359904,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 60,
+    "download": 62,
     "versions": [
       {
         "version": "0.1.0",
@@ -359229,6 +360022,85 @@
       }
     ],
     "esp": "s3"
+  },
+  {
+    "_id": "2119405079717650434",
+    "fid": "2119405079717650434",
+    "name": "WiFi Sapper (Atom Echo)",
+    "description": "An **autonomous**, **headless-first** WPA/WPA2 handshake-hunting ESP-32 appliance. It hunts handshakes endlessly, auto-uploads each capture to **wpa-sec.stanev.org**, and once an hour fetches cracked results back and announces any newly recovered passwords. The capture, upload, and sync engine has **no UI dependency**, so the same binary runs on a board with or without a screen.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/416877/2119405079717650434/2119405079717650435/cover/2119405079717650437.png",
+    "category": "atom-series",
+    "tags": [
+      "Tools",
+      "Security Research",
+      "Network & Communication",
+      "Sensors & Monitoring",
+      "Development & Learning",
+      "Utilities"
+    ],
+    "author": "Isonimus",
+    "github": "https://github.com/Isonimus/wifi-sapper",
+    "download": 0,
+    "versions": [
+      {
+        "version": "0.3.0",
+        "version_id": "2119405079717650435",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2119405079717650434/2119405079717650435/bin/2119405079717650436.bin",
+        "Fs": 1418016,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1352480,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-series",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1352480,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1352480,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:30Z",
+            "etag": "\"46AF775D9404BB6AA039C71B4CA2DF45\"",
+            "last_modified": "Sun, 08 Nov 2026 12:22:02 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
   },
   {
     "_id": "2116157079330328578",
@@ -364430,7 +365302,7 @@
     ],
     "author": "Zark_Retroboy",
     "github": "",
-    "download": 618,
+    "download": 619,
     "versions": [
       {
         "version": "0.7.4",
@@ -378648,7 +379520,7 @@
     "fid": "2118813844900585474",
     "name": "m5PORKCHOP => OnePork => 0N3P0rK",
     "description": "\ud83d\udc37 0N3P0rK \u2014 More Than Just Firmware!\n\n0N3P0rK is an experimental project for the M5Stack Cardputer, transforming a compact ESP32-S3 device into a pocket-sized digital laboratory.\n\nThe project combines an unusual concept: a custom digital ecosystem featuring a virtual farm, an interactive character, and a collection of tools for exploring wireless technologies.\n\nIt's where technology meets experimentation, and functionality meets personality.\n\n\ud83d\udd39 Interactive digital farm and virtual pet.\n\ud83d\udd39 Wi-Fi tools and network exploration.\n\ud83d\udd39 Wireless technology experiments and utilities.\n\ud83d\udd39 File manager and additional tools.\n\ud83d\udd39 Custom interface, menus, and an evolving application ecosystem.\n\nThe vision behind 0N3P0rK is simple: turn a tiny handheld device into an entire digital world you can carry in your pocket.\n\nBuilt with curiosity. Driven by experimentation. Constantly evolving.\n\n\ud83d\udc37 Small device. Big possibilities. Its own personality.",
-    "cover": "https://m5burner-cdn.m5stack.com/community/94426/2118813844900585474/2118813844904779778/cover/2118813844904779780.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/94426/2118813844900585474/2119665463322124290/cover/2119665463322124292.png",
     "category": "cardputer",
     "tags": [
       "Tools",
@@ -378657,7 +379529,7 @@
     ],
     "author": "Lexiko",
     "github": "https://github.com/lexilexiko/0N3P0rK",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "V1.4r",
@@ -378713,6 +379585,63 @@
             "analyzed_at": "2026-11-09T03:23:31Z",
             "etag": "\"966B00CE05560C7CB29A9604342EB587\"",
             "last_modified": "Fri, 06 Nov 2026 21:12:41 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.4.2",
+        "version_id": "2119665463322124290",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/94426/2118813844900585474/2119665463322124290/bin/2119665463322124291.bin",
+        "Fs": 2440144,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2374608,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2374608,
+            "partition_size": 2621440,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2621440,
+              "source_offset": 65536,
+              "copy_size": 2374608,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 524288,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T05:53:30Z",
+            "etag": "\"AF19818EB5048FD91438B6B8E38CB100\"",
+            "last_modified": "Mon, 09 Nov 2026 05:36:42 GMT"
           }
         }
       }
@@ -391797,7 +392726,7 @@
     ],
     "author": "Hobby Support",
     "github": "https://github.com/ArtuRockPK/imuFishingGame",
-    "download": 38,
+    "download": 39,
     "versions": [
       {
         "version": "1.0.0",
