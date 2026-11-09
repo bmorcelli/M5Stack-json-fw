@@ -5112,7 +5112,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/adversary",
-    "download": 109,
+    "download": 110,
     "versions": [
       {
         "version": "v0.3.0",
@@ -5396,6 +5396,63 @@
             "analyzed_at": "2026-11-05T19:02:58Z",
             "etag": "\"31A5ACE5F3743144EA258F34E6303372\"",
             "last_modified": "Sat, 31 Oct 2026 19:22:43 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.8.0",
+        "version_id": "2119400664910700546",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2109595931687284737/2119400664910700546/bin/2119400664910700547.bin",
+        "Fs": 2601376,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2535840,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2535840,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 2535840,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T03:08:34Z",
+            "etag": "\"B5B98B99A01711BCED3C4F69A54CD5F1\"",
+            "last_modified": "Sun, 08 Nov 2026 12:04:30 GMT"
           }
         }
       }
@@ -6803,6 +6860,80 @@
             "analyzed_at": "2026-07-28T21:27:39Z",
             "etag": "\"79C31A29055AA2B0F16568763AF64D0E\"",
             "last_modified": "Tue, 16 Jun 2026 23:03:27 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2119499735667220482",
+    "fid": "2119499735667220482",
+    "name": "Amstrad CPC 464 - Cardputer ADV",
+    "description": "# Amstrad CPC 464 for Cardputer ADV\n\nC++ / Arduino emulator for the M5Stack Cardputer ADV (ESP32-S3, 8 MB flash). Emulates a 64 KB CPC with colour video, Z80, CRTC, PPI and AY sound.\n\n## Features\n- Standard/Extended DSK and common CDT tape blocks from microSD.\n- Original cassette loading with the colours and sound produced by the CPC, plus a faster silent mode.\n- RGB565 scaling preserves thin text strokes and the complete visible image.\n- CDT/DSK folders, hidden macOS metadata filtering and a six-entry game browser.\n\n## Prepare your microSD\nUse FAT32 and supply your own ROMs and games:\n```text\n/CPC464/OS.ROM       16384 bytes\n/CPC464/BASIC.ROM    16384 bytes\n/CPC464/AMSDOS.ROM   16384 bytes; required for DSK\n/CPC464/GAMES/CDT/   your CDT tapes\n/CPC464/GAMES/DSK/   your DSK disks\n```\nROMs and games are not included. Compatibility depends on each game and loader. ZIP and TAP are not implemented.\n\n## Controls\n- Tab: open the game browser. Enter: select/load. Backspace: parent folder.\n- Printed arrows without Fn: move in games; Space: joystick FIRE and CPC space. Game controls activate when loading from SD.\n- Fn+J: switch between game controls and BASIC typing.\n- Fn+= / Fn+-: volume in 5% steps; initial volume 30%.\n- O / R in the browser: original / fast loading. Fn+F: toggle fast mode. Fn+B: border.\n\n## Installation\nThis is a compact merged BIN (808,240 bytes) for the 8 MB Cardputer ADV. M5Launcher can extract its 742,704-byte application and install it while keeping Launcher. The application-only app.bin is also available in the GitHub release. Direct flashing from M5Burner uses offset 0x0 and installs the included bootloader and standard partition table, replacing the existing firmware layout.\n\n[Source code, firmware and complete Spanish guide](https://github.com/NeXoDevLab/AmstradCPC464CardputerADV)\n[Real captures and full cassette-loading videos](https://nexodevlab.github.io/AmstradCPC464CardputerADV/)\n\n![BASIC on FIX12](https://nexodevlab.github.io/AmstradCPC464CardputerADV/images/basic-fix12-lcd.png)\n![Original tape loading on FIX12](https://nexodevlab.github.io/AmstradCPC464CardputerADV/images/carga-original-fix12.png)\n![Game loaded on FIX12](https://nexodevlab.github.io/AmstradCPC464CardputerADV/images/juego-fix12.png)",
+    "cover": "https://m5burner-cdn.m5stack.com/community/165379/2119499735667220482/2119499735671414785/cover/2119499735671414787.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Games"
+    ],
+    "author": "sloko2",
+    "github": "https://github.com/NeXoDevLab/AmstradCPC464CardputerADV",
+    "download": 1,
+    "versions": [
+      {
+        "version": "0.1.3-fix12",
+        "version_id": "2119499735671414785",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/165379/2119499735667220482/2119499735671414785/bin/2119499735671414786.bin",
+        "Fs": 808240,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 742704,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 742704,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 742704,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T03:08:34Z",
+            "etag": "\"6534C8B8DA789CB78D0D92284BFEAD7F\"",
+            "last_modified": "Sun, 08 Nov 2026 18:38:10 GMT"
           }
         }
       }
@@ -38871,7 +39002,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/M5Cardputer-UserDemo",
-    "download": 20905,
+    "download": 20906,
     "versions": [
       {
         "version": "V0.9.1",
@@ -42664,7 +42795,7 @@
     "fid": "2105933987488079874",
     "name": "ChrisDaDriver",
     "description": "ChrisDaDriver is a high-performance wardriving firmware built for the M5Cardputer. It simultaneously captures WiFi networks (SSIDs, BSSIDs, RSSI, channels) and BLE devices, tags them with high-precision GPS coordinates, and saves the data in the WiGLE CSV format (v1.5) directly to the SD card.\n\nKey Features:\n- WiGLE Compatibility: Generates valid CSV files ready for direct upload to wigle.net.\n- Dual Scanning: Simultaneous capture of 2.4 GHz WiFi beacons (promiscuous mode on Core 0) and Bluetooth Low Energy (BLE).\n- GPS Integration: Parses latitude, longitude, altitude, and timestamps via hardware serial.\n- SD Card Benchmark: Automatically tests SD card performance at boot to dynamically optimize write queue sizes.\n- Thread-Safe Architecture: Uses FreeRTOS mutexes to ensure secure data handling between both ESP32 cores.\n- RAM Optimization: Automatic cache clearing and memory management to prevent heap crashes during large scans.\n\nControls:\n- BTN 0 (G0 / Main Button): \nLong Press -  Start or stop logging. Starting a new session creates a new log file automatically.\nShort press - dimm Display\n- Key 'D' (Keyboard): Toggle the developer overlay (Dev Mode) showing free RAM, SD queue status, and GPS time.\n\nRequirements:\n- M5Cardputer\n- SD Card (FAT32 formatted)\n- Connected GPS module (RX: Pin 15, TX: Pin 13, Baudrate: 115200)\n\nFile Output Path:\n/ChrisDaDriver/WarDrive/wd_XXX.csv",
-    "cover": "https://m5burner-cdn.m5stack.com/community/376630/2105933987488079874/2109747122169737218/cover/2109747122169737220.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/376630/2105933987488079874/2119524874043695106/cover/2119524874043695108.png",
     "category": "cardputer-adv",
     "tags": [
       "Tools",
@@ -42676,7 +42807,7 @@
     ],
     "author": "ChrisDaCrunk",
     "github": "https://github.com/ChrisDaCrunk/ChristDaDriver",
-    "download": 57,
+    "download": 58,
     "versions": [
       {
         "version": "3.0",
@@ -42734,6 +42865,67 @@
             "analyzed_at": "2026-11-05T19:03:10Z",
             "etag": "\"14B658B4EB5033E7CE4A48AA6F8263F2\"",
             "last_modified": "Mon, 12 Oct 2026 20:44:46 GMT"
+          }
+        }
+      },
+      {
+        "version": "4",
+        "version_id": "2119524874043695106",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/376630/2105933987488079874/2119524874043695106/bin/2119524874043695107.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1514880,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1514880,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1514880,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T03:08:36Z",
+            "etag": "\"44D8A0129870B3C0345A60982C24238B\"",
+            "last_modified": "Sun, 08 Nov 2026 20:18:03 GMT"
           }
         }
       }
@@ -59101,7 +59293,7 @@
     ],
     "author": "halloween",
     "github": "https://github.com/0xhalloween/Flipper-Zero-ESP32-ADV",
-    "download": 1128,
+    "download": 1129,
     "versions": [
       {
         "version": "0.5",
@@ -74315,11 +74507,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118705119233744898/2118765225208094722/2118765225212289025/bin/2118765225212289026.bin",
         "Fs": 1652992,
+        "as": 1587456,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1587456,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -85645,7 +85837,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104904,
+    "download": 104905,
     "versions": [
       {
         "version": "2.4.10",
@@ -86004,7 +86196,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104904,
+    "download": 104905,
     "versions": [
       {
         "version": "2.4.10",
@@ -89042,11 +89234,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/73352/1897200000000002282/2118660945696432130/bin/2118660945696432131.bin",
         "Fs": 1425136,
+        "as": 1359600,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1359600,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -89097,7 +89289,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher/",
-    "download": 2791,
+    "download": 2792,
     "versions": [
       {
         "version": "2.6.10",
@@ -102729,11 +102921,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/73352/1897200000000002697/2118662612600922113/bin/2118662612600922114.bin",
         "Fs": 1664624,
+        "as": 1599088,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1599088,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -106642,7 +106834,7 @@
     ],
     "author": "Gt4kill3r",
     "github": "",
-    "download": 11587,
+    "download": 11588,
     "versions": [
       {
         "version": "2.7.20 (16/02/2026)",
@@ -129927,6 +130119,71 @@
     "esp": "s3"
   },
   {
+    "_id": "2119496868982071298",
+    "fid": "2119496868982071298",
+    "name": "Pocket Keys",
+    "description": "Pocket Keys turns the Cardputer ADV into a sound module for Bluetooth MIDI keys, no computer needed. Tested with the Korg microKEY Air. 52 sounds: grand piano, electric pianos, tonewheel organ with Leslie, FM, Plaits synths. Delay, chorus, reverb. Plays through the 3.5 mm jack or the speaker. If the keys were paired with a computer, turn off its Bluetooth first. Press h for help. Samples: Salamander Grand Piano by Alexander Holm (CC-BY).",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2105744948285808641/2119496868982071298/2119496868982071299/cover/2119496868982071301.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Audio & Media",
+      "Display & Art"
+    ],
+    "author": "cervenyv",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2119496868982071299",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2105744948285808641/2119496868982071298/2119496868982071299/bin/2119496868982071300.bin",
+        "Fs": 6899184,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 6833648,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 6833648,
+            "partition_size": 8323072,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8323072,
+              "source_offset": 65536,
+              "copy_size": 6833648,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T03:08:34Z",
+            "etag": "\"EED16FC8BB6874E38E83A948C4D655DD\"",
+            "last_modified": "Sun, 08 Nov 2026 18:26:46 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "2113165809871572993",
     "fid": "2113165809871572993",
     "name": "Pocket Market \u00b7 ADV \u80a1\u7968\u770b\u677f",
@@ -131462,7 +131719,7 @@
     ],
     "author": "drw41823",
     "github": "https://github.com/drw41823/pocket-studio-cardputer-adv/",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "v0.25",
@@ -131470,11 +131727,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/515609/2118914961324023809/2118914961328218113/bin/2118914961328218114.bin",
         "Fs": 803152,
+        "as": 737616,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 737616,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -134050,7 +134307,7 @@
     ],
     "author": "prondel38",
     "github": "",
-    "download": 11,
+    "download": 12,
     "versions": [
       {
         "version": "V1.0",
@@ -134121,6 +134378,78 @@
             "analyzed_at": "2026-11-06T01:38:41Z",
             "etag": "\"88456B7B786D513DB6B04057053DBBDB\"",
             "last_modified": "Thu, 05 Nov 2026 15:37:15 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.1",
+        "version_id": "2119463806965555201",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118295739063435266/2118367043565223938/2119463806965555201/bin/2119463806965555202.bin",
+        "Fs": 8388608,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5259600,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5259600,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5259600,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-09T03:08:36Z",
+            "etag": "\"C0C3CEE10EF5C93A689F64E91BE39565\"",
+            "last_modified": "Sun, 08 Nov 2026 16:15:24 GMT"
           }
         }
       }
@@ -166887,7 +167216,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 80287,
+    "download": 80290,
     "versions": [
       {
         "version": "v1.7.5-en",
@@ -218610,7 +218939,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 203,
+    "download": 204,
     "versions": [
       {
         "version": "v2.3.5",
@@ -221596,7 +221925,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 36505,
+    "download": 36506,
     "versions": [
       {
         "version": "Alpha-29-4MB",
@@ -270098,7 +270427,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 325,
+    "download": 326,
     "versions": [
       {
         "version": "v2.4.5",
@@ -276766,7 +277095,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 1882,
+    "download": 1883,
     "versions": [
       {
         "version": "v2.2.3",
@@ -295527,7 +295856,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 211,
+    "download": 212,
     "versions": [
       {
         "version": "v2.4.0",
@@ -351000,7 +351329,7 @@
     ],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Bluetooth-Keyboard-Mouse-Emulator",
-    "download": 12809,
+    "download": 12810,
     "versions": [
       {
         "version": "1.0",
@@ -356945,7 +357274,7 @@
     ],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/Cardputer-ADV-CSI-Radar",
-    "download": 28259,
+    "download": 28260,
     "versions": [
       {
         "version": "1.43 (22.03.2026)",
@@ -357537,7 +357866,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 59,
+    "download": 60,
     "versions": [
       {
         "version": "0.1.0",
@@ -357673,7 +358002,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 59,
+    "download": 60,
     "versions": [
       {
         "version": "0.1.0",
