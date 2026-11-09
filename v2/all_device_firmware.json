@@ -3198,6 +3198,70 @@
     "esp": "s3"
   },
   {
+    "_id": "2119215582501576705",
+    "fid": "2119215582501576705",
+    "name": "AREA 512 for Cardputer ADV",
+    "description": "Welcome to AREA512!\n\nAREA512 is an OS built for the Cardputer ADV and Cardputer v1.1, a tiny device with just 512KB of RAM and 8MB of flash storage!\n\nIt is based on FemtoRuby and includes MicroPython, so you can write Ruby and Python right on the Cardputer, then compile and run them \u2014 all on the device!",
+    "cover": "https://m5burner-cdn.m5stack.com/community/550615/2119215582501576705/2119215582505771010/cover/2119215582505771012.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Games"
+    ],
+    "author": "EHamachang",
+    "github": "https://github.com/engneer-hamachan/area512",
+    "download": 1,
+    "versions": [
+      {
+        "version": "2.8",
+        "version_id": "2119215582505771010",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/550615/2119215582501576705/2119215582505771010/bin/2119215582505771011.bin",
+        "Fs": 5388224,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5322688,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5322688,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 5322688,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:08:26Z",
+            "etag": "\"B66BDDD0E8799B5BA733A56AA52AB23F\"",
+            "last_modified": "Sat, 07 Nov 2026 23:49:02 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "2119217619150741505",
     "fid": "2119217619150741505",
     "name": "AREA 512 for Cardputer v1.1",
@@ -3218,11 +3282,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/550615/2119217619150741505/2119217619154935810/bin/2119217619154935811.bin",
         "Fs": 5387888,
+        "as": 5322352,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 5322352,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -4976,11 +5040,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2105575233919787009/2119400931999784961/bin/2119400931999784962.bin",
         "Fs": 2601376,
+        "as": 2535840,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2535840,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -17793,7 +17857,7 @@
     ],
     "author": "Apead",
     "github": "https://github.com/BruceDevices",
-    "download": 7254,
+    "download": 7255,
     "versions": [
       {
         "version": "1.15",
@@ -17849,6 +17913,63 @@
             "analyzed_at": "2026-11-05T19:03:00Z",
             "etag": "\"5AE87C038ABC3F0698E7F901F2614218\"",
             "last_modified": "Sun, 07 Jun 2026 04:35:46 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.16.1",
+        "version_id": "2118961135754059778",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/1897200000000002734/2118961135754059778/bin/2118961135754059779.bin",
+        "Fs": 4379856,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4314320,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4314320,
+            "partition_size": 5111808,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5111808,
+              "source_offset": 65536,
+              "copy_size": 4314320,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3145728,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:08:26Z",
+            "etag": "\"E0D7CC109DCB03ED4C2595E905C28ED6\"",
+            "last_modified": "Sat, 07 Nov 2026 06:57:58 GMT"
           }
         }
       }
@@ -18784,7 +18905,7 @@
     ],
     "author": "ananas8867",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 308,
+    "download": 309,
     "versions": [
       {
         "version": "1.15",
@@ -58013,7 +58134,7 @@
     ],
     "author": "hedykan-0",
     "github": "https://github.com/hedykan/FeiyuOS",
-    "download": 18,
+    "download": 19,
     "versions": [
       {
         "version": "v0.5.3",
@@ -58069,6 +58190,63 @@
             "analyzed_at": "2026-11-06T10:38:53Z",
             "etag": "\"C65320AD6AFB122DB4206341D3E179B3\"",
             "last_modified": "Fri, 06 Nov 2026 09:18:23 GMT"
+          }
+        }
+      },
+      {
+        "version": "v0.6",
+        "version_id": "2119066378894483458",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118623364061503490/2118634085981790209/2119066378894483458/bin/2119066378894483459.bin",
+        "Fs": 3079632,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3014096,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3014096,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 3014096,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:08:26Z",
+            "etag": "\"9454F01682B456ED9A39CDEF896ED7DF\"",
+            "last_modified": "Sat, 07 Nov 2026 13:56:10 GMT"
           }
         }
       }
@@ -66093,6 +66271,81 @@
             "analyzed_at": "2026-11-05T19:03:31Z",
             "etag": "\"2A6983F33C01F923A999C424917A0CCE\"",
             "last_modified": "Fri, 02 Oct 2026 18:17:02 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2119040422452568065",
+    "fid": "2119040422452568065",
+    "name": "Guitar Audio Tools for Cardputer ADV",
+    "description": "Pocket multi-tool for guitarists: guitar tuner (\u00b10.15 cent), strum tuner (all six strings - polyphonic tuning), metronome, BPM detector, chords library, scales library, recorder (WAV on SD card), guitar intonation check, spectrum analyser, sound level meter and mic test. Keyboard control: `,` `/` browse the apps, `Enter` open, `h` help for every app, `Esc` back. Open source (MIT): https://github.com/vlastimilcerveny34/guitar-audio-tools\n\n**For Cardputer ADV only** (needs the ES8311 audio codec; on the original Cardputer the microphone stays silent). There is also a version for M5StickS3.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2105744948285808641/2119040422452568065/2119040422456762369/cover/2119040422456762371.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Audio & Media"
+    ],
+    "author": "cervenyv",
+    "github": "https://github.com/vlastimilcerveny34/guitar-audio-tools",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v1.1.0-beta.4",
+        "version_id": "2119040422456762369",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2105744948285808641/2119040422452568065/2119040422456762369/bin/2119040422456762370.bin",
+        "Fs": 831040,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 765504,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 765504,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 765504,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:08:26Z",
+            "etag": "\"A8BC101D42274CF84E4AA19CA60F31C5\"",
+            "last_modified": "Sat, 07 Nov 2026 12:13:01 GMT"
           }
         }
       }
@@ -94497,7 +94750,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/M5StickCPlus2-UserDemo",
-    "download": 21775,
+    "download": 21776,
     "versions": [
       {
         "version": "V0.1",
@@ -97345,7 +97598,7 @@
     ],
     "author": "jsaludes",
     "github": "https://github.com/jsaludes/mccc",
-    "download": 118,
+    "download": 119,
     "versions": [
       {
         "version": "v1.1-English",
@@ -97574,7 +97827,7 @@
     ],
     "author": "jsaludes",
     "github": "https://github.com/jsaludes/mccc",
-    "download": 118,
+    "download": 119,
     "versions": [
       {
         "version": "v1.1-English",
@@ -104022,7 +104275,7 @@
     ],
     "author": "Stachu0",
     "github": "https://github.com/Stachugit/MeshCore-Cardputer-ADV",
-    "download": 5472,
+    "download": 5473,
     "versions": [
       {
         "version": "v1.1.0",
@@ -132823,11 +133076,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/18981/2119081865472811010/2119081865477005314/bin/2119081865477005315.bin",
         "Fs": 8150912,
+        "as": 8085376,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 8085376,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -144678,14 +144931,14 @@
     "fid": "2117339655810158594",
     "name": "Sila",
     "description": "**Sila** (\u0635\u0644\u0629, \"connection\") is a little virtual pet that lives on your **M5StickS3** keychain.\n\n- Feeds on the WiFi networks around it and notices phones nearby\n- Hears you: looks at you when you clap, comes when you **double clap**, dances to music\n- Feels you: giggles when you poke it, screams when it falls, \"wheee!\" when you catch it\n- Eats electricity: plugging in USB feeds it, it gets sleepy on low battery\n- Counts your steps, falls asleep when you rock it, face stays level as you turn it\n- **Catch**: a tilt mini-game with a saved best score\n\nControls: A = menu / select, hold A = pat it, B = next, hold B = back.\n\n\u26a0\ufe0f **Burning with M5Burner erases the whole flash, so an existing pet starts over as an egg.** Great for a first install. To **update and keep your pet**, flash `Sila.bin` from the GitHub releases at address **0x0** with https://espressif.github.io/esptool-js/ and don't tick \"erase flash\" - Sila keeps a backup that survives that.\n\nSource, changelog and details: https://github.com/mohanad747/Sila (MIT, grew out of TamaFi by CiferTech).",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2117338150654808066/2117339655810158594/2117339655810158595/cover/2117339655810158597.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2117338150654808066/2117339655810158594/2119010618944692226/cover/2119010618944692228.png",
     "category": "sticks3",
     "tags": [
       "Games"
     ],
     "author": "mohanad747",
     "github": "https://github.com/mohanad747/Sila",
-    "download": 28,
+    "download": 29,
     "versions": [
       {
         "version": "v3.7",
@@ -144741,6 +144994,63 @@
             "analyzed_at": "2026-11-05T19:04:42Z",
             "etag": "\"CF11A78388D3F014A464F5DF7EB773F9\"",
             "last_modified": "Mon, 02 Nov 2026 19:34:47 GMT"
+          }
+        }
+      },
+      {
+        "version": "v3.8",
+        "version_id": "2119010618944692226",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2117338150654808066/2117339655810158594/2119010618944692226/bin/2119010618944692227.bin",
+        "Fs": 1336720,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1271184,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1271184,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1271184,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:08:26Z",
+            "etag": "\"7F7CC7E94D548227109B3A88B6985B22\"",
+            "last_modified": "Sat, 07 Nov 2026 10:14:35 GMT"
           }
         }
       }
@@ -146397,11 +146707,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/316104/1897200000000000393/2119013533436518402/bin/2119013533436518403.bin",
         "Fs": 2710784,
+        "as": 2645248,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2645248,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -165521,15 +165831,15 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/121/2104900222973767682/2119300793138585602/bin/2119300793138585603.bin",
         "Fs": 16777216,
-        "s": 0,
-        "f": 1,
-        "f2": 1,
-        "ao": 65536,
         "as": 4597504,
-        "fo": 9502720,
+        "ao": 65536,
+        "s": 0,
         "fs": 4194304,
-        "fo2": 13697024,
+        "fo": 9502720,
+        "f": 1,
         "fs2": 3080192,
+        "fo2": 13697024,
+        "f2": 1,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -178188,7 +178498,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 42155,
+    "download": 42156,
     "versions": [
       {
         "version": "v2.0.3",
@@ -270123,7 +270433,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 72,
+    "download": 73,
     "versions": [
       {
         "version": "v2.5.3",
@@ -290622,7 +290932,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 66457,
+    "download": 66458,
     "versions": [
       {
         "version": "Alpha-29",
@@ -294815,7 +295125,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 209,
+    "download": 210,
     "versions": [
       {
         "version": "v2.4.0",
@@ -353380,6 +353690,82 @@
     "esp": "s3"
   },
   {
+    "_id": "2118706019171999745",
+    "fid": "2118706019171999745",
+    "name": "Unleashed",
+    "description": "firmware like bruce but ble spam is better",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2118704697278373889/2118706019171999745/2118706019171999746/cover/2118706019171999748.png",
+    "category": "sticks3",
+    "tags": [
+      "Tools"
+    ],
+    "author": "sekibi",
+    "github": "https://github.com/DarkFlippers/unleashed-firmware",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2118706019171999746",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118704697278373889/2118706019171999745/2118706019171999746/bin/2118706019171999747.bin",
+        "Fs": 8323072,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2881184,
+        "fo": 3735552,
+        "fs": 4587520,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2881184,
+            "partition_size": 3670016,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3670016,
+              "source_offset": 65536,
+              "copy_size": 2881184,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 4587520,
+              "source": "firmware",
+              "source_offset": 3735552,
+              "copy_size": 4587520,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8359936,
+            "analyzed_at": "2026-11-09T02:08:28Z",
+            "etag": "\"BAF2A8D5AB523A6118644669F8D82013\"",
+            "last_modified": "Fri, 06 Nov 2026 14:04:13 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "2111668363832152065",
     "fid": "2111668363832152065",
     "name": "Unprofitable Mahjong",
@@ -356814,11 +357200,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2116156419243347969/2119403157870780418/bin/2119403157870780419.bin",
         "Fs": 1481152,
+        "as": 1415616,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1415616,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -356950,11 +357336,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2116156419243347969/2119403157870780418/bin/2119403157870780419.bin",
         "Fs": 1481152,
+        "as": 1415616,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1415616,
         "install": {
           "schema": 1,
           "format": "merged",
