@@ -18042,9 +18042,85 @@
     "esp": "s3"
   },
   {
+    "_id": "2111434190861193217",
+    "fid": "2111434190861193217",
+    "name": "Bruce 1.16.1",
+    "description": "\u041d\u043e\u0432\u044b\u0439 \u0440\u0435\u0430\u043b\u0438\u0437 Bruce!",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2111432654064013314/2111434190861193217/2111434190865387521/cover/2111434190865387523.png",
+    "category": "stickc-plus2",
+    "tags": [
+      "Tools"
+    ],
+    "author": "Domka",
+    "github": "",
+    "download": 147,
+    "versions": [
+      {
+        "version": "1.16.1",
+        "version_id": "2111434190865387521",
+        "published_at": "2026-10-19",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2111432654064013314/2111434190861193217/2111434190865387521/bin/2111434190865387522.bin",
+        "Fs": 3858240,
+        "as": 3792704,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3792704,
+            "partition_size": 5111808,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5111808,
+              "source_offset": 65536,
+              "copy_size": 3792704,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3145728,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-05T19:03:00Z",
+            "etag": "\"31FE84E9AFC67464D6991F085D5FA467\"",
+            "last_modified": "Sat, 17 Oct 2026 12:28:34 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32",
+    "description_en": "New implementation of Bruce!",
+    "description_src": "\u041d\u043e\u0432\u044b\u0439 \u0440\u0435\u0430\u043b\u0438\u0437 Bruce!"
+  },
+  {
     "_id": "1897200000000002734",
     "fid": "1897200000000002734",
-    "name": "Bruce 1.15-m5stack-sticks3",
+    "name": "Bruce 1.16.1-m5stack-sticks3",
     "description": "Bruce is a versatile ESP32 firmware that supports a ton of offensive features focusing on facilitating Red Team operations. It also supports M5stack and Lilygo products and works great with Cardputer, Sticks, M5Cores, T-Decks and T-Embeds.",
     "cover": "https://m5burner-cdn.m5stack.com/cover/4f8ad540a72ad35404446fbf8f6fee09.jpg",
     "category": "sticks3",
@@ -18171,82 +18247,6 @@
       }
     ],
     "esp": "s3"
-  },
-  {
-    "_id": "2111434190861193217",
-    "fid": "2111434190861193217",
-    "name": "Bruce 1.16.1",
-    "description": "\u041d\u043e\u0432\u044b\u0439 \u0440\u0435\u0430\u043b\u0438\u0437 Bruce!",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2111432654064013314/2111434190861193217/2111434190865387521/cover/2111434190865387523.png",
-    "category": "stickc-plus2",
-    "tags": [
-      "Tools"
-    ],
-    "author": "Domka",
-    "github": "",
-    "download": 147,
-    "versions": [
-      {
-        "version": "1.16.1",
-        "version_id": "2111434190865387521",
-        "published_at": "2026-10-19",
-        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2111432654064013314/2111434190861193217/2111434190865387521/bin/2111434190865387522.bin",
-        "Fs": 3858240,
-        "as": 3792704,
-        "ao": 65536,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "stickc-plus2",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3792704,
-            "partition_size": 5111808,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 5111808,
-              "source_offset": 65536,
-              "copy_size": 3792704,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3145728,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-11-05T19:03:00Z",
-            "etag": "\"31FE84E9AFC67464D6991F085D5FA467\"",
-            "last_modified": "Sat, 17 Oct 2026 12:28:34 GMT"
-          }
-        }
-      }
-    ],
-    "esp": "32",
-    "description_en": "New implementation of Bruce!",
-    "description_src": "\u041d\u043e\u0432\u044b\u0439 \u0440\u0435\u0430\u043b\u0438\u0437 Bruce!"
   },
   {
     "_id": "1897200000000001138",
@@ -30830,11 +30830,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/137377/2106812332383805442/2107176503327727618/bin/2107176503327727619.bin",
         "Fs": 3719824,
+        "as": 3654288,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 3654288,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -33010,10 +33010,10 @@
       }
     ],
     "esp": "s3",
-    "name_src": "CARD AQUARIUM \u5361\u724c\u6c34\u65cf\u9986",
     "name_en": "CARD AQUARIUM Card Aquarium",
-    "description_src": "CardAquarium(\u9c7c\u7f38\u517b\u9c7c + \u6df1\u6d77\u63a2\u9669),\u9002\u7528\u4e8e M5Stack Cardputer / Cardputer Adv(ESP32-S3)\u3002\n\n\u8fd9\u662f\u4e00\u6b3e\u50cf\u7d20\u98ce\u6c34\u65cf\u7bb1\u517b\u6210\u6e38\u620f\u3002\u4f60\u53ef\u4ee5\u5728\u9c7c\u7f38\u91cc\u517b\u9c7c\u3001\u5b75\u86cb\u3001\u80b2\u79cd,\u4e5f\u53ef\u4ee5\u9a7e\u9a76\u6f5c\u8247\u53bb\u6df1\u6d77\u63a2\u9669,\u8fd8\u81ea\u5e26 4 \u4e2a\u5c0f\u6e38\u620f\u3002\n\nThis is a pixel-art aquarium simulation game. You can raise fish, hatch eggs, and breed them in your tank, or pilot a submarine to explore the deep sea\u2014plus, it includes four built-in mini-games.\n\n- **\u4e3b\u754c\u9762\uff08\u9c7c\u7f38\uff09**\uff1aF/Enter \u5582\u98df\u3001G \u5207\u6362\u98df\u7269\u3001N \u9009\u9c7c\u3001T \u96f6\u98df\u3001C \u6e05\u6d01\u3001L \u706f\u5149\u3001P \u6fc0\u5149\u6233\u91d1\u6ce1\u6ce1\u3001R \u9017\u8783\u87f9\uff0c\u4ee5\u53ca K \u56fe\u9274\u3001V \u57fa\u56e0\u5b9e\u9a8c\u5ba4\u3001M \u5c0f\u6e38\u620f\u3001E \u63a2\u9669\u3001B \u5546\u5e97\u3001Q \u4efb\u52a1\u3001A \u9057\u7269\u3001W \u5929\u6c14\u3001S \u8bbe\u7f6e\u3001H \u5e2e\u52a9\u3002\n- **\u6df1\u6d77\u63a2\u9669\uff08\u6f5c\u8247\uff09**\uff1aWASD \u6e38\u52a8\u3001Space \u58f0\u5450\u3001F \u9c7c\u53c9\u3001G \u7535\u78c1\u8109\u51b2\u3001Enter \u4e92\u52a8/\u505c\u9760/\u6551\u52a9\u3001M \u5730\u56fe\u3001N \u5c0f\u5730\u56fe\u3001Esc \u6682\u505c\u3001Q \u7d27\u6025\u4e0a\u6d6e\uff0c\u53e6\u9644\u4e00\u53e5\u6c27\u6c14\u548c\u60ac\u8d4f\u7684\u63d0\u793a\u3002\n- **\u5c0f\u6e38\u620f**\uff1a\u73cd\u73e0\u72e9\u730e\u3001\u7901\u77f3\u51b2\u523a\u3001\u8783\u87f9\u5927\u4f5c\u6218\uff083\u00d73 \u952e\u4f4d\uff09\u3001\u73ca\u745a\u56de\u58f0\u5404\u81ea\u7684\u64cd\u4f5c\u3002\n- **\u83dc\u5355 / \u5546\u5e97 / \u56fe\u9274**\uff1a`;` `.` \u9009\u62e9\uff0c`,` `/` \u5207\u6362\u6807\u7b7e\uff0cEnter \u786e\u8ba4\u6216\u8d2d\u4e70\uff08\u8fde\u6309\u4e24\u6b21\u51fa\u552e\uff09\uff0cB/Esc \u8fd4\u56de\u3002\n- Main Interface (Fish Tank): F/Enter to feed, G to switch food, N to select a fish, T for treats, C to clean, L for lights, P to pop gold bubbles with a laser, R to tease the crab; plus K for the Bestiary, V for the Gene Lab, M for mini-games, E for expeditions, B for the shop, Q for quests, A for relics, W for weather, S for settings, and H for help.\n- Deep-Sea Expedition (Submarine): WASD to move, Space for sonar, F for harpoon, G for EMP, Enter to interact/dock/rescue, M for the map, N for the mini-map, Esc to pause, and Q for an emergency ascent\u2014plus a reminder regarding oxygen levels and bounties.\n- Mini-games: Specific controls for Pearl Hunt, Reef Dash, Crab Battle (3\u00d73 key layout), and Coral Echo.\n- Menus / Shop / Bestiary: Use ; and . to select, , and / to switch tabs, Enter to confirm or purchase (press twice to sell), and B/Esc to go back.",
-    "description_en": "CardAquarium (fish tank farming + deep sea exploration), suitable for M5Stack Cardputer / Cardputer Adv (ESP32-S3).\n\nThis is a pixel style aquarium cultivation game. You can raise fish, hatch eggs, and breed fish in a fish tank, or you can drive a submarine to explore the deep sea. It also comes with 4 mini-games.\n\nThis is a pixel-art aquarium simulation game. You can raise fish, hatch eggs, and breed them in your tank, or pilot a submarine to explore the deep sea\u2014plus, it includes four built-in mini-games.\n\n- **Main interface (fish tank)**: F/Enter to feed, G to switch food, N to select fish, T for snacks, C for cleaning, L for lighting, P for laser to poke golden bubbles, R for teasing crabs, and K for illustrations, V for genetic laboratory, M for mini-games, E for adventure, B for shops, Q for tasks, A for relics, W for weather, S for settings, and H for help.\n- **Deep Sea Adventure (Submarine)**: WASD swimming, Space sonar, F harpoon, G electromagnetic pulse, Enter interaction/docking/rescue, M map, N mini map, Esc pause, Q emergency resurfacing, with a reminder about oxygen and bounty.\n- **Mini Games**: Pearl Hunting, Reef Dash, Crab Battle (3\u00d73 keys), Coral Echo respective operations.\n- **Menu/Shop/Illustrated Book**: `;` `.` to select, `,` `/` to switch tabs, Enter to confirm or purchase (click twice to sell), B/Esc to return.\n- Main Interface (Fish Tank): F/Enter to feed, G to switch food, N to select a fish, T for treats, C to clean, L for lights, P to pop gold bubbles with a laser, R to tease the crab; plus K for the Bestiary, V for the Gene Lab, M for mini-games, E for expeditions, B for the shop, Q for quests, A for relics, W for weather, S for settings, and H for help.\n- Deep-Sea Expedition (Submarine): WASD to move, Space for sonar, F for harpoon, G for EMP, Enter to interact/dock/rescue, M for the map, N for the mini-map, Esc to pause, and Q for an emergency ascent\u2014plus a reminder regarding oxygen levels and bounties.\n- Mini-games: Specific controls for Pearl Hunt, Reef Dash, Crab Battle (3\u00d73 key layout), and Coral Echo.\n- Menus / Shop / Bestiary: Use ; and . to select, , and / to switch tabs, Enter to confirm or purchase (press twice to sell), and B/Esc to go back."
+    "name_src": "CARD AQUARIUM \u5361\u724c\u6c34\u65cf\u9986",
+    "description_en": "CardAquarium (fish tank farming + deep sea exploration), suitable for M5Stack Cardputer / Cardputer Adv (ESP32-S3).\n\nThis is a pixel style aquarium cultivation game. You can raise fish, hatch eggs, and breed fish in a fish tank, or you can drive a submarine to explore the deep sea. It also comes with 4 mini-games.\n\nThis is a pixel-art aquarium simulation game. You can raise fish, hatch eggs, and breed them in your tank, or pilot a submarine to explore the deep sea\u2014plus, it includes four built-in mini-games.\n\n- **Main interface (fish tank)**: F/Enter to feed, G to switch food, N to select fish, T for snacks, C for cleaning, L for lighting, P for laser to poke golden bubbles, R for teasing crabs, and K for illustrations, V for genetic laboratory, M for mini-games, E for adventure, B for shops, Q for tasks, A for relics, W for weather, S for settings, and H for help.\n- **Deep Sea Adventure (Submarine)**: WASD swimming, Space sonar, F harpoon, G electromagnetic pulse, Enter interaction/docking/rescue, M map, N mini map, Esc pause, Q emergency resurfacing, with a reminder about oxygen and bounty.\n- **Mini Games**: Pearl Hunting, Reef Dash, Crab Battle (3\u00d73 keys), Coral Echo respective operations.\n- **Menu/Shop/Illustrated Book**: `;` `.` to select, `,` `/` to switch tabs, Enter to confirm or purchase (click twice to sell), B/Esc to return.\n- Main Interface (Fish Tank): F/Enter to feed, G to switch food, N to select a fish, T for treats, C to clean, L for lights, P to pop gold bubbles with a laser, R to tease the crab; plus K for the Bestiary, V for the Gene Lab, M for mini-games, E for expeditions, B for the shop, Q for quests, A for relics, W for weather, S for settings, and H for help.\n- Deep-Sea Expedition (Submarine): WASD to move, Space for sonar, F for harpoon, G for EMP, Enter to interact/dock/rescue, M for the map, N for the mini-map, Esc to pause, and Q for an emergency ascent\u2014plus a reminder regarding oxygen levels and bounties.\n- Mini-games: Specific controls for Pearl Hunt, Reef Dash, Crab Battle (3\u00d73 key layout), and Coral Echo.\n- Menus / Shop / Bestiary: Use ; and . to select, , and / to switch tabs, Enter to confirm or purchase (press twice to sell), and B/Esc to go back.",
+    "description_src": "CardAquarium(\u9c7c\u7f38\u517b\u9c7c + \u6df1\u6d77\u63a2\u9669),\u9002\u7528\u4e8e M5Stack Cardputer / Cardputer Adv(ESP32-S3)\u3002\n\n\u8fd9\u662f\u4e00\u6b3e\u50cf\u7d20\u98ce\u6c34\u65cf\u7bb1\u517b\u6210\u6e38\u620f\u3002\u4f60\u53ef\u4ee5\u5728\u9c7c\u7f38\u91cc\u517b\u9c7c\u3001\u5b75\u86cb\u3001\u80b2\u79cd,\u4e5f\u53ef\u4ee5\u9a7e\u9a76\u6f5c\u8247\u53bb\u6df1\u6d77\u63a2\u9669,\u8fd8\u81ea\u5e26 4 \u4e2a\u5c0f\u6e38\u620f\u3002\n\nThis is a pixel-art aquarium simulation game. You can raise fish, hatch eggs, and breed them in your tank, or pilot a submarine to explore the deep sea\u2014plus, it includes four built-in mini-games.\n\n- **\u4e3b\u754c\u9762\uff08\u9c7c\u7f38\uff09**\uff1aF/Enter \u5582\u98df\u3001G \u5207\u6362\u98df\u7269\u3001N \u9009\u9c7c\u3001T \u96f6\u98df\u3001C \u6e05\u6d01\u3001L \u706f\u5149\u3001P \u6fc0\u5149\u6233\u91d1\u6ce1\u6ce1\u3001R \u9017\u8783\u87f9\uff0c\u4ee5\u53ca K \u56fe\u9274\u3001V \u57fa\u56e0\u5b9e\u9a8c\u5ba4\u3001M \u5c0f\u6e38\u620f\u3001E \u63a2\u9669\u3001B \u5546\u5e97\u3001Q \u4efb\u52a1\u3001A \u9057\u7269\u3001W \u5929\u6c14\u3001S \u8bbe\u7f6e\u3001H \u5e2e\u52a9\u3002\n- **\u6df1\u6d77\u63a2\u9669\uff08\u6f5c\u8247\uff09**\uff1aWASD \u6e38\u52a8\u3001Space \u58f0\u5450\u3001F \u9c7c\u53c9\u3001G \u7535\u78c1\u8109\u51b2\u3001Enter \u4e92\u52a8/\u505c\u9760/\u6551\u52a9\u3001M \u5730\u56fe\u3001N \u5c0f\u5730\u56fe\u3001Esc \u6682\u505c\u3001Q \u7d27\u6025\u4e0a\u6d6e\uff0c\u53e6\u9644\u4e00\u53e5\u6c27\u6c14\u548c\u60ac\u8d4f\u7684\u63d0\u793a\u3002\n- **\u5c0f\u6e38\u620f**\uff1a\u73cd\u73e0\u72e9\u730e\u3001\u7901\u77f3\u51b2\u523a\u3001\u8783\u87f9\u5927\u4f5c\u6218\uff083\u00d73 \u952e\u4f4d\uff09\u3001\u73ca\u745a\u56de\u58f0\u5404\u81ea\u7684\u64cd\u4f5c\u3002\n- **\u83dc\u5355 / \u5546\u5e97 / \u56fe\u9274**\uff1a`;` `.` \u9009\u62e9\uff0c`,` `/` \u5207\u6362\u6807\u7b7e\uff0cEnter \u786e\u8ba4\u6216\u8d2d\u4e70\uff08\u8fde\u6309\u4e24\u6b21\u51fa\u552e\uff09\uff0cB/Esc \u8fd4\u56de\u3002\n- Main Interface (Fish Tank): F/Enter to feed, G to switch food, N to select a fish, T for treats, C to clean, L for lights, P to pop gold bubbles with a laser, R to tease the crab; plus K for the Bestiary, V for the Gene Lab, M for mini-games, E for expeditions, B for the shop, Q for quests, A for relics, W for weather, S for settings, and H for help.\n- Deep-Sea Expedition (Submarine): WASD to move, Space for sonar, F for harpoon, G for EMP, Enter to interact/dock/rescue, M for the map, N for the mini-map, Esc to pause, and Q for an emergency ascent\u2014plus a reminder regarding oxygen levels and bounties.\n- Mini-games: Specific controls for Pearl Hunt, Reef Dash, Crab Battle (3\u00d73 key layout), and Coral Echo.\n- Menus / Shop / Bestiary: Use ; and . to select, , and / to switch tabs, Enter to confirm or purchase (press twice to sell), and B/Esc to go back."
   },
   {
     "_id": "1897200000000002810",
@@ -36281,7 +36281,7 @@
     ],
     "author": "mithug3",
     "github": "https://github.com/mithug3/CARDRADIO",
-    "download": 4349,
+    "download": 4350,
     "versions": [
       {
         "version": "0.1",
@@ -37452,7 +37452,7 @@
     "_id": "2118663596706275329",
     "fid": "2118663596706275329",
     "name": "Cardputer ADV MP3 Player",
-    "description": "# Cardputer ADV MP3 Player\n\nAn MP3 player firmware for the M5Stack Cardputer ADV. It plays `.mp3` files\nfrom the microSD card through the built-in speaker or the 3.5 mm headphone\njack, with a folder browser, shuffle and repeat, seeking, and a 3-band\nequaliser.\n\n## Features\n\n- Folder browser for the whole SD card, folders first, natural sort order\n- Plays every MP3 in a folder, starting from the track you pick\n- 3-band equaliser (low, mid, high), +/- 12 dB per band\n- Shuffle, repeat all, repeat one\n- Seek 10 seconds back or forward, hold the key to scrub\n- Title, artist and album from ID3v2.2, 2.3, 2.4 and ID3v1 tags\n- Accurate duration and seeking for both CBR and VBR files\n- Speaker or headphones (plugging into the 3.5 mm jack mutes the speaker in\n  hardware)\n- Screen turns off after 1 minute without input while playing, to save battery\n- Volume, EQ, shuffle, repeat, brightness and the last folder are remembered\n  across power cycles\n\n## Hardware\n\n- M5Stack Cardputer ADV (StampS3A, ESP32-S3FN8, ES8311 audio codec, TCA8418\n  keyboard controller)\n- A microSD card formatted FAT32 or exFAT\n\nThe libraries it uses also support the original Cardputer, so it may run\nthere too, but it has not been tried on one.\n\n## Preparing the SD card\n\nCopy MP3 files onto the card in any folder layout you like, for example:\n\n```\n/Music/Artist/Album/01 - First Song.mp3\n/Music/Artist/Album/02 - Second Song.mp3\n/Podcasts/episode-12.mp3\n```\n\n- Only files ending in `.mp3` are listed.\n- Hidden files and folders (names starting with `.`, such as the `._` files\n  macOS leaves behind) and `System Volume Information` are skipped.\n- A folder shows at most 600 items.\n- Files without tags show their file name instead.\n\n## Controls\n\nThe arrow keys work with or without Fn: `;` up, `.` down, `,` left, `/` right.\n\n### Anywhere\n\n| Key | Action |\n|---|---|\n| `Space` or the G0 button | Play / pause |\n| `N` | Next track |\n| `P` | Previous track (restarts the current track if it has played for more than 3 seconds) |\n| `=` / `-` | Volume up / down in 5 % steps |\n| `M` | Mute / unmute |\n| `S` | Shuffle on / off |\n| `R` | Cycle repeat mode: all, one, off |\n| `Tab` | Switch between Library and Now Playing |\n| `E` | Open / close the equaliser |\n| `L` | Library |\n| `B` | Cycle screen brightness (4 levels) |\n| `D` | Turn the screen off |\n\nWhen the screen is off, the first key press only turns it back on. The G0\nbutton still plays and pauses with the screen off.\n\n### Library\n\n| Key | Action |\n|---|---|\n| `;` / `.` | Move up / down |\n| `,` / `/` | Page up / down |\n| `Enter` | Open the folder, or play the folder starting from this track |\n| `Backspace` | Go up one folder |\n| `` ` `` (Esc) | Back to Now Playing |\n\n### Now Playing\n\n| Key | Action |\n|---|---|\n| `;` / `.` | Volume up / down |\n| `,` / `/` | Seek back / forward 10 seconds (hold to keep seeking) |\n| `Enter` | Play / pause |\n| `Backspace` | Library |\n\n### Equaliser\n\n| Key | Action |\n|---|---|\n| `,` / `/` | Select band |\n| `;` / `.` | Raise / lower the selected band by 1 dB |\n| `0` | Reset the selected band to 0 dB |\n| `F` | Reset all bands to flat |\n| `Enter`, `Backspace` or `` ` `` | Back |\n\n## Playback behaviour\n\n- With repeat off, playback stops after the last track. `Space` then starts\n  the folder again from the top.\n- With repeat all and shuffle on, each pass through the folder gets a new\n  random order, and the song that just finished is never played first.\n- Tracks that cannot be read are skipped automatically.\n- Changing shuffle while playing keeps the current track and reorders the\n  rest.\n\n## Equaliser\n\n| Band | Filter | Centre / corner | Range |\n|---|---|---|---|\n| Low | Low shelf | 200 Hz | +/- 12 dB |\n| Mid | Peak (Q 0.7) | 1 kHz | +/- 12 dB |\n| High | High shelf | 4 kHz | +/- 12 dB |\n\nWhen any band is boosted, the whole signal is turned down by the size of the\nlargest boost before filtering. This keeps loud passages from clipping, so a\nboost changes the tone rather than adding distortion. It also means the\noverall level drops as you boost, so turn the volume up to compensate.\n\nWith every band at 0 dB the equaliser is bypassed entirely.\n\n## Installing\n\nEither:\n\nSave the BIN to the Downloads folder to install via Launcher, or\nFlash the full image without using Launcher.\n<p align=\"center\"> <img src=\"https://github.com/user-attachments/assets/fbefc593-042a-42ab-9c6d-a4289ba03ddc\" alt=\"IMG_20261105_232914595\" width=\"320\"> <img src=\"https://github.com/user-attachments/assets/637206fc-8b0d-4a3e-ab58-865da29e83a9\" alt=\"IMG_20261105_232923801\" width=\"320\"> </p> <p align=\"center\"> <img src=\"https://github.com/user-attachments/assets/96a574ef-d261-40c1-88b3-e79774ffa823\" alt=\"IMG_20261105_232931284\" width=\"180\"> <img src=\"https://github.com/user-attachments/assets/f1452105-da92-45fa-bda8-2b10d25eeb43\" alt=\"IMG_20261105_232937334\" width=\"180\"> <img src=\"https://github.com/user-attachments/assets/c594b73a-87a5-47e5-9cc3-661611f4496e\" alt=\"IMG_20261105_232945418\" width=\"180\"> </p>\n\n## Troubleshooting\n\n**\"No microSD card\" stays on screen**\nCheck the card is pushed fully in and formatted FAT32 or exFAT.\n\n**\"Can't read the card\"**\nThe card mounted but the folder could not be listed. Reformat the card or\ntry another.\n\n**A file does not show up**\nMake sure the name ends in `.mp3` and does not start with a dot, and that\nthe folder has fewer than 600 items.\n\n**No sound**\nCheck the volume and mute (`M`) in the header bar. If headphones are plugged\nin, the speaker is switched off by the hardware.\n\n**Titles show `?` characters**\nTag and file name text is shown with the built-in fonts, which only cover\nbasic Latin characters. Accented letters are shown without their accents;\nother scripts appear as `?`.\n\n## Limitations\n\n- MP3 only. WAV, FLAC and AAC files are not listed.\n- The display fonts cover basic Latin characters only.\n- The play queue is the current folder; there is no playlist file support.\n- Elapsed time after a seek in a VBR file without a seek table is an\n  estimate.\n\n## Licence\n\nESP8266Audio is licensed under GPL-3.0, so any binary built from this\nproject is covered by GPL-3.0 if you distribute it. M5GFX, M5Unified and\nM5Cardputer are MIT licensed.\n\n<a href=\"https://www.buymeacoffee.com/turbulentgoat\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me a Beer?\" style=\"height: 60px !important;width: 217px !important;\" ></a>",
+    "description": "<p><strong><u>Cardputer ADV MP3 Player</u></strong></p>\n<p>An MP3 player firmware for the M5Stack Cardputer ADV. It plays <code>.mp3</code> files from the microSD card through the built-in speaker or the 3.5 mm headphone jack, with a folder browser, shuffle and repeat, seeking, and a 3-band equaliser.</p>\n<p><strong><u>Features</u></strong></p>\n<ul>\n<li>Folder browser for the whole SD card, folders first, natural sort order</li>\n<li>Plays every MP3 in a folder, starting from the track you pick</li>\n<li>3-band equaliser (low, mid, high), +/- 12 dB per band</li>\n<li>Shuffle, repeat all, repeat one</li>\n<li>Seek 10 seconds back or forward, hold the key to scrub</li>\n<li>Title, artist and album from ID3v2.2, 2.3, 2.4 and ID3v1 tags</li>\n<li>Accurate duration and seeking for both CBR and VBR files</li>\n<li>Speaker or headphones (plugging into the 3.5 mm jack mutes the speaker in<br><br>&nbsp;&nbsp;hardware)</li>\n<li>Screen turns off after 1 minute without input while playing, to save battery</li>\n<li>Volume, EQ, shuffle, repeat, brightness and the last folder are remembered<br><br>&nbsp;&nbsp;across power cycles<br><br></li></ul><p><strong>See my GitHub for more info/all controls.</strong></p><ul>\n</ul>",
     "cover": "https://m5burner-cdn.m5stack.com/community/2118662136618721281/2118663596706275329/2118663596710469634/cover/2118663596710469636.png",
     "category": "cardputer-adv",
     "tags": [
@@ -42998,7 +42998,7 @@
     "_id": "2105933987488079874",
     "fid": "2105933987488079874",
     "name": "ChrisDaDriver",
-    "description": "ChrisDaDriver is a high-performance wardriving firmware built for the M5Cardputer. It simultaneously captures WiFi networks (SSIDs, BSSIDs, RSSI, channels) and BLE devices, tags them with high-precision GPS coordinates, and saves the data in the WiGLE CSV format (v1.5) directly to the SD card.\n\nKey Features:\n- WiGLE Compatibility: Generates valid CSV files ready for direct upload to wigle.net.\n- Dual Scanning: Simultaneous capture of 2.4 GHz WiFi beacons (promiscuous mode on Core 0) and Bluetooth Low Energy (BLE).\n- GPS Integration: Parses latitude, longitude, altitude, and timestamps via hardware serial.\n- SD Card Benchmark: Automatically tests SD card performance at boot to dynamically optimize write queue sizes.\n- Thread-Safe Architecture: Uses FreeRTOS mutexes to ensure secure data handling between both ESP32 cores.\n- RAM Optimization: Automatic cache clearing and memory management to prevent heap crashes during large scans.\n\nControls:\n- BTN 0 (G0 / Main Button): \nLong Press -  Start or stop logging. Starting a new session creates a new log file automatically.\nShort press - dimm Display\n- Key 'D' (Keyboard): Toggle the developer overlay (Dev Mode) showing free RAM, SD queue status, and GPS time.\n\nRequirements:\n- M5Cardputer\n- SD Card (FAT32 formatted)\n- Connected GPS module (RX: Pin 15, TX: Pin 13, Baudrate: 115200)\n\nFile Output Path:\n/ChrisDaDriver/WarDrive/wd_XXX.csv",
+    "description": "<p>ChrisDaDriver is an ultra-fast, multi-threaded wardriving firmware built specifically for the M5Cardputer. It captures WiFi networks (802.11 b/g/n) and Bluetooth Low Energy (BLE) devices in parallel, enriches the data with GPS coordinates, and exports logs in the official WiGLE CSV format (v1.5) for seamless upload to wigle.net or wdgwars.pl and even wardrift.net.</p>\n<h1><br></h1><h1>Features</h1>\n<ul>\n<li>WiGLE v1.5 Compliant: Pre-formatted CSV log files ready for direct WiGLE submission.</li>\n<li>Parallel Dual-Core Architecture:<br><ul>\n<li>WiFi promiscuous sniffer and channel hopping on Core 0.</li>\n<li>BLE scanning, GPS parsing, UI rendering, and SD writing on Core 1.</li>\n</ul>\n</li>\n<li>High-Throughput Processing: Capable of capturing and processing ~22 scan entries per second.</li>\n<li>Dynamic SD Benchmarking:<br><ul>\n<li>Measures write latency on boot to dynamically scale buffer queue limits (maxSdQueueSize).</li>\n</ul>\n</li>\n<li>Thread-Safe Memory Management:<br><ul>\n<li>FreeRTOS mutexes (dataMutex) protect shared GPS and scan buffers against race conditions.</li>\n</ul>\n</li>\n<li>Flicker-Free Optimized UI:<br><ul>\n<li>Direct rendering without heavy canvas overhead to save RAM.</li>\n<li>Smooth color-transitioning battery indicator (Green &gt; Yellow &gt; Red).</li>\n</ul>\n</li>\n<li>Interactive File Management:<br><ul>\n<li>Built-in menu to select, upload, or securely delete individual log files directly on the device.</li>\n</ul>\n</li>\n<li>Direct API upload to WDGWars:<br><ul>\n<li>Upload your csv files directly from the Cardputer to the API.</li>\n</ul>\n</li>\n</ul>\n<h2><br></h2><h2>Controls</h2><table><thead><tr><th align=\"left\">Key / Button</th><th align=\"left\">Action</th></tr></thead><tbody><tr><td align=\"left\"><strong>Btn 0 (Short Press)</strong></td><td align=\"left\">Toggle Display Backlighting ON / OFF (Dim / Bright)</td></tr><tr><td align=\"left\"><strong>Btn 0 (Long Press)</strong></td><td align=\"left\">Open Main Menu</td></tr><tr><td align=\"left\"><strong><code>Enter</code>&nbsp;(Keyboard)</strong></td><td align=\"left\">Start scanning / Execute selected menu action / Save setting</td></tr><tr><td align=\"left\"><strong><code>Del</code>&nbsp;(Keyboard)</strong></td><td align=\"left\">Stop scanning / Return or exit menu</td></tr><tr><td align=\"left\"><strong><code>D</code>&nbsp;(Keyboard)</strong></td><td align=\"left\">Toggle Developer Diagnostic Overlay</td></tr></tbody></table><p><br></p><ul><li><h2></h2></li>\n</ul>\n<h2>Hardware Requirements</h2><ul><li><strong>M5Stack Cardputer</strong></li><li><strong>MicroSD Card</strong>&nbsp;(FAT32 formatted)</li><li><strong>GPS Module</strong>&nbsp;(connected via Grove or I/O header)</li></ul>",
     "cover": "https://m5burner-cdn.m5stack.com/community/376630/2105933987488079874/2119524874043695106/cover/2119524874043695108.png",
     "category": "cardputer-adv",
     "tags": [
@@ -47526,11 +47526,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2118687349905465346/2119521491337519106/bin/2119521491337519107.bin",
         "Fs": 5492688,
+        "as": 5427152,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 5427152,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -52459,7 +52459,7 @@
     "_id": "1897200000000000027",
     "fid": "1897200000000000027",
     "name": "EMBER",
-    "description": "A themeable MP3 / FLAC / WAV player firmware for the Cardputer ADV. Folder browsing (Artist/Album/Track) directly off the SD card, natural-sorted. No library scan or database step, so it scales with your card, not your RAM. Embedded album art (JPEG/PNG/BMP/QOI) pulled straight from your files' metadata, plus an animated turntable placeholder for anything untagged. Two full-screen visualizers, a real FFT spectrum analyzer and a silhouette dance visualizer that reacts to bass. 6 built-in themes, plus a browser-based theme editor (device-accurate 16-bit color preview) - export a JSON, drop it in /themes on the SD card, no recompiling",
+    "description": "A themeable MP3 / FLAC / WAV player firmware for the Cardputer ADV. Folder browsing (Artist/Album/Track) directly off the SD card, natural-sorted. No library scan or database step, so it scales with your card, not your RAM. Embedded album art (JPEG/PNG/BMP/QOI) pulled straight from your files' metadata, plus an animated turntable placeholder for anything untagged. Two full-screen visualizers, a real FFT spectrum analyzer and a silhouette dance visualizer that reacts to bass. Customize your mp3 player with built-in themes, plus a browser-based theme editor (device-accurate 16-bit color preview) - export a JSON, drop it in /themes on the SD card, no recompiling. STEREO output DAC support, see GitHub.",
     "cover": "https://m5burner-cdn.m5stack.com/community/569548/1897200000000000027/2118751880493047809/cover/2118751880493047811.gif",
     "category": "cardputer-adv",
     "tags": [
@@ -54053,7 +54053,7 @@
     ],
     "author": "pkolbas",
     "github": "",
-    "download": 317,
+    "download": 318,
     "versions": [
       {
         "version": "0.1.35",
@@ -58896,6 +58896,63 @@
             "analyzed_at": "2026-11-09T03:23:31Z",
             "etag": "\"EBF8E4663D4F5F2866277C151C1D6FF4\"",
             "last_modified": "Sun, 08 Nov 2026 10:19:28 GMT"
+          }
+        }
+      },
+      {
+        "version": "v0.5.4",
+        "version_id": "2118749325801201665",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118623364061503490/2118634085981790209/2118749325801201665/bin/2118749325801201666.bin",
+        "Fs": 2986688,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2921152,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2921152,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 2921152,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T06:23:32Z",
+            "etag": "\"F111736D658BBBC435218F4DDA80AD2A\"",
+            "last_modified": "Fri, 06 Nov 2026 16:56:18 GMT"
           }
         }
       }
@@ -84425,10 +84482,10 @@
       }
     ],
     "esp": "s3",
-    "name_src": "M5Clock v1.4.0 \u2014 \u4e2d\u82f1\u53cc\u8bed + \u81ea\u5b9a\u4e49\u70b9\u9635\u5b57\u7b26+\u97f3\u4e50\u9891\u8c31",
     "name_en": "M5Clock v1.4.0 \u2014 Chinese and English bilingual + custom dot matrix characters + music spectrum",
-    "description_src": "\u4e09\u4e2a 8\u00d78 Chain Mono \u70b9\u9635\u663e\u793a\u5317\u4eac\u65f6\u95f4 HH:MM:SS\uff0c\u6570\u5b57\u95f4\u8ddd\u52a0\u5bbd\u5e76\u79fb\u9664\u5e95\u90e8\u79d2\u70b9\uff1bAtomS3R 128\u00d7128 \u5c4f\u5e55\u663e\u793a UTC \u4e16\u754c\u65f6\uff0c\u5e76\u8f6e\u64ad\u5317\u4eac\u3001\u4f26\u6566\u3001\u7ebd\u7ea6\u3001\u6d1b\u6749\u77f6\u3001\u4e1c\u4eac\u3001\u6089\u5c3c\u516d\u57ce\u65f6\u95f4\uff0c\u81ea\u52a8\u5904\u7406\u590f\u4ee4\u65f6\u3002\u914d\u7f51\u9875\u548c\u5c4f\u5e55\u5747\u652f\u6301\u4e2d\u6587 / English\uff0c\u652f\u6301 AP \u914d\u7f51\u3001NTP \u81ea\u52a8\u5bf9\u65f6\u3001\u4eae\u5ea6\u4e0e Mono \u987a\u5e8f\u8c03\u8282\u3002\u5728v1.2.0\u52a0\u5165\u4e86\u70b9\u9635\u5c4f\u663e\u793a\u7684\u529f\u80fd\u3002\u5728v1.3.0\u4e2d\u4fee\u590d\u4e86\u4e00\u4e9bbug\uff0c\u4e3a\u70b9\u9635\u5c4f\u6dfb\u52a0\u4e86\u66f4\u591a\u529f\u80fd\u3002\u5728v1.3.2\u4e2d\uff0c\u4fee\u590d\u4e86\u4e00\u4e9bbug\uff0c\u6dfb\u52a0\u4e86utc+x\u7684\u65f6\u533a\u8bbe\u7f6e\uff08Tips: \u5207\u6362\u8bed\u8a00\u65f6\u8bf7\u8010\u5fc3\u7b49\u5f85\uff09\u3002\u5728v1.4.0\u4e2d \u6dfb\u52a0\u4e86\u97f3\u9891\u9891\u8c31\u529f\u80fd \u9700\u914d\u5408github\u8f6f\u4ef6\u4f7f\u7528\u3002",
-    "description_en": "Three 8\u00d78 Chain Mono dots display Beijing time HH:MM:SS, with the digital spacing widened and the bottom second point removed; the AtomS3R 128\u00d7128 screen displays UTC world time, and rotates the six-city time of Beijing, London, New York, Los Angeles, Tokyo, and Sydney, and automatically handles daylight saving time. Both the configuration webpage and screen support Chinese/English, and support AP network configuration, NTP automatic time adjustment, brightness and Mono sequence adjustment. The dot matrix screen display function was added in v1.2.0. Some bugs were fixed in v1.3.0 and more functions were added for dot matrix screens. In v1.3.2, some bugs were fixed and the time zone setting of utc+x was added (Tips: Please be patient when switching languages). In v1.4.0, the audio spectrum function is added and needs to be used with github software."
+    "name_src": "M5Clock v1.4.0 \u2014 \u4e2d\u82f1\u53cc\u8bed + \u81ea\u5b9a\u4e49\u70b9\u9635\u5b57\u7b26+\u97f3\u4e50\u9891\u8c31",
+    "description_en": "Three 8\u00d78 Chain Mono dots display Beijing time HH:MM:SS, with the digital spacing widened and the bottom second point removed; the AtomS3R 128\u00d7128 screen displays UTC world time, and rotates the six-city time of Beijing, London, New York, Los Angeles, Tokyo, and Sydney, and automatically handles daylight saving time. Both the configuration webpage and screen support Chinese/English, and support AP network configuration, NTP automatic time adjustment, brightness and Mono sequence adjustment. The dot matrix screen display function was added in v1.2.0. Some bugs were fixed in v1.3.0 and more functions were added for dot matrix screens. In v1.3.2, some bugs were fixed and the time zone setting of utc+x was added (Tips: Please be patient when switching languages). In v1.4.0, the audio spectrum function is added and needs to be used with github software.",
+    "description_src": "\u4e09\u4e2a 8\u00d78 Chain Mono \u70b9\u9635\u663e\u793a\u5317\u4eac\u65f6\u95f4 HH:MM:SS\uff0c\u6570\u5b57\u95f4\u8ddd\u52a0\u5bbd\u5e76\u79fb\u9664\u5e95\u90e8\u79d2\u70b9\uff1bAtomS3R 128\u00d7128 \u5c4f\u5e55\u663e\u793a UTC \u4e16\u754c\u65f6\uff0c\u5e76\u8f6e\u64ad\u5317\u4eac\u3001\u4f26\u6566\u3001\u7ebd\u7ea6\u3001\u6d1b\u6749\u77f6\u3001\u4e1c\u4eac\u3001\u6089\u5c3c\u516d\u57ce\u65f6\u95f4\uff0c\u81ea\u52a8\u5904\u7406\u590f\u4ee4\u65f6\u3002\u914d\u7f51\u9875\u548c\u5c4f\u5e55\u5747\u652f\u6301\u4e2d\u6587 / English\uff0c\u652f\u6301 AP \u914d\u7f51\u3001NTP \u81ea\u52a8\u5bf9\u65f6\u3001\u4eae\u5ea6\u4e0e Mono \u987a\u5e8f\u8c03\u8282\u3002\u5728v1.2.0\u52a0\u5165\u4e86\u70b9\u9635\u5c4f\u663e\u793a\u7684\u529f\u80fd\u3002\u5728v1.3.0\u4e2d\u4fee\u590d\u4e86\u4e00\u4e9bbug\uff0c\u4e3a\u70b9\u9635\u5c4f\u6dfb\u52a0\u4e86\u66f4\u591a\u529f\u80fd\u3002\u5728v1.3.2\u4e2d\uff0c\u4fee\u590d\u4e86\u4e00\u4e9bbug\uff0c\u6dfb\u52a0\u4e86utc+x\u7684\u65f6\u533a\u8bbe\u7f6e\uff08Tips: \u5207\u6362\u8bed\u8a00\u65f6\u8bf7\u8010\u5fc3\u7b49\u5f85\uff09\u3002\u5728v1.4.0\u4e2d \u6dfb\u52a0\u4e86\u97f3\u9891\u9891\u8c31\u529f\u80fd \u9700\u914d\u5408github\u8f6f\u4ef6\u4f7f\u7528\u3002"
   },
   {
     "_id": "1897200000000003434",
@@ -86621,7 +86678,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104913,
+    "download": 104915,
     "versions": [
       {
         "version": "2.4.10",
@@ -87026,7 +87083,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104913,
+    "download": 104915,
     "versions": [
       {
         "version": "2.4.10",
@@ -93132,11 +93189,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2119398094133698563/bin/2119398094133698564.bin",
         "Fs": 649920,
+        "as": 584384,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 584384,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -104215,11 +104272,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/73352/1897200000000003406/2118662468950204417/bin/2118662468950204418.bin",
         "Fs": 1669248,
+        "as": 1603712,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1603712,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -133648,8 +133705,8 @@
       }
     ],
     "esp": "s3",
-    "description_src": "# Pocket Studio\n\n\u4e3a **M5Stack Cardputer ADV** \u5f00\u53d1\u7684\u53e3\u888b\u97f3\u4e50\u5de5\u4f5c\u7ad9\uff0c\u96c6\u5b9e\u65f6\u6f14\u594f\u3001\u591a\u8f68\u7f16\u66f2\u3001\u91c7\u6837\u4e0e\u97f3\u8272\u5236\u4f5c\u3001\u97f3\u4e50\u64ad\u653e\u4e8e\u4e00\u4f53\u3002\n\n## \u591a\u8f68\u7f16\u66f2\n\n- \u4e09\u6761\u65cb\u5f8b\u8f68\uff0c\u6bcf\u8f68\u652f\u6301\u56db\u590d\u97f3\uff0c\u53ef\u624b\u52a8\u6f14\u594f\u4e03\u548c\u5f26\u3002\n- \u72ec\u7acb\u9f13\u7ec4\u8f68\uff0c\u63d0\u4f9b\u516b\u79cd\u9f13\u58f0\u3002\n- \u652f\u6301\u5b9e\u65f6\u6f14\u594f\u3001\u5faa\u73af\u5f55\u97f3\u548c STEP \u6b65\u8fdb\u8f93\u5165\u3002\n- \u652f\u6301 1\u30012\u30014 \u5c0f\u8282\u5faa\u73af\uff0c\u4ee5\u53ca\u5168\u5c40 BPM\u3001\u603b\u97f3\u91cf\u548c\u8f68\u9053\u9759\u97f3\u3002\n\n## \u548c\u5f26\u4e0e\u7436\u97f3\n\n- \u652f\u6301\u9879\u76ee\u79fb\u8c03\u53ca\u5927\u8c03\u3001\u81ea\u7136\u5c0f\u8c03\u3002\n- \u81ea\u52a8\u8c03\u5185\u4e09\u548c\u5f26\uff1a\u6309\u4e00\u4e2a\u6839\u97f3\u5373\u53ef\u751f\u6210\u5bf9\u5e94\u548c\u5f26\u3002\n- \u7436\u97f3\u5668\u652f\u6301\u4e0a\u884c\u3001\u4e0b\u884c\u548c\u5f80\u8fd4\u6a21\u5f0f\u3002\n- \u53ef\u8c03\u6574\u901f\u5ea6\u3001\u53d1\u58f0\u6bd4\u4f8b\u3001\u516b\u5ea6\u8303\u56f4\uff0c\u5e76\u7528 HOLD \u4fdd\u6301\u6f14\u594f\u3002\n\n## \u9f13\u673a\n\n- \u516b\u79cd\u9f13\u58f0\uff1a\u5e95\u9f13\u3001\u519b\u9f13\u3001\u62cd\u624b\u3001\u95ed\u9572\u3001\u5f00\u9572\u3001\u4f4e\u97f3\u901a\u9f13\u3001\u9ad8\u97f3\u901a\u9f13\u548c\u6253\u51fb\u97f3\u3002\n- \u652f\u6301\u9f13\u57ab\u5b9e\u65f6\u6f14\u594f\u53ca\u5206\u884c\u6b65\u8fdb\u7f16\u8f91\u3002\n- \u53ef\u8c03\u6574\u5355\u9f13\u97f3\u91cf\u3001\u97f3\u9ad8\u3001\u9759\u97f3\u3001\u72ec\u594f\u548c Swing\u3002\n\n## \u91c7\u6837\u4e0e\u97f3\u8272\u5236\u4f5c\n\n- \u652f\u6301\u9ea6\u514b\u98ce\u5f55\u97f3\u3001\u5f55\u97f3\u5012\u8ba1\u65f6\u548c WAV \u5bfc\u5165\u3002\n- \u63d0\u4f9b\u6ce2\u5f62\u663e\u793a\u3001\u9009\u533a\u8bd5\u542c\u3001\u7cbe\u7ec6\u88c1\u526a\u548c\u88c1\u526a\u4fdd\u5b58\u3002\n- \u652f\u6301\u5355\u6b21\u64ad\u653e\u3001\u6309\u952e\u95e8\u63a7\u53ca\u6301\u7eed\u5faa\u73af\u3002\n- \u53ef\u8bbe\u7f6e\u72ec\u7acb\u5faa\u73af\u533a\u548c\u63a5\u7f1d\u4ea4\u53c9\u6de1\u5316\u3002\n- \u97f3\u8272\u4fdd\u5b58\u5230 SD \u5361\u540e\uff0c\u53ef\u4ea4\u7ed9\u65cb\u5f8b\u8f68\u6f14\u594f\u3002\n\n## \u58f0\u97f3\u8bbe\u8ba1\n\n- \u63d0\u4f9b\u6b63\u5f26\u6ce2\u3001\u4e09\u89d2\u6ce2\u3001\u65b9\u6ce2\u3001\u952f\u9f7f\u6ce2\u548c\u767d\u566a\u58f0\u3002\n- \u53cc\u632f\u8361\u5668\u652f\u6301\u6ce2\u5f62\u6df7\u5408\u4e0e\u97f3\u7a0b\u8c03\u6574\u3002\n- ADSR \u97f3\u91cf\u5305\u7edc\u3001\u97f3\u9ad8\u5305\u7edc\u548c\u6ee4\u6ce2\u5305\u7edc\u3002\n- LFO \u53ef\u8c03\u5236\u97f3\u9ad8\u3001\u6ee4\u6ce2\u622a\u6b62\u9891\u7387\u6216\u97f3\u91cf\u3002\n- \u63d0\u4f9b\u4f4e\u901a\u6ee4\u6ce2\u3001\u5171\u632f\u3001\u8f6f\u5931\u771f\u548c\u4f4d\u6df1\u964d\u8d28\u3002\n\n## \u97f3\u4e50\u64ad\u653e\u5668\n\n- \u652f\u6301\u6d4f\u89c8 SD \u5361\u76ee\u5f55\u3002\n- \u652f\u6301 16bit PCM WAV \u548c\u5e38\u89c1 MP3 \u6587\u4ef6\u3002\n- \u63d0\u4f9b\u64ad\u653e\u3001\u6682\u505c\u3001\u6362\u66f2\u3001\u8fdb\u5ea6\u8df3\u8f6c\u548c\u72ec\u7acb\u97f3\u91cf\u8c03\u8282\u3002\n\n## \u5b58\u50a8\u4e0e\u4f7f\u7528\u6761\u4ef6\n\n- \u7f16\u66f2\u9879\u76ee\u53ef\u4fdd\u5b58\u5230\u5185\u90e8\u5b58\u50a8\u6216 SD \u5361\u3002\n- \u91c7\u6837\u7d20\u6750\u3001\u97f3\u8272\u8bbe\u7f6e\u548c\u5f55\u97f3\u4fdd\u5b58\u5728 SD \u5361\u3002\n- \u57fa\u7840\u7f16\u66f2\u53ef\u4e0d\u63d2 SD \u5361\u4f7f\u7528\uff1b\u91c7\u6837\u5668\u3001\u91c7\u6837\u97f3\u8272\u548c\u64ad\u653e\u5668\u9700\u8981 SD \u5361\u3002\n- \u9002\u914d **Cardputer ADV**\u3002",
-    "description_en": "# Pocket Studio\n\nA pocket music workstation developed for **M5Stack Cardputer ADV**, integrating real-time performance, multi-track arrangement, sampling and tone production, and music playback.\n\n## Multi-track arrangement\n\n- Three melody tracks, each track supports four-note polyphony, and seventh chords can be played manually.\n- Independent drum track providing eight drum sounds.\n- Supports real-time performance, loop recording and STEP step input.\n- Supports 1, 2, and 4-bar loops, as well as global BPM, master volume, and track mute.\n\n## Chords and Arpeggios\n\n- Supports project transposition and major and natural minor keys.\n- Automatically tune internal triads: Press a root note to generate the corresponding chord.\n- Arpeggiator supports uplink, downlink and round trip modes.\n- Adjust tempo, voicing ratio, octave range and keep playing with HOLD.\n\n## Drum Machine\n\n- Eight drum sounds: kick, snare, clap, closed hi-hat, open hi-hat, bass tom, treble tom and percussion.\n- Supports real-time performance of drum pads and line-by-line step editing.\n- Adjustable drum volume, pitch, mute, solo and swing.\n\n## Sampling and sound production\n\n- Supports microphone recording, recording countdown and WAV import.\n- Provides waveform display, selection audition, fine cropping and cropping saving.\n-Supports single playback, key gate control and continuous looping.\n- Independent loop areas and seam crossfade can be set.\n- After the sound is saved to the SD card, it can be played on the melody track.\n\n## Sound Design\n\n- Provides sine wave, triangle wave, square wave, sawtooth wave and white noise.\n- Dual oscillators support waveform mixing and pitch adjustment.\n- ADSR volume envelope, pitch envelope and filter envelope.\n- LFO can modulate pitch, filter cutoff frequency or volume.\n- Provides low-pass filtering, resonance, soft distortion and bit depth degradation.\n\n## Music player\n\n- Support browsing SD card directory.\n- Supports 16bit PCM WAV and common MP3 files.\n- Provides play, pause, song change, progress jump and independent volume adjustment.\n\n## Storage and usage conditions\n\n- Arrangement projects can be saved to internal storage or SD card.\n- Sample material, sound settings and recordings are saved on the SD card.\n- The basic arrangement can be used without an SD card; the sampler, sampled sounds and player require an SD card.\n- Adapted to **Cardputer ADV**."
+    "description_en": "# Pocket Studio\n\nA pocket music workstation developed for **M5Stack Cardputer ADV**, integrating real-time performance, multi-track arrangement, sampling and tone production, and music playback.\n\n## Multi-track arrangement\n\n- Three melody tracks, each track supports four-note polyphony, and seventh chords can be played manually.\n- Independent drum track providing eight drum sounds.\n- Supports real-time performance, loop recording and STEP step input.\n- Supports 1, 2, and 4-bar loops, as well as global BPM, master volume, and track mute.\n\n## Chords and Arpeggios\n\n- Supports project transposition and major and natural minor keys.\n- Automatically tune internal triads: Press a root note to generate the corresponding chord.\n- Arpeggiator supports uplink, downlink and round trip modes.\n- Adjust tempo, voicing ratio, octave range and keep playing with HOLD.\n\n## Drum Machine\n\n- Eight drum sounds: kick, snare, clap, closed hi-hat, open hi-hat, bass tom, treble tom and percussion.\n- Supports real-time performance of drum pads and line-by-line step editing.\n- Adjustable drum volume, pitch, mute, solo and swing.\n\n## Sampling and sound production\n\n- Supports microphone recording, recording countdown and WAV import.\n- Provides waveform display, selection audition, fine cropping and cropping saving.\n-Supports single playback, key gate control and continuous looping.\n- Independent loop areas and seam crossfade can be set.\n- After the sound is saved to the SD card, it can be played on the melody track.\n\n## Sound Design\n\n- Provides sine wave, triangle wave, square wave, sawtooth wave and white noise.\n- Dual oscillators support waveform mixing and pitch adjustment.\n- ADSR volume envelope, pitch envelope and filter envelope.\n- LFO can modulate pitch, filter cutoff frequency or volume.\n- Provides low-pass filtering, resonance, soft distortion and bit depth degradation.\n\n## Music player\n\n- Support browsing SD card directory.\n- Supports 16bit PCM WAV and common MP3 files.\n- Provides play, pause, song change, progress jump and independent volume adjustment.\n\n## Storage and usage conditions\n\n- Arrangement projects can be saved to internal storage or SD card.\n- Sample material, sound settings and recordings are saved on the SD card.\n- The basic arrangement can be used without an SD card; the sampler, sampled sounds and player require an SD card.\n- Adapted to **Cardputer ADV**.",
+    "description_src": "# Pocket Studio\n\n\u4e3a **M5Stack Cardputer ADV** \u5f00\u53d1\u7684\u53e3\u888b\u97f3\u4e50\u5de5\u4f5c\u7ad9\uff0c\u96c6\u5b9e\u65f6\u6f14\u594f\u3001\u591a\u8f68\u7f16\u66f2\u3001\u91c7\u6837\u4e0e\u97f3\u8272\u5236\u4f5c\u3001\u97f3\u4e50\u64ad\u653e\u4e8e\u4e00\u4f53\u3002\n\n## \u591a\u8f68\u7f16\u66f2\n\n- \u4e09\u6761\u65cb\u5f8b\u8f68\uff0c\u6bcf\u8f68\u652f\u6301\u56db\u590d\u97f3\uff0c\u53ef\u624b\u52a8\u6f14\u594f\u4e03\u548c\u5f26\u3002\n- \u72ec\u7acb\u9f13\u7ec4\u8f68\uff0c\u63d0\u4f9b\u516b\u79cd\u9f13\u58f0\u3002\n- \u652f\u6301\u5b9e\u65f6\u6f14\u594f\u3001\u5faa\u73af\u5f55\u97f3\u548c STEP \u6b65\u8fdb\u8f93\u5165\u3002\n- \u652f\u6301 1\u30012\u30014 \u5c0f\u8282\u5faa\u73af\uff0c\u4ee5\u53ca\u5168\u5c40 BPM\u3001\u603b\u97f3\u91cf\u548c\u8f68\u9053\u9759\u97f3\u3002\n\n## \u548c\u5f26\u4e0e\u7436\u97f3\n\n- \u652f\u6301\u9879\u76ee\u79fb\u8c03\u53ca\u5927\u8c03\u3001\u81ea\u7136\u5c0f\u8c03\u3002\n- \u81ea\u52a8\u8c03\u5185\u4e09\u548c\u5f26\uff1a\u6309\u4e00\u4e2a\u6839\u97f3\u5373\u53ef\u751f\u6210\u5bf9\u5e94\u548c\u5f26\u3002\n- \u7436\u97f3\u5668\u652f\u6301\u4e0a\u884c\u3001\u4e0b\u884c\u548c\u5f80\u8fd4\u6a21\u5f0f\u3002\n- \u53ef\u8c03\u6574\u901f\u5ea6\u3001\u53d1\u58f0\u6bd4\u4f8b\u3001\u516b\u5ea6\u8303\u56f4\uff0c\u5e76\u7528 HOLD \u4fdd\u6301\u6f14\u594f\u3002\n\n## \u9f13\u673a\n\n- \u516b\u79cd\u9f13\u58f0\uff1a\u5e95\u9f13\u3001\u519b\u9f13\u3001\u62cd\u624b\u3001\u95ed\u9572\u3001\u5f00\u9572\u3001\u4f4e\u97f3\u901a\u9f13\u3001\u9ad8\u97f3\u901a\u9f13\u548c\u6253\u51fb\u97f3\u3002\n- \u652f\u6301\u9f13\u57ab\u5b9e\u65f6\u6f14\u594f\u53ca\u5206\u884c\u6b65\u8fdb\u7f16\u8f91\u3002\n- \u53ef\u8c03\u6574\u5355\u9f13\u97f3\u91cf\u3001\u97f3\u9ad8\u3001\u9759\u97f3\u3001\u72ec\u594f\u548c Swing\u3002\n\n## \u91c7\u6837\u4e0e\u97f3\u8272\u5236\u4f5c\n\n- \u652f\u6301\u9ea6\u514b\u98ce\u5f55\u97f3\u3001\u5f55\u97f3\u5012\u8ba1\u65f6\u548c WAV \u5bfc\u5165\u3002\n- \u63d0\u4f9b\u6ce2\u5f62\u663e\u793a\u3001\u9009\u533a\u8bd5\u542c\u3001\u7cbe\u7ec6\u88c1\u526a\u548c\u88c1\u526a\u4fdd\u5b58\u3002\n- \u652f\u6301\u5355\u6b21\u64ad\u653e\u3001\u6309\u952e\u95e8\u63a7\u53ca\u6301\u7eed\u5faa\u73af\u3002\n- \u53ef\u8bbe\u7f6e\u72ec\u7acb\u5faa\u73af\u533a\u548c\u63a5\u7f1d\u4ea4\u53c9\u6de1\u5316\u3002\n- \u97f3\u8272\u4fdd\u5b58\u5230 SD \u5361\u540e\uff0c\u53ef\u4ea4\u7ed9\u65cb\u5f8b\u8f68\u6f14\u594f\u3002\n\n## \u58f0\u97f3\u8bbe\u8ba1\n\n- \u63d0\u4f9b\u6b63\u5f26\u6ce2\u3001\u4e09\u89d2\u6ce2\u3001\u65b9\u6ce2\u3001\u952f\u9f7f\u6ce2\u548c\u767d\u566a\u58f0\u3002\n- \u53cc\u632f\u8361\u5668\u652f\u6301\u6ce2\u5f62\u6df7\u5408\u4e0e\u97f3\u7a0b\u8c03\u6574\u3002\n- ADSR \u97f3\u91cf\u5305\u7edc\u3001\u97f3\u9ad8\u5305\u7edc\u548c\u6ee4\u6ce2\u5305\u7edc\u3002\n- LFO \u53ef\u8c03\u5236\u97f3\u9ad8\u3001\u6ee4\u6ce2\u622a\u6b62\u9891\u7387\u6216\u97f3\u91cf\u3002\n- \u63d0\u4f9b\u4f4e\u901a\u6ee4\u6ce2\u3001\u5171\u632f\u3001\u8f6f\u5931\u771f\u548c\u4f4d\u6df1\u964d\u8d28\u3002\n\n## \u97f3\u4e50\u64ad\u653e\u5668\n\n- \u652f\u6301\u6d4f\u89c8 SD \u5361\u76ee\u5f55\u3002\n- \u652f\u6301 16bit PCM WAV \u548c\u5e38\u89c1 MP3 \u6587\u4ef6\u3002\n- \u63d0\u4f9b\u64ad\u653e\u3001\u6682\u505c\u3001\u6362\u66f2\u3001\u8fdb\u5ea6\u8df3\u8f6c\u548c\u72ec\u7acb\u97f3\u91cf\u8c03\u8282\u3002\n\n## \u5b58\u50a8\u4e0e\u4f7f\u7528\u6761\u4ef6\n\n- \u7f16\u66f2\u9879\u76ee\u53ef\u4fdd\u5b58\u5230\u5185\u90e8\u5b58\u50a8\u6216 SD \u5361\u3002\n- \u91c7\u6837\u7d20\u6750\u3001\u97f3\u8272\u8bbe\u7f6e\u548c\u5f55\u97f3\u4fdd\u5b58\u5728 SD \u5361\u3002\n- \u57fa\u7840\u7f16\u66f2\u53ef\u4e0d\u63d2 SD \u5361\u4f7f\u7528\uff1b\u91c7\u6837\u5668\u3001\u91c7\u6837\u97f3\u8272\u548c\u64ad\u653e\u5668\u9700\u8981 SD \u5361\u3002\n- \u9002\u914d **Cardputer ADV**\u3002"
   },
   {
     "_id": "2103720976377966593",
@@ -161573,7 +161630,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4449,
+    "download": 4450,
     "versions": [
       {
         "version": "v0.1",
@@ -167885,11 +167942,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/515524/2118985784638480386/2118985784642674690/bin/2118985784642674691.bin",
         "Fs": 4207184,
+        "as": 4141648,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 4141648,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -167927,8 +167984,8 @@
       }
     ],
     "esp": "s3",
-    "description_src": "# TouchFish News \u00b7 PaperDIY\n\nTouchFish News \u662f\u4e00\u4e2a\u9762\u5411 M5Stack PaperDIY \u7684\u684c\u9762\u65b0\u95fb\u770b\u677f\u3002\u5b83\u628a\u65b0\u95fb\u3001\u6781\u7b80\u7684\u5ba0\u7269\u4e92\u52a8\u3001\n\u519c\u5386\u548c\u8282\u5047\u65e5\u4fe1\u606f\u96c6\u4e2d\u663e\u793a\u5728 4.7 \u82f1\u5bf8\u7535\u5b50\u7eb8\u4e0a\uff0c\u9002\u5408\u653e\u5728\u4e66\u684c\u3001\u7384\u5173\u6216\u529e\u516c\u5ba4\uff0c\n\u4f5c\u4e3a\u4f4e\u529f\u8017\u7684\u4fe1\u606f\u5c4f\u3002\n\n\n## \u786c\u4ef6\n\n- M5Stack PaperDIY Complete Kit\n- ESP32-S3-WROOM-1-N16R8\n- 16 MB Flash\uff0c8 MB Octal PSRAM\n- 4.7 \u82f1\u5bf8 960\u00d7540 \u7070\u5ea6\u7535\u5b50\u7eb8\n- Wi-Fi 2.4 GHz\n- \u673a\u8eab\u7535\u6e90\u952e\n- KEY1\uff1aGPIO4\n- KEY2\uff1aGPIO3\n\n## \u529f\u80fd\n\n- \u65b0\u95fb\u4e3b\u9898\uff1a\u8d22\u7ecf\u3001\u7efc\u5408\u3001\u79d1\u6280\u3001AI\u3001\u4f53\u80b2\u3001\u822a\u5929\u3001\u56fd\u9645\u548c\u5a31\u4e50\n- \u65b0\u95fb\u6765\u6e90\uff1a\n  - \u534e\u5c14\u8857\u89c1\u95fb\n  - \u65b0\u6d6a\u8d22\u7ecf\n  - \u4e1c\u65b9\u8d22\u5bcc\n  - IT\u4e4b\u5bb6\n  - \u65b0\u6d6a\u5a31\u4e50\n  - Wall Street Journal\n  - Hacker News\n  - ESPN\n  - arXiv AI\n  - NASA\n- \u65b0\u95fb\u6765\u6e90\u5728\u72ec\u7acb\u9875\u9762\u4e2d\u9009\u62e9\n- \u6765\u6e90\u5207\u6362\u524d\u4f1a\u5b9e\u9645\u8054\u7f51\u6293\u53d6\uff0c\u7f51\u7edc\u5931\u8d25\u65f6\u4e0d\u4f1a\u5207\u6362\n- \u65b0\u95fb\u9ed8\u8ba4 10 \u5206\u949f\u66f4\u65b0\u4e00\u6b21\uff0c\u53ef\u624b\u52a8\u5373\u65f6\u540c\u6b65\n- \u5ba0\u7269\u8868\u60c5\u968f\u65e5\u671f\u3001\u8282\u5047\u65e5\u3001\u591c\u95f4\u548c\u6309\u952e\u4e92\u52a8\u53d8\u5316\n- \u516c\u5386\u3001\u519c\u5386\u3001\u8282\u5047\u65e5\u540d\u79f0\u548c\u5012\u8ba1\u65f6\n- \u5de5\u4f5c\u65e5\u4e0a\u4e0b\u73ed\u6253\u5361\u63d0\u9192\uff0c\u53ef\u8bbe\u7f6e\u5177\u4f53\u65f6\u95f4\n- \u624b\u673a\u626b\u7801\u7f51\u9875\u914d\u7f51\n- \u652f\u6301 4 \u4e2a\u5c4f\u5e55\u65b9\u5411\uff0c\u6bcf\u6b21\u9006\u65f6\u9488\u65cb\u8f6c 90\u00b0\n- \u6a2a\u5c4f\u4e0e\u7ad6\u5c4f\u72ec\u7acb\u5e03\u5c40\n- \u7535\u5b50\u7eb8\u5c40\u90e8\u5237\u65b0\uff0c\u51cf\u5c11\u6574\u5c4f\u95ea\u70c1\u548c\u6b8b\u5f71\n- \u56fa\u5b9a\u4f7f\u7528 UTC+8\n\n## \u5f00\u673a\u4e0e\u65e5\u5e38\u4f7f\u7528\n\n\u8bbe\u5907\u5f00\u673a\u540e\u5148\u663e\u793a\u542f\u52a8\u65e5\u5fd7\uff0c\u4f9d\u6b21\u68c0\u67e5 Wi-Fi\u3001\u540c\u6b65\u65f6\u95f4\u548c\u7f51\u7edc\u6570\u636e\uff0c\u968f\u540e\u8fdb\u5165\n\u5ba0\u7269\u65b0\u95fb\u770b\u677f\u3002\n\n\u770b\u677f\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u4e0e\u5ba0\u7269\u4e92\u52a8\n- KEY1 \u957f\u6309\uff1a\u7acb\u5373\u540c\u6b65\u65b0\u95fb\u548c\u8282\u5047\u65e5\n- KEY2 \u77ed\u6309\uff1a\u6253\u5f00\u8bbe\u7f6e\n\n\u8bbe\u7f6e\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u5149\u6807\u4e0a\u79fb\n- KEY2 \u77ed\u6309\uff1a\u5149\u6807\u4e0b\u79fb\n- KEY1 \u957f\u6309\uff1a\u786e\u8ba4\u5f53\u524d\u9009\u9879\n- KEY2 \u957f\u6309\uff1a\u8fd4\u56de\u4e0a\u4e00\u7ea7\n\n\u65f6\u95f4\u9009\u62e9\u548c\u65b0\u95fb\u6765\u6e90\u9009\u62e9\u4e5f\u4f7f\u7528\u76f8\u540c\u903b\u8f91\uff1a\u77ed\u6309\u9009\u62e9\u3001\u957f\u6309\u786e\u8ba4\u3001\u957f\u6309 KEY2 \u8fd4\u56de\u3002\n\n## \u9996\u6b21\u914d\u7f51\n\n1. \u5728\u770b\u677f\u77ed\u6309 KEY2 \u6253\u5f00\u8bbe\u7f6e\u3002\n2. \u79fb\u52a8\u5230\u201cWi-Fi \u7f51\u7edc\u201d\uff0c\u957f\u6309 KEY1 \u786e\u8ba4\u3002\n3. \u624b\u673a\u626b\u63cf\u5c4f\u5e55\u4e8c\u7ef4\u7801\uff0c\u52a0\u5165 `InkPet-Paper-XXXX` \u4e34\u65f6\u70ed\u70b9\u3002\n4. \u5728\u6253\u5f00\u7684\u7f51\u9875\u4e2d\u9009\u62e9\u5bb6\u5ead Wi-Fi \u5e76\u8f93\u5165\u5bc6\u7801\u3002\n5. \u8bbe\u5907\u8054\u7f51\u540e\u81ea\u52a8\u4fdd\u5b58\u914d\u7f6e\u3001\u540c\u6b65\u65f6\u95f4\u5e76\u8fd4\u56de\u770b\u677f\u3002\n\n\u5982\u679c\u624b\u673a\u6ca1\u6709\u81ea\u52a8\u6253\u5f00\u914d\u7f51\u9875\u9762\uff0c\u8fde\u63a5\u70ed\u70b9\u540e\u8bbf\u95ee\uff1a\n\n```text\nhttp://192.168.4.1\n```\n\n## \u65b0\u95fb\u6765\u6e90\u5207\u6362\n\n1. \u6253\u5f00\u8bbe\u7f6e\uff0c\u8fdb\u5165\u201c\u65b0\u95fb\u6765\u6e90\u201d\u3002\n2. \u4f7f\u7528 KEY1 / KEY2 \u4e0a\u4e0b\u9009\u62e9\u6765\u6e90\u3002\n3. \u957f\u6309 KEY1 \u5f00\u59cb\u8054\u7f51\u68c0\u6d4b\u3002\n4. \u6293\u53d6\u6210\u529f\u540e\u7acb\u5373\u5207\u6362\uff1b\u5931\u8d25\u5219\u4fdd\u7559\u539f\u6765\u6e90\u5e76\u663e\u793a\u7f51\u7edc\u9519\u8bef\u3002\n\n\u5f53\u524d\u6765\u6e90\u4f1a\u663e\u793a\u5728\u4e3b\u754c\u9762\u5e95\u90e8\u3002\n\n## \u6253\u5361\u63d0\u9192\n\n\u5728\u8bbe\u7f6e\u4e2d\u5f00\u542f\u201c\u6253\u5361\u63d0\u9192\u201d\uff0c\u7136\u540e\u5206\u522b\u8fdb\u5165\u201c\u4e0a\u73ed\u65f6\u95f4\u201d\u548c\u201c\u4e0b\u73ed\u65f6\u95f4\u201d\uff1a\n\n- \u77ed\u6309 KEY1 / KEY2 \u4ee5 30 \u5206\u949f\u4e3a\u5355\u4f4d\u8c03\u6574\n- \u957f\u6309 KEY1 \u4fdd\u5b58\n- \u957f\u6309 KEY2 \u53d6\u6d88\u5e76\u8fd4\u56de\n\n\u63d0\u9192\u53ea\u5728\u5de5\u4f5c\u65e5\u89e6\u53d1\u3002\n\n## \u6ce8\u610f\u4e8b\u9879\n\n- \u65b0\u95fb\u63a5\u53e3\u5c5e\u4e8e\u516c\u5f00\u6216\u975e\u5b98\u65b9\u63a5\u53e3\uff0c\u672a\u6765\u53ef\u80fd\u8c03\u6574\u683c\u5f0f\u6216\u8bbf\u95ee\u7b56\u7565\u3002\n- \u8282\u5047\u65e5\u63a5\u53e3\u4e34\u65f6\u4e0d\u53ef\u7528\u65f6\uff0c\u4f1a\u56de\u9000\u5230\u5185\u7f6e\u6570\u636e\u3002\n- Wall Street Journal\u3001Hacker News\u3001ESPN\u3001arXiv \u548c NASA \u5185\u5bb9\u4e3a\u82f1\u6587\u3002\n- \u65b0\u95fb\u6765\u6e90\u5207\u6362\u548c\u5b9a\u65f6\u5237\u65b0\u4f1a\u6d88\u8017\u7f51\u7edc\u6d41\u91cf\u4e0e\u4e00\u5b9a\u7535\u91cf\u3002",
-    "description_en": "# TouchFish News \u00b7 PaperDIY\n\nTouchFish News is a desktop news board for M5Stack PaperDIY. It combines news, minimalist pet interaction,\nThe lunar calendar and holiday information are displayed on 4.7-inch electronic paper, suitable for placement on desks, entrances or offices.\nAs a low-power information screen.\n\n\n## hardware\n\n- M5Stack PaperDIY Complete Kit\n- ESP32-S3-WROOM-1-N16R8\n- 16 MB Flash\uff0c8 MB Octal PSRAM\n- 4.7 inches 960\u00d7540 grayscale e-paper\n- Wi-Fi 2.4 GHz\n- Body power button\n- KEY1\uff1aGPIO4\n- KEY2\uff1aGPIO3\n\n## Function\n\n- News topics: finance, general, technology, AI, sports, aerospace, international and entertainment\n- News source:\n- Wall Street Insights\n- Sina Finance\n- Oriental Fortune\n- IT Home\n- Sina Entertainment\n  - Wall Street Journal\n  - Hacker News\n  - ESPN\n  - arXiv AI\n  - NASA\n- News sources are selected in separate pages\n- The source will be actually crawled online before switching, and will not switch when the network fails.\n- News is updated every 10 minutes by default, and can be synchronized manually in real time\n- Pet expressions change with date, holiday, night and key interaction\n- Gregorian calendar, lunar calendar, holiday names and countdown\n- Reminder to clock in and out on workdays, specific time can be set\n- Mobile phone scanning code web page configuration\n- Supports 4 screen orientations, each rotates 90\u00b0 counterclockwise\n- Independent layout for horizontal and vertical screens\n- Partial refresh of e-paper to reduce flickering and image retention on the entire screen\n- Fixed use of UTC+8\n\n## Booting up and daily use\n\nAfter the device is turned on, the startup log will be displayed first, then the Wi-Fi, synchronization time and network data will be checked in sequence, and then enter\nPet News Board.\n\nKanban button:\n\n- KEY1 short press: interact with pets\n- Long press on KEY1: synchronize news and holidays immediately\n- KEY2 short press: open settings\n\nSet button:\n\n- Short press KEY1: the cursor moves up\n- KEY2 short press: cursor moves down\n- KEY1 long press: Confirm the current option\n- KEY2 long press: return to the previous level\n\nTime selection and news source selection also use the same logic: short press to select, long press to confirm, long press KEY2 to return.\n\n## First time network configuration\n\n1. Short press KEY2 on the dashboard to open the settings.\n2. Move to \"Wi-Fi Network\" and long press KEY1 to confirm.\n3. Scan the QR code on the screen with your mobile phone to join the `InkPet-Paper-XXXX` temporary hotspot.\n4. Select your home Wi-Fi in the web page that opens and enter the password.\n5. After the device is connected to the Internet, it automatically saves the configuration, synchronizes the time and returns to the dashboard.\n\nIf the phone does not automatically open the network configuration page, access it after connecting to the hotspot:\n\n```text\nhttp://192.168.4.1\n```\n\n## News source switch\n\n1. Open settings and enter \"News Sources\".\n2. Use KEY1 / KEY2 up and down to select the source.\n3. Press and hold KEY1 to start network detection.\n4. Switch immediately after the capture is successful; if failed, the original source will be retained and a network error will be displayed.\n\nThe current source will be displayed at the bottom of the main interface.\n\n## Check-in reminder\n\nTurn on \"Punch-in Reminder\" in settings, and then enter \"Working Time\" and \"Off-Working Time\" respectively:\n\n- Short press KEY1 / KEY2 to adjust in 30 minute increments\n- Long press KEY1 to save\n- Long press KEY2 to cancel and return\n\nReminders are only triggered on weekdays.\n\n## Notes\n\n- The news interface is a public or unofficial interface, and the format or access policy may be adjusted in the future.\n- When the interface is temporarily unavailable during holidays, it will fall back to built-in data.\n- Wall Street Journal, Hacker News, ESPN, arXiv, and NASA content in English.\n- News source switching and scheduled refresh will consume network traffic and a certain amount of battery."
+    "description_en": "# TouchFish News \u00b7 PaperDIY\n\nTouchFish News is a desktop news board for M5Stack PaperDIY. It combines news, minimalist pet interaction,\nThe lunar calendar and holiday information are displayed on 4.7-inch electronic paper, suitable for placement on desks, entrances or offices.\nAs a low-power information screen.\n\n\n## hardware\n\n- M5Stack PaperDIY Complete Kit\n- ESP32-S3-WROOM-1-N16R8\n- 16 MB Flash\uff0c8 MB Octal PSRAM\n- 4.7 inches 960\u00d7540 grayscale e-paper\n- Wi-Fi 2.4 GHz\n- Body power button\n- KEY1\uff1aGPIO4\n- KEY2\uff1aGPIO3\n\n## Function\n\n- News topics: finance, general, technology, AI, sports, aerospace, international and entertainment\n- News source:\n- Wall Street Insights\n- Sina Finance\n- Oriental Fortune\n- IT Home\n- Sina Entertainment\n  - Wall Street Journal\n  - Hacker News\n  - ESPN\n  - arXiv AI\n  - NASA\n- News sources are selected in separate pages\n- The source will be actually crawled online before switching, and will not switch when the network fails.\n- News is updated every 10 minutes by default, and can be synchronized manually in real time\n- Pet expressions change with date, holiday, night and key interaction\n- Gregorian calendar, lunar calendar, holiday names and countdown\n- Reminder to clock in and out on workdays, specific time can be set\n- Mobile phone scanning code web page configuration\n- Supports 4 screen orientations, each rotates 90\u00b0 counterclockwise\n- Independent layout for horizontal and vertical screens\n- Partial refresh of e-paper to reduce flickering and image retention on the entire screen\n- Fixed use of UTC+8\n\n## Booting up and daily use\n\nAfter the device is turned on, the startup log will be displayed first, then the Wi-Fi, synchronization time and network data will be checked in sequence, and then enter\nPet News Board.\n\nKanban button:\n\n- KEY1 short press: interact with pets\n- Long press on KEY1: synchronize news and holidays immediately\n- KEY2 short press: open settings\n\nSet button:\n\n- Short press KEY1: the cursor moves up\n- KEY2 short press: cursor moves down\n- KEY1 long press: Confirm the current option\n- KEY2 long press: return to the previous level\n\nTime selection and news source selection also use the same logic: short press to select, long press to confirm, long press KEY2 to return.\n\n## First time network configuration\n\n1. Short press KEY2 on the dashboard to open the settings.\n2. Move to \"Wi-Fi Network\" and long press KEY1 to confirm.\n3. Scan the QR code on the screen with your mobile phone to join the `InkPet-Paper-XXXX` temporary hotspot.\n4. Select your home Wi-Fi in the web page that opens and enter the password.\n5. After the device is connected to the Internet, it automatically saves the configuration, synchronizes the time and returns to the dashboard.\n\nIf the phone does not automatically open the network configuration page, access it after connecting to the hotspot:\n\n```text\nhttp://192.168.4.1\n```\n\n## News source switch\n\n1. Open settings and enter \"News Sources\".\n2. Use KEY1 / KEY2 up and down to select the source.\n3. Press and hold KEY1 to start network detection.\n4. Switch immediately after the capture is successful; if failed, the original source will be retained and a network error will be displayed.\n\nThe current source will be displayed at the bottom of the main interface.\n\n## Check-in reminder\n\nTurn on \"Punch-in Reminder\" in settings, and then enter \"Working Time\" and \"Off-Working Time\" respectively:\n\n- Short press KEY1 / KEY2 to adjust in 30 minute increments\n- Long press KEY1 to save\n- Long press KEY2 to cancel and return\n\nReminders are only triggered on weekdays.\n\n## Notes\n\n- The news interface is a public or unofficial interface, and the format or access policy may be adjusted in the future.\n- When the interface is temporarily unavailable during holidays, it will fall back to built-in data.\n- Wall Street Journal, Hacker News, ESPN, arXiv, and NASA content in English.\n- News source switching and scheduled refresh will consume network traffic and a certain amount of battery.",
+    "description_src": "# TouchFish News \u00b7 PaperDIY\n\nTouchFish News \u662f\u4e00\u4e2a\u9762\u5411 M5Stack PaperDIY \u7684\u684c\u9762\u65b0\u95fb\u770b\u677f\u3002\u5b83\u628a\u65b0\u95fb\u3001\u6781\u7b80\u7684\u5ba0\u7269\u4e92\u52a8\u3001\n\u519c\u5386\u548c\u8282\u5047\u65e5\u4fe1\u606f\u96c6\u4e2d\u663e\u793a\u5728 4.7 \u82f1\u5bf8\u7535\u5b50\u7eb8\u4e0a\uff0c\u9002\u5408\u653e\u5728\u4e66\u684c\u3001\u7384\u5173\u6216\u529e\u516c\u5ba4\uff0c\n\u4f5c\u4e3a\u4f4e\u529f\u8017\u7684\u4fe1\u606f\u5c4f\u3002\n\n\n## \u786c\u4ef6\n\n- M5Stack PaperDIY Complete Kit\n- ESP32-S3-WROOM-1-N16R8\n- 16 MB Flash\uff0c8 MB Octal PSRAM\n- 4.7 \u82f1\u5bf8 960\u00d7540 \u7070\u5ea6\u7535\u5b50\u7eb8\n- Wi-Fi 2.4 GHz\n- \u673a\u8eab\u7535\u6e90\u952e\n- KEY1\uff1aGPIO4\n- KEY2\uff1aGPIO3\n\n## \u529f\u80fd\n\n- \u65b0\u95fb\u4e3b\u9898\uff1a\u8d22\u7ecf\u3001\u7efc\u5408\u3001\u79d1\u6280\u3001AI\u3001\u4f53\u80b2\u3001\u822a\u5929\u3001\u56fd\u9645\u548c\u5a31\u4e50\n- \u65b0\u95fb\u6765\u6e90\uff1a\n  - \u534e\u5c14\u8857\u89c1\u95fb\n  - \u65b0\u6d6a\u8d22\u7ecf\n  - \u4e1c\u65b9\u8d22\u5bcc\n  - IT\u4e4b\u5bb6\n  - \u65b0\u6d6a\u5a31\u4e50\n  - Wall Street Journal\n  - Hacker News\n  - ESPN\n  - arXiv AI\n  - NASA\n- \u65b0\u95fb\u6765\u6e90\u5728\u72ec\u7acb\u9875\u9762\u4e2d\u9009\u62e9\n- \u6765\u6e90\u5207\u6362\u524d\u4f1a\u5b9e\u9645\u8054\u7f51\u6293\u53d6\uff0c\u7f51\u7edc\u5931\u8d25\u65f6\u4e0d\u4f1a\u5207\u6362\n- \u65b0\u95fb\u9ed8\u8ba4 10 \u5206\u949f\u66f4\u65b0\u4e00\u6b21\uff0c\u53ef\u624b\u52a8\u5373\u65f6\u540c\u6b65\n- \u5ba0\u7269\u8868\u60c5\u968f\u65e5\u671f\u3001\u8282\u5047\u65e5\u3001\u591c\u95f4\u548c\u6309\u952e\u4e92\u52a8\u53d8\u5316\n- \u516c\u5386\u3001\u519c\u5386\u3001\u8282\u5047\u65e5\u540d\u79f0\u548c\u5012\u8ba1\u65f6\n- \u5de5\u4f5c\u65e5\u4e0a\u4e0b\u73ed\u6253\u5361\u63d0\u9192\uff0c\u53ef\u8bbe\u7f6e\u5177\u4f53\u65f6\u95f4\n- \u624b\u673a\u626b\u7801\u7f51\u9875\u914d\u7f51\n- \u652f\u6301 4 \u4e2a\u5c4f\u5e55\u65b9\u5411\uff0c\u6bcf\u6b21\u9006\u65f6\u9488\u65cb\u8f6c 90\u00b0\n- \u6a2a\u5c4f\u4e0e\u7ad6\u5c4f\u72ec\u7acb\u5e03\u5c40\n- \u7535\u5b50\u7eb8\u5c40\u90e8\u5237\u65b0\uff0c\u51cf\u5c11\u6574\u5c4f\u95ea\u70c1\u548c\u6b8b\u5f71\n- \u56fa\u5b9a\u4f7f\u7528 UTC+8\n\n## \u5f00\u673a\u4e0e\u65e5\u5e38\u4f7f\u7528\n\n\u8bbe\u5907\u5f00\u673a\u540e\u5148\u663e\u793a\u542f\u52a8\u65e5\u5fd7\uff0c\u4f9d\u6b21\u68c0\u67e5 Wi-Fi\u3001\u540c\u6b65\u65f6\u95f4\u548c\u7f51\u7edc\u6570\u636e\uff0c\u968f\u540e\u8fdb\u5165\n\u5ba0\u7269\u65b0\u95fb\u770b\u677f\u3002\n\n\u770b\u677f\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u4e0e\u5ba0\u7269\u4e92\u52a8\n- KEY1 \u957f\u6309\uff1a\u7acb\u5373\u540c\u6b65\u65b0\u95fb\u548c\u8282\u5047\u65e5\n- KEY2 \u77ed\u6309\uff1a\u6253\u5f00\u8bbe\u7f6e\n\n\u8bbe\u7f6e\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u5149\u6807\u4e0a\u79fb\n- KEY2 \u77ed\u6309\uff1a\u5149\u6807\u4e0b\u79fb\n- KEY1 \u957f\u6309\uff1a\u786e\u8ba4\u5f53\u524d\u9009\u9879\n- KEY2 \u957f\u6309\uff1a\u8fd4\u56de\u4e0a\u4e00\u7ea7\n\n\u65f6\u95f4\u9009\u62e9\u548c\u65b0\u95fb\u6765\u6e90\u9009\u62e9\u4e5f\u4f7f\u7528\u76f8\u540c\u903b\u8f91\uff1a\u77ed\u6309\u9009\u62e9\u3001\u957f\u6309\u786e\u8ba4\u3001\u957f\u6309 KEY2 \u8fd4\u56de\u3002\n\n## \u9996\u6b21\u914d\u7f51\n\n1. \u5728\u770b\u677f\u77ed\u6309 KEY2 \u6253\u5f00\u8bbe\u7f6e\u3002\n2. \u79fb\u52a8\u5230\u201cWi-Fi \u7f51\u7edc\u201d\uff0c\u957f\u6309 KEY1 \u786e\u8ba4\u3002\n3. \u624b\u673a\u626b\u63cf\u5c4f\u5e55\u4e8c\u7ef4\u7801\uff0c\u52a0\u5165 `InkPet-Paper-XXXX` \u4e34\u65f6\u70ed\u70b9\u3002\n4. \u5728\u6253\u5f00\u7684\u7f51\u9875\u4e2d\u9009\u62e9\u5bb6\u5ead Wi-Fi \u5e76\u8f93\u5165\u5bc6\u7801\u3002\n5. \u8bbe\u5907\u8054\u7f51\u540e\u81ea\u52a8\u4fdd\u5b58\u914d\u7f6e\u3001\u540c\u6b65\u65f6\u95f4\u5e76\u8fd4\u56de\u770b\u677f\u3002\n\n\u5982\u679c\u624b\u673a\u6ca1\u6709\u81ea\u52a8\u6253\u5f00\u914d\u7f51\u9875\u9762\uff0c\u8fde\u63a5\u70ed\u70b9\u540e\u8bbf\u95ee\uff1a\n\n```text\nhttp://192.168.4.1\n```\n\n## \u65b0\u95fb\u6765\u6e90\u5207\u6362\n\n1. \u6253\u5f00\u8bbe\u7f6e\uff0c\u8fdb\u5165\u201c\u65b0\u95fb\u6765\u6e90\u201d\u3002\n2. \u4f7f\u7528 KEY1 / KEY2 \u4e0a\u4e0b\u9009\u62e9\u6765\u6e90\u3002\n3. \u957f\u6309 KEY1 \u5f00\u59cb\u8054\u7f51\u68c0\u6d4b\u3002\n4. \u6293\u53d6\u6210\u529f\u540e\u7acb\u5373\u5207\u6362\uff1b\u5931\u8d25\u5219\u4fdd\u7559\u539f\u6765\u6e90\u5e76\u663e\u793a\u7f51\u7edc\u9519\u8bef\u3002\n\n\u5f53\u524d\u6765\u6e90\u4f1a\u663e\u793a\u5728\u4e3b\u754c\u9762\u5e95\u90e8\u3002\n\n## \u6253\u5361\u63d0\u9192\n\n\u5728\u8bbe\u7f6e\u4e2d\u5f00\u542f\u201c\u6253\u5361\u63d0\u9192\u201d\uff0c\u7136\u540e\u5206\u522b\u8fdb\u5165\u201c\u4e0a\u73ed\u65f6\u95f4\u201d\u548c\u201c\u4e0b\u73ed\u65f6\u95f4\u201d\uff1a\n\n- \u77ed\u6309 KEY1 / KEY2 \u4ee5 30 \u5206\u949f\u4e3a\u5355\u4f4d\u8c03\u6574\n- \u957f\u6309 KEY1 \u4fdd\u5b58\n- \u957f\u6309 KEY2 \u53d6\u6d88\u5e76\u8fd4\u56de\n\n\u63d0\u9192\u53ea\u5728\u5de5\u4f5c\u65e5\u89e6\u53d1\u3002\n\n## \u6ce8\u610f\u4e8b\u9879\n\n- \u65b0\u95fb\u63a5\u53e3\u5c5e\u4e8e\u516c\u5f00\u6216\u975e\u5b98\u65b9\u63a5\u53e3\uff0c\u672a\u6765\u53ef\u80fd\u8c03\u6574\u683c\u5f0f\u6216\u8bbf\u95ee\u7b56\u7565\u3002\n- \u8282\u5047\u65e5\u63a5\u53e3\u4e34\u65f6\u4e0d\u53ef\u7528\u65f6\uff0c\u4f1a\u56de\u9000\u5230\u5185\u7f6e\u6570\u636e\u3002\n- Wall Street Journal\u3001Hacker News\u3001ESPN\u3001arXiv \u548c NASA \u5185\u5bb9\u4e3a\u82f1\u6587\u3002\n- \u65b0\u95fb\u6765\u6e90\u5207\u6362\u548c\u5b9a\u65f6\u5237\u65b0\u4f1a\u6d88\u8017\u7f51\u7edc\u6d41\u91cf\u4e0e\u4e00\u5b9a\u7535\u91cf\u3002"
   },
   {
     "_id": "2108433529612562434",
@@ -231351,7 +231408,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 25714,
+    "download": 25715,
     "versions": [
       {
         "version": "Alpha-29",
@@ -364466,7 +364523,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/78/xiaozhi-esp32.git",
-    "download": 2758,
+    "download": 2759,
     "versions": [
       {
         "version": "v1.3.0-NiHaoXiaoZhi",
