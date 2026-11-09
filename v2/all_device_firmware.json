@@ -2364,7 +2364,7 @@
     ],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/AI-Offline-Chat-ADV",
-    "download": 1953,
+    "download": 1954,
     "versions": [
       {
         "version": "v1 (30.04.2026)",
@@ -3210,7 +3210,7 @@
     ],
     "author": "EHamachang",
     "github": "https://github.com/engneer-hamachan/area512",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "2.8",
@@ -3218,11 +3218,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/550615/2119215582501576705/2119215582505771010/bin/2119215582505771011.bin",
         "Fs": 5388224,
+        "as": 5322688,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 5322688,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -6016,7 +6016,7 @@
     ],
     "author": "LukeeSnow",
     "github": "https://github.com/lukasdurjan/AirPuter-For-Cardputer-ADV-CAP-LoRa-1262-",
-    "download": 147,
+    "download": 148,
     "versions": [
       {
         "version": "1.0.21",
@@ -7709,7 +7709,7 @@
     ],
     "author": "Booolue",
     "github": "",
-    "download": 0,
+    "download": 1,
     "versions": [
       {
         "version": "Initial release",
@@ -17922,11 +17922,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/364606/1897200000000002734/2118961135754059778/bin/2118961135754059779.bin",
         "Fs": 4379856,
+        "as": 4314320,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 4314320,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -30778,7 +30778,7 @@
     ],
     "author": "sunshinexk",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 26,
+    "download": 27,
     "versions": [
       {
         "version": "1.16.1-zh",
@@ -36993,7 +36993,7 @@
     ],
     "author": "szilamer",
     "github": "https://github.com/zspuspoki/CardPuterAdvancedDoom/",
-    "download": 3157,
+    "download": 3158,
     "versions": [
       {
         "version": "0.0.1",
@@ -37112,6 +37112,80 @@
     "esp": "s3",
     "name_en": "Cardputer ADV DrumMachine / 3-in-1 drum machine synthesizer",
     "name_src": "Cardputer ADV DrumMachine / \u4e09\u5408\u4e00\u9f13\u673a\u5408\u6210\u5668"
+  },
+  {
+    "_id": "2118663596706275329",
+    "fid": "2118663596706275329",
+    "name": "Cardputer ADV MP3 Player",
+    "description": "# Cardputer ADV MP3 Player\n\nAn MP3 player firmware for the M5Stack Cardputer ADV. It plays `.mp3` files\nfrom the microSD card through the built-in speaker or the 3.5 mm headphone\njack, with a folder browser, shuffle and repeat, seeking, and a 3-band\nequaliser.\n\n## Features\n\n- Folder browser for the whole SD card, folders first, natural sort order\n- Plays every MP3 in a folder, starting from the track you pick\n- 3-band equaliser (low, mid, high), +/- 12 dB per band\n- Shuffle, repeat all, repeat one\n- Seek 10 seconds back or forward, hold the key to scrub\n- Title, artist and album from ID3v2.2, 2.3, 2.4 and ID3v1 tags\n- Accurate duration and seeking for both CBR and VBR files\n- Speaker or headphones (plugging into the 3.5 mm jack mutes the speaker in\n  hardware)\n- Screen turns off after 1 minute without input while playing, to save battery\n- Volume, EQ, shuffle, repeat, brightness and the last folder are remembered\n  across power cycles\n\n## Hardware\n\n- M5Stack Cardputer ADV (StampS3A, ESP32-S3FN8, ES8311 audio codec, TCA8418\n  keyboard controller)\n- A microSD card formatted FAT32 or exFAT\n\nThe libraries it uses also support the original Cardputer, so it may run\nthere too, but it has not been tried on one.\n\n## Preparing the SD card\n\nCopy MP3 files onto the card in any folder layout you like, for example:\n\n```\n/Music/Artist/Album/01 - First Song.mp3\n/Music/Artist/Album/02 - Second Song.mp3\n/Podcasts/episode-12.mp3\n```\n\n- Only files ending in `.mp3` are listed.\n- Hidden files and folders (names starting with `.`, such as the `._` files\n  macOS leaves behind) and `System Volume Information` are skipped.\n- A folder shows at most 600 items.\n- Files without tags show their file name instead.\n\n## Controls\n\nThe arrow keys work with or without Fn: `;` up, `.` down, `,` left, `/` right.\n\n### Anywhere\n\n| Key | Action |\n|---|---|\n| `Space` or the G0 button | Play / pause |\n| `N` | Next track |\n| `P` | Previous track (restarts the current track if it has played for more than 3 seconds) |\n| `=` / `-` | Volume up / down in 5 % steps |\n| `M` | Mute / unmute |\n| `S` | Shuffle on / off |\n| `R` | Cycle repeat mode: all, one, off |\n| `Tab` | Switch between Library and Now Playing |\n| `E` | Open / close the equaliser |\n| `L` | Library |\n| `B` | Cycle screen brightness (4 levels) |\n| `D` | Turn the screen off |\n\nWhen the screen is off, the first key press only turns it back on. The G0\nbutton still plays and pauses with the screen off.\n\n### Library\n\n| Key | Action |\n|---|---|\n| `;` / `.` | Move up / down |\n| `,` / `/` | Page up / down |\n| `Enter` | Open the folder, or play the folder starting from this track |\n| `Backspace` | Go up one folder |\n| `` ` `` (Esc) | Back to Now Playing |\n\n### Now Playing\n\n| Key | Action |\n|---|---|\n| `;` / `.` | Volume up / down |\n| `,` / `/` | Seek back / forward 10 seconds (hold to keep seeking) |\n| `Enter` | Play / pause |\n| `Backspace` | Library |\n\n### Equaliser\n\n| Key | Action |\n|---|---|\n| `,` / `/` | Select band |\n| `;` / `.` | Raise / lower the selected band by 1 dB |\n| `0` | Reset the selected band to 0 dB |\n| `F` | Reset all bands to flat |\n| `Enter`, `Backspace` or `` ` `` | Back |\n\n## Playback behaviour\n\n- With repeat off, playback stops after the last track. `Space` then starts\n  the folder again from the top.\n- With repeat all and shuffle on, each pass through the folder gets a new\n  random order, and the song that just finished is never played first.\n- Tracks that cannot be read are skipped automatically.\n- Changing shuffle while playing keeps the current track and reorders the\n  rest.\n\n## Equaliser\n\n| Band | Filter | Centre / corner | Range |\n|---|---|---|---|\n| Low | Low shelf | 200 Hz | +/- 12 dB |\n| Mid | Peak (Q 0.7) | 1 kHz | +/- 12 dB |\n| High | High shelf | 4 kHz | +/- 12 dB |\n\nWhen any band is boosted, the whole signal is turned down by the size of the\nlargest boost before filtering. This keeps loud passages from clipping, so a\nboost changes the tone rather than adding distortion. It also means the\noverall level drops as you boost, so turn the volume up to compensate.\n\nWith every band at 0 dB the equaliser is bypassed entirely.\n\n## Installing\n\nEither:\n\nSave the BIN to the Downloads folder to install via Launcher, or\nFlash the full image without using Launcher.\n<p align=\"center\"> <img src=\"https://github.com/user-attachments/assets/fbefc593-042a-42ab-9c6d-a4289ba03ddc\" alt=\"IMG_20261105_232914595\" width=\"320\"> <img src=\"https://github.com/user-attachments/assets/637206fc-8b0d-4a3e-ab58-865da29e83a9\" alt=\"IMG_20261105_232923801\" width=\"320\"> </p> <p align=\"center\"> <img src=\"https://github.com/user-attachments/assets/96a574ef-d261-40c1-88b3-e79774ffa823\" alt=\"IMG_20261105_232931284\" width=\"180\"> <img src=\"https://github.com/user-attachments/assets/f1452105-da92-45fa-bda8-2b10d25eeb43\" alt=\"IMG_20261105_232937334\" width=\"180\"> <img src=\"https://github.com/user-attachments/assets/c594b73a-87a5-47e5-9cc3-661611f4496e\" alt=\"IMG_20261105_232945418\" width=\"180\"> </p>\n\n## Troubleshooting\n\n**\"No microSD card\" stays on screen**\nCheck the card is pushed fully in and formatted FAT32 or exFAT.\n\n**\"Can't read the card\"**\nThe card mounted but the folder could not be listed. Reformat the card or\ntry another.\n\n**A file does not show up**\nMake sure the name ends in `.mp3` and does not start with a dot, and that\nthe folder has fewer than 600 items.\n\n**No sound**\nCheck the volume and mute (`M`) in the header bar. If headphones are plugged\nin, the speaker is switched off by the hardware.\n\n**Titles show `?` characters**\nTag and file name text is shown with the built-in fonts, which only cover\nbasic Latin characters. Accented letters are shown without their accents;\nother scripts appear as `?`.\n\n## Limitations\n\n- MP3 only. WAV, FLAC and AAC files are not listed.\n- The display fonts cover basic Latin characters only.\n- The play queue is the current folder; there is no playlist file support.\n- Elapsed time after a seek in a VBR file without a seek table is an\n  estimate.\n\n## Licence\n\nESP8266Audio is licensed under GPL-3.0, so any binary built from this\nproject is covered by GPL-3.0 if you distribute it. M5GFX, M5Unified and\nM5Cardputer are MIT licensed.\n\n<a href=\"https://www.buymeacoffee.com/turbulentgoat\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me a Beer?\" style=\"height: 60px !important;width: 217px !important;\" ></a>",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2118662136618721281/2118663596706275329/2118663596710469634/cover/2118663596710469636.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Audio & Media"
+    ],
+    "author": "TurbulentGoat",
+    "github": "https://github.com/TurbulentGoat/cardputer-adv-mp3-player",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v1.0.0",
+        "version_id": "2118663596710469634",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118662136618721281/2118663596706275329/2118663596710469634/bin/2118663596710469635.bin",
+        "Fs": 885600,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 820064,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 820064,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 820064,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:38:19Z",
+            "etag": "\"D2B5812A914D8E980EE4C1F561A8D41F\"",
+            "last_modified": "Fri, 06 Nov 2026 11:15:39 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
   },
   {
     "_id": "1897200000000002285",
@@ -58134,7 +58208,7 @@
     ],
     "author": "hedykan-0",
     "github": "https://github.com/hedykan/FeiyuOS",
-    "download": 19,
+    "download": 20,
     "versions": [
       {
         "version": "v0.5.3",
@@ -58199,11 +58273,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118623364061503490/2118634085981790209/2119066378894483458/bin/2119066378894483459.bin",
         "Fs": 3079632,
+        "as": 3014096,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 3014096,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -59027,7 +59101,7 @@
     ],
     "author": "halloween",
     "github": "https://github.com/0xhalloween/Flipper-Zero-ESP32-ADV",
-    "download": 1127,
+    "download": 1128,
     "versions": [
       {
         "version": "0.5",
@@ -59255,6 +59329,82 @@
             "analyzed_at": "2026-11-05T19:03:46Z",
             "etag": "\"46559DED5642EE600338BE7049EC9458\"",
             "last_modified": "Fri, 11 Sep 2026 09:07:26 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2118705378773082114",
+    "fid": "2118705378773082114",
+    "name": "Flipper port",
+    "description": "firmware like bruce",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2118704697278373889/2118705378773082114/2118705378773082115/cover/2118705378773082117.png",
+    "category": "sticks3",
+    "tags": [
+      "Tools"
+    ],
+    "author": "sekibi",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2118705378773082115",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118704697278373889/2118705378773082114/2118705378773082115/bin/2118705378773082116.bin",
+        "Fs": 8323072,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2881184,
+        "fo": 3735552,
+        "fs": 4587520,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2881184,
+            "partition_size": 3670016,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3670016,
+              "source_offset": 65536,
+              "copy_size": 2881184,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 4587520,
+              "source": "firmware",
+              "source_offset": 3735552,
+              "copy_size": 4587520,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8359936,
+            "analyzed_at": "2026-11-09T02:38:21Z",
+            "etag": "\"BAF2A8D5AB523A6118644669F8D82013\"",
+            "last_modified": "Fri, 06 Nov 2026 14:01:41 GMT"
           }
         }
       }
@@ -66290,7 +66440,7 @@
     ],
     "author": "cervenyv",
     "github": "https://github.com/vlastimilcerveny34/guitar-audio-tools",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "v1.1.0-beta.4",
@@ -66298,11 +66448,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2105744948285808641/2119040422452568065/2119040422456762369/bin/2119040422456762370.bin",
         "Fs": 831040,
+        "as": 765504,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 765504,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -85421,7 +85571,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104902,
+    "download": 104903,
     "versions": [
       {
         "version": "2.4.10",
@@ -85780,7 +85930,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104902,
+    "download": 104903,
     "versions": [
       {
         "version": "2.4.10",
@@ -124311,7 +124461,7 @@
     ],
     "author": "malonestar",
     "github": "https://github.com/malonestar/paperdiy-reader",
-    "download": 29,
+    "download": 30,
     "versions": [
       {
         "version": "1.0.0",
@@ -136732,7 +136882,7 @@
     ],
     "author": "leonidtsk",
     "github": "",
-    "download": 200,
+    "download": 201,
     "versions": [
       {
         "version": "0.5.0 (Beta)",
@@ -145003,11 +145153,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2117338150654808066/2117339655810158594/2119010618944692226/bin/2119010618944692227.bin",
         "Fs": 1336720,
+        "as": 1271184,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1271184,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -153214,7 +153364,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 93,
+    "download": 94,
     "versions": [
       {
         "version": "v0.2",
@@ -163402,7 +163552,7 @@
     ],
     "author": "peien",
     "github": "",
-    "download": 351,
+    "download": 352,
     "versions": [
       {
         "version": "v1.0.0",
@@ -218208,7 +218358,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 202,
+    "download": 203,
     "versions": [
       {
         "version": "v2.3.5",
@@ -236329,7 +236479,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 17722,
+    "download": 17723,
     "versions": [
       {
         "version": "Alpha-29",
@@ -270433,7 +270583,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 73,
+    "download": 74,
     "versions": [
       {
         "version": "v2.5.3",
@@ -287906,7 +288056,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 24266,
+    "download": 24267,
     "versions": [
       {
         "version": "Alpha-29",
@@ -353701,7 +353851,7 @@
     ],
     "author": "sekibi",
     "github": "https://github.com/DarkFlippers/unleashed-firmware",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "1.0.0",
@@ -353709,13 +353859,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118704697278373889/2118706019171999745/2118706019171999746/bin/2118706019171999747.bin",
         "Fs": 8323072,
+        "as": 2881184,
+        "ao": 65536,
         "s": 0,
+        "fs": 4587520,
+        "fo": 3735552,
         "f": 1,
         "f2": 0,
-        "ao": 65536,
-        "as": 2881184,
-        "fo": 3735552,
-        "fs": 4587520,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -374633,6 +374783,71 @@
     "esp": "s3"
   },
   {
+    "_id": "2118908350228504577",
+    "fid": "2118908350228504577",
+    "name": "digiadv",
+    "description": "digiadv",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2118907292924157953/2118908350228504577/2118908350232698882/cover/2118908350232698884.png",
+    "category": "cardputer",
+    "tags": [
+      "Games"
+    ],
+    "author": "\u795d\u8d3a0701",
+    "github": "",
+    "download": 0,
+    "versions": [
+      {
+        "version": "0.1",
+        "version_id": "2118908350232698882",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118907292924157953/2118908350228504577/2118908350232698882/bin/2118908350232698883.bin",
+        "Fs": 2100992,
+        "nb": true,
+        "ao": 0,
+        "as": 2100992,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "app",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 0,
+            "image_size": 2100992,
+            "partition_size": 2100992,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 2100992,
+              "source_offset": 0,
+              "copy_size": 2100992,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:38:19Z",
+            "etag": "\"8ADC0A38EE2E4323997A6FEA1344276A\"",
+            "last_modified": "Sat, 07 Nov 2026 03:28:13 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
     "_id": "2114834349457481729",
     "fid": "2114834349457481729",
     "name": "dragon radar for stick c plus2",
@@ -380785,7 +381000,7 @@
     ],
     "author": "bruceblay",
     "github": "https://github.com/bruceblay/rill-drums",
-    "download": 23,
+    "download": 24,
     "versions": [
       {
         "version": "0.1.0",
@@ -381035,7 +381250,7 @@
     ],
     "author": "bruceblay",
     "github": "https://github.com/bruceblay/rill-synth",
-    "download": 46,
+    "download": 47,
     "versions": [
       {
         "version": "0.3.0",
