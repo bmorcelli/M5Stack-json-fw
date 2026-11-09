@@ -37133,11 +37133,11 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118662136618721281/2118663596706275329/2118663596710469634/bin/2118663596710469635.bin",
         "Fs": 885600,
+        "as": 820064,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 820064,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -38871,7 +38871,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/M5Cardputer-UserDemo",
-    "download": 20904,
+    "download": 20905,
     "versions": [
       {
         "version": "V0.9.1",
@@ -52288,7 +52288,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/espressif/esp-claw",
-    "download": 433,
+    "download": 434,
     "versions": [
       {
         "version": "V0.1",
@@ -59355,13 +59355,13 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118704697278373889/2118705378773082114/2118705378773082115/bin/2118705378773082116.bin",
         "Fs": 8323072,
+        "as": 2881184,
+        "ao": 65536,
         "s": 0,
+        "fs": 4587520,
+        "fo": 3735552,
         "f": 1,
         "f2": 0,
-        "ao": 65536,
-        "as": 2881184,
-        "fo": 3735552,
-        "fs": 4587520,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -61201,7 +61201,7 @@
     ],
     "author": "meister44",
     "github": "https://github.com/meister5/m5stack-cardputer-adv-gps-tracker",
-    "download": 1830,
+    "download": 1831,
     "versions": [
       {
         "version": "v1",
@@ -74296,6 +74296,80 @@
     "esp": "s3"
   },
   {
+    "_id": "2118765225208094722",
+    "fid": "2118765225208094722",
+    "name": "Kloudputer",
+    "description": "**Kloudputer** is an unofficial pocket client for Claude on the M5Stack Cardputer ADV. Type or talk to Claude and hear the answer from the speaker.\n\n- **Chat with Claude** using your own Anthropic API key. Pick Haiku, Sonnet, Opus or Fable from the menu.\n- **Voice in:** hold G0, speak, release. Transcribed by Groq Whisper (free Groq key).\n- **Voice out:** answers are read aloud, with six voices to choose from (Groq).\n- **Saved chats** on the SD card, which you can resume or delete.\n- **Setup from your phone:** scan the QR code, paste your keys, pick Wi-Fi. Works on iPhone and Android.\n- **Agents (beta):** send tasks to your own Claude Code agent and get its report back, end-to-end encrypted.\n\n**Needs:** a Cardputer ADV (not the original Cardputer), a microSD card, and an Anthropic API key (usage is billed to your Anthropic account). Optional: a free Groq API key for voice.\n\n**First start:** the device opens \"Setup from phone\". Scan the QR code with your phone, then paste your keys on the page that opens.\n\nSource code and docs (MIT): https://github.com/Annatar3/kloudputer\n\nNot affiliated with, endorsed by, or sponsored by Anthropic. Claude is a trademark of Anthropic, PBC.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2118705119233744898/2118765225208094722/2118765225212289025/cover/2118765225212289027.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "AI & Assistants"
+    ],
+    "author": "Demch",
+    "github": "https://github.com/Annatar3/kloudputer",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v1.7",
+        "version_id": "2118765225212289025",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118705119233744898/2118765225208094722/2118765225212289025/bin/2118765225212289026.bin",
+        "Fs": 1652992,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1587456,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1587456,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1587456,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4849664,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:53:42Z",
+            "etag": "\"1A240D6A0FB73546A23493A95EF1E63B\"",
+            "last_modified": "Fri, 06 Nov 2026 17:59:29 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000000776",
     "fid": "1897200000000000776",
     "name": "Konsumer Examples - 8encoder",
@@ -85571,7 +85645,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104903,
+    "download": 104904,
     "versions": [
       {
         "version": "2.4.10",
@@ -85930,7 +86004,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 104903,
+    "download": 104904,
     "versions": [
       {
         "version": "2.4.10",
@@ -88618,7 +88692,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher",
-    "download": 24617,
+    "download": 24618,
     "versions": [
       {
         "version": "2.4.10",
@@ -88959,6 +89033,52 @@
             "analyzed_at": "2026-07-31T15:31:53Z",
             "etag": "\"EA1406B98E8F383766F2A3AE9997CAC5\"",
             "last_modified": "Fri, 31 Jul 2026 15:29:25 GMT"
+          }
+        }
+      },
+      {
+        "version": "3.0.0",
+        "version_id": "2118660945696432130",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/73352/1897200000000002282/2118660945696432130/bin/2118660945696432131.bin",
+        "Fs": 1425136,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1359600,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1359600,
+            "partition_size": 1376256,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1376256,
+              "source_offset": 65536,
+              "copy_size": 1359600,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:53:42Z",
+            "etag": "\"08324BF8AF6AAB0BCA22EFD63A40D482\"",
+            "last_modified": "Fri, 06 Nov 2026 11:05:07 GMT"
           }
         }
       }
@@ -90280,7 +90400,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher",
-    "download": 2872,
+    "download": 2873,
     "versions": [
       {
         "version": "2.7.1",
@@ -96995,7 +97115,7 @@
     ],
     "author": "Teubas",
     "github": "https://github.com/MateusRodriguesF",
-    "download": 3480,
+    "download": 3481,
     "versions": [
       {
         "version": "1.0",
@@ -102316,7 +102436,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/justcallmekoko/ESP32Marauder",
-    "download": 42919,
+    "download": 42920,
     "versions": [
       {
         "version": "1.7.2",
@@ -102600,6 +102720,63 @@
             "analyzed_at": "2026-07-28T21:29:52Z",
             "etag": "\"37663B4C37E0DF58B65D942381201498\"",
             "last_modified": "Tue, 07 Apr 2026 11:02:03 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.20",
+        "version_id": "2118662612600922113",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/73352/1897200000000002697/2118662612600922113/bin/2118662612600922114.bin",
+        "Fs": 1664624,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1599088,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1599088,
+            "partition_size": 1966080,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1966080,
+              "source_offset": 65536,
+              "copy_size": 1599088,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 131072,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:53:42Z",
+            "etag": "\"1B18469673AB5C4618567A08EDD9627F\"",
+            "last_modified": "Fri, 06 Nov 2026 11:11:44 GMT"
           }
         }
       }
@@ -131273,6 +131450,81 @@
     "esp": "s3"
   },
   {
+    "_id": "2118914961324023809",
+    "fid": "2118914961324023809",
+    "name": "PocketStudio",
+    "description": "# Pocket Studio\n\n\u4e3a **M5Stack Cardputer ADV** \u5f00\u53d1\u7684\u53e3\u888b\u97f3\u4e50\u5de5\u4f5c\u7ad9\uff0c\u96c6\u5b9e\u65f6\u6f14\u594f\u3001\u591a\u8f68\u7f16\u66f2\u3001\u91c7\u6837\u4e0e\u97f3\u8272\u5236\u4f5c\u3001\u97f3\u4e50\u64ad\u653e\u4e8e\u4e00\u4f53\u3002\n\n## \u591a\u8f68\u7f16\u66f2\n\n- \u4e09\u6761\u65cb\u5f8b\u8f68\uff0c\u6bcf\u8f68\u652f\u6301\u56db\u590d\u97f3\uff0c\u53ef\u624b\u52a8\u6f14\u594f\u4e03\u548c\u5f26\u3002\n- \u72ec\u7acb\u9f13\u7ec4\u8f68\uff0c\u63d0\u4f9b\u516b\u79cd\u9f13\u58f0\u3002\n- \u652f\u6301\u5b9e\u65f6\u6f14\u594f\u3001\u5faa\u73af\u5f55\u97f3\u548c STEP \u6b65\u8fdb\u8f93\u5165\u3002\n- \u652f\u6301 1\u30012\u30014 \u5c0f\u8282\u5faa\u73af\uff0c\u4ee5\u53ca\u5168\u5c40 BPM\u3001\u603b\u97f3\u91cf\u548c\u8f68\u9053\u9759\u97f3\u3002\n\n## \u548c\u5f26\u4e0e\u7436\u97f3\n\n- \u652f\u6301\u9879\u76ee\u79fb\u8c03\u53ca\u5927\u8c03\u3001\u81ea\u7136\u5c0f\u8c03\u3002\n- \u81ea\u52a8\u8c03\u5185\u4e09\u548c\u5f26\uff1a\u6309\u4e00\u4e2a\u6839\u97f3\u5373\u53ef\u751f\u6210\u5bf9\u5e94\u548c\u5f26\u3002\n- \u7436\u97f3\u5668\u652f\u6301\u4e0a\u884c\u3001\u4e0b\u884c\u548c\u5f80\u8fd4\u6a21\u5f0f\u3002\n- \u53ef\u8c03\u6574\u901f\u5ea6\u3001\u53d1\u58f0\u6bd4\u4f8b\u3001\u516b\u5ea6\u8303\u56f4\uff0c\u5e76\u7528 HOLD \u4fdd\u6301\u6f14\u594f\u3002\n\n## \u9f13\u673a\n\n- \u516b\u79cd\u9f13\u58f0\uff1a\u5e95\u9f13\u3001\u519b\u9f13\u3001\u62cd\u624b\u3001\u95ed\u9572\u3001\u5f00\u9572\u3001\u4f4e\u97f3\u901a\u9f13\u3001\u9ad8\u97f3\u901a\u9f13\u548c\u6253\u51fb\u97f3\u3002\n- \u652f\u6301\u9f13\u57ab\u5b9e\u65f6\u6f14\u594f\u53ca\u5206\u884c\u6b65\u8fdb\u7f16\u8f91\u3002\n- \u53ef\u8c03\u6574\u5355\u9f13\u97f3\u91cf\u3001\u97f3\u9ad8\u3001\u9759\u97f3\u3001\u72ec\u594f\u548c Swing\u3002\n\n## \u91c7\u6837\u4e0e\u97f3\u8272\u5236\u4f5c\n\n- \u652f\u6301\u9ea6\u514b\u98ce\u5f55\u97f3\u3001\u5f55\u97f3\u5012\u8ba1\u65f6\u548c WAV \u5bfc\u5165\u3002\n- \u63d0\u4f9b\u6ce2\u5f62\u663e\u793a\u3001\u9009\u533a\u8bd5\u542c\u3001\u7cbe\u7ec6\u88c1\u526a\u548c\u88c1\u526a\u4fdd\u5b58\u3002\n- \u652f\u6301\u5355\u6b21\u64ad\u653e\u3001\u6309\u952e\u95e8\u63a7\u53ca\u6301\u7eed\u5faa\u73af\u3002\n- \u53ef\u8bbe\u7f6e\u72ec\u7acb\u5faa\u73af\u533a\u548c\u63a5\u7f1d\u4ea4\u53c9\u6de1\u5316\u3002\n- \u97f3\u8272\u4fdd\u5b58\u5230 SD \u5361\u540e\uff0c\u53ef\u4ea4\u7ed9\u65cb\u5f8b\u8f68\u6f14\u594f\u3002\n\n## \u58f0\u97f3\u8bbe\u8ba1\n\n- \u63d0\u4f9b\u6b63\u5f26\u6ce2\u3001\u4e09\u89d2\u6ce2\u3001\u65b9\u6ce2\u3001\u952f\u9f7f\u6ce2\u548c\u767d\u566a\u58f0\u3002\n- \u53cc\u632f\u8361\u5668\u652f\u6301\u6ce2\u5f62\u6df7\u5408\u4e0e\u97f3\u7a0b\u8c03\u6574\u3002\n- ADSR \u97f3\u91cf\u5305\u7edc\u3001\u97f3\u9ad8\u5305\u7edc\u548c\u6ee4\u6ce2\u5305\u7edc\u3002\n- LFO \u53ef\u8c03\u5236\u97f3\u9ad8\u3001\u6ee4\u6ce2\u622a\u6b62\u9891\u7387\u6216\u97f3\u91cf\u3002\n- \u63d0\u4f9b\u4f4e\u901a\u6ee4\u6ce2\u3001\u5171\u632f\u3001\u8f6f\u5931\u771f\u548c\u4f4d\u6df1\u964d\u8d28\u3002\n\n## \u97f3\u4e50\u64ad\u653e\u5668\n\n- \u652f\u6301\u6d4f\u89c8 SD \u5361\u76ee\u5f55\u3002\n- \u652f\u6301 16bit PCM WAV \u548c\u5e38\u89c1 MP3 \u6587\u4ef6\u3002\n- \u63d0\u4f9b\u64ad\u653e\u3001\u6682\u505c\u3001\u6362\u66f2\u3001\u8fdb\u5ea6\u8df3\u8f6c\u548c\u72ec\u7acb\u97f3\u91cf\u8c03\u8282\u3002\n\n## \u5b58\u50a8\u4e0e\u4f7f\u7528\u6761\u4ef6\n\n- \u7f16\u66f2\u9879\u76ee\u53ef\u4fdd\u5b58\u5230\u5185\u90e8\u5b58\u50a8\u6216 SD \u5361\u3002\n- \u91c7\u6837\u7d20\u6750\u3001\u97f3\u8272\u8bbe\u7f6e\u548c\u5f55\u97f3\u4fdd\u5b58\u5728 SD \u5361\u3002\n- \u57fa\u7840\u7f16\u66f2\u53ef\u4e0d\u63d2 SD \u5361\u4f7f\u7528\uff1b\u91c7\u6837\u5668\u3001\u91c7\u6837\u97f3\u8272\u548c\u64ad\u653e\u5668\u9700\u8981 SD \u5361\u3002\n- \u9002\u914d **Cardputer ADV**\u3002",
+    "cover": "https://m5burner-cdn.m5stack.com/community/515609/2118914961324023809/2118914961328218113/cover/2118914961328218115.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Display & Art"
+    ],
+    "author": "drw41823",
+    "github": "https://github.com/drw41823/pocket-studio-cardputer-adv/",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v0.25",
+        "version_id": "2118914961328218113",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/515609/2118914961324023809/2118914961328218113/bin/2118914961328218114.bin",
+        "Fs": 803152,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 737616,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 737616,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 737616,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T02:53:42Z",
+            "etag": "\"057EB328D1C063AEC98D05BC1DAB2C0F\"",
+            "last_modified": "Sat, 07 Nov 2026 03:54:29 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "2103720976377966593",
     "fid": "2103720976377966593",
     "name": "PocketWUI",
@@ -139325,7 +139577,7 @@
     ],
     "author": "adammelancon",
     "github": "https://github.com/adammelancon/cardputer-iss-tracker",
-    "download": 1632,
+    "download": 1633,
     "versions": [
       {
         "version": "v2.5.5",
@@ -165066,7 +165318,7 @@
     ],
     "author": "ffrafat",
     "github": "https://github.com/ffrafat/TomatoClock_M5Cardputer/",
-    "download": 544,
+    "download": 545,
     "versions": [
       {
         "version": "1.0",
@@ -295275,7 +295527,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 210,
+    "download": 211,
     "versions": [
       {
         "version": "v2.4.0",
@@ -314118,7 +314370,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 62980,
+    "download": 62981,
     "versions": [
       {
         "version": "v1.9.0-core2",
@@ -350956,7 +351208,7 @@
     ],
     "author": "EnderM3",
     "github": "",
-    "download": 684,
+    "download": 685,
     "versions": [
       {
         "version": "1.0",
@@ -357557,7 +357809,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 19,
+    "download": 20,
     "versions": [
       {
         "version": "0.1.0",
@@ -374802,10 +375054,10 @@
         "published_at": "2026-11-09",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118907292924157953/2118908350228504577/2118908350232698882/bin/2118908350232698883.bin",
         "Fs": 2100992,
-        "nb": true,
-        "ao": 0,
         "as": 2100992,
+        "ao": 0,
         "s": 0,
+        "nb": true,
         "f": 0,
         "f2": 0,
         "install": {
