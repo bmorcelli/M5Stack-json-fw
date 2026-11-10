@@ -5177,7 +5177,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/adversary",
-    "download": 120,
+    "download": 121,
     "versions": [
       {
         "version": "v0.3.0",
@@ -30649,7 +30649,7 @@
     ],
     "author": "SancakPilot",
     "github": "",
-    "download": 128,
+    "download": 129,
     "versions": [
       {
         "version": "SANCAKP1.16.1.1",
@@ -35475,11 +35475,11 @@
         "published_at": "2026-11-10",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/525868/1897200000000000521/2119862444061532161/bin/2119862444061532162.bin",
         "Fs": 2989104,
+        "as": 2923568,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2923568,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -47705,14 +47705,14 @@
     "fid": "2118687349905465346",
     "name": "CrossPoint for PaperDIY (community port)",
     "description": "PaperDIY Reader is a CrossPoint-based EPUB reader for the M5Stack PaperDIY (K159). It includes library, fonts, dictionary, OPDS, Calibre, KOReader Sync and web UI.\n\nSource, Magsafe case STL, releases and issues: https://github.com/dcarnicer/paperdiy-reader\n\nOnly for M5Stack PaperDIY. This is not an official M5Stack firmware.\n\nKnown limitations: BLE page-turner pairing is not validated with a real BLE remote; sleep current and real battery life are not measured; the original 140 mAh cell gives short battery life; ghosting after long reading is slight at the default 5-page refresh; KOReader Sync was validated against a local KOSync server.\n2.0.0-paperdiy.1",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2118687349905465346/2119521491337519106/cover/2119522818201395202.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2118687349905465346/2119860590934138882/cover/2119860849852719105.png",
     "category": "paper-diy",
     "tags": [
       "E-books & Reading"
     ],
     "author": "dabidesu",
     "github": "https://github.com/dcarnicer/paperdiy-reader",
-    "download": 3,
+    "download": 4,
     "versions": [
       {
         "version": "2.0.0-1",
@@ -47768,6 +47768,63 @@
             "analyzed_at": "2026-11-09T06:08:27Z",
             "etag": "\"3C011855389FD87CF8423BB95D0A0973\"",
             "last_modified": "Sun, 08 Nov 2026 20:04:37 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.0.0-2",
+        "version_id": "2119860590934138882",
+        "published_at": "2026-11-10",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2118687349905465346/2119860590934138882/bin/2119860590934138883.bin",
+        "Fs": 5492912,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5427376,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5427376,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5427376,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-10T03:23:41Z",
+            "etag": "\"C08C31892AD754C8D4239650C77399BA\"",
+            "last_modified": "Mon, 09 Nov 2026 18:32:04 GMT"
           }
         }
       }
@@ -64630,11 +64687,11 @@
         "published_at": "2026-11-10",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/104721/1897200000000000072/2119741372922241026/bin/2119741372922241027.bin",
         "Fs": 780240,
+        "as": 714704,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 714704,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -64707,11 +64764,11 @@
         "published_at": "2026-11-10",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/104721/1897200000000000072/2119741372922241026/bin/2119741372922241027.bin",
         "Fs": 780240,
+        "as": 714704,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 714704,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -86624,7 +86681,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105002,
+    "download": 105003,
     "versions": [
       {
         "version": "2.4.10",
@@ -87029,7 +87086,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105002,
+    "download": 105003,
     "versions": [
       {
         "version": "2.4.10",
@@ -120122,7 +120179,7 @@
     ],
     "author": "EvilAngel91",
     "github": "https://github.com/BruceDevices/firmware/releases",
-    "download": 1288,
+    "download": 1289,
     "versions": [
       {
         "version": "1.14",
@@ -152489,7 +152546,7 @@
     "fid": "2118408999704035329",
     "name": "StackChan-GPT",
     "description": "**StackChan-GPT** (Agent.ai Edition) is custom firmware for the M5Stack StackChan desktop robot (CoreS3) that connects directly to your own OpenAI API\u2014with no cloud account sign-in or third-party AI server required. Choose Agent.ai on the launcher to talk naturally with your robot using GPT-Live (Realtime WebSocket audio) or OpenAI Chat & Voice models (gpt-5.4-nano, gpt5.5, gpt-5.6-terra, gpt-4o-mini, gpt-4o, Whisper STT, and OpenAI TTS). Give your StackChan a custom wake-word name right on the touchscreen, watch its 12 RGB LEDs glow green while listening and pulse like a blue heartbeat while thinking, and let the AI control its 2-axis servo head, facial expressions, dances, reminders, and onboard camera with OpenAI Vision.\n*********************************************************************\nStackChan-GPT firmware is open source under the MIT License. It is a modified fork of M5Stack StackChan (https://github.com/m5stack/StackChan), which is also licensed under MIT. Original M5Stack copyright is retained.\nThis project is not affiliated with, endorsed by, or sponsored by OpenAI. \u201cOpenAI\u201d and related names are trademarks of OpenAI. Users supply their own OpenAI API key. The OpenAI API is a separate, user-provided cloud service and is not licensed as part of this firmware.\nA flashed firmware image also includes third-party software under MIT, Apache License 2.0, BSD-3-Clause, public domain, and Espressif chip-restricted MIT licenses (including ESP-SR / WakeNet). Those Espressif components may be used only on Espressif chips such as the ESP32-S3 in M5Stack CoreS3. The full attribution list is in NOTICE in the source repository.\n*****************************\nMIT License\nCopyright (c) 2026 StackChan-GPT Contributors\nCopyright (c) 2026 M5Stack Technology CO LTD\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
-    "cover": "https://m5burner-cdn.m5stack.com/community/105681/2118408999704035329/2118408999708229634/cover/2118408999708229636.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/105681/2118408999704035329/2119935346890940417/cover/2119935346890940419.png",
     "category": "stackchan",
     "tags": [
       "AI & Assistants",
@@ -152667,6 +152724,177 @@
             "analyzed_at": "2026-11-09T03:38:28Z",
             "etag": "\"B875197AD144A3EF897B8AD4F3A9B623\"",
             "last_modified": "Sun, 08 Nov 2026 03:45:12 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.7",
+        "version_id": "2119224260977926146",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/105681/2118408999704035329/2119224260977926146/bin/2119224260977926147.bin",
+        "Fs": 12857054,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3937440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stackchan",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3937440,
+            "partition_size": 5177344,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5177344,
+              "source_offset": 131072,
+              "copy_size": 3937440,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "assets",
+              "role": "spiffs",
+              "size": 4194304,
+              "source": "firmware",
+              "source_offset": 10485760,
+              "copy_size": 2371294,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 12893918,
+            "analyzed_at": "2026-11-10T03:23:43Z",
+            "etag": "\"7313E7500CFE3965CB254CA68716E4B8\"",
+            "last_modified": "Sun, 08 Nov 2026 00:23:32 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.8",
+        "version_id": "2119259696806928385",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/105681/2118408999704035329/2119259696806928385/bin/2119259696806928386.bin",
+        "Fs": 12857054,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3939424,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stackchan",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3939424,
+            "partition_size": 5177344,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5177344,
+              "source_offset": 131072,
+              "copy_size": 3939424,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "assets",
+              "role": "spiffs",
+              "size": 4194304,
+              "source": "firmware",
+              "source_offset": 10485760,
+              "copy_size": 2371294,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 12893918,
+            "analyzed_at": "2026-11-10T03:23:42Z",
+            "etag": "\"01DFBDAA97639E4DE0219F3A0E6DDDDF\"",
+            "last_modified": "Sun, 08 Nov 2026 02:44:20 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.10",
+        "version_id": "2119935346890940417",
+        "published_at": "2026-11-10",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/105681/2118408999704035329/2119935346890940417/bin/2119935346890940418.bin",
+        "Fs": 12857054,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3948048,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stackchan",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3948048,
+            "partition_size": 5177344,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5177344,
+              "source_offset": 131072,
+              "copy_size": 3948048,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "assets",
+              "role": "spiffs",
+              "size": 4194304,
+              "source": "firmware",
+              "source_offset": 10485760,
+              "copy_size": 2371294,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 12893918,
+            "analyzed_at": "2026-11-10T03:23:42Z",
+            "etag": "\"C3C2C8263BEF54C8AA99E767007CE9F5\"",
+            "last_modified": "Mon, 09 Nov 2026 23:29:08 GMT"
           }
         }
       }
@@ -325056,7 +325284,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 22868,
+    "download": 22869,
     "versions": [
       {
         "version": "v1.7.5",
@@ -359254,6 +359482,84 @@
     "esp": "s3"
   },
   {
+    "_id": "2119853442271453186",
+    "fid": "2119853442271453186",
+    "name": "Wheather game by Evolmc",
+    "description": "# \u2744\ufe0f Winter Evening 4.0 \u2014 M5Stack StickS3\n# \u2744\ufe0f \u0417\u0438\u043c\u043d\u0438\u0439 \u0412\u0435\u0447\u0435\u0440 4.0 \u2014 M5Stack StickS3\n\n[![Platform](https://img.shields.io/badge/platform-ESP32--S3-blue)](https://www.espressif.com/)\n[![Framework](https://img.shields.io/badge/framework-Arduino%20IDE-teal)](https://www.arduino.cc/)\n[![Library](https://img.shields.io/badge/library-M5Unified-green)](https://github.com/m5stack/M5Unified)\n\n---\n\n## \ud83c\uddec\ud83c\udde7 English\n\n### Description\nAn interactive winter scene for the **M5Stack StickS3 (ESP32-S3)**.\nA cozy village with a house, a decorated Christmas tree, a birch, falling snow, rain, lightning, stars, and a moon \u2014 all rendered on a 240\u00d7135 display using `M5Unified` / `M5GFX`.\n\nThe scene reacts to the device tilt (wind, snow direction, chimney smoke, volume of wind sound) and to shaking (snow globe). Time of day and weather are fetched automatically via Wi-Fi and NTP.\n\n### Features\n- \ud83c\udf84 **Animated scene:** House, Christmas tree, birch, snow, rain, lightning, stars, moon/sun.\n- \ud83c\udf42 **Seasons:** Winter, Spring, Summer, Autumn (changes ground color, leaves, precipitation).\n- \ud83d\udd52 **Time of day:** Evening, Night, Morning, Day, Auto (by real clock).\n- \ud83c\udf2c\ufe0f **Tilt control:** Wind direction, snow/rain drift, smoke, wind sound volume.\n- \u2744\ufe0f **Shake reaction:** Snow globe (or leaf fall).\n- \ud83c\udf21\ufe0f **Weather:** Temperature from OpenWeatherMap (Yekaterinburg, UTC+5).\n- \ud83d\udcf6 **Wi-Fi:** Auto-connect to `Lighton` or `WIFI33`, manual switch in menu.\n- \ud83d\udccb **Menu:** Season, rain, Wi-Fi, instruction.\n\n### Controls\n| Action | Result |\n| :--- | :--- |\n| **A (short)** | Switch time of day (Evening \u2192 Night \u2192 Morning \u2192 Day \u2192 Auto) |\n| **A (hold)** | Toggle blizzard |\n| **B (short)** | Invite a guest (hare / fox / wolf depending on time of day) |\n| **B (hold)** | Open menu |\n| **Tilt** | Wind & precipitation direction |\n| **Shake** | Snow globe effect |\n\n### Setup\n1. Install **Arduino IDE**.\n2. Add the **M5Stack** board package via Boards Manager:\n   `https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json`\n3. Install libraries: **M5Unified**, **M5GFX**.\n4. In the sketch, set:\n   - `WIFI_SSID_1` / `WIFI_PASS_1` \u2014 first network\n   - `WIFI_SSID_2` / `WIFI_PASS_2` \u2014 second network\n   - `OWM_KEY` \u2014 your OpenWeatherMap API key\n   - `OWM_CITY` \u2014 your city (Latin letters)\n   - `TZ_OFFSET_SEC` \u2014 your timezone offset in seconds\n\n### Requirements\n- Board: M5Stack StickS3 (ESP32-S3, 8 MB Flash, 8 MB PSRAM)\n- Board package: **M5Stack 3.3.10** or newer\n- Libraries: **M5Unified 0.3.0+**, **M5GFX 0.3.0+**\n\n### License\nFree to use, modify, and share.\n\n---\n\n## \ud83c\uddf7\ud83c\uddfa \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n\n### \u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435\n\u0418\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u0437\u0438\u043c\u043d\u044f\u044f \u0441\u0446\u0435\u043d\u0430 \u0434\u043b\u044f **M5Stack StickS3 (ESP32-S3)**.\n\u0423\u044e\u0442\u043d\u0430\u044f \u0434\u0435\u0440\u0435\u0432\u043d\u044f \u0441 \u0434\u043e\u043c\u0438\u043a\u043e\u043c, \u043d\u0430\u0440\u044f\u0436\u0435\u043d\u043d\u043e\u0439 \u0451\u043b\u043a\u043e\u0439, \u0431\u0435\u0440\u0451\u0437\u043e\u0439, \u043f\u0430\u0434\u0430\u044e\u0449\u0438\u043c \u0441\u043d\u0435\u0433\u043e\u043c, \u0434\u043e\u0436\u0434\u0451\u043c, \u043c\u043e\u043b\u043d\u0438\u0435\u0439, \u0437\u0432\u0451\u0437\u0434\u0430\u043c\u0438 \u0438 \u043b\u0443\u043d\u043e\u0439 \u2014 \u0432\u0441\u0451 \u043d\u0430 \u044d\u043a\u0440\u0430\u043d\u0435 240\u00d7135 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e `M5Unified` / `M5GFX`.\n\n\u0421\u0446\u0435\u043d\u0430 \u0440\u0435\u0430\u0433\u0438\u0440\u0443\u0435\u0442 \u043d\u0430 \u043d\u0430\u043a\u043b\u043e\u043d \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 (\u0432\u0435\u0442\u0435\u0440, \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0441\u043d\u0435\u0433\u0430, \u0434\u044b\u043c \u0438\u0437 \u0442\u0440\u0443\u0431\u044b, \u0433\u0440\u043e\u043c\u043a\u043e\u0441\u0442\u044c \u0437\u0432\u0443\u043a\u0430 \u0432\u0435\u0442\u0440\u0430) \u0438 \u043d\u0430 \u0432\u0441\u0442\u0440\u044f\u0441\u043a\u0443 (\u0441\u043d\u0435\u0436\u043d\u044b\u0439 \u0448\u0430\u0440). \u0412\u0440\u0435\u043c\u044f \u0441\u0443\u0442\u043e\u043a \u0438 \u043f\u043e\u0433\u043e\u0434\u0430 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u043f\u043e Wi-Fi \u0438 NTP.\n\n### \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438\n- \ud83c\udf84 **\u0410\u043d\u0438\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u0430\u044f \u0441\u0446\u0435\u043d\u0430:** \u0434\u043e\u043c\u0438\u043a, \u0451\u043b\u043a\u0430, \u0431\u0435\u0440\u0451\u0437\u0430, \u0441\u043d\u0435\u0433, \u0434\u043e\u0436\u0434\u044c, \u043c\u043e\u043b\u043d\u0438\u044f, \u0437\u0432\u0451\u0437\u0434\u044b, \u043b\u0443\u043d\u0430/\u0441\u043e\u043b\u043d\u0446\u0435.\n- \ud83c\udf42 **\u0412\u0440\u0435\u043c\u0435\u043d\u0430 \u0433\u043e\u0434\u0430:** \u0417\u0438\u043c\u0430, \u0412\u0435\u0441\u043d\u0430, \u041b\u0435\u0442\u043e, \u041e\u0441\u0435\u043d\u044c (\u043c\u0435\u043d\u044f\u044e\u0442 \u0446\u0432\u0435\u0442 \u0437\u0435\u043c\u043b\u0438, \u043b\u0438\u0441\u0442\u0432\u0443, \u043e\u0441\u0430\u0434\u043a\u0438).\n- \ud83d\udd52 **\u0412\u0440\u0435\u043c\u044f \u0441\u0443\u0442\u043e\u043a:** \u0412\u0435\u0447\u0435\u0440, \u041d\u043e\u0447\u044c, \u0423\u0442\u0440\u043e, \u0414\u0435\u043d\u044c, \u0410\u0432\u0442\u043e (\u043f\u043e \u0440\u0435\u0430\u043b\u044c\u043d\u044b\u043c \u0447\u0430\u0441\u0430\u043c).\n- \ud83c\udf2c\ufe0f **\u0420\u0435\u0430\u043a\u0446\u0438\u044f \u043d\u0430 \u043d\u0430\u043a\u043b\u043e\u043d:** \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432\u0435\u0442\u0440\u0430, \u0441\u043d\u0435\u0433\u0430, \u0434\u043e\u0436\u0434\u044f, \u0434\u044b\u043c\u0430, \u0433\u0440\u043e\u043c\u043a\u043e\u0441\u0442\u044c \u0437\u0432\u0443\u043a\u0430 \u0432\u0435\u0442\u0440\u0430.\n- \u2744\ufe0f **\u0420\u0435\u0430\u043a\u0446\u0438\u044f \u043d\u0430 \u0432\u0441\u0442\u0440\u044f\u0441\u043a\u0443:** \u00ab\u0421\u043d\u0435\u0436\u043d\u044b\u0439 \u0448\u0430\u0440\u00bb (\u0438\u043b\u0438 \u043b\u0438\u0441\u0442\u043e\u043f\u0430\u0434).\n- \ud83c\udf21\ufe0f **\u041f\u043e\u0433\u043e\u0434\u0430:** \u0442\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430 \u0441 OpenWeatherMap (\u0415\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0431\u0443\u0440\u0433, UTC+5).\n- \ud83d\udcf6 **Wi-Fi:** \u0430\u0432\u0442\u043e\u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u043a `Lighton` \u0438\u043b\u0438 `WIFI33`, \u0440\u0443\u0447\u043d\u043e\u0435 \u043f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0432 \u043c\u0435\u043d\u044e.\n- \ud83d\udccb **\u041c\u0435\u043d\u044e:** \u0441\u0435\u0437\u043e\u043d, \u0434\u043e\u0436\u0434\u044c, Wi-Fi, \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f.\n\n### \u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435\n| \u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435 | \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 |\n| :--- | :--- |\n| **A (\u043a\u043e\u0440\u043e\u0442\u043a\u043e)** | \u0421\u043c\u0435\u043d\u0430 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0441\u0443\u0442\u043e\u043a (\u0412\u0435\u0447\u0435\u0440 \u2192 \u041d\u043e\u0447\u044c \u2192 \u0423\u0442\u0440\u043e \u2192 \u0414\u0435\u043d\u044c \u2192 \u0410\u0432\u0442\u043e) |\n| **A (\u0443\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0435)** | \u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435/\u0432\u044b\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u043c\u0435\u0442\u0435\u043b\u0438 |\n| **B (\u043a\u043e\u0440\u043e\u0442\u043a\u043e)** | \u041f\u043e\u0437\u0432\u0430\u0442\u044c \u0433\u043e\u0441\u0442\u044f (\u0437\u0430\u044f\u0446 / \u043b\u0438\u0441\u0430 / \u0432\u043e\u043b\u043a, \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0441\u0443\u0442\u043e\u043a) |\n| **B (\u0443\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0435)** | \u041e\u0442\u043a\u0440\u044b\u0442\u044c \u043c\u0435\u043d\u044e |\n| **\u041d\u0430\u043a\u043b\u043e\u043d** | \u041d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432\u0435\u0442\u0440\u0430 \u0438 \u043e\u0441\u0430\u0434\u043a\u043e\u0432 |\n| **\u0412\u0441\u0442\u0440\u044f\u0441\u043a\u0430** | \u042d\u0444\u0444\u0435\u043a\u0442 \u00ab\u0421\u043d\u0435\u0436\u043d\u044b\u0439 \u0448\u0430\u0440\u00bb |\n\n### \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\n1. \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435 **Arduino IDE**.\n2. \u0414\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u043f\u0430\u043a\u0435\u0442 \u043f\u043b\u0430\u0442 **M5Stack** \u0447\u0435\u0440\u0435\u0437 Boards Manager:\n   `https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json`\n3. \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438: **M5Unified**, **M5GFX**.\n4. \u0412 \u043a\u043e\u0434\u0435 \u0437\u0430\u043c\u0435\u043d\u0438\u0442\u0435:\n   - `WIFI_SSID_1` / `WIFI_PASS_1` \u2014 \u043f\u0435\u0440\u0432\u0430\u044f \u0441\u0435\u0442\u044c\n   - `WIFI_SSID_2` / `WIFI_PASS_2` \u2014 \u0432\u0442\u043e\u0440\u0430\u044f \u0441\u0435\u0442\u044c\n   - `OWM_KEY` \u2014 \u0432\u0430\u0448 API-\u043a\u043b\u044e\u0447 OpenWeatherMap\n   - `OWM_CITY` \u2014 \u0432\u0430\u0448 \u0433\u043e\u0440\u043e\u0434 (\u043b\u0430\u0442\u0438\u043d\u0438\u0446\u0435\u0439)\n   - `TZ_OFFSET_SEC` \u2014 \u0441\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0447\u0430\u0441\u043e\u0432\u043e\u0433\u043e \u043f\u043e\u044f\u0441\u0430 \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0430\u0445\n\n### \u0422\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044f\n- \u041f\u043b\u0430\u0442\u0430: M5Stack StickS3 (ESP32-S3, 8 \u041c\u0411 Flash, 8 \u041c\u0411 PSRAM)\n- \u041f\u0430\u043a\u0435\u0442 \u043f\u043b\u0430\u0442: **M5Stack 3.3.10** \u0438\u043b\u0438 \u043d\u043e\u0432\u0435\u0435\n- \u0411\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438: **M5Unified 0.3.0+**, **M5GFX 0.3.0+**\n\n### \u041b\u0438\u0446\u0435\u043d\u0437\u0438\u044f\n\u0421\u0432\u043e\u0431\u043e\u0434\u043d\u043e \u0434\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0440\u0430\u0441\u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u044f.\n\n---\n\n### \ud83d\udcf8 Screenshot / \u0421\u043a\u0440\u0438\u043d\u0448\u043e\u0442\n*(\u0414\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u0441\u044e\u0434\u0430 \u0444\u043e\u0442\u043e \u0432\u0430\u0448\u0435\u0433\u043e StickS3 \u0441 \u0432\u043a\u043b\u044e\u0447\u0451\u043d\u043d\u044b\u043c \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u043c)*",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2119680543690498050/2119853442271453186/2119853442275647490/cover/2119853442275647492.png",
+    "category": "sticks3",
+    "tags": [
+      "Games"
+    ],
+    "author": "Evolmc",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0",
+        "version_id": "2119853442275647490",
+        "published_at": "2026-11-10",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2119680543690498050/2119853442271453186/2119853442275647490/bin/2119853442275647491.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1644816,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1644816,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1644816,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-10T03:23:42Z",
+            "etag": "\"62660FAEC77F1969173A24D36F602CE5\"",
+            "last_modified": "Mon, 09 Nov 2026 18:03:40 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000000620",
     "fid": "1897200000000000620",
     "name": "Wi-Fi Capture Page",
@@ -378637,13 +378943,13 @@
         "published_at": "2026-11-10",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/160320/2119944527232540674/2119944527232540675/bin/2119944527232540676.bin",
         "Fs": 16777216,
+        "as": 627968,
+        "ao": 131072,
         "s": 0,
+        "fs": 11403264,
+        "fo": 3276800,
         "f": 1,
         "f2": 0,
-        "ao": 131072,
-        "as": 627968,
-        "fo": 3276800,
-        "fs": 11403264,
         "install": {
           "schema": 1,
           "format": "merged",
