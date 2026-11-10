@@ -7,12 +7,6 @@
   },
   {
     "field": "description",
-    "path": "[1634]",
-    "original": "| **B (коротко)** | Позвать гостя (заяц / лиса / волк, зависит от времени суток) |\n| **B (удержание)** | Открыть меню |\n| **Наклон** | Направление ветра и осадков |\n| **Встряска** | Эффект «Снежный шар» |\n\n### Настройка\n1. Установите **Arduino IDE**.\n2. Добавьте пакет плат **M5Stack** через Boards Manager:\n   `https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json`\n3. Установите библиотеки: **M5Unified**, **M5GFX**.\n4. В коде замените:\n   - `WIFI_SSID_1` / `WIFI_PASS_1` — первая сеть\n   - `WIFI_SSID_2` / `WIFI_PASS_2` — вторая сеть\n   - `OWM_KEY` — ваш API-ключ OpenWeatherMap\n   - `OWM_CITY` — ваш город (латиницей)\n   - `TZ_OFFSET_SEC` — смещение часового пояса в секундах\n\n### Требования\n- Плата: M5Stack StickS3 (ESP32-S3, 8 МБ Flash, 8 МБ PSRAM)\n- Пакет плат: **M5Stack 3.3.10** или новее\n- Библиотеки: **M5Unified 0.3.0+**, **M5GFX 0.3.0+**\n\n### Лицензия\nСвободно для использования, модификации и распространения.\n\n---\n\n### 📸 Screenshot / Скриншот",
-    "error": "ValueError: Empty or invalid Google Translate response"
-  },
-  {
-    "field": "description",
     "path": "[1737]",
     "original": "- Chinese Pinyin IME: 6763 single characters + 5000 phrases, polyphone whitelist, 100 candidates, one-key CJK/ASCII punctuation toggle\n- WiFi upload: browser-based TXT upload with chunked transfer; bookmark import/export\n- Bilingual UI (Chinese / English)\n\n## Hardware & Installation\n\n- Target: M5Stack Cardputer ADV (ESP32-S3, no PSRAM)\n- SD card via SPI: SCK 40 / MISO 39 / MOSI 14 / CS 12, 25MHz\n- Partition scheme: **Huge APP (3MB)**\n- Firmware size: ~1.5MB, flashable via M5Burner or esptool\n\n## Known Limitations\n\n- Polyphonic phrases use the first reading; some phrases (e.g. 重庆) need to be typed character by character\n- Dash uses `－－` instead of standard U+2014\n- Filenames starting with `.` are rejected on rename",
     "error": "Segment translation returned unchanged text"
