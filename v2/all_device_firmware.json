@@ -30839,7 +30839,7 @@
     ],
     "author": "SancakPilot",
     "github": "",
-    "download": 55,
+    "download": 56,
     "versions": [
       {
         "version": "SANCAKP1.16.1.3",
@@ -57026,7 +57026,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Project",
-    "download": 240,
+    "download": 241,
     "versions": [
       {
         "version": "v1.0",
@@ -74767,11 +74767,11 @@
         "published_at": "2026-11-10",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2118705119233744898/2118765225208094722/2119895666711502849/bin/2119895666711502850.bin",
         "Fs": 1695744,
+        "as": 1630208,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1630208,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -118673,7 +118673,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 223,
+    "download": 224,
     "versions": [
       {
         "version": "v0.7.3",
@@ -118862,7 +118862,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 223,
+    "download": 224,
     "versions": [
       {
         "version": "v0.7.3",
@@ -147983,6 +147983,80 @@
     "description_src": "AtomMatrix\u306b\u3088\u308b\u7c21\u6613\u7684\u306a\u30b9\u30da\u30af\u30c8\u30e9\u30e0\u30a2\u30ca\u30e9\u30a4\u30b6\u30fc\u3067\u3059\n\u753b\u9762\u3092\u30af\u30ea\u30c3\u30af\u3059\u308b\u3068\u30d0\u30fc\u306e\u4f38\u3073\u308b\u65b9\u5411\u304c\u5909\u308f\u308a\u307e\u3059  \n\u307e\u305f\u753b\u9762\u3092\u9577\u62bc\u3057\u3059\u308b\u3068\u30d0\u30fc\u306e\u4f4e\u97f3\uff5e\u9ad8\u97f3\u306e\u9806\u756a\u304c\u9006\u306b\u306a\u308a\u307e\u3059  \n\n# \u5bfe\u5fdc\u30c7\u30d0\u30a4\u30b9\nAtom-Matrix \u53ca\u3073 \u4e0b\u8a18\u306e\u3044\u305a\u308c\u304b\u306e\u30de\u30a4\u30af  \n\u30fbAtomMIC  (https://github.com/washishi/atom_mic)\n\u30fbM5Stack \u306e PDM\u30de\u30a4\u30af\u30e6\u30cb\u30c3\u30c8 ( https://docs.m5stack.com/ja/unit/pdm)\n\u30fbM5Stack \u306e Atmic Echo Base (https://docs.m5stack.com/ja/atom/Atomic%20Echo%20Base)"
   },
   {
+    "_id": "2119852969703415809",
+    "fid": "2119852969703415809",
+    "name": "Sinclair ZX Spectrum 48K - Cardputer ADV",
+    "description": "# Sinclair ZX Spectrum 48K for Cardputer ADV\n\nC++ / Arduino emulator of the classic 48 KB Sinclair ZX Spectrum for the M5Stack Cardputer ADV (ESP32-S3, 8 MB flash, no PSRAM required).\n\n## Features\n- Z80 CPU, 48 KB RAM and ULA colour video with INK, PAPER, BRIGHT and FLASH.\n- TAP tapes, common TZX blocks, SNA 48K and Z80 v1/v2/v3 48K snapshots from microSD.\n- Original cassette loading with coloured borders and tape sound, plus fast silent loading.\n- Filtered RGB565 video fits the complete Spectrum image on the 240 x 135 LCD.\n- Beeper audio with an independent audio worker and buffered output.\n- Folder browser, automatic folder creation and filtering of hidden macOS metadata.\n- Kempston, Sinclair 1, Cursor and QAOP + Space control profiles.\n\n## Prepare your microSD\nUse FAT32 and provide your own ROM and games:\n```text\n/SPECTRUM/48.ROM       exactly 16384 bytes\n/SPECTRUM/GAMES/TAP/   your TAP tapes\n/SPECTRUM/GAMES/TZX/   your TZX tapes\n/SPECTRUM/GAMES/SNA/   your 48K snapshots\n/SPECTRUM/GAMES/Z80/   your 48K snapshots\n```\nROMs and games are not included. Compatibility depends on each game and loader. This is a 48K emulator; 128K/AY, disks, ZIP, CSW and generalized TZX blocks are not supported.\n\n## Controls\n- Tab / G0: open the browser. Enter: load. Backspace: parent folder.\n- Printed arrows without Fn: movement in game mode. Space: fire.\n- Fn+J: switch between game controls and BASIC typing. Fn+K: cycle control profile.\n- Shift: CAPS SHIFT. Ctrl / Alt: SYMBOL SHIFT.\n- Fn+= / Fn+-: volume in 5% steps; initial volume 30%.\n- O / R in the browser: original / fast loading. S: tape sound.\n- Fn+F: fast mode. Fn+B: border. Fn+T: pause/resume tape. Fn+R: reset and eject.\n\n## Installation\nCompact merged BIN: 743,648 bytes, for the 8 MB Cardputer ADV. M5Launcher can extract the included 678,112-byte application and install it while keeping Launcher. The application-only app.bin is also available in the GitHub release.\n\nDirect flashing from M5Burner uses offset 0x0 and installs the included bootloader and standard partition table, replacing the existing firmware layout. To retain M5Launcher, install through Launcher instead.\n\n[Source code, firmware and complete Spanish guide](https://github.com/NeXoDevLab/Spectrum48KCardputerADV)\n\n[Real device captures and full cassette-loading videos](https://nexodevlab.github.io/Spectrum48KCardputerADV/)\n\n![Spectrum BASIC](https://nexodevlab.github.io/Spectrum48KCardputerADV/images/basic-v03.png)\n![Oh Mummy original tape loading](https://nexodevlab.github.io/Spectrum48KCardputerADV/images/oh-mummy-carga.png)\n![Oh Mummy title and instructions](https://nexodevlab.github.io/Spectrum48KCardputerADV/images/oh-mummy-menu.png)\n![Phantomas 2 loading screen](https://nexodevlab.github.io/Spectrum48KCardputerADV/images/phantomas-2-carga.png)",
+    "cover": "https://m5burner-cdn.m5stack.com/community/165379/2119852969703415809/2119852969707610114/cover/2119852969707610116.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Games"
+    ],
+    "author": "sloko2",
+    "github": "https://github.com/NeXoDevLab/Spectrum48KCardputerADV",
+    "download": 1,
+    "versions": [
+      {
+        "version": "0.3.0",
+        "version_id": "2119852969707610114",
+        "published_at": "2026-11-10",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/165379/2119852969703415809/2119852969707610114/bin/2119852969707610115.bin",
+        "Fs": 743648,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 678112,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 678112,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 678112,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-10T02:23:42Z",
+            "etag": "\"604ADAE36721FD06659177E0000F1877\"",
+            "last_modified": "Mon, 09 Nov 2026 18:01:47 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000002099",
     "fid": "1897200000000002099",
     "name": "SkyCompass & TideCurve for cardputerADV",
@@ -152476,7 +152550,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4914,
+    "download": 4915,
     "versions": [
       {
         "version": "V0.4",
@@ -221021,7 +221095,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 208,
+    "download": 209,
     "versions": [
       {
         "version": "v2.3.5",
