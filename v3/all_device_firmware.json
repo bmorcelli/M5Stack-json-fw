@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "source": "https://burner.m5stack.com/api/v1",
-  "fetchedAt": "2026-11-11T02:08:31.631365+00:00",
+  "fetchedAt": "2026-11-11T02:13:07.945314+00:00",
   "devices": [
     {
       "deviceId": "1897100000000000001",
@@ -611,7 +611,7 @@
       "categoryCode": "GAMES",
       "categoryName": "Games",
       "sort": 10,
-      "firmwareCount": 257
+      "firmwareCount": 258
     },
     {
       "categoryId": "1985000000000000103",
@@ -730,7 +730,7 @@
       "statistics": {
         "totalFirmware": 191,
         "totalLikes": 221,
-        "totalDownloads": 862363,
+        "totalDownloads": 862364,
         "totalFollowers": 14
       }
     },
@@ -912,7 +912,7 @@
       "statistics": {
         "totalFirmware": 12,
         "totalLikes": 59,
-        "totalDownloads": 92272,
+        "totalDownloads": 92273,
         "totalFollowers": 2
       }
     },
@@ -996,7 +996,7 @@
       "statistics": {
         "totalFirmware": 9,
         "totalLikes": 73,
-        "totalDownloads": 62532,
+        "totalDownloads": 62533,
         "totalFollowers": 4
       }
     },
@@ -1150,7 +1150,7 @@
       "statistics": {
         "totalFirmware": 8,
         "totalLikes": 44,
-        "totalDownloads": 424,
+        "totalDownloads": 425,
         "totalFollowers": 0
       }
     },
@@ -1164,7 +1164,7 @@
       "statistics": {
         "totalFirmware": 7,
         "totalLikes": 22,
-        "totalDownloads": 268152,
+        "totalDownloads": 268153,
         "totalFollowers": 0
       }
     },
@@ -1276,7 +1276,7 @@
       "statistics": {
         "totalFirmware": 6,
         "totalLikes": 18,
-        "totalDownloads": 374,
+        "totalDownloads": 375,
         "totalFollowers": 0
       }
     },
@@ -12265,7 +12265,7 @@
         "firmwareName": "Bruce for Cardputer & ADV",
         "developerName": "owner",
         "coverUrl": "https://m5burner-cdn.m5stack.com/cover/41d9e573f8b7aca442af27f54d788a94.png",
-        "totalScore": 94658
+        "totalScore": 94659
       },
       {
         "rank": 4,
@@ -22550,7 +22550,7 @@
         }
       ],
       "statistics": {
-        "downloadCount": 500,
+        "downloadCount": 501,
         "likeCount": 2,
         "commentCount": 0
       },
@@ -189279,6 +189279,10 @@
       "updatedAt": "2026-09-07T17:27:22+08:00",
       "categories": [
         {
+          "categoryId": "1985000000000000102",
+          "categoryName": "Games"
+        },
+        {
           "categoryId": "2190000000000000002",
           "categoryName": "Network & Communication"
         },
@@ -189319,7 +189323,7 @@
         }
       ],
       "statistics": {
-        "downloadCount": 1956,
+        "downloadCount": 1957,
         "likeCount": 6,
         "commentCount": 0
       },
@@ -189339,7 +189343,7 @@
           "status": "PUBLISHED",
           "binFileName": "1615f46cf4b52bbe93b7ee1aa2941a69.bin",
           "coverUrl": "https://m5burner-cdn.m5stack.com/cover/5074e56e0917122cebe19fd196281d81.png",
-          "downloadCount": 50,
+          "downloadCount": 58,
           "current": true,
           "supportedDevices": [
             {
@@ -212771,7 +212775,7 @@
         }
       ],
       "statistics": {
-        "downloadCount": 14971,
+        "downloadCount": 14972,
         "likeCount": 1,
         "commentCount": 0
       },
@@ -221896,7 +221900,7 @@
         }
       ],
       "statistics": {
-        "downloadCount": 94619,
+        "downloadCount": 94620,
         "likeCount": 13,
         "commentCount": 0
       },
@@ -302012,7 +302016,7 @@
       "uiflowType": null,
       "coverUrl": "https://m5burner-cdn.m5stack.com/community/416877/2116157079330328578/2116157079330328579/cover/2116157079330328581.png",
       "uploadedAt": "2026-10-30T21:15:40+08:00",
-      "updatedAt": "2026-11-02T11:07:57+08:00",
+      "updatedAt": "2026-11-11T10:11:53+08:00",
       "categories": [
         {
           "categoryId": "1897000000000000001",
@@ -302047,10 +302051,10 @@
         "followed": false
       },
       "currentVersion": {
-        "versionId": "2116157079330328579",
-        "versionName": "0.1.0",
-        "versionDescription": "{\"format\":\"markdown\",\"content\":\"### What's in this release\\n\\n- **Autonomous hunt, upload, and hourly sync** with new-password alerts, fully headless-capable.\\n- **Smart target selection:** skips already-cracked, already-submitted, and open networks; prioritizes stronger signals; backs off never-productive APs; re-verifies known networks periodically to catch rotated keys.\\n- **Four surfaces, all optional:** on-device HUD, status LED, a Maintenance results dashboard (entered by a per-board gesture, reachable over its own SoftAP), and an optional push webhook (ntfy or Discord). Recovered plaintext passwords are never sent off-device.\\n- **Operator-armed deauth** (ADR-0029), off by default, for authorized active capture.\\n- **Screen dimming** and a battery indicator on boards that support them.\\n- **Factory images guarded against the `qio` brick:** the release refuses to publish any factory image whose bootloader header is not `dio`.\"}",
-        "publishTime": "2026-11-02T11:07:57+08:00",
+        "versionId": "2120158797748674562",
+        "versionName": "0.3.0",
+        "versionDescription": "{\"format\":\"markdown\",\"content\":\"## 2026-11-07 (v0.3.0) \\n\\n- **Fixed: a handshake is now treated as valid only when its two halves came from the same connection, so the device stops uploading captures wpa-sec rejects.** The capture only checked that a first message (M1) and a reply (M2) were both present for the target network, not that they belonged to the *same* exchange: on a busy access point two devices connecting at once could leave one device's M1 paired with another's M2, and the clientless-PMKID feature made the mispair routine (our solicited M1 is addressed to a made-up station while a real client's M2 arrives). The mixed pair is an invalid handshake wpa-sec rejects as \\\"no valid handshakes.\\\" The device now requires M1 and M2 to share a station address and replay counter before it counts the capture, uploads the pcap, or builds the pwncrack line, so a crowded-air or solicited mispair keeps hunting for a real pair instead. Latent since the hunt shipped (v0.1.0); PMKID solicitation is unreleased. The PMKID path (crackable from M1 alone) is unaffected.\\n- **Fixed: re-saving the setup form from the Maintenance dashboard no longer wipes your screen-dim delays.** The Maintenance `/config` editor never read the two inactivity-dim fields back on save (and rendered them blank), so any re-save from Maintenance silently reset screen dimming to off, even if you only meant to flip a toggle. Both serving surfaces (first-boot/STA-fail portal and Maintenance `/config`) now parse the whole form through one shared routine, so the field list cannot drift between them again. Latent since screen dimming shipped (v0.1.0); no effect on devices that never used dimming.\\n- **The hunt can now recover handshakes from access points with no clients, via clientless PMKID solicitation.** Tick **Enable PMKID solicitation (arm)** in the setup form and, while hunting, the device solicits a PMKID from each PMK-caching AP it captures by injecting a blind open-auth then association request from a spoofed station MAC, so a crackable hash can be obtained even when nobody is connected to the target. It is a second, independent arm beside deauth (the four on/off combinations give passive / deauth / PMKID / both), **off by default**, and because it impersonates a station the same authorized-use rule applies as for deauth. A solicited PMKID is one more capture on the single upload path: it goes to wpa-sec as a pcap and to pwncrack as a `WPA*01` line, with no second queue or drain. The on-air armed-solicitation proof (`npm run verify:solicit`) is the operator's to run on attached hardware.\\n- **pwncrack.org is now an optional second cracking backend, alongside wpa-sec.** Enter a **pwncrack.org API key** in the setup form and every capture is uploaded to pwncrack (as a hashcat `.hc22000` line re-derived on-device from the saved pcap) in addition to wpa-sec, and the hourly sync pulls cracked results back from both into one shared list, announcing a recovered password whichever backend cracked it. A capture is removed from the queue only once *every* configured backend has accepted it, so adding pwncrack never costs a handshake if one backend is flaky. The key is entirely optional and handled like the other secrets: leave it blank to keep using wpa-sec alone (a wpa-sec-only device is byte-for-byte unchanged), and on re-provisioning it is never echoed back and *\\\"leave blank to keep\\\"*. The live pwncrack link reuses the pinned wpa-sec TLS root and fails closed; its on-air proof behind Cloudflare is still pending. \\n- **The hunt now sweeps the whole 2.4 GHz band (channels 1-13), not just 1/6/11.** An access point beacons on its own channel, so the former three-channel sweep silently missed every network on any other channel, including channels 12-13 which are standard under ETSI (most of Europe). The device now pins its Wi-Fi regulatory domain to the full 1-14 set and re-applies it on every Wi-Fi bring-up (the stack resets it to a restrictive 1-11 default each time), so it can tune to and associate on 12-13. As a consequence it transmits on channels 12-14 regardless of location, the operator's responsibility like arming deauth.\\n- **Leave the Wi-Fi fields blank to keep your current network when re-provisioning.** The setup form(first-boot, STA-fail fallback, and the Maintenance `/config` editor) now treats the SSID + passphrase like the other stored fields: leave the network name blank to keep the current Wi-Fi, so a light-touch edit (flip a toggle, rotate the wpa-sec key) no longer forces you to retype your network. To change only the Wi-Fi password, leave the name blank and type the new passphrase. A passphrase-less network is now set with an explicit **Open network** checkbox, not by leaving the passphrase blank: a new network entered with a blank passphrase and Open unticked is refused, which closes a footgun where forgetting the passphrase during a quick edit silently reconfigured the uplink as open and stranded the unit on its setup portal. The stored SSID is never displayed (like the secrets), so nothing is leaked on the public setup AP.\\n- **The web flasher has a favicon.** The browser tab now shows the WiFi Sapper signal glyph (cyan arcs rising from a magenta emitter dot) as a scalable SVG, echoing the logo and the on-device HUD,  instead of the browser's blank-page default.\"}",
+        "publishTime": "2026-11-11T10:11:53+08:00",
         "visibility": "PUBLIC",
         "status": "PUBLISHED"
       },
@@ -302067,7 +302071,7 @@
         }
       ],
       "statistics": {
-        "downloadCount": 27,
+        "downloadCount": 28,
         "likeCount": 5,
         "commentCount": 0
       },
@@ -302076,6 +302080,38 @@
       "editable": false,
       "reviewable": false,
       "versions": [
+        {
+          "versionId": "2120158797748674562",
+          "versionName": "0.3.0",
+          "versionDescription": "{\"format\":\"markdown\",\"content\":\"## 2026-11-07 (v0.3.0) \\n\\n- **Fixed: a handshake is now treated as valid only when its two halves came from the same connection, so the device stops uploading captures wpa-sec rejects.** The capture only checked that a first message (M1) and a reply (M2) were both present for the target network, not that they belonged to the *same* exchange: on a busy access point two devices connecting at once could leave one device's M1 paired with another's M2, and the clientless-PMKID feature made the mispair routine (our solicited M1 is addressed to a made-up station while a real client's M2 arrives). The mixed pair is an invalid handshake wpa-sec rejects as \\\"no valid handshakes.\\\" The device now requires M1 and M2 to share a station address and replay counter before it counts the capture, uploads the pcap, or builds the pwncrack line, so a crowded-air or solicited mispair keeps hunting for a real pair instead. Latent since the hunt shipped (v0.1.0); PMKID solicitation is unreleased. The PMKID path (crackable from M1 alone) is unaffected.\\n- **Fixed: re-saving the setup form from the Maintenance dashboard no longer wipes your screen-dim delays.** The Maintenance `/config` editor never read the two inactivity-dim fields back on save (and rendered them blank), so any re-save from Maintenance silently reset screen dimming to off, even if you only meant to flip a toggle. Both serving surfaces (first-boot/STA-fail portal and Maintenance `/config`) now parse the whole form through one shared routine, so the field list cannot drift between them again. Latent since screen dimming shipped (v0.1.0); no effect on devices that never used dimming.\\n- **The hunt can now recover handshakes from access points with no clients, via clientless PMKID solicitation.** Tick **Enable PMKID solicitation (arm)** in the setup form and, while hunting, the device solicits a PMKID from each PMK-caching AP it captures by injecting a blind open-auth then association request from a spoofed station MAC, so a crackable hash can be obtained even when nobody is connected to the target. It is a second, independent arm beside deauth (the four on/off combinations give passive / deauth / PMKID / both), **off by default**, and because it impersonates a station the same authorized-use rule applies as for deauth. A solicited PMKID is one more capture on the single upload path: it goes to wpa-sec as a pcap and to pwncrack as a `WPA*01` line, with no second queue or drain. The on-air armed-solicitation proof (`npm run verify:solicit`) is the operator's to run on attached hardware.\\n- **pwncrack.org is now an optional second cracking backend, alongside wpa-sec.** Enter a **pwncrack.org API key** in the setup form and every capture is uploaded to pwncrack (as a hashcat `.hc22000` line re-derived on-device from the saved pcap) in addition to wpa-sec, and the hourly sync pulls cracked results back from both into one shared list, announcing a recovered password whichever backend cracked it. A capture is removed from the queue only once *every* configured backend has accepted it, so adding pwncrack never costs a handshake if one backend is flaky. The key is entirely optional and handled like the other secrets: leave it blank to keep using wpa-sec alone (a wpa-sec-only device is byte-for-byte unchanged), and on re-provisioning it is never echoed back and *\\\"leave blank to keep\\\"*. The live pwncrack link reuses the pinned wpa-sec TLS root and fails closed; its on-air proof behind Cloudflare is still pending. \\n- **The hunt now sweeps the whole 2.4 GHz band (channels 1-13), not just 1/6/11.** An access point beacons on its own channel, so the former three-channel sweep silently missed every network on any other channel, including channels 12-13 which are standard under ETSI (most of Europe). The device now pins its Wi-Fi regulatory domain to the full 1-14 set and re-applies it on every Wi-Fi bring-up (the stack resets it to a restrictive 1-11 default each time), so it can tune to and associate on 12-13. As a consequence it transmits on channels 12-14 regardless of location, the operator's responsibility like arming deauth.\\n- **Leave the Wi-Fi fields blank to keep your current network when re-provisioning.** The setup form(first-boot, STA-fail fallback, and the Maintenance `/config` editor) now treats the SSID + passphrase like the other stored fields: leave the network name blank to keep the current Wi-Fi, so a light-touch edit (flip a toggle, rotate the wpa-sec key) no longer forces you to retype your network. To change only the Wi-Fi password, leave the name blank and type the new passphrase. A passphrase-less network is now set with an explicit **Open network** checkbox, not by leaving the passphrase blank: a new network entered with a blank passphrase and Open unticked is refused, which closes a footgun where forgetting the passphrase during a quick edit silently reconfigured the uplink as open and stranded the unit on its setup portal. The stored SSID is never displayed (like the secrets), so nothing is leaked on the public setup AP.\\n- **The web flasher has a favicon.** The browser tab now shows the WiFi Sapper signal glyph (cyan arcs rising from a magenta emitter dot) as a scalable SVG, echoing the logo and the on-device HUD,  instead of the browser's blank-page default.\"}",
+          "publishTime": "2026-11-11T10:11:53+08:00",
+          "uploadedAt": "2026-11-10T22:17:03+08:00",
+          "updatedAt": "2026-11-11T10:11:53+08:00",
+          "visibility": "PUBLIC",
+          "status": "PUBLISHED",
+          "binFileName": "sapper-m5stickc-plus2-v0.3.0-factory.bin",
+          "coverUrl": "https://m5burner-cdn.m5stack.com/community/416877/2116157079330328578/2116157079330328579/cover/2116157079330328581.png",
+          "downloadCount": 1,
+          "current": true,
+          "supportedDevices": [
+            {
+              "deviceId": "1985000000000000205",
+              "deviceCode": "STICKC_PLUS2",
+              "deviceSlug": "stickc-plus2",
+              "deviceName": "StickC-Plus2",
+              "chipSeries": "ESP32",
+              "imageUrl": null,
+              "netMode": "WIFI",
+              "ethMode": "DHCP"
+            }
+          ],
+          "binary": {
+            "fileName": "sapper-m5stickc-plus2-v0.3.0-factory.bin",
+            "url": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2116157079330328578/2120158797748674562/bin/2120158797748674563.bin",
+            "verified": true,
+            "resolution": "community_id_candidate"
+          }
+        },
         {
           "versionId": "2116157079330328579",
           "versionName": "0.1.0",
@@ -302087,8 +302123,8 @@
           "status": "PUBLISHED",
           "binFileName": "sapper-m5stickc_plus2-v0.1.0-factory.bin",
           "coverUrl": "https://m5burner-cdn.m5stack.com/community/416877/2116157079330328578/2116157079330328579/cover/2116157079330328581.png",
-          "downloadCount": 12,
-          "current": true,
+          "downloadCount": 26,
+          "current": false,
           "supportedDevices": [
             {
               "deviceId": "1985000000000000205",
@@ -308585,9 +308621,9 @@
       "sourceUrl": "https://github.com/adfffgyujyhkbvuyyhcbhj/M5-RetroBoy-OS/",
       "sourceType": "COMMUNITY",
       "uiflowType": null,
-      "coverUrl": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2119398094133698563/cover/2119398094133698565.png",
+      "coverUrl": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2120274454293159937/cover/2120274454293159939.png",
       "uploadedAt": "2026-11-08T19:54:18+08:00",
-      "updatedAt": "2026-11-09T14:02:52+08:00",
+      "updatedAt": "2026-11-11T10:08:48+08:00",
       "categories": [
         {
           "categoryId": "1897000000000000001",
@@ -308618,10 +308654,10 @@
         "followed": false
       },
       "currentVersion": {
-        "versionId": "2119398094133698563",
-        "versionName": "1",
-        "versionDescription": "{\"format\":\"markdown\",\"content\":\"Everything works perfectly and without any bugs. However, please note that the Car Racing game is currently very challenging because there are too many cars on the road! A balancing update will be released later to adjust the traffic difficulty.\"}",
-        "publishTime": "2026-11-09T14:02:52+08:00",
+        "versionId": "2120274454293159937",
+        "versionName": "1.1",
+        "versionDescription": "{\"format\":\"markdown\",\"content\":\"Games (14 entries) no bug + english\"}",
+        "publishTime": "2026-11-11T10:08:48+08:00",
         "visibility": "PUBLIC",
         "status": "PUBLISHED"
       },
@@ -308648,6 +308684,38 @@
       "reviewable": false,
       "versions": [
         {
+          "versionId": "2120274454293159937",
+          "versionName": "1.1",
+          "versionDescription": "{\"format\":\"markdown\",\"content\":\"Games (14 entries) no bug + english\"}",
+          "publishTime": "2026-11-11T10:08:48+08:00",
+          "uploadedAt": "2026-11-11T05:56:38+08:00",
+          "updatedAt": "2026-11-11T10:08:48+08:00",
+          "visibility": "PUBLIC",
+          "status": "PUBLISHED",
+          "binFileName": "AD-Arcade-M5StickCPlus2.bin",
+          "coverUrl": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2120274454293159937/cover/2120274454293159939.png",
+          "downloadCount": 1,
+          "current": true,
+          "supportedDevices": [
+            {
+              "deviceId": "1985000000000000205",
+              "deviceCode": "STICKC_PLUS2",
+              "deviceSlug": "stickc-plus2",
+              "deviceName": "StickC-Plus2",
+              "chipSeries": "ESP32",
+              "imageUrl": null,
+              "netMode": "WIFI",
+              "ethMode": "DHCP"
+            }
+          ],
+          "binary": {
+            "fileName": "AD-Arcade-M5StickCPlus2.bin",
+            "url": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2120274454293159937/bin/2120274454293159938.bin",
+            "verified": true,
+            "resolution": "community_id_candidate"
+          }
+        },
+        {
           "versionId": "2119398094133698563",
           "versionName": "1",
           "versionDescription": "{\"format\":\"markdown\",\"content\":\"Everything works perfectly and without any bugs. However, please note that the Car Racing game is currently very challenging because there are too many cars on the road! A balancing update will be released later to adjust the traffic difficulty.\"}",
@@ -308659,7 +308727,7 @@
           "binFileName": "M5Arcade-M5StickCPlus2.bin",
           "coverUrl": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2119398094133698563/cover/2119398094133698565.png",
           "downloadCount": 3,
-          "current": true,
+          "current": false,
           "supportedDevices": [
             {
               "deviceId": "1985000000000000205",
