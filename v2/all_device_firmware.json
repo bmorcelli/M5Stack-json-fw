@@ -2026,6 +2026,141 @@
     "esp": "32"
   },
   {
+    "_id": "2119398094133698562",
+    "fid": "2119398094133698562",
+    "name": "AD Arcade",
+    "description": "AD Arcade \u2013 a pocket game console for the M5StickC Plus2\n\nTurn your M5StickC Plus2 into a retro handheld. AD Arcade boots with a 90s demo-scene intro, then opens a console-style menu: pick a game icon, press the big M5 button and play. Many games use the built-in gyroscope, so you steer by tilting the stick.\n\nGames (14 entries)\n\nChrome Dino \u2013 the classic runner. M5 = jump, side button = duck.\nFlap Bird \u2013 tap to flap through the pipes.\nMeteors \u2013 tilt your spaceship to dodge asteroids.\nMaze \u2013 tilt to roll a ball through the maze, avoid the holes.\nBreakout \u2013 brick breaker with a tilt-controlled paddle.\nInvaders \u2013 shoot the waves of aliens.\nSlalom \u2013 tilt to ski between the gates and avoid trees and rocks.\nStack \u2013 drop blocks and build the tallest tower.\nRacing \u2013 choose from 3 sports cars and 7 colours, steer by tilting, hold M5 for nitro.\nFlight \u2013 pseudo-3D flying: tilt to steer, M5 for turbo, fly through the rings.\nRiver \u2013 steer a kayak down a winding river.\nFish \u2013 eat smaller fish, avoid bigger ones, and grow.\nMusic \u2013 9 classic public-domain tunes played on the buzzer, with a piano-roll display.\nSettings \u2013 see below.\n\nFeatures\n\nAnimated menu with battery indicator (percentage + charging icon)\nScreensaver in the menu only (never interrupts a game)\nHigh scores saved per game\nTilt is calibrated once at startup and works for every game\nSettings: brightness, sound on/off, screensaver delay, re-calibrate tilt, language (English / Fran\u00e7ais)\n\nControls\n\nSide button (B): next game / next item\nTop button (PWR): previous game / pause in game. Hold it 1.5 s to go back to the menu\nFront button (M5 / A): select / action\n\nInstall\nBurn with M5Burner (or flash the .bin at address 0x0). On first boot, hold the stick flat for a moment when asked to calibrate the tilt.\n\nCredits\nChrome Dino is based on the open-source Chromium game (BSD license). All music is public domain. All other games and graphics are original.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2120274454293159937/cover/2120274454293159939.png",
+    "category": "stickc-plus2",
+    "tags": [
+      "Tools",
+      "Games",
+      "Audio & Media",
+      "Display & Art",
+      "UI & Launcher"
+    ],
+    "author": "ADdev",
+    "github": "https://github.com/adfffgyujyhkbvuyyhcbhj/M5-RetroBoy-OS/",
+    "download": 4,
+    "versions": [
+      {
+        "version": "1",
+        "version_id": "2119398094133698563",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2119398094133698563/bin/2119398094133698564.bin",
+        "Fs": 649920,
+        "as": 584384,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 584384,
+            "partition_size": 1310720,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1310720,
+              "source_offset": 65536,
+              "copy_size": 584384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1441792,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T06:08:27Z",
+            "etag": "\"ED875431CB8C884EC18F109F76D99E19\"",
+            "last_modified": "Sun, 08 Nov 2026 11:54:17 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.1",
+        "version_id": "2120274454293159937",
+        "published_at": "2026-11-11",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2120274454293159937/bin/2120274454293159938.bin",
+        "Fs": 660800,
+        "as": 595264,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 595264,
+            "partition_size": 1310720,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1310720,
+              "source_offset": 65536,
+              "copy_size": 595264,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1441792,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-11T02:13:09Z",
+            "etag": "\"B79E34F57B1F9F9D6BA0A25BFA34F7CD\"",
+            "last_modified": "Tue, 10 Nov 2026 21:56:37 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
     "_id": "1897200000000000905",
     "fid": "1897200000000000905",
     "name": "ADV IMU Acoustic Analyzer + m5 launcher",
@@ -2419,8 +2554,8 @@
     "_id": "1897200000000002423",
     "fid": "1897200000000002423",
     "name": "AI Offline Chat ADV+ m5 launcher",
-    "description": "Turn your Cardputer into a pocket AI therapist! This works 100% offline. (v1.1)\n\n\u26a0\ufe0f IMPORTANT: THIS IS NOT CHATGPT\nShe does not know facts, cannot write code, and will not answer general questions. Instead, she acts as a virtual psychologist (based on the famous 1966 ELIZA program). Talk to her about your feelings, relationships, or problems using full English sentences (e.g., \"I feel sad today\" or \"My boss is angry\"). \n\n\ud83e\udde0 FEATURES\n- 100% Offline (No Wi-Fi needed).\n- Long-term memory: Requires an SD Card to save your name, feelings, chat history, and volume settings.\n- Emotional UI: The screen color adapts to your mood.\n\n\u2328\ufe0f CONTROLS\n- Type on the keyboard and press [ENTER] to chat.\n- Press [DEL] to backspace.\n- Press [ESC] or [`] to open the menu to Start a New Chat or Wipe Memory.\n- Use [;] and [.] to scroll the chat history.\n- Press [-] to decrease volume/mute, and [=] to increase volume.",
-    "cover": "https://m5burner-cdn.m5stack.com/cover/5074e56e0917122cebe19fd196281d81.png",
+    "description": "<p>Meet ELIZA (v1.2) - a 100% offline pocket cyber-therapist and emotional companion for your Cardputer! She watches you type with expressive Cozmo-style eyes, remembers the people in your life, and secretly builds a 3-page psychological dossier on you as you chat.</p><p><br></p><p>\u26a0\ufe0f HONEST DISCLAIMER (NOT CLICKBAIT):</p><p>This is NOT ChatGPT or an LLM! It runs 100% locally on the ESP32-S3 without Wi-Fi or cloud servers. She won't write code or answer trivia questions. Instead, she is a heavily upgraded remake of the legendary 1966 MIT ELIZA psychotherapist. Talk to her in English about your day, stress, work, relationships, or feelings \u2014 and watch how she reacts.</p><p><br></p><p>\ud83d\udd25 KEY FEATURES (V1.2)</p><p>\u2022 Expressive Procedural Eyes: Tracks your cursor while you type, blinks, sleeps (zZz), cries tears in grief, shows beating heart eyes in romance, or glitches in anger.</p><p>\u2022 Interactive Patient Dossier [TAB]: Press TAB to see what she thinks of you! Includes your clinical profile, a live [-10..+10] relationship graph for people you mention, subconscious memory, and a live EEG &amp; BPM heart rate monitor.</p><p>\u2022 Self-Censorship &amp; Trust Physics: Notices if you type a long thought and delete it all. Builds trust over time, reacts with shattered heart eyes if you suddenly turn hostile, and accepts apologies.</p><p>\u2022 Long-Term SD Memory: Saves your name, family, hobbies, relationship graph, chat history, and volume level to the MicroSD card.</p><p><br></p><p>\ud83d\udd79\ufe0f CONTROLS</p><p>\u2022 Type in English and press [ENTER] to chat (press [ENTER] again to skip typing animation).</p><p>\u2022 Press [TAB] to open/close your Patient Dossier (use [,] / [/] or [A] / [D] to flip pages 1-3).</p><p>\u2022 Press [;] and [.] to scroll chat history.</p><p>\u2022 Press [-] and [=] to adjust voice volume or mute (0-100% OSD).</p><p>\u2022 Press [ESC] or [`] to start a New Session / Wipe Memory.</p><ul>\n</ul>",
+    "cover": "https://m5burner-cdn.m5stack.com/community/465176/1897200000000002423/2120337677667180545/cover/2120337677667180547.png",
     "category": "cardputer-adv",
     "tags": [
       "Games",
@@ -2430,7 +2565,7 @@
     ],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/AI-Offline-Chat-ADV",
-    "download": 1957,
+    "download": 1958,
     "versions": [
       {
         "version": "v1 (30.04.2026)",
@@ -2551,6 +2686,67 @@
             "analyzed_at": "2026-07-28T21:27:35Z",
             "etag": "\"5F7085AE01DCEF04D60B4FF534300396\"",
             "last_modified": "Fri, 08 May 2026 03:32:10 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.2",
+        "version_id": "2120337677667180545",
+        "published_at": "2026-11-11",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/465176/1897200000000002423/2120337677667180545/bin/2120337677667180546.bin",
+        "Fs": 4194304,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1007584,
+        "so": 3211264,
+        "ss": 917504,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1007584,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1007584,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 917504,
+              "source": "firmware",
+              "source_offset": 3211264,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 4231168,
+            "analyzed_at": "2026-11-11T02:23:35Z",
+            "etag": "\"5BF00677DCB02D74BF4BADDAA00D4208\"",
+            "last_modified": "Wed, 11 Nov 2026 02:07:51 GMT"
           }
         }
       }
@@ -93400,141 +93596,6 @@
     "esp": "s3"
   },
   {
-    "_id": "2119398094133698562",
-    "fid": "2119398094133698562",
-    "name": "M5RetroBoy OS    11 GAME",
-    "description": "M5RetroBoy OS - Complete Retro Gaming & Music Firmware\nfirmware complet d'inspiration r\u00e9tro pour le M5StickC Plus2. Ce projet int\u00e8gre 11 jeux optimis\u00e9s et un lecteur de musique autonome, fonctionnant nativement sans aucun module additionnel.\n complete retro-inspired firmware for the M5StickC Plus2. This project features 11 optimized games and a standalone music player, running natively without any additional modules.\nGAMES LIST\n\u2022 Dino Game : L'authentique jeu du dinosaure de Chrome. / The authentic Chrome dinosaur game.\n\u2022 Flappy Bird : \u00c9vite les obstacles pour aller le plus loin possible. / Avoid obstacles and fly as far as possible.\n\u2022 Meteors : \u00c9vite les m\u00e9t\u00e9orites en utilisant le gyroscope. / Dodge space rocks using the gyroscope.\n\u2022 Labyrinthe Bille : Guide la bille \u00e0 travers le d\u00e9dale gr\u00e2ce au gyroscope. / Guide the marble through the maze using the gyroscope.\n\u2022 Casse-Briques : Casse-briques traditionnel contr\u00f4l\u00e9 par l'inclinaison de l'appareil. / Traditional brick breaker controlled by tilting the device.\n\u2022 Invaders : Dirige le vaisseau au gyroscope et tire avec le bouton principal M5. / Control the spaceship with the gyroscope and shoot with the main M5 button.\n\u2022 Slalom : D\u00e9vale la piste de ski, \u00e9vite les arbres et passe entre les drapeaux. / Ski down the slope, avoid trees, and clear the gates.\n\u2022 Stack : Empile les blocs au bon moment. Tout d\u00e9calage r\u00e9duit la taille du bloc. / Stack blocks with precise timing. Missing the timing shrinks the block.\n\u2022 Course : Conduis au gyroscope avec trafic en temps r\u00e9el, v\u00e9hicules et couleurs personnalisables. / Drive using the gyroscope with active traffic, customizable vehicles, and colors.\n\u2022 Rivi\u00e8re : Navigue et \u00e9vite les pierres ou les branches en utilisant le gyroscope. / Navigate and dodge rocks or branches using the gyroscope.\n\u2022 Poissons : Mange les poissons plus petits pour grandir et \u00e9vite les pr\u00e9dateurs. / Eat smaller fish to grow while avoiding larger predators.\nFONCTIONNALIT\u00c9S AUDIO / AUDIO FEATURES\n\u2022 Lecture de m\u00e9lodies c\u00e9l\u00e8bres via le buzzer interne (De nouvelles musiques sont en pr\u00e9paration, ainsi qu\u2019un moyen d\u2019ajouter vos propres morceaux personnalis\u00e9s.)\n\u2022 Playback of famous melodies using the internal buzzer (New music is on the way, along with a way to add your own custom tracks.)\nFONCTIONNALIT\u00c9S SYST\u00c8ME / SYSTEM FEATURES\n\u2022 Affichage du niveau de la batterie sur l'\u00e9cran d'accueil. / Battery status displayed on the home screen.\n\u2022 Gestion du volume (activation et d\u00e9sactivation du son). / Audio management (mute and unmute controls).\n\u2022 R\u00e9glage pr\u00e9cis de la luminosit\u00e9 de l'\u00e9cran. / Precise screen brightness adjustment.\n\u2022 Menu de calibration du gyroscope (IMU). / Gyroscope (IMU) calibration menu.\n\u2022 Gestion de l'\u00e9cran de veille avec minuteur ajustable avant la mise en veille compl\u00e8te. / Screensaver management with adjustable timer before full sleep mode.",
-    "cover": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2120274454293159937/cover/2120274454293159939.png",
-    "category": "stickc-plus2",
-    "tags": [
-      "Tools",
-      "Games",
-      "Audio & Media",
-      "Display & Art",
-      "UI & Launcher"
-    ],
-    "author": "ADdev",
-    "github": "https://github.com/adfffgyujyhkbvuyyhcbhj/M5-RetroBoy-OS/",
-    "download": 4,
-    "versions": [
-      {
-        "version": "1",
-        "version_id": "2119398094133698563",
-        "published_at": "2026-11-09",
-        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2119398094133698563/bin/2119398094133698564.bin",
-        "Fs": 649920,
-        "as": 584384,
-        "ao": 65536,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "stickc-plus2",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 584384,
-            "partition_size": 1310720,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 1310720,
-              "source_offset": 65536,
-              "copy_size": 584384,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 1441792,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-11-09T06:08:27Z",
-            "etag": "\"ED875431CB8C884EC18F109F76D99E19\"",
-            "last_modified": "Sun, 08 Nov 2026 11:54:17 GMT"
-          }
-        }
-      },
-      {
-        "version": "1.1",
-        "version_id": "2120274454293159937",
-        "published_at": "2026-11-11",
-        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2120274454293159937/bin/2120274454293159938.bin",
-        "Fs": 660800,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 595264,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "stickc-plus2",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 595264,
-            "partition_size": 1310720,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 1310720,
-              "source_offset": 65536,
-              "copy_size": 595264,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 1441792,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-11-11T02:13:09Z",
-            "etag": "\"B79E34F57B1F9F9D6BA0A25BFA34F7CD\"",
-            "last_modified": "Tue, 10 Nov 2026 21:56:37 GMT"
-          }
-        }
-      }
-    ],
-    "esp": "32"
-  },
-  {
     "_id": "1897200000000002087",
     "fid": "1897200000000002087",
     "name": "M5Scratch",
@@ -125753,8 +125814,8 @@
   {
     "_id": "2119223184715325442",
     "fid": "2119223184715325442",
-    "name": "Pale Blue Dot Webradio",
-    "description": "Full-featured Web Radio player for CORE2 with Module Audio (also works with internal speaker, if you must). Use the built-in web server to manage lists, search for stations, or add them manually.\n\nBecause it's designed to work without text-entry on the unit, it requires an SD card, with a file called \"wifi_known.csv\" in the root, to provide wifi credentials. In this file, should be one entry per wifi you would like to access, like \"name,password\" with no extra spaces.\n\nEnjoy irresponsibly!",
+    "name": "Pale Blue Dot Web Radio",
+    "description": "Full-featured Web Radio player for CORE2 with Module Audio (or internal speaker, if you must). Use the built-in web server to manage lists, search for stations, or add them manually.\n\nBecause it's designed to work without text-entry on the unit, it requires an SD card, with a file called \"wifi_known.csv\" in the root, to provide wifi credentials. In this file, should be one entry per wifi you would like to access, like \"name,password\" with no extra spaces.\n\nEnjoy irresponsibly!",
     "cover": "https://m5burner-cdn.m5stack.com/community/514652/2119223184715325442/2119223184715325443/cover/2119223184715325445.png",
     "category": "core2",
     "tags": [
@@ -153088,7 +153149,7 @@
     "_id": "2118408999704035329",
     "fid": "2118408999704035329",
     "name": "StackChan-GPT",
-    "description": "**StackChan-GPT** (Agent.ai Edition) is custom firmware for the M5Stack StackChan desktop robot (CoreS3) that connects directly to your own OpenAI API\u2014with no cloud account sign-in or third-party AI server required. Choose Agent.ai on the launcher to talk naturally with your robot using GPT-Live (Realtime WebSocket audio) or OpenAI Chat & Voice models (gpt-5.4-nano, gpt5.5, gpt-5.6-terra, gpt-4o-mini, gpt-4o, Whisper STT, and OpenAI TTS). Give your StackChan a custom wake-word name right on the touchscreen, watch its 12 RGB LEDs glow green while listening and pulse like a blue heartbeat while thinking, and let the AI control its 2-axis servo head, facial expressions, dances, reminders, and onboard camera with OpenAI Vision.\n*********************************************************************\nStackChan-GPT firmware is open source under the MIT License. It is a modified fork of M5Stack StackChan (https://github.com/m5stack/StackChan), which is also licensed under MIT. Original M5Stack copyright is retained.\nThis project is not affiliated with, endorsed by, or sponsored by OpenAI. \u201cOpenAI\u201d and related names are trademarks of OpenAI. Users supply their own OpenAI API key. The OpenAI API is a separate, user-provided cloud service and is not licensed as part of this firmware.\nA flashed firmware image also includes third-party software under MIT, Apache License 2.0, BSD-3-Clause, public domain, and Espressif chip-restricted MIT licenses (including ESP-SR / WakeNet). Those Espressif components may be used only on Espressif chips such as the ESP32-S3 in M5Stack CoreS3. The full attribution list is in NOTICE in the source repository.\n*****************************\nMIT License\nCopyright (c) 2026 StackChan-GPT Contributors\nCopyright (c) 2026 M5Stack Technology CO LTD\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "description": "<p><strong>StackChan-GPT</strong> (Agent.ai Edition) is custom firmware for the M5Stack StackChan desktop robot (CoreS3) that connects directly to your own OpenAI API\u2014with no cloud account sign-in or third-party AI server required. Choose Agent.ai on the launcher to talk naturally with your robot using GPT-Live (Realtime WebSocket audio) or OpenAI Chat &amp; Voice models (gpt-5.4-nano, gpt5.5, gpt-5.6-terra, gpt-4o-mini, gpt-4o, Whisper STT, and OpenAI TTS). Give your StackChan a custom wake-word name right on the touchscreen, watch its 12 RGB LEDs glow green while listening and pulse like a blue heartbeat while thinking, and let the AI control its 2-axis servo head, facial expressions, dances, reminders, and onboard camera with OpenAI Vision.</p><p><br></p>\n<hr>\n<p>StackChan-GPT firmware is open source under the MIT License. It is a modified fork of M5Stack StackChan (<a href=\"https://github.com/m5stack/StackChan\">https://github.com/m5stack/StackChan</a>), which is also licensed under MIT. Original M5Stack copyright is retained. This project is not affiliated with, endorsed by, or sponsored by OpenAI. \u201cOpenAI\u201d and related names are trademarks of OpenAI. Users supply their own OpenAI API key. The OpenAI API is a separate, user-provided cloud service and is not licensed as part of this firmware. A flashed firmware image also includes third-party software under MIT, Apache License 2.0, BSD-3-Clause, public domain, and Espressif chip-restricted MIT licenses (including ESP-SR / WakeNet). Those Espressif components may be used only on Espressif chips such as the ESP32-S3 in M5Stack CoreS3. The full attribution list is in NOTICE in the source repository.</p>\n<hr>\n<p>MIT License Copyright (c) 2026 StackChan-GPT Contributors Copyright (c) 2026 M5Stack Technology CO LTD Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&nbsp;</p><p>THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>",
     "cover": "https://m5burner-cdn.m5stack.com/community/105681/2118408999704035329/2119935346890940417/cover/2119935346890940419.png",
     "category": "stackchan",
     "tags": [
@@ -166123,6 +166184,70 @@
             "analyzed_at": "2026-11-09T01:38:29Z",
             "etag": "\"851C8CB200079EE9F73B3D3972B922BC\"",
             "last_modified": "Sun, 08 Nov 2026 22:25:09 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2119707649614979073",
+    "fid": "2119707649614979073",
+    "name": "The USB of bable",
+    "description": "A flash drive that holds every possible file. Based on p2r3's babel-usb, with a new animated GUI.\n\nPlug the Cardputer into a computer and it shows up as an MTP drive called **USB of Babel**. Its folders go on forever. Every folder holds one `file`, and that file's contents are spelled out by the path you took to reach it. Every photo, song and document is in there somewhere.\n\n**The Air Shaft screen:** you look straight down a shaft in Borges' library, and each floor is a folder. As your computer browses, the folder names lock into place and the path builds up at the bottom of the screen. When the computer reads `file`, a book rises and opens: raw bytes on the left page, text on the right. Tilt the Cardputer and the view tilts too. With no computer connected, you fall through the library by lantern light.\n\n**Find any file:** type its contents on the keyboard. The shaft dives to the right folder and shows the path to browse to on your computer.\n\n**Keys**\n- Type: look up a file by its contents\n- `del`: back one folder, or delete a character\n- `enter` / G0 button: open or close the book\n- `tab`: back to the root\n- `fn` + `;` / `fn` + `.`: brightness up / down\n- `opt`: switch folder names between Babel-70 and hex (while unplugged)\n- `alt`: show frame rate and free memory\n\n**Hosts:** Windows and Linux (GNOME Files, Dolphin) open the drive directly. macOS needs OpenMTP or Android File Transfer.\n\nUnlike the original, browsing back up gives the right file, and every file can be reached by some path.\n\nBased on p2r3/babel-usb (PortalRunner, \"This Flash Drive has Literally Every File\"). MIT license.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2119705396837523458/2119707649614979073/2119707649614979074/cover/2119707649614979076.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Utilities"
+    ],
+    "author": "Benji_01",
+    "github": "https://github.com/BenjaminAddison/babel-USB-Cardputer",
+    "download": 8,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2119707649614979074",
+        "published_at": "2026-11-09",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2119705396837523458/2119707649614979073/2119707649614979074/bin/2119707649614979075.bin",
+        "Fs": 457136,
+        "as": 391600,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 391600,
+            "partition_size": 1048576,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1048576,
+              "source_offset": 65536,
+              "copy_size": 391600,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-09T08:43:37Z",
+            "etag": "\"E97C0235CFE3FF1A6C4E3BDA35D3BEB2\"",
+            "last_modified": "Mon, 09 Nov 2026 08:24:20 GMT"
           }
         }
       }
@@ -222066,7 +222191,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 217,
+    "download": 218,
     "versions": [
       {
         "version": "v2.3.5",
@@ -361565,11 +361690,11 @@
         "published_at": "2026-11-11",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2116157079330328578/2120158797748674562/bin/2120158797748674563.bin",
         "Fs": 1500592,
+        "as": 1435056,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1435056,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -387439,70 +387564,6 @@
     "name_src": "tab5 nc1020,nc2000,nc2600\u6a21\u62df\u5668",
     "description_en": "Can run Wenquxing emulator\uff0cBut the premise is thatsdinside the cardromandnorget readyrom files:\nlink: https://pan.baidu.com/s/1Px_G4ZLpx_AN6_L7VrHnsQ?pwd=uuf2 code: uuf2",
     "description_src": "\u53ef\u4ee5\u8fd0\u884c\u6587\u66f2\u661f\u6a21\u62df\u5668\uff0c\u4f46\u662f\u524d\u63d0\u662f\u628asd\u5361\u91cc\u9762\u7684rom\u548cnor\u51c6\u5907\u597drom files:\nlink: https://pan.baidu.com/s/1Px_G4ZLpx_AN6_L7VrHnsQ?pwd=uuf2 code: uuf2"
-  },
-  {
-    "_id": "2119707649614979073",
-    "fid": "2119707649614979073",
-    "name": "the USB of bable",
-    "description": "A flash drive that holds every possible file. Based on p2r3's babel-usb, with a new animated GUI.\n\nPlug the Cardputer into a computer and it shows up as an MTP drive called **USB of Babel**. Its folders go on forever. Every folder holds one `file`, and that file's contents are spelled out by the path you took to reach it. Every photo, song and document is in there somewhere.\n\n**The Air Shaft screen:** you look straight down a shaft in Borges' library, and each floor is a folder. As your computer browses, the folder names lock into place and the path builds up at the bottom of the screen. When the computer reads `file`, a book rises and opens: raw bytes on the left page, text on the right. Tilt the Cardputer and the view tilts too. With no computer connected, you fall through the library by lantern light.\n\n**Find any file:** type its contents on the keyboard. The shaft dives to the right folder and shows the path to browse to on your computer.\n\n**Keys**\n- Type: look up a file by its contents\n- `del`: back one folder, or delete a character\n- `enter` / G0 button: open or close the book\n- `tab`: back to the root\n- `fn` + `;` / `fn` + `.`: brightness up / down\n- `opt`: switch folder names between Babel-70 and hex (while unplugged)\n- `alt`: show frame rate and free memory\n\n**Hosts:** Windows and Linux (GNOME Files, Dolphin) open the drive directly. macOS needs OpenMTP or Android File Transfer.\n\nUnlike the original, browsing back up gives the right file, and every file can be reached by some path.\n\nBased on p2r3/babel-usb (PortalRunner, \"This Flash Drive has Literally Every File\"). MIT license.",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2119705396837523458/2119707649614979073/2119707649614979074/cover/2119707649614979076.png",
-    "category": "cardputer-adv",
-    "tags": [
-      "Tools",
-      "Utilities"
-    ],
-    "author": "Benji_01",
-    "github": "https://github.com/BenjaminAddison/babel-USB-Cardputer",
-    "download": 8,
-    "versions": [
-      {
-        "version": "1.0.0",
-        "version_id": "2119707649614979074",
-        "published_at": "2026-11-09",
-        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2119705396837523458/2119707649614979073/2119707649614979074/bin/2119707649614979075.bin",
-        "Fs": 457136,
-        "as": 391600,
-        "ao": 65536,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "cardputer-adv",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 391600,
-            "partition_size": 1048576,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 1048576,
-              "source_offset": 65536,
-              "copy_size": 391600,
-              "required": true,
-              "source": "firmware"
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-11-09T08:43:37Z",
-            "etag": "\"E97C0235CFE3FF1A6C4E3BDA35D3BEB2\"",
-            "last_modified": "Mon, 09 Nov 2026 08:24:20 GMT"
-          }
-        }
-      }
-    ],
-    "esp": "s3"
   },
   {
     "_id": "1897200000000000928",
