@@ -8,6 +8,62 @@
         "fid": "CFWL2R3UB7T35JU2Q4PH7R7ZCDB3ZISL",
         "versions": [
             {
+                "version": "1.17",
+                "published_at": "2026-11-12",
+                "file": "https://github.com/BruceDevices/firmware/releases/download/1.17/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
+                "Fs": 2592640,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2527104,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "cyd-2432s024r",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2527104,
+                        "partition_size": 2555904,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 2555904,
+                            "source_offset": 65536,
+                            "copy_size": 2527104,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 1572864,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-12T23:53:26Z",
+                        "etag": "\"0x8DF4116B7C65E6F\"",
+                        "last_modified": "Thu, 12 Nov 2026 23:43:13 GMT"
+                    }
+                }
+            },
+            {
                 "version": "1.16.1",
                 "published_at": "2026-08-11",
                 "file": "https://github.com/BruceDevices/firmware/releases/download/1.16.1/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
@@ -508,62 +564,6 @@
                         "analyzed_at": "2026-07-30T19:08:30Z",
                         "etag": "\"0x8DDA8633DD6C6B9\"",
                         "last_modified": "Tue, 10 Jun 2025 21:10:34 GMT"
-                    }
-                }
-            },
-            {
-                "version": "1.10.1",
-                "published_at": "2025-05-31",
-                "file": "https://github.com/BruceDevices/firmware/releases/download/1.10.1/Bruce-LAUNCHER_CYD-2432W328R-or-S024R.bin",
-                "Fs": 2589776,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2524240,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "cyd-2432s024r",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2524240,
-                        "partition_size": 2555904,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 2555904,
-                            "source_offset": 65536,
-                            "copy_size": 2524240,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 1572864,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-07-30T19:08:30Z",
-                        "etag": "\"0x8DDA05AF1982537\"",
-                        "last_modified": "Sat, 31 May 2025 15:51:01 GMT"
                     }
                 }
             }
