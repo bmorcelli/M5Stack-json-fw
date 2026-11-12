@@ -8,6 +8,62 @@
         "fid": "CFW4AY4WXB6G7LLCPSUHC5ICGP5UJT7Z",
         "versions": [
             {
+                "version": "cairn-v131",
+                "published_at": "2026-11-12",
+                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v131/MeshCore-ThinkNodeM9-Cairn131-2026-11-11-full.bin",
+                "Fs": 4082576,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 4017040,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "elecrow-thinknode-m9",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 4017040,
+                        "partition_size": 6553600,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6553600,
+                            "source_offset": 65536,
+                            "copy_size": 4017040,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 3538944,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-12T03:08:14Z",
+                        "etag": "\"0x8DF40695C79FD8B\"",
+                        "last_modified": "Thu, 12 Nov 2026 03:02:17 GMT"
+                    }
+                }
+            },
+            {
                 "version": "cairn-v130",
                 "published_at": "2026-11-10",
                 "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v130/MeshCore-ThinkNodeM9-Cairn130-2026-11-10-full.bin",
@@ -508,62 +564,6 @@
                         "analyzed_at": "2026-10-25T19:55:44Z",
                         "etag": "\"0x8DF32C77C40775E\"",
                         "last_modified": "Sun, 25 Oct 2026 18:40:47 GMT"
-                    }
-                }
-            },
-            {
-                "version": "cairn-v121",
-                "published_at": "2026-10-21",
-                "file": "https://github.com/cvhviz/CAIRN/releases/download/cairn-v121/MeshCore-ThinkNodeM9-Cairn121-2026-10-21-full.bin",
-                "Fs": 3805008,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 3739472,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "elecrow-thinknode-m9",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 3739472,
-                        "partition_size": 6553600,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 6553600,
-                            "source_offset": 65536,
-                            "copy_size": 3739472,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 3538944,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-10-21T18:54:33Z",
-                        "etag": "\"0x8DF2F9423BC0961\"",
-                        "last_modified": "Wed, 21 Oct 2026 16:55:41 GMT"
                     }
                 }
             }
