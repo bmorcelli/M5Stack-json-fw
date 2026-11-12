@@ -5734,7 +5734,7 @@
     ],
     "author": "zwierzct",
     "github": "https://github.com/soe6/AetherTone",
-    "download": 813,
+    "download": 814,
     "versions": [
       {
         "version": "0.12",
@@ -5876,7 +5876,7 @@
     ],
     "author": "\u94f2\u5c4e\u5927\u5b98\u4eba",
     "github": "https://github.com/nongxl/agar-cardputer",
-    "download": 190,
+    "download": 191,
     "versions": [
       {
         "version": "v1.1",
@@ -10045,7 +10045,7 @@
     ],
     "author": "mbogatyr",
     "github": "https://github.com/mbogatyr/M5SpectrumAnalyzer",
-    "download": 67,
+    "download": 68,
     "versions": [
       {
         "version": "1.0.0",
@@ -18106,7 +18106,7 @@
     ],
     "author": "H6creatorFirmware",
     "github": "https://github.com/pr3y/Bruce?utm_source=chatgpt.com",
-    "download": 486,
+    "download": 487,
     "versions": [
       {
         "version": "1.0",
@@ -20803,7 +20803,7 @@
     ],
     "author": "GameCat7428",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 10447,
+    "download": 10448,
     "versions": [
       {
         "version": "1.0.0",
@@ -30612,6 +30612,80 @@
     "esp": "32"
   },
   {
+    "_id": "2120661601634394114",
+    "fid": "2120661601634394114",
+    "name": "Bruce's MeshCore for Cardputer ADV and Cap LoRa 1262",
+    "description": "**Bruce's MeshCore for Cardputer ADV** turns the Cardputer-Adv and the Cap LoRa-1262 into a standalone MeshCore chat device. You read and write messages on its own screen and keyboard, like a pager for the mesh. The official MeshCore phone app can pair over Bluetooth at the same time and shares the same contacts, channels and radio settings.\n\nIt runs MeshCore's own companion engine (v1.18), so it talks to MeshCore apps, companion radios and repeaters.\n\n### Requirements\n\n- Cardputer-Adv + Cap LoRa-1262, with its antenna attached\n- Not for the original Cardputer\n- 868\u2013923 MHz only, so there are no 433 MHz presets\n\n### Features\n\n- **Setup without a phone:** pick a region, then your name and time zone, and you're on air. Nothing is transmitted before a region is chosen.\n- **Messages:** the Public channel, `#hashtag` channels and private channels, plus direct messages with delivery marks and retries. Also @replies, unread counts and a beep.\n- **Contacts and repeaters:** added automatically from adverts, with favourites, sharing and type-to-filter. Repeater discovery shows SNR in both directions. Lists sort by latest activity.\n- **Radio screen:** frequency, RSSI/SNR, noise floor, airtime and packet counts. Region presets or manual settings, up to 22 dBm.\n- **Phone app over Bluetooth:** connect to `MeshCore-<your name>` and enter the App PIN shown in Settings (a new PIN each boot).\n- **Power:** the screen dims and sleeps when idle.\n\n### Keys\n\n| Key | Action |\n|---|---|\n| `Tab` or `1`\u2013`5` | Switch tabs: MSG, CON, RPT, RAD, SET (hold `Fn` while typing) |\n| `;` `.` `,` `/` | Up, down, left, right |\n| `Enter` | Select or send |\n| `` ` `` | Back |\n| `Del` | Delete |\n| G0 button | Send an advert so others can add you |\n\nIn a conversation, just type and press `Enter` to send.\n\n### Install notes\n\n- This is a merged image for address **0x0**. It replaces whatever is on the device, including a launcher.\n- After flashing, switch the Cardputer off and on.\n- If the computer doesn't see the device: switch it off, hold **G0** while plugging in USB, and release after 2\u20133 seconds.\n- Updating from an earlier version keeps your identity, contacts and messages unless you erase flash first.\n\n### Tested\n\nIn a field test, it passed the Bay Area MeshCore health check at 84\u201387 % of observers, on par with a LilyGo T-Deck Plus from the same spot. An RTL-SDR showed its TX power matching the T-Deck at 22 dBm.\n\n---\n\nOpen source (MIT), built on [MeshCore](https://github.com/meshcore-dev/MeshCore) and [M5Cardputer](https://github.com/m5stack/M5Cardputer).\nDocs, source and a web installer: [github.com/zbruceli/meshcore_cardputer](https://github.com/zbruceli/meshcore_cardputer)",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2120657917793968130/2120661601634394114/2120661601642782722/cover/2120661601642782724.png",
+    "category": "cardputer",
+    "tags": [
+      "Network & Communication"
+    ],
+    "author": "zbruceli",
+    "github": "https://github.com/zbruceli/meshcore_cardputer",
+    "download": 3,
+    "versions": [
+      {
+        "version": "V0.3.2",
+        "version_id": "2120732256961757186",
+        "published_at": "2026-11-12",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2120657917793968130/2120661601634394114/2120732256961757186/bin/2120732256961757187.bin",
+        "Fs": 1499360,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1433824,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1433824,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1433824,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-12T10:38:55Z",
+            "etag": "\"DC1D7ECD74979290B7E6915276438651\"",
+            "last_modified": "Thu, 12 Nov 2026 04:15:46 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000002446",
     "fid": "1897200000000002446",
     "name": "Bruce+ Shark-Bait WiFi Defense For M5StickC Plus1",
@@ -30924,7 +30998,7 @@
     ],
     "author": "SancakPilot",
     "github": "",
-    "download": 135,
+    "download": 136,
     "versions": [
       {
         "version": "SANCAKP1.16.1.1",
@@ -31247,7 +31321,7 @@
     ],
     "author": "SancakPilot",
     "github": "",
-    "download": 59,
+    "download": 60,
     "versions": [
       {
         "version": "P1.16.1.1",
@@ -31380,7 +31454,7 @@
     ],
     "author": "sunshinexk",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 39,
+    "download": 40,
     "versions": [
       {
         "version": "1.16.1-zh",
@@ -33229,7 +33303,7 @@
     ],
     "author": "elephas",
     "github": "https://github.com/iele/M5Cardputer-C64-Emulator",
-    "download": 148,
+    "download": 149,
     "versions": [
       {
         "version": "0.0.3",
@@ -35955,7 +36029,7 @@
     ],
     "author": "REZOR",
     "github": "https://github.com/therezor/card-craft",
-    "download": 141,
+    "download": 143,
     "versions": [
       {
         "version": "1.0.1",
@@ -36029,7 +36103,7 @@
     ],
     "author": "REZOR",
     "github": "https://github.com/therezor/card-craft",
-    "download": 141,
+    "download": 143,
     "versions": [
       {
         "version": "1.0.1",
@@ -37853,7 +37927,7 @@
     ],
     "author": "TurbulentGoat",
     "github": "https://github.com/TurbulentGoat/cardputer-adv-mp3-player",
-    "download": 11,
+    "download": 12,
     "versions": [
       {
         "version": "v1.0.0",
@@ -37927,7 +38001,7 @@
     ],
     "author": "TurbulentGoat",
     "github": "https://github.com/TurbulentGoat/cardputer-adv-mp3-player",
-    "download": 11,
+    "download": 12,
     "versions": [
       {
         "version": "v1.0.0",
@@ -39673,7 +39747,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/M5Cardputer-UserDemo",
-    "download": 20927,
+    "download": 20928,
     "versions": [
       {
         "version": "V0.9.1",
@@ -41666,14 +41740,14 @@
     "fid": "2120468585455984642",
     "name": "CardputerDict \u4e2d\u82f1\u79bb\u7ebf\u8bcd\u5178",
     "description": "## CardputerDict \u4e2d\u82f1\u79bb\u7ebf\u8bcd\u5178\n\n\u9002\u7528\u4e8e\u666e\u901a M5Stack Cardputer\uff08ESP32-S3\u30018 MB Flash\uff09\uff0c\u652f\u6301\u82f1\u6c49 / \u6c49\u82f1\u53cc\u5411\u67e5\u8bcd\u3001\u79bb\u7ebf\u6574\u8bcd\u5168\u62fc\u548c\u9010\u5b57\u8f93\u5165\uff0c\u65e0\u9700\u8054\u7f51\u3002\n\n### \u529f\u80fd\n- \u82f1\u6c49\uff1a770,611 \u4e2a\u82f1\u6587\u8bcd\u5934\uff1b\u6c49\u82f1\uff1a198,650 \u4e2a\u7b80\u7e41\u4f53\u8bcd\u5934\u3002\n- 85,610 \u79cd\u6574\u8bcd\u62fc\u97f3\u7ec4\u5408\uff0c\u652f\u6301 pingguo \u2192 \u82f9\u679c\u3001nihao \u2192 \u4f60\u597d\uff1bv \u4ee3\u8868 \u00fc\u3002\n- \u4e2d\u6587\u548c IPA \u97f3\u6807\u663e\u793a\uff0c\u91ca\u4e49\u7ffb\u9875\uff1b\u5355\u884c\u7d27\u51d1\u5019\u9009\u3001\u6570\u5b57\u9009\u8bcd\u3002\n- SD \u7d22\u5f15\u81ea\u52a8\u7f13\u5b58\uff1a\u9996\u6b21\u751f\u6210\u540e\uff0c\u5b9e\u6d4b\u8f6f\u4ef6\u91cd\u542f\u7ea6 1.32 \u79d2\u8fdb\u5165\u754c\u9762\uff08\u968f SD \u5361\u800c\u5f02\uff09\u3002\n\n### \u9996\u6b21\u4f7f\u7528\uff1a\u5fc5\u987b\u51c6\u5907 SD \u8bcd\u5e93\n\u56fa\u4ef6\u5185\u4ec5\u5e26 29 \u8bcd\u6f14\u793a\uff1b\u5b8c\u6574\u8bcd\u5e93\u4e0d\u5305\u542b\u5728 .bin \u5185\u3002\u8bf7\u4e0b\u8f7d\u9879\u76ee\u6e90\u7801 ZIP\uff0c\u5c06\u5176\u4e2d sdcard/ \u91cc\u9762\u7684 dictionaries/ \u548c licenses/ \u4e24\u4e2a\u76ee\u5f55\u590d\u5236\u5230 FAT32 microSD \u5361\u6839\u76ee\u5f55\uff0c\u5173\u673a\u540e\u63d2\u5361\u518d\u5f00\u673a\u3002\u9996\u6b21\u4f1a\u5efa\u7acb\u7d22\u5f15\u7f13\u5b58\uff0c\u4e4b\u540e\u5feb\u901f\u542f\u52a8\u3002\n\n- [\u9879\u76ee\u4e0e\u5b8c\u6574\u8bf4\u660e](https://github.com/RadioDisney/CardputerDict)\n- [SD \u8bcd\u5e93\u76ee\u5f55](https://github.com/RadioDisney/CardputerDict/tree/master/sdcard)\n- \u5728 GitHub \u70b9\u51fb Code \u2192 Download ZIP\uff0c\u5373\u53ef\u53d6\u5f97\u8bcd\u5e93\uff1b\u4e5f\u53ef\u4f7f\u7528\u9879\u76ee tools/upload_sd.py \u901a\u8fc7 USB \u5b89\u88c5\u3002\n\n### \u6309\u952e\n- Tab\uff1a\u82f1\u6c49 / \u6c49\u82f1\u5207\u6362\uff0c\u540c\u65f6\u6e05\u7a7a\u8f93\u5165\u3002\n- Enter\uff1a\u6253\u5f00\u8bcd\u6761\uff1b\u62fc\u97f3\u672a\u9009\u5165\u65f6\u5148\u9009\u9996\u9879\u3002\n- \u7a7a\u683c\u30011\u20139\uff1a\u9009\u62e9\u5f53\u524d\u9875\u62fc\u97f3\u5019\u9009\uff1b[ / ]\uff1a\u5019\u9009\u524d\u540e\u7ffb\u9875\u3002\n- \u91ca\u4e49\u9875 Space \u4e0b\u4e00\u9875\uff1bFn+; \u6216 Fn+, \u4e0a\u4e00\u9875\uff1bFn+. \u6216 Fn+/ \u4e0b\u4e00\u9875\u3002\n- Fn+; / Fn+.\uff1a\u5217\u8868\u4e0a\u4e0b\u9009\u62e9\uff0c\u8d85\u51fa\u53ef\u89c1\u533a\u57df\u81ea\u52a8\u6eda\u52a8\u3002\n- Backspace\uff1a\u5220\u9664\u5b57\u7b26\uff1b\u91ca\u4e49\u9875\u8fd4\u56de\u3002\u53cd\u5f15\u53f7\u952e\uff1a\u8fd4\u56de / \u53d6\u6d88\u8f93\u5165\u3002\n- Fn+Backspace\uff1a\u6e05\u7a7a\uff1bFn+H / G0\uff1a\u5e2e\u52a9\uff1bFn+D\uff1a\u5207\u6362\u8bcd\u5e93\u3002\n- Fn+R\uff1a\u91cd\u65b0\u52a0\u8f7d SD \u7f13\u5b58\uff1bFn+Shift+R\uff1a\u5f3a\u5236\u5b8c\u6574\u6821\u9a8c\u5e76\u91cd\u5efa\u7f13\u5b58\u3002\n\n### \u70e7\u5f55\u4e0e\u517c\u5bb9\n\u8fd9\u662f\u4ece 0x0 \u70e7\u5f55\u7684\u5b8c\u6574\u5408\u5e76\u56fa\u4ef6\uff0c\u5305\u542b bootloader\u3001\u5206\u533a\u8868\u3001\u521d\u59cb\u5316\u6570\u636e\u548c\u5e94\u7528\u3002\u5df2\u5728\u666e\u901a Cardputer \u5b9e\u673a\u9a8c\u8bc1\uff1bCardputer ADV \u672a\u9a8c\u8bc1\uff0c\u8bf7\u52ff\u9009\u4e3a\u8be5\u8bbe\u5907\u56fa\u4ef6\u3002\u70e7\u5f55\u4f1a\u66ff\u6362\u73b0\u6709\u5e94\u7528\uff1bmicroSD \u4e0a\u7684\u5176\u4ed6\u6587\u4ef6\u4e0d\u4f1a\u968f\u70e7\u5f55\u5220\u9664\u3002\n\n### \u6570\u636e\u6765\u6e90\u4e0e\u8bb8\u53ef\n\u5e94\u7528\u53ca\u539f\u521b\u6f14\u793a\u4ee3\u7801\uff1aMIT\u3002\u82f1\u6c49\u6570\u636e\u6765\u81ea ECDICT\uff08MIT\uff09\uff1b\u6c49\u82f1\u53ca\u8bcd\u7ec4\u62fc\u97f3\u6570\u636e\u6539\u7f16\u81ea MDBG / CC-CEDICT\uff0c\u6309 CC BY-SA 4.0 \u5206\u53d1\uff1b\u9010\u5b57\u62fc\u97f3\u6765\u81ea mozillazg/pinyin-data\uff08MIT\uff09\u3002\u5b57\u4f53\u53ca\u4f9d\u8d56\u5206\u522b\u9075\u5faa\u5404\u81ea\u8bb8\u53ef\u3002\u6765\u6e90\u3001\u4fee\u6539\u8bf4\u660e\u548c\u5b8c\u6574\u8bb8\u53ef\u4fdd\u7559\u4e8e\u9879\u76ee third_party/ \u4e0e sdcard/licenses/\u3002\n\n\u5f53\u524d\u4e0d\u542b\u8bed\u97f3\u3001\u6574\u53e5\u8054\u60f3\u3001\u81ea\u52a8\u8bcd\u5f62\u8fd8\u539f\uff1b\u751f\u50fb\u5b57\u4ecd\u53d7\u5b57\u4f53\u8986\u76d6\u9650\u5236\u3002\u652f\u6301\u672a\u538b\u7f29\u3001UTF-8 \u7eaf\u6587\u672c StarDict\u3002",
-    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2120468585455984642/2120468585455984643/cover/2120468585455984645.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2120468585455984642/2120815429401903106/cover/2120815429401903108.png",
     "category": "cardputer",
     "tags": [
       "E-books & Reading"
     ],
     "author": "RadioDisney",
     "github": "https://github.com/RadioDisney/CardputerDict",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "0.3.0",
@@ -41729,6 +41803,63 @@
             "analyzed_at": "2026-11-12T03:38:42Z",
             "etag": "\"2139BB6DB97DFA8B16ABB485C453D583\"",
             "last_modified": "Wed, 11 Nov 2026 10:48:02 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.4.2",
+        "version_id": "2120815429401903106",
+        "published_at": "2026-11-12",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/341701/2120468585455984642/2120815429401903106/bin/2120815429401903107.bin",
+        "Fs": 2138816,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2073280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2073280,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 2073280,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 2031616,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-12T10:38:55Z",
+            "etag": "\"272AFE8885F3EDF50D6638FC6A2C57A2\"",
+            "last_modified": "Thu, 12 Nov 2026 09:46:16 GMT"
           }
         }
       }
@@ -42690,7 +42821,7 @@
     ],
     "author": "Stachu0",
     "github": "https://github.com/Stachugit/CatHack",
-    "download": 56884,
+    "download": 56885,
     "versions": [
       {
         "version": "v1.4",
@@ -56818,7 +56949,7 @@
     ],
     "author": "Coreymillia",
     "github": "https://github.com/Coreymillia/M5StickC-Social-Parasite-Evil-Spammer-Plus1-plus2",
-    "download": 169,
+    "download": 170,
     "versions": [
       {
         "version": "v1.0.0",
@@ -56970,7 +57101,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 77794,
+    "download": 77797,
     "versions": [
       {
         "version": "v1.5.2",
@@ -57226,7 +57357,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 77794,
+    "download": 77797,
     "versions": [
       {
         "version": "v1.5.2",
@@ -57944,7 +58075,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 3129,
+    "download": 3130,
     "versions": [
       {
         "version": "Beta",
@@ -60149,7 +60280,7 @@
     ],
     "author": "andjiang",
     "github": "",
-    "download": 63,
+    "download": 64,
     "versions": [
       {
         "version": "1.0.2",
@@ -60832,7 +60963,7 @@
     ],
     "author": "halloween",
     "github": "https://github.com/0xhalloween/Flipper-Zero-ESP32-ADV",
-    "download": 1135,
+    "download": 1136,
     "versions": [
       {
         "version": "0.5",
@@ -64318,7 +64449,7 @@
     ],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Cardputer-Game-Station-Emulators",
-    "download": 15780,
+    "download": 15781,
     "versions": [
       {
         "version": "0.1",
@@ -71804,7 +71935,7 @@
     ],
     "author": "raptyk",
     "github": "https://cardputer.ip9.pl",
-    "download": 20,
+    "download": 21,
     "versions": [
       {
         "version": "1.4.0",
@@ -71880,7 +72011,7 @@
     ],
     "author": "raptyk",
     "github": "https://cardputer.ip9.pl",
-    "download": 20,
+    "download": 21,
     "versions": [
       {
         "version": "1.4.0",
@@ -78417,6 +78548,132 @@
     "esp": "c6"
   },
   {
+    "_id": "2120826071273897986:cardputer",
+    "fid": "2120826071273897986",
+    "name": "Launcher Orbit",
+    "description": "**Launcher with a new pixel-art interface for the Cardputer and Cardputer ADV.**\n\nA fork of [Launcher](https://github.com/bmorcelli/Launcher) by @bmorcelli with a from-scratch\nUI drawn for the 240\u00d7135 screen. Underneath it is the same Launcher: install firmware from SD,\nonline or a web browser, manage partitions, and boot whichever app you like.\n\n![Launcher Orbit](https://raw.githubusercontent.com/BenjaminAddison/launcher_orbit/main/media/orbit/showreel.gif)\n\n### What's inside\n- **Launch pad boot screen:** counts down to the app that boots next. 1\u20139 boots an installed app, Enter opens the Launcher.\n- **Home is a planet you orbit:** SD card, Online, Web UI, USB drive, Partitions, Settings, your installed apps, Charge and Power off.\n- **Install from SD, LauncherHub or the web UI**, all on one flight screen: trajectory, stage checklist, speed, ETA and flash address.\n- **Wi-Fi radar**, LauncherHub catalog with favorites, Web UI with a scannable QR code, USB mass storage for the SD card.\n- **Partition map** with a range slider, app dossier with backup state.\n- **Seven colour themes:** Nova, Aurora, Solar, Ice, Volt, Mono and Paper.\n\n### Controls\n| Key | Does |\n|---|---|\n| `,` `/` | left / right |\n| `;` `.` | up / down |\n| Enter | open, select (hold in the SD browser for the folder menu) |\n| `` ` `` or Backspace | back |\n| a\u2013z on home | run a file bound to that key |\n| 1\u20139 on the boot screen | boot that installed app |\n\nSource, screenshots and issues: https://github.com/BenjaminAddison/launcher_orbit",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2119705396837523458/2120826071273897986/2120826071278092289/cover/2120826071278092291.gif",
+    "category": "cardputer",
+    "tags": [
+      "UI & Launcher"
+    ],
+    "author": "Benji_01",
+    "github": "https://github.com/BenjaminAddison/launcher_orbit",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v2.10.0-orbit.1",
+        "version_id": "2120826071278092289",
+        "published_at": "2026-11-12",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2119705396837523458/2120826071273897986/2120826071278092289/bin/2120826071278092290.bin",
+        "Fs": 1458352,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1392816,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1392816,
+            "partition_size": 1507328,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1507328,
+              "source_offset": 65536,
+              "copy_size": 1392816,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-12T10:38:56Z",
+            "etag": "\"7932B4BC78DB15DF7D4EEC0B40D68588\"",
+            "last_modified": "Thu, 12 Nov 2026 10:28:33 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2120826071273897986:cardputer-adv",
+    "fid": "2120826071273897986",
+    "name": "Launcher Orbit",
+    "description": "**Launcher with a new pixel-art interface for the Cardputer and Cardputer ADV.**\n\nA fork of [Launcher](https://github.com/bmorcelli/Launcher) by @bmorcelli with a from-scratch\nUI drawn for the 240\u00d7135 screen. Underneath it is the same Launcher: install firmware from SD,\nonline or a web browser, manage partitions, and boot whichever app you like.\n\n![Launcher Orbit](https://raw.githubusercontent.com/BenjaminAddison/launcher_orbit/main/media/orbit/showreel.gif)\n\n### What's inside\n- **Launch pad boot screen:** counts down to the app that boots next. 1\u20139 boots an installed app, Enter opens the Launcher.\n- **Home is a planet you orbit:** SD card, Online, Web UI, USB drive, Partitions, Settings, your installed apps, Charge and Power off.\n- **Install from SD, LauncherHub or the web UI**, all on one flight screen: trajectory, stage checklist, speed, ETA and flash address.\n- **Wi-Fi radar**, LauncherHub catalog with favorites, Web UI with a scannable QR code, USB mass storage for the SD card.\n- **Partition map** with a range slider, app dossier with backup state.\n- **Seven colour themes:** Nova, Aurora, Solar, Ice, Volt, Mono and Paper.\n\n### Controls\n| Key | Does |\n|---|---|\n| `,` `/` | left / right |\n| `;` `.` | up / down |\n| Enter | open, select (hold in the SD browser for the folder menu) |\n| `` ` `` or Backspace | back |\n| a\u2013z on home | run a file bound to that key |\n| 1\u20139 on the boot screen | boot that installed app |\n\nSource, screenshots and issues: https://github.com/BenjaminAddison/launcher_orbit",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2119705396837523458/2120826071273897986/2120826071278092289/cover/2120826071278092291.gif",
+    "category": "cardputer-adv",
+    "tags": [
+      "UI & Launcher"
+    ],
+    "author": "Benji_01",
+    "github": "https://github.com/BenjaminAddison/launcher_orbit",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v2.10.0-orbit.1",
+        "version_id": "2120826071278092289",
+        "published_at": "2026-11-12",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2119705396837523458/2120826071273897986/2120826071278092289/bin/2120826071278092290.bin",
+        "Fs": 1458352,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1392816,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1392816,
+            "partition_size": 1507328,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1507328,
+              "source_offset": 65536,
+              "copy_size": 1392816,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-12T10:38:56Z",
+            "etag": "\"7932B4BC78DB15DF7D4EEC0B40D68588\"",
+            "last_modified": "Thu, 12 Nov 2026 10:28:33 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000003228",
     "fid": "1897200000000003228",
     "name": "Launcher WSalmi - For no keyboard/SD devices",
@@ -81836,7 +82093,7 @@
     ],
     "author": "EvilAngel91",
     "github": "https://github.com/bmorcelli/Launcher",
-    "download": 903,
+    "download": 904,
     "versions": [
       {
         "version": "v2.6.6",
@@ -86055,7 +86312,7 @@
     ],
     "author": "F4HWN",
     "github": "https://github.com/m5stack/M5Dial-UserDemo",
-    "download": 3052,
+    "download": 3053,
     "versions": [
       {
         "version": "0.1",
@@ -100354,7 +100611,7 @@
     ],
     "author": "ATOMNFT",
     "github": "https://github.com/ATOMNFT/M5stick-Marauder",
-    "download": 2456,
+    "download": 2457,
     "versions": [
       {
         "version": "13.10",
@@ -102284,7 +102541,7 @@
     ],
     "author": "sanchitminda",
     "github": "https://github.com/sanchitminda/MP3PlayerForM5Cardputer",
-    "download": 13920,
+    "download": 13921,
     "versions": [
       {
         "version": "1.1",
@@ -111816,7 +112073,7 @@
     ],
     "author": "urtubia",
     "github": "https://github.com/urtubia/miniacid",
-    "download": 3133,
+    "download": 3134,
     "versions": [
       {
         "version": "0.0.8",
@@ -112348,7 +112605,7 @@
     ],
     "author": "dj1ch",
     "github": "https://github.com/dj1ch/minigotchi-ESP32",
-    "download": 1529,
+    "download": 1530,
     "versions": [
       {
         "version": "3.5.2-beta",
@@ -113081,7 +113338,7 @@
     ],
     "author": "youeiken",
     "github": "https://github.com/youeiken/MonoSuite",
-    "download": 3,
+    "download": 4,
     "versions": [
       {
         "version": "1.0",
@@ -120029,7 +120286,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 268,
+    "download": 271,
     "versions": [
       {
         "version": "v0.7.3",
@@ -120218,7 +120475,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 268,
+    "download": 271,
     "versions": [
       {
         "version": "v0.7.3",
@@ -120785,7 +121042,7 @@
     ],
     "author": "Teapot174",
     "github": "",
-    "download": 467,
+    "download": 468,
     "versions": [
       {
         "version": "Latest (M5StickC Plus2)",
@@ -122693,7 +122950,7 @@
     ],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Open-Wifi-Scanner",
-    "download": 1171,
+    "download": 1172,
     "versions": [
       {
         "version": "1.1",
@@ -124193,54 +124450,8 @@
     ],
     "author": "hardcoreerik",
     "github": "https://github.com/hardcoreerik/OrcSDR",
-    "download": 184,
+    "download": 185,
     "versions": [
-      {
-        "version": "0.3.0-beta.2",
-        "version_id": "2106208906285293570",
-        "published_at": "2026-10-04",
-        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/460051/2106208906285293569/2106208906285293570/bin/2106208906285293571.bin",
-        "Fs": 3892640,
-        "as": 3827104,
-        "ao": 65536,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "tab5",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 3827104,
-            "partition_size": 4194304,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 4194304,
-              "source_offset": 65536,
-              "copy_size": 3827104,
-              "required": true,
-              "source": "firmware"
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-11-05T19:04:19Z",
-            "etag": "\"8CECCF4C840BD9A09DBA3B0745A7C91A\"",
-            "last_modified": "Sat, 03 Oct 2026 02:25:09 GMT"
-          }
-        }
-      },
       {
         "version": "0.4.0-beta.1",
         "version_id": "2108820093526110209",
@@ -124330,6 +124541,52 @@
             "analyzed_at": "2026-11-05T19:04:22Z",
             "etag": "\"C2346A4695BFE422EFB85DB493E94128\"",
             "last_modified": "Tue, 27 Oct 2026 03:59:30 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.6.0",
+        "version_id": "2120735134224941057",
+        "published_at": "2026-11-12",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/460051/2106208906285293569/2120735134224941057/bin/2120735134224941058.bin",
+        "Fs": 7490479,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5593232,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5593232,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 5593232,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 7527343,
+            "analyzed_at": "2026-11-12T10:38:57Z",
+            "etag": "\"FACFCE7DC4276D8385F15037BF375850\"",
+            "last_modified": "Thu, 12 Nov 2026 04:27:12 GMT"
           }
         }
       }
@@ -126703,7 +126960,7 @@
     ],
     "author": "pfefferle",
     "github": "https://github.com/pfefferle/M5-AtomS3-palnagotchi",
-    "download": 314,
+    "download": 315,
     "versions": [
       {
         "version": "1.0.1",
@@ -128870,7 +129127,7 @@
     ],
     "author": "Artem76228",
     "github": "https://github.com/Artem76228/PaperOS",
-    "download": 501,
+    "download": 503,
     "versions": [
       {
         "version": "v1.2",
@@ -132186,7 +132443,7 @@
     ],
     "author": "Jason-1993-code",
     "github": "",
-    "download": 48,
+    "download": 49,
     "versions": [
       {
         "version": "ver.20260920221",
@@ -132561,7 +132818,7 @@
     ],
     "author": "Imtaku",
     "github": "https://github.com/iitazz/StickS3-Plane-Tracker",
-    "download": 84,
+    "download": 85,
     "versions": [
       {
         "version": "1.1.2",
@@ -134128,7 +134385,7 @@
     ],
     "author": "bruceblay",
     "github": "https://github.com/bruceblay/pocket-radio",
-    "download": 59,
+    "download": 60,
     "versions": [
       {
         "version": "0.1.0",
@@ -136743,7 +137000,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 164,
+    "download": 165,
     "versions": [
       {
         "version": "v3-20260918",
@@ -142808,7 +143065,7 @@
     ],
     "author": "bpivk",
     "github": "https://github.com/bpivk/M5-SSH-Wireguard",
-    "download": 813,
+    "download": 814,
     "versions": [
       {
         "version": "1.1",
@@ -148993,7 +149250,7 @@
     ],
     "author": "mohanad747",
     "github": "https://github.com/mohanad747/Sila",
-    "download": 40,
+    "download": 41,
     "versions": [
       {
         "version": "v3.7",
@@ -149745,7 +150002,7 @@
     ],
     "author": "\u94f2\u5c4e\u5927\u5b98\u4eba",
     "github": "https://github.com/nongxl/SkyCompass_Satellite",
-    "download": 504,
+    "download": 505,
     "versions": [
       {
         "version": "v1.4",
@@ -150943,6 +151200,63 @@
             "last_modified": "Wed, 11 Nov 2026 07:27:02 GMT"
           }
         }
+      },
+      {
+        "version": "v3.5",
+        "version_id": "2120822983314046977",
+        "published_at": "2026-11-12",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/316104/1897200000000000393/2120822983314046977/bin/2120822983314046978.bin",
+        "Fs": 2665920,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2600384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2600384,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 2600384,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-12T10:38:55Z",
+            "etag": "\"6C91208B8DD0AB8D6B10F2F32CA428CF\"",
+            "last_modified": "Thu, 12 Nov 2026 10:16:17 GMT"
+          }
+        }
       }
     ],
     "esp": "s3",
@@ -151172,7 +151486,7 @@
     ],
     "author": "liyongjian5179",
     "github": "https://github.com/liyongjian5179/M5Stack_StickS3_Lucky_Slots",
-    "download": 1361,
+    "download": 1362,
     "versions": [
       {
         "version": "0.0.1",
@@ -153360,7 +153674,7 @@
     ],
     "author": "Dylan Luo",
     "github": "https://github.com/Ocean-lhy/StackChan",
-    "download": 52,
+    "download": 53,
     "versions": [
       {
         "version": "v1.6.0",
@@ -153832,11 +154146,11 @@
         "published_at": "2026-11-12",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/168201/2120803704707416066/2120803704711610369/bin/2120803704711610370.bin",
         "Fs": 626320,
+        "as": 560784,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 560784,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -154446,7 +154760,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4940,
+    "download": 4941,
     "versions": [
       {
         "version": "V0.4",
@@ -159291,7 +159605,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 332,
+    "download": 333,
     "versions": [
       {
         "version": "v0.4",
@@ -162496,7 +162810,7 @@
     ],
     "author": "flex177",
     "github": "https://github.com/frostynova/m5stack-tab5-pal",
-    "download": 18,
+    "download": 19,
     "versions": [
       {
         "version": "0.1.1",
@@ -165484,7 +165798,7 @@
     ],
     "author": "LittleMixy",
     "github": "",
-    "download": 781,
+    "download": 783,
     "versions": [
       {
         "version": "1.1",
@@ -208871,7 +209185,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4424,
+    "download": 4425,
     "versions": [
       {
         "version": "v2.1.4",
@@ -224656,7 +224970,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 316,
+    "download": 317,
     "versions": [
       {
         "version": "v2.3.8",
@@ -255155,7 +255469,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 7805,
+    "download": 7806,
     "versions": [
       {
         "version": "Alpha-29",
@@ -299972,7 +300286,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 265,
+    "download": 266,
     "versions": [
       {
         "version": "v2.4.0",
@@ -301286,7 +301600,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 230,
+    "download": 231,
     "versions": [
       {
         "version": "v2.4.5",
@@ -309186,7 +309500,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 647,
+    "download": 648,
     "versions": [
       {
         "version": "v2.3.6",
@@ -358548,7 +358862,7 @@
     ],
     "author": "sekibi",
     "github": "https://github.com/DarkFlippers/unleashed-firmware",
-    "download": 30,
+    "download": 32,
     "versions": [
       {
         "version": "1.0.0",
@@ -361345,7 +361659,7 @@
     ],
     "author": "Zeloksa",
     "github": "https://github.com/Zeloksa/Cardputer-ADV-WiFi-BLE-Radar",
-    "download": 10375,
+    "download": 10377,
     "versions": [
       {
         "version": "3.1 (22.04.2026)",
@@ -361887,7 +362201,7 @@
     ],
     "author": "andjiang",
     "github": "",
-    "download": 27,
+    "download": 28,
     "versions": [
       {
         "version": "1.2.1",
@@ -367569,7 +367883,7 @@
     ],
     "author": "hackazillarex",
     "github": "https://github.com/Hackazillarex/zillastick-s3",
-    "download": 54,
+    "download": 55,
     "versions": [
       {
         "version": "v1.0.0-beta",
@@ -376089,7 +376403,7 @@
     ],
     "author": "NFT_owner",
     "github": "",
-    "download": 404,
+    "download": 405,
     "versions": [
       {
         "version": "1.7.2",
@@ -376163,7 +376477,7 @@
     ],
     "author": "NFT_owner",
     "github": "",
-    "download": 4166,
+    "download": 4167,
     "versions": [
       {
         "version": "1.8",
@@ -376237,7 +376551,7 @@
     ],
     "author": "patric",
     "github": "",
-    "download": 17500,
+    "download": 17501,
     "versions": [
       {
         "version": "1.8.2",
@@ -385196,7 +385510,7 @@
     ],
     "author": "kryptic",
     "github": "https://github.com/daniebker/paperOS",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "v1.0.0",
@@ -386501,7 +386815,7 @@
     ],
     "author": "bruceblay",
     "github": "https://github.com/bruceblay/rill-drums",
-    "download": 25,
+    "download": 26,
     "versions": [
       {
         "version": "0.1.0",
@@ -387336,7 +387650,7 @@
     ],
     "author": "\u94f2\u5c4e\u5927\u5b98\u4eba",
     "github": "https://github.com/nongxl/sandtimer_for_StickS3",
-    "download": 501,
+    "download": 502,
     "versions": [
       {
         "version": "v1.1",
@@ -394926,7 +395240,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18035,
+    "download": 18036,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
@@ -395126,7 +395440,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18035,
+    "download": 18036,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
