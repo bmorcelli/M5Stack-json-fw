@@ -5009,7 +5009,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/isonimus/adversary",
-    "download": 176,
+    "download": 177,
     "versions": [
       {
         "version": "v0.2.0",
@@ -5416,11 +5416,11 @@
         "published_at": "2026-11-13",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2105575233919787009/2120993087880364033/bin/2120993087880364034.bin",
         "Fs": 2604768,
+        "as": 2539232,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2539232,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -48358,14 +48358,14 @@
     "fid": "2118687349905465346",
     "name": "CrossPoint for PaperDIY (community port)",
     "description": "PaperDIY Reader is a CrossPoint-based EPUB reader for the M5Stack PaperDIY (K159). It includes library, fonts, dictionary, OPDS, Calibre, KOReader Sync and web UI.\n\nSource, Magsafe case STL, releases and issues: https://github.com/dcarnicer/paperdiy-reader\n\nOnly for M5Stack PaperDIY. This is not an official M5Stack firmware.\n\nKnown limitations: BLE page-turner pairing is not validated with a real BLE remote; sleep current and real battery life are not measured; the original 140 mAh cell gives short battery life; ghosting after long reading is slight at the default 5-page refresh; KOReader Sync was validated against a local KOSync server.\n2.0.0-paperdiy.1",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2118687349905465346/2119860590934138882/cover/2119860849852719105.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2118687349905465346/2118687349909659650/cover/2118687349909659652.png",
     "category": "paper-diy",
     "tags": [
       "E-books & Reading"
     ],
     "author": "dabidesu",
     "github": "https://github.com/dcarnicer/paperdiy-reader",
-    "download": 11,
+    "download": 12,
     "versions": [
       {
         "version": "2.0.0-1",
@@ -48478,6 +48478,63 @@
             "analyzed_at": "2026-11-10T03:23:41Z",
             "etag": "\"C08C31892AD754C8D4239650C77399BA\"",
             "last_modified": "Mon, 09 Nov 2026 18:32:04 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.0.0-5",
+        "version_id": "2120897159324434433",
+        "published_at": "2026-11-13",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2118687349905465346/2120897159324434433/bin/2120897159324434434.bin",
+        "Fs": 5497728,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5432192,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5432192,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5432192,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-13T01:31:15Z",
+            "etag": "\"A936624DFB485157DACA5AAFA7A0D3FE\"",
+            "last_modified": "Thu, 12 Nov 2026 15:11:02 GMT"
           }
         }
       }
@@ -60008,11 +60065,11 @@
         "published_at": "2026-11-13",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2119207833613017090/2120655719152394242/2120841795681845250/bin/2120841795681845251.bin",
         "Fs": 964208,
+        "as": 898672,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 898672,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -65955,11 +66012,11 @@
         "published_at": "2026-11-13",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/104721/1897200000000000072/2120954482201919490/bin/2120954482201919491.bin",
         "Fs": 809152,
+        "as": 743616,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 743616,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -66089,11 +66146,11 @@
         "published_at": "2026-11-13",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/104721/1897200000000000072/2120954482201919490/bin/2120954482201919491.bin",
         "Fs": 809152,
+        "as": 743616,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 743616,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -78905,7 +78962,7 @@
     ],
     "author": "Benji_01",
     "github": "https://github.com/BenjaminAddison/launcher_orbit",
-    "download": 34,
+    "download": 35,
     "versions": [
       {
         "version": "v2.10.0-orbit.1",
@@ -78968,7 +79025,7 @@
     ],
     "author": "Benji_01",
     "github": "https://github.com/BenjaminAddison/launcher_orbit",
-    "download": 34,
+    "download": 35,
     "versions": [
       {
         "version": "v2.10.0-orbit.1",
@@ -163262,7 +163319,7 @@
     "fid": "2113421816641167361",
     "name": "Tab5 PC",
     "description": "## Tab5 PC \u2013 a 386/486 DOS PC on your Tab5\n\nRuns DOS on the Tab5 with **VGA graphics**, **Sound Blaster 16 / AdLib** sound, hard disks, CD-ROM images and floppies. Type on the **Tab5 Keyboard** or a USB keyboard and mouse; the touch screen works as a touchpad.\n\n**Performance:** roughly an early-1990s 486, thanks to a fast interpreter and a translator to RISC-V code.\n\n**First start:** insert an empty microSD card, choose your Wi-Fi network, tap **Install FreeDOS 1.4**, and answer the installer's questions (about 25 minutes).\n\n**Copy files** from a web browser over Wi-Fi (use it only on a trusted network).\n\nFor ESP32-P4 chips of revision v1.x. Source, tools, licences and the v3.x image: https://github.com/yejun/tab5-pc\n\n-\n\n## Tab5 PC \u2013 \u5728 Tab5 \u4e0a\u8fd0\u884c\u7684 386/486 DOS \u7535\u8111\n\n\u5728 Tab5 \u4e0a\u8fd0\u884c DOS\uff0c\u652f\u6301 **VGA \u56fe\u5f62**\u3001**Sound Blaster 16 / AdLib** \u58f0\u97f3\u3001\u786c\u76d8\u3001\u5149\u76d8\u955c\u50cf\u548c\u8f6f\u76d8\u3002\u53ef\u4f7f\u7528 **Tab5 \u952e\u76d8**\u6216 USB \u952e\u76d8\u548c\u9f20\u6807\uff0c\u89e6\u6478\u5c4f\u53ef\u5f53\u4f5c\u89e6\u63a7\u677f\u3002\n\n**\u6027\u80fd\uff1a** \u5927\u7ea6\u76f8\u5f53\u4e8e 1990 \u5e74\u4ee3\u521d\u7684 486\uff0c\u5f97\u76ca\u4e8e\u5feb\u901f\u89e3\u91ca\u5668\u548c\u5c06\u4ee3\u7801\u7ffb\u8bd1\u4e3a RISC-V \u6307\u4ee4\u7684\u7ffb\u8bd1\u5668\u3002\n\n**\u9996\u6b21\u4f7f\u7528\uff1a** \u63d2\u5165\u7a7a\u7684 microSD \u5361\uff0c\u9009\u62e9 Wi-Fi \u7f51\u7edc\uff0c\u70b9\u51fb **Install FreeDOS 1.4**\uff0c\u6309\u5b89\u88c5\u7a0b\u5e8f\u63d0\u793a\u56de\u7b54\u95ee\u9898\uff08\u7ea6 25 \u5206\u949f\uff09\u3002\n\n**\u590d\u5236\u6587\u4ef6\uff1a** \u901a\u8fc7 Wi-Fi \u7528\u7f51\u9875\u6d4f\u89c8\u5668\u590d\u5236\uff08\u8bf7\u53ea\u5728\u53ef\u4fe1\u4efb\u7684\u7f51\u7edc\u4e2d\u4f7f\u7528\uff09\u3002\n\n\u9002\u7528\u4e8e ESP32-P4 v1.x \u7248\u672c\u82af\u7247\u3002\u6e90\u4ee3\u7801\u3001\u5de5\u5177\u3001\u8bb8\u53ef\u8bc1\u548c v3.x \u7248\u672c\u56fa\u4ef6\uff1ahttps://github.com/yejun/tab5-pc",
-    "cover": "https://m5burner-cdn.m5stack.com/community/473294/2113421816641167361/2113421816645361665/cover/2113421816645361667.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/473294/2113421816641167361/2120943261608247297/cover/2120943261608247299.png",
     "category": "tab5",
     "tags": [
       "Games",
@@ -163668,6 +163725,63 @@
             "analyzed_at": "2026-11-09T01:23:36Z",
             "etag": "\"884A839553018273E93950C4A185C6B8\"",
             "last_modified": "Mon, 09 Nov 2026 00:11:41 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.7.0",
+        "version_id": "2120943261608247297",
+        "published_at": "2026-11-13",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/473294/2113421816641167361/2120943261608247297/bin/2120943261608247298.bin",
+        "Fs": 3518464,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3452928,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3452928,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3452928,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-13T01:31:15Z",
+            "etag": "\"84CE6CF05DBB790EBD646FA2968B4491\"",
+            "last_modified": "Thu, 12 Nov 2026 18:14:13 GMT"
           }
         }
       }
@@ -164402,7 +164516,7 @@
     "fid": "2110230556684087298",
     "name": "Tab5 Web Display",
     "description": "**Needs the free PC server from GitHub: https://github.com/yejun/tab5-web-display**\n\nShow web pages on your Tab5 and use them by touch, like on a tablet: tap buttons and links, drag sliders, pinch to\nzoom. A small Python program on your PC opens the page in Chrome or Chromium and streams it to the Tab5 over WiFi.\n\n**What it can do**\n- Show any website (`--url`), your own HTML file (`--file`), or a video (`--file clip.mp4`, with sound)\n- Multi-touch: pinch zoom and scrolling; swipe between tabs, three fingers for back and forward\n- M5Stack's Tab5 Keyboard: type into pages, control videos, type the WiFi password; its lights show the status\n- Sound: what the page plays comes out of the Tab5's speaker (Linux PC)\n- Built-in apps: dashboard (weather, forecast, air quality, headlines), clock with calendar, sticky notes,\n  \u8001\u9ec4\u5386 (Chinese almanac), touch and motion demo. No API keys needed.\n- Smooth and light: only changed areas are sent and drawn by the Tab5's hardware JPEG engine; animations\n  run at up to ~58 fps, videos at up to 30\n- Battery level in the settings\n\n**How to run**\n1. Flash this firmware. On first start, pick your WiFi network on the Tab5's screen.\n2. On a PC on the same network (Python 3.9+), download the project from GitHub and run:\n   pip install -r requirements.txt\n   python server/server.py\n3. With the Tab5 plugged in by USB, the server finds it by itself. Otherwise add `--device <IP>`; the Tab5\n   shows its IP address.\n\nUse a server version that matches this firmware (v1.3.x); the server warns if they differ.\n\nSwipe down from the top edge for the settings (WiFi, brightness, volume, keyboard lights, flip).",
-    "cover": "https://m5burner-cdn.m5stack.com/community/473294/2110230556684087298/2110230556688281601/cover/2110230556688281603.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/473294/2110230556684087298/2120942921043345410/cover/2120942921043345412.png",
     "category": "tab5",
     "tags": [
       "Display & Art",
@@ -164410,7 +164524,7 @@
     ],
     "author": "datou",
     "github": "https://github.com/yejun/tab5-web-display",
-    "download": 66,
+    "download": 67,
     "versions": [
       {
         "version": "1.0.0",
@@ -164694,6 +164808,63 @@
             "analyzed_at": "2026-11-05T19:05:00Z",
             "etag": "\"BB9CCA02C01D433D7772A6A41B9D1B06\"",
             "last_modified": "Thu, 29 Oct 2026 15:52:41 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.6.0",
+        "version_id": "2120942921043345410",
+        "published_at": "2026-11-13",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/473294/2110230556684087298/2120942921043345410/bin/2120942921043345411.bin",
+        "Fs": 1929456,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1863920,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1863920,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 1863920,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-13T01:31:15Z",
+            "etag": "\"0E56427EC6D76E5DAC9BA456E1E1AF43\"",
+            "last_modified": "Thu, 12 Nov 2026 18:12:52 GMT"
           }
         }
       }
@@ -170481,14 +170652,14 @@
     "fid": "2118985784638480386",
     "name": "TouchFish News",
     "description": "# TouchFish News \u00b7 PaperDIY\n\nTouchFish News \u662f\u4e00\u4e2a\u9762\u5411 M5Stack PaperDIY \u7684\u684c\u9762\u65b0\u95fb\u770b\u677f\u3002\u5b83\u628a\u65b0\u95fb\u3001\u6781\u7b80\u7684\u5ba0\u7269\u4e92\u52a8\u3001\n\u519c\u5386\u548c\u8282\u5047\u65e5\u4fe1\u606f\u96c6\u4e2d\u663e\u793a\u5728 4.7 \u82f1\u5bf8\u7535\u5b50\u7eb8\u4e0a\uff0c\u9002\u5408\u653e\u5728\u4e66\u684c\u3001\u7384\u5173\u6216\u529e\u516c\u5ba4\uff0c\n\u4f5c\u4e3a\u4f4e\u529f\u8017\u7684\u4fe1\u606f\u5c4f\u3002\n\n\n## \u786c\u4ef6\n\n- M5Stack PaperDIY Complete Kit\n- ESP32-S3-WROOM-1-N16R8\n- 16 MB Flash\uff0c8 MB Octal PSRAM\n- 4.7 \u82f1\u5bf8 960\u00d7540 \u7070\u5ea6\u7535\u5b50\u7eb8\n- Wi-Fi 2.4 GHz\n- \u673a\u8eab\u7535\u6e90\u952e\n- KEY1\uff1aGPIO4\n- KEY2\uff1aGPIO3\n\n## \u529f\u80fd\n\n- \u65b0\u95fb\u4e3b\u9898\uff1a\u8d22\u7ecf\u3001\u7efc\u5408\u3001\u79d1\u6280\u3001AI\u3001\u4f53\u80b2\u3001\u822a\u5929\u3001\u56fd\u9645\u548c\u5a31\u4e50\n- \u65b0\u95fb\u6765\u6e90\uff1a\n  - \u534e\u5c14\u8857\u89c1\u95fb\n  - \u65b0\u6d6a\u8d22\u7ecf\n  - \u4e1c\u65b9\u8d22\u5bcc\n  - IT\u4e4b\u5bb6\n  - \u65b0\u6d6a\u5a31\u4e50\n  - Wall Street Journal\n  - Hacker News\n  - ESPN\n  - arXiv AI\n  - NASA\n- \u65b0\u95fb\u6765\u6e90\u5728\u72ec\u7acb\u9875\u9762\u4e2d\u9009\u62e9\n- \u6765\u6e90\u5207\u6362\u524d\u4f1a\u5b9e\u9645\u8054\u7f51\u6293\u53d6\uff0c\u7f51\u7edc\u5931\u8d25\u65f6\u4e0d\u4f1a\u5207\u6362\n- \u65b0\u95fb\u9ed8\u8ba4 10 \u5206\u949f\u66f4\u65b0\u4e00\u6b21\uff0c\u53ef\u624b\u52a8\u5373\u65f6\u540c\u6b65\n- \u5ba0\u7269\u8868\u60c5\u968f\u65e5\u671f\u3001\u8282\u5047\u65e5\u3001\u591c\u95f4\u548c\u6309\u952e\u4e92\u52a8\u53d8\u5316\n- \u516c\u5386\u3001\u519c\u5386\u3001\u8282\u5047\u65e5\u540d\u79f0\u548c\u5012\u8ba1\u65f6\n- \u5de5\u4f5c\u65e5\u4e0a\u4e0b\u73ed\u6253\u5361\u63d0\u9192\uff0c\u53ef\u8bbe\u7f6e\u5177\u4f53\u65f6\u95f4\n- \u624b\u673a\u626b\u7801\u7f51\u9875\u914d\u7f51\n- \u652f\u6301 4 \u4e2a\u5c4f\u5e55\u65b9\u5411\uff0c\u6bcf\u6b21\u9006\u65f6\u9488\u65cb\u8f6c 90\u00b0\n- \u6a2a\u5c4f\u4e0e\u7ad6\u5c4f\u72ec\u7acb\u5e03\u5c40\n- \u7535\u5b50\u7eb8\u5c40\u90e8\u5237\u65b0\uff0c\u51cf\u5c11\u6574\u5c4f\u95ea\u70c1\u548c\u6b8b\u5f71\n- \u56fa\u5b9a\u4f7f\u7528 UTC+8\n\n## \u5f00\u673a\u4e0e\u65e5\u5e38\u4f7f\u7528\n\n\u8bbe\u5907\u5f00\u673a\u540e\u5148\u663e\u793a\u542f\u52a8\u65e5\u5fd7\uff0c\u4f9d\u6b21\u68c0\u67e5 Wi-Fi\u3001\u540c\u6b65\u65f6\u95f4\u548c\u7f51\u7edc\u6570\u636e\uff0c\u968f\u540e\u8fdb\u5165\n\u5ba0\u7269\u65b0\u95fb\u770b\u677f\u3002\n\n\u770b\u677f\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u4e0e\u5ba0\u7269\u4e92\u52a8\n- KEY1 \u957f\u6309\uff1a\u7acb\u5373\u540c\u6b65\u65b0\u95fb\u548c\u8282\u5047\u65e5\n- KEY2 \u77ed\u6309\uff1a\u6253\u5f00\u8bbe\u7f6e\n\n\u8bbe\u7f6e\u6309\u952e\uff1a\n\n- KEY1 \u77ed\u6309\uff1a\u5149\u6807\u4e0a\u79fb\n- KEY2 \u77ed\u6309\uff1a\u5149\u6807\u4e0b\u79fb\n- KEY1 \u957f\u6309\uff1a\u786e\u8ba4\u5f53\u524d\u9009\u9879\n- KEY2 \u957f\u6309\uff1a\u8fd4\u56de\u4e0a\u4e00\u7ea7\n\n\u65f6\u95f4\u9009\u62e9\u548c\u65b0\u95fb\u6765\u6e90\u9009\u62e9\u4e5f\u4f7f\u7528\u76f8\u540c\u903b\u8f91\uff1a\u77ed\u6309\u9009\u62e9\u3001\u957f\u6309\u786e\u8ba4\u3001\u957f\u6309 KEY2 \u8fd4\u56de\u3002\n\n## \u9996\u6b21\u914d\u7f51\n\n1. \u5728\u770b\u677f\u77ed\u6309 KEY2 \u6253\u5f00\u8bbe\u7f6e\u3002\n2. \u79fb\u52a8\u5230\u201cWi-Fi \u7f51\u7edc\u201d\uff0c\u957f\u6309 KEY1 \u786e\u8ba4\u3002\n3. \u624b\u673a\u626b\u63cf\u5c4f\u5e55\u4e8c\u7ef4\u7801\uff0c\u52a0\u5165 `InkPet-Paper-XXXX` \u4e34\u65f6\u70ed\u70b9\u3002\n4. \u5728\u6253\u5f00\u7684\u7f51\u9875\u4e2d\u9009\u62e9\u5bb6\u5ead Wi-Fi \u5e76\u8f93\u5165\u5bc6\u7801\u3002\n5. \u8bbe\u5907\u8054\u7f51\u540e\u81ea\u52a8\u4fdd\u5b58\u914d\u7f6e\u3001\u540c\u6b65\u65f6\u95f4\u5e76\u8fd4\u56de\u770b\u677f\u3002\n\n\u5982\u679c\u624b\u673a\u6ca1\u6709\u81ea\u52a8\u6253\u5f00\u914d\u7f51\u9875\u9762\uff0c\u8fde\u63a5\u70ed\u70b9\u540e\u8bbf\u95ee\uff1a\n\n```text\nhttp://192.168.4.1\n```\n\n## \u65b0\u95fb\u6765\u6e90\u5207\u6362\n\n1. \u6253\u5f00\u8bbe\u7f6e\uff0c\u8fdb\u5165\u201c\u65b0\u95fb\u6765\u6e90\u201d\u3002\n2. \u4f7f\u7528 KEY1 / KEY2 \u4e0a\u4e0b\u9009\u62e9\u6765\u6e90\u3002\n3. \u957f\u6309 KEY1 \u5f00\u59cb\u8054\u7f51\u68c0\u6d4b\u3002\n4. \u6293\u53d6\u6210\u529f\u540e\u7acb\u5373\u5207\u6362\uff1b\u5931\u8d25\u5219\u4fdd\u7559\u539f\u6765\u6e90\u5e76\u663e\u793a\u7f51\u7edc\u9519\u8bef\u3002\n\n\u5f53\u524d\u6765\u6e90\u4f1a\u663e\u793a\u5728\u4e3b\u754c\u9762\u5e95\u90e8\u3002\n\n## \u6253\u5361\u63d0\u9192\n\n\u5728\u8bbe\u7f6e\u4e2d\u5f00\u542f\u201c\u6253\u5361\u63d0\u9192\u201d\uff0c\u7136\u540e\u5206\u522b\u8fdb\u5165\u201c\u4e0a\u73ed\u65f6\u95f4\u201d\u548c\u201c\u4e0b\u73ed\u65f6\u95f4\u201d\uff1a\n\n- \u77ed\u6309 KEY1 / KEY2 \u4ee5 30 \u5206\u949f\u4e3a\u5355\u4f4d\u8c03\u6574\n- \u957f\u6309 KEY1 \u4fdd\u5b58\n- \u957f\u6309 KEY2 \u53d6\u6d88\u5e76\u8fd4\u56de\n\n\u63d0\u9192\u53ea\u5728\u5de5\u4f5c\u65e5\u89e6\u53d1\u3002\n\n## \u6ce8\u610f\u4e8b\u9879\n\n- \u65b0\u95fb\u63a5\u53e3\u5c5e\u4e8e\u516c\u5f00\u6216\u975e\u5b98\u65b9\u63a5\u53e3\uff0c\u672a\u6765\u53ef\u80fd\u8c03\u6574\u683c\u5f0f\u6216\u8bbf\u95ee\u7b56\u7565\u3002\n- \u8282\u5047\u65e5\u63a5\u53e3\u4e34\u65f6\u4e0d\u53ef\u7528\u65f6\uff0c\u4f1a\u56de\u9000\u5230\u5185\u7f6e\u6570\u636e\u3002\n- Wall Street Journal\u3001Hacker News\u3001ESPN\u3001arXiv \u548c NASA \u5185\u5bb9\u4e3a\u82f1\u6587\u3002\n- \u65b0\u95fb\u6765\u6e90\u5207\u6362\u548c\u5b9a\u65f6\u5237\u65b0\u4f1a\u6d88\u8017\u7f51\u7edc\u6d41\u91cf\u4e0e\u4e00\u5b9a\u7535\u91cf\u3002",
-    "cover": "https://m5burner-cdn.m5stack.com/community/515524/2118985784638480386/2118985784642674690/cover/2118985784642674692.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/515524/2118985784638480386/2120880895944228866/cover/2120880895944228868.png",
     "category": "paper-diy",
     "tags": [
       "Display & Art"
     ],
     "author": "KILL_PID",
     "github": "",
-    "download": 1,
+    "download": 2,
     "versions": [
       {
         "version": "v1.0",
@@ -170533,6 +170704,52 @@
             "analyzed_at": "2026-11-09T06:08:27Z",
             "etag": "\"469D044289A1E67D2EFDB7FF22DCE76C\"",
             "last_modified": "Sat, 07 Nov 2026 08:35:54 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.1",
+        "version_id": "2120880895944228866",
+        "published_at": "2026-11-13",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/515524/2118985784638480386/2120880895944228866/bin/2120880895944228867.bin",
+        "Fs": 4234448,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4168912,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4168912,
+            "partition_size": 16711680,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 16711680,
+              "source_offset": 65536,
+              "copy_size": 4168912,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-13T01:31:15Z",
+            "etag": "\"873F8D3BC358C8A69A1023BF2C6D36AF\"",
+            "last_modified": "Thu, 12 Nov 2026 14:06:24 GMT"
           }
         }
       }
@@ -360411,13 +360628,13 @@
         "published_at": "2026-11-13",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/160320/2118729622563233794/2120869920696369153/bin/2120869920696369154.bin",
         "Fs": 16777216,
+        "as": 1598752,
+        "ao": 65536,
+        "ss": 13565952,
+        "so": 3211264,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1598752,
-        "so": 3211264,
-        "ss": 13565952,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -363308,11 +363525,11 @@
         "published_at": "2026-11-13",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2119405079717650434/2121010579054985217/bin/2121010579054985218.bin",
         "Fs": 1418304,
+        "as": 1352768,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1352768,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -363501,11 +363718,11 @@
         "published_at": "2026-11-13",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2116157079330328578/2121010100300349441/bin/2121010100300349442.bin",
         "Fs": 1501712,
+        "as": 1436176,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1436176,
         "install": {
           "schema": 1,
           "format": "merged",
