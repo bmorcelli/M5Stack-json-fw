@@ -91892,6 +91892,62 @@
     "fid": "CFWPJPWDHEUMMYCVK234NJN2DFZWN2T7",
     "versions": [
       {
+        "version": "v0.9.16",
+        "published_at": "2026-11-14",
+        "file": "https://github.com/dabeani/meshcoreterm/releases/download/v0.9.16/firmware_tdeckplus_v0.9.16-merged.bin",
+        "Fs": 3385856,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3320320,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "t-deck",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3320320,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3320320,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-14T19:08:16Z",
+            "etag": "\"0x8DF4281C9DDD094\"",
+            "last_modified": "Sat, 14 Nov 2026 19:02:11 GMT"
+          }
+        }
+      },
+      {
         "version": "v0.9.15",
         "published_at": "2026-11-03",
         "file": "https://github.com/dabeani/meshcoreterm/releases/download/v0.9.15/firmware_tdeckplus_v0.9.15-merged.bin",
@@ -92392,62 +92448,6 @@
             "analyzed_at": "2026-08-03T20:15:05Z",
             "etag": "\"0x8DE70E9956687BC\"",
             "last_modified": "Sat, 21 Feb 2026 01:36:06 GMT"
-          }
-        }
-      },
-      {
-        "version": "v0.9.9",
-        "published_at": "2026-02-15",
-        "file": "https://github.com/dabeani/meshcoreterm/releases/download/v0.9.9/firmware_tdeckplus_v0.9.9-merged.bin",
-        "Fs": 2083568,
-        "s": 0,
-        "f": 0,
-        "f2": 0,
-        "ao": 65536,
-        "as": 2018032,
-        "install": {
-          "schema": 1,
-          "format": "merged",
-          "target": "t-deck",
-          "app": {
-            "source_offset": 65536,
-            "image_size": 2018032,
-            "partition_size": 6553600,
-            "label_policy": "next_app",
-            "subtype_policy": "next_ota"
-          },
-          "partitions": [
-            {
-              "type": "app",
-              "subtype": "ota",
-              "label": "auto",
-              "role": "firmware",
-              "size": 6553600,
-              "source_offset": 65536,
-              "copy_size": 2018032,
-              "required": true,
-              "source": "firmware"
-            },
-            {
-              "type": "data",
-              "subtype": "spiffs",
-              "label": "spiffs",
-              "role": "spiffs",
-              "size": 3538944,
-              "source": null,
-              "source_offset": null,
-              "copy_size": 0,
-              "required": true
-            }
-          ],
-          "analysis": {
-            "method": "partition_table",
-            "confidence": "exact",
-            "warnings": [],
-            "bytes_downloaded_for_analysis": 36864,
-            "analyzed_at": "2026-08-03T20:15:05Z",
-            "etag": "\"0x8DE6CB23A4FE75B\"",
-            "last_modified": "Sun, 15 Feb 2026 16:49:47 GMT"
           }
         }
       }
