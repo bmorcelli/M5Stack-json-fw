@@ -1427,11 +1427,11 @@
         "published_at": "2026-11-16",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/519114/2116739475079532546/2121976114957991937/bin/2121976114957991938.bin",
         "Fs": 9182880,
+        "as": 9117344,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 9117344,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -30936,6 +30936,80 @@
     "esp": "32"
   },
   {
+    "_id": "2121213966782775297",
+    "fid": "2121213966782775297",
+    "name": "Bruce v1.17",
+    "description": "Bruce is a versatile ESP32 firmware packed with offensive-security tools, built to make Red Team operations fast and portable.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2121210195193315330/2121213966782775297/2121213966791163906/cover/2121213966791163908.png",
+    "category": "sticks3",
+    "tags": [
+      "Security Research"
+    ],
+    "author": "snegodick",
+    "github": "https://github.com/BruceDevices/firmware",
+    "download": 2,
+    "versions": [
+      {
+        "version": "1.17",
+        "version_id": "2121213966791163906",
+        "published_at": "2026-11-16",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2121210195193315330/2121213966782775297/2121213966791163906/bin/2121213966791163907.bin",
+        "Fs": 4801984,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 4736448,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4736448,
+            "partition_size": 5111808,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5111808,
+              "source_offset": 65536,
+              "copy_size": 4736448,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3145728,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-16T02:53:36Z",
+            "etag": "\"89C24685DF228F162F756B795F78C141\"",
+            "last_modified": "Fri, 13 Nov 2026 12:09:55 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "2120661601634394114",
     "fid": "2120661601634394114",
     "name": "Bruce's MeshCore for Cardputer ADV and Cap LoRa 1262",
@@ -57846,7 +57920,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 77896,
+    "download": 77897,
     "versions": [
       {
         "version": "v1.5.2",
@@ -58102,7 +58176,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 77896,
+    "download": 77897,
     "versions": [
       {
         "version": "v1.5.2",
@@ -60590,7 +60664,7 @@
     ],
     "author": "fatallon",
     "github": "",
-    "download": 41,
+    "download": 42,
     "versions": [
       {
         "version": "R1",
@@ -60721,7 +60795,7 @@
     ],
     "author": "fatallon",
     "github": "",
-    "download": 41,
+    "download": 42,
     "versions": [
       {
         "version": "R1",
@@ -62276,7 +62350,7 @@
     ],
     "author": "sekibi",
     "github": "",
-    "download": 143,
+    "download": 144,
     "versions": [
       {
         "version": "1.0.0",
@@ -64756,7 +64830,7 @@
     ],
     "author": "AFGgust",
     "github": "https://afgust.com/products/gruvpakt/",
-    "download": 14,
+    "download": 15,
     "versions": [
       {
         "version": "0.6.897",
@@ -64812,6 +64886,63 @@
             "analyzed_at": "2026-11-09T05:53:29Z",
             "etag": "\"01DED17BFA5743760FE403313E1C2BF5\"",
             "last_modified": "Mon, 09 Nov 2026 05:37:26 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.7.7",
+        "version_id": "2121649662345560065",
+        "published_at": "2026-11-16",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2115395465862520833/2115790204373901313/2121649662345560065/bin/2121649662345560066.bin",
+        "Fs": 3422864,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3291792,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3291792,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 3291792,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 7733248,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-16T02:53:36Z",
+            "etag": "\"D839B20886C9FBECBB51855D7D61FEC1\"",
+            "last_modified": "Sat, 14 Nov 2026 17:01:12 GMT"
           }
         }
       }
@@ -89266,7 +89397,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105472,
+    "download": 105473,
     "versions": [
       {
         "version": "2.4.10",
@@ -89672,7 +89803,7 @@
     ],
     "author": "ljnb666",
     "github": "https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
-    "download": 258,
+    "download": 259,
     "versions": [
       {
         "version": "2.9.1",
@@ -89735,7 +89866,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105472,
+    "download": 105473,
     "versions": [
       {
         "version": "2.4.10",
@@ -90141,7 +90272,7 @@
     ],
     "author": "ljnb666",
     "github": "https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
-    "download": 258,
+    "download": 259,
     "versions": [
       {
         "version": "2.9.1",
@@ -120146,7 +120277,7 @@
     ],
     "author": "dawdwadsda",
     "github": "https://github.com/n0xa/m5stick-nemo",
-    "download": 45,
+    "download": 46,
     "versions": [
       {
         "version": "Latest",
@@ -121933,7 +122064,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 341,
+    "download": 342,
     "versions": [
       {
         "version": "v0.7.3",
@@ -122122,7 +122253,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 341,
+    "download": 342,
     "versions": [
       {
         "version": "v0.7.3",
@@ -144306,7 +144437,7 @@
     ],
     "author": "2501m5stick",
     "github": "",
-    "download": 36,
+    "download": 37,
     "versions": [
       {
         "version": "1.8.3",
@@ -161420,6 +161551,80 @@
     "esp": "s3"
   },
   {
+    "_id": "2122137932988891137",
+    "fid": "2122137932988891137",
+    "name": "Stock Ticker",
+    "description": "A desk stock ticker for the M5StickS3. It shows the price, day change and 1-week and 1-year charts of your\nown list of stocks, fetched from Yahoo Finance over Wi-Fi. You set up the Wi-Fi and the stocks from your\nphone; no app or account is needed.\n\n## What you need\n\n- An M5StickS3.\n- A 2.4 GHz Wi-Fi network or a phone hotspot with internet access.\n- USB power: the screen stays on all the time.\n\n## First start\n\n1. The stick shows **No stocks yet**. Hold the side button for 5 seconds; the menu opens.\n2. **Phone setup** is selected: press the blue button. The stick starts a Wi-Fi hotspot called\n   `Ticker-Setup` and shows a QR code and the hotspot password.\n3. Scan the QR code with your phone camera to join the hotspot. The setup page opens by itself (if it does\n   not, scan the new QR code the stick then shows, or browse to `192.168.4.1`).\n4. On the setup page:\n   - **Wi-Fi**: add your network or phone hotspot and its password.\n   - **Stocks**: search by company name, ticker or ISIN and add what you want to follow.\n   - **Display**: choose your time zone and whether stocks and views change by themselves.\n5. Tap **Done**. The stick joins your Wi-Fi and starts showing prices.\n\n## Buttons\n\n| Button | Does |\n|---|---|\n| Blue (front) | Next stock, in the same view. In the Pinned view: refresh now. |\n| Side, short press | Next view: Quote, Week, Year, Pinned |\n| Side, held 5 s | Opens the menu (a countdown appears after 1 s). In the menu or setup: closes it. |\n\nA press always restarts the timer of the automatic rotation.\n\n## Views\n\n- **Quote**: price and currency, change since yesterday's close (green up, red down), market status\n  (PRE, OPEN, AFTER, CLOSED) and, outside regular hours, the pre- or after-market price. Bottom right is\n  the time of the last update; `stale` in amber means no fresh data for over 10 minutes.\n- **Week**: the last 5 trading days, one faint line between days, with the high and low.\n- **Year**: 12 months of daily closes with the highest and lowest marked, and the 52-week range with\n  today's position.\n- **Pinned**: up to three stocks on one screen, each with a week sparkline.\n\nThe dots at the bottom show which stock is on screen (`7/14` for long lists), and a faint line along the\nbottom edge fills up until the next automatic change. A small spinning ring bottom right means new data for\nthe screen is on its way. `NO WIFI` in red means the stick has lost the network: it keeps showing the last\ndata and reconnects by itself.\n\n## Menu\n\nHold the side button for 5 seconds. Short side presses move down the list, blue selects.\n\n- **Phone setup**: the hotspot and setup page described above.\n- **Rotate stocks**: ON moves to the next stock every 5 minutes.\n- **Rotate views**: ON shows the Quote view for 2 minutes, then Week, Year and Pinned for 1 minute each.\n  With both on, each stock goes through its views before the next stock starts.\n- **Close**: back to the ticker. The menu also closes after 30 seconds without a press.\n\n## Setup page\n\n| Home | Wi-Fi | Stocks | Display |\n|---|---|---|---|\n| ![Setup home](https://raw.githubusercontent.com/AllanBernard/m5stick-ticker/v1.0.0/docs/screenshots/setup-home.png) | ![Wi-Fi](https://raw.githubusercontent.com/AllanBernard/m5stick-ticker/v1.0.0/docs/screenshots/setup-wifi.png) | ![Stocks](https://raw.githubusercontent.com/AllanBernard/m5stick-ticker/v1.0.0/docs/screenshots/setup-stocks.png) | ![Display](https://raw.githubusercontent.com/AllanBernard/m5stick-ticker/v1.0.0/docs/screenshots/setup-display.png) |\n\n**Wi-Fi.** Up to 8 networks. The stick joins the strongest saved network in range and keeps looking when\nnone is. For a phone hotspot, type its name exactly as the phone shows it, with its password; it does not\nneed to be on while you set it up. The stick uses 2.4 GHz only: on an iPhone turn on **Maximize\nCompatibility** under Personal Hotspot; on Android choose the 2.4 GHz band. The **Open networks** switch\n(off by default) lets the stick join the strongest open network when no saved one is in range.\n\n**Stocks.** Up to 50 stocks, shown in list order. Pin up to three with the star: pinned stocks sit at the\ntop and fill the Pinned view, which is topped up from the rest of the list. When the stick has no internet\nduring setup, what you type is saved as is and looked up once it is online.\n\n**Display.** The two rotation switches (also in the menu) and the time zone of the update time.\n\nSetup ends when you tap Done, press the blue button, hold the side button for 5 seconds, or after 10\nminutes without using the page. The hotspot password is new every time.\n\n## Data and privacy\n\nPrices come from Yahoo Finance's public chart and search endpoints, which need no key. They are not an\nofficial API: Yahoo can change or limit them at any time, and prices may be delayed. This project is not\naffiliated with Yahoo. Nothing shown is investment advice.\n\nThe stick connects only to `query1.finance.yahoo.com` (HTTPS with certificate checks), `pool.ntp.org` for\nthe time and, when it joins an open network, `connectivitycheck.gstatic.com` to check that the network\nreaches the internet. Wi-Fi passwords and the stock list are kept unencrypted in the stick's flash memory;\nerase the stick before giving it away.\n\n## Troubleshooting\n\n- **Stuck on `Joining ...` or `No usable Wi-Fi in range`**: check that the network is 2.4 GHz and the\n  password is right (setup page, Wi-Fi).\n- **A stock shows `Not found` on the setup page**: Yahoo has no match for what was typed. Delete it and\n  search again, for example by ticker.\n- **The update time is off by hours**: set the time zone on the setup page, under Display.\n\n## Source and license\n\nSource code and build instructions: https://github.com/AllanBernard/m5stick-ticker\n\nMIT License. The firmware includes M5Unified and M5GFX (MIT; M5GFX contains LovyanGFX, FreeBSD\nlicense), ArduinoJson (MIT) and the Arduino core for the ESP32 (LGPL 2.1).",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2121424708173774850/2122137932988891137/2122137932993085442/cover/2122137932993085444.png",
+    "category": "sticks3",
+    "tags": [
+      "Utilities"
+    ],
+    "author": "Alternatiivimees",
+    "github": "https://github.com/AllanBernard/m5stick-ticker",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2122137932993085442",
+        "published_at": "2026-11-16",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2121424708173774850/2122137932988891137/2122137932993085442/bin/2122137932993085443.bin",
+        "Fs": 1633344,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1567808,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1567808,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1567808,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-16T02:53:36Z",
+            "etag": "\"0D2B744F46952A88ACA0C6802580BE83\"",
+            "last_modified": "Mon, 16 Nov 2026 01:21:25 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000001391",
     "fid": "1897200000000001391",
     "name": "Stock Tracker Program PaperS3",
@@ -163754,7 +163959,7 @@
     "fid": "1897200000000000989",
     "name": "Tab5 ADB",
     "description": "Tab5-ADB connects an M5Stack Tab5 directly to an Android device and provides ADB\ncontrols from the Tab5 itself. It supports USB and TCP/IP connections, an\ninteractive shell, file transfers, app management, Logcat, screenshots, and\nscreen and audio mirroring.",
-    "cover": "https://m5burner-cdn.m5stack.com/cover/163f89689689438d563bb5fc2b41a4bd.jpeg",
+    "cover": "https://m5burner-cdn.m5stack.com/community/285674/1897200000000000989/2121699762698665985/cover/2121699762698665987.png",
     "category": "tab5",
     "tags": [
       "Tools"
@@ -163852,6 +164057,53 @@
             "analyzed_at": "2026-11-05T19:04:56Z",
             "etag": "\"7EF47C79DAF91F9A775EBE65E58CEBCA\"",
             "last_modified": "Sun, 18 Oct 2026 10:52:45 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.0.0",
+        "version_id": "2121699762698665985",
+        "published_at": "2026-11-16",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/285674/1897200000000000989/2121699762698665985/bin/2121699762698665986.bin",
+        "Fs": 7247232,
+        "ao": 65536,
+        "as": 7181696,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 7181696,
+            "partition_size": 7181696,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7181696,
+              "source_offset": 65536,
+              "copy_size": 7181696,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "file_size",
+            "confidence": "partial",
+            "warnings": [
+              "No partition table found; manifest generated from file size and detected app offset."
+            ],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-16T02:53:36Z",
+            "etag": "\"2AD785852F81588CA7303D8713057DB4\"",
+            "last_modified": "Sat, 14 Nov 2026 20:20:17 GMT"
           }
         }
       }
@@ -167135,7 +167387,7 @@
     ],
     "author": "Belekos",
     "github": "https://github.com/Belekos/Tab5OS",
-    "download": 57,
+    "download": 58,
     "versions": [
       {
         "version": "0.8.53",
@@ -228620,7 +228872,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 36580,
+    "download": 36581,
     "versions": [
       {
         "version": "Alpha-29-4MB",
@@ -282753,7 +283005,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 1798,
+    "download": 1799,
     "versions": [
       {
         "version": "v2.4.4",
@@ -380562,6 +380814,71 @@
       }
     ],
     "esp": "s3"
+  },
+  {
+    "_id": "2121545205725216770",
+    "fid": "2121545205725216770",
+    "name": "carPlay-Tab5",
+    "description": "CarPlay-Tab5 v1.0.0 \u662f\u9002\u7528\u4e8e M5Stack Tab5\uff08ESP32-P4\uff09\u7684\u6709\u7ebf CarPlay \u56fa\u4ef6\uff0c\u5185\u7f6e\u5b9e\u9a8c\u6027\u8f6f\u4ef6\u8ba4\u8bc1\u3002\u4f7f\u7528 USB \u6570\u636e\u7ebf\u5c06 iPhone \u63a5\u5230 Tab5 \u7684 USB-A \u53e3\uff0c\u5373\u53ef\u4f7f\u7528 CarPlay\u3002\n- \u652f\u6301 CarPlay \u753b\u9762\u3001\u89e6\u5c4f\u64cd\u4f5c\u3001\u97f3\u4e50\u64ad\u653e\u3001\u5bfc\u822a\u8bed\u97f3\u6df7\u97f3\u548c Siri\u3002\n- \u53ef\u5728\u300cTab5 \u8bbe\u7f6e\u300d\u4e2d\u8c03\u8282\u97f3\u91cf\u548c\u4eae\u5ea6\uff0c\u91cd\u542f\u540e\u4fdd\u7559\u8bbe\u7f6e\u3002\n- \u53ef\u5728\u7b49\u5f85\u8fde\u63a5\u9875\u9762\u6e05\u9664\u624b\u673a\u914d\u5bf9\uff0c\u65b9\u4fbf\u66f4\u6362 iPhone\u3002\n- \u652f\u6301 USB \u5f02\u5e38\u81ea\u52a8\u6062\u590d\uff0c\u4ee5\u53ca microSD \u8fd0\u884c\u65e5\u5fd7\u548c\u5d29\u6e83\u8bb0\u5f55\u3002\n\u672c\u56fa\u4ef6\u4e3a\u72ec\u7acb\u5b9e\u9a8c\u9879\u76ee\uff0c\u672a\u83b7 Apple \u8ba4\u8bc1\u3002\n\n\n## English\nCarPlay-Tab5 v1.0.0 is wired CarPlay receiver firmware for the M5Stack Tab5 (ESP32-P4), with built-in experimental software authentication. Connect your iPhone to the Tab5\u2019s USB-A port with a USB data cable to use CarPlay.\n- Supports CarPlay video, touch controls, music playback, navigation audio mixing, and Siri.\n- Adjust volume and brightness in Tab5 Settings. Your settings are saved across restarts.\n- Clear phone pairing from the connection screen when switching iPhones.\n- Supports automatic USB error recovery and microSD runtime and crash logging.\nThis is an independent experimental project without Apple certification.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/522364/2121545205725216770/2121545205729411073/cover/2121545205729411075.png",
+    "category": "tab5",
+    "tags": [
+      "Tools",
+      "Navigation & Tracking",
+      "Audio & Media"
+    ],
+    "author": "TinkerZhang",
+    "github": "https://github.com/sky18Dragon/CarPlay-Tab5",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2121545205729411073",
+        "published_at": "2026-11-16",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/522364/2121545205725216770/2121545205729411073/bin/2121545205729411074.bin",
+        "Fs": 2221360,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2155824,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2155824,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 65536,
+              "copy_size": 2155824,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-16T02:53:36Z",
+            "etag": "\"F8B727A741D8EBFBC534F5DC960B1C21\"",
+            "last_modified": "Sat, 14 Nov 2026 10:06:08 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "p4"
   },
   {
     "_id": "1897200000000002013",
