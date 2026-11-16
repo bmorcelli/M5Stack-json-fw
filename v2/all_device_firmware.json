@@ -1362,7 +1362,7 @@
     ],
     "author": "mochimochi-man",
     "github": "https://github.com/mochimochi-man/98TAB5",
-    "download": 13,
+    "download": 14,
     "versions": [
       {
         "version": "1.1.0",
@@ -18933,7 +18933,7 @@
     ],
     "author": "HEKPACUBO",
     "github": "https://github.com/pr3y/Bruce",
-    "download": 180,
+    "download": 181,
     "versions": [
       {
         "version": "1.8",
@@ -30339,7 +30339,7 @@
     ],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 2011,
+    "download": 2012,
     "versions": [
       {
         "version": "1.16",
@@ -31778,7 +31778,7 @@
     ],
     "author": "sunshinexk",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 70,
+    "download": 71,
     "versions": [
       {
         "version": "1.16.1-zh",
@@ -42426,11 +42426,11 @@
         "published_at": "2026-11-16",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/341701/2122146817619476482/2122146817623670785/bin/2122146817623670786.bin",
         "Fs": 2141568,
+        "as": 2076032,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2076032,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -58654,6 +58654,83 @@
     "esp": "s3"
   },
   {
+    "_id": "2121871437058752513",
+    "fid": "2121871437058752513",
+    "name": "Evil-M5Tab5",
+    "description": "Advanced WiFi, Network and Bluetooth Attack plateform, now on the M5Stack Tab5 (ESP32-P4, 1280x720).\n80+ features, same as Evil-Cardputer. Check the Wiki for more informations.\nOne USB flash does both chips : on first boot the P4 reflashes the ESP32-C6 WiFi/BLE coprocessor by itself over SDIO. First boot takes about 30 seconds, do not unplug.\n\u26a0\ufe0f the SD-Card-Folder files need to be in a folder named evil at root of the sd card \u26a0\ufe0f \u2b07\ufe0fmore below\u2b07\ufe0f\nDiscord : https://discord.gg/Xfr23xAm\nGithub : https://github.com/7h30th3r0n3/Evil-M5Project/\nWiki : https://github.com/7h30th3r0n3/Evil-M5Project/wiki\nYouTube : https://www.youtube.com/@Evil-M5project\n\nUpdate your SD files on the github before running the project There is plenty of files !",
+    "cover": "https://m5burner-cdn.m5stack.com/community/87590/2121871437058752513/2121871437058752514/cover/2121872699561033729.jpg",
+    "category": "tab5",
+    "tags": [
+      "Security Research",
+      "Network & Communication"
+    ],
+    "author": "7h30th3r0n3",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v1.5.8",
+        "version_id": "2121871437058752514",
+        "published_at": "2026-11-16",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/87590/2121871437058752513/2121871437058752514/bin/2121871437058752515.bin",
+        "Fs": 16711680,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3640080,
+        "so": 13172736,
+        "ss": 3538944,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3640080,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3640080,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": "firmware",
+              "source_offset": 13172736,
+              "copy_size": 3538944,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16748544,
+            "analyzed_at": "2026-11-16T02:23:35Z",
+            "etag": "\"1B4ACF3667C786A12BD3BEAD3DFEFC3D\"",
+            "last_modified": "Sun, 15 Nov 2026 07:42:28 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "p4"
+  },
+  {
     "_id": "1897200000000000021",
     "fid": "1897200000000000021",
     "name": "Evil-NanoC6",
@@ -61953,7 +62030,7 @@
     ],
     "author": "halloween",
     "github": "https://github.com/0xhalloween/Flipper-Zero-ESP32-ADV",
-    "download": 1151,
+    "download": 1152,
     "versions": [
       {
         "version": "0.5",
@@ -62016,7 +62093,7 @@
     ],
     "author": "Ru1e7ik",
     "github": "",
-    "download": 1917,
+    "download": 1918,
     "versions": [
       {
         "version": "1.0",
@@ -93137,7 +93214,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher/",
-    "download": 2889,
+    "download": 2890,
     "versions": [
       {
         "version": "2.6.10",
@@ -100129,7 +100206,7 @@
     "fid": "2108694717575491586",
     "name": "M5TabOS",
     "description": "M5tabOS - an app-based operating system for the M5Stack Tab5.\n\nHome screen with apps, status bar and notifications. Apps: Meshtastic (Grove cable or internet), ESP-NOW chat, Camera, File browser, Energy (battery graphs), Tasks (CPU/memory), IMU, Settings, and more.\n\n- Works with the factory radio (ESP32-C6): Wi-Fi, internet and all apps run out of the box. ESP-NOW and Bluetooth need an optional C6 update (see GitHub).\n- For ESP32-P4 v1.x (Tab5 units sold so far).\n- Flashing erases saved settings.\n- Interface currently in Portuguese; translation coming.\n\nSource code, docs and how to write your own apps:\nhttps://github.com/cparadaa/M5TabOS-sistema\n\nM5tabOS - sistema operacional de apps para o M5Stack Tab5.\n\nTela inicial com apps, barra de status e notifica\u00e7\u00f5es. Apps: Meshtastic (cabo Grove ou internet), conversa ESP-NOW, C\u00e2mera, Arquivos, Energia (gr\u00e1ficos de bateria), Tarefas (CPU/mem\u00f3ria), IMU, Ajustes e mais.\n\n- Funciona com o r\u00e1dio de f\u00e1brica (ESP32-C6): Wi-Fi, internet e todos os apps rodam direto. ESP-NOW e Bluetooth pedem uma atualiza\u00e7\u00e3o opcional do C6 (veja o GitHub).\n- Para ESP32-P4 v1.x (os Tab5 vendidos at\u00e9 agora).\n- Gravar apaga os ajustes salvos.\n- Interface em portugu\u00eas por enquanto; tradu\u00e7\u00e3o a caminho.\n\nC\u00f3digo, documenta\u00e7\u00e3o e como escrever seus pr\u00f3prios apps:\nhttps://github.com/cparadaa/M5TabOS-sistema",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2108691574435377154/2108694717575491586/2113270601206800385/cover/2113270696543330305.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2108691574435377154/2108694717575491586/2122136255330205697/cover/2122136255330205699.png",
     "category": "tab5",
     "tags": [
       "Tools",
@@ -100141,7 +100218,7 @@
     ],
     "author": "cparadaa",
     "github": "https://github.com/cparadaa/M5TabOS-sistema",
-    "download": 197,
+    "download": 198,
     "versions": [
       {
         "version": "0.7.0",
@@ -100232,6 +100309,52 @@
             "analyzed_at": "2026-11-05T19:04:04Z",
             "etag": "\"4D4CC59BF5B3C9D9BB0D0F3AA56D902E\"",
             "last_modified": "Thu, 22 Oct 2026 14:05:49 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.9.1",
+        "version_id": "2122136255330205697",
+        "published_at": "2026-11-16",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2108691574435377154/2108694717575491586/2122136255330205697/bin/2122136255330205698.bin",
+        "Fs": 7439248,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 7373712,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 7373712,
+            "partition_size": 8388608,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8388608,
+              "source_offset": 65536,
+              "copy_size": 7373712,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-16T02:23:33Z",
+            "etag": "\"11396CB6E89BC96701DA3DEB65874FAE\"",
+            "last_modified": "Mon, 16 Nov 2026 01:14:45 GMT"
           }
         }
       }
@@ -104668,11 +104791,11 @@
         "published_at": "2026-11-16",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2121315846972194817/2121361734285344770/2121361734289539073/bin/2121361734289539074.bin",
         "Fs": 2994976,
+        "as": 2929440,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2929440,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -127245,7 +127368,7 @@
     ],
     "author": "0ct0x0",
     "github": "https://github.com/0ct0sec/M5PORKCHOP",
-    "download": 19563,
+    "download": 19564,
     "versions": [
       {
         "version": "0.1.6_iddqd_hotfix",
@@ -130839,7 +130962,7 @@
     ],
     "author": "Artem76228",
     "github": "https://github.com/Artem76228/PaperOS",
-    "download": 516,
+    "download": 517,
     "versions": [
       {
         "version": "v1.2",
@@ -143751,7 +143874,7 @@
     ],
     "author": "s1z0v",
     "github": "https://github.com/s1z0v/s1-adv",
-    "download": 14,
+    "download": 15,
     "versions": [
       {
         "version": "0.2.201-dev",
@@ -165752,7 +165875,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4502,
+    "download": 4503,
     "versions": [
       {
         "version": "v0.1",
@@ -211327,7 +211450,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 4438,
+    "download": 4439,
     "versions": [
       {
         "version": "v2.1.4",
@@ -392874,13 +392997,13 @@
         "published_at": "2026-11-16",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/160320/2122006759448985601/2122006759453179905/bin/2122006759453179906.bin",
         "Fs": 8388608,
+        "as": 554736,
+        "ao": 65536,
+        "ss": 1572864,
+        "so": 6750208,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 554736,
-        "so": 6750208,
-        "ss": 1572864,
         "install": {
           "schema": 1,
           "format": "merged",
