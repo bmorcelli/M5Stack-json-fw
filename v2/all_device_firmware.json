@@ -3645,6 +3645,81 @@
     "esp": "s3"
   },
   {
+    "_id": "2122545120110657537",
+    "fid": "2122545120110657537",
+    "name": "ATEM HD8 EMULATOR",
+    "description": "emulates a blackmagic design hd8 iso switcher.\nnot all functions available and only rudimentary testing.\nbuilt to test other hardware that requires a switcher present.\n\nbutton to cut, hold button to switch preview to another input.\nemulator only, not a controler",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2122543815082328065/2122545120110657537/2122545120114851842/cover/2122545120114851844.png",
+    "category": "atom-lite",
+    "tags": [
+      "Tools",
+      "Network & Communication"
+    ],
+    "author": "mattranieri",
+    "github": "",
+    "download": 0,
+    "versions": [
+      {
+        "version": "0.90",
+        "version_id": "2122545120114851842",
+        "published_at": "2026-11-17",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122543815082328065/2122545120110657537/2122545120114851842/bin/2122545120114851843.bin",
+        "Fs": 517280,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 451744,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-lite",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 451744,
+            "partition_size": 1310720,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1310720,
+              "source_offset": 65536,
+              "copy_size": 451744,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1441792,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-17T09:53:55Z",
+            "etag": "\"78C14BE6BE279701DFAA0407D911227E\"",
+            "last_modified": "Tue, 17 Nov 2026 04:19:26 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
     "_id": "1897200000000001969",
     "fid": "1897200000000001969",
     "name": "ATOM Babies",
@@ -6563,7 +6638,7 @@
     ],
     "author": "LukeeSnow",
     "github": "https://github.com/lukasdurjan/AirPuter-For-Cardputer-ADV-CAP-LoRa-1262-",
-    "download": 173,
+    "download": 174,
     "versions": [
       {
         "version": "1.0.21",
@@ -37289,6 +37364,80 @@
     "esp": "s3"
   },
   {
+    "_id": "2122590750057119746",
+    "fid": "2122590750057119746",
+    "name": "CardOS-zh \u2014\u2014 Cardputer ADV \u4e2d\u6587\u5c0f\u7cfb\u7edf",
+    "description": "<h1>CardOS-zh \u2014\u2014 Cardputer ADV \u4e2d\u6587\u5c0f\u7cfb\u7edf</h1><p>\u4e00\u4e2a\u8dd1\u5728 <strong>M5Stack Cardputer ADV</strong> \u4e0a\u7684\u5168\u4e2d\u6587\u81ea\u5236\u56fa\u4ef6\u3002\u6ca1\u6709\u5957\u58f3\u3001\u6ca1\u6709\u7f51\u9875\u7aef\uff0c\u4ece\u4e3b\u83dc\u5355\u5230\u6bcf\u4e2a\u5e94\u7528\u90fd\u662f\u81ea\u5df1\u753b\u7684\uff1a<br>PDA \u98ce\u683c\u7684\u5f27\u5f62\u56fe\u6807\u8f6e\u64ad\u3001\u4e2d\u6587\u70b9\u9635\u5b57\u5e93\u3001\u72ec\u7acb\u97f3\u9891\u4efb\u52a1\u3001SD \u5361\u672c\u5730\u97f3\u4e50\u3001\u7f51\u7edc\u7535\u53f0\u548c\u5929\u6c14\u3002</p><p><strong>\u76ee\u6807\u53ea\u6709\u4e00\u4e2a\uff1a\u8ba9 Cardputer \u62ff\u8d77\u6765\u5c31\u50cf\u4e00\u53f0\u4e2d\u6587\u5c0f\u7535\u8111\uff0c\u800c\u4e0d\u662f\u4e00\u5757\u5f00\u53d1\u677f\u3002</strong></p><p><img src=\"screenshots/01-home.png\" alt=\"\u4e3b\u83dc\u5355\"></p><table><tbody><tr><td><p>\u4e3b\u83dc\u5355</p></td><td><p>\u7f51\u7edc\u7535\u53f0</p></td><td><p>\u672c\u5730\u97f3\u4e50</p></td></tr><tr><td><img src=\"screenshots/01-home.png\" alt=\"\"></td><td><img src=\"screenshots/03-radio-play.png\" alt=\"\"></td><td><img src=\"screenshots/04-mp3-play.png\" alt=\"\"></td></tr><tr><td><p><strong>\u7535\u53f0\u5217\u8868\uff08\u8dd1\u9a6c\u706f\uff09</strong></p></td><td><p><strong>\u672c\u5730\u66f2\u5e93</strong></p></td><td><p><strong>\u5929\u6c14</strong></p></td></tr><tr><td><img src=\"screenshots/02-radio-list.png\" alt=\"\"></td><td><img src=\"screenshots/05-mp3-list.png\" alt=\"\"></td><td><img src=\"screenshots/06-weather.png\" alt=\"\"></td></tr></tbody></table><blockquote><p>\u5c4f\u662f\u5355\u5411 SPI\uff0c\u8bfb\u4e0d\u56de framebuffer\uff0c\u8bbe\u5907\u4e0a\u6ca1\u6cd5\u622a\u5c4f\u3002\u8fd9\u4e9b\u56fe\u662f\u6309\u56fa\u4ef6\u540c\u6b3e efontCN \u5b57\u6a21\u3001\u76f8\u540c\u5750\u6807\u548c\u914d\u8272\u505a\u7684\u50cf\u7d20\u7ea7\u8fd8\u539f\uff08240\u00d7135\uff09\u3002</p></blockquote><hr><h2>\u4e00\u3001\u5b83\u80fd\u505a\u4ec0\u4e48</h2><table><tbody><tr><td><p>\u5e94\u7528</p></td><td><p>\u8bf4\u660e</p></td></tr><tr><td><p><strong>\u7f51\u7edc\u65f6\u949f</strong></p></td><td><p>\u9713\u8679\u4e03\u6bb5\u6570\u7801\u7ba1\u98ce\u683c\uff0c\u73bb\u7483\u7ba1\u8fb9\u6846 + \u8f89\u5149\uff1b\u65e5\u671f/\u661f\u671f/\u7535\u91cf/IP\uff1b4 \u5957\u914d\u8272</p></td></tr><tr><td><p><strong>\u7f51\u7edc\u7535\u53f0</strong></p></td><td><p>\u5185\u7f6e 32 \u4e2a\u56fd\u5185\u53f0\uff08\u592e\u5e7f\u3001\u9752\u5c9b\u3001\u5c71\u4e1c\u3001\u6d4e\u5357\u7b49\uff09\uff0cMP3 \u76f4\u8fde\uff1b\u663e\u793a ICY \u8282\u76ee\u540d\u3001\u7801\u7387\u3001\u7f13\u51b2\u6c34\u4f4d\u3001\u5b9e\u65f6\u58f0\u6ce2</p></td></tr><tr><td><p><strong>\u672c\u5730\u97f3\u4e50</strong></p></td><td><p>\u626b SD \u5361 mp3/flac/wav/aac/m4a\uff0c\u8bfb ID3 \u6807\u9898/\u827a\u672f\u5bb6\uff1b<strong>\u626b\u4e00\u6b21\u5b58\u7d22\u5f15\uff0c\u4ee5\u540e\u8fdb\u9875\u9762\u6beb\u79d2\u7ea7\u51fa\u5217\u8868</strong>\uff1b\u5f69\u8679\u5531\u76d8\u65cb\u8f6c\uff0c\u652f\u6301\u5207\u6b4c\u4e0e\u5feb\u8fdb\u5feb\u9000</p></td></tr><tr><td><p><strong>\u5929\u6c14</strong></p></td><td><p>\u5f53\u524d\u6e29\u5ea6\u3001\u4eca\u65e5\u9ad8\u4f4e\u3001\u6e7f\u5ea6\u3001\u98ce\u529b\u3001\u7a7a\u6c14\u8d28\u91cf\uff1b\u57ce\u5e02\u53ef\u914d</p></td></tr><tr><td><p><strong>\u5c0f\u6e38\u620f</strong></p></td><td><p>\u8d2a\u5403\u86c7 / 2048 / \u6253\u7816\u5757 / \u4fc4\u7f57\u65af\u65b9\u5757 / \u98de\u673a\u5927\u6218 / Flappy Bird\uff0c\u5171 6 \u6b3e</p></td></tr><tr><td><p><strong>WiFi \u8bbe\u7f6e</strong></p></td><td><p>\u673a\u4e0a\u626b\u63cf\u9009\u7f51\u3001\u952e\u76d8\u8f93\u5bc6\u7801\u3001\u8fde\u63a5\u540e\u81ea\u52a8\u4fdd\u5b58</p></td></tr><tr><td><p><strong>\u7cfb\u7edf\u81ea\u68c0</strong></p></td><td><p>ES8311 \u5e94\u7b54\u3001SD \u7c7b\u578b\u5bb9\u91cf\u901f\u7387\u3001\u7a7a\u95f2\u5806\u3001WiFi \u4fe1\u53f7\u3001<strong>\u4e0a\u6b21\u91cd\u542f\u539f\u56e0</strong></p></td></tr><tr><td><p><strong>\u5173\u4e8e\u672c\u673a</strong></p></td><td><p>\u7535\u91cf\u3001\u97f3\u91cf\u3001SD/\u914d\u7f6e\u72b6\u6001\u3001IP</p></td></tr></tbody></table><p>\u754c\u9762\u6309 <strong>240\u00d7135 \u6a2a\u5c4f</strong> \u8bbe\u8ba1\uff0c\u6240\u6709\u6587\u5b57\u8d70 M5GFX \u5185\u7f6e\u7684 <strong>efontCN \u70b9\u9635\u5b57\u5e93</strong>\uff0812px / 16px\uff09\uff0c<br>\u4e0d\u9700\u8981\u5916\u6302\u5b57\u5e93\u5206\u533a\uff0c\u4e5f\u4e0d\u9700\u8981\u81ea\u5df1\u9020\u5b57\u6a21\u3002</p><hr><h2>\u4e8c\u3001\u4e3b\u83dc\u5355\uff1aPDA \u98ce\u683c\u7684\u5f27\u5f62\u8f6e\u64ad</h2><p>\u4e3b\u83dc\u5355\u4e0d\u662f\u7f51\u683c\uff0c\u662f\u4e00\u6761<strong>\u9996\u5c3e\u5faa\u73af\u7684\u5706\u5f27</strong>\uff1a</p><ul><li>\u56fe\u6807\u6cbf\u4e00\u6761\u6d45\u5f27\u6392\u5217\uff0c\u4e2d\u95f4\u653e\u5927\u3001\u4e24\u4fa7\u6e10\u5c0f\u6e10\u6de1\uff1b</li></ul><ul><li>\u5de6\u53f3\u952e\uff08\u6216 <code>;</code> <code>.</code>\uff09\u6cbf\u5f27\u6ed1\u52a8\u5207\u6362\uff0c<strong>\u6ed1\u5230\u6700\u540e\u4e00\u4e2a\u518d\u6309\u4e00\u6b21\u4f1a\u7ed5\u56de\u7b2c\u4e00\u4e2a</strong>\uff1b</li></ul><ul><li>\u80cc\u666f\u662f\u4f4e\u591a\u8fb9\u5f62\u8272\u5757\u62fc\u63a5\uff08\u67d4\u84dd / \u6a44\u6984\u7eff / \u6d45\u84dd / \u6d45\u674f\uff09\uff0c\u4f4e\u9971\u548c\u3001\u4f4e\u5bf9\u6bd4\uff0c\u4e0d\u662f\u7eaf\u8272\uff1b</li></ul><ul><li>\u9876\u680f\u628a<strong>\u65f6\u95f4\u3001\u65e5\u671f\u3001WiFi\u3001\u7535\u91cf</strong>\u653e\u5728\u540c\u4e00\u884c\uff0c\u7535\u91cf\u4f4e\u65f6\u53d8\u7ea2\uff1b</li></ul><ul><li>\u5929\u6c14\u6761\u5e38\u9a7b\u5728\u9876\u680f\u4e0b\u65b9\uff0c\u8fdb\u4e3b\u83dc\u5355\u5c31\u80fd\u770b\u5230\u5f53\u524d\u6e29\u5ea6\u548c\u57ce\u5e02\u3002</li></ul><p>\u6ed1\u52a8\u7684\u5b9e\u73b0\u4e0d\u662f\"\u6574\u4e2a\u5c4f\u91cd\u753b\"\uff1a\u80cc\u666f + \u72b6\u6001\u680f + \u5929\u6c14\u6761 + \u5e95\u90e8\u63d0\u793a\u4f1a\u88ab<strong>\u70d8\u6210\u4e00\u5f20\u9759\u6001\u56fe\u5c42</strong>\uff08LGFX_Sprite\uff09\uff0c<br>\u5207\u6362\u65f6\u53ea\u63a8\u8fd9\u4e00\u5c42\u518d\u753b\u56fe\u6807\uff0c\u6240\u4ee5\u753b\u9762\u4e0d\u4f1a\u8ddf\u7740\u6643\u3002</p><hr><h2>\u4e09\u3001\u6309\u952e</h2><p>\u901a\u7528\uff1a<code>`</code>\uff08ESC \u4f4d\u7f6e\uff09\u9010\u5c42\u8fd4\u56de\uff0c<code>Enter</code> \u8fdb\u5165/\u786e\u8ba4\u3002</p><table><tbody><tr><td><p>\u573a\u666f</p></td><td><p>\u6309\u952e</p></td></tr><tr><td><p>\u4e3b\u83dc\u5355</p></td><td><p><code>;</code> <code>.</code> / \u65b9\u5411\u952e \u5207\u6362\uff0c<code>Enter</code> \u8fdb\u5165</p></td></tr><tr><td><p>\u7535\u53f0\u5217\u8868</p></td><td><p><code>;</code> <code>.</code> \u9009\u53f0\uff0c<code>Enter</code> \u64ad\u653e\uff0c<code>R</code> \u91cd\u8bfb\u53f0\u8868</p></td></tr><tr><td><p>\u7535\u53f0\u64ad\u653e</p></td><td><p><code>;</code> <code>.</code> \u6362\u53f0\uff0c<code>,</code> <code>/</code> \u97f3\u91cf\uff0c<code>\u7a7a\u683c</code> \u6682\u505c\uff0c<code>`</code> \u56de\u5217\u8868</p></td></tr><tr><td><p>\u97f3\u4e50\u5217\u8868</p></td><td><p><code>;</code> <code>.</code> \u9009\u6b4c\uff0c<code>Enter</code> \u64ad\u653e\uff0c<code>R</code> \u91cd\u626b SD\uff0c<code>`</code> \u9000\u51fa</p></td></tr><tr><td><p>\u97f3\u4e50\u64ad\u653e</p></td><td><p><code>;</code> <code>.</code> \u5207\u6b4c\uff0c<code>,</code> <code>/</code> \u5feb\u9000/\u5feb\u8fdb 5 \u79d2\uff0c<code>\u7a7a\u683c</code> \u6682\u505c\uff0c<code>Enter</code> \u56de\u5217\u8868\uff08\u7ee7\u7eed\u64ad\uff09</p></td></tr><tr><td><p>\u5929\u6c14</p></td><td><p><code>r</code> \u5237\u65b0</p></td></tr><tr><td><p>\u5c0f\u6e38\u620f</p></td><td><p>\u65b9\u5411\u952e\u64cd\u4f5c\uff0c<code>`</code> \u9000\u51fa</p></td></tr></tbody></table><blockquote><p>\u957f\u66f2\u540d/\u957f\u53f0\u540d\u4e0d\u4f1a\u622a\u65ad\uff1a\u653e\u4e0d\u4e0b\u65f6\u9009\u4e2d\u884c\u4f1a\u50cf\u8dd1\u9a6c\u706f\u4e00\u6837\u6a2a\u5411\u6eda\u52a8\uff0c\u4ece\u5934\u770b\u5230\u5c3e\u3002</p></blockquote><hr><h2>\u56db\u3001\u70e7\u5f55</h2><h3>\u9700\u8981\u4ec0\u4e48</h3><ul><li>M5Stack <strong>Cardputer ADV</strong>\uff08ESP32-S3\uff0c8MB Flash\uff0c<strong>\u65e0 PSRAM</strong>\uff09</li></ul><ul><li>\u4e00\u5f20 <strong>FAT32</strong> \u7684 microSD \u5361\uff08\u226432GB \u6700\u7a33\uff1bexFAT \u4e0d\u8ba4\uff09</li></ul><ul><li>USB-C \u6570\u636e\u7ebf</li></ul><h3>\u6b65\u9aa4</h3><ol><li><strong>\u51c6\u5907 SD \u5361</strong>\uff1a\u628a <code>sd-card/config.txt</code>\u3001<code>sd-card/stations.txt</code> \u62f7\u5230\u5361<strong>\u6839\u76ee\u5f55</strong>\uff0c\u6539\u597d WiFi \u548c\u57ce\u5e02\uff1b<br>\u6b4c\u66f2\u653e\u8fdb<code>/Music</code>\uff08\u6216\u6839\u76ee\u5f55\u3001\u4e24\u5c42\u5b50\u76ee\u5f55\u5185\uff0c\u652f\u6301 mp3/flac/wav/aac/m4a\uff09\u3002</li></ol><ol><li><strong>\u8fdb\u4e0b\u8f7d\u6a21\u5f0f</strong>\uff1a\u4fa7\u9762\u7535\u6e90\u5f00\u5173\u62e8\u5230 OFF \u2192 \u6309\u4f4f <code>G0</code> \u2192 \u63d2 USB \u2192 \u677e\u5f00\u3002</li></ol><ol><li><strong>\u70e7\u5f55</strong>\uff08\u4efb\u9009\u5176\u4e00\uff09\uff1a<ul><li><strong>M5Burner</strong>\uff1a<code>Burn from file</code> \u2192 \u9009 <code>10-CardOS-zh-\u4e2d\u6587\u56fa\u4ef6-x.x.bin</code> \u2192 \u6ce2\u7279\u7387 921600</li></ul><ul><li><strong>M5Launcher</strong>\uff1abin \u62f7\u5230\u5361\u6839\u76ee\u5f55 \u2192 <code>SD</code> \u2192 Install</li></ul><ul><li><strong>\u547d\u4ee4\u884c</strong>\uff1a<pre></pre></li></ul></li></ol><ol><li>\u91cd\u542f\u5373\u8fdb\u5165\u4e3b\u83dc\u5355\u3002</li></ol><h3>config.txt</h3><pre></pre><p>\u57ce\u5e02\u540d\u4f1a\u53bb\u5339\u914d\u5185\u7f6e\u57ce\u5e02\u7801\u8868\uff0827 \u4e2a\u4e3b\u8981\u57ce\u5e02\uff09\uff0c\u5339\u914d\u4e0d\u5230\u5c31\u7528\u7ecf\u7eac\u5ea6\u8d70\u5907\u7528\u6e90\u3002</p><hr><h2>\u4e94\u3001\u81ea\u5df1\u7f16\u8bd1</h2><pre></pre><p>\u4f9d\u8d56\u90fd\u5728 <code>lib/</code> \u91cc vendored\uff0c\u4e0d\u9700\u8981\u8054\u7f51\u4e0b\u5e93\uff1a</p><ul><li><code>M5Cardputer</code> / <code>M5Unified</code> / <code>M5GFX</code>\uff08M5Stack\uff0cMIT\uff09</li></ul><ul><li><code>ESP32-audioI2S</code> <strong>2.0.6</strong>\uff08schreibfaul1\uff09\u2014\u2014 \u5fc5\u987b\u662f\u8fd9\u4e2a\u7248\u672c\uff0c4.x \u9700\u8981 IDF5\uff0c\u672c\u5de5\u7a0b\u8dd1\u5728 arduino-esp32 2.0.16 / IDF 4.4 \u4e0a</li></ul><ul><li><code>ArduinoJson</code> 7.x</li></ul><ul><li><code>ESP8266Audio</code>\uff08\u4ec5\u4fdd\u7559\u517c\u5bb9\uff0c\u5b9e\u9645\u97f3\u9891\u8d70 ESP32-audioI2S\uff09</li></ul><p>\u7f16\u8bd1\u5360\u7528\u7ea6 <strong>Flash 57% / RAM 21%</strong>\uff0c\u4f59\u91cf\u591f\u52a0\u529f\u80fd\u3002</p><hr><h2>\u516d\u3001\u51e0\u4e2a\u5b9e\u73b0\u4e0a\u7684\u5751\uff08\u7ed9\u60f3\u6539\u7684\u4eba\uff09</h2><p><strong>1. \u97f3\u9891\u5fc5\u987b\u8dd1\u72ec\u7acb\u4efb\u52a1</strong><br>\u6700\u5f00\u59cb\u89e3\u7801\u3001\u8bfb\u7f51\u7edc\u3001\u5199 I2S \u5168\u585e\u5728 UI \u5faa\u73af\u91cc\uff0cSD \u8bfb\u6162\u4e00\u70b9\u6216\u754c\u9762\u91cd\u753b\u4e00\u4e0b\u5c31\u65ad\u7cae\u2014\u2014\u7535\u53f0\u64ad\u4e00\u4f1a\u513f\u65ad\u3001\u672c\u5730 MP3 \u5472\u5472\u5566\u5566\u3002<br>\u73b0\u5728 Audio \u5bf9\u8c61\u5728 core 0 \u7684\u72ec\u7acb FreeRTOS \u4efb\u52a1\u91cc\uff08\u4f18\u5148\u7ea7 6\uff0c\u6808 6144 words\uff09\uff0cUI \u53ea\u901a\u8fc7\u961f\u5217\u53d1\u547d\u4ee4\u3002<br><strong>ESP32-S3 \u6ca1\u6709 MP3 \u786c\u89e3</strong>\uff0c\u6240\u8c13\"\u6362\u786c\u89e3\"\u8fd9\u6761\u8def\u4e0d\u5b58\u5728\uff0c\u80fd\u4f18\u5316\u7684\u53ea\u6709\u5582\u6570\u636e\u7684\u8282\u594f\u3002</p><p><strong>2. \u952e\u76d8\u7684 <code>word</code> \u662f\"\u5f53\u524d\u6309\u4f4f\u7684\u952e\u96c6\u5408\"</strong><br>\u4e0d\u662f\"\u65b0\u6309\u4e0b\u7684\u952e\"\u3002\u65e9\u671f\u76f4\u63a5\u628a\u5b83\u5f53\u65b0\u6309\u952e\uff0c\u6309\u4f4f<code>+</code> 200 \u8f6e\u5c31\u53d1 200 \u6b21\u4e8b\u4ef6\u2014\u2014\u97f3\u91cf\u4e00\u6309\u51b2\u5230 100\uff0c\u72b6\u6001\u884c\u6bcf\u79d2\u91cd\u753b\u51e0\u767e\u6b21\uff08\u8089\u773c\u5c31\u662f\u9891\u95ea\uff09\u3002<br>\u73b0\u5728\u6bd4\u96c6\u5408\u5dee\u5f02\u505a\u8fb9\u6cbf\u68c0\u6d4b\uff0c\u957f\u6309 420ms \u540e\u624d\u5f00\u59cb 110ms \u4e00\u6b21\u7684\u91cd\u590d\u3002</p><p><strong>3. \u873b\u8713 m3u8 \u7684\u5206\u7247\u662f\u534f\u8bae\u76f8\u5bf9\u5730\u5740</strong><br><code>//host/path</code> \u8fd9\u79cd\u5199\u6cd5\u97f3\u9891\u5e93\u89e3\u6790\u4e0d\u4e86\uff0c\u4e8e\u662f\u4e00\u76f4\u5361\u5728\"\u7f13\u51b2\"\u4e0d\u51fa\u58f0\u3002<br>\u6240\u4ee5\u53f0\u8868\u5168\u6362\u6210\u540c\u53f0\u7684<strong>MP3 \u76f4\u8fde\u6d41</strong>\uff08<code>lhttp.qingting.fm/live/&lt;id&gt;/64k.mp3</code>\uff09\uff0c32 \u4e2a\u53f0\u5b9e\u6d4b\u5168\u90e8\u8fd4\u56de <code>200 audio/mpeg</code>\u3002</p><p><strong>4. HLS \u4e0d\u80fd <code>pauseResume()</code></strong><br>\u5e93\u53ea\u8ba4\u672c\u5730\u6587\u4ef6\u548c<code>ST_WEBSTREAM</code>\uff0cm3u8 \u76f4\u63a5\u8fd4\u56de false\u3002\u73b0\u5728\u7684\u6682\u505c\u662f\u5f15\u64ce\u4fa7<strong>\u9759\u97f3\u5f0f\u6682\u505c</strong>\uff08\u97f3\u91cf\u5f52\u96f6 + \u72b6\u6001\u4f4d\uff09\uff0c\u4efb\u4f55\u6d41\u90fd\u80fd\u505c\u80fd\u7eed\u3002</p><p><strong>5. <code>configTzTime()</code> \u4e0d\u8981\u53cd\u590d\u8c03</strong><br>\u6bcf\u6b21\u8fdb\u65f6\u949f\u90fd\u8c03\u4f1a<code>sntp_stop()</code>/<code>sntp_init()</code> \u6765\u56de\u6298\u817e\uff0cIDF 4.4 \u4e0b\u4f1a\u5076\u53d1\u91cd\u542f\u3002\u73b0\u5728\u52a0\u4e86 <code>sNtpStarted</code> \u5b88\u536b\uff0c\u53ea\u542f\u4e00\u6b21\u3002</p><p><strong>6. \u5c4f\u5e55\u662f\u5355\u5411 SPI\uff0c\u622a\u4e0d\u4e86\u5c4f</strong><br>ST7789 \u6ca1\u6709 MISO\uff0c\u8bfb\u4e0d\u56de framebuffer\uff0c\u6240\u4ee5\u56fa\u4ef6\u5185\u6ca1\u6cd5\u505a\"\u6309\u4e00\u4e0b\u5c31\u5b58\u56fe\"\u3002\u4ed3\u5e93\u91cc\u7684\u622a\u56fe\u662f\u6309\u56fa\u4ef6\u540c\u6b3e\u70b9\u9635\u5b57\u6a21 + \u76f8\u540c\u5750\u6807\u6e32\u67d3\u7684\u8fd8\u539f\u56fe\u3002</p><p><strong>7. \u672c\u5730\u97f3\u4e50\u4e0d\u8be5\u6bcf\u6b21\u7ffb\u5361</strong><br>\u6574\u5361\u904d\u5386\u7684\u4ee3\u4ef7\u662f<strong>O(\u76ee\u5f55\u9879\u6570)</strong>\uff0c\u8ddf\u5361\u91cc\u6709\u51e0\u9996\u6b4c\u65e0\u5173\u2014\u2014\u7167\u7247\u3001\u5f55\u97f3\u3001\u89c6\u9891\u8d8a\u591a\u8d8a\u6162\uff0c\u800c\u8fd9\u4e9b\u8ddf\u542c\u6b4c\u4e00\u70b9\u5173\u7cfb\u6ca1\u6709\u3002\u6240\u4ee5\u8fd9\u4ef6\u4e8b\u4e0d\u80fd\"\u8fdb\u9875\u9762\u5c31\u5168\u626b\u4e00\u904d\"\uff1a</p><ul><li><strong>\u7d22\u5f15\u7f13\u5b58</strong>\uff1a\u626b\u5b8c\u628a\u66f2\u76ee\u8def\u5f84\u5199\u8fdb <code>/CardOS/mp3.idx</code>\uff08\u4e00\u884c\u4e00\u6761\uff09\u3002\u4e0b\u6b21\u8fdb\u9875\u9762\u53ea\u8bfb\u8fd9\u4e2a\u51e0\u5341\u884c\u7684\u5c0f\u6587\u4ef6\uff0c\u6beb\u79d2\u7ea7\u51fa\u5217\u8868\uff0c\u538b\u6839\u4e0d\u78b0\u5361\u4e0a\u7684\u5176\u5b83\u76ee\u5f55\uff1b</li></ul><ul><li><strong>\u97f3\u4e50\u76ee\u5f55\u4f18\u5148</strong>\uff1a\u9996\u6b21\u626b\u5361\uff08\u6216\u6309 <code>R</code> \u91cd\u626b\uff09\u65f6\u5148\u53ea\u626b <code>/Music</code>\uff08<code>/music</code> <code>/MP3</code> <code>/mp3</code> <code>/Audio</code> <code>/\u97f3\u4e50</code> \u90fd\u8ba4\uff09\uff0c\u8fd9\u4e00\u5c42\u626b\u5b8c\u518d\u56de\u6839\u76ee\u5f55\u8865\u5176\u4f59\u4f4d\u7f6e\u2014\u2014\u8fd9\u6837 120 \u6761\u7684\u914d\u989d\u5148\u7ed9\u771f\u6b63\u7684\u6b4c\uff0c\u4e0d\u4f1a\u88ab\u6839\u76ee\u5f55\u91cc\u7684\u6742\u6587\u4ef6\u5360\u6ee1\uff1b</li></ul><ul><li><strong>\u626b\u63cf\u4f9d\u7136\u662f\u589e\u91cf\u7684</strong>\uff1a\u6bcf\u8f6e\u53ea\u8d70 10 \u4e2a\u76ee\u5f55\u9879\uff0c\u626b\u63cf\u8fc7\u7a0b\u4e2d\u754c\u9762\u7167\u5e38\u5237\u65b0\u3001<code>`</code> \u968f\u65f6\u9000\u51fa\uff0c\u4e0d\u4f1a\"\u8fdb\u53bb\u5c31\u6b7b\u673a\"\uff1b</li></ul><ul><li>\u6362\u4e86\u5361\u6216\u5f80\u5361\u91cc\u52a0\u4e86\u6b4c\uff0c\u6309\u4e00\u6b21 <code>R</code> \u91cd\u5efa\u7d22\u5f15\u5373\u53ef\u3002</li></ul><hr><h2>\u4e03\u3001\u5df2\u77e5\u9650\u5236</h2><ul><li><strong>\u53ea\u652f\u6301 FAT32</strong>\uff0cexFAT \u5728 arduino-esp32 2.0.16 \u7684 FATFS \u91cc\u4e0d\u8ba4\uff1b64GB \u4ee5\u4e0a\u7684\u5361\u51fa\u5382\u591a\u534a\u662f exFAT\uff0c\u63d2\u4e0a\u4f1a\u663e\u793a\"\u672a\u6302\u8f7d\"\u3002</li></ul><ul><li><strong>\u65e0 PSRAM</strong>\uff0c\u540c\u65f6\u8dd1\u97f3\u9891 + \u5927\u7f13\u51b2\u8981\u6ce8\u610f\u5185\u5b58\uff1b\u672c\u5730\u64ad\u653e 320kbps VBR / 48kHz \u7684\u4e2a\u522b\u6587\u4ef6\u4ecd\u53ef\u80fd\u8f7b\u5fae\u5361\u3002</li></ul><ul><li><strong>\u672c\u5730\u97f3\u4e50\u7684\u5217\u8868\u6765\u81ea\u7d22\u5f15\u7f13\u5b58</strong>\uff08<code>/CardOS/mp3.idx</code>\uff09\uff0c\u5f80\u5361\u91cc\u589e\u5220\u6b4c\u66f2\u540e\u8981\u6309\u4e00\u6b21 <code>R</code> \u91cd\u626b\u624d\u4f1a\u5237\u65b0\uff1b\u7d22\u5f15\u6700\u591a\u8bb0 120 \u9996\u3002</li></ul><ul><li>\u7535\u53f0\u4f9d\u8d56\u516c\u5f00\u6d41\uff0c\u53f0\u8868\u91cc\u7684\u5730\u5740\u53ef\u80fd\u968f\u65f6\u95f4\u5931\u6548\uff0c\u53ef\u4ee5\u81ea\u5df1\u6539 <code>stations.txt</code>\uff08\u683c\u5f0f\uff1a<code>\u540d\u79f0,URL</code> \u4e00\u884c\u4e00\u4e2a\uff09\u3002</li></ul><ul><li>\u5929\u6c14\u9ed8\u8ba4\u8d70 <code>t.weather.itboy.net</code>\uff0c\u5176\u6b21 <code>wttr.in</code>\uff1b\u90fd\u9700\u8981\u8054\u7f51\u3002</li></ul><ul><li>\u4e2d\u6587\u53ea\u6709 12px / 16px \u4e24\u6863\u70b9\u9635\uff0c\u4e0d\u652f\u6301\u4efb\u610f\u7f29\u653e\u3002</li></ul><hr><h2>\u516b\u3001\u8bb8\u53ef\u4e0e\u6765\u6e90</h2><ul><li>\u754c\u9762\u4e0e\u4e1a\u52a1\u4ee3\u7801\uff1a\u672c\u9879\u76ee\u539f\u521b</li></ul><ul><li>\u4e2d\u6587\u5b57\u5e93\uff1aM5GFX \u5185\u7f6e <strong>efontCN</strong>\uff08efont\uff0cMIT\uff09</li></ul><ul><li>\u97f3\u9891\u89e3\u7801\uff1a<a href=\"https://github.com/schreibfaul1/ESP32-audioI2S\">schreibfaul1/ESP32-audioI2S</a>\uff08MIT\uff09</li></ul><ul><li>ES8311 \u5bc4\u5b58\u5668\u5e8f\u5217\uff1a\u53c2\u8003 M5Unified\uff08MIT\uff09</li></ul><ul><li>\u5929\u6c14\u6570\u636e\uff1aitboy / wttr.in / open-meteo</li></ul><ul><li>\u7535\u53f0\u6d41\uff1a\u5404\u7535\u53f0\u516c\u5f00\u6d41\uff0c\u4ec5\u4f9b\u4e2a\u4eba\u6536\u542c\u6d4b\u8bd5</li></ul><p>\u5982\u679c\u8fd9\u4efd\u4ee3\u7801\u5e2e\u5230\u4f60\uff0c\u6b22\u8fce\u5728 M5 \u793e\u533a\u56de\u5e16\u4ea4\u6d41\uff0c\u6216\u8005\u76f4\u63a5\u63d0 issue / PR\u3002</p>",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2122205779198951425/2122590750057119746/2122590750057119747/cover/2122590750057119749.png",
+    "category": "cardputer",
+    "tags": [
+      "UI & Launcher"
+    ],
+    "author": "rzbailin",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "V3.6",
+        "version_id": "2122590750057119747",
+        "published_at": "2026-11-17",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122205779198951425/2122590750057119746/2122590750057119747/bin/2122590750057119748.bin",
+        "Fs": 1975888,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1910352,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1910352,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1910352,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-17T09:53:55Z",
+            "etag": "\"169E7CBB1A5A9E6290D5D9FC856A3F46\"",
+            "last_modified": "Tue, 17 Nov 2026 07:20:45 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000000442",
     "fid": "1897200000000000442",
     "name": "CardPing_Multiplayer",
@@ -42680,13 +42829,13 @@
     "fid": "2120468585455984642",
     "name": "CardputerDict \u4e2d\u82f1\u79bb\u7ebf\u8bcd\u5178",
     "description": "## CardputerDict \u4e2d\u82f1\u79bb\u7ebf\u8bcd\u5178\n\n\u9002\u7528\u4e8e\u666e\u901a M5Stack Cardputer\uff08ESP32-S3\u30018 MB Flash\uff09\uff0c\u652f\u6301\u82f1\u6c49 / \u6c49\u82f1\u53cc\u5411\u67e5\u8bcd\u3001\u79bb\u7ebf\u6574\u8bcd\u5168\u62fc\u548c\u9010\u5b57\u8f93\u5165\u3002\u67e5\u8bcd\u65e0\u9700\u8054\u7f51\uff1b0.4.x \u8d77\u652f\u6301\u82f1\u8bed\u6717\u8bfb\uff08\u672c\u5730\u97f3\u9891\u4f18\u5148\u3001WiFi \u83b7\u53d6\u5e76\u7f13\u5b58\uff09\u3002\n\n### \u529f\u80fd\n- \u82f1\u6c49\uff1a770,611 \u4e2a\u82f1\u6587\u8bcd\u5934\uff1b\u6c49\u82f1\uff1a198,650 \u4e2a\u7b80\u7e41\u4f53\u8bcd\u5934\u3002\n- 85,610 \u79cd\u6574\u8bcd\u62fc\u97f3\u7ec4\u5408\uff0c\u652f\u6301 pingguo \u2192 \u82f9\u679c\u3001nihao \u2192 \u4f60\u597d\uff1bv \u4ee3\u8868 \u00fc\u3002\n- \u4e2d\u6587\u548c IPA \u97f3\u6807\u663e\u793a\uff0c\u91ca\u4e49\u7ffb\u9875\uff1b\u5355\u884c\u7d27\u51d1\u5019\u9009\u3001\u6570\u5b57\u9009\u8bcd\u3002\n- SD \u7d22\u5f15\u81ea\u52a8\u7f13\u5b58\uff1a\u9996\u6b21\u751f\u6210\u540e\uff0c\u5b9e\u6d4b\u8f6f\u4ef6\u91cd\u542f\u7ea6 1.32 \u79d2\u8fdb\u5165\u754c\u9762\uff08\u968f SD \u5361\u800c\u5f02\uff09\u3002\n\n### \u82f1\u8bed\u6717\u8bfb\uff080.4.x \u8d77\uff09\n- Fn+P\uff1a\u6717\u8bfb\u5f53\u524d\u82f1\u6587\u8bcd\u6761\uff0c\u518d\u6309\u505c\u6b62\uff1bFn+= / Fn+-\uff1a\u8c03\u8282\u97f3\u91cf\u3002\n- \u5148\u64ad\u653e SD audio/en \u4e2d\u7684\u4e2a\u4eba MP3/WAV\uff0c\u518d\u67e5\u627e audio/cache/en \u7f13\u5b58\uff1b\u6ca1\u6709\u97f3\u9891\u65f6\uff0c\u901a\u8fc7\u5df2\u914d\u7f6e\u7684 WiFi \u83b7\u53d6\u5e76\u7f13\u5b58\u3002\n- Fn+W\uff1a\u5728 Cardputer \u4e0a\u8bbe\u7f6e 2.4GHz WiFi\u3002\u914d\u7f6e\u4fdd\u5b58\u5728\u672c\u673a NVS\uff0c\u4e0d\u9700\u8981\u4e0a\u4f20\u5bc6\u7801\u3002\n- \u5728\u7ebf\u83b7\u53d6\u4f7f\u7528\u6709\u9053 dict.youdao.com\uff0c\u4ec5\u53d1\u9001\u6240\u9009\u82f1\u6587\u8bcd\uff0c\u9a8c\u8bc1 HTTPS \u8bc1\u4e66\uff1b\u5b8c\u6210\u540e\u5173\u95ed WiFi\uff0c\u7f13\u5b58\u53ef\u79bb\u7ebf\u91cd\u64ad\u3002\u7b2c\u4e09\u65b9\u63a5\u53e3\u53ef\u7528\u6027\u53ef\u80fd\u53d8\u5316\u3002\n- \u652f\u6301\u6d41\u5f0f MP3 \u4e0e 8/16-bit PCM WAV\uff0c\u6587\u4ef6\u4e0d\u8d85\u8fc7 512KB / 30\u79d2\uff1b\u53ef\u4ee5\u4f7f\u7528\u9879\u76ee tools/prepare_audio_pack.py \u51c6\u5907\u4e2a\u4eba\u97f3\u9891\u96c6\u3002\n\n### \u9996\u6b21\u4f7f\u7528\uff1a\u5fc5\u987b\u51c6\u5907 SD \u8bcd\u5e93\n\u56fa\u4ef6\u5185\u4ec5\u5e26 29 \u8bcd\u6f14\u793a\uff1b\u5b8c\u6574\u8bcd\u5e93\u4e0d\u5305\u542b\u5728 .bin \u5185\u3002\u8bf7\u4e0b\u8f7d\u9879\u76ee\u6e90\u7801 ZIP\uff0c\u5c06\u5176\u4e2d sdcard/ \u91cc\u9762\u7684 dictionaries/ \u548c licenses/ \u4e24\u4e2a\u76ee\u5f55\u590d\u5236\u5230 FAT32 microSD \u5361\u6839\u76ee\u5f55\uff0c\u5173\u673a\u540e\u63d2\u5361\u518d\u5f00\u673a\u3002\u9996\u6b21\u4f1a\u5efa\u7acb\u7d22\u5f15\u7f13\u5b58\uff0c\u4e4b\u540e\u5feb\u901f\u542f\u52a8\u3002\n\n- [\u9879\u76ee\u4e0e\u5b8c\u6574\u8bf4\u660e](https://github.com/RadioDisney/CardputerDict)\n- [SD \u8bcd\u5e93\u76ee\u5f55](https://github.com/RadioDisney/CardputerDict/tree/master/sdcard)\n- \u5728 GitHub \u70b9\u51fb Code \u2192 Download ZIP\uff0c\u5373\u53ef\u53d6\u5f97\u8bcd\u5e93\uff1b\u4e5f\u53ef\u4f7f\u7528\u9879\u76ee tools/upload_sd.py \u901a\u8fc7 USB \u5b89\u88c5\u3002\n\n### \u6309\u952e\n- Tab\uff1a\u82f1\u6c49 / \u6c49\u82f1\u5207\u6362\uff0c\u540c\u65f6\u6e05\u7a7a\u8f93\u5165\u3002\n- Enter\uff1a\u6253\u5f00\u8bcd\u6761\uff1b\u62fc\u97f3\u672a\u9009\u5165\u65f6\u5148\u9009\u9996\u9879\u3002\n- \u7a7a\u683c\u30011\u20139\uff1a\u9009\u62e9\u5f53\u524d\u9875\u62fc\u97f3\u5019\u9009\uff1b[ / ]\uff1a\u5019\u9009\u524d\u540e\u7ffb\u9875\u3002\n- \u91ca\u4e49\u9875 Space \u4e0b\u4e00\u9875\uff1bFn+; \u6216 Fn+, \u4e0a\u4e00\u9875\uff1bFn+. \u6216 Fn+/ \u4e0b\u4e00\u9875\u30020.3.1 \u8d77\u652f\u6301\u672b\u9875\u56de\u9996\u9875\u3001\u9996\u9875\u5230\u672b\u9875\u5faa\u73af\u3002\n- Fn+; / Fn+.\uff1a\u5217\u8868\u4e0a\u4e0b\u9009\u62e9\uff0c\u8d85\u51fa\u53ef\u89c1\u533a\u57df\u81ea\u52a8\u6eda\u52a8\u3002\n- Backspace\uff1a\u5220\u9664\u5b57\u7b26\uff1b\u91ca\u4e49\u9875\u8fd4\u56de\u30020.4.2 \u4e2d\u957f\u6309 450ms \u540e\u6bcf 125ms \u8fde\u7eed\u5220\u9664\uff1bFn+\u9000\u683c\u4ecd\u5355\u6b21\u6e05\u7a7a\u3002\u53cd\u5f15\u53f7\u952e\uff1a\u8fd4\u56de / \u53d6\u6d88\u8f93\u5165\u3002\n- Fn+Backspace\uff1a\u6e05\u7a7a\uff1bFn+H / G0\uff1a\u5e2e\u52a9\uff1bFn+D\uff1a\u5207\u6362\u8bcd\u5e93\u3002\n- Fn+R\uff1a\u91cd\u65b0\u52a0\u8f7d SD \u7f13\u5b58\uff1bFn+Shift+R\uff1a\u5f3a\u5236\u5b8c\u6574\u6821\u9a8c\u5e76\u91cd\u5efa\u7f13\u5b58\u3002\n\n### \u70e7\u5f55\u4e0e\u517c\u5bb9\n\u8fd9\u662f\u4ece 0x0 \u70e7\u5f55\u7684\u5b8c\u6574\u5408\u5e76\u56fa\u4ef6\uff0c\u5305\u542b bootloader\u3001\u5206\u533a\u8868\u3001\u521d\u59cb\u5316\u6570\u636e\u548c\u5e94\u7528\u3002\u5df2\u5728\u666e\u901a Cardputer \u5b9e\u673a\u9a8c\u8bc1\uff1bCardputer ADV \u672a\u9a8c\u8bc1\uff0c\u8bf7\u52ff\u9009\u4e3a\u8be5\u8bbe\u5907\u56fa\u4ef6\u3002\u70e7\u5f55\u4f1a\u66ff\u6362\u73b0\u6709\u5e94\u7528\uff1bmicroSD \u4e0a\u7684\u5176\u4ed6\u6587\u4ef6\u4e0d\u4f1a\u968f\u70e7\u5f55\u5220\u9664\u3002\n\n### \u6570\u636e\u6765\u6e90\u4e0e\u8bb8\u53ef\n\u5e94\u7528\u53ca\u539f\u521b\u6f14\u793a\u4ee3\u7801\uff1aMIT\u3002\u82f1\u6c49\u6570\u636e\u6765\u81ea ECDICT\uff08MIT\uff09\uff1b\u6c49\u82f1\u53ca\u8bcd\u7ec4\u62fc\u97f3\u6570\u636e\u6539\u7f16\u81ea MDBG / CC-CEDICT\uff0c\u6309 CC BY-SA 4.0 \u5206\u53d1\uff1b\u9010\u5b57\u62fc\u97f3\u6765\u81ea mozillazg/pinyin-data\uff08MIT\uff09\u3002\u5b57\u4f53\u53ca\u4f9d\u8d56\u5206\u522b\u9075\u5faa\u5404\u81ea\u8bb8\u53ef\u3002\u6765\u6e90\u3001\u4fee\u6539\u8bf4\u660e\u548c\u5b8c\u6574\u8bb8\u53ef\u4fdd\u7559\u4e8e\u9879\u76ee third_party/ \u4e0e sdcard/licenses/\u3002\n\n0.3.0 \u4e0d\u542b\u8bed\u97f3\uff0c\u82f1\u8bed\u6717\u8bfb\u8bf7\u4f7f\u7528 0.4.x\u3002\u5f53\u524d\u4e0d\u542b\u6574\u53e5\u8054\u60f3\u3001\u81ea\u52a8\u8bcd\u5f62\u8fd8\u539f\uff1b\u751f\u50fb\u5b57\u4ecd\u53d7\u5b57\u4f53\u8986\u76d6\u9650\u5236\u3002\u652f\u6301\u672a\u538b\u7f29\u3001UTF-8 \u7eaf\u6587\u672c StarDict\u3002",
-    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2120468585455984642/2120815429401903106/cover/2120815429401903108.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2120468585455984642/2122516385948975105/cover/2122516385948975107.gif",
     "category": "cardputer",
     "tags": [
       "E-books & Reading"
     ],
     "author": "RadioDisney",
-    "github": "https://github.com/RadioDisney/CardputerDict",
+    "github": "https://github.com/RadioDisney/CardputerDict/releases/tag/v0.6.4",
     "download": 16,
     "versions": [
       {
@@ -42802,6 +42951,63 @@
             "last_modified": "Thu, 12 Nov 2026 09:46:16 GMT"
           }
         }
+      },
+      {
+        "version": "0.6.4",
+        "version_id": "2122516385948975105",
+        "published_at": "2026-11-17",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/341701/2120468585455984642/2122516385948975105/bin/2122516385948975106.bin",
+        "Fs": 3619312,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3553776,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3553776,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3553776,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 2031616,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-17T09:53:55Z",
+            "etag": "\"982E3FDC1308F4E673BF5B601CC8B497\"",
+            "last_modified": "Tue, 17 Nov 2026 02:25:16 GMT"
+          }
+        }
       }
     ],
     "esp": "s3",
@@ -42887,11 +43093,11 @@
         "published_at": "2026-11-17",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/341701/2122146817619476482/2122516465603002369/bin/2122516465603002370.bin",
         "Fs": 3619312,
+        "as": 3553776,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 3553776,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -48703,7 +48909,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/CoreS3-UserDemo",
-    "download": 7933,
+    "download": 7934,
     "versions": [
       {
         "version": "v0.4",
@@ -58368,7 +58574,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 77939,
+    "download": 77940,
     "versions": [
       {
         "version": "v1.5.2",
@@ -58624,7 +58830,7 @@
     ],
     "author": "7h30th3r0n3",
     "github": "https://github.com/7h30th3r0n3/Evil-M5Core2",
-    "download": 77939,
+    "download": 77940,
     "versions": [
       {
         "version": "v1.5.2",
@@ -61441,7 +61647,7 @@
     ],
     "author": "hedykan-0",
     "github": "https://github.com/hedykan/FeiyuOS",
-    "download": 66,
+    "download": 67,
     "versions": [
       {
         "version": "v0.5.3",
@@ -71662,7 +71868,7 @@
     ],
     "author": "r3dfish 0",
     "github": "https://github.com/r3dfish/HeavenlyPointer",
-    "download": 81,
+    "download": 82,
     "versions": [
       {
         "version": "1.1.0",
@@ -79840,7 +80046,7 @@
     ],
     "author": "ValleytechSolutions",
     "github": "https://github.com/valleytechsolutions/LORA-Tunnel",
-    "download": 29,
+    "download": 30,
     "versions": [
       {
         "version": "0.4.0-beta.1",
@@ -90397,7 +90603,7 @@
     ],
     "author": "ljnb666",
     "github": "https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
-    "download": 361,
+    "download": 363,
     "versions": [
       {
         "version": "2.9.1",
@@ -90866,7 +91072,7 @@
     ],
     "author": "ljnb666",
     "github": "https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
-    "download": 361,
+    "download": 363,
     "versions": [
       {
         "version": "2.9.1",
@@ -114177,7 +114383,7 @@
     ],
     "author": "miner203",
     "github": "https://github.com/TheMiner203/M5Mp3/",
-    "download": 2938,
+    "download": 2939,
     "versions": [
       {
         "version": "1.1",
@@ -116971,10 +117177,10 @@
         "published_at": "2026-11-17",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2110606948202475521/2122618197054013441/bin/2122618197054013442.bin",
         "Fs": 2166784,
-        "nb": true,
-        "ao": 0,
         "as": 2166784,
+        "ao": 0,
         "s": 0,
+        "nb": true,
         "f": 0,
         "f2": 0,
         "install": {
@@ -117141,7 +117347,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 101,
+    "download": 102,
     "versions": [
       {
         "version": "v999.0.0",
@@ -117310,10 +117516,10 @@
         "published_at": "2026-11-17",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2110551305261182978/2122618447156166658/bin/2122618447156166659.bin",
         "Fs": 2297856,
-        "nb": true,
-        "ao": 0,
         "as": 2297856,
+        "ao": 0,
         "s": 0,
+        "nb": true,
         "f": 0,
         "f2": 0,
         "install": {
@@ -124099,7 +124305,7 @@
     ],
     "author": "EvilAngel91",
     "github": "https://github.com/BruceDevices/firmware/releases",
-    "download": 1324,
+    "download": 1325,
     "versions": [
       {
         "version": "1.14",
@@ -124253,7 +124459,7 @@
     ],
     "author": "EvilAngel91",
     "github": "https://github.com/BruceDevices/firmware/releases",
-    "download": 214,
+    "download": 215,
     "versions": [
       {
         "version": "1.14",
@@ -142870,7 +143076,7 @@
     ],
     "author": "acpayers",
     "github": "https://github.com/acpayers-alt/raising-hell-cardputer/releases/tag/v2.1.1",
-    "download": 1710,
+    "download": 1711,
     "versions": [
       {
         "version": "1.0.3",
@@ -144067,7 +144273,7 @@
     ],
     "author": "leonidtsk",
     "github": "",
-    "download": 206,
+    "download": 207,
     "versions": [
       {
         "version": "0.5.0 (Beta)",
@@ -146738,7 +146944,7 @@
     ],
     "author": "adammelancon",
     "github": "https://github.com/adammelancon/cardputer-iss-tracker",
-    "download": 1635,
+    "download": 1636,
     "versions": [
       {
         "version": "v2.5.5",
@@ -152501,7 +152707,7 @@
     ],
     "author": "mohanad747",
     "github": "https://github.com/mohanad747/Sila",
-    "download": 65,
+    "download": 66,
     "versions": [
       {
         "version": "v3.7",
@@ -154563,6 +154769,63 @@
             "analyzed_at": "2026-11-12T10:38:55Z",
             "etag": "\"6C91208B8DD0AB8D6B10F2F32CA428CF\"",
             "last_modified": "Thu, 12 Nov 2026 10:16:17 GMT"
+          }
+        }
+      },
+      {
+        "version": "v3.6",
+        "version_id": "2122601362870976514",
+        "published_at": "2026-11-17",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/316104/1897200000000000393/2122601362870976514/bin/2122601362870976515.bin",
+        "Fs": 2939776,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2874240,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2874240,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 2874240,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-17T09:53:55Z",
+            "etag": "\"6A803001CC1FD35DC848FDD12E6B29D0\"",
+            "last_modified": "Tue, 17 Nov 2026 08:02:56 GMT"
           }
         }
       }
@@ -158068,7 +158331,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 5010,
+    "download": 5011,
     "versions": [
       {
         "version": "V0.4",
@@ -168128,7 +168391,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 1177,
+    "download": 1178,
     "versions": [
       {
         "version": "v1.8.4",
@@ -349992,7 +350255,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 45299,
+    "download": 45300,
     "versions": [
       {
         "version": "v1.7.5-plus",
@@ -361882,7 +362145,7 @@
     ],
     "author": "TheRealHaoLiu",
     "github": "https://github.com/TheRealHaoLiu/MeshCore/tree/m5-unit-c6l",
-    "download": 286,
+    "download": 287,
     "versions": [
       {
         "version": "1.11.0",
@@ -382452,11 +382715,11 @@
         "published_at": "2026-11-17",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/121/2122283791156199425/2122590168781111297/bin/2122590168781111298.bin",
         "Fs": 2075648,
+        "as": 2010112,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2010112,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -397003,6 +397266,69 @@
     "name_src": "\u521b\u610f\u70b9\u9635\u65f6\u949f\uff082\u54081\uff09",
     "description_en": "Pin definition:\nconnect4combine1latticeDIN\u219219 CLK\u219221 CS\u219222\nFixed low pin32\nMode select pin33(Leave it floating for normal mode\uff0cLow level is suspension mode)\nPersonalized display impression website\nhttp://maker.peien.xyz/clock/\nOrdinary modulus reverse Suspension forward\n\nUsage steps:\n1\u3001\u6309\u8981\u6c42connectlattice\u4e0e\u6309\u9700\u9009\u62e9\u6a21\u5f0f\u5c06GPIO33Floating or grounded selection mode\n2\u3001The name of the power-on device isM5_XXXhot spot\uff0cXXXfor equipmentMACaddress\uff0cconnect\u8be5\u70ed\u70b9\uff0cBrowser input192.168.4.1Enter the online configuration page\uff0cConfigure network and display brightness\n3\u3001After the configuration is completed and the power is turned off and restarted automatically, the network can be allocated through the router.IPaddress\u5728\u7ebf\u914d\u7f6e\u4e0e\u4f7f\u7528\n\nDefault setting\nnetworkNetcore-65080Fpassword1234567890\nbrightness1",
     "description_src": "\u5f15\u811a\u5b9a\u4e49:\n\u8fde\u63a54\u54081\u70b9\u9635DIN\u219219 CLK\u219221 CS\u219222\n\u56fa\u5b9a\u4f4e\u7535\u5e73\u5f15\u811a32\n\u6a21\u5f0f\u9009\u62e9\u5f15\u811a33(\u60ac\u7a7a\u4e3a\u666e\u901a\u6a21\u5f0f\uff0c\u4f4e\u7535\u5e73\u4e3a\u60ac\u6d6e\u6a21\u5f0f)\n\u4e2a\u6027\u5316\u663e\u793a\u53d6\u6a21\u7f51\u7ad9\nhttp://maker.peien.xyz/clock/\n\u666e\u901a\u53d6\u6a21\u9006\u5411 \u60ac\u6d6e\u987a\u5411\n\n\u4f7f\u7528\u6b65\u9aa4:\n1\u3001\u6309\u8981\u6c42\u8fde\u63a5\u70b9\u9635\u4e0e\u6309\u9700\u9009\u62e9\u6a21\u5f0f\u5c06GPIO33\u60ac\u7a7a\u6216\u63a5\u5730\u9009\u62e9\u6a21\u5f0f\n2\u3001\u4e0a\u7535\u8bbe\u5907\u5f00\u542f\u540d\u79f0\u4e3aM5_XXX\u7684\u70ed\u70b9\uff0cXXX\u4e3a\u8bbe\u5907MAC\u5730\u5740\uff0c\u8fde\u63a5\u8be5\u70ed\u70b9\uff0c\u6d4f\u89c8\u5668\u8f93\u5165192.168.4.1\u8fdb\u5165\u5728\u7ebf\u914d\u7f6e\u9875\u9762\uff0c\u914d\u7f6e\u7f51\u7edc\u4e0e\u663e\u793a\u4eae\u5ea6\n3\u3001\u914d\u7f6e\u5b8c\u6210\u65ad\u7535\u91cd\u542f\u81ea\u52a8\u8054\u7f51\u540e\u53ef\u901a\u8fc7\u8def\u7531\u5668\u5206\u914d\u7684IP\u5730\u5740\u5728\u7ebf\u914d\u7f6e\u4e0e\u4f7f\u7528\n\n\u9ed8\u8ba4\u8bbe\u7f6e\n\u7f51\u7edcNetcore-65080F\u5bc6\u78011234567890\n\u4eae\u5ea61"
+  },
+  {
+    "_id": "2122601783576444930",
+    "fid": "2122601783576444930",
+    "name": "\u53e3\u54e8\u5316\u7bab - Tab5 \u5b9e\u65f6\u7bab\u58f0\u6f14\u594f",
+    "description": "# \u53e3\u54e8\u5316\u7bab \u00b7 Tab5\n\n\u7528\u53e3\u54e8\u5439\u51fa\u65cb\u5f8b\uff0c\u5b9e\u65f6\u8f6c\u6362\u6210\u7bab\u58f0\uff0c\u4e5f\u53ef\u5148\u5f55\u5236\u518d\u56de\u653e\u3002\u4e2d\u6587\u9ed1\u767d\u7ad6\u5c4f\u89e6\u63a7\u754c\u9762\uff0c\u65e0\u9700\u8054\u7f51\u3001SD \u5361\u6216\u5916\u63a5\u9ea6\u514b\u98ce\u3002\n\n## \u529f\u80fd\u4e0e\u64cd\u4f5c\n- \u5b9e\u65f6\u6f14\u594f\uff1a\u6309\u201c\u5b9e\u65f6\u6f14\u594f\u201d\uff0c\u7528\u6e05\u6670\u53e3\u54e8\u63a7\u5236\u97f3\u9ad8\uff1b\u4ec5\u91c7\u96c6\u53e3\u54e8\uff0c\u4e0d\u542b\u54fc\u5531\u8bc6\u522b\u3002\n- \u5f55\u5236\u65cb\u5f8b\uff1a\u6700\u591a\u7ea6 30 \u79d2\uff0c\u4ec5\u8bb0\u5f55\u97f3\u9ad8\u548c\u529b\u5ea6\uff0c\u5f55\u5236\u65f6\u4e0d\u64ad\u653e\uff1b\u6309\u201c\u64ad\u653e\u7bab\u58f0\u201d\u56de\u653e\uff0c\u65ad\u7535\u4e0d\u4fdd\u5b58\u3002\n- \u97f3\u9ad8\u8ddf\u968f\u4fdd\u7559\u6ed1\u97f3\u4e0e\u98a4\u97f3\uff0c\u6821\u51c6\u6a21\u5f0f\u5438\u9644\u6807\u51c6\u97f3\uff1b\u53ef\u8c03\u516b\u5ea6\u3001\u97f3\u91cf\u548c\u91c7\u96c6\u95e8\u9650\u3002\n- \u9ed8\u8ba4\u771f\u5b9e\u7bab\u91c7\u6837\uff1b\u201c\u97f3\u8272\u201d\u4f9d\u6b21\u5207\u6362\u91c7\u6837\u7bab\u3001\u7269\u7406\u6a21\u578b\u7bab\u3001\u7eaf\u97f3\u3002\u201c\u8bd5\u542c\u97f3\u8272\u201d\u68c0\u67e5\u64ad\u653e\u3002\n- \u63d2\u5165\u8033\u673a\u81ea\u52a8\u5173\u95ed\u5916\u653e\uff0c\u65e0\u8033\u673a\u65f6\u5916\u653e\u3002\u957f\u6309\u673a\u8eab\u7535\u6e90\u952e\u5173\u673a\u3002\n- \u7ea6 250\u20137000 Hz \u53e3\u54e8\u8f93\u5165\uff0c\u7a33\u5b9a\u97f3\u76f8\u4f4d\u7cbe\u4fee\u53ca\u77ed\u8109\u51b2\u8fc7\u6ee4\u3002\u9ed8\u8ba4\u964d\u4f4e\u4e24\u4e2a\u516b\u5ea6\uff1b\u8f93\u51fa\u97f3\u57df\u8d8a\u754c\u4f1a\u63d0\u793a\u8c03\u6574\u516b\u5ea6\u3002\n- \u53cc\u6838\u5206\u79bb\u91c7\u96c6\u8bc6\u522b\u4e0e\u58f0\u97f3\u5408\u6210\uff1bP4 \u4e13\u7528 FFT \u6307\u4ee4\u4f18\u5316\u3001\u9884\u8ba1\u7b97\u7a97\u51fd\u6570\uff1bI2S DMA\uff0c\u5c4f\u5e55\u9a71\u52a8 DMA2D\u3002\n\n## \u9002\u7528\u8bbe\u5907\u4e0e\u5b89\u88c5\n\u4ec5\u9002\u7528\u4e8e M5Stack Tab5\uff08ESP32-P4\uff0c16MB Flash\uff09\u3002\u5df2\u5728 ESP32-P4 rev1.3\u3001ST7123 \u5c4f\u5e55\u7684\u5b9e\u673a\u7f16\u8bd1\u3001\u70e7\u5f55\u5e76\u8fd0\u884c\u3002\u5176\u4ed6\u4fee\u8ba2\u672a\u9a8c\u8bc1\u3002\n\u5408\u5e76\u56fa\u4ef6\u5199\u5165\u5730\u5740\u4e3a 0x0\uff0c\u5305\u542b bootloader\u3001\u5206\u533a\u8868\u53ca\u5e94\u7528\u3002\u6ca1\u6709 Wi-Fi \u51ed\u636e\u3001NVS\u3001\u8bbe\u5907\u5907\u4efd\u6216\u4e2a\u4eba\u5f55\u97f3\u3002\u5b89\u88c5\u4f1a\u66ff\u6362\u539f\u5e94\u7528\u548c\u5206\u533a\u8868\uff0c0x9000\u20130xffff \u533a\u57df\u4e3a\u64e6\u9664\u586b\u5145\uff0c\u539f NVS \u4f1a\u88ab\u8986\u76d6\uff1b\u8bf7\u5148\u5907\u4efd\u539f\u56fa\u4ef6\u53ca\u6240\u9700\u6570\u636e\u3002\n\n## \u9a8c\u8bc1\u4e0e\u8fb9\u754c\n\u542f\u52a8\u81ea\u6d4b\u8986\u76d6\u6807\u51c6\u53e3\u54e8\u3001\u566a\u58f0\u3001\u77ac\u6001\u62d2\u7edd\u3001\u76f8\u4f4d\u8ddf\u8e2a\u3001\u91c7\u6837\u97f3\u51c6\u4e0e\u97f3\u9891\u91ca\u653e\u3002\u6807\u51c6\u4fe1\u53f7\u6d4b\u8bd5\u4e0d\u4ee3\u8868\u5b9e\u9645\u5439\u594f\u51c6\u786e\u7387\uff0c\u77ed\u5faa\u73af\u91c7\u6837\u5728\u6781\u7aef\u79fb\u8c03\u65f6\u4e0e\u771f\u4eba\u6f14\u594f\u4ecd\u6709\u5dee\u8ddd\u3002\u9ed8\u8ba4\u97f3\u8272\u4f7f\u7528\u771f\u5b9e\u5f55\u97f3\u52a0\u5de5\uff0c\u4e0d\u662f\u5b8c\u6574\u4e13\u4e1a\u91c7\u6837\u4e50\u5668\u3002\u672c\u9879\u76ee\u4e3a\u72ec\u7acb\u793e\u533a\u4f5c\u54c1\u3002\n\n## \u6765\u6e90\u4e0e\u7f72\u540d\n\u771f\u5b9e\u7bab\u5f55\u97f3\uff1axserra (Xavier Serra), \u201cxiao-1.wav\u201d, 2012\uff0cCC BY 4.0\u3002\nhttps://freesound.org/people/xserra/sounds/161912/\nhttps://creativecommons.org/licenses/by/4.0/\n\u53d8\u66f4\uff1a\u5355\u58f0\u9053\u6df7\u5408\u300116kHz \u91cd\u91c7\u6837\u3001\u56db\u4e2a\u6301\u7eed\u5355\u97f3\u63d0\u53d6\u3001\u57fa\u9891\u76f8\u4f4d\u7a33\u5b9a\u3001\u5f52\u4e00\u5316\u3001\u4ea4\u53c9\u6de1\u5316\u5faa\u73af\uff1b\u4f5c\u8005\u4e0d\u4e3a\u672c\u4f5c\u54c1\u80cc\u4e66\u3002\n\u7269\u7406\u6a21\u578b\u53c2\u8003 STK Flute\uff0cPerry R. Cook / Gary P. Scavone\uff1b\u9a71\u52a8 M5Unified / M5GFX\uff08MIT\uff09\uff1bESP-DSP / ESP-IDF\uff08Apache-2.0\uff09\uff1befont\uff08BSD-3-Clause\uff09\u3001LovyanGFX\uff08BSD\uff09\u3002\u5b8c\u6574\u8bb8\u53ef\u89c1\u7248\u672c\u8bf4\u660e\u3002",
+    "cover": "https://m5burner-cdn.m5stack.com/community/102976/2122601783576444930/2122601783576444931/cover/2122601783576444933.png",
+    "category": "tab5",
+    "tags": [
+      "Audio & Media"
+    ],
+    "author": "gywan94",
+    "github": "",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2122601783576444931",
+        "published_at": "2026-11-17",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/102976/2122601783576444930/2122601783576444931/bin/2122601783576444932.bin",
+        "Fs": 1190480,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1124944,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1124944,
+            "partition_size": 8388608,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8388608,
+              "source_offset": 65536,
+              "copy_size": 1124944,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-17T09:53:55Z",
+            "etag": "\"2986B550C1C693863EA857A1D18F2CE6\"",
+            "last_modified": "Tue, 17 Nov 2026 08:04:36 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "p4"
   },
   {
     "_id": "1897200000000001403",
