@@ -18982,7 +18982,7 @@
     ],
     "author": "Domka",
     "github": "",
-    "download": 235,
+    "download": 236,
     "versions": [
       {
         "version": "1.16.1",
@@ -32108,7 +32108,7 @@
     ],
     "author": "sunshinexk",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 97,
+    "download": 99,
     "versions": [
       {
         "version": "1.16.1-zh",
@@ -40183,7 +40183,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 6367,
+    "download": 6368,
     "versions": [
       {
         "version": "v2.7.22",
@@ -40843,7 +40843,7 @@
     ],
     "author": "Jay-Jay",
     "github": "https://github.com/Jay-Jayismyname1/Cardputer-USB-ADV-",
-    "download": 88,
+    "download": 89,
     "versions": [
       {
         "version": "1",
@@ -43499,7 +43499,7 @@
     ],
     "author": "RLee2o3",
     "github": "https://github.com/RLee203/CardputerOS.git",
-    "download": 537,
+    "download": 538,
     "versions": [
       {
         "version": "2.4",
@@ -50745,7 +50745,7 @@
     ],
     "author": "Dlazder",
     "github": "https://github.com/Dlazder/m5stick_crystal_firmware",
-    "download": 1168,
+    "download": 1169,
     "versions": [
       {
         "version": "1.0.1",
@@ -61824,7 +61824,7 @@
     ],
     "author": "hedykan-0",
     "github": "https://github.com/hedykan/FeiyuOS",
-    "download": 72,
+    "download": 73,
     "versions": [
       {
         "version": "v0.5.3",
@@ -63149,11 +63149,11 @@
         "published_at": "2026-11-18",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/550539/1897200000000003035/2122924845719044098/bin/2122924845719044099.bin",
         "Fs": 3268704,
+        "as": 3203168,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 3203168,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -63294,7 +63294,7 @@
     ],
     "author": "sekibi",
     "github": "",
-    "download": 169,
+    "download": 170,
     "versions": [
       {
         "version": "1.0.0",
@@ -68444,7 +68444,7 @@
     ],
     "author": "LukasTrhan",
     "github": "",
-    "download": 3138,
+    "download": 3139,
     "versions": [
       {
         "version": "1.11.5",
@@ -88973,6 +88973,84 @@
     "esp": "s3"
   },
   {
+    "_id": "2122756958639308802",
+    "fid": "2122756958639308802",
+    "name": "M5GO/Core Basic ENV III/ENV PRO",
+    "description": "Turn your **M5GO kit** into a little weather station for your room!\n\nIt shows the **temperature, humidity, and air pressure**, and with the ENV Pro it also shows **air quality**. It draws graphs, and it can save everything to a memory card.\n\n## What you need\n- **M5GO kit** (Core Basic)\n- **ENV Pro** or **ENV III** sensor (you only need one)\n\n## How to plug it in\n- **Red plug (on the Core):** your ENV Pro or ENV III sensor. **This is the only one you need.**\n- **Black plug (on the bottom base):** the Hub, with the **Angle knob** and **RGB LED** plugged into it. *(optional)*\n- **Blue plug (on the bottom base):** the **Motion sensor**. *(optional)*\n- **Memory card slot (side of the Core):** a microSD card, 32GB or smaller. *(optional, for saving data)*\n\n## What the extras do\n- **Angle knob:** turn it to make the screen brighter or dimmer.\n- **Motion sensor:** the screen turns on when you walk by and turns off after 1 minute.\n- **RGB LED:** blinks **yellow** or **red** when the air or humidity isn't great.\n- **Lights on the base:** show how clean the air is (green = good).\n\n## Buttons\n- **Left:** see graphs\n- **Middle:** open the menu\n- **Right:** switch between \u00b0F and \u00b0C\n\nEach screen shows what the buttons do at the bottom.\n\n**Tip:** if you plug in a different sensor, it finds it on its own.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/214232/2122756958639308802/2122756958643503105/cover/2122756958643503107.png",
+    "category": "m5go",
+    "tags": [
+      "Sensors & Monitoring"
+    ],
+    "author": "pressxtogo",
+    "github": "",
+    "download": 2,
+    "versions": [
+      {
+        "version": "3.1",
+        "version_id": "2122875729513234433",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/214232/2122756958639308802/2122875729513234433/bin/2122875729513234434.bin",
+        "Fs": 4194304,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 635808,
+        "so": 2686976,
+        "ss": 1441792,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "m5go",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 635808,
+            "partition_size": 1310720,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1310720,
+              "source_offset": 65536,
+              "copy_size": 635808,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1441792,
+              "source": "firmware",
+              "source_offset": 2686976,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'spiffs' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 4231168,
+            "analyzed_at": "2026-11-18T07:27:22Z",
+            "etag": "\"C786B5C55F5F1FDCBCDAEE26C0AF2C19\"",
+            "last_modified": "Wed, 18 Nov 2026 02:13:10 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
+  },
+  {
     "_id": "1897200000000000943",
     "fid": "1897200000000000943",
     "name": "M5Gemini",
@@ -90420,7 +90498,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105593,
+    "download": 105595,
     "versions": [
       {
         "version": "2.4.10",
@@ -90826,7 +90904,7 @@
     ],
     "author": "ljnb666",
     "github": "https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
-    "download": 431,
+    "download": 435,
     "versions": [
       {
         "version": "2.9.1",
@@ -90889,7 +90967,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105593,
+    "download": 105595,
     "versions": [
       {
         "version": "2.4.10",
@@ -91295,7 +91373,7 @@
     ],
     "author": "ljnb666",
     "github": "https://github.com/bmorcelli/Launcher/wiki/Obtaining-binaries-to-launch",
-    "download": 431,
+    "download": 435,
     "versions": [
       {
         "version": "2.9.1",
@@ -100659,7 +100737,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/M5StickCPlus2-UserDemo",
-    "download": 21788,
+    "download": 21789,
     "versions": [
       {
         "version": "V0.1",
@@ -108355,7 +108433,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/justcallmekoko/ESP32Marauder",
-    "download": 42977,
+    "download": 42978,
     "versions": [
       {
         "version": "1.7.2",
@@ -115696,7 +115774,7 @@
     ],
     "author": "Fr4nx40",
     "github": "https://github.com/fr4nx40",
-    "download": 21,
+    "download": 22,
     "versions": [
       {
         "version": "1.0",
@@ -117740,7 +117818,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 53,
+    "download": 54,
     "versions": [
       {
         "version": "v999.0.0",
@@ -124229,6 +124307,81 @@
       }
     ],
     "esp": "32"
+  },
+  {
+    "_id": "2122905467292172290",
+    "fid": "2122905467292172290",
+    "name": "OXFord 6000 For M5 Stack Tab5",
+    "description": "Tab5 FSRS Vocabulary Trainer\nAn offline FSRS-6 vocabulary trainer for M5Stack Tab5 (ESP32-P4), built with ESP-IDF, C++, LVGL 9, SQLite, and the Tab5 Keyboard.\n\nThe app turns each vocabulary item into three independently scheduled cards:\n\nEnglish \u2192 Chinese recognition\nChinese \u2192 English recall\nDictation with letter-count blanks\nRecognition and recall use Again / Hard / Good / Easy. Dictation uses only Again / Good and accepts input from the physical Tab5 Keyboard.\n\n\nHardware\uff1a\nM5Stack Tab5, ESP32-P4, 16 MB Flash / 32 MB PSRAM\n5-inch 1280\u00d7720 IPS touch display\nES8388 audio codec\nRX8130CE RTC\nTab5 Keyboard over Ext.Port1\nFAT32 microSD card\n    \n \n## Note: The SD card must have the following directory structure at a minimum, or the app will fail to enter the learning interface upon startup:\n/database/oxford.db\n\n/audio/uk_audio_split_24m/\n\n/audio/us_audio_split_24m/",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2122669972490502146/2122905467292172290/2122905467296366593/cover/2122905467296366595.png",
+    "category": "tab5",
+    "tags": [
+      "Tools",
+      "Development & Learning"
+    ],
+    "author": "xbenben",
+    "github": "https://github.com/BigBenLabs/OXFord-6000-For-M5-Stack-Tab5",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v0.0.1",
+        "version_id": "2122905467296366593",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122669972490502146/2122905467292172290/2122905467296366593/bin/2122905467296366594.bin",
+        "Fs": 2362128,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2296592,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2296592,
+            "partition_size": 8388608,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8388608,
+              "source_offset": 65536,
+              "copy_size": 2296592,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 8323072,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-18T07:27:21Z",
+            "etag": "\"7F2D75B176F889D86C2944A72ECEA587\"",
+            "last_modified": "Wed, 18 Nov 2026 04:11:20 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "p4"
   },
   {
     "_id": "1897200000000001590",
@@ -131729,7 +131882,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/M5PaperDIY-UserDemo",
-    "download": 69,
+    "download": 70,
     "versions": [
       {
         "version": "v1.0",
@@ -136527,7 +136680,7 @@
     ],
     "author": "REZOR",
     "github": "https://github.com/therezor/pocket-apocalypse",
-    "download": 7,
+    "download": 8,
     "versions": [
       {
         "version": "1.0",
@@ -162983,7 +163136,7 @@
     ],
     "author": "LamZaakDok",
     "github": "https://github.com/LamZaakDok/sticks3-toolbox",
-    "download": 61,
+    "download": 62,
     "versions": [
       {
         "version": "1.0.1",
@@ -188122,6 +188275,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:54:18 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949518179647490",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2104482080746106881/2122949518179647490/bin/2122949518179647491.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 3954416,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "core-matrix",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3954416,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 3954416,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:22Z",
+            "etag": "\"1BA99D7EF1D7E65C4AA1541463FE1393\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:22 GMT"
+          }
+        }
       }
     ],
     "esp": "c61"
@@ -192315,6 +192540,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:53:55 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949414366429186",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000718/2122949414366429186/bin/2122949414366429187.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5222768,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5222768,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5222768,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:22Z",
+            "etag": "\"20FACC4158AE31AEE97BA3A681D3FBC8\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:57 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -196436,6 +196733,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:52:46 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949075441500161",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002050/2122949075441500161/bin/2122949075441500162.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4928112,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "air-quality",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4928112,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 4928112,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:22Z",
+            "etag": "\"8D377819CAE7121BED126567CFBEF8B4\"",
+            "last_modified": "Wed, 18 Nov 2026 07:04:37 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -197963,6 +198332,78 @@
             "analyzed_at": "2026-11-05T19:05:49Z",
             "etag": "\"29C5350C89FAC664728CCEC22FC472F3\"",
             "last_modified": "Fri, 30 Oct 2026 04:52:52 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949101580402689",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000775/2122949101580402689/bin/2122949101580402690.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5290352,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5290352,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5290352,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:22Z",
+            "etag": "\"37D913C68B32A50DE2D93C09B4442DEF\"",
+            "last_modified": "Wed, 18 Nov 2026 07:04:43 GMT"
           }
         }
       }
@@ -201581,6 +202022,65 @@
             "last_modified": "Fri, 30 Oct 2026 04:52:57 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949122090549250",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002571/2122949122090549250/bin/2122949122090549251.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3566464,
+        "fo": 3657728,
+        "fs": 528384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-lite",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3566464,
+            "partition_size": 3592192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3592192,
+              "source_offset": 65536,
+              "copy_size": 3566464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 528384,
+              "source": "firmware",
+              "source_offset": 3657728,
+              "copy_size": 528384,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:22Z",
+            "etag": "\"69E26A6C2169095859398613F4DD7514\"",
+            "last_modified": "Wed, 18 Nov 2026 07:04:48 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -204900,6 +205400,65 @@
             "analyzed_at": "2026-11-05T19:05:47Z",
             "etag": "\"E9A833813D2F7DD5523C68ECA26CA9AF\"",
             "last_modified": "Fri, 30 Oct 2026 04:53:02 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949144702042114",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2099000000000000002/2122949144702042114/bin/2122949144702042115.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3566464,
+        "fo": 3657728,
+        "fs": 528384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-matrix",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3566464,
+            "partition_size": 3592192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3592192,
+              "source_offset": 65536,
+              "copy_size": 3566464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 528384,
+              "source": "firmware",
+              "source_offset": 3657728,
+              "copy_size": 528384,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:22Z",
+            "etag": "\"0A6CBB00F04784F00FF43FB36A281F62\"",
+            "last_modified": "Wed, 18 Nov 2026 07:04:53 GMT"
           }
         }
       }
@@ -209383,6 +209942,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:53:08 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949173709848577",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002444/2122949173709848577/bin/2122949173709848578.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5238448,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5238448,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5238448,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"39E8738BFDD117CF611FDEDA21EFDAFC\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:00 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -213648,6 +214279,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:53:14 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949193527934978",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2099000000000000004/2122949193527934978/bin/2122949193527934979.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5222480,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3-lite",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5222480,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5222480,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"E7041B70D634C1C282F97FED7D8556AC\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:05 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -216977,6 +217680,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:53:20 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949224620310530",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001772/2122949224620310530/bin/2122949224620310531.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4917552,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4917552,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 4917552,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"B880A0741709BFCCDCD493A7FDA4F9BD\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:12 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -219296,6 +220071,78 @@
             "analyzed_at": "2026-11-05T19:05:58Z",
             "etag": "\"2898B70692CD2439B2C61BB7B563C1C5\"",
             "last_modified": "Fri, 30 Oct 2026 04:53:25 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949254232096769",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000003117/2122949254232096769/bin/2122949254232096770.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5380032,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5380032,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5380032,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"222264B0D1EBE6A5CC48F25C8161DC38\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:19 GMT"
           }
         }
       }
@@ -223489,6 +224336,78 @@
             "analyzed_at": "2026-11-05T19:05:58Z",
             "etag": "\"965E29A85ABE585A0745F0DEF6A70116\"",
             "last_modified": "Fri, 30 Oct 2026 04:53:31 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949279855099906",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2099000000000000005/2122949279855099906/bin/2122949279855099907.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5202464,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5202464,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5202464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"ED1342AC5535FEC1776D3ED1C60D8C6A\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:25 GMT"
           }
         }
       }
@@ -227832,6 +228751,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:53:49 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949364861059073",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000709/2122949364861059073/bin/2122949364861059074.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5202368,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "capsule",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5202368,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5202368,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"241B83E42548E041BDB1C247E1C7A5F9\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:46 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -227848,7 +228839,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 303,
+    "download": 304,
     "versions": [
       {
         "version": "v2.3.5",
@@ -229433,6 +230424,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:54:01 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949439364481025",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000936/2122949439364481025/bin/2122949439364481026.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5244000,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5244000,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5244000,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"C22D9B313AB222852662A2EB0E076B8D\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:03 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -230905,6 +231968,78 @@
             "analyzed_at": "2026-11-05T19:06:07Z",
             "etag": "\"DDF66FF7B415D387FC4E6953AD43CA12\"",
             "last_modified": "Fri, 30 Oct 2026 04:54:42 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949576170094593",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002911/2122949576170094593/bin/2122949576170094594.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5202464,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "chain-dualkey",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5202464,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5202464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:23Z",
+            "etag": "\"6123428220A1BA8D07E5113BC8454C51\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:36 GMT"
           }
         }
       }
@@ -238168,6 +239303,137 @@
             "last_modified": "Fri, 30 Oct 2026 04:53:43 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5-16MB",
+        "version_id": "2122949314256781313",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000786/2122949314256781313/bin/2122949314256781314.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5288864,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "core-series",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5288864,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 5288864,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"E97FD5E9E4DEE69D348767243F75ED21\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:33 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5-4MB",
+        "version_id": "2122949343558189058",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000786/2122949343558189058/bin/2122949343558189059.bin",
+        "Fs": 4190208,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3666480,
+        "fo": 3743744,
+        "fs": 446464,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "core-series",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3666480,
+            "partition_size": 3678208,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3678208,
+              "source_offset": 65536,
+              "copy_size": 3666480,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 446464,
+              "source": "firmware",
+              "source_offset": 3743744,
+              "copy_size": 446464,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4227072,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"DE48F526A68560992C81BF6B23F46612\"",
+            "last_modified": "Wed, 18 Nov 2026 07:05:40 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -242721,6 +243987,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:54:07 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949474026209282",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000003470/2122949474026209282/bin/2122949474026209283.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 6378912,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "core2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 6378912,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 6378912,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"842B5EF60F37CC8B821E434F54831312\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:12 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -246040,6 +247378,65 @@
             "analyzed_at": "2026-11-05T19:06:17Z",
             "etag": "\"FCB41CB7A967DFB2EFE7487360DB8CFF\"",
             "last_modified": "Fri, 30 Oct 2026 04:54:12 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949496000167938",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001513/2122949496000167938/bin/2122949496000167939.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3564256,
+        "fo": 3657728,
+        "fs": 528384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "coreink",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3564256,
+            "partition_size": 3592192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3592192,
+              "source_offset": 65536,
+              "copy_size": 3564256,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 528384,
+              "source": "firmware",
+              "source_offset": 3657728,
+              "copy_size": 528384,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"63DE8ACB7EF4681C6F9EBC1CF800BA5B\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:17 GMT"
           }
         }
       }
@@ -255756,6 +257153,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:54:36 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949556503003138",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000874/2122949556503003138/bin/2122949556503003139.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5223776,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "dinmeter",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5223776,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5223776,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"0FED2FCEBE2702C9184D6823D52F6FEE\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:31 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -260019,6 +261488,78 @@
             "analyzed_at": "2026-11-05T19:07:00Z",
             "etag": "\"9180564A502E7388B5B41ACDECB8DF34\"",
             "last_modified": "Fri, 30 Oct 2026 04:54:48 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949597049339905",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000003412/2122949597049339905/bin/2122949597049339906.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 6339712,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "fire",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 6339712,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 6339712,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"9CC49EA25B9A2EB6FDBE353AB45FDA78\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:41 GMT"
           }
         }
       }
@@ -264358,6 +265899,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:54:31 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949537481834498",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000879/2122949537481834498/bin/2122949537481834499.bin",
+        "Fs": 8388608,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 6598624,
+        "fo": 6750208,
+        "fs": 851968,
+        "fo2": 7602176,
+        "fs2": 786432,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "dial",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 6598624,
+            "partition_size": 6684672,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6684672,
+              "source_offset": 65536,
+              "copy_size": 6598624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 851968,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 851968,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 786432,
+              "source": "firmware",
+              "source_offset": 7602176,
+              "copy_size": 786432,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"29D2AFFE20CECED957716109DCCE2FE2\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:27 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -268480,6 +270093,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:55:00 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949643413176321",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002120/2122949643413176321/bin/2122949643413176322.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4881808,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4881808,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 4881808,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"55E8AB7D4C12A7732D780A99226DA5C5\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:52 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -272529,6 +274214,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:56:26 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949975908237314",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001469/2122949975908237314/bin/2122949975908237315.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5186416,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "station",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5186416,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 5186416,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"42B09F2610B9266F8B2025FD3B3F7C03\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:11 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -274906,6 +276663,65 @@
             "last_modified": "Fri, 30 Oct 2026 04:54:54 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949615055486978",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001159/2122949615055486978/bin/2122949615055486979.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3535888,
+        "fo": 3657728,
+        "fs": 528384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "nanoc6",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3535888,
+            "partition_size": 3592192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3592192,
+              "source_offset": 65536,
+              "copy_size": 3535888,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 528384,
+              "source": "firmware",
+              "source_offset": 3657728,
+              "copy_size": 528384,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:24Z",
+            "etag": "\"F444457EB7FFD4D253E231286DE4C07D\"",
+            "last_modified": "Wed, 18 Nov 2026 07:06:45 GMT"
+          }
+        }
       }
     ],
     "esp": "c6"
@@ -276145,6 +277961,78 @@
             "analyzed_at": "2026-11-05T19:06:47Z",
             "etag": "\"D461C55354F7610BDD4EEF36151F2666\"",
             "last_modified": "Fri, 30 Oct 2026 04:57:27 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950196969029633",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002638/2122950196969029633/bin/2122950196969029634.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5243808,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "arduino-nesso-n1",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5243808,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 5243808,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"46FC6AE1E5AC46105690429915694C3E\"",
+            "last_modified": "Wed, 18 Nov 2026 07:09:04 GMT"
           }
         }
       }
@@ -279409,6 +281297,65 @@
             "last_modified": "Fri, 30 Oct 2026 04:55:43 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949787491713026",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002849/2122949787491713026/bin/2122949787491713027.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3546928,
+        "fo": 3657728,
+        "fs": 528384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stamp-pico",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3546928,
+            "partition_size": 3592192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3592192,
+              "source_offset": 65536,
+              "copy_size": 3546928,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 528384,
+              "source": "firmware",
+              "source_offset": 3657728,
+              "copy_size": 528384,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"72A0EDDBBAA56783A37EC103827298C0\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:26 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -280146,6 +282093,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:55:12 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949696710197249",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002033/2122949696710197249/bin/2122949696710197250.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4886352,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-color",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4886352,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 4886352,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"82630CE1AAA45E13E0BF8DDC35A8AB5A\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:05 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -280305,6 +282324,78 @@
             "analyzed_at": "2026-11-05T19:06:55Z",
             "etag": "\"BBD083F35F2A41CB5BD214BF7D0FC0C7\"",
             "last_modified": "Fri, 30 Oct 2026 04:55:18 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949726909186050",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2110563172188712962/2122949726909186050/bin/2122949726909186051.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4882288,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4882288,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 4882288,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"CB167D690480F73CFB488878CCE6C31A\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:12 GMT"
           }
         }
       }
@@ -280612,6 +282703,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:55:25 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949752049844225",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2089633464953118721/2122949752049844225/bin/2122949752049844226.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4987424,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-mono",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4987424,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 4987424,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"4AFD45B07E4C13DD025F54F19B3629CA\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:18 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -280629,7 +282792,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 3756,
+    "download": 3757,
     "versions": [
       {
         "version": "v2.2.0-hotfix",
@@ -283510,6 +285673,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:55:06 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122953662202331137",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000284/2122953662202331137/bin/2122953662202331138.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4907376,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4907376,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 4907376,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"EA1BED870ECBE9CE6E4F9C006CD97EB5\"",
+            "last_modified": "Wed, 18 Nov 2026 07:22:50 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -285039,6 +287274,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:55:31 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949770169237505",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001183/2122949770169237505/bin/2122949770169237506.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4883536,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "powerhub",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4883536,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 4883536,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"425FB0845C564B0655E050ACC6BF5443\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:22 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -286093,7 +288400,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 1889,
+    "download": 1890,
     "versions": [
       {
         "version": "v2.2.3",
@@ -288686,6 +290993,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:55:54 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949834350477314",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001222/2122949834350477314/bin/2122949834350477315.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5244848,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stamp-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5244848,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5244848,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"4B781D28DEBFA8704AC02A91F1BAF68B\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:37 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -289055,6 +291434,65 @@
             "analyzed_at": "2026-11-05T19:07:12Z",
             "etag": "\"B13AB284A75F9AE00A0F59BEE291CA76\"",
             "last_modified": "Fri, 30 Oct 2026 04:55:48 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949805896318978",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001048/2122949805896318978/bin/2122949805896318979.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3705680,
+        "fo": 3805184,
+        "fs": 380928,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stamp-c5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3705680,
+            "partition_size": 3739648,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3739648,
+              "source_offset": 65536,
+              "copy_size": 3705680,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 380928,
+              "source": "firmware",
+              "source_offset": 3805184,
+              "copy_size": 380928,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:25Z",
+            "etag": "\"9BE8C75E13841D7005F3902E51F323B9\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:31 GMT"
           }
         }
       }
@@ -289864,6 +292302,78 @@
             "analyzed_at": "2026-11-05T19:07:18Z",
             "etag": "\"11DD8D67F3D48A5446B7D24DDBDF12B1\"",
             "last_modified": "Fri, 30 Oct 2026 04:56:19 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949948246802433",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001079/2122949948246802433/bin/2122949948246802434.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5439104,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stamp-p4",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5439104,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 5439104,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"68D7CAC82583B9F30F932526BA65759A\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:05 GMT"
           }
         }
       }
@@ -293987,6 +296497,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:56:00 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949858195095553",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000020/2122949858195095553/bin/2122949858195095554.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5202464,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stamp-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5202464,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5202464,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"610F702909FF75C448573C3EE1299594\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:43 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -294650,6 +297232,78 @@
             "analyzed_at": "2026-11-05T19:07:22Z",
             "etag": "\"F78CB68C11B2D97D8E3F8CAAF7521EF8\"",
             "last_modified": "Fri, 30 Oct 2026 04:56:06 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949882232651778",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000003091/2122949882232651778/bin/2122949882232651779.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5360720,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stamp-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5360720,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 5360720,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"B03B8A4A3210D0A46C22FC2AA1642774\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:49 GMT"
           }
         }
       }
@@ -297617,6 +300271,65 @@
             "analyzed_at": "2026-11-05T19:07:24Z",
             "etag": "\"A1AE90229189D529B542A599EEE03A2F\"",
             "last_modified": "Fri, 30 Oct 2026 04:56:31 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950005327085569",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002182/2122950005327085569/bin/2122950005327085570.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3568656,
+        "fo": 3657728,
+        "fs": 528384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3568656,
+            "partition_size": 3592192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3592192,
+              "source_offset": 65536,
+              "copy_size": 3568656,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 528384,
+              "source": "firmware",
+              "source_offset": 3657728,
+              "copy_size": 528384,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"B5EFC7FFD67D2B1282E019AF360FB03C\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:18 GMT"
           }
         }
       }
@@ -300643,6 +303356,65 @@
             "analyzed_at": "2026-11-05T19:07:26Z",
             "etag": "\"C7B85DA508926CE4DF6906E66E149AD3\"",
             "last_modified": "Fri, 30 Oct 2026 04:56:37 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950031046557698",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000003037/2122950031046557698/bin/2122950031046557699.bin",
+        "Fs": 4186112,
+        "s": 0,
+        "f": 1,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3563968,
+        "fo": 3657728,
+        "fs": 528384,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3563968,
+            "partition_size": 3592192,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3592192,
+              "source_offset": 65536,
+              "copy_size": 3563968,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 528384,
+              "source": "firmware",
+              "source_offset": 3657728,
+              "copy_size": 528384,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 4222976,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"A91987A49B0A8A52BFE8B82BD250DCA5\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:24 GMT"
           }
         }
       }
@@ -304836,6 +307608,78 @@
             "analyzed_at": "2026-11-05T19:07:33Z",
             "etag": "\"EB400B0BE86CBC1359B437D6381BDD2A\"",
             "last_modified": "Fri, 30 Oct 2026 04:56:43 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950056795389954",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000000742/2122950056795389954/bin/2122950056795389955.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 4928624,
+        "fo": 5574656,
+        "fs": 1048576,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 4928624,
+            "partition_size": 5509120,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5509120,
+              "source_offset": 65536,
+              "copy_size": 4928624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 5574656,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"BA43A15BE3879EDB84B9F1358935819A\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:31 GMT"
           }
         }
       }
@@ -309698,6 +312542,91 @@
             "last_modified": "Fri, 30 Oct 2026 04:57:01 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950087187316737",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002379/2122950087187316737/bin/2122950087187316738.bin",
+        "Fs": 16121856,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 8188048,
+        "fo": 10092544,
+        "fs": 1048576,
+        "fo2": 11141120,
+        "fs2": 4980736,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 8188048,
+            "partition_size": 10027008,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 10027008,
+              "source_offset": 65536,
+              "copy_size": 8188048,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 10092544,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 4980736,
+              "source": "firmware",
+              "source_offset": 11141120,
+              "copy_size": 4980736,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 655360,
+              "source": "firmware",
+              "source_offset": 16121856,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [
+              "Data partition 'storage' (spiffs) has no content; copy_size set to 0."
+            ],
+            "bytes_downloaded_for_analysis": 16158720,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"BEC19A5200FD911926856B5F0337B3FE\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:38 GMT"
+          }
+        }
       }
     ],
     "esp": "p4"
@@ -313891,6 +316820,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:57:08 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950124407570434",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2099000000000000006/2122950124407570434/bin/2122950124407570435.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 6378624,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 6378624,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 6378624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"A8956CF5705BC4F8515BF95A776E6891\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:47 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
@@ -314050,6 +317051,78 @@
             "analyzed_at": "2026-11-05T19:07:49Z",
             "etag": "\"6AF301FA2FDDB6A95DABD62C33636E35\"",
             "last_modified": "Fri, 30 Oct 2026 04:57:15 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950150349340673",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/2104414213652606978/2122950150349340673/bin/2122950150349340674.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 6579216,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tough-c5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 6579216,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 6579216,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"CCDF902A0D0319E1225508E39FD5DE6A\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:53 GMT"
           }
         }
       }
@@ -315653,6 +318726,78 @@
             "last_modified": "Fri, 30 Oct 2026 04:57:21 GMT"
           }
         }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122950174995070977",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000002059/2122950174995070977/bin/2122950174995070978.bin",
+        "Fs": 8384512,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 5694096,
+        "fo": 5836800,
+        "fs": 786432,
+        "fo2": 6623232,
+        "fs2": 1761280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "unit-c6l",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5694096,
+            "partition_size": 5771264,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 5771264,
+              "source_offset": 65536,
+              "copy_size": 5694096,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 786432,
+              "source": "firmware",
+              "source_offset": 5836800,
+              "copy_size": 786432,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 1761280,
+              "source": "firmware",
+              "source_offset": 6623232,
+              "copy_size": 1761280,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8421376,
+            "analyzed_at": "2026-11-18T07:27:26Z",
+            "etag": "\"AEF6DA8C24174D8592FF2D0D9FFCAAA2\"",
+            "last_modified": "Wed, 18 Nov 2026 07:08:59 GMT"
+          }
+        }
       }
     ],
     "esp": "c6"
@@ -316388,6 +319533,78 @@
             "analyzed_at": "2026-11-05T19:07:56Z",
             "etag": "\"82FA930CC2C2D6020DA1BEF999B6FA7A\"",
             "last_modified": "Fri, 30 Oct 2026 04:56:13 GMT"
+          }
+        }
+      },
+      {
+        "version": "v2.5.5",
+        "version_id": "2122949913895452673",
+        "published_at": "2026-11-18",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/1/1897200000000001729/2122949913895452673/bin/2122949913895452674.bin",
+        "Fs": 16773120,
+        "s": 0,
+        "f": 1,
+        "f2": 1,
+        "ao": 65536,
+        "as": 7242560,
+        "fo": 7471104,
+        "fs": 1048576,
+        "fo2": 8519680,
+        "fs2": 8253440,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "unit-poe-p4",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 7242560,
+            "partition_size": 7405568,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 7405568,
+              "source_offset": 65536,
+              "copy_size": 7242560,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "sys",
+              "role": "fat",
+              "size": 1048576,
+              "source": "firmware",
+              "source_offset": 7471104,
+              "copy_size": 1048576,
+              "required": true
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "vfs",
+              "role": "fat",
+              "size": 8253440,
+              "source": "firmware",
+              "source_offset": 8519680,
+              "copy_size": 8253440,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 16809984,
+            "analyzed_at": "2026-11-18T07:27:27Z",
+            "etag": "\"5B11D3C1D50DE5357BAE39D1B9E52964\"",
+            "last_modified": "Wed, 18 Nov 2026 07:07:56 GMT"
           }
         }
       }
@@ -365662,7 +368879,7 @@
     ],
     "author": "kvx17",
     "github": "https://github.com/kvx17/m5paperWeather-Calendar",
-    "download": 30,
+    "download": 31,
     "versions": [
       {
         "version": "v1.1",
@@ -372877,7 +376094,7 @@
     ],
     "author": "hackazillarex",
     "github": "https://github.com/Hackazillarex/zillastick-s3",
-    "download": 109,
+    "download": 110,
     "versions": [
       {
         "version": "v1.0.0-beta",
