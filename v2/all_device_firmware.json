@@ -5141,7 +5141,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/isonimus/adversary",
-    "download": 214,
+    "download": 215,
     "versions": [
       {
         "version": "v0.2.0",
@@ -5598,6 +5598,63 @@
             "last_modified": "Thu, 12 Nov 2026 21:32:13 GMT"
           }
         }
+      },
+      {
+        "version": "0.10.0",
+        "version_id": "2123082532763156481",
+        "published_at": "2026-11-19",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2105575233919787009/2123082532763156481/bin/2123082532763156482.bin",
+        "Fs": 2587024,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2521488,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2521488,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 2521488,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-19T01:39:00Z",
+            "etag": "\"13ABC8D4FB18B9EB393F073A0C3CA840\"",
+            "last_modified": "Wed, 18 Nov 2026 15:54:55 GMT"
+          }
+        }
       }
     ],
     "esp": "s3"
@@ -6027,11 +6084,11 @@
         "published_at": "2026-11-19",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/416877/2109595931687284737/2123082338470412290/bin/2123082338470412291.bin",
         "Fs": 2587024,
+        "as": 2521488,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 2521488,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -54556,7 +54613,7 @@
     ],
     "author": "ValleytechSolutions",
     "github": "https://valleytech-dragon-detector.pages.dev/",
-    "download": 20,
+    "download": 21,
     "versions": [
       {
         "version": "0.13.27",
@@ -76626,6 +76683,86 @@
     "esp": "s3"
   },
   {
+    "_id": "2122998139004600322",
+    "fid": "2122998139004600322",
+    "name": "Intercom_StickS3",
+    "description": "# StickS3 Intercom (portable unit)\n\nESP-NOW intercom firmware for the **M5Stack StickS3**. Pair it with the\n`AtomS3R-Intercom` project running on an AtomS3R + Atomic Voice Base.\n\n## Features\n\n- Live push-to-talk audio between boards (16 kHz mono, IMA ADPCM).\n- Clip mode: record up to 15 s, then transmit it at 1x real time.\n- Automatic peer discovery and online/offline indication.\n- Works with any mix of StickS3 and AtomS3R units on the same ESP-NOW\n  channel: multiple StickS3 units, multiple AtomS3R units, or a mix of both\n  can share one intercom network. It is not limited to a single StickS3 and\n  a single AtomS3R.\n- Browser peers: when Wi-Fi is connected, the firmware serves a web client over\n  HTTPS, so any phone, tablet or PC with a web browser and a microphone can\n  join the intercom network as another peer.\n- Transport flexibility: audio can travel over ESP-NOW or local Wi-Fi. A unit\n  connected to Wi-Fi and a unit using only ESP-NOW can still communicate; the\n  transport manager coordinates peers across both.\n- Peer selection and monitoring: target `ALL` (broadcast) or individual peers;\n  spy mode lets one peer listen through and record a clip on another peer's\n  microphone; volume and mute controls are available.\n- 135x240 UI with peer name, mode, state, VU meter and battery.\n- Audio buffers and the UI sprite live in PSRAM.\n\n## Hardware\n\n| Item | Detail |\n| --- | --- |\n| Board | M5Stack StickS3 |\n| MCU | ESP32-S3-PICO-1-N8R8, 8 MB flash, 8 MB PSRAM |\n| Codec | ES8311 + AW8737 PA |\n| I2C | SDA 48, SCL 47 |\n| Speaker I2S | MCLK 18, BCK 17, WS 15, DOUT 14, `I2S_NUM_0` |\n| Mic I2S | MCLK 18, BCK 17, WS 15, DIN 16, `I2S_NUM_1` |\n| Buttons | BtnA (G11), BtnB (G12) |\n\nM5Unified config used by the controller firmware:\n\n```cpp\ncfg.internal_mic = true;\ncfg.internal_spk = true;\nM5.begin(cfg);\nM5.Speaker.end();  // disable the AW8737 PA; the controller never plays audio\n```\n\nThe StickS3 has separate I2S ports for the microphone and speaker, but both are\nwired to the same **ES8311** codec. M5Stack's StickS3 microphone example\nexplicitly turns the speaker off before starting the mic because the codec\ncannot run capture and playback at the same time. The M5PM1 also exposes the\nspeaker amplifier power as a GPIO (`M5.Speaker.begin()` enables the AW8737 PA,\n`M5.Speaker.end()` disables it). M5Stack documents the same requirement for the\nIR receiver, which also needs the amplifier off.\n\nM5Stack's StickS3 product page notes that **early batches may produce slight\nabnormal noise after startup**. The controller does not play audio at all, so it\nkeeps the PA disabled from boot and again before every capture; this removes\nthe idle hiss/whistle that the shared codec and amplifier can otherwise inject\ninto the recording.\n\n## Build and flash\n\nClone this repository with its shared-library submodule:\n\n```sh\ngit clone --recurse-submodules https://github.com/Robot-icist/StickS3-Intercom.git\n```\n\nIf it was cloned without submodules, run `git submodule update --init\n--recursive` from the repository directory. Then, from this directory:\n\n```powershell\nC:\\Users\\Gille\\.platformio\\penv\\Scripts\\pio.exe run\nC:\\Users\\Gille\\.platformio\\penv\\Scripts\\pio.exe run -t upload\n```\n\nThen build and flash `..\\AtomS3R-Intercom` the same way.\n\n# IntercomShared\n\nShared firmware library for the **AtomS3R Intercom** (base station) and\n**StickS3 Intercom** (portable unit). Both projects compile this library from\nthe sibling `IntercomShared` directory via `lib_extra_dirs`.\n\n## Modules\n\n| File | Purpose |\n| --- | --- |\n| `IntercomConfig.h` | Board selection, audio/protocol constants, per-board flags. |\n| `IntercomTypes.h` | Wire packet structs, `Mode`/`State` enums, UI state, helpers. |\n| `AdpcmCodec.*` | IMA ADPCM 4-bit encoder/decoder with predictor/index state. |\n| `SampleRing.*` | Thread-safe int16 ring buffer, PSRAM-first allocation, drop-oldest. |\n| `AudioEngine.*` | M5Unified mic/speaker wrapper, half-duplex switching, play buffers. |\n| `Transport.*` | ESP-NOW and WiFi transports, peer discovery, transport selection. |\n| `EspNowLink.*` | Legacy ESP-NOW helper, not used by `IntercomApp`. |\n| `IntercomUi.*` | Canvas/sprite UI for 128x128 and 135x240 displays. |\n| `IntercomApp.*` | Application state machine and the TX/RX/playback tasks. |\n\n## Audio format\n\n- 16 kHz, mono, signed 16-bit PCM.\n- 20 ms frames: 320 samples -> 160 bytes of IMA ADPCM.\n- One ESP-NOW packet per frame (10-byte header + 160-byte payload).\n\nThe packet header carries the ADPCM predictor and step index **at the start of\nthe frame**, so every packet decodes independently even if earlier packets are\nlost.\n\n## Protocol\n\n| Type | Direction | Payload |\n| --- | --- | --- |\n| `Hello` | Broadcast every 1 s | Battery, mode, unique device name (16 bytes). |\n| `Audio` | Selected peer(s) or broadcast | ADPCM frame. |\n| `Spy` | Unicast to one peer | Live/clip start, stop, done, busy. |\n\n- Fixed Wi-Fi channel `1`.\n- A peer is considered online for 5 s after the last valid packet.\n- Audio uses a PSRAM jitter buffer (~6 s) with a 100 ms prebuffer.\n- Clip mode records up to 15 s to PSRAM and sends it at 1x real time.\n- Device names get a short MAC suffix, so identical boards stay distinguishable.\n- Receive-only peers (no microphone, e.g. the ATOM Lite speaker) set the\n  `ReceiveOnly` Hello flag; spy mode skips them.\n\n## Modes\n\n| Mode | Controls |\n| --- | --- |\n| `LIVE` | Hold A to talk to the selected peer(s). |\n| `CLIP` | Click A to record, click again to send. |\n| `SPY` | Hold A to listen through the selected peer's mic, click A to record a clip on it. Spy requires exactly one peer. |\n| `PEER` | Click A to toggle the highlighted peer, hold A to move through `ALL` and the peer list. |\n| `VOL` | Click A up, hold A down. |\n\nDouble-click A cycles modes. `ALL` broadcasts, so every peer hears Live and Clip\naudio, including receive-only speakers. Individual selections can include several\npeers. A spy clip is recorded on the remote unit and played back on the controller.\n\n## Thread model\n\n| Task | Core | Priority | Responsibility |\n| --- | --- | --- | --- |\n| `txTask` | 0 | 4 | Mic capture, live encode/send, clip record, paced clip send. |\n| `rxTask` | 0 | 3 | Receive, ADPCM decode, jitter-buffer fill. |\n| `playTask` | 0 | 3 | Jitter-buffer read, speaker playback. |\n\n`loop()` runs on the Arduino task and handles buttons, peer/battery polling and\nthe UI refresh (100 ms).\n\n## Build integration\n\nEach firmware project includes this repository as a Git submodule at\n`lib/IntercomShared`. Clone either project with its submodules:\n\n```sh\ngit clone --recurse-submodules https://github.com/Robot-icist/StickS3-Intercom.git\ngit clone --recurse-submodules https://github.com/Robot-icist/AtomS3R-Intercom.git\n```\n\nIf a project was cloned without submodules, initialize them with:\n\n```sh\ngit submodule update --init --recursive\n```\n\nPlatformIO uses the shared library from `lib/IntercomShared` and its M5Unified\npatch script. Each project also sets:\n\n```ini\nlib_extra_dirs = lib\nlib_deps = m5stack/M5Unified@0.2.28\n```\n\nand defines one board flag:\n\n- `-DINTERCOM_BOARD_ATOMS3R`\n- `-DINTERCOM_BOARD_STICKS3`\n\n`IntercomConfig.h` uses those flags to select the audio port sharing policy and\nthe UI canvas memory type.\n\n## Transport and web intercom\n\nAudio can travel over ESP-NOW or local Wi-Fi. A unit connected to Wi-Fi and a\nunit using only ESP-NOW can still communicate; the transport manager\ncoordinates peers across both.\n\n## Web intercom\n\n![Intercom web client](./screenshots/intercom-web-client.png)\n\nWhen Wi-Fi is connected, the device serves the web client over HTTPS on port\n443. Open `https://<device-name>-web.local/` (or the device's HTTPS IP address)\nand accept the self-signed certificate in the browser. The certificate and key\nare generated on the device and persisted in NVS; a changed network IP may\nrequire accepting the renewed certificate. The browser microphone requires\nthis trusted secure connection before granting `getUserMedia` access. Up to\nthree browser WebSocket clients can connect at once; each appears as a peer\nwith its own identity and selectable audio/spy target. Browser peers are\nannounced to other web clients and ESP units, and unicast audio is routed\nthrough the connected ESP to the selected browser only. The browser supports\nspy audio in either direction while the page remains connected.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2122994642444042241/2122998139004600322/2122998139004600323/cover/2122998139004600325.png",
+    "category": "sticks3",
+    "tags": [
+      "Network & Communication",
+      "IoT & Automation",
+      "Sensors & Monitoring",
+      "Audio & Media",
+      "Development & Learning"
+    ],
+    "author": "rob_oticist",
+    "github": "https://github.com/Robot-icist/StickS3-Intercom",
+    "download": 4,
+    "versions": [
+      {
+        "version": "1.0.2",
+        "version_id": "2123022478282276866",
+        "published_at": "2026-11-19",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122994642444042241/2122998139004600322/2123022478282276866/bin/2123022478282276867.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1520016,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1520016,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1520016,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 1572864,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-19T01:39:02Z",
+            "etag": "\"4A7FDEF739901F64B28477E006EE0B70\"",
+            "last_modified": "Wed, 18 Nov 2026 11:56:17 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000003205",
     "fid": "1897200000000003205",
     "name": "IrRemoteController",
@@ -81025,11 +81162,11 @@
         "published_at": "2026-11-19",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/116131/2118003706700595201/2123069225243197442/bin/2123069225243197443.bin",
         "Fs": 1907728,
+        "as": 1842192,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1842192,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -106093,7 +106230,7 @@
     ],
     "author": "sanchitminda",
     "github": "https://github.com/sanchitminda/MP3PlayerForM5Cardputer",
-    "download": 13931,
+    "download": 13932,
     "versions": [
       {
         "version": "1.1",
@@ -145417,7 +145554,7 @@
     ],
     "author": "cyber.Ripley",
     "github": "https://github.com/2d-ripley/RipleyBook-DualS3-Flasher",
-    "download": 5,
+    "download": 6,
     "versions": [
       {
         "version": "V3.0.0",
@@ -145473,6 +145610,63 @@
             "analyzed_at": "2026-11-17T02:08:47Z",
             "etag": "\"636EC4BF674356DC02F86A8AEFA1D7D3\"",
             "last_modified": "Sat, 14 Nov 2026 20:29:59 GMT"
+          }
+        }
+      },
+      {
+        "version": "v3.0.1",
+        "version_id": "2123035906757574658",
+        "published_at": "2026-11-19",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/290787/2121702204039446530/2123035906757574658/bin/2123035906757574659.bin",
+        "Fs": 6375648,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 6310112,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 6310112,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 6310112,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-19T01:39:00Z",
+            "etag": "\"975782E91638DBB7F7718458157F9E24\"",
+            "last_modified": "Wed, 18 Nov 2026 12:49:39 GMT"
           }
         }
       }
@@ -166745,7 +166939,7 @@
     ],
     "author": "dabidesu",
     "github": "https://github.com/dcarnicer/trmnl-paperdiy",
-    "download": 2,
+    "download": 3,
     "versions": [
       {
         "version": "1.8.20-1",
@@ -170977,11 +171171,11 @@
         "published_at": "2026-11-19",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2123110911344328705/bin/2123110911344328706.bin",
         "Fs": 1689808,
+        "as": 1624272,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1624272,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -171225,11 +171419,11 @@
         "published_at": "2026-11-19",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2123110911344328705/bin/2123110911344328706.bin",
         "Fs": 1689808,
+        "as": 1624272,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1624272,
         "install": {
           "schema": 1,
           "format": "merged",
