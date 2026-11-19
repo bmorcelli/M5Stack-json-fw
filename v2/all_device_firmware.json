@@ -2029,7 +2029,7 @@
     "_id": "2119398094133698562",
     "fid": "2119398094133698562",
     "name": "AD Arcade",
-    "description": "<p><strong>AD Arcade for M5StickC Plus2</strong></p><blockquote>https://github.com/ADdevx/AD-Arcade-M5StickCPlus2</blockquote><p><br><em>A mini arcade console for your M5StickC Plus2. It comes with 17 games, a music player and a simple menu. Flash it, press a button and start playing.</em><br><br><strong>Games</strong><br>Chrome Dino, Flap Bird, Meteors, Maze, Breakout, Invaders, Slalom, Stack, Racing, Flight, River, Fish, Tetris, Snake and Lunar Lander.<br><br><strong>Features</strong><br><br>Tilt controls using the built-in motion sensor<br>Background music in every game, which you can turn off<br>Music player with 25 classic tunes<br>Retro intro and a scrolling menu<br>English and French<br>Saved high scores<br>Settings for brightness, sound and sleep time<br><br><strong>Controls</strong><br>A to select, B for the second action, PWR to pause. Hold PWR for 1.5 seconds to go back to the menu.</p><p><br></p>",
+    "description": "<p><strong>AD Arcade for M5StickC Plus2</strong></p><blockquote>&nbsp;<strong>Official Github Open Souce </strong>; <a href=\"https://github.com/ADdevx/AD-Arcade-M5StickCPlus2\">AD-Arcade</a></blockquote><p><br><em>A mini arcade console for your M5StickC Plus2. It comes with 17 games, a music player and a simple menu. Flash it, press a button and start playing.</em><br><br><strong>Games</strong><br>Chrome Dino, Flap Bird, Meteors, Maze, Breakout, Invaders, Slalom, Stack, Racing, Flight, River, Fish, Tetris, Snake and Lunar Lander.<br><br><strong>Features</strong><br><br>Tilt controls using the built-in motion sensor<br>Background music in every game, which you can turn off<br>Music player with 25 classic tunes<br>Retro intro and a scrolling menu<br>English and French<br>Saved high scores<br>Settings for brightness, sound and sleep time<br><br><strong>Controls</strong><br>A to select, B for the second action, PWR to pause. Hold PWR for 1.5 seconds to go back to the menu.</p><p><br></p><p><br></p><p><br></p>",
     "cover": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2121950065482219522/cover/2121950065482219524.png",
     "category": "stickc-plus2",
     "tags": [
@@ -2040,7 +2040,7 @@
       "UI & Launcher"
     ],
     "author": "ADdev",
-    "github": "https://github.com/adfffgyujyhkbvuyyhcbhj/M5-RetroBoy-OS/",
+    "github": "https://github.com/ADdevx/AD-Arcade-M5StickCPlus2",
     "download": 68,
     "versions": [
       {
@@ -9847,6 +9847,80 @@
             "analyzed_at": "2026-11-18T10:23:47Z",
             "etag": "\"8CB85BE9CC46907435AB884AD20F07C2\"",
             "last_modified": "Wed, 18 Nov 2026 07:59:12 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2123048863847628802",
+    "fid": "2123048863847628802",
+    "name": "AtomS3 Spirit Level",
+    "description": "# AtomS3 Spirit Level\n\nA pocket **spirit level** for your **M5Stack AtomS3**, using the built-in motion sensor.\n\n## Modes (click the screen to switch)\n- **Bubble**: lay it flat, a 2-axis bubble shows X and Y tilt in degrees\n- **Tube**: stand it up, a horizontal vial shows the angle in the screen plane (shelves, pictures)\n- **Angle**: lay it on a ramp or roof, shows the slope in degrees and percent\n\nThe ring turns **amber** within 2 degrees and **green** within 0.5 degrees.\n\n## Calibrate\nHold the screen 0.6 s and release to **zero** the current mode on a surface you trust.\nHold 2.2 s and release to reset. Zero points are remembered after power off.\n\nNo Wi-Fi, no setup. For the **AtomS3 with display + MPU6886** (not AtomS3 Lite).\nA handy pocket tool, accurate to about half a degree; not a calibrated instrument.\n\nSource and guide: https://github.com/ElectroIoT/M5-AtomS3-Spirit-Level",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2122955078782369793/2123048863847628802/2123048863851823106/cover/2123048863851823108.png",
+    "category": "atom-s3",
+    "tags": [
+      "Tools"
+    ],
+    "author": "ElectroIoT.in",
+    "github": "https://github.com/ElectroIoT/M5-AtomS3-Spirit-Level",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v1.0.0",
+        "version_id": "2123048863851823106",
+        "published_at": "2026-11-19",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122955078782369793/2123048863847628802/2123048863851823106/bin/2123048863851823107.bin",
+        "Fs": 609856,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 544320,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atom-s3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 544320,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 544320,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-19T02:08:57Z",
+            "etag": "\"4F54E6A178513165973189C464185DAC\"",
+            "last_modified": "Wed, 18 Nov 2026 13:41:08 GMT"
           }
         }
       }
@@ -31539,7 +31613,7 @@
     ],
     "author": "zbruceli",
     "github": "https://github.com/zbruceli/meshcore_cardputer",
-    "download": 49,
+    "download": 50,
     "versions": [
       {
         "version": "V0.3.2",
@@ -32370,7 +32444,7 @@
     ],
     "author": "sunshinexk",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 113,
+    "download": 115,
     "versions": [
       {
         "version": "1.16.1-zh",
@@ -40445,7 +40519,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 6380,
+    "download": 6381,
     "versions": [
       {
         "version": "v2.7.22",
@@ -50321,11 +50395,11 @@
         "published_at": "2026-11-19",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2118687349905465346/2123032743765819394/bin/2123032743765819395.bin",
         "Fs": 5511808,
+        "as": 5446272,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 5446272,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -76740,6 +76814,86 @@
     "esp": "s3"
   },
   {
+    "_id": "2123025794718449665",
+    "fid": "2123025794718449665",
+    "name": "Intercom_AtomS3R",
+    "description": "# AtomS3R Intercom (base station)\n\nESP-NOW intercom firmware for the **M5Stack AtomS3R + Atomic Voice Base\n(K147)**. Pair it with the `StickS3-Intercom` project running on a StickS3.\n\n## Features\n\n- Live push-to-talk audio between boards (16 kHz mono, IMA ADPCM).\n- Clip mode: record up to 15 s, then transmit it at 1x real time.\n- Automatic peer discovery and online/offline indication.\n- Works with any mix of StickS3 and AtomS3R units on the same ESP-NOW\n  channel: multiple StickS3 units, multiple AtomS3R units, or a mix of both\n  can share one intercom network. It is not limited to a single StickS3 and\n  a single AtomS3R.\n- Browser peers: when Wi-Fi is connected, the firmware serves a web client over\n  HTTPS, so any phone, tablet or PC with a web browser and a microphone can\n  join the intercom network as another peer.\n- Transport flexibility: audio can travel over ESP-NOW or local Wi-Fi. A unit\n  connected to Wi-Fi and a unit using only ESP-NOW can still communicate; the\n  transport manager coordinates peers across both.\n- Peer selection and monitoring: target `ALL` (broadcast) or individual peers;\n  spy mode lets one peer listen through and record a clip on another peer's\n  microphone; volume and mute controls are available.\n- Compact 128x128 UI with peer name, mode, state, VU meter and battery.\n- Audio buffers live in PSRAM; the UI sprite uses internal RAM.\n\n## Hardware\n\n| Item | Detail |\n| --- | --- |\n| Board | M5Stack AtomS3R + Atomic Voice Base (K147) |\n| MCU | ESP32-S3-PICO-1-N8R8, 8 MB flash, 8 MB PSRAM |\n| Codec | ES8311 (I2C `0x18`, I2S) |\n| IO expander | PI4IOE (`0x43`) |\n| I2C | SDA 38, SCL 39 |\n| I2S | DIN 7, WS 6, DOUT 5, BCK 8 |\n| Button | GPIO 41 (front button) |\n\nM5Unified config used by the firmware:\n\n```cpp\ncfg.internal_mic = true;\ncfg.internal_spk = false;\ncfg.external_speaker.atomic_echo = true;\n```\n\nThe Atomic Voice Base shares one I2S port between mic and speaker, so the\nfirmware stops playback while capturing. Incoming audio is buffered and played\nafter the button is released.\n\n## Build and flash\n\nClone this repository with its shared-library submodule:\n\n```sh\ngit clone --recurse-submodules https://github.com/Robot-icist/AtomS3R-Intercom.git\n```\n\nIf it was cloned without submodules, run `git submodule update --init\n--recursive` from the repository directory. Then, from this directory:\n\n```powershell\nC:\\Users\\Gille\\.platformio\\penv\\Scripts\\pio.exe run\nC:\\Users\\Gille\\.platformio\\penv\\Scripts\\pio.exe run -t upload\n```\n\nThen build and flash `..\\StickS3-Intercom` the same way.\n\n## Controls\n\n| Action | Result |\n| --- | --- |\n| Hold **BtnA** (Live mode) | Transmit while held; incoming audio plays on release. |\n| Click **BtnA** (Clip mode) | Start recording; click again to stop and send. |\n| Double-click **BtnA** | Toggle Live / Clip mode (cancels an active recording). |\n\n## Web client\n\n![Intercom web client](./screenshots/intercom-web-client.png)\n\nThe firmware serves the web client over HTTPS on port 443 when Wi-Fi is\nconnected. See the shared library README for details.\n\n## UI\n\n![AtomS3R device UI](./screenshots/atom-ui.png)\n\n\n- Header: device name and peer name (or `SEARCH`).\n- Large state: `READY`, `RX`, `TALK`, `REC`, `SEND`, `ERROR`.\n- Two VU bars: microphone and received audio.\n- Footer: mode, battery, RSSI and a short hint.\n\n# IntercomShared\n\nShared firmware library for the **AtomS3R Intercom** (base station) and\n**StickS3 Intercom** (portable unit). Both projects compile this library from\nthe sibling `IntercomShared` directory via `lib_extra_dirs`.\n\n## Modules\n\n| File | Purpose |\n| --- | --- |\n| `IntercomConfig.h` | Board selection, audio/protocol constants, per-board flags. |\n| `IntercomTypes.h` | Wire packet structs, `Mode`/`State` enums, UI state, helpers. |\n| `AdpcmCodec.*` | IMA ADPCM 4-bit encoder/decoder with predictor/index state. |\n| `SampleRing.*` | Thread-safe int16 ring buffer, PSRAM-first allocation, drop-oldest. |\n| `AudioEngine.*` | M5Unified mic/speaker wrapper, half-duplex switching, play buffers. |\n| `Transport.*` | ESP-NOW and WiFi transports, peer discovery, transport selection. |\n| `EspNowLink.*` | Legacy ESP-NOW helper, not used by `IntercomApp`. |\n| `IntercomUi.*` | Canvas/sprite UI for 128x128 and 135x240 displays. |\n| `IntercomApp.*` | Application state machine and the TX/RX/playback tasks. |\n\n## Audio format\n\n- 16 kHz, mono, signed 16-bit PCM.\n- 20 ms frames: 320 samples -> 160 bytes of IMA ADPCM.\n- One ESP-NOW packet per frame (10-byte header + 160-byte payload).\n\nThe packet header carries the ADPCM predictor and step index **at the start of\nthe frame**, so every packet decodes independently even if earlier packets are\nlost.\n\n## Protocol\n\n| Type | Direction | Payload |\n| --- | --- | --- |\n| `Hello` | Broadcast every 1 s | Battery, mode, unique device name (16 bytes). |\n| `Audio` | Selected peer(s) or broadcast | ADPCM frame. |\n| `Spy` | Unicast to one peer | Live/clip start, stop, done, busy. |\n\n- Fixed Wi-Fi channel `1`.\n- A peer is considered online for 5 s after the last valid packet.\n- Audio uses a PSRAM jitter buffer (~6 s) with a 100 ms prebuffer.\n- Clip mode records up to 15 s to PSRAM and sends it at 1x real time.\n- Device names get a short MAC suffix, so identical boards stay distinguishable.\n- Receive-only peers (no microphone, e.g. the ATOM Lite speaker) set the\n  `ReceiveOnly` Hello flag; spy mode skips them.\n\n## Modes\n\n| Mode | Controls |\n| --- | --- |\n| `LIVE` | Hold A to talk to the selected peer(s). |\n| `CLIP` | Click A to record, click again to send. |\n| `SPY` | Hold A to listen through the selected peer's mic, click A to record a clip on it. Spy requires exactly one peer. |\n| `PEER` | Click A to toggle the highlighted peer, hold A to move through `ALL` and the peer list. |\n| `VOL` | Click A up, hold A down. |\n\nDouble-click A cycles modes. `ALL` broadcasts, so every peer hears Live and Clip\naudio, including receive-only speakers. Individual selections can include several\npeers. A spy clip is recorded on the remote unit and played back on the controller.\n\n## Thread model\n\n| Task | Core | Priority | Responsibility |\n| --- | --- | --- | --- |\n| `txTask` | 0 | 4 | Mic capture, live encode/send, clip record, paced clip send. |\n| `rxTask` | 0 | 3 | Receive, ADPCM decode, jitter-buffer fill. |\n| `playTask` | 0 | 3 | Jitter-buffer read, speaker playback. |\n\n`loop()` runs on the Arduino task and handles buttons, peer/battery polling and\nthe UI refresh (100 ms).\n\n## Build integration\n\nEach firmware project includes this repository as a Git submodule at\n`lib/IntercomShared`. Clone either project with its submodules:\n\n```sh\ngit clone --recurse-submodules https://github.com/Robot-icist/StickS3-Intercom.git\ngit clone --recurse-submodules https://github.com/Robot-icist/AtomS3R-Intercom.git\n```\n\nIf a project was cloned without submodules, initialize them with:\n\n```sh\ngit submodule update --init --recursive\n```\n\nPlatformIO uses the shared library from `lib/IntercomShared` and its M5Unified\npatch script. Each project also sets:\n\n```ini\nlib_extra_dirs = lib\nlib_deps = m5stack/M5Unified@0.2.28\n```\n\nand defines one board flag:\n\n- `-DINTERCOM_BOARD_ATOMS3R`\n- `-DINTERCOM_BOARD_STICKS3`\n\n`IntercomConfig.h` uses those flags to select the audio port sharing policy and\nthe UI canvas memory type.\n\n## Transport and web intercom\n\nAudio can travel over ESP-NOW or local Wi-Fi. A unit connected to Wi-Fi and a\nunit using only ESP-NOW can still communicate; the transport manager\ncoordinates peers across both.\n\n## Web intercom\n\n![Intercom web client](./screenshots/intercom-web-client.png)\n\nWhen Wi-Fi is connected, the device serves the web client over HTTPS on port\n443. Open `https://<device-name>-web.local/` (or the device's HTTPS IP address)\nand accept the self-signed certificate in the browser. The certificate and key\nare generated on the device and persisted in NVS; a changed network IP may\nrequire accepting the renewed certificate. The browser microphone requires\nthis trusted secure connection before granting `getUserMedia` access. Up to\nthree browser WebSocket clients can connect at once; each appears as a peer\nwith its own identity and selectable audio/spy target. Browser peers are\nannounced to other web clients and ESP units, and unicast audio is routed\nthrough the connected ESP to the selected browser only. The browser supports\nspy audio in either direction while the page remains connected.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2122994642444042241/2123025794718449665/2123025794718449666/cover/2123025794718449668.png",
+    "category": "atoms3r",
+    "tags": [
+      "Network & Communication",
+      "IoT & Automation",
+      "Sensors & Monitoring",
+      "Audio & Media",
+      "Development & Learning"
+    ],
+    "author": "rob_oticist",
+    "github": "https://github.com/Robot-icist/AtomS3R-Intercom",
+    "download": 1,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "version_id": "2123025794718449666",
+        "published_at": "2026-11-19",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122994642444042241/2123025794718449665/2123025794718449666/bin/2123025794718449667.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1493296,
+        "so": 6750208,
+        "ss": 1572864,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "atoms3r",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1493296,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1493296,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": "firmware",
+              "source_offset": 6750208,
+              "copy_size": 1572864,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-19T02:08:59Z",
+            "etag": "\"08CF9B969BF8812B99663422D3E28145\"",
+            "last_modified": "Wed, 18 Nov 2026 12:09:28 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "2122998139004600322",
     "fid": "2122998139004600322",
     "name": "Intercom_StickS3",
@@ -81087,7 +81241,7 @@
     "_id": "2118003706700595201",
     "fid": "2118003706700595201",
     "name": "LORA Tunnel \u2014 Cardputer ADV + Cap LoRa-1262",
-    "description": "## LORA Tunnel\n\nA standalone wardriving recorder for **M5Stack Cardputer ADV + Cap LoRa-1262 (U214)**. Observe 2.4 GHz Wi-Fi, BLE advertisements and receive-only LoRa traffic, attach available receiver time and GNSS location, and save original sessions to microSD. A separate passive Recon mode groups supported Wi-Fi/BLE indicators with optional audible alerts.\n\nRequires Cardputer ADV, the U214 cap with its antennas, and a FAT32 microSD card. This listing is not for the original Cardputer, U201 or Heltec.\n\n### Version 0.5.0\n\nThe features below describe **0.5.0**. Check the selected version: older releases remain available and new submissions may await M5Stack review. The current release is also available through the [web installer](https://valleytech-lora-tunnel.pages.dev/) and [GitHub downloads](https://github.com/valleytechsolutions/LORA-Tunnel/releases/tag/v0.5.0).\n\n- Choose Meshtastic, MeshCore or Both / slow scan. One selected profile per protocol, with a default 30-second dwell.\n- Decode supported Meshtastic node information, positions, ordinary text and battery/voltage telemetry using public/default or privately configured channel keys.\n- Parse MeshCore public announcements and verify their Ed25519 signatures. Encrypted group/direct chat remains unsupported.\n- Preserve raw packets, RSSI/SNR and receive settings in native logs. Receiver location remains separate from mesh-advertised positions.\n- Use keyboard navigation, region selection, physical credential entry, Stop + Save and confirmed software sleep.\n- Optional WiGLE, Wardrift and WDGWars CSV uploads run only while capture is stopped and saved. Automatic uploads are off by default.\n\nThe SX1262 receives one modem configuration at a time. Combined mode cannot hear every frequency or preset simultaneously. Recon indicators are clues, not proof of device identity or recording; randomized BLE addresses are temporary.\n\n### Install and configure\n\nThe M5Burner package is the merged **FACTORY image for address 0x0**. It replaces the current firmware, including Launcher. Preserve a recovery copy and private SD settings first. To keep Bmorcelli Launcher, use the separate [LAUNCHER-APP.bin](https://github.com/valleytechsolutions/LORA-Tunnel/releases/download/v0.5.0/LORA-Tunnel-0.5.0-Cardputer-ADV-LoRa1262-LAUNCHER-APP.bin) through Launchers SD menu; never write it at address zero.\n\nCopy the release SD starter to the card and rename config.example.json to config.json inside /lora-tunnel/. Keep existing private configuration when updating. First boot leaves LoRa off until you select a supported region or Skip LoRa. While stopped, Settings \u2192 LoRa cycles receive modes. Match the MeshCore profile to your local network.\n\nUse Stop + Save and wait before removing power or storage. Software sleep does not disconnect the battery or cut power to the cap GNSS receiver. Keep credentials and private channel keys on your own SD card; never publish them.\n\n[Controls, hardware and recovery](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/CARDPUTER_ADV.md) \u00b7 [Configuration and uploads](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/UPLOADS.md) \u00b7 [Official U214 hardware](https://docs.m5stack.com/en/cap/Cap_LoRa-1262)\n\n![Synthetic Cardputer Home preview](https://valleytech-lora-tunnel.pages.dev/assets/ui/cardputer/home.png)\n\n![Synthetic combined-mode Settings preview](https://valleytech-lora-tunnel.pages.dev/assets/ui/cardputer/settings-combined.png)\n\nThese are source-rendered interface examples with synthetic values, not device photos or capture evidence.\n\n### Validation and limits\n\nBoth firmware builds and host checks passed. The final Cardputer application passed independent USB flash verification, startup, a user screen/navigation check and a short combined capture with GNSS fix and completed Stop + Save. It reported queue drops under Wi-Fi/BLE load, with zero errors or allocation failures. Known-source MeshCore reception, browser/Launcher installation and return, sustained drives, independent saved-geotag checks and live upload receipts remain unverified. WDGWars mesh ingestion is separate from CSV uploads. [Full release evidence](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/RELEASE_0_5_0.md).\n\nOriginal LORA Tunnel code is **MIT licensed**. LoRaPipe and Kismet inspired the capture/profile approach; Meshtastic and MeshCore informed protocol research. RadioLib, Arduino-ESP32, NimBLE, TinyGPSPlus, ArduinoJson, M5Stack libraries, Crypto, the Dragon Detector subset and its inherited notices, OpenDroneID and ESP Web Tools retain their licenses and required credits. [Attributions](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.5.0/docs/THIRD_PARTY.md). Exact source, dependency/relink archives, SD starter and checksums accompany the release.",
+    "description": "## LORA Tunnel\n\nA standalone wardriving recorder and mesh messaging endpoint for **M5Stack Cardputer ADV + Cap LoRa-1262 (U214)**. Record passive 2.4 GHz Wi-Fi, BLE advertisements and LoRa observations with available receiver time and GNSS location to microSD. Recon groups supported Wi-Fi/BLE indicators with optional one-time device alerts. Stop capture to communicate in the separate Messages mode.\n\nRequires Cardputer ADV, U214 with antennas, and a FAT32 microSD card. Original Cardputer, U201 and Heltec use different hardware.\n\n### Current release: 0.6.0\n\nThe features below describe **0.6.0**. Check the selected M5Burner version: earlier versions remain available and a newly uploaded version may await M5Stack review. The [web flasher](https://valleytechsolutions.tech/pages/lora-tunnel) and [GitHub release](https://github.com/valleytechsolutions/LORA-Tunnel/releases/tag/v0.6.0) provide the current release.\n\n- Choose Meshtastic, MeshCore or Both / slow scan. Select Meshtastic presets including **LongTurbo**, frequency slots, MeshCore profiles and dwell in Settings \u2192 Mesh radio / decode settings. The single SX1262 receives one modem configuration at a time.\n- Decode supported Meshtastic node information, positions, ordinary text and battery/voltage telemetry with public/default or configured channel keys. Parse MeshCore signed public announcements and supported group text. Preserve raw packets and receive settings when decoding is unavailable.\n- Open **Home \u2192 Messages** after Stop + Save for Meshtastic or MeshCore channel text and private text to trusted contacts. Compare the full public key before trusting a contact. TX starts OFF for each messaging session and requires explicit enablement. Messages pauses Wi-Fi/BLE capture; the inbox is RAM-only and clears when leaving.\n- Use the physical keyboard for navigation, credentials and messages, including modifiers and Backspace. Region selection, Skip LoRa, confirmed Stop + Save and software sleep remain available. Storage failures stop capture and report an incomplete log.\n- Optional WiGLE, Wardrift and WDGWars CSV uploads run only while capture is stopped and saved. Automatic uploads are off by default. Keep original logs and private credentials on your card.\n\n### Installation and setup\n\nM5Burner uses the merged **FACTORY image at address 0x0**, replacing the existing boot environment, including Launcher. Preserve a recovery copy and private SD settings. To keep Bmorcelli Launcher, use the separate [0.6.0 Cardputer LAUNCHER-APP.bin](https://github.com/valleytechsolutions/LORA-Tunnel/releases/download/v0.6.0/LORA-Tunnel-0.6.0-Cardputer-ADV-LoRa1262-LAUNCHER-APP.bin) through Launcher\u2019s SD menu; never flash the application-only image at 0x0.\n\nCopy the release SD starter to the card and rename config.example.json to config.json inside /lora-tunnel/. Keep an existing private configuration when updating. First boot leaves LoRa off until a supported region or Skip LoRa is selected. Match modem settings and channel keys to your peer. Use Stop + Save before removing power or storage. Software sleep does not disconnect the battery or cut power to the cap GNSS receiver.\n\n[Hardware, controls and recovery](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.6.0/docs/CARDPUTER_ADV.md) \u00b7 [Messaging setup and receipts](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.6.0/docs/MESSAGING.md) \u00b7 [Upload configuration](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.6.0/docs/UPLOADS.md) \u00b7 [Official U214 hardware](https://docs.m5stack.com/en/cap/Cap_LoRa-1262)\n\n![Synthetic Cardputer Home preview](https://valleytech-lora-tunnel.pages.dev/assets/ui/cardputer/home.png)\n\nSource-rendered interface example with synthetic values; not a device photograph or capture evidence.\n\n### Compatibility and validation\n\nThe owner accepted the preceding functional candidate; 0.6.0 is its version-only firmware rebuild. Both targets and host checks passed. The final Cardputer image has no separate physical acceptance run. Controlled private-message/receipt exchanges, final-image installation round trips, sustained capture and live upload receipts retain the limits in the [full release evidence](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.6.0/docs/RELEASE_0_6_0.md). WDGWars mesh ingestion is separate from CSV uploads.\n\nMeshtastic channel text and NodeInfo are unsigned; peers with STRICT signature policy reject them. Incoming XEdDSA signatures are not verified. MeshCore sending, announcements and private reception require valid GNSS UTC. This is a messaging endpoint, not the complete upstream routing stack. Queues and inboxes are bounded; release status does not imply lossless RF reception. Recon matches are clues, not proof of identity or recording. Receiver position remains separate from mesh-advertised positions.\n\nOriginal application code is **MIT licensed**. LoRaPipe and Kismet inspired capture/profile work; Meshtastic and MeshCore informed protocol research. SquachWatch was a feature reference. RadioLib, Arduino-ESP32, NimBLE, TinyGPSPlus, ArduinoJson, M5Stack libraries, Crypto, the Dragon Detector subset and its inherited notices, OpenDroneID and ESP Web Tools retain their licenses and required credits. [Attributions](https://github.com/valleytechsolutions/LORA-Tunnel/blob/v0.6.0/docs/THIRD_PARTY.md). Exact source, dependency/relink materials, SD setup and SHA-256 checksums accompany the release.",
     "cover": "https://m5burner-cdn.m5stack.com/community/116131/2118003706700595201/2123069225243197442/cover/2123069225243197444.png",
     "category": "cardputer-adv",
     "tags": [
@@ -91535,7 +91689,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105659,
+    "download": 105660,
     "versions": [
       {
         "version": "2.4.10",
@@ -92004,7 +92158,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105659,
+    "download": 105660,
     "versions": [
       {
         "version": "2.4.10",
@@ -118056,7 +118210,7 @@
     ],
     "author": "tomtordev",
     "github": "https://github.com/tomtordev/cardputer-adv-mouse-jiggler",
-    "download": 11,
+    "download": 12,
     "versions": [
       {
         "version": "1.0.0",
@@ -124527,7 +124681,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 384,
+    "download": 385,
     "versions": [
       {
         "version": "v0.7.3",
@@ -124716,7 +124870,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 384,
+    "download": 385,
     "versions": [
       {
         "version": "v0.7.3",
@@ -137864,11 +138018,11 @@
         "published_at": "2026-11-19",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122955078782369793/2123054868492926978/2123054868492926979/bin/2123054868492926980.bin",
         "Fs": 1331504,
+        "as": 1265968,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1265968,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -157547,7 +157701,7 @@
     ],
     "author": "doctor3d",
     "github": "https://github.com/dr3d/SomaFM-for-CardPuter",
-    "download": 533,
+    "download": 534,
     "versions": [
       {
         "version": "1.0",
@@ -160008,7 +160162,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 5041,
+    "download": 5042,
     "versions": [
       {
         "version": "V0.4",
@@ -163424,6 +163578,80 @@
       }
     ],
     "esp": "s3"
+  },
+  {
+    "_id": "2123045239880892417",
+    "fid": "2123045239880892417",
+    "name": "StickC Motion Face",
+    "description": "# StickC Motion Face\n\nA little animated character lives on your **M5StickC** screen and reacts to how you move it.\n\n## Characters\n**Cat**, **Robo**, **Boo** (ghost) and **Cyclo** (cyclops)\n\n## How it reacts\n- **Tilt**: the eyes follow\n- **Move**: happy, bounces\n- **Shake**: dizzy, with spiral eyes and orbiting stars\n- **Drop**: scared\n- **Left still**: drowsy, then asleep with floating Zzz\n\n## Buttons\n- **A** (front): next character, hold for a new colour\n- **B** (side): new colour\n\nThe screen also shows the character name, the mood and the battery level.\nRemembers your character and colour after power off. No Wi-Fi, no setup.\nFor the original **M5StickC**.\n\nSource and guide: https://github.com/ElectroIoT/M5-StickC-Motion-Face",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2122955078782369793/2123045239880892417/2123045239885086721/cover/2123045239885086723.png",
+    "category": "stickc",
+    "tags": [
+      "Games"
+    ],
+    "author": "ElectroIoT.in",
+    "github": "https://github.com/ElectroIoT/M5-StickC-Motion-Face",
+    "download": 0,
+    "versions": [
+      {
+        "version": "v1.0.0",
+        "version_id": "2123045239885086721",
+        "published_at": "2026-11-19",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2122955078782369793/2123045239880892417/2123045239885086721/bin/2123045239885086722.bin",
+        "Fs": 605536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 540000,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 540000,
+            "partition_size": 1310720,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1310720,
+              "source_offset": 65536,
+              "copy_size": 540000,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1441792,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-19T02:08:57Z",
+            "etag": "\"3A6BEBA3E1EAA330BF4A6A1D9D85CD58\"",
+            "last_modified": "Wed, 18 Nov 2026 13:26:44 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "32"
   },
   {
     "_id": "1897200000000002756",
@@ -167135,11 +167363,11 @@
         "published_at": "2026-11-19",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2122676112272080898/2123073152843988993/bin/2123073152843988994.bin",
         "Fs": 1530192,
+        "as": 1464656,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1464656,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -233553,7 +233781,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 36597,
+    "download": 36598,
     "versions": [
       {
         "version": "Alpha-29-4MB",
@@ -388021,7 +388249,7 @@
       "Utilities"
     ],
     "author": "halasun",
-    "github": "",
+    "github": "https://github.com/MinoruInachi/card-gcalc",
     "download": 4,
     "versions": [
       {
