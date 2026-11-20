@@ -13755,7 +13755,7 @@
     "_id": "2123031769953288193",
     "fid": "2123031769953288193",
     "name": "BerejHunt",
-    "description": "A small hashing game for the Cardputer ADV. Pick an encoding and name a target, c0ffee in hex or Mars in base64, and the Cardputer tries number after number until the SHA-256 of that number starts with your target. Every catch becomes a planet generated from its hash, which you can keep forever by paying Favour. A little hooded tech-priest, Ohm, keeps you company. Industrial-gothic look, friendly tone, no network.",
+    "description": "A small hashing game for the Cardputer ADV. Pick an encoding and name a target, c0ffee in hex or Mars in base64, and the Cardputer tries number after number until the SHA-256 of that number starts with your target. Every catch becomes a planet generated from its hash, which you can keep forever by paying Favour. A little hooded tech-priest, Ohm, keeps you company. Industrial-gothic look, friendly tone, no network.\nhttps://github.com/Berej/berejhunt",
     "cover": "https://m5burner-cdn.m5stack.com/community/535213/2123031769953288193/2123031769957482497/cover/2123031769957482499.png",
     "category": "cardputer-adv",
     "tags": [
@@ -30789,7 +30789,7 @@
     ],
     "author": "owner",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 94701,
+    "download": 94702,
     "versions": [
       {
         "version": "1.16",
@@ -31687,7 +31687,7 @@
     ],
     "author": "Coreymillia",
     "github": "https://github.com/Coreymillia/Shark-Bait-add-on-Bruce-firmware-M5stackc-plus-",
-    "download": 381,
+    "download": 382,
     "versions": [
       {
         "version": "v2.2",
@@ -47787,7 +47787,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 3416,
+    "download": 3417,
     "versions": [
       {
         "version": "v0.4",
@@ -50226,7 +50226,7 @@
     "fid": "2118687349905465346",
     "name": "CrossPoint for PaperDIY (community port)",
     "description": "PaperDIY Reader is a CrossPoint-based EPUB reader for the M5Stack PaperDIY (K159). It includes library, fonts, dictionary, OPDS, Calibre, KOReader Sync and web UI.\n\nSource, Magsafe case STL, releases and issues: https://github.com/dcarnicer/paperdiy-reader\n\nOnly for M5Stack PaperDIY. This is not an official M5Stack firmware.\n\nKnown limitations: BLE page-turner pairing is not validated with a real BLE remote; sleep current and real battery life are not measured; the original 140 mAh cell gives short battery life; ghosting after long reading is slight at the default 5-page refresh; KOReader Sync was validated against a local KOSync server.\n2.0.0-paperdiy.1",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2118687349905465346/2123032743765819394/cover/2123032743765819396.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2118687349905465346/2123392537743802369/cover/2123392537743802371.png",
     "category": "paper-diy",
     "tags": [
       "E-books & Reading"
@@ -50517,6 +50517,63 @@
             "analyzed_at": "2026-11-19T01:53:42Z",
             "etag": "\"211C02D74A8EAAEA2A8CE4C5E5CABC11\"",
             "last_modified": "Wed, 18 Nov 2026 12:37:05 GMT"
+          }
+        }
+      },
+      {
+        "version": "2.0.0-10",
+        "version_id": "2123392537743802369",
+        "published_at": "2026-11-20",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2118687349905465346/2123392537743802369/bin/2123392537743802370.bin",
+        "Fs": 5511568,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 5446032,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 5446032,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 5446032,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-20T02:08:41Z",
+            "etag": "\"C28636E55C09B1D30110286816E064A6\"",
+            "last_modified": "Thu, 19 Nov 2026 12:26:46 GMT"
           }
         }
       }
@@ -64143,7 +64200,7 @@
     ],
     "author": "halloween",
     "github": "https://github.com/0xhalloween/Flipper-Zero-ESP32-ADV",
-    "download": 1180,
+    "download": 1181,
     "versions": [
       {
         "version": "0.5",
@@ -75551,7 +75608,7 @@
     "_id": "2106342727559290882",
     "fid": "2106342727559290882",
     "name": "IR Cloner Cardputer Adv",
-    "description": "# IR Cloner for M5Stack Cardputer ADV\n\nAn infrared remote capture, storage, and replay application for the M5Stack Cardputer ADV.\n\nIR Cloner can capture supported decoded infrared commands, save remotes as `.ir` files, load and replay saved commands, and work with both the SD card and LittleFS storage.\n\n## Features\n\n- Capture supported decoded IR protocols\n- Replay captured IR commands\n- Save and load remotes in Flipper Zero `.ir` format\n- Support for parsed and raw IR signals\n- SD card and LittleFS storage support\n- Remote/button naming editor\n- Remote browser and button-grid interface\n- Configurable IR transmit and receive GPIO pins\n- Saved display brightness and timeout settings\n- IR transmitter/receiver self-test screen\n- Continuous or counted IR replay mode\n\n## Hardware\n\nThis project targets:\n\n- [M5Stack Cardputer ADV](https://docs.m5stack.com/en/core/Cardputer-Adv)\n- IR receiver module connected to the configured RX GPIO\n- IR LED/transmitter circuit connected to the configured TX GPIO\n- Also compatible with the [M5Stack IR Unit](https://docs.m5stack.com/en/unit/ir)\n- Optional microSD card for SD storage\n\n### Default IR pins\n\n| Function    | Default GPIO |\n| ----------- | -----------: |\n| IR transmit |      GPIO 44 |\n| IR receive  |       GPIO 1 |\n\nYou can change the TX and RX pins from the app's Settings screen.\n\n## Wiring\n\n### IR receiver\n\nTypical 3-pin IR receiver modules have:\n\n| Receiver pin | Connect to            |\n| ------------ | --------------------- |\n| VCC          | 3.3 V                 |\n| GND          | GND                   |\n| OUT          | Configured IR RX GPIO |\n\n### IR transmitter\n\nTypical 3-pin IR transmitter modules have:\n\n| Transmitter connection                | Connect to                          |\n| ------------------------------------- | ----------------------------------- |\n| GPIO input / transistor base resistor | Configured IR TX GPIO               |\n| Transistor emitter/source             | GND                                 |\n| IR LED supply path                    | Suitable current-limited LED supply |\n| Cardputer ground                      | Shared GND with transmitter circuit |\n\n> Do not connect a high-power IR LED directly to a GPIO without checking current limits and using an appropriate resistor/driver circuit.\n\n##\n\n## Storage\n\nIR Cloner can use:\n\n- **LittleFS**: onboard flash storage\n- **SD Card**: removable storage, if available\n\nThe application creates its IR directory automatically:\n\n```text\n/ircloner\n```\n\nSaved remote files use the `.ir` extension and are compatible with Flipper Zero IR code files.\n\nExample filename:\n\n```text\n/ircloner/TV_REMOTE.ir\n```\n\n## Controls\n\n| Key     | Action           |\n| ------- | ---------------- |\n| `;`     | Up               |\n| `.`     | Down             |\n| `,`     | Left             |\n| `/`     | Right            |\n| Enter   | Select / Confirm |\n| `` ` `` | Back             |\n| `S`     | Save             |\n| `R`     | Replay           |\n| `D`     | Delete           |\n\n## Known limitations\n\n- Reliable raw-signal replay depends on the IR transmitter circuit, the carrier frequency, timing accuracy, and the original remote protocol.\n- IR receiver modules are generally designed for carrier frequencies around 38 kHz, though the actual supported range depends on your specific receiver.\n- Long raw captures use RAM; very large remote files may be limited by available memory.\n\n## Contributing\n\nIssues, bug reports, hardware wiring improvements, and protocol compatibility reports are welcome.\n\nWhen reporting an issue, include:\n\n- Cardputer model\n- IR receiver and transmitter hardware\n- TX/RX GPIO settings\n- Serial Monitor output\n- Steps to reproduce the problem\n\n## Credits\n\n[Bruce](https://bruce.computer/)\n\n[UniGeek](https://unigeek.xid.run/)\n\n[Juj](https://github.com/juj) for [image to rgb565 generation](https://github.com/juj/ST7735R/blob/master/image_to_rgb565.py)\n\nClaude and Perplexity AI Tools",
+    "description": "![IR Cloner Header Banner](media/images/splash.jpg)\n\n# IR Cloner for M5Stack Cardputer ADV\n\nAn infrared remote capture, storage, and replay application for the M5Stack Cardputer ADV.\n\nIR Cloner can capture supported decoded infrared commands, save remotes as `.ir` files, load and replay saved commands, and work with both the SD card and LittleFS storage.\n\n## Features\n\n- Capture supported decoded IR protocols\n- Replay captured IR commands\n- Save and load remotes in Flipper Zero `.ir` format\n- Support for parsed and raw IR signals\n- SD card and LittleFS storage support\n- Remote/button naming editor\n- Remote browser and button-grid interface\n- Configurable IR transmit and receive GPIO pins\n- Saved display brightness and timeout settings\n- IR transmitter/receiver self-test screen\n- Continuous or counted IR replay mode\n\n## Hardware\n\nThis project targets:\n\n- [M5Stack Cardputer ADV](https://docs.m5stack.com/en/core/Cardputer-Adv)\n- IR receiver module connected to the configured RX GPIO\n- IR LED/transmitter circuit connected to the configured TX GPIO\n- Also compatible with the [M5Stack IR Unit](https://docs.m5stack.com/en/unit/ir)\n- Optional microSD card for SD storage\n\n### Default IR pins\n\n| Function | Default GPIO |\n|---|---:|\n| IR transmit | GPIO 44 |\n| IR receive | GPIO 1 |\n\nYou can change the TX and RX pins from the app's Settings screen.\n\n## Wiring\n\n### IR receiver\n\nTypical 3-pin IR receiver modules have:\n\n| Receiver pin | Connect to |\n|---|---|\n| VCC | 3.3 V |\n| GND | GND |\n| OUT | Configured IR RX GPIO |\n\n\n### IR transmitter\n\nTypical 3-pin IR transmitter modules have:\n\n| Transmitter connection | Connect to |\n|---|---|\n| GPIO input / transistor base resistor | Configured IR TX GPIO |\n| Transistor emitter/source | GND |\n| IR LED supply path | Suitable current-limited LED supply |\n| Cardputer ground | Shared GND with transmitter circuit |\n\n> Do not connect a high-power IR LED directly to a GPIO without checking current limits and using an appropriate resistor/driver circuit.\n\n## Firmware binary\n\nRelease binaries are available from this repository's GitHub **Releases** page.\n\n## Storage\n\nIR Cloner can use:\n\n- **LittleFS**: onboard flash storage\n- **SD Card**: removable storage, if available\n\nThe application creates its IR directory automatically:\n\n```text\n/ircloner\n```\n\nSaved remote files use the `.ir` extension and are compatible with Flipper Zero IR code files.\n\nExample filename:\n\n```text\n/ircloner/TV_REMOTE.ir\n```\n\n## Controls\n\n| Key | Action |\n|---|---|\n| `;` | Up |\n| `.` | Down |\n| `,` | Left |\n| `/` | Right |\n| `Enter` | Select / Confirm |\n| `` ` `` | Back |\n| `S` | Save |\n| `R` | Replay |\n| `D` | Delete |\n| `fn`+`s` | Take Screenshot |\n\n## Known limitations\n\n- Reliable raw-signal replay depends on the IR transmitter circuit, the carrier frequency, timing accuracy, and the original remote protocol.\n- IR receiver modules are generally designed for carrier frequencies around 38 kHz, though the actual supported range depends on your specific receiver.\n- Long raw captures use RAM; very large remote files may be limited by available memory.\n\n## Contributing\n\nIssues, bug reports, hardware wiring improvements, and protocol compatibility reports are welcome.\n\nWhen reporting an issue, include:\n\n- Cardputer model\n- IR receiver and transmitter hardware\n- TX/RX GPIO settings\n- Serial Monitor output\n- Steps to reproduce the problem\n\n\n## Credits\n\n[Bruce](https://bruce.computer/)\n\n[UniGeek](https://unigeek.xid.run/)\n\n[Juj](https://github.com/juj) for [image to rgb565 generation](https://github.com/juj/ST7735R/blob/master/image_to_rgb565.py)\n\nClaude and Perplexity AI Tools",
     "cover": "https://m5burner-cdn.m5stack.com/community/479105/2106342727559290882/2106342727559290883/cover/2106342727559290885.png",
     "category": "cardputer-adv",
     "tags": [
@@ -75738,13 +75795,13 @@
         "published_at": "2026-11-20",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/479105/2106342727559290882/2123549214984060929/bin/2123549214984060930.bin",
         "Fs": 4194304,
+        "as": 741456,
+        "ao": 65536,
+        "ss": 1441792,
+        "so": 2686976,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 741456,
-        "so": 2686976,
-        "ss": 1441792,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -95271,7 +95328,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher",
-    "download": 4960,
+    "download": 4961,
     "versions": [
       {
         "version": "2.4.10",
@@ -116465,7 +116522,7 @@
     ],
     "author": "miner203",
     "github": "https://github.com/TheMiner203/M5Mp3/",
-    "download": 2944,
+    "download": 2945,
     "versions": [
       {
         "version": "1.1",
@@ -117488,7 +117545,7 @@
     "_id": "2114725415522476034",
     "fid": "2114725415522476034",
     "name": "Module Tester Cardputer ADV",
-    "description": "<h2><br>Module Tester</h2><p><br>A menu-driven test bench for the M5Stack Cardputer ADV (ESP32-S3) that lets you wire up and test M5Stack and third-party modules \u2014 radios, displays, GPS, RFID, IR, and audio.<br></p><p><br></p><h2>Features</h2><p><br>Modules menu \u2014 pick a unit and run its dedicated test screen:</p><ul><li>CC1101 \u2014 Waterfall, Detect Freq, raw chip status, pin finder</li><li>NRF24L01 \u2014 chip status, 2.4GHz spectrum scan, pin finder</li><li>PN532 \u2014 NFC/RFID read</li><li>M5Stack RFID 2 \u2014 card read/test</li><li>GPS \u2014 live fix display</li><li>IR \u2014 capture, replay and manage IR signals (Flipper .ir format)</li><li>M5Stack LoRa Cap \u2014 LoRa + onboard GNSS</li><li>External Display \u2014 SPI display pin test, colour fills, Matrix rain and starfield test patterns</li><li>Speaker \u2014 plays RTTTL melodies (preloaded tune + your own .fmf files from SD), tone sweep, volume control, through the Cardputer ADV's onboard ES8311 codec<br><br></li></ul><p>SD card browser \u2014 browse and manage files on the card directly from the device</p><p>Find chip pins \u2014 scans the shared SPI bus's spare GPIOs to help locate an unlabelled chip's wiring<br>Screenshot capture \u2014 Fn+S from anywhere saves a BMP of the current screen to the SD card<br>Per-module pin configuration \u2014 remembered on the SD card, no recompiling to change wiring</p><p><br></p><h2>Hardware</h2><p><br>M5Stack Cardputer ADV (ESP32-S3)<br>microSD card (required for file storage, screenshots, and some module features)<br>Whichever test modules you want to try: CC1101, NRF24L01, PN532, GPS, RFID 2, LoRa Cap, an SPI display, etc. Pins for each are configurable on-device.<br></p><p><br></p><h2>Credits</h2><p></p><p>\n\n</p><ul>\n<li><a href=\"https://github.com/lshaf\">Unigeek</a> \u2014 CC1101 reference</li>\n<li><a href=\"https://github.com/BruceDevices\">Bruce Firmware</a></li>\n<li><a href=\"https://github.com/anthropics/claude-desktop-buddy\">Claude Desktop Buddy</a></li>\n<li><a href=\"https://github.com/Lucaslhm/Flipper-IRDB\">Flipper-IRDB</a> \u2014 IR files</li>\n<li><a href=\"https://github.com/UberGuidoZ/\">UberGuidoZ</a> \u2014 Flipper FMF files</li></ul><p><br>Created by Fr4nx40<br></p>",
+    "description": "## Module Tester\n\nA menu-driven test bench for the M5Stack Cardputer ADV (ESP32-S3) that lets you wire up and test M5Stack and third-party modules \u2014 radios, displays, GPS, RFID, IR, and audio.\n\n## Features\n\nModules menu \u2014 pick a unit and run its dedicated test screen:\n\n- CC1101 \u2014 Waterfall, Detect Freq, raw chip status, pin finder\n- NRF24L01 \u2014 chip status, 2.4GHz spectrum scan, pin finder\n- PN532 \u2014 NFC/RFID read\n- M5Stack RFID 2 \u2014 card read/test\n- GPS \u2014 live fix display\n- IR \u2014 capture, replay and manage IR signals (Flipper .ir format)\n- M5Stack LoRa Cap \u2014 LoRa + onboard GNSS\n- External Display \u2014 SPI display pin test, colour fills, Matrix rain and starfield test patterns\n- Speaker \u2014 plays RTTTL melodies (preloaded tune + your own .fmf files from SD), tone sweep, volume control, through the Cardputer ADV's onboard ES8311 codec\n\nSD card browser \u2014 browse and manage files on the card directly from the device\n\nFind chip pins \u2014 scans the shared SPI bus's spare GPIOs to help locate an unlabelled chip's wiring\nScreenshot capture \u2014 Fn+S from anywhere saves a BMP of the current screen to the SD card\nPer-module pin configuration \u2014 remembered on the SD card, no recompiling to change wiring\n\n## Hardware\n\nM5Stack Cardputer ADV (ESP32-S3)\nmicroSD card (required for file storage, screenshots, and some module features)\nWhichever test modules you want to try: CC1101, NRF24L01, PN532, GPS, RFID 2, LoRa Cap, an SPI display, etc. Pins for each are configurable on-device.\n\n## Credits\n\n- [Unigeek](https://github.com/lshaf) \u2014 CC1101 reference\n- [Bruce Firmware](https://github.com/BruceDevices)\n- [Claude Desktop Buddy](https://github.com/anthropics/claude-desktop-buddy)\n- [Flipper-IRDB](https://github.com/Lucaslhm/Flipper-IRDB) \u2014 IR files\n- [UberGuidoZ](https://github.com/UberGuidoZ/) \u2014 Flipper FMF files\n\nCreated by Fr4nx40",
     "cover": "https://m5burner-cdn.m5stack.com/community/479105/2114725415522476034/2114725415522476035/cover/2114725415522476037.png",
     "category": "cardputer-adv",
     "tags": [
@@ -125138,7 +125195,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 395,
+    "download": 396,
     "versions": [
       {
         "version": "v0.7.3",
@@ -125327,7 +125384,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 395,
+    "download": 396,
     "versions": [
       {
         "version": "v0.7.3",
@@ -167747,7 +167804,7 @@
     "fid": "2122676112272080898",
     "name": "TRMNL for PaperDIY (community port)",
     "description": "# TRMNL for M5Stack PaperDIY (community port)\n\nUnofficial port of the open-source **TRMNL** e-ink dashboard firmware to the **M5Stack PaperDIY** (ESP32-S3, 4.7\" 960\u00d7540 E Ink). It shows the screens that TRMNL's cloud or your own BYOS server (LaraPaper, Terminus\u2026) renders for it: weather, calendar, Home Assistant, or any plugin you build.\n\n## Features\n\n- TRMNL cloud or a self-hosted BYOS server, chosen in the Wi-Fi setup portal\n- Reports battery level, Wi-Fi signal and its model (`m5_paper_s3`), so the server renders at 960\u00d7540\n- On battery it powers itself off through the M5PM1 between refreshes and wakes on the PM1 timer\n- Battery percentage from a discharge curve measured on this board; below ~3.43 V it shows \"Battery empty\" and shuts down\n- Runs standalone or installed from M5Launcher (SD card or WebUI)\n\n## First boot\n\n1. Burn the image at 0x0, or install it from M5Launcher.\n2. From your phone, join the **TRMNL** Wi-Fi access point.\n3. Pick your Wi-Fi network and, for a self-hosted server, enter its URL.\n4. Register the device in TRMNL (BYOD) or on your server. The first screen arrives on the next refresh.\n\nPress the power button to refresh by hand.\n\n## Notes\n\n- For the PaperDIY only, not the PaperS3.\n- Unofficial: not affiliated with TRMNL or M5Stack.\n- Source, documentation and license (GPL-3.0): https://github.com/dcarnicer/trmnl-paperdiy",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2122676112272080898/2122676112272080899/cover/2122676112272080901.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2122676112272080898/2123395891832242177/cover/2123395891832242179.png",
     "category": "paper-diy",
     "tags": [
       "IoT & Automation",
@@ -167755,7 +167812,7 @@
     ],
     "author": "dabidesu",
     "github": "https://github.com/dcarnicer/trmnl-paperdiy",
-    "download": 4,
+    "download": 5,
     "versions": [
       {
         "version": "1.8.20-1",
@@ -167868,6 +167925,63 @@
             "analyzed_at": "2026-11-19T01:53:42Z",
             "etag": "\"98E5E1E5BDC9ECA1E72B800630553BA7\"",
             "last_modified": "Wed, 18 Nov 2026 15:17:39 GMT"
+          }
+        }
+      },
+      {
+        "version": "1.8.20-4",
+        "version_id": "2123395891832242177",
+        "published_at": "2026-11-20",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2122676112272080898/2123395891832242177/bin/2123395891832242178.bin",
+        "Fs": 1530912,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1465376,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper-diy",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1465376,
+            "partition_size": 3145728,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3145728,
+              "source_offset": 65536,
+              "copy_size": 1465376,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1048576,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-20T02:08:41Z",
+            "etag": "\"99BB0E8FB1FFBAD9412A7BD4B6EB98BB\"",
+            "last_modified": "Thu, 19 Nov 2026 12:40:06 GMT"
           }
         }
       }
@@ -171856,8 +171970,8 @@
     "_id": "2112925841991487490:cardputer-adv",
     "fid": "2112925841991487490",
     "name": "Tamagotcho",
-    "description": "**\u305f\u307e\u3054\u3063\u3061\u3087 (Tamagotcho)**: a \u96fb\u5b50\u5358\u8a9e\u5e33 (electronic flashcard book) for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 12 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English and Spanish, with example words, downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English or Spanish\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2112925841991487490/2112925841995681794/cover/2112925841995681796.png",
+    "description": "**\u305f\u307e\u3054\u3063\u3061\u3087 (Tamagotcho)**: a \u96fb\u5b50\u5358\u8a9e\u5e33 (electronic flashcard book) for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 24 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English, Spanish, French and Portuguese, with example words (glosses in English, Spanish and the French/Portuguese N5/N4 decks), downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English, Spanish, French or Portuguese; deck meanings in four languages\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2112925841991487490/2123411718954500097/cover/2123411718954500099.png",
     "category": "cardputer-adv",
     "tags": [
       "Productivity",
@@ -171865,7 +171979,7 @@
     ],
     "author": "dabidesu",
     "github": "https://github.com/dcarnicer/tamagotcho",
-    "download": 26,
+    "download": 27,
     "versions": [
       {
         "version": "v0.4.1",
@@ -172094,18 +172208,73 @@
             "last_modified": "Wed, 18 Nov 2026 17:47:41 GMT"
           }
         }
+      },
+      {
+        "version": "v0.9.0",
+        "version_id": "2123411718954500097",
+        "published_at": "2026-11-20",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2123411718954500097/bin/2123411718954500098.bin",
+        "Fs": 1829440,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1763904,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1763904,
+            "partition_size": 1835008,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1835008,
+              "source_offset": 65536,
+              "copy_size": 1763904,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4653056,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-20T02:08:41Z",
+            "etag": "\"4F455D8B027A88D999457F2A27200CC3\"",
+            "last_modified": "Thu, 19 Nov 2026 13:42:59 GMT"
+          }
+        }
       }
     ],
-    "esp": "s3",
-    "description_en": "**Tamagotcho**: a electronic flashcard book for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 12 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English and Spanish, with example words, downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English or Spanish\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho",
-    "description_src": "**\u305f\u307e\u3054\u3063\u3061\u3087 (Tamagotcho)**: a \u96fb\u5b50\u5358\u8a9e\u5e33 (electronic flashcard book) for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 12 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English and Spanish, with example words, downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English or Spanish\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho"
+    "esp": "s3"
   },
   {
     "_id": "2112925841991487490:sticks3",
     "fid": "2112925841991487490",
     "name": "Tamagotcho",
-    "description": "**\u305f\u307e\u3054\u3063\u3061\u3087 (Tamagotcho)**: a \u96fb\u5b50\u5358\u8a9e\u5e33 (electronic flashcard book) for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 12 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English and Spanish, with example words, downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English or Spanish\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2112925841991487490/2112925841995681794/cover/2112925841995681796.png",
+    "description": "**\u305f\u307e\u3054\u3063\u3061\u3087 (Tamagotcho)**: a \u96fb\u5b50\u5358\u8a9e\u5e33 (electronic flashcard book) for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 24 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English, Spanish, French and Portuguese, with example words (glosses in English, Spanish and the French/Portuguese N5/N4 decks), downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English, Spanish, French or Portuguese; deck meanings in four languages\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2106473339548999681/2112925841991487490/2123411718954500097/cover/2123411718954500099.png",
     "category": "sticks3",
     "tags": [
       "Productivity",
@@ -172113,7 +172282,7 @@
     ],
     "author": "dabidesu",
     "github": "https://github.com/dcarnicer/tamagotcho",
-    "download": 26,
+    "download": 27,
     "versions": [
       {
         "version": "v0.4.1",
@@ -172342,11 +172511,66 @@
             "last_modified": "Wed, 18 Nov 2026 17:47:41 GMT"
           }
         }
+      },
+      {
+        "version": "v0.9.0",
+        "version_id": "2123411718954500097",
+        "published_at": "2026-11-20",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2106473339548999681/2112925841991487490/2123411718954500097/bin/2123411718954500098.bin",
+        "Fs": 1829440,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1763904,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "sticks3",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1763904,
+            "partition_size": 1835008,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 1835008,
+              "source_offset": 65536,
+              "copy_size": 1763904,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 4653056,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-20T02:08:41Z",
+            "etag": "\"4F455D8B027A88D999457F2A27200CC3\"",
+            "last_modified": "Thu, 19 Nov 2026 13:42:59 GMT"
+          }
+        }
       }
     ],
-    "esp": "s3",
-    "description_en": "**Tamagotcho**: a electronic flashcard book for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 12 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English and Spanish, with example words, downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English or Spanish\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho",
-    "description_src": "**\u305f\u307e\u3054\u3063\u3061\u3087 (Tamagotcho)**: a \u96fb\u5b50\u5358\u8a9e\u5e33 (electronic flashcard book) for kanji. Multiple-choice reviews with spaced repetition, fully offline. One image for the **StickS3** and the **Cardputer ADV**: it finds the board at boot.\n\nA new kanji is introduced first: its stroke order, meanings, readings and two example words. Then it is asked: pick its meaning or its reading from four options and answer. Spaced repetition (FSRS) decides when you see it again, and the wrong options are ones you could really confuse. Get one wrong and a card shows its meanings, readings and stroke order.\n\n**Features**\n\n- Kanji \u2192 meaning, kanji \u2192 reading, meaning \u2192 kanji\n- Learning mode: each new kanji gets an intro card, then is asked again a few cards later\n- Spaced repetition on the device, a daily cap of new cards\n- Stroke order animated from KanjiVG on new kanji and after a mistake\n- 12 free decks: JLPT N5 to N1 and the 2,136 J\u014dy\u014d kanji, in English and Spanish, with example words, downloaded over Wi-Fi\n- A web portal on your phone: decks, statistics, uploads\n- The real date from your phone or NTP; dims and sleeps to save the battery\n- Screens in English or Spanish\n\n**First start**\n\n1. Choose the language.\n2. Scan the QR code on the screen with your phone to join `Tamagotcho-XXXX`, open the page, enter your home Wi-Fi and press **Switch to my Wi-Fi**.\n3. Scan the new QR code and download a deck, e.g. JLPT N5.\n\n**Controls**\n\n- StickS3: tap the front button to move, **hold it to answer**; hold the side button for the settings, tap it to go back. On a new kanji's card, a side tap says you already know it.\n- Cardputer ADV: `;` `.` `,` `/` (the arrows) move, **Enter answers**, Tab opens the settings, Esc goes back. On a new kanji's card, \u2190 says you already know it.\n\nBurning erases the settings (home Wi-Fi, preferences). Code MIT; decks CC BY-SA (KANJIDIC2, KanjiVG, JMdict). Source, manual and other boards: https://github.com/dcarnicer/tamagotcho"
+    "esp": "s3"
   },
   {
     "_id": "1897200000000000497",
@@ -190543,7 +190767,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 42257,
+    "download": 42258,
     "versions": [
       {
         "version": "v2.0.3",
@@ -371183,7 +371407,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 3033,
+    "download": 3034,
     "versions": [
       {
         "version": "v0.0.5",
@@ -373196,7 +373420,7 @@
     ],
     "author": "Isonimus",
     "github": "https://github.com/Isonimus/wifi-sapper",
-    "download": 77,
+    "download": 78,
     "versions": [
       {
         "version": "0.1.0",
@@ -396105,7 +396329,7 @@
     ],
     "author": "thehappycat",
     "github": "",
-    "download": 1919,
+    "download": 1920,
     "versions": [
       {
         "version": "2.5.0",
@@ -403855,7 +404079,7 @@
     ],
     "author": "gywan94",
     "github": "",
-    "download": 16,
+    "download": 17,
     "versions": [
       {
         "version": "1.0",
