@@ -9283,6 +9283,62 @@
         "fid": "CFWH62M2TSEJXKFC5O5XMQANDLSYTZL2",
         "versions": [
             {
+                "version": "tdeck-v1.2.7-beta2",
+                "published_at": "2026-11-21",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.7-beta2/squatch-mesh-tdeck-1.2.7-beta2-full.bin",
+                "Fs": 2771616,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 2706080,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 2706080,
+                        "partition_size": 3932160,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 65536,
+                            "copy_size": 2706080,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-21T01:53:35Z",
+                        "etag": "\"0x8DF477153C2D0BD\"",
+                        "last_modified": "Sat, 21 Nov 2026 01:46:57 GMT"
+                    }
+                }
+            },
+            {
                 "version": "tdeck-v1.2.6",
                 "published_at": "2026-11-15",
                 "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.6/squatch-mesh-tdeck-1.2.6-full.bin",
@@ -9783,62 +9839,6 @@
                         "analyzed_at": "2026-11-02T17:00:08Z",
                         "etag": "\"0x8DF269FEA8BE65D\"",
                         "last_modified": "Sat, 10 Oct 2026 07:27:18 GMT"
-                    }
-                }
-            },
-            {
-                "version": "tdeck-v1.2.4-beta11",
-                "published_at": "2026-10-09",
-                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/tdeck-v1.2.4-beta11/squatch-mesh-tdeck-1.2.4-beta11-full.bin",
-                "Fs": 2669600,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "ao": 65536,
-                "as": 2604064,
-                "install": {
-                    "schema": 1,
-                    "format": "merged",
-                    "target": "t-deck",
-                    "app": {
-                        "source_offset": 65536,
-                        "image_size": 2604064,
-                        "partition_size": 3932160,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3932160,
-                            "source_offset": 65536,
-                            "copy_size": 2604064,
-                            "required": true,
-                            "source": "firmware"
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 8781824,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-02T17:00:08Z",
-                        "etag": "\"0x8DF259C92710D9D\"",
-                        "last_modified": "Fri, 09 Oct 2026 00:30:51 GMT"
                     }
                 }
             }
