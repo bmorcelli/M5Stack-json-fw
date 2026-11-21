@@ -11501,7 +11501,7 @@
     ],
     "author": "BKLVA",
     "github": "",
-    "download": 306,
+    "download": 307,
     "versions": [
       {
         "version": "0.1.32",
@@ -19584,7 +19584,7 @@
     ],
     "author": "Domka",
     "github": "",
-    "download": 272,
+    "download": 273,
     "versions": [
       {
         "version": "1.16.1",
@@ -32787,7 +32787,7 @@
     ],
     "author": "sunshinexk",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 188,
+    "download": 189,
     "versions": [
       {
         "version": "1.16.1-zh",
@@ -40352,7 +40352,7 @@
     ],
     "author": "PlatonovStas",
     "github": "",
-    "download": 22,
+    "download": 23,
     "versions": [
       {
         "version": "2.0",
@@ -44490,7 +44490,7 @@
     ],
     "author": "reydeargentina",
     "github": "https://github.com/reydeargentina/cardtastic",
-    "download": 326,
+    "download": 327,
     "versions": [
       {
         "version": "0.2",
@@ -50935,7 +50935,7 @@
     ],
     "author": "IAMLIUBO",
     "github": "https://github.com/MarsTechHAN/crosspoint-reader-mono",
-    "download": 86,
+    "download": 87,
     "versions": [
       {
         "version": "1.5.0-RC",
@@ -64886,7 +64886,7 @@
     ],
     "author": "04HM4N",
     "github": "https://github.com/04HM4N/flipper-bruce-dualboot-cardputerADV",
-    "download": 394,
+    "download": 395,
     "versions": [
       {
         "version": "2",
@@ -68268,7 +68268,7 @@
     ],
     "author": "geo_tp",
     "github": "https://github.com/geo-tp/Cardputer-Game-Station-Emulators",
-    "download": 15796,
+    "download": 15797,
     "versions": [
       {
         "version": "0.1",
@@ -92682,7 +92682,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105826,
+    "download": 105828,
     "versions": [
       {
         "version": "2.4.10",
@@ -93151,7 +93151,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 105826,
+    "download": 105828,
     "versions": [
       {
         "version": "2.4.10",
@@ -125748,7 +125748,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 417,
+    "download": 418,
     "versions": [
       {
         "version": "v0.7.3",
@@ -125937,7 +125937,7 @@
     ],
     "author": "indecentix",
     "github": "https://github.com/indecenti/NucleoOs",
-    "download": 417,
+    "download": 418,
     "versions": [
       {
         "version": "v0.7.3",
@@ -145032,13 +145032,13 @@
         "published_at": "2026-11-21",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/160320/1897200000000003441/2124126062642151425/bin/2124126062642151426.bin",
         "Fs": 8388608,
+        "as": 716400,
+        "ao": 65536,
+        "ss": 2097152,
+        "so": 6291456,
         "s": 1,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 716400,
-        "so": 6291456,
-        "ss": 2097152,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -145082,6 +145082,65 @@
             "analyzed_at": "2026-11-21T13:08:42Z",
             "etag": "\"204DBD30FFA01A5ED08C999229EAC980\"",
             "last_modified": "Sat, 21 Nov 2026 13:01:32 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.56",
+        "version_id": "2124130155708235778",
+        "published_at": "2026-11-21",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/160320/1897200000000003441/2124130155708235778/bin/2124130155708235779.bin",
+        "Fs": 8388608,
+        "s": 1,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 716624,
+        "so": 6291456,
+        "ss": 2097152,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 716624,
+            "partition_size": 6225920,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6225920,
+              "source_offset": 65536,
+              "copy_size": 716624,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "vgm_swap",
+              "role": "spiffs",
+              "size": 2097152,
+              "source": "firmware",
+              "source_offset": 6291456,
+              "copy_size": 2097152,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-21T13:23:35Z",
+            "etag": "\"A07A7F5EC285FB6FAE089B1E70E7F823\"",
+            "last_modified": "Sat, 21 Nov 2026 13:17:48 GMT"
           }
         }
       }
@@ -205117,7 +205176,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 2701,
+    "download": 2702,
     "versions": [
       {
         "version": "v2.0.4",
@@ -407998,7 +408057,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18105,
+    "download": 18106,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
@@ -408198,7 +408257,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18105,
+    "download": 18106,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
