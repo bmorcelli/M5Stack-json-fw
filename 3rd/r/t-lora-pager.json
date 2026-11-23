@@ -3225,6 +3225,79 @@
         "fid": "CFWKMKUBINMOCR6ARSMK6ZKBAGB6BU7R",
         "versions": [
             {
+                "version": "v1.2.19",
+                "published_at": "2026-11-23",
+                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/firmware.bin",
+                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/bootloader.bin",
+                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/partitions.bin",
+                "Fs": 2928384,
+                "ao": 0,
+                "as": 2928384,
+                "nb": true,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "split",
+                    "target": "t-lora-pager",
+                    "app": {
+                        "source": "firmware",
+                        "source_offset": 0,
+                        "image_size": 2928384,
+                        "partition_size": 3932160,
+                        "flash_offset": 65536,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 3932160,
+                            "source_offset": 0,
+                            "copy_size": 2928384,
+                            "required": true,
+                            "source": "firmware",
+                            "flash_offset": 65536
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "spiffs",
+                            "label": "spiffs",
+                            "role": "spiffs",
+                            "size": 8781824,
+                            "flash_offset": 7929856,
+                            "required": true,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0
+                        }
+                    ],
+                    "sources": {
+                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/firmware.bin",
+                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/bootloader.bin",
+                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/partitions.bin",
+                        "data": null
+                    },
+                    "analysis": {
+                        "method": "external_partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 39936,
+                        "analyzed_at": "2026-11-23T00:53:32Z",
+                        "etag": "\"0x8DF48FC227D8CAC\"",
+                        "last_modified": "Mon, 23 Nov 2026 00:53:05 GMT",
+                        "aux_inputs": {
+                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/bootloader.bin",
+                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.19/partitions.bin"
+                        }
+                    }
+                }
+            },
+            {
                 "version": "v1.2.16",
                 "published_at": "2026-11-15",
                 "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.16/firmware.bin",
@@ -3877,79 +3950,6 @@
                         "aux_inputs": {
                             "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/bootloader.bin",
                             "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.1/partitions.bin"
-                        }
-                    }
-                }
-            },
-            {
-                "version": "v1.2.0",
-                "published_at": "2026-09-24",
-                "file": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/firmware.bin",
-                "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/bootloader.bin",
-                "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/partitions.bin",
-                "Fs": 2536176,
-                "ao": 0,
-                "as": 2536176,
-                "nb": true,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "split",
-                    "target": "t-lora-pager",
-                    "app": {
-                        "source": "firmware",
-                        "source_offset": 0,
-                        "image_size": 2536176,
-                        "partition_size": 3932160,
-                        "flash_offset": 65536,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 3932160,
-                            "source_offset": 0,
-                            "copy_size": 2536176,
-                            "required": true,
-                            "source": "firmware",
-                            "flash_offset": 65536
-                        },
-                        {
-                            "type": "data",
-                            "subtype": "spiffs",
-                            "label": "spiffs",
-                            "role": "spiffs",
-                            "size": 8781824,
-                            "flash_offset": 7929856,
-                            "required": true,
-                            "source": null,
-                            "source_offset": null,
-                            "copy_size": 0
-                        }
-                    ],
-                    "sources": {
-                        "firmware": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/firmware.bin",
-                        "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/bootloader.bin",
-                        "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/partitions.bin",
-                        "data": null
-                    },
-                    "analysis": {
-                        "method": "external_partition_table",
-                        "confidence": "exact",
-                        "warnings": [],
-                        "bytes_downloaded_for_analysis": 39936,
-                        "analyzed_at": "2026-11-02T17:06:19Z",
-                        "etag": "\"0x8DF19EDAC05B1C1\"",
-                        "last_modified": "Thu, 24 Sep 2026 03:41:09 GMT",
-                        "aux_inputs": {
-                            "bootloader": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/bootloader.bin",
-                            "partitions": "https://github.com/BamBam1121/inw-mesh/releases/download/v1.2.0/partitions.bin"
                         }
                     }
                 }
