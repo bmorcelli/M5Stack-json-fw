@@ -6717,6 +6717,81 @@
     "esp": "s3"
   },
   {
+    "_id": "2125273820400926722",
+    "fid": "2125273820400926722",
+    "name": "Adviibo",
+    "description": "Turn your stock **M5Stack Cardputer-Adv** into a wired USB **Nintendo Switch 2 Pro Controller (`057E:2069`) + Amiibo Emulator** with **zero external NFC hardware**.\n\n### Features\n- **No External NFC Module**: Uses native ESP32-S3 USB-OTG, built-in microSD slot, `240x135` display, and `TCA8418` keyboard.\n- **microSD Amiibo Browser**: Supports 540B NTAG215 `.bin` and Flipper `.nfc` files under `/amiibo/` (plus a built-in Demo Blank Tag when no SD card is inserted).\n- **Local UID Re-Signing (Unlimited Daily Scans)**: Import your own 160-byte `key_retail.bin` once via USB (`Ctrl+I`), then press `R` to manually re-sign a new UID or `U` (`AUTO-RND`) to auto-rotate after each read.\n- **USB-C Direct Import (`Ctrl+I`)**: Push `.bin` files and signing keys from PC without removing the microSD card (using `tools/import_amiibo_usb.py` from the GitHub repo).\n- **Gamepad Mode (`Tab`)**: Built-in Pro Controller key mapping (`Q+E` = `L+R`, `WASD` = Left Stick, `Fn+IJKL` = Right Stick, `L/K/I/J` = `A/B/X/Y`, `=` = `+`).\n\n### Quick Controls\n- `Tab`: Switch between SD Browser and Gamepad Mode\n- `Space` / `G0`: Place / remove active Amiibo tag (`TAG:ON` / `TAG:--`)\n- `R`: Generate & re-sign a fresh UID\n- `U`: Toggle `AUTO-RND` auto re-sign after each read\n- `Ctrl + I`: Toggle USB-C file & key import mode\n\n> **Note**: This build targets **Switch 2 (`057E:2069`)**. No proprietary Nintendo keys or Amiibo dumps are included. For Switch 1 (`057E:2009`), build the `m5stack-stamps3` environment from source. After flashing, unplug and replug USB-C once to enter USB-OTG mode.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/398891/2125273820400926722/2125273820405121025/cover/2125273820405121027.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Games"
+    ],
+    "author": "Nescript",
+    "github": "https://github.com/Nescript/cardputer-amiibo",
+    "download": 1,
+    "versions": [
+      {
+        "version": "v0.4.3",
+        "version_id": "2125273820405121025",
+        "published_at": "2026-11-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/398891/2125273820400926722/2125273820405121025/bin/2125273820405121026.bin",
+        "Fs": 722256,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 656720,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 656720,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 656720,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-25T01:38:47Z",
+            "etag": "\"A5963C990FCFCB58C4B19BD92D99F915\"",
+            "last_modified": "Tue, 24 Nov 2026 17:02:19 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
     "_id": "1897200000000002409",
     "fid": "1897200000000002409",
     "name": "AetherTone \u2014 Hear Wireless Signals for Cardputer ADV",
@@ -20802,7 +20877,7 @@
     ],
     "author": "BetaBruce",
     "github": "",
-    "download": 246,
+    "download": 247,
     "versions": [
       {
         "version": "Beta",
@@ -21098,7 +21173,7 @@
     ],
     "author": "Ghost Hunter",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 55,
+    "download": 56,
     "versions": [
       {
         "version": "1.17-zh",
@@ -21174,7 +21249,7 @@
     ],
     "author": "Ghost Hunter",
     "github": "https://github.com/sunshinexk/Bruce-Cardputer-zh",
-    "download": 55,
+    "download": 56,
     "versions": [
       {
         "version": "1.17-zh",
@@ -32877,7 +32952,7 @@
     ],
     "author": "snegodick",
     "github": "https://github.com/BruceDevices/firmware",
-    "download": 339,
+    "download": 340,
     "versions": [
       {
         "version": "1.17",
@@ -32951,7 +33026,7 @@
     ],
     "author": "zbruceli",
     "github": "https://github.com/zbruceli/meshcore_cardputer",
-    "download": 85,
+    "download": 86,
     "versions": [
       {
         "version": "V0.3.2",
@@ -33016,11 +33091,11 @@
         "published_at": "2026-11-25",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2120657917793968130/2120661601634394114/2125312194365046785/bin/2125312194365046786.bin",
         "Fs": 1517408,
+        "as": 1451872,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1451872,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -42403,7 +42478,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 6445,
+    "download": 6446,
     "versions": [
       {
         "version": "v2.7.22",
@@ -44276,7 +44351,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 19066,
+    "download": 19067,
     "versions": [
       {
         "version": "v0.1",
@@ -45397,13 +45472,13 @@
     "fid": "2122146817619476482",
     "name": "CardputerDict \u4e2d\u82f1\u79bb\u7ebf\u8bcd\u5178 ADV",
     "description": "## CardputerDict \u4e2d\u82f1\u79bb\u7ebf\u8bcd\u5178 \u2014 Cardputer-ADV\n\n\u9002\u7528\u4e8e M5Stack Cardputer-ADV\uff08ESP32-S3\u30018MB Flash\uff09\u3002\u540c\u4e00\u4efd 0.5.0 \u56fa\u4ef6\u4e5f\u517c\u5bb9\u666e\u901a Cardputer\uff0c\u542f\u52a8\u81ea\u52a8\u8bc6\u522b\u673a\u578b\uff0c\u9009\u62e9\u952e\u76d8\u548c\u97f3\u9891\u9a71\u52a8\u3002\u4e24\u6b3e\u8bbe\u5907\u5747\u5df2\u5b9e\u673a\u9a8c\u8bc1\uff0c\u58f0\u97f3\u3001\u663e\u793a\u65b9\u5411\u548c\u5b9e\u4f53\u6309\u952e\u6b63\u5e38\u3002\n\n### \u67e5\u8bcd\u3001\u62fc\u97f3\u4e0e\u6717\u8bfb\n- \u79bb\u7ebf\u82f1\u6c49 770,611 \u4e2a\u8bcd\u5934\u3001\u6c49\u82f1 198,650 \u4e2a\u7b80\u7e41\u4f53\u8bcd\u5934\uff0c85,610 \u79cd\u6574\u8bcd\u62fc\u97f3\u7ec4\u5408\u3002\n- Tab \u5207\u6362\u82f1\u6c49/\u6c49\u82f1\uff1b\u8f93\u5165 pingguo \u2192 \u82f9\u679c\u3001nihao \u2192 \u4f60\u597d\uff1bv \u4ee3\u8868 \u00fc\u3002\u7a7a\u683c\u6216\u6570\u5b57\u9009\u62e9\u5355\u884c\u7d27\u51d1\u5019\u9009\uff0c[ / ] \u7ffb\u5019\u9009\u9875\uff0cEnter \u6253\u5f00\u8bcd\u6761\u3002\n- \u652f\u6301\u4e2d\u6587\u548c IPA \u97f3\u6807\uff1b\u91ca\u4e49\u9996\u5c3e\u5faa\u73af\u7ffb\u9875\u3002Space/Enter \u4e0b\u4e00\u9875\uff0cFn+; \u6216 Fn+, \u4e0a\u4e00\u9875\uff0cFn+. \u6216 Fn+/ \u4e0b\u4e00\u9875\u3002\n- \u9000\u683c\u6309\u4f4f\u7ea6450ms\u540e\uff0c\u6bcf125ms\u8fde\u7eed\u5220\u9664\uff0c\u677e\u624b\u505c\u6b62\uff1bFn+Backspace \u6e05\u7a7a\u3002Fn+H / G0 \u5e2e\u52a9\uff0cFn+D \u5207\u6362\u8bcd\u5e93\u3002\n- Fn+P \u6717\u8bfb\u82f1\u6587\u8bcd\uff0c\u518d\u6309\u6216\u53cd\u5f15\u53f7\u505c\u6b62\uff1bFn+= / Fn+- \u8c03\u97f3\u91cf\u3002\u4f18\u5148\u64ad\u653e audio/en \u7684 MP3/WAV\uff0c\u518d\u4f7f\u7528 audio/cache/en \u7f13\u5b58\u3002\n- Fn+W \u5728\u8bbe\u5907\u8bbe\u7f6e2.4GHz WiFi\uff1b\u7f3a\u5c11\u672c\u5730\u97f3\u9891\u65f6\u7ecf\u9a8c\u8bc1 HTTPS \u4ece dict.youdao.com \u83b7\u53d6\u6240\u9009\u82f1\u6587\u8bcd\u7684\u53d1\u97f3\u5e76\u7f13\u5b58\uff0c\u7ed3\u675f\u540e\u5173\u95ed WiFi\u3002\u7b2c\u4e09\u65b9\u63a5\u53e3\u53ef\u7528\u6027\u53ef\u80fd\u53d8\u5316\u3002\u56fa\u4ef6\u4e0d\u5305\u542b\u7b2c\u4e09\u65b9\u5f55\u97f3\u5305\u3002\n\n### Cardputer-ADV \u9002\u914d\n\u81ea\u52a8\u4f7f\u7528 TCA8418 \u952e\u76d8\u4e8b\u4ef6 FIFO\u3001\u786c\u4ef6\u53bb\u6296\u548c ES8311 \u97f3\u9891\uff1b\u666e\u901a\u7248\u4f7f\u7528 GPIO \u77e9\u9635\u4e0e NS4168\u3002\u5c4f\u5e55240\u00d7135\u6a2a\u5c4f\u3002SD 10/4/1MHz\u91cd\u8bd5\u5e76\u8865\u9f50\u76ee\u5f55\uff0c\u4e0d\u81ea\u52a8\u683c\u5f0f\u5316\u3002SD \u7d22\u5f15\u9996\u6b21\u5efa\u7acb\u540e\u5e8f\u5217\u5316\u7f13\u5b58\uff0c\u5b9e\u6d4b Adv \u8f6f\u4ef6\u91cd\u542f\u7ea61.61\u79d2\u3001\u666e\u901a\u7248\u7ea61.42\u79d2\uff08\u968f\u5361\u800c\u5f02\uff09\u3002\n\n### \u9996\u6b21\u4f7f\u7528\uff1a\u51c6\u5907 FAT32 microSD\n.bin \u5185\u4ec5\u670929\u8bcd\u6f14\u793a\uff0c\u5b8c\u6574\u8bcd\u5e93\u987b\u53e6\u884c\u5b89\u88c5\u3002\u4ece\u4ee5\u4e0b\u9879\u76ee\u4e0b\u8f7d ZIP\uff0c\u5c06 sdcard/ \u4e2d\u7684 dictionaries/\u3001licenses/ \u590d\u5236\u5230\u5361\u6839\u76ee\u5f55\uff1b\u5173\u673a\u63d2\u5361\u518d\u5f00\u673a\uff0c\u9996\u6b21\u7d22\u5f15\u8017\u65f6\u8f83\u957f\uff0c\u4e4b\u540e\u4ece\u7f13\u5b58\u542f\u52a8\u3002\u5df2\u6709\u540c\u683c\u5f0f\u8bcd\u5e93\u53ca\u7f13\u5b58\u53ef\u76f4\u63a5\u590d\u7528\u3002\n\n- [\u9879\u76ee\u4e0e\u4f7f\u7528\u8bf4\u660e](https://github.com/RadioDisney/CardputerDict)\n- [SD\u8bcd\u5e93\u76ee\u5f55](https://github.com/RadioDisney/CardputerDict/tree/master/sdcard)\n\nFn+R \u91cd\u65b0\u6302\u8f7d\u5e76\u52a0\u8f7d\u7f13\u5b58\uff1bFn+Shift+R \u5f3a\u5236\u6821\u9a8c\u91cd\u5efa\u3002\u6717\u8bfb\u53ef\u5bfc\u5165\u4e2a\u4eba MP3/WAV\uff0c\u652f\u63018/16-bit PCM WAV\uff0c\u6587\u4ef6\u4e0d\u8d85\u8fc7512KB / 30\u79d2\u3002\n\n### \u70e7\u5f55\nM5Burner \u4e0a\u4f20\u6587\u4ef6\u4e3a\u5b8c\u6574\u5408\u5e76\u56fa\u4ef6\uff0cESP32-S3 / 8MB Flash\uff0c\u5199\u5165\u5730\u57400x0\u3002\u5168\u91cf\u70e7\u5f55\u4f1a\u91cd\u7f6e\u7247\u5185 WiFi \u548c\u97f3\u91cf\u8bbe\u7f6e\uff0c\u9700\u91cd\u65b0\u914d\u7f6e\uff1bSD \u6587\u4ef6\u4fdd\u7559\u3002\u8bf7\u5148\u5907\u4efd\u539f\u56fa\u4ef6\u3002\u540e\u7eed\u4fdd\u7559\u914d\u7f6e\u7684\u5e94\u7528\u5347\u7ea7\u53ef\u7528\u9879\u76ee\u7684\u5e94\u7528\u56fa\u4ef6\u5199\u51650x10000\u3002\n\n### \u8bb8\u53ef\n\u5e94\u7528\u539f\u521b\u4ee3\u7801 MIT\uff1bECDICT MIT\uff1bMDBG / CC-CEDICT \u6d3e\u751f\u6c49\u82f1\u4e0e\u8bcd\u7ec4\u62fc\u97f3\u6570\u636e CC BY-SA 4.0\uff1bmozillazg/pinyin-data MIT\u3002\u5b57\u4f53\u3001dr_mp3 \u548c\u4f9d\u8d56\u4fdd\u7559\u5404\u81ea\u8bb8\u53ef\uff0c\u89c1 third_party/\u3001sdcard/licenses/\u3002\u652f\u6301\u672a\u538b\u7f29UTF-8\u7eaf\u6587\u672cStarDict\uff1b\u751f\u50fb\u5b57\u53d7\u5b57\u4f53\u8986\u76d6\u9650\u5236\uff0c\u65e0\u6574\u53e5\u8054\u60f3\u6216\u81ea\u52a8\u8bcd\u5f62\u8fd8\u539f\u3002",
-    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2122146817619476482/2122516465603002369/cover/2122516465603002371.gif",
+    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2122146817619476482/2125188381451173890/cover/2125188381451173892.gif",
     "category": "cardputer-adv",
     "tags": [
       "E-books & Reading"
     ],
     "author": "RadioDisney",
-    "github": "https://github.com/RadioDisney/CardputerDict/releases/tag/v0.6.4",
+    "github": "https://github.com/RadioDisney/CardputerDict",
     "download": 12,
     "versions": [
       {
@@ -45519,6 +45594,63 @@
             "last_modified": "Tue, 17 Nov 2026 02:25:34 GMT"
           }
         }
+      },
+      {
+        "version": "0.7.2",
+        "version_id": "2125188381451173890",
+        "published_at": "2026-11-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/341701/2122146817619476482/2125188381451173890/bin/2125188381451173891.bin",
+        "Fs": 3629248,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3563712,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3563712,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3563712,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 2031616,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-25T01:38:47Z",
+            "etag": "\"0E4DAF9ECB4237459432080279E83F01\"",
+            "last_modified": "Tue, 24 Nov 2026 11:22:49 GMT"
+          }
+        }
       }
     ],
     "esp": "s3",
@@ -45532,13 +45664,13 @@
     "fid": "2120468585455984642",
     "name": "CardputerDict \u767e\u79d1\u8bcd\u5178",
     "description": "## CardputerDict \u767e\u79d1\u8bcd\u5178 \u2014 0.6.4\n\n\u9002\u914d M5Stack Cardputer\uff08ESP32-S3\u30018MB Flash\uff09\u3002\u540c\u4e00\u56fa\u4ef6\u81ea\u52a8\u8bc6\u522b\u666e\u901a Cardputer / Cardputer-Adv\uff0c\u4e24\u79cd\u786c\u4ef6\u5747\u5df2\u5b9e\u673a\u6d4b\u8bd5\u3002\u4ee5\u4e0b\u64cd\u4f5c\u53ca\u6570\u636e\u8bf4\u660e\u5bf9\u5e940.6.4\uff0c\u65b0\u7248\u6570\u636e\u901a\u8fc7GitHub Releases\u4e0b\u8f7d\uff0c\u6e90\u7801ZIP\u4e0d\u542b\u5b8c\u6574\u8bcd\u5e93\u3002\n\n### \u529f\u80fd\n- \u82f1\u6c49770,611\u8bcd\u5934\u3001\u6c49\u82f1198,650\u7b80\u7e41\u8bcd\u5934\uff0c85,610\u79cd\u6574\u8bcd\u62fc\u97f3\u4ee3\u7801\uff1b\u4e2d\u6587/IPA\u97f3\u6807\u3001\u7e41\u4f53\u8865\u5b57\u3001\u5355\u884c\u7d27\u51d1\u5019\u9009\u3002\n- \u5b8c\u6574\u4e2d\u6587\u7ef4\u57fa\u7eaf\u6587\u5b57\uff1a2026-11-01\u5feb\u7167\uff0c1,563,854\u7bc7\u6b63\u6587\u30014,863,298\u4e2a\u6807\u9898/\u7b80\u7e41\u522b\u540d/\u6709\u6548\u91cd\u5b9a\u5411\u3002\u6309\u6807\u9898\u524d\u7f00\u67e5\u627e\uff0c\u5c0f\u5185\u5b58\u9010\u9875\u8bfb\u53d6\uff0c\u4e0d\u53d7\u539f\u8bcd\u517812KB\u4e0a\u9650\u622a\u65ad\uff1b\u652f\u6301\u8d85\u8fc74GB\u6570\u636e\u4f4d\u7f6e\u4e0e\u5206\u7247\u3002\n- Tab/Shift+Tab\u6309SD\u5df2\u5b89\u88c5\u8bcd\u5e93\u6b63/\u53cd\u5411\u5faa\u73af\uff1b\u6807\u51c6\u5305\u4e3a\u82f1\u6c49\u2192\u6c49\u82f1\u2192\u767e\u79d1\u3002pinyin\u662f\u8f93\u5165\u8f85\u52a9\uff0c\u4e0d\u4f5c\u4e3a\u72ec\u7acb\u8bcd\u5e93\u3002\n- Ctrl+Space\u5728\u62fc\u97f3/\u76f4\u63a5\u8f93\u5165\u4e4b\u95f4\u5207\u6362\uff1bpingguo\u2192\u82f9\u679c\uff0c\u7a7a\u683c\u62161\u20139\u9009\u8bcd\uff0cEnter\u6253\u5f00\u3002v\u8868\u793a\u00fc\u3002\n- \u65b9\u5411\u952e\u76f4\u63a5\u5bfc\u822a\u3001\u524d\u540e\u7ffb\u9875\uff0c\u65e0\u9700Fn\uff1b\u5de6\u53f3\u53ef\u7ffb\u62fc\u97f3\u5019\u9009\u3002[ / ]\u4ecd\u7ffb\u5019\u9009\u3002Fn+\u65b9\u5411\u952e\u8f93\u5165; . , /\uff0c\u52a0Shift\u8f93\u5165: > < ?\u3002\n- Space/Enter\u9605\u8bfb\u4e0b\u4e00\u9875\uff0c\u9996\u5c3e\u5faa\u73af\uff1b\u9000\u683c\u5220\u9664/\u8fd4\u56de\uff0c\u957f\u6309450ms\u540e\u6bcf125ms\u8fde\u7eed\u5220\u9664\uff0cFn+Backspace\u6e05\u7a7a\u3002Fn+H/G0\u5e2e\u52a9\uff0cFn+R\u91cd\u8f7d\u3002\n- \u5de6\u4e0a\u89d2\u59cb\u7ec8CARDPUTER DICT\u3002\u5c01\u9762\u6309\u82f1\u6587\u8f93\u5165\u2192\u91ca\u4e49\u2192Tab\u6c49\u82f1\u2192\u62fc\u97f3\u9009\u82f9\u679c\u2192\u91ca\u4e49\u2192Tab\u767e\u79d1\u2192\u62fc\u97f3\u9009\u82f9\u679c\u2192\u767e\u79d1\u9605\u8bfb\u7684\u771f\u5b9e\u64cd\u4f5c\u987a\u5e8f\u64ad\u653e\uff0c\u6bcf\u5e27\u4e00\u4e2aUI\u3002\n\n### SD\u5361\u8981\u6c42\u4e0e\u4e0b\u8f7d\uff08\u5fc5\u987b\u51c6\u5907\uff09\n\u56fa\u4ef6\u4ec5\u5185\u7f6e29\u8bcd\u6f14\u793a\u3002\u4f7f\u7528FAT32\uff0c\u4e0d\u80fdexFAT\u3002\u4ec5\u82f1\u6c49/\u6c49\u82f1/\u62fc\u97f3\u7ea662MB\uff1b\u5b8c\u6574\u767e\u79d1\u52a0\u8bcd\u5e93\u7ea65.21GB\uff0c\u81f3\u5c118GB\u5361\u3001\u5efa\u8bae16GB\u621632GB\uff0c\u5e76\u9884\u7559\u81f3\u5c115.3GB\u7a7a\u95f2\u3002\n\n**[\u56fa\u4ef6\u53ca\u5168\u90e8SD\u6570\u636e\u4e0b\u8f7d\uff1aGitHub Releases v0.6.4](https://github.com/RadioDisney/CardputerDict/releases/tag/v0.6.4)**\n\n1. \u4e0b\u8f7dCardputerDict-0.6.4-SD-dictionaries.zip\uff0c\u89e3\u538b\u5f97\u5230dictionaries/\u3001licenses/\u3001audio/\u3002\n2. \u9700\u8981\u767e\u79d1\u65f6\uff0c\u518d\u4e0b\u8f7dCardputerDict-Wikipedia-zh-20261101-part-1-of-5.zip\u81f3part-5-of-5.zip\u5168\u90e85\u4e2aZIP\uff08\u5408\u8ba1\u7ea61.94GB\uff09\u3002\u5b83\u4eec\u662f\u72ec\u7acbZIP\uff0c\u5168\u90e8\u89e3\u538b\u5230\u540c\u4e00\u51c6\u5907\u76ee\u5f55\uff0c\u4e0d\u8981\u62fc\u63a5\uff0c\u4e5f\u4e0d\u80fd\u5c11\u4efb\u4f55\u4e00\u90e8\u5206\u3002\n3. \u628adictionaries/\u3001licenses/\u3001audio/\u3001wikipedia/\u76f4\u63a5\u590d\u5236\u5230SD\u6839\u76ee\u5f55\uff0c\u4e0d\u8981\u518d\u5957\u4e00\u5c42\u51c6\u5907\u76ee\u5f55\u3002\u65e7\u767e\u79d1\u76ee\u5f55\u5148\u6574\u4f53\u6539\u540d\u5907\u4efd\uff0c\u4e0d\u8981\u6df7\u88c5\u6d4b\u8bd5\u5305\u3002\n4. \u5b89\u5168\u63a8\u51fa\u5361\uff0c\u5c06\u8bbe\u5907\u5b8c\u5168\u5173\u673a\u518d\u63d2\u5361\u5f00\u673a\u3002\u9996\u6b21\u539f\u8bcd\u5e93\u7d22\u5f15\u7ea61\u5206\u949f\uff0c\u968f\u540e\u8d70\u7f13\u5b58\uff1b\u7ef4\u57fa\u7d22\u5f15\u5df2\u5728\u7535\u8111\u9884\u5148\u751f\u6210\u3002\n\n[\u56fe\u6587/\u547d\u4ee4\u884c\u5b89\u88c5\u8bf4\u660e](https://github.com/RadioDisney/CardputerDict/blob/v0.6.4/docs/SD_INSTALL.md) \u00b7 [\u9879\u76ee\u4e0e\u64cd\u4f5c\u8bf4\u660e](https://github.com/RadioDisney/CardputerDict/tree/v0.6.4)\n\nPython\u7528\u6237\u53ef\u8fd0\u884ctools/download_release_data.py --release v0.6.4 --wikipedia --output ../Cardputer-SD\uff0c\u652f\u6301\u65ad\u70b9\u4e0b\u8f7d\u3001SHA-256\u6821\u9a8c\u548c\u89e3\u538b\u3002Release\u7684data-assets.json\u4e0eSHA256SUMS.txt\u63d0\u4f9b\u6587\u4ef6\u6e05\u5355\u548c\u6821\u9a8c\u503c\u3002\n\n### \u82f1\u8bed\u6717\u8bfb\nFn+P\u6717\u8bfb/\u505c\u6b62\uff0cFn+= / Fn+-\u8c03\u97f3\u91cf\uff1b\u4f18\u5148\u64ad\u653eaudio/en\u4e2a\u4ebaMP3/WAV\uff0c\u5176\u6b21audio/cache/en\u3002Fn+W\u5728\u8bbe\u5907\u8bbe\u7f6e2.4GHz WiFi\uff0c\u7f3a\u5c11\u97f3\u9891\u65f6\u901a\u8fc7\u9a8c\u8bc1HTTPS\u5411dict.youdao.com\u53d1\u9001\u6240\u9009\u82f1\u6587\u8bcd\uff0c\u83b7\u53d6\u5e76\u7f13\u5b58\uff0c\u5b8c\u6210\u540e\u5173\u95edWiFi\uff1b\u7b2c\u4e09\u65b9\u63a5\u53e3\u53ef\u7528\u6027\u53ef\u80fd\u53d8\u5316\u3002\u56fa\u4ef6\u4e0d\u9644\u7b2c\u4e09\u65b9\u5f55\u97f3\u5305\uff0c\u4e0d\u6717\u8bfb\u4e2d\u6587\u767e\u79d1\u5168\u6587\u3002\n\n### \u70e7\u5f55\u4e0e\u9650\u5236\n\u6b64\u5904\u4e0a\u4f20\u7684\u662f\u5b8c\u6574\u5408\u5e76.bin\uff0cESP32-S3/8MB\uff0c\u70e7\u5f55\u5730\u57400x0\u3002\u5168\u91cf\u70e7\u5f55\u4f1a\u91cd\u7f6e\u7247\u5185WiFi\u4e0e\u97f3\u91cf\u8bbe\u7f6e\uff0cSD\u6570\u636e\u4fdd\u7559\u3002\u5df2\u6709\u76f8\u540c\u5206\u533a\u7684\u7528\u6237\u53ef\u4eceGitHub\u4e0b\u8f7d\u5e94\u7528\u6587\u4ef6\u5199\u51650x10000\u4fdd\u7559\u8bbe\u7f6e\u3002\n\n\u767e\u79d1\u4e3a\u65e0\u56fe\u7eaf\u6587\u5b57\u6574\u7406\u3001\u6b63\u6587\u8f6c\u6362\u7b80\u4f53\uff1b\u590d\u6742\u6a21\u677f/Lua\u3001\u8868\u683c\u548c\u516c\u5f0f\u4e0d\u5b8c\u5168\u7b49\u540c\u7f51\u9875\uff0c\u4e2a\u522b\u683c\u5f0f\u53c2\u6570\u53ef\u80fd\u6b8b\u7559\uff0c\u751f\u50fb\u5b57\u53d7\u5b57\u4f53\u8986\u76d6\u9650\u5236\u3002\u68c0\u7d22\u662f\u6807\u9898\u524d\u7f00\uff0c\u4e0d\u662f\u6b63\u6587\u5168\u6587\u641c\u7d22\u3002\n\n### \u6765\u6e90\u4e0e\u8bb8\u53ef\n\u4ee3\u7801MIT\uff0cECDICT MIT\uff0cCC-CEDICT\u6d3e\u751f\u6c49\u82f1/\u8bcd\u7ec4\u62fc\u97f3\u4e0e\u4e2d\u6587\u7ef4\u57fa\u6b63\u6587CC BY-SA4.0\u3002\u767e\u79d1\u6bcf\u7bc7\u4fdd\u7559\u6765\u6e90\u7248\u672c\u53ca\u5386\u53f2/\u4f5c\u8005\u94fe\u63a5\uff1b\u5176\u4ed6\u5b57\u4f53/\u4f9d\u8d56\u8bb8\u53ef\u968f\u9879\u76ee\u4e0e\u6570\u636e\u5305\u4fdd\u7559\u3002\u5b8c\u6574\u6765\u6e90\u89c1Release\u7684licenses/\u548cwikipedia/LICENSE.txt\u3002",
-    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2120468585455984642/2122516385948975105/cover/2122516385948975107.gif",
+    "cover": "https://m5burner-cdn.m5stack.com/community/341701/2120468585455984642/2125187458783985666/cover/2125189269670543362.gif",
     "category": "cardputer",
     "tags": [
       "E-books & Reading"
     ],
     "author": "RadioDisney",
-    "github": "https://github.com/RadioDisney/CardputerDict/releases/tag/v0.6.4",
+    "github": "https://github.com/RadioDisney/CardputerDict",
     "download": 28,
     "versions": [
       {
@@ -45709,6 +45841,63 @@
             "analyzed_at": "2026-11-17T09:53:55Z",
             "etag": "\"982E3FDC1308F4E673BF5B601CC8B497\"",
             "last_modified": "Tue, 17 Nov 2026 02:25:16 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.7.2",
+        "version_id": "2125187458783985666",
+        "published_at": "2026-11-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/341701/2120468585455984642/2125187458783985666/bin/2125187458783985667.bin",
+        "Fs": 3629248,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3563712,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3563712,
+            "partition_size": 6291456,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6291456,
+              "source_offset": 65536,
+              "copy_size": 3563712,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "storage",
+              "role": "spiffs",
+              "size": 2031616,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-25T01:38:47Z",
+            "etag": "\"0E4DAF9ECB4237459432080279E83F01\"",
+            "last_modified": "Tue, 24 Nov 2026 11:19:09 GMT"
           }
         }
       }
@@ -53383,7 +53572,7 @@
     ],
     "author": "Dlazder",
     "github": "https://github.com/Dlazder/m5_crystal_firmware",
-    "download": 340,
+    "download": 341,
     "versions": [
       {
         "version": "1.0.1",
@@ -57940,7 +58129,7 @@
     ],
     "author": "horseyofcoursey",
     "github": "https://github.com/HorseyofCoursey/EMBER",
-    "download": 90,
+    "download": 91,
     "versions": [
       {
         "version": "1.01",
@@ -58062,7 +58251,7 @@
     ],
     "author": "horseyofcoursey",
     "github": "https://github.com/HorseyofCoursey/EMBER",
-    "download": 90,
+    "download": 91,
     "versions": [
       {
         "version": "1.01",
@@ -69438,14 +69627,14 @@
     "fid": "2115790204373901313",
     "name": "GRUVPAKT T8",
     "description": "```\nAn 8-track groovebox for the M5Stack Tab5. Samples and five synth engines (FM, Wavetable, VA, PD, Granular), effects and knob automation \u2014 on encoders, keyboard and touch screen.\n\nWhat you need \u2014 all four are required:\n\u2022 M5Stack Tab5\n\u2022 8Encoder unit \u2014 every sound, effect and mix parameter is set with its knobs\n\u2022 Tab5 keyboard \u2014 save/load projects, undo, tracks and modes\n\u2022 microSD card formatted as FAT32 (cards of 64 GB and more come as exFAT \u2014 reformat them)\n\nAfter flashing, restart the Tab5 with its power button. Later versions install over WiFi, no computer needed.\n\nUser guide, case files for 3D printing and updates: https://gruvpakt.com\n```\n\n![Image](https://afgust.com/assets/img/screen_sequencer.png)",
-    "cover": "https://m5burner-cdn.m5stack.com/community/2115395465862520833/2115790204373901313/2115790204373901314/cover/2115790204373901316.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/2115395465862520833/2115790204373901313/2125234818822127617/cover/2125234818822127619.png",
     "category": "tab5",
     "tags": [
       "Audio & Media"
     ],
     "author": "AFGgust",
     "github": "https://afgust.com/products/gruvpakt/",
-    "download": 25,
+    "download": 26,
     "versions": [
       {
         "version": "0.6.897",
@@ -69558,6 +69747,63 @@
             "analyzed_at": "2026-11-16T02:53:36Z",
             "etag": "\"D839B20886C9FBECBB51855D7D61FEC1\"",
             "last_modified": "Sat, 14 Nov 2026 17:01:12 GMT"
+          }
+        }
+      },
+      {
+        "version": "0.7.212",
+        "version_id": "2125234818822127617",
+        "published_at": "2026-11-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2115395465862520833/2115790204373901313/2125234818822127617/bin/2125234818822127618.bin",
+        "Fs": 3598576,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 131072,
+        "as": 3467504,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 131072,
+            "image_size": 3467504,
+            "partition_size": 4194304,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 4194304,
+              "source_offset": 131072,
+              "copy_size": 3467504,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "fat",
+              "label": "storage",
+              "role": "fat",
+              "size": 7733248,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-25T01:38:47Z",
+            "etag": "\"1056A718A9A08ACA7514074103D99C14\"",
+            "last_modified": "Tue, 24 Nov 2026 14:27:20 GMT"
           }
         }
       }
@@ -94942,7 +95188,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 106116,
+    "download": 106117,
     "versions": [
       {
         "version": "2.4.10",
@@ -95411,7 +95657,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher/",
-    "download": 106116,
+    "download": 106117,
     "versions": [
       {
         "version": "2.4.10",
@@ -98067,7 +98313,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher",
-    "download": 4969,
+    "download": 4970,
     "versions": [
       {
         "version": "2.4.10",
@@ -99813,7 +100059,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/M5Stick-Launcher",
-    "download": 1841,
+    "download": 1842,
     "versions": [
       {
         "version": "2.4.10",
@@ -101349,7 +101595,7 @@
     ],
     "author": "zswhy",
     "github": "https://github.com/zsyai/m5paper-ebook",
-    "download": 83,
+    "download": 84,
     "versions": [
       {
         "version": "1.1",
@@ -101462,6 +101708,63 @@
             "analyzed_at": "2026-11-05T19:04:13Z",
             "etag": "\"F5E9AAAA7B4648660AC1CEAB453F6751\"",
             "last_modified": "Thu, 15 Oct 2026 01:47:25 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.2.0",
+        "version_id": "2125285878928457730",
+        "published_at": "2026-11-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/530151/1897200000000002429/2125285878928457730/bin/2125285878928457731.bin",
+        "Fs": 8388608,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3236928,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "paper",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3236928,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3236928,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 3538944,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 8425472,
+            "analyzed_at": "2026-11-25T01:38:49Z",
+            "etag": "\"3E5FF30475AD4270B1DE1984649CF7A1\"",
+            "last_modified": "Tue, 24 Nov 2026 17:50:14 GMT"
           }
         }
       }
@@ -121023,7 +121326,7 @@
     ],
     "author": "mcojocari",
     "github": "https://monster.sumat.org",
-    "download": 2,
+    "download": 3,
     "versions": [
       {
         "version": "v3.0.2",
@@ -121070,6 +121373,52 @@
             "last_modified": "Mon, 23 Nov 2026 00:51:21 GMT"
           }
         }
+      },
+      {
+        "version": "v3.1.1",
+        "version_id": "2125283632668950530",
+        "published_at": "2026-11-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/525868/2124667079543963649/2125283632668950530/bin/2125283632668950531.bin",
+        "Fs": 3570816,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 3505280,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "tab5",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 3505280,
+            "partition_size": 6553600,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 6553600,
+              "source_offset": 65536,
+              "copy_size": 3505280,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-25T01:38:47Z",
+            "etag": "\"4DF36502117DF7F27AFADFE06E0E3E9A\"",
+            "last_modified": "Tue, 24 Nov 2026 17:41:18 GMT"
+          }
+        }
       }
     ],
     "esp": "p4"
@@ -121086,7 +121435,7 @@
     ],
     "author": "mcojocari",
     "github": "https://monster.sumat.org",
-    "download": 11,
+    "download": 12,
     "versions": [
       {
         "version": "v1.0.0",
@@ -121177,6 +121526,52 @@
             "analyzed_at": "2026-11-23T02:08:54Z",
             "etag": "\"35194B6A48777A0A6921492BDD274D1A\"",
             "last_modified": "Mon, 23 Nov 2026 00:52:28 GMT"
+          }
+        }
+      },
+      {
+        "version": "v3.1.1",
+        "version_id": "2125283483137818626",
+        "published_at": "2026-11-25",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/525868/2117049668392816642/2125283483137818626/bin/2125283483137818627.bin",
+        "Fs": 2644688,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 2579152,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 2579152,
+            "partition_size": 8126464,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 8126464,
+              "source_offset": 65536,
+              "copy_size": 2579152,
+              "required": true,
+              "source": "firmware"
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-25T01:38:47Z",
+            "etag": "\"1198CA8510D3C2D557421E69E2AF0D20\"",
+            "last_modified": "Tue, 24 Nov 2026 17:40:43 GMT"
           }
         }
       }
@@ -122502,7 +122897,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 46,
+    "download": 47,
     "versions": [
       {
         "version": "v999.0.0",
@@ -133152,7 +133547,7 @@
     ],
     "author": "gadget_heaven",
     "github": "https://github.com/craigdianesmith-glitch/tab5-adsb-flight-tracker-cpp",
-    "download": 162,
+    "download": 163,
     "versions": [
       {
         "version": "1.1.2",
@@ -151442,7 +151837,7 @@
     ],
     "author": "FC88A",
     "github": "",
-    "download": 11,
+    "download": 12,
     "versions": [
       {
         "version": "0.1 (worked)",
@@ -169439,7 +169834,7 @@
     ],
     "author": "LamZaakDok",
     "github": "https://github.com/LamZaakDok/sticks3-toolbox",
-    "download": 74,
+    "download": 75,
     "versions": [
       {
         "version": "1.0.1",
@@ -172454,7 +172849,7 @@
     ],
     "author": "RJ01988",
     "github": "",
-    "download": 11483,
+    "download": 11484,
     "versions": [
       {
         "version": "v1.0 for burning directly from M5Burner",
@@ -246304,7 +246699,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 25854,
+    "download": 25855,
     "versions": [
       {
         "version": "Alpha-29",
@@ -375188,7 +375583,7 @@
     ],
     "author": "Darangus",
     "github": "Volos-TV-Remote",
-    "download": 6488,
+    "download": 6489,
     "versions": [
       {
         "version": "0.1",
@@ -410039,7 +410434,7 @@
     ],
     "author": "meidongwen0",
     "github": "",
-    "download": 13,
+    "download": 14,
     "versions": [
       {
         "version": "v0.01",
@@ -412218,7 +412613,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18150,
+    "download": 18151,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
@@ -412418,7 +412813,7 @@
     ],
     "author": "mengxiyou",
     "github": "",
-    "download": 18150,
+    "download": 18151,
     "versions": [
       {
         "version": "2.3.1(\u6700\u65b0\u7248\u672c)",
