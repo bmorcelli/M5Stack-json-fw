@@ -2030,7 +2030,7 @@
     "fid": "2119398094133698562",
     "name": "AD Arcade",
     "description": "<p><strong>AD Arcade for M5StickC Plus2</strong></p>\n<blockquote>\n<p><strong>Official Github Open Source</strong>; <a href=\"https://github.com/ADdevx/AD-Arcade-M5StickCPlus2\">AD-Arcade</a></p>\n</blockquote>\n<p><em>A mini arcade console for your M5StickC Plus2 with a clean 16-bit pixel-art look. It comes with 15 games, a music player and a colourful retro menu. Flash it, press a button and start playing.</em></p>\n<p><strong>Games</strong> Chrome Dino, Flap Bird, Meteors, Maze, Breakout, Invaders, Slalom, Stack, Racing, Flight, River, Fish, Tetris, Snake and Lunar Lander.</p>\n<p><strong>Features</strong></p>\n<p>Tilt controls using the built-in motion sensor, with a guided calibration at first boot Daily Challenge: one game per day, 3 tries, streak and 7-day history 2 Players mode: pass the device around Bronze, silver and gold medals for every game Easy, Normal and Hard difficulty Skins with a live preview screen Stats screen Background music in every game, which you can turn off Music player with 25 classic tunes Retro intro and a scrolling menu English and French Saved high scores Settings for brightness, volume, sleep time, date and time</p>\n<p><strong>Controls</strong> A to select, B for the second action, PWR to pause. Hold PWR for 1.5 seconds to go back to the menu.</p>",
-    "cover": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2124524053672706050/cover/2124524053672706052.png",
+    "cover": "https://m5burner-cdn.m5stack.com/community/504625/2119398094133698562/2126056684479361025/cover/2126056684479361027.png",
     "category": "stickc-plus2",
     "tags": [
       "Tools",
@@ -2041,7 +2041,7 @@
     ],
     "author": "ADdev",
     "github": "https://github.com/ADdevx/AD-Arcade-M5StickCPlus2",
-    "download": 115,
+    "download": 116,
     "versions": [
       {
         "version": "1",
@@ -2327,12 +2327,69 @@
             "last_modified": "Sun, 22 Nov 2026 15:23:01 GMT"
           }
         }
+      },
+      {
+        "version": "v1.9",
+        "version_id": "2126056684479361025",
+        "published_at": "2026-11-27",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2119398094133698562/2126056684479361025/bin/2126056684479361026.bin",
+        "Fs": 1187888,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "ao": 65536,
+        "as": 1122352,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "stickc-plus2",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1122352,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1122352,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-26T21:08:56Z",
+            "etag": "\"8A7FC125466B6CCD544EBFE8BA8F43CE\"",
+            "last_modified": "Thu, 26 Nov 2026 20:53:08 GMT"
+          }
+        }
       }
     ],
     "esp": "32"
   },
   {
-    "_id": "2124617309202890754",
+    "_id": "2124617309202890754:cardputer",
     "fid": "2124617309202890754",
     "name": "AD Arcade for M5Cardputer",
     "description": "**AD Arcade for M5Cardputer**\n\n>  **Official Github Open Source**; [AD-Arcade](https://github.com/ADdevx/AD-Arcade-M5StickCPlus2)\n\n*A mini arcade console for your M5Cardputer with a clean 16-bit pixel-art look. It comes with 15 games, a music player and a colourful retro menu. Flash it, press a key and start playing.*\n\n**Games**\nChrome Dino, Flap Bird, Meteors, Maze, Breakout, Invaders, Slalom, Stack, Racing, Flight, River, Fish, Tetris, Snake and Lunar Lander.\n\n**Features**\n\nKeyboard controls: the arrow keys replace tilt (if your Cardputer has a motion sensor, it is used instead)\nDaily Challenge: one game per day, 3 tries, streak and 7-day history\n2 Players mode: pass the device around\nBronze, silver and gold medals for every game\nEasy, Normal and Hard difficulty\nSkins with a live preview screen\nStats screen\nBackground music in every game, which you can turn off\nMusic player with classic tunes\nRetro intro and a scrolling menu\nEnglish and French\nSaved high scores\nSettings for brightness, volume, sleep time, date and time\n\n**Controls**\nEnter or Space = A (select), Tab = B (second action), Del = PWR (pause), arrow keys ; , . / = tilt. Hold Del for 1.5 seconds (or Enter and Tab together) to go back to the menu.",
@@ -2411,15 +2468,149 @@
         "published_at": "2026-11-27",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2124617309202890754/2126056335530045442/bin/2126056335530045443.bin",
         "Fs": 1277840,
+        "as": 1212304,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1212304,
         "install": {
           "schema": 1,
           "format": "merged",
           "target": "cardputer",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 1212304,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 1212304,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-26T20:53:45Z",
+            "etag": "\"957F6570FDAD101D91DC4EE6D9DD46F0\"",
+            "last_modified": "Thu, 26 Nov 2026 20:51:45 GMT"
+          }
+        }
+      }
+    ],
+    "esp": "s3"
+  },
+  {
+    "_id": "2124617309202890754:cardputer-adv",
+    "fid": "2124617309202890754",
+    "name": "AD Arcade for M5Cardputer",
+    "description": "**AD Arcade for M5Cardputer**\n\n>  **Official Github Open Source**; [AD-Arcade](https://github.com/ADdevx/AD-Arcade-M5StickCPlus2)\n\n*A mini arcade console for your M5Cardputer with a clean 16-bit pixel-art look. It comes with 15 games, a music player and a colourful retro menu. Flash it, press a key and start playing.*\n\n**Games**\nChrome Dino, Flap Bird, Meteors, Maze, Breakout, Invaders, Slalom, Stack, Racing, Flight, River, Fish, Tetris, Snake and Lunar Lander.\n\n**Features**\n\nKeyboard controls: the arrow keys replace tilt (if your Cardputer has a motion sensor, it is used instead)\nDaily Challenge: one game per day, 3 tries, streak and 7-day history\n2 Players mode: pass the device around\nBronze, silver and gold medals for every game\nEasy, Normal and Hard difficulty\nSkins with a live preview screen\nStats screen\nBackground music in every game, which you can turn off\nMusic player with classic tunes\nRetro intro and a scrolling menu\nEnglish and French\nSaved high scores\nSettings for brightness, volume, sleep time, date and time\n\n**Controls**\nEnter or Space = A (select), Tab = B (second action), Del = PWR (pause), arrow keys ; , . / = tilt. Hold Del for 1.5 seconds (or Enter and Tab together) to go back to the menu.",
+    "cover": "https://m5burner-cdn.m5stack.com/community/504625/2124617309202890754/2126056335530045442/cover/2126056335530045444.png",
+    "category": "cardputer-adv",
+    "tags": [
+      "Tools",
+      "Games",
+      "Audio & Media",
+      "Display & Art"
+    ],
+    "author": "ADdev",
+    "github": "https://github.com/ADdevx",
+    "download": 29,
+    "versions": [
+      {
+        "version": "v1.7",
+        "version_id": "2124617309207085057",
+        "published_at": "2026-11-23",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2124617309202890754/2124617309207085057/bin/2124617309207085058.bin",
+        "Fs": 953664,
+        "as": 888128,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
+          "app": {
+            "source_offset": 65536,
+            "image_size": 888128,
+            "partition_size": 3342336,
+            "label_policy": "next_app",
+            "subtype_policy": "next_ota"
+          },
+          "partitions": [
+            {
+              "type": "app",
+              "subtype": "ota",
+              "label": "auto",
+              "role": "firmware",
+              "size": 3342336,
+              "source_offset": 65536,
+              "copy_size": 888128,
+              "required": true,
+              "source": "firmware"
+            },
+            {
+              "type": "data",
+              "subtype": "spiffs",
+              "label": "spiffs",
+              "role": "spiffs",
+              "size": 1572864,
+              "source": null,
+              "source_offset": null,
+              "copy_size": 0,
+              "required": true
+            }
+          ],
+          "analysis": {
+            "method": "partition_table",
+            "confidence": "exact",
+            "warnings": [],
+            "bytes_downloaded_for_analysis": 36864,
+            "analyzed_at": "2026-11-22T21:38:39Z",
+            "etag": "\"C2F316C12D9808C00115BE134F2F13A0\"",
+            "last_modified": "Sun, 22 Nov 2026 21:33:34 GMT"
+          }
+        }
+      },
+      {
+        "version": "v1.9",
+        "version_id": "2126056335530045442",
+        "published_at": "2026-11-27",
+        "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/504625/2124617309202890754/2126056335530045442/bin/2126056335530045443.bin",
+        "Fs": 1277840,
+        "as": 1212304,
+        "ao": 65536,
+        "s": 0,
+        "f": 0,
+        "f2": 0,
+        "install": {
+          "schema": 1,
+          "format": "merged",
+          "target": "cardputer-adv",
           "app": {
             "source_offset": 65536,
             "image_size": 1212304,
@@ -20821,7 +21012,7 @@
     ],
     "author": "Apead",
     "github": "https://github.com/BruceDevices",
-    "download": 7554,
+    "download": 7555,
     "versions": [
       {
         "version": "1.15",
@@ -47172,7 +47363,7 @@
     ],
     "author": "Stachu0",
     "github": "https://github.com/Stachugit/CatHack",
-    "download": 56906,
+    "download": 56907,
     "versions": [
       {
         "version": "v1.4",
@@ -67354,7 +67545,7 @@
     ],
     "author": "Elicoft",
     "github": "https://github.com/ElicoftZ/Flipper-Zero-meets-M5Stack-Cardputer",
-    "download": 614,
+    "download": 615,
     "versions": [
       {
         "version": "1.15",
@@ -67514,7 +67705,7 @@
     ],
     "author": "04HM4N",
     "github": "https://github.com/04HM4N/flipper-bruce-dualboot-cardputerADV",
-    "download": 437,
+    "download": 438,
     "versions": [
       {
         "version": "2",
@@ -67599,7 +67790,7 @@
     ],
     "author": "sekibi",
     "github": "",
-    "download": 318,
+    "download": 319,
     "versions": [
       {
         "version": "1.0.0",
@@ -93107,7 +93298,7 @@
     ],
     "author": "lsandbu",
     "github": "",
-    "download": 6,
+    "download": 7,
     "versions": [
       {
         "version": "1.2",
@@ -93172,11 +93363,11 @@
         "published_at": "2026-11-27",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2126018882790273025/2126023757808840706/2126054956904263682/bin/2126054956904263683.bin",
         "Fs": 1777936,
+        "as": 1712400,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1712400,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -93242,7 +93433,7 @@
     ],
     "author": "lsandbu",
     "github": "",
-    "download": 6,
+    "download": 7,
     "versions": [
       {
         "version": "1.2",
@@ -93307,11 +93498,11 @@
         "published_at": "2026-11-27",
         "file": "https://m5burner.oss-cn-shenzhen.aliyuncs.com/community/2126018882790273025/2126023757808840706/2126054956904263682/bin/2126054956904263683.bin",
         "Fs": 1777936,
+        "as": 1712400,
+        "ao": 65536,
         "s": 0,
         "f": 0,
         "f2": 0,
-        "ao": 65536,
-        "as": 1712400,
         "install": {
           "schema": 1,
           "format": "merged",
@@ -101808,7 +101999,7 @@
     ],
     "author": "bmorcelli",
     "github": "https://github.com/bmorcelli/Launcher",
-    "download": 3055,
+    "download": 3056,
     "versions": [
       {
         "version": "2.7.1",
@@ -125185,7 +125376,7 @@
     ],
     "author": "4x0nn",
     "github": "https://github.com/n0xa/m5stick-nemo",
-    "download": 24472,
+    "download": 24473,
     "versions": [
       {
         "version": "2.4.1-en_us",
@@ -166406,7 +166597,7 @@
     ],
     "author": "m5stack",
     "github": "",
-    "download": 5182,
+    "download": 5183,
     "versions": [
       {
         "version": "V0.4",
@@ -174372,7 +174563,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/espressif/esp-hosted-mcu",
-    "download": 1577,
+    "download": 1578,
     "versions": [
       {
         "version": "v1.4.1",
@@ -196825,7 +197016,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 42361,
+    "download": 42362,
     "versions": [
       {
         "version": "v2.0.3",
@@ -318283,7 +318474,7 @@
     ],
     "author": "m5stack",
     "github": "https://github.com/m5stack/uiflow-micropython",
-    "download": 6526,
+    "download": 6527,
     "versions": [
       {
         "version": "v2.2.9",
@@ -384973,7 +385164,7 @@
     ],
     "author": "hackazillarex",
     "github": "https://github.com/Hackazillarex/zillastick-s3",
-    "download": 169,
+    "download": 170,
     "versions": [
       {
         "version": "v1.0.0-beta",
