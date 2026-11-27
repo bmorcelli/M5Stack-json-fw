@@ -580,6 +580,53 @@
         "fid": "CFWLKXHEFFWMF54RVNRQOTKFW4NDJRLZ",
         "versions": [
             {
+                "version": "v6.11.0",
+                "published_at": "2026-11-27",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.11.0/camillia-mt-wio-tracker-l2-v6.11.0-ota.bin",
+                "Fs": 4661424,
+                "nb": true,
+                "ao": 0,
+                "as": 4661424,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "seeedstudio-wio-tracker-l2",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 4661424,
+                        "partition_size": 4661424,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4661424,
+                            "source_offset": 0,
+                            "copy_size": 4661424,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-27T03:38:26Z",
+                        "etag": "\"0x8DF4C361D7CF741\"",
+                        "last_modified": "Fri, 27 Nov 2026 03:25:41 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v6.10.1",
                 "published_at": "2026-11-23",
                 "file": "https://github.com/oumike/camillia-mt/releases/download/v6.10.1/camillia-mt-wio-tracker-l2-v6.10.1-ota.bin",
@@ -999,53 +1046,6 @@
                         "analyzed_at": "2026-11-20T19:25:30Z",
                         "etag": "\"0x8DF41CD9E260197\"",
                         "last_modified": "Fri, 13 Nov 2026 21:32:28 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v6.4.5",
-                "published_at": "2026-11-11",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.4.5/camillia-mt-wio-tracker-l2-v6.4.5-ota.bin",
-                "Fs": 4574816,
-                "nb": true,
-                "ao": 0,
-                "as": 4574816,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "seeedstudio-wio-tracker-l2",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 4574816,
-                        "partition_size": 4574816,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4574816,
-                            "source_offset": 0,
-                            "copy_size": 4574816,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-20T19:25:30Z",
-                        "etag": "\"0x8DF3F9283A123D8\"",
-                        "last_modified": "Wed, 11 Nov 2026 01:24:21 GMT"
                     }
                 }
             }

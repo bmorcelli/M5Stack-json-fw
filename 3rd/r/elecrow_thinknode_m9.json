@@ -580,6 +580,53 @@
         "fid": "CFW2C5767KLO4XBZEXP5CD3MYEKPZMAT",
         "versions": [
             {
+                "version": "v6.11.0",
+                "published_at": "2026-11-27",
+                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.11.0/camillia-mt-m9-v6.11.0-ota.bin",
+                "Fs": 4419840,
+                "nb": true,
+                "ao": 0,
+                "as": 4419840,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "elecrow-thinknode-m9",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 4419840,
+                        "partition_size": 4419840,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 4419840,
+                            "source_offset": 0,
+                            "copy_size": 4419840,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-27T03:38:25Z",
+                        "etag": "\"0x8DF4C361BD610CB\"",
+                        "last_modified": "Fri, 27 Nov 2026 03:25:38 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v6.10.1",
                 "published_at": "2026-11-23",
                 "file": "https://github.com/oumike/camillia-mt/releases/download/v6.10.1/camillia-mt-m9-v6.10.1-ota.bin",
@@ -999,53 +1046,6 @@
                         "analyzed_at": "2026-11-20T19:25:27Z",
                         "etag": "\"0x8DF41CD9C8EE396\"",
                         "last_modified": "Fri, 13 Nov 2026 21:32:26 GMT"
-                    }
-                }
-            },
-            {
-                "version": "v6.4.5",
-                "published_at": "2026-11-11",
-                "file": "https://github.com/oumike/camillia-mt/releases/download/v6.4.5/camillia-mt-m9-v6.4.5-ota.bin",
-                "Fs": 4331712,
-                "nb": true,
-                "ao": 0,
-                "as": 4331712,
-                "s": 0,
-                "f": 0,
-                "f2": 0,
-                "install": {
-                    "schema": 1,
-                    "format": "app",
-                    "target": "elecrow-thinknode-m9",
-                    "app": {
-                        "source_offset": 0,
-                        "image_size": 4331712,
-                        "partition_size": 4331712,
-                        "label_policy": "next_app",
-                        "subtype_policy": "next_ota"
-                    },
-                    "partitions": [
-                        {
-                            "type": "app",
-                            "subtype": "ota",
-                            "label": "auto",
-                            "role": "firmware",
-                            "size": 4331712,
-                            "source_offset": 0,
-                            "copy_size": 4331712,
-                            "required": true
-                        }
-                    ],
-                    "analysis": {
-                        "method": "file_size",
-                        "confidence": "partial",
-                        "warnings": [
-                            "No partition table found; manifest generated from file size and detected app offset."
-                        ],
-                        "bytes_downloaded_for_analysis": 36864,
-                        "analyzed_at": "2026-11-20T19:25:27Z",
-                        "etag": "\"0x8DF3F9281D56C5B\"",
-                        "last_modified": "Wed, 11 Nov 2026 01:24:18 GMT"
                     }
                 }
             }
