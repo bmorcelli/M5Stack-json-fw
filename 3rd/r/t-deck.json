@@ -9604,6 +9604,53 @@
         "fid": "CFWWNZKT3HPV55HB4YQ3AVZJJEWS4RLE",
         "versions": [
             {
+                "version": "v3.2.0",
+                "published_at": "2026-11-28",
+                "file": "https://github.com/oumike/scheff-echolink/releases/download/v3.2.0/scheff-echolink-tdeck-plus-v3.2.0-app.bin",
+                "Fs": 1558480,
+                "nb": true,
+                "ao": 0,
+                "as": 1558480,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "install": {
+                    "schema": 1,
+                    "format": "app",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 0,
+                        "image_size": 1558480,
+                        "partition_size": 1558480,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 1558480,
+                            "source_offset": 0,
+                            "copy_size": 1558480,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "file_size",
+                        "confidence": "partial",
+                        "warnings": [
+                            "No partition table found; manifest generated from file size and detected app offset."
+                        ],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-28T02:08:13Z",
+                        "etag": "\"0x8DF4CF3B5F1EAF5\"",
+                        "last_modified": "Sat, 28 Nov 2026 02:02:52 GMT"
+                    }
+                }
+            },
+            {
                 "version": "v3.1.0",
                 "published_at": "2026-11-24",
                 "file": "https://github.com/oumike/scheff-echolink/releases/download/v3.1.0/scheff-echolink-tdeck-plus-v3.1.0-app.bin",
@@ -9756,6 +9803,62 @@
         "github": "https://github.com/oumike/scheff-zello",
         "fid": "CFWCKAXCWUN6YTH324X35Y2TDVWJMADB",
         "versions": [
+            {
+                "version": "v3.2.0",
+                "published_at": "2026-11-28",
+                "file": "https://github.com/oumike/scheff-zello/releases/download/v3.2.0/scheff-zello-tdeck.bin",
+                "Fs": 1999536,
+                "s": 0,
+                "f": 0,
+                "f2": 0,
+                "ao": 65536,
+                "as": 1934000,
+                "install": {
+                    "schema": 1,
+                    "format": "merged",
+                    "target": "t-deck",
+                    "app": {
+                        "source_offset": 65536,
+                        "image_size": 1934000,
+                        "partition_size": 6291456,
+                        "label_policy": "next_app",
+                        "subtype_policy": "next_ota"
+                    },
+                    "partitions": [
+                        {
+                            "type": "app",
+                            "subtype": "ota",
+                            "label": "auto",
+                            "role": "firmware",
+                            "size": 6291456,
+                            "source_offset": 65536,
+                            "copy_size": 1934000,
+                            "required": true,
+                            "source": "firmware"
+                        },
+                        {
+                            "type": "data",
+                            "subtype": "fat",
+                            "label": "storage",
+                            "role": "fat",
+                            "size": 4194304,
+                            "source": null,
+                            "source_offset": null,
+                            "copy_size": 0,
+                            "required": true
+                        }
+                    ],
+                    "analysis": {
+                        "method": "partition_table",
+                        "confidence": "exact",
+                        "warnings": [],
+                        "bytes_downloaded_for_analysis": 36864,
+                        "analyzed_at": "2026-11-28T02:08:13Z",
+                        "etag": "\"0x8DF4CF39E8F0044\"",
+                        "last_modified": "Sat, 28 Nov 2026 02:02:13 GMT"
+                    }
+                }
+            },
             {
                 "version": "v3.1.0",
                 "published_at": "2026-11-24",
